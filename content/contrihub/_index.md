@@ -5,12 +5,7 @@ sort_by = "date"
 template = "section.html"
 
 [extra]
-# Current/Latest event
-latest_event = "2025"
-event_active = false  # Set to true during active event period
-
-# Event tagline
-tagline = "Learn, Contribute, Grow - Together"
+badge = "BETA"
 +++
 
 # ContriHub - Open Source Celebration

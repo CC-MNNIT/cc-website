@@ -41,7 +41,7 @@
     {# Event Statistics (if available) #}
     {% if section.extra.contrihub_year %}
         {% set year = section.extra.contrihub_year %}
-        {% set event_data = load_data(path="data/contrihub/" ~ year ~ ".yaml") %}
+        {% set event_data = load_data(path="data/contrihub/" ~ year ~ "/event.yaml") %}
         
         {# Statistics Cards #}
         {% if event_data.stats %}
@@ -100,7 +100,7 @@
         {% endif %}
 
         {# Featured Contributions #}
-        {% set featured_path = "data/contrihub/" ~ year ~ "-featured.yaml" %}
+        {% set featured_path = "data/contrihub/" ~ year ~ "/featured.yaml" %}
         {% set_global featured_data = false %}
         {% set_global featured_data = load_data(path=featured_path) %}
         
@@ -163,7 +163,7 @@
         {% endif %}
 
         {# Recognitions #}
-        {% set recognitions_path = "data/contrihub/" ~ year ~ "-recognitions.yaml" %}
+        {% set recognitions_path = "data/contrihub/" ~ year ~ "/recognitions.yaml" %}
         {% set_global recognitions_data = false %}
         {% set_global recognitions_data = load_data(path=recognitions_path) %}
         
@@ -222,7 +222,7 @@
         {% endif %}
 
         {# Contributor Stories #}
-        {% set stories_path = "data/contrihub/" ~ year ~ "-stories.yaml" %}
+        {% set stories_path = "data/contrihub/" ~ year ~ "/stories.yaml" %}
         {% set_global stories_data = false %}
         {% set_global stories_data = load_data(path=stories_path) %}
         

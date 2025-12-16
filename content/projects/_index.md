@@ -3,6 +3,9 @@ title = "Projects & Achievements"
 description = "Showcasing club projects, organized events, and community initiatives"
 sort_by = "date"
 template = "section.html"
+
+[extra]
+badge = "NEW"
 +++
 
 # Club Projects & Achievements
@@ -78,8 +81,8 @@ Major events where CC Club was the primary organizer.
 Our flagship 36-48 hour coding marathon focused on building solutions for social good.
 
 **2025 Events**:
-- [Summer Hackathon 2025](/events/past/summer-hackathon-2025) - 150 participants, 30 projects
-- [Winter Hackathon 2025](/events/upcoming/winter-hackathon-2025) - Upcoming in December
+- [Summer Hackathon 2025](/events/2024/summer-hackathon-2025) - 150 participants, 30 projects
+- [Winter Hackathon 2025](/events/2025/winter-hackathon-2025) - Upcoming in December
 
 ---
 

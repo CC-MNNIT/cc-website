@@ -6,6 +6,7 @@ description = "A successful 48-hour coding marathon with 150 participants buildi
 [extra]
 event_type = "hackathon"
 status = "completed"
+badge = "COMPLETED"
 start_date = "2025-08-22"
 end_date = "2025-08-24"
 duration = "48 hours"
@@ -13,12 +14,12 @@ venue = "Main Auditorium & Computer Labs"
 participants = 150
 teams = 30
 
-poster = "images/events/summer-hackathon-2025-poster.jpg"
+poster = "/images/events/summer-hackathon-2025-poster.jpg"
 photo_gallery = [
-    "images/events/summer-hackathon-2025-opening.jpg",
-    "images/events/summer-hackathon-2025-coding.jpg",
-    "images/events/summer-hackathon-2025-presentations.jpg",
-    "images/events/summer-hackathon-2025-winners.jpg"
+    "/images/events/summer-hackathon-2025-opening.jpg",
+    "/images/events/summer-hackathon-2025-coding.jpg",
+    "/images/events/summer-hackathon-2025-presentations.jpg",
+    "/images/events/summer-hackathon-2025-winners.jpg"
 ]
 
 winners = [
@@ -27,7 +28,6 @@ winners = [
     { position = "3rd", team = "HealthHackers", project = "MediTrack", prize = "₹20,000" }
 ]
 
-[taxonomies]
 tags = ["hackathon", "competition", "completed", "2025"]
 categories = ["Hackathons", "Past Events"]
 +++
@@ -113,7 +113,7 @@ For a complete recap of the event, including project details, learnings, and beh
 
 Inspired by Summer Hackathon 2025? Join us for **Winter Hackathon 2025** on December 20-22!
 
-[Register for Winter Hackathon →](/events/upcoming/winter-hackathon-2025)
+[Register for Winter Hackathon →](/events/2025/winter-hackathon-2025)
 
 ---
 

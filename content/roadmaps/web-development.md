@@ -1,6 +1,5 @@
 +++
 title = "Web Development Roadmap"
-date = 2025-12-01
 weight = 1
 description = "Complete roadmap from beginner to full-stack web developer"
 
@@ -8,6 +7,7 @@ description = "Complete roadmap from beginner to full-stack web developer"
 difficulty = "Beginner to Advanced"
 estimated_time = "6-12 months"
 prerequisites = "Basic computer skills, willingness to learn"
+badge = "UPDATED"
 +++
 
 # Web Development Roadmap

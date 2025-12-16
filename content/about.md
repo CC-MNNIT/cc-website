@@ -2,6 +2,9 @@
 title = "About Computer Coding Club"
 description = "Learn about our mission, vision, and the community we're building"
 weight = 1
+
+[extra]
+badge = "NEW"
 +++
 
 # About Computer Coding Club

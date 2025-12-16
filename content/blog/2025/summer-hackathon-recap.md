@@ -8,11 +8,10 @@ author = "Priya Mehra"
 author_role = "Senior Coordinator, CC Club"
 author_github = "priya-codes"
 author_linkedin = "priya-mehra"
-cover_image = "images/blog/summer-hackathon-2025.jpg"
+cover_image = "/images/blog/summer-hackathon-2025.jpg"
 reading_time = 7
 featured = true
-
-[taxonomies]
+badge = "NEW"
 tags = ["hackathon", "events", "community", "projects"]
 categories = ["Event Reports"]
 +++

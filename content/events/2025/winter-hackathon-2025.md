@@ -1,18 +1,12 @@
 +++
-# UPCOMING EVENT TEMPLATE
-# Copy this file to create new upcoming events
-
 title = "Winter Hackathon 2025"
-date = 2025-12-20  # Event start date
+date = 2025-12-20
 description = "48-hour coding marathon focused on building solutions for social good. Open to all students!"
 
-# Event-specific metadata
 [extra]
-# Event type: hackathon, workshop, competition, talk, meetup
 event_type = "hackathon"
-
-# Event status: upcoming, ongoing, completed, cancelled
 status = "upcoming"
+badge = "UPCOMING"
 
 # Registration information
 registration_open = true
@@ -26,7 +20,7 @@ end_date = "2025-12-22"
 duration = "48 hours"
 venue = "Main Seminar Hall, Second Floor"
 capacity = 150
-seats_remaining = 45  # Update this as registrations come in
+seats_remaining = 45
 
 # Contact information
 contact_email = "hackathon@ccclub.edu"
@@ -48,7 +42,6 @@ prizes = [
 sponsors = ["TechCorp", "CloudServe", "DevTools Inc."]
 
 # Tags for categorization
-[taxonomies]
 tags = ["hackathon", "coding", "competition", "team-event"]
 categories = ["Hackathons"]
 +++
@@ -300,7 +293,7 @@ Have questions? Reach out to us:
 
 Want to see what previous hackathons were like? Check out:
 - [Summer Hackathon 2025 Recap](/blog/2025/summer-hackathon-recap)
-- [Winter Hackathon 2024 Highlights](/events/past/winter-hackathon-2024)
+- [Winter Hackathon 2024 Highlights](/events/2024/winter-hackathon-2024)
 
 ---
 

@@ -6,6 +6,7 @@ description = "Hands-on workshop covering containerization with Docker and orche
 [extra]
 event_type = "workshop"
 status = "upcoming"
+badge = "UPCOMING"
 registration_open = true
 registration_deadline = "2026-01-03"
 registration_link = "https://forms.gle/your-workshop-form"
@@ -20,7 +21,7 @@ capacity = 50
 seats_remaining = 18
 
 contact_email = "workshops@ccclub.edu"
-poster = "images/events/docker-kubernetes-workshop.jpg"
+poster = "/images/events/docker-kubernetes-workshop.jpg"
 
 # Workshop materials
 prerequisites = ["Basic command line knowledge", "Laptop with Docker installed"]
@@ -34,7 +35,7 @@ learning_outcomes = [
 instructor = "Rahul Kumar"
 instructor_bio = "DevOps Engineer at TechCorp, 5 years experience with container technologies"
 
-[taxonomies]
+# Tags for categorization
 tags = ["workshop", "docker", "kubernetes", "devops"]
 categories = ["Workshops"]
 +++

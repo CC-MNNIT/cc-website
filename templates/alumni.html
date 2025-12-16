@@ -9,11 +9,16 @@
 {% block content %}
     {# Page Header #}
     <div class="mb-12 pb-4 border-b border-gray-500/15">
-        <h1>{{ page.title }}</h1>
+        <h1 class="flex items-center gap-3">
+            {{ page.title }}
+            {% if page.extra.badge %}
+                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">{{ page.extra.badge }}</span>
+            {% endif %}
+        </h1>
         <p class="text-gray-500">{{ page.description }}</p>
     </div>
-
-    {# Introduction Text #}
+    
+    {# Introduction paragraph from markdown #}
     {{ page.content | safe }}
 
     {# Search and Filter Section #}
@@ -55,12 +60,18 @@
                         </label>
                         <select id="filter-domain" class="select select-bordered w-full">
                             <option value="">All Domains</option>
-                            <option value="Software Development">Software Development</option>
-                            <option value="Data Science">Data Science</option>
+                            <option value="Backend Development">Backend Development</option>
+                            <option value="Frontend Development">Frontend Development</option>
+                            <option value="Full Stack">Full Stack</option>
                             <option value="Machine Learning">Machine Learning</option>
+                            <option value="Natural Language Processing">NLP/AI</option>
+                            <option value="Computer Vision">Computer Vision</option>
+                            <option value="Cloud Infrastructure">Cloud Infrastructure</option>
+                            <option value="Distributed Systems">Distributed Systems</option>
                             <option value="Product Management">Product Management</option>
-                            <option value="Research">Research</option>
-                            <option value="DevOps">DevOps</option>
+                            <option value="Documentation">Documentation</option>
+                            <option value="Security">Security</option>
+                            <option value="Fintech">Fintech</option>
                         </select>
                     </div>
 
@@ -110,7 +121,60 @@
     </div>
 
     {# JavaScript for Alumni Search and Display #}
+    {# Load alumni data from single YAML file #}
+    <script>
+        // Load all alumni from data/alumni.yaml
+        window.allAlumni = {{ load_data(path="data/alumni.yaml") | json_encode() | safe }}.alumni;
+        
+        console.log(`Loaded ${window.allAlumni.length} alumni from data/alumni.yaml`);
+    </script>
     <script src="{{ get_url(path='js/alumni-search.js') }}"></script>
+
+    {# Additional Content Sections #}
+    <div class="prose prose-lg max-w-none mt-16">
+        <hr class="my-12">
+        
+        <h2>Want to Be Featured?</h2>
+        <p><strong>CC Club Alumni:</strong> Update your profile!</p>
+        <p>If you're a CC Club alumnus and want to be featured here:</p>
+        <ol>
+            <li>Fill out the <a href="https://forms.gle/alumni-update-form">Alumni Form</a></li>
+            <li>Provide: Name, Batch, Current Role, Company, LinkedIn, Photo</li>
+            <li>Optional: Share your experience, advice for juniors</li>
+        </ol>
+        <p><strong>Privacy</strong>: Only information you choose to share will be displayed.</p>
+        
+        <hr class="my-12">
+        
+        <h2>Alumni Success Stories</h2>
+        <p>Read about journeys of our alumni:</p>
+        <ul>
+            <li><a href="/blog/alumni-stories/vikram-google">From CC Club to Google: Vikram's Story</a></li>
+            <li><a href="/blog/alumni-stories/priya-startup">How CC Club Prepared Me for Startup Life</a></li>
+            <li><a href="/blog/alumni-stories/rahul-opensource">From Contributor to Open Source Maintainer</a></li>
+        </ul>
+        
+        <hr class="my-12">
+        
+        <h2>Alumni Engagement</h2>
+        <h3>Give Back to CC Club</h3>
+        <ul>
+            <li><strong>Mentorship</strong>: Guide current students in their technical and career journeys</li>
+            <li><strong>Guest Lectures</strong>: Share your experiences and insights</li>
+            <li><strong>Recruitment</strong>: Hire talented CC Club members</li>
+            <li><strong>Sponsorship</strong>: Support club events and initiatives</li>
+        </ul>
+        <p>Interested? Contact us at <strong>alumni@ccclub.edu</strong></p>
+        
+        <hr class="my-12">
+        
+        <h2>Connect with Alumni</h2>
+        <ul>
+            <li><strong>LinkedIn Group</strong>: <a href="https://linkedin.com/groups/ccclub-alumni">CC Club Alumni Network</a></li>
+            <li><strong>Discord</strong>: <a href="https://discord.gg/ccclub-alumni">Join Alumni Channel</a></li>
+            <li><strong>Email</strong>: alumni@ccclub.edu</li>
+        </ul>
+    </div>
 
 {% endblock content %}
 
@@ -118,8 +182,10 @@
   NOTES FOR CONTENT TEAM:
   
   1. DATA SOURCE:
-     - Alumni data comes from data/alumni.yaml
-     - JavaScript (alumni-search.js) loads and displays the data
+     - Alumni data comes from data/alumni.yaml (single file)
+     - Template loads data into window.allAlumni
+     - alumni-search.js handles display, search, and filtering
+     - To add alumni: Just add an entry to data/alumni.yaml
   
   2. ADDING NEW FILTERS:
      - Add new <select> element in the filters grid

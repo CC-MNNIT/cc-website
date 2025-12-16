@@ -119,7 +119,7 @@ touch content/blog/2025/your-post-title.md
 **Events:**
 ```bash
 # Add upcoming event
-touch content/events/upcoming/event-name.md
+touch content/events/2025/event-name.md
 ```
 
 **Roadmaps:**

@@ -1,6 +1,5 @@
 +++
 title = "Data Structures & Algorithms Roadmap"
-date = 2025-12-01
 weight = 2
 description = "Master DSA from basics to competitive programming level"
 
@@ -8,6 +7,7 @@ description = "Master DSA from basics to competitive programming level"
 difficulty = "Beginner to Advanced"
 estimated_time = "4-8 months"
 prerequisites = "Basic programming knowledge in any language"
+badge = "UPDATED"
 +++
 
 # Data Structures & Algorithms Roadmap

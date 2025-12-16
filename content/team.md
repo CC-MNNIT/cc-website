@@ -5,8 +5,7 @@ template = "page.html"
 weight = 2
 
 [extra]
-# This page will use data from data/team.yaml
-# The template will iterate through the team data and display cards
+badge = "UPDATED"
 use_team_data = true
 +++
 

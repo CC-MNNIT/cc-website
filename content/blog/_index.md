@@ -3,15 +3,11 @@ title = "Blog"
 description = "Technical articles, tutorials, event reports, and insights from CC Club members"
 sort_by = "date"
 template = "section.html"
-
-# Pagination settings
 paginate_by = 10
 paginate_path = "page"
 
-# Enable tags and categories for filtering
 [extra]
-# Show featured posts at the top (optional)
-show_featured = true
+badge = "NEW"
 +++
 
 <!-- 

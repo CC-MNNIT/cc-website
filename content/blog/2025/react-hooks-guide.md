@@ -24,7 +24,7 @@ author_linkedin = "arjun-sharma-dev"
 # Cover image for social media sharing and post preview
 # Place image in static/images/blog/
 # TODO: Add your cover image
-cover_image = "images/blog/react-hooks-guide.jpg"
+cover_image = "/images/blog/react-hooks-guide.jpg"
 
 # Estimated reading time (in minutes)
 # Can be auto-calculated, but manual is more accurate
@@ -33,8 +33,9 @@ reading_time = 10
 # Featured post (shows at top of blog page)
 featured = false
 
-# Taxonomies for filtering and categorization
-[taxonomies]
+# Badge for visual indicator
+badge = "NEW"
+
 # Tags: specific technologies, concepts (use lowercase, hyphenated)
 tags = ["react", "javascript", "web-development", "frontend", "tutorial"]
 

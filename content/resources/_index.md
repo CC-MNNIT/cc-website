@@ -2,6 +2,10 @@
 title = "Resources"
 description = "Curated learning materials, tools, and resources for your tech journey"
 sort_by = "weight"
+template = "section.html"
+
+[extra]
+badge = "UPDATED"
 +++
 
 # Learning Resources

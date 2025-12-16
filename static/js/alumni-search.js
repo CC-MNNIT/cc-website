@@ -26,85 +26,11 @@
 
 // ============================================================================
 // ALUMNI DATA
-// In production, this would be loaded from the YAML file via Zola
-// For now, we'll use inline data that matches the structure of alumni.yaml
+// Data loaded from window.allAlumni (set by template from YAML files)
 // ============================================================================
 
-// NOTE: In actual implementation, Zola will inject this data from alumni.yaml
-// This is sample data for demonstration
-const alumniData = [
-    {
-        name: "Rahul Sharma",
-        batch: "2022",
-        graduation_year: 2026,
-        current_role: "Software Development Engineer II",
-        company: "Google",
-        domain: "Software Development",
-        location: "Bangalore, India",
-        linkedin: "https://linkedin.com/in/rahul-sharma",
-        github: "https://github.com/rahulsharma",
-        image: "images/alumni/rahul-sharma.jpg",
-        message: "CC Club gave me my first taste of collaborative coding. The skills I learned here helped me land my dream job."
-    },
-    {
-        name: "Priya Mehta",
-        batch: "2022",
-        graduation_year: 2026,
-        current_role: "Machine Learning Engineer",
-        company: "Microsoft",
-        domain: "Machine Learning",
-        location: "Hyderabad, India",
-        linkedin: "https://linkedin.com/in/priya-mehta",
-        image: "images/alumni/priya-mehta.jpg"
-    },
-    {
-        name: "Ankit Verma",
-        batch: "2023",
-        graduation_year: 2027,
-        current_role: "Senior Software Engineer",
-        company: "Amazon",
-        domain: "Software Development",
-        location: "Seattle, USA",
-        linkedin: "https://linkedin.com/in/ankit-verma",
-        image: "images/alumni/ankit-verma.jpg",
-        message: "The technical workshops and hackathons at CC Club prepared me for the fast-paced tech industry."
-    },
-    {
-        name: "Sneha Gupta",
-        batch: "2023",
-        graduation_year: 2027,
-        current_role: "Product Manager",
-        company: "Meta",
-        domain: "Product Management",
-        location: "Menlo Park, USA",
-        linkedin: "https://linkedin.com/in/sneha-gupta",
-        image: "images/alumni/sneha-gupta.jpg"
-    },
-    {
-        name: "Arjun Patel",
-        batch: "2024",
-        graduation_year: 2028,
-        current_role: "Full Stack Developer",
-        company: "Flipkart",
-        domain: "Software Development",
-        location: "Bangalore, India",
-        linkedin: "https://linkedin.com/in/arjun-patel",
-        github: "https://github.com/arjunpatel",
-        image: "images/alumni/arjun-patel.jpg"
-    },
-    {
-        name: "Divya Singh",
-        batch: "2024",
-        graduation_year: 2028,
-        current_role: "Data Scientist",
-        company: "Razorpay",
-        domain: "Data Science",
-        location: "Bangalore, India",
-        linkedin: "https://linkedin.com/in/divya-singh",
-        image: "images/alumni/divya-singh.jpg",
-        message: "CC Club's focus on practical learning made all the difference. Highly recommend getting involved!"
-    }
-];
+// Alumni data will be loaded from window.allAlumni when page initializes
+let alumniData = [];
 
 // ============================================================================
 // STATE MANAGEMENT
@@ -160,8 +86,8 @@ function matchesSearch(alumni, query) {
  * Check if an alumni matches all active filters
  */
 function matchesFilters(alumni) {
-    // Batch filter
-    if (currentFilters.batch && alumni.batch !== currentFilters.batch) {
+    // Batch filter - match by graduation year
+    if (currentFilters.batch && alumni.graduation_year.toString() !== currentFilters.batch) {
         return false;
     }
     
@@ -314,6 +240,21 @@ function filterAndDisplay() {
  * Initialize the page when DOM is loaded
  */
 document.addEventListener('DOMContentLoaded', function() {
+    // Load alumni data from window.allAlumni (set by template)
+    if (window.allAlumni && window.allAlumni.length > 0) {
+        alumniData = window.allAlumni;
+        console.log(`✅ Loaded ${alumniData.length} alumni from data/alumni/ year files`);
+    } else {
+        console.error('❌ Alumni data not loaded! window.allAlumni is undefined or empty.');
+        console.log('Check that templates/alumni.html is loading YAML files correctly.');
+        // Show error message to user
+        const loadingState = document.getElementById('loading-state');
+        if (loadingState) {
+            loadingState.innerHTML = '<div class="text-center py-12"><p class="text-red-500">Failed to load alumni data. Please refresh the page.</p></div>';
+        }
+        return; // Don't continue if no data
+    }
+    
     // Search input
     const searchInput = document.getElementById('alumni-search');
     if (searchInput) {
@@ -353,24 +294,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial display
     displayAlumni(alumniData);
 });
-
-// ============================================================================
-// INSTRUCTIONS FOR CONNECTING TO ZOLA DATA
-// ============================================================================
-
-/*
-TO CONNECT THIS TO ACTUAL YAML DATA:
-
-In templates/alumni.html, add this before loading the script:
-
-<script>
-    // Inject alumni data from Zola
-    const alumniData = {{ load_data(path="data/alumni.yaml") | json_encode() }};
-</script>
-<script src="{{ get_url(path='js/alumni-search.js') }}"></script>
-
-This will replace the sample data above with actual data from alumni.yaml.
-
-IMPORTANT: Remove or comment out the sample alumniData array at the top of this file
-when connecting to real data.
-*/

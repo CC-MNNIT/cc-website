@@ -12,10 +12,10 @@ Thank you for your interest in contributing to the Computer Coding Club website!
   - [Updating Alumni](#updating-alumni)
   - [Adding Resources](#adding-resources)
   - [Creating a Roadmap](#creating-a-roadmap)
+- [Using Goyo Theme Features](#using-goyo-theme-features)
 - [Markdown Syntax Guide](#markdown-syntax-guide)
 - [Working with Git](#working-with-git)
 - [Pull Request Guidelines](#pull-request-guidelines)
-- [Code of Conduct](#code-of-conduct)
 - [Getting Help](#getting-help)
 
 ---
@@ -26,6 +26,7 @@ Thank you for your interest in contributing to the Computer Coding Club website!
 - Git installed on your computer
 - Basic familiarity with Markdown
 - A GitHub account
+- (Optional) Zola installed for local testing
 
 ### Setup Steps
 1. **Fork the repository** on GitHub
@@ -34,18 +35,23 @@ Thank you for your interest in contributing to the Computer Coding Club website!
    git clone https://github.com/YOUR-USERNAME/cc-website.git
    cd cc-website
    ```
-3. **Make your changes** (see sections below)
-4. **Test locally** (optional, requires Zola):
+3. **Initialize theme submodule**:
+   ```bash
+   git submodule update --init --recursive
+   ```
+4. **Make your changes** (see sections below)
+5. **Test locally** (optional, requires Zola):
    ```bash
    zola serve
+   # Visit http://127.0.0.1:1111
    ```
-5. **Commit and push**:
+6. **Commit and push**:
    ```bash
    git add .
    git commit -m "Brief description of changes"
    git push origin main
    ```
-6. **Create a Pull Request** on GitHub
+7. **Create a Pull Request** on GitHub
 
 ---
 
@@ -74,6 +80,7 @@ description = "A brief summary of your post (1-2 sentences)"
 author = "Your Name"
 author_github = "yourgithub"
 reading_time = 8
+badge = "NEW"
 tags = ["tutorial", "web-development"]
 categories = ["Technical"]
 +++
@@ -93,7 +100,7 @@ Wrap up your post...
 
 3. **Add images** (if needed):
    - Place images in `static/images/blog/2025/`
-   - Reference in markdown: `![Alt text](images/blog/2025/your-image.jpg)`
+   - Reference in markdown: `![Alt text](/images/blog/2025/your-image.jpg)`
 
 4. **Preview your post**:
    - If you have Zola installed: `zola serve`
@@ -111,18 +118,19 @@ Wrap up your post...
 - Use tags consistently (check existing posts for common tags)
 - Include code examples where relevant
 - Proofread before committing!
+- Use `badge = "NEW"` for new posts, `"UPDATED"` for updated ones
 
 ---
 
 ### Adding an Event
 
-Events are stored in `content/events/upcoming/` or `content/events/past/`.
+Events are stored in year-based folders like `content/events/2025/`, `content/events/2024/`, etc.
 
 **Steps:**
 
 1. **Create a new file**:
    ```
-   content/events/upcoming/event-name.md
+   content/events/2025/event-name.md
    ```
 
 2. **Use this template**:
@@ -138,7 +146,8 @@ event_date = "February 10, 2025"
 event_time = "4:00 PM - 6:00 PM"
 venue = "Room 201, Academic Block"
 registration_link = "https://forms.gle/your-form"
-poster = "images/events/2025/event-poster.jpg"
+poster = "/images/events/2025/event-poster.jpg"
+badge = "UPCOMING"
 tags = ["workshop", "web-development"]
 categories = ["Technical Workshop"]
 +++
@@ -381,6 +390,236 @@ graph TD
 - Include both learning resources and practice projects
 - Keep it practical and actionable
 - Update based on feedback
+
+---
+
+## Using Goyo Theme Features
+
+Our website uses the [Goyo theme](https://github.com/hahwul/goyo) for Zola, which provides many built-in features and shortcodes.
+
+### Page Badges
+
+Add visual badges to your pages to indicate status:
+
+```markdown
++++
+title = "Your Page"
+
+[extra]
+badge = "NEW"  # Options: NEW, BETA, UPDATED, WIP
++++
+```
+
+Available badge types:
+- `NEW` - For newly created content
+- `BETA` - For experimental/beta features
+- `UPDATED` - For recently updated content
+- `WIP` - For work-in-progress content
+
+### Table of Contents
+
+Control TOC behavior on individual pages:
+
+```markdown
++++
+title = "API Documentation"
+
+[extra]
+toc_expand = true  # false (default): auto-expand on scroll
+                   # true: always expanded
++++
+```
+
+Use `toc_expand = true` for pages with many sections (like API docs) where readers benefit from seeing all sections at once.
+
+### Shortcodes
+
+Goyo provides many useful shortcodes for rich content:
+
+#### Alerts
+
+Create styled alert boxes:
+
+```markdown
+{{ "{% alert_info() %}" }}
+This is an informational message.
+{{ "{% end %}" }}
+
+{{ "{% alert_success() %}" }}
+Operation completed successfully!
+{{ "{% end %}" }}
+
+{{ "{% alert_warning() %}" }}
+Be careful with this action.
+{{ "{% end %}" }}
+
+{{ "{% alert_error() %}" }}
+An error occurred!
+{{ "{% end %}" }}
+```
+
+#### Badges
+
+Inline badges for highlighting:
+
+```markdown
+{{ "{% badge_primary(text=\"Important\") %}" }}
+{{ "{% badge_success(text=\"Completed\") %}" }}
+{{ "{% badge_info(text=\"Info\") %}" }}
+{{ "{% badge_warning(text=\"Beta\") %}" }}
+{{ "{% badge_error(text=\"Deprecated\") %}" }}
+```
+
+#### Mermaid Diagrams
+
+Create flowcharts, sequence diagrams, and more:
+
+````markdown
+{% mermaid() %}
+graph LR
+    A[Start] --> B{Decision}
+    B -->|Yes| C[Action 1]
+    B -->|No| D[Action 2]
+    C --> E[End]
+    D --> E
+{% end %}
+````
+
+More diagram types:
+```markdown
+{% mermaid() %}
+sequenceDiagram
+    participant A as Frontend
+    participant B as Backend
+    participant C as Database
+    A->>B: API Request
+    B->>C: Query Data
+    C-->>B: Return Data
+    B-->>A: JSON Response
+{% end %}
+```
+
+[Learn more about Mermaid syntax](https://mermaid.js.org/)
+
+#### Image Gallery
+
+Create image carousels and galleries:
+
+```markdown
+{{ "{% carousel(images=[" }}
+    \"/images/event1.jpg\",
+    \"/images/event2.jpg\",
+    \"/images/event3.jpg\"
+]) %}"}}
+
+{{ "{% gallery(images=[" }}
+    \"/images/project1.jpg\",
+    \"/images/project2.jpg\"
+]) %}"}}
+```
+
+#### Before/After Images
+
+Show image comparisons:
+
+```markdown
+{{ "{% image_diff(src1=\"/images/before.jpg\" src2=\"/images/after.jpg\" alt=\"Comparison\") %}" }}
+```
+
+#### Embedded Content
+
+Embed external content:
+
+```markdown
+// YouTube video
+{{ "{% youtube(id=\"dQw4w9WgXcQ\") %}" }}
+
+// GitHub Gist
+{{ "{% gist(url=\"https://gist.github.com/username/gistid\") %}" }}
+
+// CodePen
+{{ "{% codepen(url=\"https://codepen.io/username/pen/id\") %}" }}
+
+// Asciinema terminal recording
+{{ "{% asciinema(id=\"your-recording-id\") %}" }}
+```
+
+#### Math Equations
+
+Render mathematical notation using KaTeX:
+
+```markdown
+{{ "{% math() %}" }}
+E = mc^2
+{{ "{% end %}" }}
+```
+
+Inline math: `$E = mc^2$`
+
+Block math:
+```markdown
+$$
+\int_{a}^{b} f(x)dx = F(b) - F(a)
+$$
+```
+
+#### Collapsible Sections
+
+Create expandable content:
+
+```markdown
+{{ "{% collapse(title=\"Click to expand\") %}" }}
+Hidden content goes here...
+{{ "{% end %}" }}
+```
+
+#### Pretty Links
+
+Create styled external link cards:
+
+```markdown
+{{ "{% pretty_link(url=\"https://example.com\" title=\"Example Site\" description=\"A great resource\") %}" }}
+```
+
+#### Browser Mockup
+
+Show screenshots in a browser frame:
+
+```markdown
+{{ "{% browser(url=\"https://ccclub.edu\" image=\"/images/screenshot.jpg\") %}" }}
+```
+
+### Page Configuration Options
+
+Full list of `[extra]` options you can use:
+
+```markdown
++++
+title = "Your Page"
+description = "Page description"
+date = 2025-01-15  # For blog posts and events
+weight = 1  # For standalone pages and ordering
+
+[extra]
+# Visual
+badge = "NEW"  # Page badge indicator
+toc_expand = true  # Always expand table of contents
+
+# Blog/Event specific
+author = "Your Name"
+author_github = "yourgithub"
+reading_time = 5
+poster = "/images/poster.jpg"
+event_date = "January 15, 2025"
+event_time = "4:00 PM"
+venue = "Room 101"
+registration_link = "https://forms.gle/..."
+
+# Taxonomies
+tags = ["tag1", "tag2"]
+categories = ["Category1"]
++++
+```
 
 ---
 

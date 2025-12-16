@@ -110,3 +110,21 @@ disable_root_hide = false      # Set to true to always show sidebar on homepage
 [extra.share]
 copy_url = true                # Enable "Copy URL" button on pages
 x = true                       # Enable "Share on X" button on pages
+
+# Comments Configuration (using Giscus)
+# To enable comments:
+# 1. Enable discussions in your GitHub repository
+# 2. Install Giscus app: https://github.com/apps/giscus
+# 3. Get your repo_id and category_id from: https://giscus.app
+# 4. Uncomment and fill in the values below
+# [extra.comments]
+# enabled = true
+# system = "giscus"  # or "utterances"
+# repo = "your-org/cc-website"
+# repo_id = "R_xxxxxxxxxxxxx"
+# category = "General"
+# category_id = "DIC_xxxxxxxxxxxxx"
+
+# Language Aliases (optional - for multi-language sites)
+# [extra]
+# lang_aliases = { en = "English", hi = "हिंदी" }

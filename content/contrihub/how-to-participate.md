@@ -1,11 +1,12 @@
 +++
 title = "How to Participate in ContriHub"
-date = 2025-09-01
 description = "Complete guide for participating in ContriHub - from Git basics to making your first pull request"
+date = 2025-09-01
+weight = 1
 
 [extra]
 guide_type = "beginner-friendly"
-updated = "2025-09-01"
+badge = "UPDATED"
 +++
 
 # How to Participate in ContriHub

@@ -5,7 +5,7 @@ sort_by = "date"
 template = "section.html"
 
 [extra]
-show_upcoming = true
+badge = "UPDATED"
 +++
 
 # Club Events
@@ -16,7 +16,7 @@ The Computer Coding Club organizes a variety of events throughout the year to he
 
 Check out what's coming up! Register early as spots fill up quickly.
 
-<!-- Upcoming events will be listed here automatically from content/events/upcoming/ -->
+<!-- Events are organized by year in folders like content/events/2025/ -->
 
 ## Event Categories
 
@@ -39,7 +39,7 @@ Casual networking sessions, study groups, and community building events.
 
 Browse our event archive to see what we've organized:
 
-<!-- Past events will be listed here automatically from content/events/past/ -->
+<!-- Past events can be found in previous year folders like content/events/2024/ -->
 
 ---
 
