@@ -1,6 +1,247 @@
-{% extends "goyo/templates/index.html" %}
+{% import "macros/head.html" as macros_head %}
+{% import "macros/search.html" as macros_search %}
+{% import "macros/header.html" as macros_header %}
+{% import "macros/comments.html" as macros_comments %}
+{% import "macros/toc.html" as macros_toc %}
+{% import "macros/footer.html" as macros_footer %}
+{% import "macros/sidebar.html" as macros_sidebar %}
 
-{% block extra_head %}
-    <!-- Custom CSS for Font Awesome path fix and other customizations -->
+<!DOCTYPE html>
+{{ macros_head::html_tag(config=config, lang=lang) }}
+<head>
+    {% if page is defined %}
+        {{ macros_head::head(config=config, page=page, section=false, current_url=config.base_url) }}
+    {% elif section is defined %}
+        {{ macros_head::head(config=config, page=false, section=section, current_url=config.base_url) }}
+    {% endif %}
+    {% block extra_head %}{% endblock extra_head %}
+    {# Custom CSS for Font Awesome fix #}
     <link rel="stylesheet" href="{{ get_url(path="css/custom.css") | safe }}">
-{% endblock extra_head %}
+</head>
+<body>
+    {{ macros_search::search(config=config) }}
+
+    {# Conditionally add lg:drawer-open - only for non-root pages #}
+    {% set lang_root_path = "/" ~ lang ~ "/" %}
+    {% set is_root_page = section is defined and (section.path == "/" or section.path == lang_root_path) %}
+    <div class="drawer {% if not is_root_page %}lg:drawer-open{% endif %}">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col pt-16">
+            {{ macros_header::header(config=config, lang=lang) }}
+
+            {% set lang_root_path = "/" ~ lang ~ "/" %}
+            {# Sidebar configuration with backward compatibility #}
+            {# Priority: sidebar.disable_root_hide (new) > disable_root_sidebar_hide (legacy) #}
+            {% if config.extra.sidebar is defined %}
+                {% set disable_root_sidebar_hide = config.extra.sidebar.disable_root_hide | default(value=config.extra.disable_root_sidebar_hide | default(value=false)) %}
+            {% else %}
+                {% set disable_root_sidebar_hide = config.extra.disable_root_sidebar_hide | default(value=false) %}
+            {% endif %}
+            {% if section is defined and (section.path == "/" or section.path == lang_root_path) and not disable_root_sidebar_hide %}
+            <div class="w-full">
+                <main class="prose w-full mx-auto">
+                    {% block content %}{% endblock content %}
+
+                    {{ macros_comments::comments(config=config) }}
+
+                    <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="prev-nav-item">
+                                {% block prev_link %}{% endblock prev_link %}
+                            </div>
+                            <div class="next-nav-item">
+                                {% block next_link %}{% endblock next_link %}
+                            </div>
+                        </div>
+                    </nav>
+                </main>
+            </div>
+            {% else %}
+            <div class="p-8 w-full flex justify-center">
+                <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
+                    <main class="prose w-full">
+                        {% block content %}{% endblock content %}
+
+                        {{ macros_comments::comments(config=config) }}
+
+                        <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="prev-nav-item">
+                                    {% block prev_link %}{% endblock prev_link %}
+                                </div>
+                                <div class="next-nav-item">
+                                    {% block next_link %}{% endblock next_link %}
+                                </div>
+                            </div>
+                        </nav>
+                    </main>
+
+                    {% if page is defined %}
+                        {{ macros_toc::toc(page=page) }}
+                    {% endif %}
+                    {% if section is defined %}
+                        {{ macros_toc::toc(page=section) }}
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            <script>
+              // Determine theme: localStorage > extra.default_colorset > goyo-dark
+              // Expose theme config for global use (e.g., goyo.js)
+              {# Theme configuration with backward compatibility #}
+              {# Priority: theme.dark_brightness/light_brightness (new per-theme) > theme.brightness (common) > brightness (legacy) #}
+              {% if config.extra.theme is defined %}
+                  {% set js_theme_colorset = config.extra.theme.colorset | default(value=config.extra.default_colorset | default(value='dark')) %}
+                  {% set js_common_brightness = config.extra.theme.brightness | default(value=config.extra.brightness | default(value='normal')) %}
+                  {% set js_dark_brightness = config.extra.theme.dark_brightness | default(value=js_common_brightness) %}
+                  {% set js_light_brightness = config.extra.theme.light_brightness | default(value=js_common_brightness) %}
+              {% else %}
+                  {% set js_theme_colorset = config.extra.default_colorset | default(value='dark') %}
+                  {% set js_common_brightness = config.extra.brightness | default(value='normal') %}
+                  {% set js_dark_brightness = js_common_brightness %}
+                  {% set js_light_brightness = js_common_brightness %}
+              {% endif %}
+              window.defaultColorset = "{{ js_theme_colorset }}";
+              window.darkBrightness = "{{ js_dark_brightness }}";
+              window.lightBrightness = "{{ js_light_brightness }}";
+              window.themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "goyo-dark";
+
+              // Theme mapping - maps user-friendly names to actual DaisyUI theme names
+              var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+              var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
+              var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+
+              // Initialize and run Mermaid only when loaded
+              window.initMermaid = function() {
+                var mermaidTheme = "dark";
+                if(currentUserTheme == "goyo-light") {
+                  mermaidTheme = "light";
+                }
+                
+                if (typeof mermaid !== 'undefined') {
+                  mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
+                  
+                  // Function to render mermaid diagrams
+                  var renderMermaid = async function() {
+                    const mermaidElements = document.querySelectorAll('.mermaid');
+                    if (mermaidElements.length > 0) {
+                        await mermaid.run({
+                            nodes: mermaidElements
+                        });
+                    }
+                  };
+                  
+                  // Check if DOMContentLoaded has already fired
+                  if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', renderMermaid);
+                  } else {
+                    // DOMContentLoaded already fired, run immediately
+                    renderMermaid();
+                  }
+                }
+              };
+              
+              // Auto-initialize if Mermaid is already loaded
+              if (typeof mermaid !== 'undefined') {
+                window.initMermaid();
+              }
+            </script>
+
+        </div>
+
+        {% set lang_root_path = "/" ~ lang ~ "/" %}
+        {# Always render drawer-side for hamburger menu functionality #}
+        <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
+            {% if section is defined %}
+                {{ macros_sidebar::sidebar(config=config, lang=lang, current_path=current_path, section=section) }}
+            {% else %}
+                {{ macros_sidebar::sidebar(config=config, lang=lang, current_path=current_path, section=false) }}
+            {% endif %}
+        </div>
+    </div>
+
+    {% block js_body %}
+        <script type="text/javascript" src="{{ get_url(path='goyo.js') | safe }}"></script>
+        {% if config.build_search_index %}
+        <!-- Lazy load search functionality -->
+        <script>
+            var searchLoaded = false;
+            var searchLoadCallbacks = [];
+            
+            function loadSearchLibraries(callback) {
+                // If already loaded, execute callback immediately
+                if (searchLoaded && typeof Fuse !== 'undefined' && window.searchIndex) {
+                    if (callback) callback();
+                    return;
+                }
+                
+                // Add callback to queue
+                if (callback) searchLoadCallbacks.push(callback);
+                
+                // If already loading, don't start again
+                if (searchLoaded) return;
+                searchLoaded = true;
+                
+                // Show loading indicator in search input
+                var searchInput = document.getElementById('search');
+                if (searchInput) {
+                    searchInput.placeholder = 'Loading search...';
+                    searchInput.disabled = true;
+                }
+                
+                // Load Fuse.js
+                var fuseScript = document.createElement('script');
+                fuseScript.src = '{{ get_url(path="fuse.min.js") | safe }}';
+                
+                // Load search index after Fuse.js
+                fuseScript.onload = function() {
+                    var searchIndexScript = document.createElement('script');
+                    searchIndexScript.src = '{{ get_url(path="search_index." ~ lang ~ ".js") | safe }}';
+                    searchIndexScript.onload = function() {
+                        // Re-enable search input
+                        if (searchInput) {
+                            searchInput.placeholder = 'Search documentation...';
+                            searchInput.disabled = false;
+                            searchInput.focus();
+                        }
+                        
+                        // Initialize search functionality
+                        if (typeof initSearch === 'function') {
+                            initSearch();
+                        }
+                        
+                        // Execute all queued callbacks
+                        searchLoadCallbacks.forEach(function(cb) { cb(); });
+                        searchLoadCallbacks = [];
+                    };
+                    document.body.appendChild(searchIndexScript);
+                };
+                
+                document.body.appendChild(fuseScript);
+            }
+            
+            // Load search on first interaction with search modal
+            document.addEventListener('DOMContentLoaded', function() {
+                var searchModal = document.getElementById('search-modal');
+                if (searchModal) {
+                    searchModal.addEventListener('change', function() {
+                        if (this.checked) {
+                            loadSearchLibraries();
+                        }
+                    });
+                }
+                
+                // Also load on Ctrl+K / Cmd+K
+                document.addEventListener('keydown', function(e) {
+                    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                        loadSearchLibraries();
+                    }
+                });
+            });
+        </script>
+        {% endif %}
+    {% endblock js_body %}
+</body>
+</html>

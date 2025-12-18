@@ -53,12 +53,57 @@
     </div>
     {% endif %}
     
+    {# Mobile-only quick navigation - shows main nav items #}
+    <div class="lg:hidden px-4 py-2 border-b border-gray-500/10">
+        <div class="text-xs font-semibold text-gray-400 mb-2">QUICK NAV</div>
+        <ul class="menu menu-compact">
+            {% if config.extra.nav is defined %}
+                {% for item in config.extra.nav %}
+                    {% if item.type == "url" %}
+                        <li><a href="{{ get_url(path=item.url) | safe }}" class="text-sm">
+                            {% if item.icon %}<i class="{{ item.icon }} mr-2"></i>{% endif %}
+                            {{ item.name }}
+                        </a></li>
+                    {% elif item.type == "dropdown" and item.members %}
+                        {% for member in item.members %}
+                            <li><a href="{{ get_url(path=member.url) | safe }}" class="text-sm">
+                                {% if member.icon %}<i class="{{ member.icon }} mr-2"></i>{% endif %}
+                                {{ member.name }}
+                            </a></li>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+    
+    {# Check if section has content #}
+    {% set has_content = root_section.pages | length > 0 or root_section.subsections | length > 0 %}
+    
     {# Sidebar Header - Link back to section root #}
-    <div class="px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
+    <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
         <a href="{{ root_section.permalink }}" class="hover:text-primary transition-colors">{{ root_section.title }}</a>
     </div>
 
-    <ul class="menu w-full flex-grow">
+    {% if not has_content %}
+    {# Fallback: Show all top-level sections when current section is empty #}
+    <ul class="hidden lg:block menu w-full flex-grow">
+        <li class="menu-title">
+            <span class="text-xs text-gray-400">ALL SECTIONS</span>
+        </li>
+        {% set site_root = get_section(path="_index.md") %}
+        {% for section_path in site_root.subsections %}
+            {% set s = get_section(path=section_path) %}
+            {% if not s.transparent %}
+                <li><a href="{{ get_url(path=s.path, lang=lang) | safe }}" class="hover:no-underline">
+                    {{ s.title }}
+                </a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% else %}
+    {# Regular sidebar content #}
+    <ul class="hidden lg:block menu w-full flex-grow">
         {# Level 1 - Pages in Root Section #}
         {% for p in root_section.pages %}
             <li {% if normalized_current_path == p.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=p.path, lang=lang) | safe }}">{{ p.title }}</a></li>
@@ -66,7 +111,10 @@
         
         {# Level 1 - Subsections #}
         {% for s1_path in root_section.subsections %}
-            {% set s1 = get_section(path=s1_path) %}{% set is_active1 = normalized_current_path is starting_with(s1.path) %}
+            {% set s1 = get_section(path=s1_path) %}
+            {# Skip transparent sections (e.g., blog year folders) #}
+            {% if s1.transparent %}{% continue %}{% endif %}
+            {% set is_active1 = normalized_current_path is starting_with(s1.path) %}
             <li>
                 {% if s1.subsections or s1.pages %}
                     <details {% if is_active1 or sidebar_expand_depth >= 1 %}open{% endif %}>
@@ -77,7 +125,10 @@
                                 <li {% if normalized_current_path == p.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=p.path, lang=lang) | safe }}">{{ p.title }}</a></li>
                             {% endfor %}
                             {% for s2_path in s1.subsections %}
-                                {% set s2 = get_section(path=s2_path) %}{% set is_active2 = normalized_current_path is starting_with(s2.path) %}
+                                {% set s2 = get_section(path=s2_path) %}
+                                {# Skip transparent sections #}
+                                {% if s2.transparent %}{% continue %}{% endif %}
+                                {% set is_active2 = normalized_current_path is starting_with(s2.path) %}
                                 <li>
                                     {% if s2.subsections or s2.pages %}
                                         <details {% if is_active2 or sidebar_expand_depth >= 2 %}open{% endif %}>
@@ -88,7 +139,10 @@
                                                     <li {% if normalized_current_path == p.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=p.path, lang=lang) | safe }}">{{ p.title }}</a></li>
                                                 {% endfor %}
                                                 {% for s3_path in s2.subsections %}
-                                                    {% set s3 = get_section(path=s3_path) %}{% set is_active3 = normalized_current_path is starting_with(s3.path) %}
+                                                    {% set s3 = get_section(path=s3_path) %}
+                                                    {# Skip transparent sections #}
+                                                    {% if s3.transparent %}{% continue %}{% endif %}
+                                                    {% set is_active3 = normalized_current_path is starting_with(s3.path) %}
                                                     <li>
                                                         {% if s3.subsections or s3.pages %}
                                                             <details {% if is_active3 or sidebar_expand_depth >= 3 %}open{% endif %}>
@@ -99,7 +153,10 @@
                                                                         <li {% if normalized_current_path == p.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=p.path, lang=lang) | safe }}">{{ p.title }}</a></li>
                                                                     {% endfor %}
                                                                     {% for s4_path in s3.subsections %}
-                                                                        {% set s4 = get_section(path=s4_path) %}{% set is_active4 = normalized_current_path is starting_with(s4.path) %}
+                                                                        {% set s4 = get_section(path=s4_path) %}
+                                                                        {# Skip transparent sections #}
+                                                                        {% if s4.transparent %}{% continue %}{% endif %}
+                                                                        {% set is_active4 = normalized_current_path is starting_with(s4.path) %}
                                                                         <li>
                                                                             {% if s4.subsections or s4.pages %}
                                                                                 <details {% if is_active4 or sidebar_expand_depth >= 4 %}open{% endif %}>
@@ -134,5 +191,6 @@
             </li>
         {% endfor %}
     </ul>
+    {% endif %}
 </div>
 {% endmacro sidebar %}

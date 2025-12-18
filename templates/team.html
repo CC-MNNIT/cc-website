@@ -26,23 +26,23 @@
   To add/update team members, edit data/team.yaml only.
 #}
 
-{% extends "page.html" %}
+{% extends "index.html" %}
 
 {% block content %}
     {# Title Section #}
     <div class="mb-12 pb-4 border-b border-gray-500/15">
         <h1 class="flex items-center gap-3">
-            {{ page.title }}
-            {% if page.extra.badge %}
-                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">{{ page.extra.badge }}</span>
+            {{ section.title }}
+            {% if section.extra.badge %}
+                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">{{ section.extra.badge }}</span>
             {% endif %}
         </h1>
-        <p class="text-gray-500">{{ page.description }}</p>
+        <p class="text-gray-500">{{ section.description }}</p>
     </div>
 
     {# Intro Content #}
     <div class="mb-16 prose max-w-none">
-        {{ page.content | safe }}
+        {{ section.content | safe }}
     </div>
 
     {% set team = load_data(path="data/team.yaml") %}
