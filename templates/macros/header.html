@@ -19,6 +19,15 @@
 
 {% set has_theme_specific_logos = logo_dark_image_path != "" or logo_light_image_path != "" %}
 
+{# Get current path for active link detection #}
+{% if section is defined %}
+    {% set current_path = section.path %}
+{% elif page is defined %}
+    {% set current_path = page.path %}
+{% else %}
+    {% set current_path = "/" %}
+{% endif %}
+
 <div class="navbar opacity-95 fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-500/15 backdrop-blur-3xl">
     <!-- Mobile hamburger (and Desktop on Root Page) -->
     <div class="flex-none {% if not is_root_page %}lg:hidden{% endif %}">
@@ -36,7 +45,7 @@
     {% endif %}
     <!-- Logo -->
     <div class="flex-1">
-        <a href="{{ get_url(path='/') | safe }}" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+        <a href="{{ get_url(path='/') | safe }}" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             {% if has_theme_specific_logos %}
                 {% set dark_logo_src = logo_dark_image_path %}
                 {% if dark_logo_src == "" %}{% set dark_logo_src = logo_image_path %}{% endif %}
@@ -89,8 +98,10 @@
                             </div>
                             <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
                                 {% for member in item.members %}
+                                    {# Check if dropdown item is active #}
+                                    {% set is_member_active = current_path is starting_with(member.url) %}
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="{{ get_url(path=member.url) | safe }}">
+                                        <a class="btn btn-ghost hover:no-underline {% if is_member_active %}active-nav{% endif %}" href="{{ get_url(path=member.url) | safe }}">
                                             {% if member.icon %}<i class="{{ member.icon }}"></i>{% endif %}
                                             {{ member.name }}
                                         </a>
@@ -99,8 +110,15 @@
                             </ul>
                         </li>
                     {% else %}
+                        {# Check if nav item is active #}
+                        {% set is_active = false %}
+                        {% if item.url == "/" %}
+                            {% set is_active = current_path == "/" %}
+                        {% else %}
+                            {% set is_active = current_path is starting_with(item.url) %}
+                        {% endif %}
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="{{ get_url(path=item.url) | safe }}">
+                            <a class="btn btn-ghost hover:no-underline {% if is_active %}active-nav{% endif %}" href="{{ get_url(path=item.url) | safe }}">
                                 {% if item.icon %}<i class="{{ item.icon }}"></i>{% endif %}
                                 {{ item.name }}
                             </a>
@@ -167,4 +185,34 @@
         </ul>
     </div>
 </div>
+
+{# Active link enhancement script - runs after page load #}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    
+    const navLinks = document.querySelectorAll('.navbar a[href]:not(.logo-link)');
+    
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+                if (link.classList.contains('active-nav')) {
+            return;
+        }
+        
+        let isActive = false;
+        
+        if (linkPath === '/') {
+            isActive = (currentPath === '/' || currentPath === '');
+        } else {
+            isActive = currentPath.startsWith(linkPath);
+        }
+        
+        if (isActive) {
+            link.classList.add('active-nav');
+        } else {
+            link.classList.remove('active-nav');
+        }
+    });
+});
+</script>
 {% endmacro header %}
