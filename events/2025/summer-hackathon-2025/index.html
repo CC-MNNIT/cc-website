@@ -63,7 +63,7 @@
             
             @font-face {
                 font-family: "Pretendard-Regular";
-                src: url('https://Shanu-Kumawat.github.io/cc-website/fonts/Pretendard-Regular.woff') format("woff");
+                src: url('/cc-website/fonts/Pretendard-Regular.woff') format("woff");
                 font-weight: 400;
                 font-style: normal;
                 font-display: swap;
@@ -88,10 +88,10 @@
       <!-- SEO: Open Graph / Twitter Card -->
       <meta property="og:title" content="Summer Hackathon 2025 | Computer Coding Club" />
       <meta property="og:description" content="A successful 48-hour coding marathon with 150 participants building innovative solutions for social good." />
-      <meta property="og:url" content="https://Shanu-Kumawat.github.io/cc-website/" />
+      <meta property="og:url" content="/cc-website/" />
       <meta property="og:type" content="website" />
       
-      <meta property="og:image" content="https://Shanu-Kumawat.github.io/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta property="og:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
       
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -110,22 +110,22 @@
       <meta name="twitter:creator" content="@your_club_handle" />
       
       
-      <meta name="twitter:image" content="https://Shanu-Kumawat.github.io/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta name="twitter:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
       
 
       <!-- Browser address bar color -->
       <meta name="theme-color" content="#0f172a">
 
       <!-- CSS -->
-    <link rel="stylesheet" href="https://Shanu-Kumawat.github.io/cc-website/css/main.css">
-    <link rel="stylesheet" href="https://Shanu-Kumawat.github.io/cc-website/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/cc-website/css/main.css">
+    <link rel="stylesheet" href="/cc-website/css/font-awesome.min.css">
     
     <!-- Preload critical fonts -->
-    <link rel="preload" href="https://Shanu-Kumawat.github.io/cc-website/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/cc-website/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
 
     <!-- Defer non-critical scripts -->
-    <script defer src="https://Shanu-Kumawat.github.io/cc-website/js/copy_code.js"></script>
-    <script defer src="https://Shanu-Kumawat.github.io/cc-website/js/copy_heading_link.js"></script>
+    <script defer src="/cc-website/js/copy_code.js"></script>
+    <script defer src="/cc-website/js/copy_heading_link.js"></script>
     
     <!-- Lazy load Mermaid and KaTeX - only when needed -->
     <script>
@@ -142,12 +142,12 @@
                 // Load KaTeX CSS first
                 var katexCSS = document.createElement('link');
                 katexCSS.rel = 'stylesheet';
-                katexCSS.href = 'https://Shanu-Kumawat.github.io/cc-website/css/katex.min.css';
+                katexCSS.href = '/cc-website/css/katex.min.css';
                 document.head.appendChild(katexCSS);
                 
                 // Load KaTeX JS
                 var katexScript = document.createElement('script');
-                katexScript.src = 'https://Shanu-Kumawat.github.io/cc-website/js/katex.min.js';
+                katexScript.src = '/cc-website/js/katex.min.js';
                 katexScript.onload = function() {
                     // Render inline elements
                     katexInlineElements.forEach(function(elem) {
@@ -181,7 +181,7 @@
             // Load Mermaid if diagram elements are present
             if (hasMermaid) {
                 var mermaidScript = document.createElement('script');
-                mermaidScript.src = 'https://Shanu-Kumawat.github.io/cc-website/js/mermaid.min.js';
+                mermaidScript.src = '/cc-website/js/mermaid.min.js';
                 mermaidScript.onload = function() {
                     // Initialize Mermaid after loading
                     if (typeof window.initMermaid === 'function') {
@@ -197,7 +197,7 @@
     
 
     
-    <link rel="stylesheet" href="https://Shanu-Kumawat.github.io/cc-website/css/custom.css">
+    <link rel="stylesheet" href="/cc-website/css/custom.css">
 
     <style>
         /* Desktop Sidebar Animation */
@@ -302,7 +302,7 @@
     
     <!-- Logo -->
     <div class="flex-1">
-        <a href="https://Shanu-Kumawat.github.io/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+        <a href="/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
                 CC Club
             
@@ -317,7 +317,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/about">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/about">
                                 <i class="fa-solid fa-circle-info"></i>
                                 About
                             </a>
@@ -326,7 +326,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/blog">
                                 <i class="fa-solid fa-blog"></i>
                                 Blog
                             </a>
@@ -335,7 +335,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/events">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 Events
                             </a>
@@ -344,7 +344,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/contrihub">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contrihub">
                                 <i class="fa-solid fa-code-branch"></i>
                                 ContriHub
                             </a>
@@ -353,7 +353,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/impact">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/impact">
                                 <i class="fa-solid fa-rocket"></i>
                                 Impact
                             </a>
@@ -362,7 +362,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/roadmaps">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/roadmaps">
                                 <i class="fa-solid fa-route"></i>
                                 Roadmaps
                             </a>
@@ -371,7 +371,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/resources">
                                 <i class="fa-solid fa-book-open"></i>
                                 Resources
                             </a>
@@ -388,14 +388,14 @@
                             <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
                                 
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/team">
+                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/team">
                                             <i class="fa-solid fa-user-group"></i>
                                             Current Team
                                         </a>
                                     </li>
                                 
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/alumni">
+                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/alumni">
                                             <i class="fa-solid fa-graduation-cap"></i>
                                             Alumni
                                         </a>
@@ -407,7 +407,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/contact">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contact">
                                 <i class="fa-solid fa-envelope"></i>
                                 Contact
                             </a>
@@ -575,7 +575,7 @@ Smart medication reminder system for elderly patients<br />
             </button>
             
             
-            <a href="https://twitter.com/intent/tweet?url=https%3A&#x2F;&#x2F;Shanu-Kumawat.github.io&#x2F;cc-website&#x2F;events&#x2F;2025&#x2F;summer-hackathon-2025&#x2F;&text=Summer%20Hackathon%202025" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+            <a href="https://twitter.com/intent/tweet?url=&#x2F;cc-website&#x2F;events&#x2F;2025&#x2F;summer-hackathon-2025&#x2F;&text=Summer%20Hackathon%202025" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                 </svg>
@@ -597,7 +597,7 @@ Smart medication reminder system for elderly patients<br />
                                     
     
         
-        <a class="nav-button nav-button-prev group" href="https://Shanu-Kumawat.github.io/cc-website/events/2025/">
+        <a class="nav-button nav-button-prev group" href="/cc-website/events/2025/">
             <div class="nav-button-content">
                 <div class="nav-button-direction">
                     <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -744,16 +744,16 @@ Smart medication reminder system for elderly patients<br />
                     
                     <details class="toc-details" >
                         <summary>
-                            <a href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/#event-summary" class="toc-link">Event Summary</a>
+                            <a href="/cc-website/events/2025/summer-hackathon-2025/#event-summary" class="toc-link">Event Summary</a>
                         </summary>
                         <ul>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/#winners" class="toc-link">Winners</a>
+                                    <a href="/cc-website/events/2025/summer-hackathon-2025/#winners" class="toc-link">Winners</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/#special-awards" class="toc-link">Special Awards</a>
+                                    <a href="/cc-website/events/2025/summer-hackathon-2025/#special-awards" class="toc-link">Special Awards</a>
                                 </li>
                             
                         </ul>
@@ -765,16 +765,16 @@ Smart medication reminder system for elderly patients<br />
                     
                     <details class="toc-details" >
                         <summary>
-                            <a href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/#detailed-recap" class="toc-link">Detailed Recap</a>
+                            <a href="/cc-website/events/2025/summer-hackathon-2025/#detailed-recap" class="toc-link">Detailed Recap</a>
                         </summary>
                         <ul>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/#key-takeaways" class="toc-link">Key Takeaways</a>
+                                    <a href="/cc-website/events/2025/summer-hackathon-2025/#key-takeaways" class="toc-link">Key Takeaways</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/#by-the-numbers" class="toc-link">By the Numbers</a>
+                                    <a href="/cc-website/events/2025/summer-hackathon-2025/#by-the-numbers" class="toc-link">By the Numbers</a>
                                 </li>
                             
                         </ul>
@@ -784,25 +784,25 @@ Smart medication reminder system for elderly patients<br />
             
                 <li>
                     
-                    <a href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/#photo-gallery" class="toc-link">Photo Gallery</a>
+                    <a href="/cc-website/events/2025/summer-hackathon-2025/#photo-gallery" class="toc-link">Photo Gallery</a>
                     
                 </li>
             
                 <li>
                     
-                    <a href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/#testimonials" class="toc-link">Testimonials</a>
+                    <a href="/cc-website/events/2025/summer-hackathon-2025/#testimonials" class="toc-link">Testimonials</a>
                     
                 </li>
             
                 <li>
                     
-                    <a href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/#event-resources" class="toc-link">Event Resources</a>
+                    <a href="/cc-website/events/2025/summer-hackathon-2025/#event-resources" class="toc-link">Event Resources</a>
                     
                 </li>
             
                 <li>
                     
-                    <a href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/#next-hackathon" class="toc-link">Next Hackathon</a>
+                    <a href="/cc-website/events/2025/summer-hackathon-2025/#next-hackathon" class="toc-link">Next Hackathon</a>
                     
                 </li>
             
@@ -927,49 +927,49 @@ Smart medication reminder system for elderly patients<br />
             
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/about" class="text-sm">
+                        <li><a href="/cc-website/about" class="text-sm">
                             <i class="fa-solid fa-circle-info mr-2"></i>
                             About
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/blog" class="text-sm">
+                        <li><a href="/cc-website/blog" class="text-sm">
                             <i class="fa-solid fa-blog mr-2"></i>
                             Blog
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/events" class="text-sm">
+                        <li><a href="/cc-website/events" class="text-sm">
                             <i class="fa-solid fa-calendar-days mr-2"></i>
                             Events
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/contrihub" class="text-sm">
+                        <li><a href="/cc-website/contrihub" class="text-sm">
                             <i class="fa-solid fa-code-branch mr-2"></i>
                             ContriHub
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/impact" class="text-sm">
+                        <li><a href="/cc-website/impact" class="text-sm">
                             <i class="fa-solid fa-rocket mr-2"></i>
                             Impact
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/roadmaps" class="text-sm">
+                        <li><a href="/cc-website/roadmaps" class="text-sm">
                             <i class="fa-solid fa-route mr-2"></i>
                             Roadmaps
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/resources" class="text-sm">
+                        <li><a href="/cc-website/resources" class="text-sm">
                             <i class="fa-solid fa-book-open mr-2"></i>
                             Resources
                         </a></li>
@@ -977,12 +977,12 @@ Smart medication reminder system for elderly patients<br />
                 
                     
                         
-                            <li><a href="https://Shanu-Kumawat.github.io/cc-website/team" class="text-sm">
+                            <li><a href="/cc-website/team" class="text-sm">
                                 <i class="fa-solid fa-user-group mr-2"></i>
                                 Current Team
                             </a></li>
                         
-                            <li><a href="https://Shanu-Kumawat.github.io/cc-website/alumni" class="text-sm">
+                            <li><a href="/cc-website/alumni" class="text-sm">
                                 <i class="fa-solid fa-graduation-cap mr-2"></i>
                                 Alumni
                             </a></li>
@@ -990,7 +990,7 @@ Smart medication reminder system for elderly patients<br />
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/contact" class="text-sm">
+                        <li><a href="/cc-website/contact" class="text-sm">
                             <i class="fa-solid fa-envelope mr-2"></i>
                             Contact
                         </a></li>
@@ -1005,7 +1005,7 @@ Smart medication reminder system for elderly patients<br />
     
     
     <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
-        <a href="https:&#x2F;&#x2F;Shanu-Kumawat.github.io&#x2F;cc-website&#x2F;events&#x2F;" class="hover:text-primary transition-colors">Events</a>
+        <a href="&#x2F;cc-website&#x2F;events&#x2F;" class="hover:text-primary transition-colors">Events</a>
     </div>
 
     
@@ -1023,11 +1023,11 @@ Smart medication reminder system for elderly patients<br />
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2026">Events 2026</a></summary>
+                        <summary ><a class="hover:no-underline" href="/cc-website/events/2026">Events 2026</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2026/docker-kubernetes-workshop">Docker &amp; Kubernetes Fundamentals Workshop</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/events/2026/docker-kubernetes-workshop">Docker &amp; Kubernetes Fundamentals Workshop</a></li>
                             
                             
                         </ul>
@@ -1042,13 +1042,13 @@ Smart medication reminder system for elderly patients<br />
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2025">Events 2025</a></summary>
+                        <summary ><a class="hover:no-underline" href="/cc-website/events/2025">Events 2025</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2025/winter-hackathon-2025">Winter Hackathon 2025</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/events/2025/winter-hackathon-2025">Winter Hackathon 2025</a></li>
                             
-                                <li class="rounded bg-gray-500/15"><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025">Summer Hackathon 2025</a></li>
+                                <li class="rounded bg-gray-500/15"><a class="hover:no-underline" href="/cc-website/events/2025/summer-hackathon-2025">Summer Hackathon 2025</a></li>
                             
                             
                         </ul>
@@ -1063,13 +1063,13 @@ Smart medication reminder system for elderly patients<br />
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2024">Events 2024</a></summary>
+                        <summary ><a class="hover:no-underline" href="/cc-website/events/2024">Events 2024</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2024/winter-code-fest">Winter Code Fest 2024</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/events/2024/winter-code-fest">Winter Code Fest 2024</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2024/intro-to-ai">Intro to AI Workshop</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/events/2024/intro-to-ai">Intro to AI Workshop</a></li>
                             
                             
                         </ul>
@@ -1099,7 +1099,7 @@ Smart medication reminder system for elderly patients<br />
     </div>
 
     
-        <script type="text/javascript" src="https://Shanu-Kumawat.github.io/cc-website/goyo.js"></script>
+        <script type="text/javascript" src="/cc-website/goyo.js"></script>
         
         <!-- Lazy load search functionality -->
         <script>
@@ -1129,12 +1129,12 @@ Smart medication reminder system for elderly patients<br />
                 
                 // Load Fuse.js
                 var fuseScript = document.createElement('script');
-                fuseScript.src = 'https://Shanu-Kumawat.github.io/cc-website/fuse.min.js';
+                fuseScript.src = '/cc-website/fuse.min.js';
                 
                 // Load search index after Fuse.js
                 fuseScript.onload = function() {
                     var searchIndexScript = document.createElement('script');
-                    searchIndexScript.src = 'https://Shanu-Kumawat.github.io/cc-website/search_index.en.js';
+                    searchIndexScript.src = '/cc-website/search_index.en.js';
                     searchIndexScript.onload = function() {
                         // Re-enable search input
                         if (searchInput) {

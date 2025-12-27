@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Computer Coding Club - backend</title>
     <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://Shanu-Kumawat.github.io/cc-website/tags/backend/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/"/>
+    <link rel="self" type="application/atom+xml" href="/cc-website/tags/backend/atom.xml"/>
+    <link rel="alternate" type="text/html" href="/cc-website/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-08-14T00:00:00+00:00</updated>
-    <id>https://Shanu-Kumawat.github.io/cc-website/tags/backend/atom.xml</id>
+    <id>/cc-website/tags/backend/atom.xml</id>
     <entry xml:lang="en">
         <title>GraphQL vs REST: A Practical Comparison</title>
         <published>2025-08-14T00:00:00+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/graphql-vs-rest/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/graphql-vs-rest/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/graphql-vs-rest/"/>
+        <id>/cc-website/blog/2025/graphql-vs-rest/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/graphql-vs-rest/">&lt;h2 id=&quot;the-api-debate&quot;&gt;The API Debate&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/graphql-vs-rest/">&lt;h2 id=&quot;the-api-debate&quot;&gt;The API Debate&lt;&#x2F;h2&gt;
 &lt;p&gt;GraphQL has gained massive popularity, but is it always better than REST? Let&#x27;s compare objectively.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;rest-api&quot;&gt;REST API&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;Pros:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
@@ -70,10 +70,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/nodejs-rest-api/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/nodejs-rest-api/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/nodejs-rest-api/"/>
+        <id>/cc-website/blog/2025/nodejs-rest-api/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/nodejs-rest-api/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/nodejs-rest-api/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
 &lt;p&gt;Building RESTful APIs is a fundamental skill for backend developers. In this comprehensive guide, we&#x27;ll create a production-ready REST API using Node.js and Express.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-you-ll-learn&quot;&gt;What You&#x27;ll Learn&lt;&#x2F;h2&gt;
 &lt;ul&gt;

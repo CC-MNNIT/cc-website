@@ -63,7 +63,7 @@
             
             @font-face {
                 font-family: "Pretendard-Regular";
-                src: url('https://Shanu-Kumawat.github.io/cc-website/fonts/Pretendard-Regular.woff') format("woff");
+                src: url('/cc-website/fonts/Pretendard-Regular.woff') format("woff");
                 font-weight: 400;
                 font-style: normal;
                 font-display: swap;
@@ -88,10 +88,10 @@
       <!-- SEO: Open Graph / Twitter Card -->
       <meta property="og:title" content="How to Participate in ContriHub | Computer Coding Club" />
       <meta property="og:description" content="Complete guide for participating in ContriHub - from Git basics to making your first pull request" />
-      <meta property="og:url" content="https://Shanu-Kumawat.github.io/cc-website/" />
+      <meta property="og:url" content="/cc-website/" />
       <meta property="og:type" content="website" />
       
-      <meta property="og:image" content="https://Shanu-Kumawat.github.io/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta property="og:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
       
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -110,22 +110,22 @@
       <meta name="twitter:creator" content="@your_club_handle" />
       
       
-      <meta name="twitter:image" content="https://Shanu-Kumawat.github.io/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta name="twitter:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
       
 
       <!-- Browser address bar color -->
       <meta name="theme-color" content="#0f172a">
 
       <!-- CSS -->
-    <link rel="stylesheet" href="https://Shanu-Kumawat.github.io/cc-website/css/main.css">
-    <link rel="stylesheet" href="https://Shanu-Kumawat.github.io/cc-website/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/cc-website/css/main.css">
+    <link rel="stylesheet" href="/cc-website/css/font-awesome.min.css">
     
     <!-- Preload critical fonts -->
-    <link rel="preload" href="https://Shanu-Kumawat.github.io/cc-website/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/cc-website/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
 
     <!-- Defer non-critical scripts -->
-    <script defer src="https://Shanu-Kumawat.github.io/cc-website/js/copy_code.js"></script>
-    <script defer src="https://Shanu-Kumawat.github.io/cc-website/js/copy_heading_link.js"></script>
+    <script defer src="/cc-website/js/copy_code.js"></script>
+    <script defer src="/cc-website/js/copy_heading_link.js"></script>
     
     <!-- Lazy load Mermaid and KaTeX - only when needed -->
     <script>
@@ -142,12 +142,12 @@
                 // Load KaTeX CSS first
                 var katexCSS = document.createElement('link');
                 katexCSS.rel = 'stylesheet';
-                katexCSS.href = 'https://Shanu-Kumawat.github.io/cc-website/css/katex.min.css';
+                katexCSS.href = '/cc-website/css/katex.min.css';
                 document.head.appendChild(katexCSS);
                 
                 // Load KaTeX JS
                 var katexScript = document.createElement('script');
-                katexScript.src = 'https://Shanu-Kumawat.github.io/cc-website/js/katex.min.js';
+                katexScript.src = '/cc-website/js/katex.min.js';
                 katexScript.onload = function() {
                     // Render inline elements
                     katexInlineElements.forEach(function(elem) {
@@ -181,7 +181,7 @@
             // Load Mermaid if diagram elements are present
             if (hasMermaid) {
                 var mermaidScript = document.createElement('script');
-                mermaidScript.src = 'https://Shanu-Kumawat.github.io/cc-website/js/mermaid.min.js';
+                mermaidScript.src = '/cc-website/js/mermaid.min.js';
                 mermaidScript.onload = function() {
                     // Initialize Mermaid after loading
                     if (typeof window.initMermaid === 'function') {
@@ -197,7 +197,7 @@
     
 
     
-    <link rel="stylesheet" href="https://Shanu-Kumawat.github.io/cc-website/css/custom.css">
+    <link rel="stylesheet" href="/cc-website/css/custom.css">
 
     <style>
         /* Desktop Sidebar Animation */
@@ -302,7 +302,7 @@
     
     <!-- Logo -->
     <div class="flex-1">
-        <a href="https://Shanu-Kumawat.github.io/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+        <a href="/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
                 CC Club
             
@@ -317,7 +317,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/about">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/about">
                                 <i class="fa-solid fa-circle-info"></i>
                                 About
                             </a>
@@ -326,7 +326,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/blog">
                                 <i class="fa-solid fa-blog"></i>
                                 Blog
                             </a>
@@ -335,7 +335,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/events">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 Events
                             </a>
@@ -344,7 +344,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/contrihub">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contrihub">
                                 <i class="fa-solid fa-code-branch"></i>
                                 ContriHub
                             </a>
@@ -353,7 +353,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/impact">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/impact">
                                 <i class="fa-solid fa-rocket"></i>
                                 Impact
                             </a>
@@ -362,7 +362,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/roadmaps">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/roadmaps">
                                 <i class="fa-solid fa-route"></i>
                                 Roadmaps
                             </a>
@@ -371,7 +371,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/resources">
                                 <i class="fa-solid fa-book-open"></i>
                                 Resources
                             </a>
@@ -388,14 +388,14 @@
                             <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
                                 
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/team">
+                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/team">
                                             <i class="fa-solid fa-user-group"></i>
                                             Current Team
                                         </a>
                                     </li>
                                 
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/alumni">
+                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/alumni">
                                             <i class="fa-solid fa-graduation-cap"></i>
                                             Alumni
                                         </a>
@@ -407,7 +407,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/contact">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contact">
                                 <i class="fa-solid fa-envelope"></i>
                                 Contact
                             </a>
@@ -937,7 +937,7 @@ Requested review</li>
             </button>
             
             
-            <a href="https://twitter.com/intent/tweet?url=https%3A&#x2F;&#x2F;Shanu-Kumawat.github.io&#x2F;cc-website&#x2F;contrihub&#x2F;how-to-participate&#x2F;&text=How%20to%20Participate%20in%20ContriHub" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+            <a href="https://twitter.com/intent/tweet?url=&#x2F;cc-website&#x2F;contrihub&#x2F;how-to-participate&#x2F;&text=How%20to%20Participate%20in%20ContriHub" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                 </svg>
@@ -959,7 +959,7 @@ Requested review</li>
                                     
     
         
-        <a class="nav-button nav-button-prev group" href="https://Shanu-Kumawat.github.io/cc-website/contrihub/">
+        <a class="nav-button nav-button-prev group" href="/cc-website/contrihub/">
             <div class="nav-button-content">
                 <div class="nav-button-direction">
                     <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1033,7 +1033,7 @@ Requested review</li>
         
             
             
-                <a class="nav-button nav-button-next group" href="https://Shanu-Kumawat.github.io/cc-website/impact/">
+                <a class="nav-button nav-button-next group" href="/cc-website/impact/">
                     <div class="nav-button-content">
                         <div class="nav-button-direction">
                             <span class="nav-button-label">Next</span>
@@ -1121,64 +1121,64 @@ Requested review</li>
                     
                     <details class="toc-details" >
                         <summary>
-                            <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#how-to-participate-in-contrihub" class="toc-link">How to Participate in ContriHub</a>
+                            <a href="/cc-website/contrihub/how-to-participate/#how-to-participate-in-contrihub" class="toc-link">How to Participate in ContriHub</a>
                         </summary>
                         <ul>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#before-you-start" class="toc-link">Before You Start</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#before-you-start" class="toc-link">Before You Start</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#step-1-learn-git-github-basics" class="toc-link">Step 1: Learn Git &amp; GitHub Basics</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#step-1-learn-git-github-basics" class="toc-link">Step 1: Learn Git &amp; GitHub Basics</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#step-2-fork-and-clone-a-repository" class="toc-link">Step 2: Fork and Clone a Repository</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#step-2-fork-and-clone-a-repository" class="toc-link">Step 2: Fork and Clone a Repository</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#step-3-find-an-issue-to-work-on" class="toc-link">Step 3: Find an Issue to Work On</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#step-3-find-an-issue-to-work-on" class="toc-link">Step 3: Find an Issue to Work On</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#step-4-make-your-changes" class="toc-link">Step 4: Make Your Changes</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#step-4-make-your-changes" class="toc-link">Step 4: Make Your Changes</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#step-5-create-a-pull-request" class="toc-link">Step 5: Create a Pull Request</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#step-5-create-a-pull-request" class="toc-link">Step 5: Create a Pull Request</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#step-6-after-your-pr-is-merged" class="toc-link">Step 6: After Your PR is Merged</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#step-6-after-your-pr-is-merged" class="toc-link">Step 6: After Your PR is Merged</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#common-issues-solutions" class="toc-link">Common Issues &amp; Solutions</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#common-issues-solutions" class="toc-link">Common Issues &amp; Solutions</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#best-practices" class="toc-link">Best Practices</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#best-practices" class="toc-link">Best Practices</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#getting-help" class="toc-link">Getting Help</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#getting-help" class="toc-link">Getting Help</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#resources-for-learning" class="toc-link">Resources for Learning</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#resources-for-learning" class="toc-link">Resources for Learning</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#quick-reference-git-commands" class="toc-link">Quick Reference: Git Commands</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#quick-reference-git-commands" class="toc-link">Quick Reference: Git Commands</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#checklist-before-submitting-pr" class="toc-link">Checklist: Before Submitting PR</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#checklist-before-submitting-pr" class="toc-link">Checklist: Before Submitting PR</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/#next-steps" class="toc-link">Next Steps</a>
+                                    <a href="/cc-website/contrihub/how-to-participate/#next-steps" class="toc-link">Next Steps</a>
                                 </li>
                             
                         </ul>
@@ -1307,49 +1307,49 @@ Requested review</li>
             
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/about" class="text-sm">
+                        <li><a href="/cc-website/about" class="text-sm">
                             <i class="fa-solid fa-circle-info mr-2"></i>
                             About
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/blog" class="text-sm">
+                        <li><a href="/cc-website/blog" class="text-sm">
                             <i class="fa-solid fa-blog mr-2"></i>
                             Blog
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/events" class="text-sm">
+                        <li><a href="/cc-website/events" class="text-sm">
                             <i class="fa-solid fa-calendar-days mr-2"></i>
                             Events
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/contrihub" class="text-sm">
+                        <li><a href="/cc-website/contrihub" class="text-sm">
                             <i class="fa-solid fa-code-branch mr-2"></i>
                             ContriHub
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/impact" class="text-sm">
+                        <li><a href="/cc-website/impact" class="text-sm">
                             <i class="fa-solid fa-rocket mr-2"></i>
                             Impact
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/roadmaps" class="text-sm">
+                        <li><a href="/cc-website/roadmaps" class="text-sm">
                             <i class="fa-solid fa-route mr-2"></i>
                             Roadmaps
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/resources" class="text-sm">
+                        <li><a href="/cc-website/resources" class="text-sm">
                             <i class="fa-solid fa-book-open mr-2"></i>
                             Resources
                         </a></li>
@@ -1357,12 +1357,12 @@ Requested review</li>
                 
                     
                         
-                            <li><a href="https://Shanu-Kumawat.github.io/cc-website/team" class="text-sm">
+                            <li><a href="/cc-website/team" class="text-sm">
                                 <i class="fa-solid fa-user-group mr-2"></i>
                                 Current Team
                             </a></li>
                         
-                            <li><a href="https://Shanu-Kumawat.github.io/cc-website/alumni" class="text-sm">
+                            <li><a href="/cc-website/alumni" class="text-sm">
                                 <i class="fa-solid fa-graduation-cap mr-2"></i>
                                 Alumni
                             </a></li>
@@ -1370,7 +1370,7 @@ Requested review</li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/contact" class="text-sm">
+                        <li><a href="/cc-website/contact" class="text-sm">
                             <i class="fa-solid fa-envelope mr-2"></i>
                             Contact
                         </a></li>
@@ -1385,7 +1385,7 @@ Requested review</li>
     
     
     <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
-        <a href="https:&#x2F;&#x2F;Shanu-Kumawat.github.io&#x2F;cc-website&#x2F;contrihub&#x2F;" class="hover:text-primary transition-colors">ContriHub - Open Source Celebration</a>
+        <a href="&#x2F;cc-website&#x2F;contrihub&#x2F;" class="hover:text-primary transition-colors">ContriHub - Open Source Celebration</a>
     </div>
 
     
@@ -1393,7 +1393,7 @@ Requested review</li>
     <ul class="hidden lg:block menu w-full flex-grow">
         
         
-            <li class="rounded bg-gray-500/15"><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate">How to Participate in ContriHub</a></li>
+            <li class="rounded bg-gray-500/15"><a class="hover:no-underline" href="/cc-website/contrihub/how-to-participate">How to Participate in ContriHub</a></li>
         
         
         
@@ -1403,7 +1403,7 @@ Requested review</li>
             
             
             <li>
-                <a  href="https://Shanu-Kumawat.github.io/cc-website/contrihub/2026">ContriHub 2026</a>
+                <a  href="/cc-website/contrihub/2026">ContriHub 2026</a>
             </li>
         
             
@@ -1411,7 +1411,7 @@ Requested review</li>
             
             
             <li>
-                <a  href="https://Shanu-Kumawat.github.io/cc-website/contrihub/2024">ContriHub 2024</a>
+                <a  href="/cc-website/contrihub/2024">ContriHub 2024</a>
             </li>
         
             
@@ -1419,7 +1419,7 @@ Requested review</li>
             
             
             <li>
-                <a  href="https://Shanu-Kumawat.github.io/cc-website/contrihub/2025">ContriHub 2025</a>
+                <a  href="/cc-website/contrihub/2025">ContriHub 2025</a>
             </li>
         
     </ul>
@@ -1444,7 +1444,7 @@ Requested review</li>
     </div>
 
     
-        <script type="text/javascript" src="https://Shanu-Kumawat.github.io/cc-website/goyo.js"></script>
+        <script type="text/javascript" src="/cc-website/goyo.js"></script>
         
         <!-- Lazy load search functionality -->
         <script>
@@ -1474,12 +1474,12 @@ Requested review</li>
                 
                 // Load Fuse.js
                 var fuseScript = document.createElement('script');
-                fuseScript.src = 'https://Shanu-Kumawat.github.io/cc-website/fuse.min.js';
+                fuseScript.src = '/cc-website/fuse.min.js';
                 
                 // Load search index after Fuse.js
                 fuseScript.onload = function() {
                     var searchIndexScript = document.createElement('script');
-                    searchIndexScript.src = 'https://Shanu-Kumawat.github.io/cc-website/search_index.en.js';
+                    searchIndexScript.src = '/cc-website/search_index.en.js';
                     searchIndexScript.onload = function() {
                         // Re-enable search input
                         if (searchInput) {

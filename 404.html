@@ -66,7 +66,7 @@
             
             @font-face {
                 font-family: "Pretendard-Regular";
-                src: url('https://Shanu-Kumawat.github.io/cc-website/fonts/Pretendard-Regular.woff') format("woff");
+                src: url('/cc-website/fonts/Pretendard-Regular.woff') format("woff");
                 font-weight: 400;
                 font-style: normal;
                 font-display: swap;
@@ -89,10 +89,10 @@
       <!-- SEO: Open Graph / Twitter Card -->
       <meta property="og:title" content="Computer Coding Club" />
       <meta property="og:description" content="Official website of Computer Coding Club - Learn, Build, and Grow Together" />
-      <meta property="og:url" content="https://Shanu-Kumawat.github.io/cc-website//404.html" />
+      <meta property="og:url" content="/cc-website//404.html" />
       <meta property="og:type" content="website" />
       
-      <meta property="og:image" content="https://Shanu-Kumawat.github.io/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta property="og:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
       
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -111,22 +111,22 @@
       <meta name="twitter:creator" content="@your_club_handle" />
       
       
-      <meta name="twitter:image" content="https://Shanu-Kumawat.github.io/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta name="twitter:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
       
 
       <!-- Browser address bar color -->
       <meta name="theme-color" content="#0f172a">
 
       <!-- CSS -->
-    <link rel="stylesheet" href="https://Shanu-Kumawat.github.io/cc-website/css/main.css">
-    <link rel="stylesheet" href="https://Shanu-Kumawat.github.io/cc-website/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/cc-website/css/main.css">
+    <link rel="stylesheet" href="/cc-website/css/font-awesome.min.css">
     
     <!-- Preload critical fonts -->
-    <link rel="preload" href="https://Shanu-Kumawat.github.io/cc-website/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/cc-website/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
 
     <!-- Defer non-critical scripts -->
-    <script defer src="https://Shanu-Kumawat.github.io/cc-website/js/copy_code.js"></script>
-    <script defer src="https://Shanu-Kumawat.github.io/cc-website/js/copy_heading_link.js"></script>
+    <script defer src="/cc-website/js/copy_code.js"></script>
+    <script defer src="/cc-website/js/copy_heading_link.js"></script>
     
     <!-- Lazy load Mermaid and KaTeX - only when needed -->
     <script>
@@ -143,12 +143,12 @@
                 // Load KaTeX CSS first
                 var katexCSS = document.createElement('link');
                 katexCSS.rel = 'stylesheet';
-                katexCSS.href = 'https://Shanu-Kumawat.github.io/cc-website/css/katex.min.css';
+                katexCSS.href = '/cc-website/css/katex.min.css';
                 document.head.appendChild(katexCSS);
                 
                 // Load KaTeX JS
                 var katexScript = document.createElement('script');
-                katexScript.src = 'https://Shanu-Kumawat.github.io/cc-website/js/katex.min.js';
+                katexScript.src = '/cc-website/js/katex.min.js';
                 katexScript.onload = function() {
                     // Render inline elements
                     katexInlineElements.forEach(function(elem) {
@@ -182,7 +182,7 @@
             // Load Mermaid if diagram elements are present
             if (hasMermaid) {
                 var mermaidScript = document.createElement('script');
-                mermaidScript.src = 'https://Shanu-Kumawat.github.io/cc-website/js/mermaid.min.js';
+                mermaidScript.src = '/cc-website/js/mermaid.min.js';
                 mermaidScript.onload = function() {
                     // Initialize Mermaid after loading
                     if (typeof window.initMermaid === 'function') {
@@ -198,7 +198,7 @@
     <meta name="description" content="Page not found">
     <meta property="og:title" content="404">
     <meta property="og:description" content="Page not found">
-    <meta property="og:url" content="https:&#x2F;&#x2F;Shanu-Kumawat.github.io&#x2F;cc-website&#x2F;&#x2F;404.html">
+    <meta property="og:url" content="&#x2F;cc-website&#x2F;&#x2F;404.html">
 </head>
 <body>
     <div class="drawer lg:drawer-open">
@@ -234,7 +234,7 @@
     
     <!-- Logo -->
     <div class="flex-1">
-        <a href="https://Shanu-Kumawat.github.io/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+        <a href="/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
                 CC Club
             
@@ -249,7 +249,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/about">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/about">
                                 <i class="fa-solid fa-circle-info"></i>
                                 About
                             </a>
@@ -258,7 +258,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/blog">
                                 <i class="fa-solid fa-blog"></i>
                                 Blog
                             </a>
@@ -267,7 +267,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/events">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 Events
                             </a>
@@ -276,7 +276,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/contrihub">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contrihub">
                                 <i class="fa-solid fa-code-branch"></i>
                                 ContriHub
                             </a>
@@ -285,7 +285,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/impact">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/impact">
                                 <i class="fa-solid fa-rocket"></i>
                                 Impact
                             </a>
@@ -294,7 +294,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/roadmaps">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/roadmaps">
                                 <i class="fa-solid fa-route"></i>
                                 Roadmaps
                             </a>
@@ -303,7 +303,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/resources">
                                 <i class="fa-solid fa-book-open"></i>
                                 Resources
                             </a>
@@ -320,14 +320,14 @@
                             <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
                                 
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/team">
+                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/team">
                                             <i class="fa-solid fa-user-group"></i>
                                             Current Team
                                         </a>
                                     </li>
                                 
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/alumni">
+                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/alumni">
                                             <i class="fa-solid fa-graduation-cap"></i>
                                             Alumni
                                         </a>
@@ -339,7 +339,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/contact">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contact">
                                 <i class="fa-solid fa-envelope"></i>
                                 Contact
                             </a>
@@ -417,49 +417,49 @@
             
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/about" class="text-sm">
+                        <li><a href="/cc-website/about" class="text-sm">
                             <i class="fa-solid fa-circle-info mr-2"></i>
                             About
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/blog" class="text-sm">
+                        <li><a href="/cc-website/blog" class="text-sm">
                             <i class="fa-solid fa-blog mr-2"></i>
                             Blog
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/events" class="text-sm">
+                        <li><a href="/cc-website/events" class="text-sm">
                             <i class="fa-solid fa-calendar-days mr-2"></i>
                             Events
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/contrihub" class="text-sm">
+                        <li><a href="/cc-website/contrihub" class="text-sm">
                             <i class="fa-solid fa-code-branch mr-2"></i>
                             ContriHub
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/impact" class="text-sm">
+                        <li><a href="/cc-website/impact" class="text-sm">
                             <i class="fa-solid fa-rocket mr-2"></i>
                             Impact
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/roadmaps" class="text-sm">
+                        <li><a href="/cc-website/roadmaps" class="text-sm">
                             <i class="fa-solid fa-route mr-2"></i>
                             Roadmaps
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/resources" class="text-sm">
+                        <li><a href="/cc-website/resources" class="text-sm">
                             <i class="fa-solid fa-book-open mr-2"></i>
                             Resources
                         </a></li>
@@ -467,12 +467,12 @@
                 
                     
                         
-                            <li><a href="https://Shanu-Kumawat.github.io/cc-website/team" class="text-sm">
+                            <li><a href="/cc-website/team" class="text-sm">
                                 <i class="fa-solid fa-user-group mr-2"></i>
                                 Current Team
                             </a></li>
                         
-                            <li><a href="https://Shanu-Kumawat.github.io/cc-website/alumni" class="text-sm">
+                            <li><a href="/cc-website/alumni" class="text-sm">
                                 <i class="fa-solid fa-graduation-cap mr-2"></i>
                                 Alumni
                             </a></li>
@@ -480,7 +480,7 @@
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/contact" class="text-sm">
+                        <li><a href="/cc-website/contact" class="text-sm">
                             <i class="fa-solid fa-envelope mr-2"></i>
                             Contact
                         </a></li>
@@ -495,7 +495,7 @@
     
     
     <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
-        <a href="https:&#x2F;&#x2F;Shanu-Kumawat.github.io&#x2F;cc-website&#x2F;" class="hover:text-primary transition-colors">Computer Coding Club</a>
+        <a href="&#x2F;cc-website&#x2F;" class="hover:text-primary transition-colors">Computer Coding Club</a>
     </div>
 
     
@@ -511,7 +511,7 @@
             
             
             <li>
-                <a  href="https://Shanu-Kumawat.github.io/cc-website/about">About Computer Coding Club</a>
+                <a  href="/cc-website/about">About Computer Coding Club</a>
             </li>
         
             
@@ -521,41 +521,41 @@
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog">Blog</a></summary>
+                        <summary ><a class="hover:no-underline" href="/cc-website/blog">Blog</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-hooks-guide">Getting Started with React Hooks: A Complete Guide</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2025/react-hooks-guide">Getting Started with React Hooks: A Complete Guide</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-performance-optimization">Optimizing React Performance: Tips and Tricks</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2025/react-performance-optimization">Optimizing React Performance: Tips and Tricks</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/cybersecurity-basics">Cybersecurity Basics Every Developer Should Know</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2025/cybersecurity-basics">Cybersecurity Basics Every Developer Should Know</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/summer-hackathon-recap">Summer Hackathon 2025: 48 Hours of Innovation and Collaboration</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2025/summer-hackathon-recap">Summer Hackathon 2025: 48 Hours of Innovation and Collaboration</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/graphql-vs-rest">GraphQL vs REST: A Practical Comparison</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2025/graphql-vs-rest">GraphQL vs REST: A Practical Comparison</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/progressive-web-apps">Building Progressive Web Apps (PWA) in 2025</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2025/progressive-web-apps">Building Progressive Web Apps (PWA) in 2025</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/typescript-why-care">TypeScript: Why JavaScript Developers Should Care</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2025/typescript-why-care">TypeScript: Why JavaScript Developers Should Care</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/docker-for-beginners">Docker for Beginners: Containerize Your Apps</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2025/docker-for-beginners">Docker for Beginners: Containerize Your Apps</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/git-best-practices">Git Best Practices for Team Collaboration</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2025/git-best-practices">Git Best Practices for Team Collaboration</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/intro-to-ml-python">Introduction to Machine Learning with Python</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2025/intro-to-ml-python">Introduction to Machine Learning with Python</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/css-grid-vs-flexbox">CSS Grid vs Flexbox: When to Use Which</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2025/css-grid-vs-flexbox">CSS Grid vs Flexbox: When to Use Which</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/nodejs-rest-api">Building a REST API with Node.js and Express</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2025/nodejs-rest-api">Building a REST API with Node.js and Express</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2024/competitive-programming-intro">Introduction to Competitive Programming</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2024/competitive-programming-intro">Introduction to Competitive Programming</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2024/linux-commands">Linux Commands Every Developer Must Know</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2024/linux-commands">Linux Commands Every Developer Must Know</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2024/javascript-async-await">Understanding JavaScript Async&#x2F;Await</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2024/javascript-async-await">Understanding JavaScript Async&#x2F;Await</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog/2024/python-data-science">Getting Started with Python for Data Science</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/blog/2024/python-data-science">Getting Started with Python for Data Science</a></li>
                             
                             
                                 
@@ -576,7 +576,7 @@
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events">Events</a></summary>
+                        <summary ><a class="hover:no-underline" href="/cc-website/events">Events</a></summary>
                         <ul>
                             
                             
@@ -588,11 +588,11 @@
                                 <li>
                                     
                                         <details open>
-                                            <summary ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2026">Events 2026</a></summary>
+                                            <summary ><a class="hover:no-underline" href="/cc-website/events/2026">Events 2026</a></summary>
                                             <ul>
                                                 
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2026/docker-kubernetes-workshop">Docker &amp; Kubernetes Fundamentals Workshop</a></li>
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2026/docker-kubernetes-workshop">Docker &amp; Kubernetes Fundamentals Workshop</a></li>
                                                 
                                                 
                                             </ul>
@@ -607,13 +607,13 @@
                                 <li>
                                     
                                         <details open>
-                                            <summary ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2025">Events 2025</a></summary>
+                                            <summary ><a class="hover:no-underline" href="/cc-website/events/2025">Events 2025</a></summary>
                                             <ul>
                                                 
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2025/winter-hackathon-2025">Winter Hackathon 2025</a></li>
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2025/winter-hackathon-2025">Winter Hackathon 2025</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025">Summer Hackathon 2025</a></li>
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2025/summer-hackathon-2025">Summer Hackathon 2025</a></li>
                                                 
                                                 
                                             </ul>
@@ -628,13 +628,13 @@
                                 <li>
                                     
                                         <details open>
-                                            <summary ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2024">Events 2024</a></summary>
+                                            <summary ><a class="hover:no-underline" href="/cc-website/events/2024">Events 2024</a></summary>
                                             <ul>
                                                 
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2024/winter-code-fest">Winter Code Fest 2024</a></li>
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2024/winter-code-fest">Winter Code Fest 2024</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events/2024/intro-to-ai">Intro to AI Workshop</a></li>
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2024/intro-to-ai">Intro to AI Workshop</a></li>
                                                 
                                                 
                                             </ul>
@@ -654,11 +654,11 @@
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/contrihub">ContriHub - Open Source Celebration</a></summary>
+                        <summary ><a class="hover:no-underline" href="/cc-website/contrihub">ContriHub - Open Source Celebration</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate">How to Participate in ContriHub</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/contrihub/how-to-participate">How to Participate in ContriHub</a></li>
                             
                             
                                 
@@ -666,7 +666,7 @@
                                 
                                 
                                 <li>
-                                    <a  href="https://Shanu-Kumawat.github.io/cc-website/contrihub/2026">ContriHub 2026</a>
+                                    <a  href="/cc-website/contrihub/2026">ContriHub 2026</a>
                                 </li>
                             
                                 
@@ -674,7 +674,7 @@
                                 
                                 
                                 <li>
-                                    <a  href="https://Shanu-Kumawat.github.io/cc-website/contrihub/2024">ContriHub 2024</a>
+                                    <a  href="/cc-website/contrihub/2024">ContriHub 2024</a>
                                 </li>
                             
                                 
@@ -682,32 +682,7 @@
                                 
                                 
                                 <li>
-                                    <a  href="https://Shanu-Kumawat.github.io/cc-website/contrihub/2025">ContriHub 2025</a>
-                                </li>
-                            
-                        </ul>
-                    </details>
-                
-            </li>
-        
-            
-            
-            
-            
-            <li>
-                
-                    <details open>
-                        <summary ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/impact">Work &amp; Impact</a></summary>
-                        <ul>
-                            
-                            
-                            
-                                
-                                
-                                
-                                
-                                <li>
-                                    <a  href="https://Shanu-Kumawat.github.io/cc-website/impact/2024">Work &amp; Impact 2024</a>
+                                    <a  href="/cc-website/contrihub/2025">ContriHub 2025</a>
                                 </li>
                             
                         </ul>
@@ -722,13 +697,38 @@
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/roadmaps">Learning Roadmaps</a></summary>
+                        <summary ><a class="hover:no-underline" href="/cc-website/impact">Work &amp; Impact</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/roadmaps/web-development">Web Development Roadmap</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/roadmaps/dsa">Data Structures &amp; Algorithms Roadmap</a></li>
+                                
+                                
+                                
+                                
+                                <li>
+                                    <a  href="/cc-website/impact/2024">Work &amp; Impact 2024</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                
+            </li>
+        
+            
+            
+            
+            
+            <li>
+                
+                    <details open>
+                        <summary ><a class="hover:no-underline" href="/cc-website/roadmaps">Learning Roadmaps</a></summary>
+                        <ul>
+                            
+                            
+                                <li ><a class="hover:no-underline" href="/cc-website/roadmaps/web-development">Web Development Roadmap</a></li>
+                            
+                                <li ><a class="hover:no-underline" href="/cc-website/roadmaps/dsa">Data Structures &amp; Algorithms Roadmap</a></li>
                             
                             
                         </ul>
@@ -743,39 +743,39 @@
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources">Resources</a></summary>
+                        <summary ><a class="hover:no-underline" href="/cc-website/resources">Resources</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/cs-fundamentals">CS Fundamentals</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/cs-fundamentals">CS Fundamentals</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/competitive-programming">Competitive Programming</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/competitive-programming">Competitive Programming</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/interview-preparation">Interview Preparation</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/interview-preparation">Interview Preparation</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/web-development">Web Development</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/web-development">Web Development</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/cloud-devops">Cloud &amp; DevOps</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/cloud-devops">Cloud &amp; DevOps</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/machine-learning-ai">Machine Learning &amp; AI</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/machine-learning-ai">Machine Learning &amp; AI</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/open-source">Open Source</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/open-source">Open Source</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/development-tools">Development Tools</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/development-tools">Development Tools</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/mobile-development">Mobile Development</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/mobile-development">Mobile Development</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/learning-platforms">Learning Platforms</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/learning-platforms">Learning Platforms</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/cybersecurity">Cybersecurity</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/cybersecurity">Cybersecurity</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/design-resources">Design Resources</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/design-resources">Design Resources</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/practice-projects">Practice Projects</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/practice-projects">Practice Projects</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/technical-reading">Technical Reading</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/technical-reading">Technical Reading</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources/miscellaneous">Miscellaneous</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/resources/miscellaneous">Miscellaneous</a></li>
                             
                             
                         </ul>
@@ -788,7 +788,7 @@
             
             
             <li>
-                <a  href="https://Shanu-Kumawat.github.io/cc-website/team">Current Team</a>
+                <a  href="/cc-website/team">Current Team</a>
             </li>
         
             
@@ -796,7 +796,7 @@
             
             
             <li>
-                <a  href="https://Shanu-Kumawat.github.io/cc-website/alumni">CC Club Alumni</a>
+                <a  href="/cc-website/alumni">CC Club Alumni</a>
             </li>
         
             
@@ -804,7 +804,7 @@
             
             
             <li>
-                <a  href="https://Shanu-Kumawat.github.io/cc-website/contact">Contact Us</a>
+                <a  href="/cc-website/contact">Contact Us</a>
             </li>
         
     </ul>

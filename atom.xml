@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Computer Coding Club</title>
     <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://Shanu-Kumawat.github.io/cc-website/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/"/>
+    <link rel="self" type="application/atom+xml" href="/cc-website/atom.xml"/>
+    <link rel="alternate" type="text/html" href="/cc-website/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2026-01-05T00:00:00+00:00</updated>
-    <id>https://Shanu-Kumawat.github.io/cc-website/atom.xml</id>
+    <id>/cc-website/atom.xml</id>
     <entry xml:lang="en">
         <title>Docker &amp; Kubernetes Fundamentals Workshop</title>
         <published>2026-01-05T00:00:00+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/events/2026/docker-kubernetes-workshop/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/events/2026/docker-kubernetes-workshop/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/events/2026/docker-kubernetes-workshop/"/>
+        <id>/cc-website/events/2026/docker-kubernetes-workshop/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/events/2026/docker-kubernetes-workshop/">&lt;h2 id=&quot;workshop-overview&quot;&gt;Workshop Overview&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/events/2026/docker-kubernetes-workshop/">&lt;h2 id=&quot;workshop-overview&quot;&gt;Workshop Overview&lt;&#x2F;h2&gt;
 &lt;p&gt;Learn the fundamentals of &lt;strong&gt;Docker and Kubernetes&lt;&#x2F;strong&gt; in this hands-on 3-hour workshop! Whether you&#x27;re new to containerization or looking to strengthen your DevOps skills, this workshop will give you practical experience with industry-standard tools.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;what-you-ll-learn&quot;&gt;What You&#x27;ll Learn&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -172,10 +172,10 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/events/2025/winter-hackathon-2025/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/events/2025/winter-hackathon-2025/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/events/2025/winter-hackathon-2025/"/>
+        <id>/cc-website/events/2025/winter-hackathon-2025/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/events/2025/winter-hackathon-2025/">&lt;h2 id=&quot;about-the-event&quot;&gt;About the Event&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/events/2025/winter-hackathon-2025/">&lt;h2 id=&quot;about-the-event&quot;&gt;About the Event&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;strong&gt;Winter Hackathon 2025&lt;&#x2F;strong&gt; is our biggest coding event of the year! Over 48 hours, teams will collaborate to build innovative software solutions addressing real-world problems. This year&#x27;s theme is &lt;strong&gt;&quot;Tech for Social Good&quot;&lt;&#x2F;strong&gt; - we challenge you to create technology that makes a positive impact on society.&lt;&#x2F;p&gt;
 &lt;p&gt;Whether you&#x27;re a beginner or an experienced developer, this hackathon is designed to help you learn, grow, and connect with fellow coders. You&#x27;ll have access to mentors from top tech companies, free food and refreshments, and tons of swag!&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;why-participate&quot;&gt;Why Participate?&lt;&#x2F;h3&gt;
@@ -478,10 +478,10 @@ A: Yes, but you must sign in&#x2F;out for security. Keep your participant badge 
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-hooks-guide/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-hooks-guide/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/react-hooks-guide/"/>
+        <id>/cc-website/blog/2025/react-hooks-guide/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-hooks-guide/">&lt;!-- 
+        <content type="html" xml:base="/cc-website/blog/2025/react-hooks-guide/">&lt;!-- 
     BLOG POST CONTENT GUIDE
     
     Write your content below using Markdown syntax.
@@ -912,10 +912,10 @@ A: Yes, but you must sign in&#x2F;out for security. Keep your participant badge 
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-performance-optimization/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-performance-optimization/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/react-performance-optimization/"/>
+        <id>/cc-website/blog/2025/react-performance-optimization/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-performance-optimization/">&lt;h2 id=&quot;make-react-blazing-fast&quot;&gt;Make React Blazing Fast&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/react-performance-optimization/">&lt;h2 id=&quot;make-react-blazing-fast&quot;&gt;Make React Blazing Fast&lt;&#x2F;h2&gt;
 &lt;p&gt;Slow React app? These optimization techniques will help you achieve better performance.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;key-techniques&quot;&gt;Key Techniques&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-react-memo&quot;&gt;1. React.memo&lt;&#x2F;h3&gt;
@@ -958,10 +958,10 @@ A: Yes, but you must sign in&#x2F;out for security. Keep your participant badge 
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/cybersecurity-basics/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/cybersecurity-basics/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/cybersecurity-basics/"/>
+        <id>/cc-website/blog/2025/cybersecurity-basics/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/cybersecurity-basics/">&lt;h2 id=&quot;security-first&quot;&gt;Security First&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/cybersecurity-basics/">&lt;h2 id=&quot;security-first&quot;&gt;Security First&lt;&#x2F;h2&gt;
 &lt;p&gt;Security isn&#x27;t optional. Learn to protect your apps from day one.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;common-vulnerabilities&quot;&gt;Common Vulnerabilities&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-sql-injection&quot;&gt;1. SQL Injection&lt;&#x2F;h3&gt;
@@ -1007,10 +1007,10 @@ A: Yes, but you must sign in&#x2F;out for security. Keep your participant badge 
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/contrihub/how-to-participate/"/>
+        <id>/cc-website/contrihub/how-to-participate/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/contrihub/how-to-participate/">&lt;h1 id=&quot;how-to-participate-in-contrihub&quot;&gt;How to Participate in ContriHub&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="/cc-website/contrihub/how-to-participate/">&lt;h1 id=&quot;how-to-participate-in-contrihub&quot;&gt;How to Participate in ContriHub&lt;&#x2F;h1&gt;
 &lt;p&gt;Welcome to ContriHub! This guide will walk you through everything you need to know to make your first open source contribution. &lt;strong&gt;No prior experience required&lt;&#x2F;strong&gt; - we&#x27;ll teach you step by step.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;before-you-start&quot;&gt;Before You Start&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;what-you-ll-need&quot;&gt;What You&#x27;ll Need&lt;&#x2F;h3&gt;
@@ -1478,10 +1478,10 @@ Requested review&lt;&#x2F;li&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/summer-hackathon-recap/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/summer-hackathon-recap/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/summer-hackathon-recap/"/>
+        <id>/cc-website/blog/2025/summer-hackathon-recap/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/summer-hackathon-recap/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/summer-hackathon-recap/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;strong&gt;CC Club Summer Hackathon 2025&lt;&#x2F;strong&gt; concluded on August 24th with incredible energy, innovative projects, and a strong sense of community. Over 150 students from all years and branches came together for an intense 48-hour coding marathon that pushed creativity, problem-solving, and collaboration to new heights.&lt;&#x2F;p&gt;
 &lt;p&gt;This year&#x27;s theme was &lt;strong&gt;&quot;Tech for Social Good&quot;&lt;&#x2F;strong&gt; - challenging teams to build solutions that address real-world problems and create positive social impact.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;event-highlights&quot;&gt;Event Highlights&lt;&#x2F;h3&gt;
@@ -1755,10 +1755,10 @@ Requested review&lt;&#x2F;li&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/events/2025/summer-hackathon-2025/"/>
+        <id>/cc-website/events/2025/summer-hackathon-2025/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/events/2025/summer-hackathon-2025/">&lt;h2 id=&quot;event-summary&quot;&gt;Event Summary&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/events/2025/summer-hackathon-2025/">&lt;h2 id=&quot;event-summary&quot;&gt;Event Summary&lt;&#x2F;h2&gt;
 &lt;p&gt;The Summer Hackathon 2025 was our most successful hackathon yet! Over 150 students from all years and branches participated in this 48-hour coding marathon focused on &lt;strong&gt;&quot;Tech for Social Good&quot;&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Event Highlights&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -1864,10 +1864,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/graphql-vs-rest/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/graphql-vs-rest/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/graphql-vs-rest/"/>
+        <id>/cc-website/blog/2025/graphql-vs-rest/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/graphql-vs-rest/">&lt;h2 id=&quot;the-api-debate&quot;&gt;The API Debate&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/graphql-vs-rest/">&lt;h2 id=&quot;the-api-debate&quot;&gt;The API Debate&lt;&#x2F;h2&gt;
 &lt;p&gt;GraphQL has gained massive popularity, but is it always better than REST? Let&#x27;s compare objectively.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;rest-api&quot;&gt;REST API&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;Pros:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
@@ -1914,10 +1914,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/progressive-web-apps/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/progressive-web-apps/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/progressive-web-apps/"/>
+        <id>/cc-website/blog/2025/progressive-web-apps/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/progressive-web-apps/">&lt;h2 id=&quot;pwas-the-future-of-web-apps&quot;&gt;PWAs: The Future of Web Apps&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/progressive-web-apps/">&lt;h2 id=&quot;pwas-the-future-of-web-apps&quot;&gt;PWAs: The Future of Web Apps&lt;&#x2F;h2&gt;
 &lt;p&gt;Progressive Web Apps combine the best of web and mobile apps. Install them on your phone, use them offline, receive push notifications!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;key-features&quot;&gt;Key Features&lt;&#x2F;h2&gt;
 &lt;ul&gt;
@@ -1957,10 +1957,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/typescript-why-care/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/typescript-why-care/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/typescript-why-care/"/>
+        <id>/cc-website/blog/2025/typescript-why-care/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/typescript-why-care/">&lt;h2 id=&quot;the-typescript-revolution&quot;&gt;The TypeScript Revolution&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/typescript-why-care/">&lt;h2 id=&quot;the-typescript-revolution&quot;&gt;The TypeScript Revolution&lt;&#x2F;h2&gt;
 &lt;p&gt;TypeScript has become the standard for large-scale JavaScript applications. Here&#x27;s why.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;benefits-of-typescript&quot;&gt;Benefits of TypeScript&lt;&#x2F;h2&gt;
 &lt;ol&gt;
@@ -2001,10 +2001,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/docker-for-beginners/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/docker-for-beginners/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/docker-for-beginners/"/>
+        <id>/cc-website/blog/2025/docker-for-beginners/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/docker-for-beginners/">&lt;h2 id=&quot;why-docker&quot;&gt;Why Docker?&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/docker-for-beginners/">&lt;h2 id=&quot;why-docker&quot;&gt;Why Docker?&lt;&#x2F;h2&gt;
 &lt;p&gt;Docker revolutionized software deployment. Learn how to package your applications with all dependencies.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-is-docker&quot;&gt;What is Docker?&lt;&#x2F;h2&gt;
 &lt;p&gt;Docker is a platform for developing, shipping, and running applications in containers.&lt;&#x2F;p&gt;
@@ -2042,10 +2042,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/git-best-practices/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/git-best-practices/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/git-best-practices/"/>
+        <id>/cc-website/blog/2025/git-best-practices/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/git-best-practices/">&lt;h2 id=&quot;git-collaboration-essentials&quot;&gt;Git Collaboration Essentials&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/git-best-practices/">&lt;h2 id=&quot;git-collaboration-essentials&quot;&gt;Git Collaboration Essentials&lt;&#x2F;h2&gt;
 &lt;p&gt;Working in a team? These Git best practices will save you from merge conflicts and confusion.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;key-practices&quot;&gt;Key Practices&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-meaningful-commit-messages&quot;&gt;1. Meaningful Commit Messages&lt;&#x2F;h3&gt;
@@ -2081,10 +2081,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/intro-to-ml-python/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/intro-to-ml-python/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/intro-to-ml-python/"/>
+        <id>/cc-website/blog/2025/intro-to-ml-python/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/intro-to-ml-python/">&lt;h2 id=&quot;welcome-to-machine-learning&quot;&gt;Welcome to Machine Learning&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/intro-to-ml-python/">&lt;h2 id=&quot;welcome-to-machine-learning&quot;&gt;Welcome to Machine Learning&lt;&#x2F;h2&gt;
 &lt;p&gt;Machine Learning is transforming every industry. This guide will help you get started with practical Python examples.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;topics-covered&quot;&gt;Topics Covered&lt;&#x2F;h2&gt;
 &lt;ol&gt;
@@ -2116,10 +2116,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/css-grid-vs-flexbox/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/css-grid-vs-flexbox/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/css-grid-vs-flexbox/"/>
+        <id>/cc-website/blog/2025/css-grid-vs-flexbox/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/css-grid-vs-flexbox/">&lt;h2 id=&quot;the-layout-dilemma&quot;&gt;The Layout Dilemma&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/css-grid-vs-flexbox/">&lt;h2 id=&quot;the-layout-dilemma&quot;&gt;The Layout Dilemma&lt;&#x2F;h2&gt;
 &lt;p&gt;Choosing between CSS Grid and Flexbox can be confusing. Both are powerful, but they excel in different scenarios.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;quick-answer&quot;&gt;Quick Answer&lt;&#x2F;h2&gt;
 &lt;ul&gt;
@@ -2160,10 +2160,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/nodejs-rest-api/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/nodejs-rest-api/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/nodejs-rest-api/"/>
+        <id>/cc-website/blog/2025/nodejs-rest-api/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/nodejs-rest-api/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/nodejs-rest-api/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
 &lt;p&gt;Building RESTful APIs is a fundamental skill for backend developers. In this comprehensive guide, we&#x27;ll create a production-ready REST API using Node.js and Express.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-you-ll-learn&quot;&gt;What You&#x27;ll Learn&lt;&#x2F;h2&gt;
 &lt;ul&gt;
@@ -2202,10 +2202,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/events/2024/winter-code-fest/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/events/2024/winter-code-fest/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/events/2024/winter-code-fest/"/>
+        <id>/cc-website/events/2024/winter-code-fest/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/events/2024/winter-code-fest/">&lt;h1 id=&quot;winter-code-fest-2024&quot;&gt;Winter Code Fest 2024&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="/cc-website/events/2024/winter-code-fest/">&lt;h1 id=&quot;winter-code-fest-2024&quot;&gt;Winter Code Fest 2024&lt;&#x2F;h1&gt;
 &lt;p&gt;A celebration of code before the winter break!&lt;&#x2F;p&gt;
 </content>
         
@@ -2223,10 +2223,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2024/competitive-programming-intro/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2024/competitive-programming-intro/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2024/competitive-programming-intro/"/>
+        <id>/cc-website/blog/2024/competitive-programming-intro/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2024/competitive-programming-intro/">&lt;h2 id=&quot;why-competitive-programming&quot;&gt;Why Competitive Programming?&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2024/competitive-programming-intro/">&lt;h2 id=&quot;why-competitive-programming&quot;&gt;Why Competitive Programming?&lt;&#x2F;h2&gt;
 &lt;p&gt;CP improves problem-solving skills and is essential for cracking coding interviews at top companies.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;platforms&quot;&gt;Platforms&lt;&#x2F;h3&gt;
@@ -2265,10 +2265,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2024/linux-commands/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2024/linux-commands/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2024/linux-commands/"/>
+        <id>/cc-website/blog/2024/linux-commands/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2024/linux-commands/">&lt;h2 id=&quot;master-the-terminal&quot;&gt;Master the Terminal&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2024/linux-commands/">&lt;h2 id=&quot;master-the-terminal&quot;&gt;Master the Terminal&lt;&#x2F;h2&gt;
 &lt;p&gt;The Linux terminal is a developer&#x27;s superpower. Learn these essential commands!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;file-operations&quot;&gt;File Operations&lt;&#x2F;h2&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Navigate
@@ -2321,10 +2321,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2024/javascript-async-await/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2024/javascript-async-await/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2024/javascript-async-await/"/>
+        <id>/cc-website/blog/2024/javascript-async-await/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
 &lt;p&gt;Async&#x2F;await revolutionized how we write asynchronous code in JavaScript.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;before-async-await&quot;&gt;Before Async&#x2F;Await&lt;&#x2F;h2&gt;
 &lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Callback Hell
@@ -2361,10 +2361,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2024/python-data-science/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2024/python-data-science/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2024/python-data-science/"/>
+        <id>/cc-website/blog/2024/python-data-science/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2024/python-data-science/">&lt;h2 id=&quot;welcome-to-data-science&quot;&gt;Welcome to Data Science&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2024/python-data-science/">&lt;h2 id=&quot;welcome-to-data-science&quot;&gt;Welcome to Data Science&lt;&#x2F;h2&gt;
 &lt;p&gt;Data Science is one of the hottest fields in tech. Start your journey here with Python!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;why-python&quot;&gt;Why Python?&lt;&#x2F;h2&gt;
 &lt;ul&gt;
@@ -2396,10 +2396,10 @@ Smart medication reminder system for elderly patients&lt;br &#x2F;&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/events/2024/intro-to-ai/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/events/2024/intro-to-ai/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/events/2024/intro-to-ai/"/>
+        <id>/cc-website/events/2024/intro-to-ai/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/events/2024/intro-to-ai/">&lt;h1 id=&quot;intro-to-ai&quot;&gt;Intro to AI&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="/cc-website/events/2024/intro-to-ai/">&lt;h1 id=&quot;intro-to-ai&quot;&gt;Intro to AI&lt;&#x2F;h1&gt;
 &lt;p&gt;Learning the basics of AI.&lt;&#x2F;p&gt;
 </content>
         

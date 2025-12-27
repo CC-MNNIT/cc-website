@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Computer Coding Club - tutorial</title>
     <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://Shanu-Kumawat.github.io/cc-website/tags/tutorial/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/"/>
+    <link rel="self" type="application/atom+xml" href="/cc-website/tags/tutorial/atom.xml"/>
+    <link rel="alternate" type="text/html" href="/cc-website/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-12-15T00:00:00+00:00</updated>
-    <id>https://Shanu-Kumawat.github.io/cc-website/tags/tutorial/atom.xml</id>
+    <id>/cc-website/tags/tutorial/atom.xml</id>
     <entry xml:lang="en">
         <title>Getting Started with React Hooks: A Complete Guide</title>
         <published>2025-12-15T00:00:00+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-hooks-guide/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-hooks-guide/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/react-hooks-guide/"/>
+        <id>/cc-website/blog/2025/react-hooks-guide/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-hooks-guide/">&lt;!-- 
+        <content type="html" xml:base="/cc-website/blog/2025/react-hooks-guide/">&lt;!-- 
     BLOG POST CONTENT GUIDE
     
     Write your content below using Markdown syntax.
@@ -454,10 +454,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/typescript-why-care/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/typescript-why-care/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/typescript-why-care/"/>
+        <id>/cc-website/blog/2025/typescript-why-care/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/typescript-why-care/">&lt;h2 id=&quot;the-typescript-revolution&quot;&gt;The TypeScript Revolution&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/typescript-why-care/">&lt;h2 id=&quot;the-typescript-revolution&quot;&gt;The TypeScript Revolution&lt;&#x2F;h2&gt;
 &lt;p&gt;TypeScript has become the standard for large-scale JavaScript applications. Here&#x27;s why.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;benefits-of-typescript&quot;&gt;Benefits of TypeScript&lt;&#x2F;h2&gt;
 &lt;ol&gt;
@@ -498,10 +498,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/docker-for-beginners/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/docker-for-beginners/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/docker-for-beginners/"/>
+        <id>/cc-website/blog/2025/docker-for-beginners/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/docker-for-beginners/">&lt;h2 id=&quot;why-docker&quot;&gt;Why Docker?&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/docker-for-beginners/">&lt;h2 id=&quot;why-docker&quot;&gt;Why Docker?&lt;&#x2F;h2&gt;
 &lt;p&gt;Docker revolutionized software deployment. Learn how to package your applications with all dependencies.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-is-docker&quot;&gt;What is Docker?&lt;&#x2F;h2&gt;
 &lt;p&gt;Docker is a platform for developing, shipping, and running applications in containers.&lt;&#x2F;p&gt;
@@ -539,10 +539,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/intro-to-ml-python/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/intro-to-ml-python/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/intro-to-ml-python/"/>
+        <id>/cc-website/blog/2025/intro-to-ml-python/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/intro-to-ml-python/">&lt;h2 id=&quot;welcome-to-machine-learning&quot;&gt;Welcome to Machine Learning&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/intro-to-ml-python/">&lt;h2 id=&quot;welcome-to-machine-learning&quot;&gt;Welcome to Machine Learning&lt;&#x2F;h2&gt;
 &lt;p&gt;Machine Learning is transforming every industry. This guide will help you get started with practical Python examples.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;topics-covered&quot;&gt;Topics Covered&lt;&#x2F;h2&gt;
 &lt;ol&gt;
@@ -574,10 +574,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/nodejs-rest-api/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/nodejs-rest-api/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/nodejs-rest-api/"/>
+        <id>/cc-website/blog/2025/nodejs-rest-api/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/nodejs-rest-api/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/nodejs-rest-api/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
 &lt;p&gt;Building RESTful APIs is a fundamental skill for backend developers. In this comprehensive guide, we&#x27;ll create a production-ready REST API using Node.js and Express.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-you-ll-learn&quot;&gt;What You&#x27;ll Learn&lt;&#x2F;h2&gt;
 &lt;ul&gt;
@@ -616,10 +616,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2024/javascript-async-await/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2024/javascript-async-await/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2024/javascript-async-await/"/>
+        <id>/cc-website/blog/2024/javascript-async-await/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
 &lt;p&gt;Async&#x2F;await revolutionized how we write asynchronous code in JavaScript.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;before-async-await&quot;&gt;Before Async&#x2F;Await&lt;&#x2F;h2&gt;
 &lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Callback Hell
@@ -656,10 +656,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2024/python-data-science/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2024/python-data-science/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2024/python-data-science/"/>
+        <id>/cc-website/blog/2024/python-data-science/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2024/python-data-science/">&lt;h2 id=&quot;welcome-to-data-science&quot;&gt;Welcome to Data Science&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2024/python-data-science/">&lt;h2 id=&quot;welcome-to-data-science&quot;&gt;Welcome to Data Science&lt;&#x2F;h2&gt;
 &lt;p&gt;Data Science is one of the hottest fields in tech. Start your journey here with Python!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;why-python&quot;&gt;Why Python?&lt;&#x2F;h2&gt;
 &lt;ul&gt;

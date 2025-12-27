@@ -63,7 +63,7 @@
             
             @font-face {
                 font-family: "Pretendard-Regular";
-                src: url('https://Shanu-Kumawat.github.io/cc-website/fonts/Pretendard-Regular.woff') format("woff");
+                src: url('/cc-website/fonts/Pretendard-Regular.woff') format("woff");
                 font-weight: 400;
                 font-style: normal;
                 font-display: swap;
@@ -86,10 +86,10 @@
       <!-- SEO: Open Graph / Twitter Card -->
       <meta property="og:title" content="Work &amp; Impact 2024 | Computer Coding Club" />
       <meta property="og:description" content="Official website of Computer Coding Club - Learn, Build, and Grow Together" />
-      <meta property="og:url" content="https://Shanu-Kumawat.github.io/cc-website/" />
+      <meta property="og:url" content="/cc-website/" />
       <meta property="og:type" content="website" />
       
-      <meta property="og:image" content="https://Shanu-Kumawat.github.io/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta property="og:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
       
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -108,22 +108,22 @@
       <meta name="twitter:creator" content="@your_club_handle" />
       
       
-      <meta name="twitter:image" content="https://Shanu-Kumawat.github.io/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta name="twitter:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
       
 
       <!-- Browser address bar color -->
       <meta name="theme-color" content="#0f172a">
 
       <!-- CSS -->
-    <link rel="stylesheet" href="https://Shanu-Kumawat.github.io/cc-website/css/main.css">
-    <link rel="stylesheet" href="https://Shanu-Kumawat.github.io/cc-website/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/cc-website/css/main.css">
+    <link rel="stylesheet" href="/cc-website/css/font-awesome.min.css">
     
     <!-- Preload critical fonts -->
-    <link rel="preload" href="https://Shanu-Kumawat.github.io/cc-website/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/cc-website/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
 
     <!-- Defer non-critical scripts -->
-    <script defer src="https://Shanu-Kumawat.github.io/cc-website/js/copy_code.js"></script>
-    <script defer src="https://Shanu-Kumawat.github.io/cc-website/js/copy_heading_link.js"></script>
+    <script defer src="/cc-website/js/copy_code.js"></script>
+    <script defer src="/cc-website/js/copy_heading_link.js"></script>
     
     <!-- Lazy load Mermaid and KaTeX - only when needed -->
     <script>
@@ -140,12 +140,12 @@
                 // Load KaTeX CSS first
                 var katexCSS = document.createElement('link');
                 katexCSS.rel = 'stylesheet';
-                katexCSS.href = 'https://Shanu-Kumawat.github.io/cc-website/css/katex.min.css';
+                katexCSS.href = '/cc-website/css/katex.min.css';
                 document.head.appendChild(katexCSS);
                 
                 // Load KaTeX JS
                 var katexScript = document.createElement('script');
-                katexScript.src = 'https://Shanu-Kumawat.github.io/cc-website/js/katex.min.js';
+                katexScript.src = '/cc-website/js/katex.min.js';
                 katexScript.onload = function() {
                     // Render inline elements
                     katexInlineElements.forEach(function(elem) {
@@ -179,7 +179,7 @@
             // Load Mermaid if diagram elements are present
             if (hasMermaid) {
                 var mermaidScript = document.createElement('script');
-                mermaidScript.src = 'https://Shanu-Kumawat.github.io/cc-website/js/mermaid.min.js';
+                mermaidScript.src = '/cc-website/js/mermaid.min.js';
                 mermaidScript.onload = function() {
                     // Initialize Mermaid after loading
                     if (typeof window.initMermaid === 'function') {
@@ -195,7 +195,7 @@
     
 
     
-    <link rel="stylesheet" href="https://Shanu-Kumawat.github.io/cc-website/css/custom.css">
+    <link rel="stylesheet" href="/cc-website/css/custom.css">
 
     <style>
         /* Desktop Sidebar Animation */
@@ -300,7 +300,7 @@
     
     <!-- Logo -->
     <div class="flex-1">
-        <a href="https://Shanu-Kumawat.github.io/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+        <a href="/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
                 CC Club
             
@@ -315,7 +315,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/about">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/about">
                                 <i class="fa-solid fa-circle-info"></i>
                                 About
                             </a>
@@ -324,7 +324,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/blog">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/blog">
                                 <i class="fa-solid fa-blog"></i>
                                 Blog
                             </a>
@@ -333,7 +333,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/events">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/events">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 Events
                             </a>
@@ -342,7 +342,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/contrihub">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contrihub">
                                 <i class="fa-solid fa-code-branch"></i>
                                 ContriHub
                             </a>
@@ -351,7 +351,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/impact">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/impact">
                                 <i class="fa-solid fa-rocket"></i>
                                 Impact
                             </a>
@@ -360,7 +360,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/roadmaps">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/roadmaps">
                                 <i class="fa-solid fa-route"></i>
                                 Roadmaps
                             </a>
@@ -369,7 +369,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/resources">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/resources">
                                 <i class="fa-solid fa-book-open"></i>
                                 Resources
                             </a>
@@ -386,14 +386,14 @@
                             <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
                                 
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/team">
+                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/team">
                                             <i class="fa-solid fa-user-group"></i>
                                             Current Team
                                         </a>
                                     </li>
                                 
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/alumni">
+                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/alumni">
                                             <i class="fa-solid fa-graduation-cap"></i>
                                             Alumni
                                         </a>
@@ -405,7 +405,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://Shanu-Kumawat.github.io/cc-website/contact">
+                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contact">
                                 <i class="fa-solid fa-envelope"></i>
                                 Contact
                             </a>
@@ -468,8 +468,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/> </svg>
             </label>
             <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-200 rounded-box w-52">
-                <li><a href="https://Shanu-Kumawat.github.io/cc-website/impact" class="">2025 (Current)</a></li>
-                <li><a href="https://Shanu-Kumawat.github.io/cc-website/impact/2024" class="active">2024</a></li>
+                <li><a href="/cc-website/impact" class="">2025 (Current)</a></li>
+                <li><a href="/cc-website/impact/2024" class="active">2024</a></li>
             </ul>
         </div>
     </div>
@@ -816,7 +816,7 @@
             
                 <li>
                     
-                    <a href="https://Shanu-Kumawat.github.io/cc-website/impact/2024/#impact-report-for-2024" class="toc-link">Impact Report for 2024</a>
+                    <a href="/cc-website/impact/2024/#impact-report-for-2024" class="toc-link">Impact Report for 2024</a>
                     
                 </li>
             
@@ -940,49 +940,49 @@
             
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/about" class="text-sm">
+                        <li><a href="/cc-website/about" class="text-sm">
                             <i class="fa-solid fa-circle-info mr-2"></i>
                             About
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/blog" class="text-sm">
+                        <li><a href="/cc-website/blog" class="text-sm">
                             <i class="fa-solid fa-blog mr-2"></i>
                             Blog
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/events" class="text-sm">
+                        <li><a href="/cc-website/events" class="text-sm">
                             <i class="fa-solid fa-calendar-days mr-2"></i>
                             Events
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/contrihub" class="text-sm">
+                        <li><a href="/cc-website/contrihub" class="text-sm">
                             <i class="fa-solid fa-code-branch mr-2"></i>
                             ContriHub
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/impact" class="text-sm">
+                        <li><a href="/cc-website/impact" class="text-sm">
                             <i class="fa-solid fa-rocket mr-2"></i>
                             Impact
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/roadmaps" class="text-sm">
+                        <li><a href="/cc-website/roadmaps" class="text-sm">
                             <i class="fa-solid fa-route mr-2"></i>
                             Roadmaps
                         </a></li>
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/resources" class="text-sm">
+                        <li><a href="/cc-website/resources" class="text-sm">
                             <i class="fa-solid fa-book-open mr-2"></i>
                             Resources
                         </a></li>
@@ -990,12 +990,12 @@
                 
                     
                         
-                            <li><a href="https://Shanu-Kumawat.github.io/cc-website/team" class="text-sm">
+                            <li><a href="/cc-website/team" class="text-sm">
                                 <i class="fa-solid fa-user-group mr-2"></i>
                                 Current Team
                             </a></li>
                         
-                            <li><a href="https://Shanu-Kumawat.github.io/cc-website/alumni" class="text-sm">
+                            <li><a href="/cc-website/alumni" class="text-sm">
                                 <i class="fa-solid fa-graduation-cap mr-2"></i>
                                 Alumni
                             </a></li>
@@ -1003,7 +1003,7 @@
                     
                 
                     
-                        <li><a href="https://Shanu-Kumawat.github.io/cc-website/contact" class="text-sm">
+                        <li><a href="/cc-website/contact" class="text-sm">
                             <i class="fa-solid fa-envelope mr-2"></i>
                             Contact
                         </a></li>
@@ -1018,7 +1018,7 @@
     
     
     <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
-        <a href="https:&#x2F;&#x2F;Shanu-Kumawat.github.io&#x2F;cc-website&#x2F;impact&#x2F;" class="hover:text-primary transition-colors">Work &amp; Impact</a>
+        <a href="&#x2F;cc-website&#x2F;impact&#x2F;" class="hover:text-primary transition-colors">Work &amp; Impact</a>
     </div>
 
     
@@ -1034,7 +1034,7 @@
             
             
             <li>
-                <a class="rounded bg-gray-500/15" href="https://Shanu-Kumawat.github.io/cc-website/impact/2024">Work &amp; Impact 2024</a>
+                <a class="rounded bg-gray-500/15" href="/cc-website/impact/2024">Work &amp; Impact 2024</a>
             </li>
         
     </ul>
@@ -1059,7 +1059,7 @@
     </div>
 
     
-        <script type="text/javascript" src="https://Shanu-Kumawat.github.io/cc-website/goyo.js"></script>
+        <script type="text/javascript" src="/cc-website/goyo.js"></script>
         
         <!-- Lazy load search functionality -->
         <script>
@@ -1089,12 +1089,12 @@
                 
                 // Load Fuse.js
                 var fuseScript = document.createElement('script');
-                fuseScript.src = 'https://Shanu-Kumawat.github.io/cc-website/fuse.min.js';
+                fuseScript.src = '/cc-website/fuse.min.js';
                 
                 // Load search index after Fuse.js
                 fuseScript.onload = function() {
                     var searchIndexScript = document.createElement('script');
-                    searchIndexScript.src = 'https://Shanu-Kumawat.github.io/cc-website/search_index.en.js';
+                    searchIndexScript.src = '/cc-website/search_index.en.js';
                     searchIndexScript.onload = function() {
                         // Re-enable search input
                         if (searchInput) {

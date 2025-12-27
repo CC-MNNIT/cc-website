@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Computer Coding Club - projects</title>
     <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://Shanu-Kumawat.github.io/cc-website/tags/projects/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/"/>
+    <link rel="self" type="application/atom+xml" href="/cc-website/tags/projects/atom.xml"/>
+    <link rel="alternate" type="text/html" href="/cc-website/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-08-25T00:00:00+00:00</updated>
-    <id>https://Shanu-Kumawat.github.io/cc-website/tags/projects/atom.xml</id>
+    <id>/cc-website/tags/projects/atom.xml</id>
     <entry xml:lang="en">
         <title>Summer Hackathon 2025: 48 Hours of Innovation and Collaboration</title>
         <published>2025-08-25T00:00:00+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/summer-hackathon-recap/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/summer-hackathon-recap/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/summer-hackathon-recap/"/>
+        <id>/cc-website/blog/2025/summer-hackathon-recap/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/summer-hackathon-recap/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/summer-hackathon-recap/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;strong&gt;CC Club Summer Hackathon 2025&lt;&#x2F;strong&gt; concluded on August 24th with incredible energy, innovative projects, and a strong sense of community. Over 150 students from all years and branches came together for an intense 48-hour coding marathon that pushed creativity, problem-solving, and collaboration to new heights.&lt;&#x2F;p&gt;
 &lt;p&gt;This year&#x27;s theme was &lt;strong&gt;&quot;Tech for Social Good&quot;&lt;&#x2F;strong&gt; - challenging teams to build solutions that address real-world problems and create positive social impact.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;event-highlights&quot;&gt;Event Highlights&lt;&#x2F;h3&gt;

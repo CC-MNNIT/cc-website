@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Computer Coding Club - algorithms</title>
     <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://Shanu-Kumawat.github.io/cc-website/tags/algorithms/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/"/>
+    <link rel="self" type="application/atom+xml" href="/cc-website/tags/algorithms/atom.xml"/>
+    <link rel="alternate" type="text/html" href="/cc-website/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2024-11-05T00:00:00+00:00</updated>
-    <id>https://Shanu-Kumawat.github.io/cc-website/tags/algorithms/atom.xml</id>
+    <id>/cc-website/tags/algorithms/atom.xml</id>
     <entry xml:lang="en">
         <title>Introduction to Competitive Programming</title>
         <published>2024-11-05T00:00:00+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2024/competitive-programming-intro/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2024/competitive-programming-intro/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2024/competitive-programming-intro/"/>
+        <id>/cc-website/blog/2024/competitive-programming-intro/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2024/competitive-programming-intro/">&lt;h2 id=&quot;why-competitive-programming&quot;&gt;Why Competitive Programming?&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2024/competitive-programming-intro/">&lt;h2 id=&quot;why-competitive-programming&quot;&gt;Why Competitive Programming?&lt;&#x2F;h2&gt;
 &lt;p&gt;CP improves problem-solving skills and is essential for cracking coding interviews at top companies.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;platforms&quot;&gt;Platforms&lt;&#x2F;h3&gt;

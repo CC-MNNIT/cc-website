@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Computer Coding Club - web-development</title>
     <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://Shanu-Kumawat.github.io/cc-website/tags/web-development/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/"/>
+    <link rel="self" type="application/atom+xml" href="/cc-website/tags/web-development/atom.xml"/>
+    <link rel="alternate" type="text/html" href="/cc-website/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-12-15T00:00:00+00:00</updated>
-    <id>https://Shanu-Kumawat.github.io/cc-website/tags/web-development/atom.xml</id>
+    <id>/cc-website/tags/web-development/atom.xml</id>
     <entry xml:lang="en">
         <title>Getting Started with React Hooks: A Complete Guide</title>
         <published>2025-12-15T00:00:00+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-hooks-guide/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-hooks-guide/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/react-hooks-guide/"/>
+        <id>/cc-website/blog/2025/react-hooks-guide/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/react-hooks-guide/">&lt;!-- 
+        <content type="html" xml:base="/cc-website/blog/2025/react-hooks-guide/">&lt;!-- 
     BLOG POST CONTENT GUIDE
     
     Write your content below using Markdown syntax.
@@ -454,10 +454,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/cybersecurity-basics/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/cybersecurity-basics/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/cybersecurity-basics/"/>
+        <id>/cc-website/blog/2025/cybersecurity-basics/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/cybersecurity-basics/">&lt;h2 id=&quot;security-first&quot;&gt;Security First&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/cybersecurity-basics/">&lt;h2 id=&quot;security-first&quot;&gt;Security First&lt;&#x2F;h2&gt;
 &lt;p&gt;Security isn&#x27;t optional. Learn to protect your apps from day one.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;common-vulnerabilities&quot;&gt;Common Vulnerabilities&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-sql-injection&quot;&gt;1. SQL Injection&lt;&#x2F;h3&gt;
@@ -503,10 +503,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/progressive-web-apps/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/progressive-web-apps/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/progressive-web-apps/"/>
+        <id>/cc-website/blog/2025/progressive-web-apps/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/progressive-web-apps/">&lt;h2 id=&quot;pwas-the-future-of-web-apps&quot;&gt;PWAs: The Future of Web Apps&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/progressive-web-apps/">&lt;h2 id=&quot;pwas-the-future-of-web-apps&quot;&gt;PWAs: The Future of Web Apps&lt;&#x2F;h2&gt;
 &lt;p&gt;Progressive Web Apps combine the best of web and mobile apps. Install them on your phone, use them offline, receive push notifications!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;key-features&quot;&gt;Key Features&lt;&#x2F;h2&gt;
 &lt;ul&gt;
@@ -546,10 +546,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/typescript-why-care/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/typescript-why-care/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/typescript-why-care/"/>
+        <id>/cc-website/blog/2025/typescript-why-care/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/typescript-why-care/">&lt;h2 id=&quot;the-typescript-revolution&quot;&gt;The TypeScript Revolution&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/typescript-why-care/">&lt;h2 id=&quot;the-typescript-revolution&quot;&gt;The TypeScript Revolution&lt;&#x2F;h2&gt;
 &lt;p&gt;TypeScript has become the standard for large-scale JavaScript applications. Here&#x27;s why.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;benefits-of-typescript&quot;&gt;Benefits of TypeScript&lt;&#x2F;h2&gt;
 &lt;ol&gt;
@@ -590,10 +590,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2025/css-grid-vs-flexbox/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2025/css-grid-vs-flexbox/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2025/css-grid-vs-flexbox/"/>
+        <id>/cc-website/blog/2025/css-grid-vs-flexbox/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2025/css-grid-vs-flexbox/">&lt;h2 id=&quot;the-layout-dilemma&quot;&gt;The Layout Dilemma&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2025/css-grid-vs-flexbox/">&lt;h2 id=&quot;the-layout-dilemma&quot;&gt;The Layout Dilemma&lt;&#x2F;h2&gt;
 &lt;p&gt;Choosing between CSS Grid and Flexbox can be confusing. Both are powerful, but they excel in different scenarios.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;quick-answer&quot;&gt;Quick Answer&lt;&#x2F;h2&gt;
 &lt;ul&gt;
@@ -634,10 +634,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://Shanu-Kumawat.github.io/cc-website/blog/2024/javascript-async-await/"/>
-        <id>https://Shanu-Kumawat.github.io/cc-website/blog/2024/javascript-async-await/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/blog/2024/javascript-async-await/"/>
+        <id>/cc-website/blog/2024/javascript-async-await/</id>
         
-        <content type="html" xml:base="https://Shanu-Kumawat.github.io/cc-website/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="/cc-website/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
 &lt;p&gt;Async&#x2F;await revolutionized how we write asynchronous code in JavaScript.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;before-async-await&quot;&gt;Before Async&#x2F;Await&lt;&#x2F;h2&gt;
 &lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Callback Hell
