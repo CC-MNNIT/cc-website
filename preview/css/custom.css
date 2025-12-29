@@ -330,8 +330,8 @@
 }
 
 /* Ensure content is above overlays */
-[data-theme="night"] .hero-background > *,
-[data-theme="night"] .relative.min-h-screen.flex.items-center.justify-center > * {
+[data-theme="night"] .hero-background > *:not(.absolute),
+[data-theme="night"] .relative.min-h-screen.flex.items-center.justify-center > *:not(.absolute) {
   position: relative;
   z-index: 10;
 }
