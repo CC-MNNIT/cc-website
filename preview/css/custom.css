@@ -761,67 +761,11 @@
    ============================================
 */
 
-@font-face {
-  font-family: "Font Awesome 6 Free";
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url(../fonts/fa-regular-400.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Font Awesome 6 Free";
-  font-style: normal;
-  font-weight: 900;
-  font-display: block;
-  src: url(../fonts/fa-solid-900.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-display: block;
-  font-weight: 400;
-  src: url(../fonts/fa-brands-400.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-display: block;
-  font-weight: 900;
-  src: url(../fonts/fa-solid-900.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-display: block;
-  font-weight: 400;
-  src: url(../fonts/fa-regular-400.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "FontAwesome";
-  font-display: block;
-  src: url(../fonts/fa-solid-900.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "FontAwesome";
-  font-display: block;
-  src: url(../fonts/fa-brands-400.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "FontAwesome";
-  font-display: block;
-  src: url(../fonts/fa-regular-400.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Font Awesome 6 Brands";
-  font-display: block;
-  font-weight: 400;
-  src: url(../fonts/fa-brands-400.woff2) format("woff2");
-}
+/* 
+   NOTE: The Font Awesome path fix is now handled by the patched 
+   static/css/font-awesome.min.css file which uses relative paths (../fonts/).
+   The manual @font-face declarations here have been removed to avoid conflicts.
+*/
 
 /* Fix for Font Awesome brand icons */
 .fab {
