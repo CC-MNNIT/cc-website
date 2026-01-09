@@ -572,76 +572,127 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     
+
+<div class="events-carousel-section">
     
-    <div class="events-carousel-section">
-        <div class="events-grid">
-            <div>
+    <div class="events-bg-decoration"></div>
+    <div class="events-glow-orb events-glow-orb-1"></div>
+    <div class="events-glow-orb events-glow-orb-2"></div>
+
+    <div class="events-intro-text">
+        <div class="events-section-title">Club Events</div>
+        <p class="events-section-subtitle">Participate in the thrill, earn the glory, and enjoy the vibe</p>
+    </div>
+
+    <div class="events-grid">
+        <div class="events-image-wrapper">
+            <div class="events-image-frame">
                 <div class="events-image-container" id="eventsImageContainer"></div>
+                <div class="events-image-glow"></div>
             </div>
-            <div class="events-content">
-                <div class="events-text-content" id="eventsTextContent">
-                    <h3 id="eventName"></h3>
+            <div class="events-counter" id="eventsCounter">
+                <span id="currentEventNum">1</span> / <span id="totalEventNum">0</span>
+            </div>
+        </div>
+        <div class="events-content">
+            <div class="events-text-content" id="eventsTextContent">
+                <div class="events-text-inner">
+                    <h3 id="eventName" class="events-title-animate"></h3>
                     <p class="events-designation" id="eventDesignation"></p>
                     <p class="events-quote" id="eventQuote"></p>
                 </div>
-                <div class="events-controls">
-                    <button id="eventPrevBtn" aria-label="Previous event">
-                        <svg class="arrow-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                        </svg>
-                    </button>
-                    <button id="eventNextBtn" aria-label="Next event">
-                        <svg class="arrow-right" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </button>
+            </div>
+            <div class="events-divider"></div>
+            <div class="events-controls">
+                <button id="eventPrevBtn" aria-label="Previous event" class="events-btn">
+                    <svg class="arrow-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                    <span>Previous</span>
+                </button>
+                <div class="events-progress-bar">
+                    <div class="events-progress-fill" id="eventsProgressFill"></div>
                 </div>
+                <button id="eventNextBtn" aria-label="Next event" class="events-btn">
+                    <span>Next</span>
+                    <svg class="arrow-right" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
             </div>
         </div>
-
-        <!-- Inject events data for JavaScript -->
-        <script>
-            window.eventsCarouselData = [
-                
-                {
-                    name: "Winter Hackathon 2025",
-                    type: "48-Hour Coding Marathon | Dec 20-22",
-                    description: "Join us for our biggest coding event of the year! Build innovative solutions for social good, compete for ₹1,00,000 in prizes, and connect with industry mentors from top tech companies. Free food, swag, and amazing learning opportunities await!",
-                    image: "/cc-website/preview/images/events/winter-hackathon-2025.jpg"
-                },
-                
-                {
-                    name: "Docker &amp; Kubernetes Workshop",
-                    type: "Hands-on Workshop | Jan 15, 2026",
-                    description: "Master containerization and orchestration technologies that power modern cloud infrastructure. Learn Docker fundamentals, Kubernetes deployments, and best practices from industry experts. Includes hands-on labs with real-world projects.",
-                    image: "/cc-website/preview/images/events/docker-workshop.jpg"
-                },
-                
-                {
-                    name: "Summer Hackathon 2025",
-                    type: "Past Event | Aug 22-24, 2025",
-                    description: "A massive success with 150 participants and 30 teams! Students built incredible projects addressing real-world challenges. Winners received ₹1L in prizes and multiple projects received industry interest. Check out the amazing projects our community built!",
-                    image: "/cc-website/preview/images/events/summer-hackathon-2025.jpg"
-                },
-                
-                {
-                    name: "ContriHub 2025",
-                    type: "Open Source Celebration | Coming Soon",
-                    description: "Our annual open source event where beginners learn to contribute to real projects in a supportive environment. Past participants have gone on to become maintainers of popular open source libraries. No experience required - just bring your enthusiasm!",
-                    image: "/cc-website/preview/images/events/contrihub-2025.jpg"
-                },
-                
-                {
-                    name: "AI&#x2F;ML Workshop Series",
-                    type: "Weekly Sessions | Every Saturday",
-                    description: "Dive deep into Machine Learning and Artificial Intelligence with our comprehensive workshop series. From basics of NumPy and Pandas to building neural networks with TensorFlow. Perfect for beginners and intermediate learners.",
-                    image: "/cc-website/preview/images/events/ai-ml-workshop.jpg"
-                }
-                
-            ];
-        </script>
     </div>
-    
+
+    <script>
+        window.eventsCarouselData = [
+            
+            {
+                name: "Hack36",
+                type: "Annual Hackathon | 36-Hour Sprint",
+                description: "The flagship annual hackathon of MNNIT. Bring your ideas to life, compete with the best minds, and win amazing prizes in this high-energy coding marathon.",
+                image: "/cc-website/preview/images/landing/events/hack36.jpg"
+            },
+            
+            {
+                name: "Contrihub",
+                type: "Open Source | Month Long Program",
+                description: "A month-long celebration of open source. Learn the ropes of Git, GitHub, and remote collaboration while contributing to real-world projects under expert mentorship.",
+                image: "/cc-website/preview/images/landing/events/contrihub.jpg"
+            },
+            
+            {
+                name: "Codesangam",
+                type: "Development Challenge | 2-Week Event",
+                description: "A massive 2-week development challenge encompassing all tech stacks. Whether it&#x27;s Web, App, or Systems, build robust solutions and showcase your engineering skills.",
+                image: "/cc-website/preview/images/landing/events/webster.png"
+            },
+            
+            {
+                name: "OPC (Open Programming Contest)",
+                type: "Competitive Programming | Regular",
+                description: "Sharpen your algorithmic skills with our regular competitive programming challenges. Solve complex problems under time pressure and climb the leaderboard.",
+                image: "/cc-website/preview/images/landing/events/opc.jpg"
+            },
+            
+            {
+                name: "Turings Playground",
+                type: "AI and ML | Development Challenge",
+                description: "An AI-specific development and model training challenge. Apply machine learning algorithms to solve real-world data problems and build intelligent systems.",
+                image: "/cc-website/preview/images/landing/events/turings-playground.png"
+            },
+            
+            {
+                name: "Weekend of Code",
+                type: "First-Year Specific | Coding and Dev",
+                description: "Designed exclusively for freshmen! Kickstart your tech journey with guided coding and development challenges tailored for those new to the world of programming.",
+                image: "/cc-website/preview/images/landing/events/droidrush.jpg"
+            },
+            
+            {
+                name: "Insomnia",
+                type: "CP Marathon | Late Night",
+                description: "The ultimate test of endurance. A late-night competitive coding marathon that pushes your logic and problem-solving limits into the early hours of the morning.",
+                image: "/cc-website/preview/images/landing/events/Insomnia.jpg"
+            },
+            
+            {
+                name: "CC Classes",
+                type: "Learning | Regular Sessions",
+                description: "Regular peer-to-peer learning sessions covering everything from basic data structures to advanced development frameworks and industry best practices.",
+                image: "/cc-website/preview/images/landing/events/classes.jpg"
+            },
+            
+            {
+                name: "Alumni Connects",
+                type: "Networking | Interactive Sessions",
+                description: "Bridging the gap between campus and industry. Connect with our distinguished alumni working at top tech giants to gain career insights and mentorship.",
+                image: "/cc-website/preview/images/landing/events/alumni-connects.jpg"
+            }
+            
+        ];
+    </script>
+</div>
+
 
     
     
@@ -650,7 +701,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="roadmaps-sticky-container">
             <div class="roadmaps-intro-text">
                 <div class="roadmaps-title">Learning Roadmaps</div>
-                <p class="roadmaps-subtitle">Scroll down to explore structured learning paths</p>
+                <p class="roadmaps-subtitle">Explore structured learning paths</p>
             </div>
 
             <div class="roadmaps-viewport">
@@ -736,12 +787,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="roadmaps-scroll-indicator">Scroll Down</div>
         </div>
     </div>
     
 
-    
+    <!-- 
     
     
     
@@ -1676,7 +1726,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 
                                 
                                 <li>
-                                    <a  href="/cc-website/preview/contrihub/2024">ContriHub 2024</a>
+                                    <a  href="/cc-website/preview/contrihub/2025">ContriHub 2025</a>
                                 </li>
                             
                                 
@@ -1684,7 +1734,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 
                                 
                                 <li>
-                                    <a  href="/cc-website/preview/contrihub/2025">ContriHub 2025</a>
+                                    <a  href="/cc-website/preview/contrihub/2024">ContriHub 2024</a>
                                 </li>
                             
                         </ul>
