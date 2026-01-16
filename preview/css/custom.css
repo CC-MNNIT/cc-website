@@ -834,9 +834,562 @@
 }
 
 /* ============================================
-   FOOTER STYLING - DARK THEME
-   ============================================
-*/
+   BLOG CARDS - Minimal Professional Design
+   ============================================ */
+
+/* Blog page container */
+#default-blog-list .grid,
+#search-results-grid {
+  gap: 1.5rem;
+}
+
+/* Blog card styling */
+#default-blog-list article.card,
+#search-results-grid article.card {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+#default-blog-list article.card:hover,
+#search-results-grid article.card:hover {
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Card body */
+#default-blog-list .card-body,
+#search-results-grid .card-body {
+  padding: 1.5rem;
+}
+
+/* Card title */
+#default-blog-list .card-title,
+#search-results-grid .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+#default-blog-list .card-title a,
+#search-results-grid .card-title a {
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#default-blog-list .card-title a:hover,
+#search-results-grid .card-title a:hover {
+  color: #4169E1;
+}
+
+/* Meta info (date, reading time, author) */
+#default-blog-list .text-gray-500,
+#search-results-grid .text-gray-500 {
+  color: rgba(0, 0, 0, 0.45) !important;
+  font-size: 0.8rem;
+}
+
+/* Description text */
+#default-blog-list .text-base-content\/80,
+#search-results-grid .text-base-content\/80 {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Tags and badges */
+#default-blog-list .badge,
+#search-results-grid .badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  text-transform: lowercase;
+}
+
+#default-blog-list .badge-primary {
+  background: rgba(65, 105, 225, 0.1);
+  color: #4169E1;
+  border: none;
+}
+
+#default-blog-list .badge-ghost {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#default-blog-list .badge-ghost:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Read more button */
+#default-blog-list .btn-primary,
+#search-results-grid .btn-primary {
+  background: transparent;
+  color: #1a1a1a;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  text-transform: none;
+  transition: all 0.2s ease;
+}
+
+#default-blog-list .btn-primary:hover,
+#search-results-grid .btn-primary:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #1a1a1a;
+}
+
+/* Search input */
+#blog-search-input {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+#blog-search-input:focus {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+/* Pagination buttons */
+#blog-pagination .btn-outline {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+#blog-pagination .btn-outline:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #1a1a1a;
+}
+
+/* Dark theme blog cards */
+[data-theme="night"] #default-blog-list article.card,
+[data-theme="night"] #search-results-grid article.card {
+  background: rgba(18, 18, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="night"] #default-blog-list article.card:hover,
+[data-theme="night"] #search-results-grid article.card:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="night"] #default-blog-list .card-title a,
+[data-theme="night"] #search-results-grid .card-title a {
+  color: #ffffff;
+}
+
+[data-theme="night"] #default-blog-list .card-title a:hover,
+[data-theme="night"] #search-results-grid .card-title a:hover {
+  color: #FFC758;
+}
+
+[data-theme="night"] #default-blog-list .text-gray-500,
+[data-theme="night"] #search-results-grid .text-gray-500 {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+[data-theme="night"] #default-blog-list .text-base-content\/80,
+[data-theme="night"] #search-results-grid .text-base-content\/80 {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="night"] #default-blog-list .badge-primary {
+  background: rgba(255, 199, 88, 0.15);
+  color: #FFC758;
+}
+
+[data-theme="night"] #default-blog-list .badge-ghost {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="night"] #default-blog-list .badge-ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="night"] #default-blog-list .btn-primary,
+[data-theme="night"] #search-results-grid .btn-primary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="night"] #default-blog-list .btn-primary:hover,
+[data-theme="night"] #search-results-grid .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="night"] #blog-search-input {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+[data-theme="night"] #blog-search-input:focus {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="night"] #blog-pagination .btn-outline {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="night"] #blog-pagination .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* ============================================
+   IMPACT PAGE - Minimal Professional Design
+   ============================================ */
+
+/* Stats Grid */
+.stat.bg-base-200 {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.stat.bg-base-200:hover {
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.stat .stat-title {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.stat .stat-value {
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+.stat .stat-figure {
+  color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.stat .stat-figure i {
+  font-size: 1.5rem;
+}
+
+/* Impact page cards */
+.space-y-20 .card.bg-base-200 {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.space-y-20 .card.bg-base-200:hover {
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.space-y-20 .card-body {
+  padding: 1.5rem;
+}
+
+.space-y-20 .card-title {
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.space-y-20 .card .text-gray-400,
+.space-y-20 .card .text-gray-500 {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Section headings */
+.space-y-20 h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+/* Badges */
+.space-y-20 .badge-outline {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.7rem;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+/* Links */
+.space-y-20 .link-primary,
+.space-y-20 .text-primary {
+  color: #4169E1 !important;
+  font-weight: 500;
+}
+
+/* Awards trophy icon */
+.space-y-20 .text-yellow-500 {
+  color: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Initiatives icon */
+.space-y-20 .card .text-primary.text-2xl {
+  color: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Impact by Numbers section */
+.space-y-20 .text-3xl.font-bold.text-primary {
+  color: #1a1a1a !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Divider */
+.space-y-20 .divider {
+  opacity: 0.1;
+}
+
+/* CTA Section */
+.space-y-20 .bg-base-200.rounded-xl {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.space-y-20 .bg-base-200.rounded-xl h2 {
+  color: #1a1a1a;
+}
+
+.space-y-20 .bg-base-200.rounded-xl .text-gray-400 {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* CTA Buttons */
+.space-y-20 .btn-primary {
+  background: #1a1a1a;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+
+.space-y-20 .btn-primary:hover {
+  background: #333;
+}
+
+.space-y-20 .btn-outline {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+
+.space-y-20 .btn-outline:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #1a1a1a;
+}
+
+.space-y-20 .btn-ghost {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.space-y-20 .btn-ghost:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #1a1a1a;
+}
+
+/* Year dropdown */
+.dropdown .btn-outline {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.dropdown .btn-outline:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-content.menu {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Dark theme - Impact page */
+[data-theme="night"] .stat.bg-base-200 {
+  background: rgba(18, 18, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="night"] .stat.bg-base-200:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="night"] .stat .stat-title {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="night"] .stat .stat-value {
+  color: #ffffff;
+}
+
+[data-theme="night"] .stat .stat-figure {
+  color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="night"] .space-y-20 .card.bg-base-200 {
+  background: rgba(18, 18, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="night"] .space-y-20 .card.bg-base-200:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="night"] .space-y-20 .card-title {
+  color: #ffffff;
+}
+
+[data-theme="night"] .space-y-20 .card .text-gray-400,
+[data-theme="night"] .space-y-20 .card .text-gray-500 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="night"] .space-y-20 h2 {
+  color: #ffffff;
+}
+
+[data-theme="night"] .space-y-20 .badge-outline {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="night"] .space-y-20 .link-primary,
+[data-theme="night"] .space-y-20 .text-primary {
+  color: #FFC758 !important;
+}
+
+[data-theme="night"] .space-y-20 .text-yellow-500 {
+  color: rgba(255, 255, 255, 0.15) !important;
+}
+
+[data-theme="night"] .space-y-20 .card .text-primary.text-2xl {
+  color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="night"] .space-y-20 .text-3xl.font-bold.text-primary {
+  color: #ffffff !important;
+}
+
+[data-theme="night"] .space-y-20 .bg-base-200.rounded-xl {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="night"] .space-y-20 .bg-base-200.rounded-xl h2 {
+  color: #ffffff;
+}
+
+[data-theme="night"] .space-y-20 .bg-base-200.rounded-xl .text-gray-400 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="night"] .space-y-20 .btn-primary {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+[data-theme="night"] .space-y-20 .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="night"] .space-y-20 .btn-outline {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+[data-theme="night"] .space-y-20 .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="night"] .space-y-20 .btn-ghost {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="night"] .space-y-20 .btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+[data-theme="night"] .dropdown .btn-outline {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="night"] .dropdown .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="night"] .dropdown-content.menu {
+  background: #1a1a1a;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================
+   FOOTER STYLING
+   ============================================ */
 
 /* ============================================
    FOOTER - Minimal Professional Design
@@ -2792,4 +3345,380 @@ body.light {
 
 [data-theme="light"] .typewriter-cursor {
     color: #DA7138;
+}
+
+/* ============================================
+   Roadmap Page Card Redesign
+   ============================================ */
+
+/* Difficulty Badge - Remove harsh red, make subtle */
+.difficulty-badge {
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    font-weight: 500 !important;
+    font-size: 0.8rem !important;
+    padding: 0.4rem 1rem !important;
+    border-radius: 6px !important;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+}
+
+.difficulty-group {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 0.9rem;
+}
+
+.roadmap-card-link:hover .difficulty-badge {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Start Learning Button - Make minimal and professional */
+.start-btn {
+    background: transparent !important;
+    color: #f9b14d !important;
+    border: 1px solid rgba(249, 177, 77, 0.4) !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
+    gap: 0.5rem !important;
+}
+
+.start-btn:hover {
+    background: rgba(249, 177, 77, 0.1) !important;
+    border-color: rgba(249, 177, 77, 0.7) !important;
+    box-shadow: none !important;
+    transform: translateX(4px) !important;
+}
+
+.start-btn span:last-child {
+    transition: transform 0.3s ease;
+}
+
+.start-btn:hover span:last-child {
+    transform: translateX(4px);
+}
+
+/* Time Badge - Subtle styling */
+.time-badge {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+}
+
+/* Roadmap card adjustments */
+.roadmap-card-content {
+    background: rgba(13, 9, 7, 0.95) !important;
+    border: 1px solid rgba(249, 177, 77, 0.25) !important;
+    border-width: 1px !important;
+}
+
+.roadmap-card-link:hover .roadmap-card-content {
+    border-color: rgba(249, 177, 77, 0.5) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(249, 177, 77, 0.15) !important;
+}
+
+/* Light theme for roadmap page */
+[data-theme="light"] .difficulty-badge,
+[data-theme="lofi"] .difficulty-badge {
+    background: rgba(0, 0, 0, 0.04) !important;
+    color: rgba(0, 0, 0, 0.6) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] .difficulty-group,
+[data-theme="lofi"] .difficulty-group {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="light"] .roadmap-card-link:hover .difficulty-badge,
+[data-theme="lofi"] .roadmap-card-link:hover .difficulty-badge {
+    background: rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+    color: rgba(0, 0, 0, 0.75) !important;
+}
+
+[data-theme="light"] .start-btn,
+[data-theme="lofi"] .start-btn {
+    background: transparent !important;
+    color: #1976D2 !important;
+    border-color: rgba(25, 118, 210, 0.4) !important;
+}
+
+[data-theme="light"] .start-btn:hover,
+[data-theme="lofi"] .start-btn:hover {
+    background: rgba(25, 118, 210, 0.08) !important;
+    border-color: rgba(25, 118, 210, 0.6) !important;
+}
+
+[data-theme="light"] .time-badge,
+[data-theme="lofi"] .time-badge {
+    background: rgba(0, 0, 0, 0.03) !important;
+    color: rgba(0, 0, 0, 0.5) !important;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .roadmap-card-content,
+[data-theme="lofi"] .roadmap-card-content {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border-color: rgba(25, 118, 210, 0.2) !important;
+}
+
+[data-theme="light"] .roadmap-card-link:hover .roadmap-card-content,
+[data-theme="lofi"] .roadmap-card-link:hover .roadmap-card-content {
+    border-color: rgba(25, 118, 210, 0.4) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08), 0 0 20px rgba(25, 118, 210, 0.1) !important;
+}
+
+[data-theme="light"] .roadmap-card-content h2,
+[data-theme="lofi"] .roadmap-card-content h2 {
+    color: #1976D2 !important;
+}
+
+[data-theme="light"] .roadmap-card-content .description,
+[data-theme="lofi"] .roadmap-card-content .description {
+    color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* ============================================
+   Resources Page Redesign
+   ============================================ */
+
+/* Resources page container */
+.resources-page,
+body:has(.card-body .card-title) main article {
+    max-width: 1200px;
+}
+
+/* Resources section header */
+main article > .mb-12.pb-4 h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+main article > .mb-12.pb-4 h1 .text-sm {
+    background: rgba(255, 199, 88, 0.1);
+    color: #f9b14d;
+    border-color: rgba(249, 177, 77, 0.3);
+    font-weight: 500;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.6rem;
+}
+
+/* Resource category heading */
+main article .mt-12 h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Resource cards grid */
+main article .grid.gap-6 {
+    gap: 1rem;
+}
+
+/* Resource cards */
+main article .grid.gap-6 > a.card {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+main article .grid.gap-6 > a.card:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(249, 177, 77, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+main article .grid.gap-6 > a.card .card-body {
+    padding: 1.25rem 1.5rem;
+}
+
+main article .grid.gap-6 > a.card .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.25rem;
+}
+
+main article .grid.gap-6 > a.card:hover .card-title {
+    color: #f9b14d !important;
+}
+
+main article .grid.gap-6 > a.card .text-gray-400 {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5) !important;
+    line-height: 1.5;
+}
+
+/* Resource content styling */
+main article .prose h1,
+main article > div:not(.mb-12):not(.mt-12):not(.mt-8) h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+}
+
+main article .prose h2,
+main article > div:not(.mb-12):not(.mt-12):not(.mt-8) h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+main article .prose p,
+main article > div:not(.mb-12):not(.mt-12):not(.mt-8) p {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+}
+
+main article .prose ul li,
+main article > div:not(.mb-12):not(.mt-12):not(.mt-8) ul li {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.5rem;
+}
+
+main article .prose a,
+main article > div:not(.mb-12):not(.mt-12):not(.mt-8) a {
+    color: #f9b14d;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(249, 177, 77, 0.3);
+    transition: all 0.2s ease;
+}
+
+main article .prose a:hover,
+main article > div:not(.mb-12):not(.mt-12):not(.mt-8) a:hover {
+    color: #ffcc66;
+    border-bottom-color: rgba(249, 177, 77, 0.6);
+}
+
+main article .prose hr,
+main article > div:not(.mb-12):not(.mt-12):not(.mt-8) hr {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 2rem 0;
+}
+
+/* Edit link styling */
+main article .mt-8.pt-6 a {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+}
+
+main article .mt-8.pt-6 a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Light theme for resources page */
+[data-theme="light"] main article > .mb-12.pb-4 h1 .text-sm,
+[data-theme="lofi"] main article > .mb-12.pb-4 h1 .text-sm {
+    background: rgba(25, 118, 210, 0.08);
+    color: #1976D2;
+    border-color: rgba(25, 118, 210, 0.2);
+}
+
+[data-theme="light"] main article .mt-12 h2,
+[data-theme="lofi"] main article .mt-12 h2 {
+    color: rgba(0, 0, 0, 0.7);
+    border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] main article .grid.gap-6 > a.card,
+[data-theme="lofi"] main article .grid.gap-6 > a.card {
+    background: rgba(0, 0, 0, 0.02) !important;
+    border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+[data-theme="light"] main article .grid.gap-6 > a.card:hover,
+[data-theme="lofi"] main article .grid.gap-6 > a.card:hover {
+    background: rgba(0, 0, 0, 0.04) !important;
+    border-color: rgba(25, 118, 210, 0.25) !important;
+}
+
+[data-theme="light"] main article .grid.gap-6 > a.card .card-title,
+[data-theme="lofi"] main article .grid.gap-6 > a.card .card-title {
+    color: rgba(0, 0, 0, 0.85);
+}
+
+[data-theme="light"] main article .grid.gap-6 > a.card:hover .card-title,
+[data-theme="lofi"] main article .grid.gap-6 > a.card:hover .card-title {
+    color: #1976D2 !important;
+}
+
+[data-theme="light"] main article .grid.gap-6 > a.card .text-gray-400,
+[data-theme="lofi"] main article .grid.gap-6 > a.card .text-gray-400 {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="light"] main article .prose h1,
+[data-theme="light"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) h1,
+[data-theme="lofi"] main article .prose h1,
+[data-theme="lofi"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) h1 {
+    color: rgba(0, 0, 0, 0.85);
+}
+
+[data-theme="light"] main article .prose h2,
+[data-theme="light"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) h2,
+[data-theme="lofi"] main article .prose h2,
+[data-theme="lofi"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) h2 {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="light"] main article .prose p,
+[data-theme="light"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) p,
+[data-theme="light"] main article .prose ul li,
+[data-theme="light"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) ul li,
+[data-theme="lofi"] main article .prose p,
+[data-theme="lofi"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) p,
+[data-theme="lofi"] main article .prose ul li,
+[data-theme="lofi"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) ul li {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] main article .prose a,
+[data-theme="light"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) a,
+[data-theme="lofi"] main article .prose a,
+[data-theme="lofi"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) a {
+    color: #1976D2;
+    border-bottom-color: rgba(25, 118, 210, 0.3);
+}
+
+[data-theme="light"] main article .prose a:hover,
+[data-theme="light"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) a:hover,
+[data-theme="lofi"] main article .prose a:hover,
+[data-theme="lofi"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) a:hover {
+    color: #0D47A1;
+    border-bottom-color: rgba(25, 118, 210, 0.6);
+}
+
+[data-theme="light"] main article .prose hr,
+[data-theme="light"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) hr,
+[data-theme="lofi"] main article .prose hr,
+[data-theme="lofi"] main article > div:not(.mb-12):not(.mt-12):not(.mt-8) hr {
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] main article .mt-8.pt-6 a,
+[data-theme="lofi"] main article .mt-8.pt-6 a {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] main article .mt-8.pt-6 a:hover,
+[data-theme="lofi"] main article .mt-8.pt-6 a:hover {
+    color: rgba(0, 0, 0, 0.7);
 }
