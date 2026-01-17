@@ -1,235 +1,27 @@
-/* 
- * Custom Theme Template for Computer Coding Club Website
- * 
- * OKLCH FORMAT EXPLAINED:
- * oklch(L C H)
- * - L (Lightness): 0 to 1 (0 = black, 1 = white)
- * - C (Chroma): 0 to 0.4 (0 = gray, higher = more saturated)
- * - H (Hue): 0 to 360 (color wheel angle)
- *   Examples: 0=red, 30=orange, 60=yellow, 120=green, 180=cyan, 240=blue, 300=magenta
- */
+@charset "UTF-8";
 
 /* ============================================
-   DARK THEME (NIGHT MODE)
+   CUSTOM CSS ENTRY POINT
    ============================================
-*/
-/* 
-[data-theme="night"] {
-  /* PRIMARY COLOR - Main brand color used for buttons, links, highlights */
-  --color-primary: oklch(0.70 0.17 155);
-  --color-primary-content: oklch(1 0 0);           /* Text on primary color */
-  
-  /* SECONDARY COLOR - Used for accents and highlights */
-  --color-secondary: oklch(0.65 0.16 165);
-  --color-secondary-content: oklch(1 0 0);
-  
-  /* ACCENT COLOR - For special elements and calls-to-action */
-  --color-accent: oklch(0.75 0.18 145);
-  --color-accent-content: oklch(1 0 0);
-  
-  /* NEUTRAL COLOR - For borders, dividers, subtle elements */
-  --color-neutral: oklch(0.30 0.02 155);
-  --color-neutral-content: oklch(0.90 0 0);
-  
-  /* BACKGROUND COLORS - Page backgrounds and surfaces */
-  --color-base-100: oklch(0.15 0.02 155);          /* Main background */
-  --color-base-200: oklch(0.18 0.02 155);          /* Slightly elevated surfaces */
-  --color-base-300: oklch(0.22 0.02 155);          /* More elevated (cards, etc.) */
-  --color-base-content: oklch(0.90 0.02 155);      /* Main text color */
-  
-  /* STATE COLORS - Success, warning, error messages */
-  --color-info: oklch(0.70 0.15 230);              /* Blue for informational */
-  --color-success: oklch(0.70 0.17 155);           /* Green for success */
-  --color-warning: oklch(0.80 0.18 85);            /* Yellow/orange for warnings */
-  --color-error: oklch(0.65 0.20 25);              /* Red for errors */
-}
- */
-
-/* ============================================
-   LIGHT THEME (LOFI MODE)
-   ============================================
+   This file imports all modular CSS files.
+   Do not add new styles here directly.
+   Add them to the appropriate file in core/, components/, or pages/.
 */
 
-/* [data-theme="lofi"] {
-  /* PRIMARY COLOR - Main brand color */
-  --color-primary: oklch(0.60 0.18 155);
-  --color-primary-content: oklch(1 0 0);
-  
-  /* SECONDARY COLOR */
-  --color-secondary: oklch(0.55 0.16 165);
-  --color-secondary-content: oklch(1 0 0);
-  
-  /* ACCENT COLOR */
-  --color-accent: oklch(0.65 0.20 145);
-  --color-accent-content: oklch(1 0 0);
-  
-  /* NEUTRAL COLOR */
-  --color-neutral: oklch(0.35 0.02 155);
-  --color-neutral-content: oklch(0.95 0 0);
-  
-  /* BACKGROUND COLORS - Light, clean backgrounds */
-  --color-base-100: oklch(1 0 0);                  /* Pure white background */
-  --color-base-200: oklch(0.97 0.01 155);          /* Slightly tinted */
-  --color-base-300: oklch(0.93 0.01 155);          /* More noticeable tint */
-  --color-base-content: oklch(0.25 0.02 155);      /* Dark text for readability */
-  
-  /* STATE COLORS */
-  --color-info: oklch(0.60 0.15 230);
-  --color-success: oklch(0.65 0.18 155);
-  --color-warning: oklch(0.75 0.18 85);
-  --color-error: oklch(0.65 0.20 25);
-}
- */
+/* 1. Core Styles (Variables, Reset, Typography, Animations) */
+@import url('core/variables.css');
+@import url('core/reset.css');
+@import url('core/typography.css');
+@import url('core/animations.css');
 
-/* ============================================
-   ADDITIONAL CUSTOMIZATIONS (OPTIONAL)
-   ============================================
-*/
+/* 2. Components (Navbar, Footer, Buttons, Cards) */
+@import url('components/navbar.css');
+@import url('components/footer.css');
+@import url('components/buttons.css');
+@import url('components/cards.css');
 
-/* CUSTOM BACKGROUND GRADIENT (Optional)
- */
-/*
-[data-theme="night"] body {
-  background: linear-gradient(135deg, 
-    oklch(0.15 0.02 155) 0%,
-    oklch(0.12 0.02 160) 100%
-  ) !important;
-  background-attachment: fixed;
-}
+/* 3. Page-Specific Styles */
+@import url('pages/landing.css');
+@import url('pages/roadmaps.css');
 
-[data-theme="lofi"] body {
-  background: linear-gradient(135deg, 
-    oklch(1 0 0) 0%,
-    oklch(0.98 0.01 155) 100%
-  ) !important;
-  background-attachment: fixed;
-}
-*/
-
-/* BUTTON HOVER EFFECTS (Optional)
- */
-/*
-[data-theme="night"] .btn-primary:hover,
-[data-theme="lofi"] .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-*/
-
-/* CUSTOM SCROLLBAR (Optional)
- */
-/*
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-[data-theme="night"] ::-webkit-scrollbar-track {
-  background: oklch(0.15 0.02 155);
-}
-
-[data-theme="night"] ::-webkit-scrollbar-thumb {
-  background: oklch(0.70 0.17 155);
-  border-radius: 6px;
-}
-
-[data-theme="lofi"] ::-webkit-scrollbar-track {
-  background: oklch(0.97 0.01 155);
-}
-
-[data-theme="lofi"] ::-webkit-scrollbar-thumb {
-  background: oklch(0.60 0.18 155);
-  border-radius: 6px;
-}
-*/
-
-/* GLOW EFFECTS (Optional - for dark theme)
- */
-/*
-[data-theme="night"] .btn-primary {
-  box-shadow: 0 0 20px rgba(var(--your-rgb-color), 0.3);
-}
-
-[data-theme="night"] .btn-primary:hover {
-  box-shadow: 0 0 30px rgba(var(--your-rgb-color), 0.5);
-}
-*/
-
-/* GRADIENT TEXT (Optional)
- * Make headings use gradient colors
- */
-/*
-h1, h2, h3 {
-  background: linear-gradient(135deg, 
-    var(--color-primary) 0%, 
-    var(--color-secondary) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-/*
-
-/* ============================================
-   FONT AWESOME PATH FIX FOR GITHUB PAGES
-   ============================================
-   This overrides the absolute paths in font-awesome.min.css 
-   with relative paths that work correctly when deployed to 
-   a subdirectory (e.g., /cc-website/)
-*/
-
-@font-face {
-  font-family: "Font Awesome 6 Free";
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url(../fonts/fa-regular-400.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Font Awesome 6 Free";
-  font-style: normal;
-  font-weight: 900;
-  font-display: block;
-  src: url(../fonts/fa-solid-900.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-display: block;
-  font-weight: 400;
-  src: url(../fonts/fa-brands-400.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-display: block;
-  font-weight: 900;
-  src: url(../fonts/fa-solid-900.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-display: block;
-  font-weight: 400;
-  src: url(../fonts/fa-regular-400.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "FontAwesome";
-  font-display: block;
-  src: url(../fonts/fa-solid-900.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "FontAwesome";
-  font-display: block;
-  src: url(../fonts/fa-brands-400.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "FontAwesome";
-  font-display: block;
-  src: url(../fonts/fa-regular-400.woff2) format("woff2");
-}
-
-/* custom CSS here... */
+/* End of Imports */

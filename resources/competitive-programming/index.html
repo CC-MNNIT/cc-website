@@ -91,7 +91,7 @@
       <meta property="og:url" content="/cc-website/" />
       <meta property="og:type" content="website" />
       
-      <meta property="og:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta property="og:image" content="/cc-website/cc-club-thumbnail.jpg" />
       
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -104,13 +104,13 @@
           
       
       
-      <meta name="twitter:site" content="@your_club_handle" />
+      <meta name="twitter:site" content="@ccclub_mnnit" />
       
       
-      <meta name="twitter:creator" content="@your_club_handle" />
+      <meta name="twitter:creator" content="@ccclub_mnnit" />
       
       
-      <meta name="twitter:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta name="twitter:image" content="/cc-website/cc-club-thumbnail.jpg" />
       
 
       <!-- Browser address bar color -->
@@ -285,6 +285,11 @@
 
 
 
+
+
+    
+
+
 <div class="navbar opacity-95 fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-500/15 backdrop-blur-3xl">
     <!-- Mobile hamburger (and Desktop on Root Page) -->
     <div class="flex-none lg:hidden">
@@ -302,22 +307,33 @@
     
     <!-- Logo -->
     <div class="flex-1">
-        <a href="/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+        <a href="/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
-                CC Club
+                <img 
+                    src="/cc-website/images/logo/cclogo.png" 
+                    alt="CC Club" 
+                    class="h-18 w-auto"
+                    style="padding: 10px;"
+                />
             
         </a>
     </div>
-    <!-- Desktop Menu -->
-    <div class="flex-none hidden lg:flex">
-        <ul class="menu menu-horizontal px-1 items-center">
+<!-- Desktop AND Mobile Menu - Theme toggle always visible -->
+<div class="flex-none flex lg:flex">
+    <ul class="menu menu-horizontal px-1 items-center">
+        <!-- Desktop navigation items (hidden on mobile) -->
+        <div class="hidden lg:flex lg:contents">
             
             
             
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/about">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/about">
                                 <i class="fa-solid fa-circle-info"></i>
                                 About
                             </a>
@@ -325,8 +341,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/blog">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/blog">
                                 <i class="fa-solid fa-blog"></i>
                                 Blog
                             </a>
@@ -334,8 +354,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/events">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/events">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 Events
                             </a>
@@ -343,17 +367,25 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contrihub">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/contrihub">
                                 <i class="fa-solid fa-code-branch"></i>
-                                ContriHub
+                                Projects
                             </a>
                         </li>
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/impact">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/impact">
                                 <i class="fa-solid fa-rocket"></i>
                                 Impact
                             </a>
@@ -361,8 +393,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/roadmaps">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/roadmaps">
                                 <i class="fa-solid fa-route"></i>
                                 Roadmaps
                             </a>
@@ -370,8 +406,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/resources">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/resources">
                                 <i class="fa-solid fa-book-open"></i>
                                 Resources
                             </a>
@@ -387,15 +427,17 @@
                             </div>
                             <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
                                 
+                                    
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/team">
+                                        <a class="btn btn-ghost hover:no-underline " href="/cc-website/team">
                                             <i class="fa-solid fa-user-group"></i>
                                             Current Team
                                         </a>
                                     </li>
                                 
+                                    
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/alumni">
+                                        <a class="btn btn-ghost hover:no-underline " href="/cc-website/alumni">
                                             <i class="fa-solid fa-graduation-cap"></i>
                                             Alumni
                                         </a>
@@ -406,8 +448,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contact">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/contact">
                                 <i class="fa-solid fa-envelope"></i>
                                 Contact
                             </a>
@@ -415,25 +461,55 @@
                     
                 
             
-            
 
             
-            
-                
-            
-            
-            <li>
-                <label class="swap swap-rotate btn btn-ghost">
-                  <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color"/>
-                  <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
-                  <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
-                </label>
-            </li>
-            
+        </div>
 
-        </ul>
-    </div>
+        
+            
+        
+        
+        <li class="flex items-center">
+            <label class="swap swap-rotate btn btn-ghost btn-circle">
+              <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color"/>
+              <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
+              <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
+            </label>
+        </li>
+        
+    </ul>
 </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    
+    const navLinks = document.querySelectorAll('.navbar a[href]:not(.logo-link)');
+    
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+                if (link.classList.contains('active-nav')) {
+            return;
+        }
+        
+        let isActive = false;
+        
+        if (linkPath === '/') {
+            isActive = (currentPath === '/' || currentPath === '');
+        } else {
+            isActive = currentPath.startsWith(linkPath);
+        }
+        
+        if (isActive) {
+            link.classList.add('active-nav');
+        } else {
+            link.classList.remove('active-nav');
+        }
+    });
+});
+</script>
 
 
             
@@ -651,6 +727,128 @@ Skill certifications, domain-specific tracks.<br />
               }
             </script>
 
+            
+<footer class="site-footer">
+    <!-- Main footer content -->
+    <div class="w-full py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer grid -->
+            <div class="footer-content">
+                
+                <!-- Column 1: About/Logo -->
+                <div class="footer-col space-y-4">
+                    <div class="footer-logo-container">
+                        
+                        <img src="/cc-website/images/logo/cclogo.png" alt="Logo" class="footer-logo">
+                        
+                        <h3>
+                            CC Club MNNIT
+                        </h3>
+                    </div>
+                    <p>
+                        Our mission since 2010 at MNNIT is to develop in you a passion for problem-solving, critical thinking, innovation and computer science. We strive to achieve this goal through means of events, classes and industry connects.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        
+                            
+                            <li>
+                                <a href="team">
+                                    Our Team
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="blog">
+                                    Blogs
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="contrihub">
+                                    Projects
+                                </a>
+                            </li>
+                            
+                        
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col space-y-4">
+                    <h4>Contact</h4>
+                    <div class="space-y-3">
+                        
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            computer.club@mnnit.ac.in
+                        </p>
+                        
+                        
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            MNNIT Allahabad, Prayagraj, UP - 211004
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        
+                            
+                            <a href="https:&#x2F;&#x2F;youtube.com&#x2F;@ccclub" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            
+                            
+                            <a href="https:&#x2F;&#x2F;instagram.com&#x2F;ccclub_mnnit" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            
+                            
+                            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;ccclub_mnnit" aria-label="Twitter/X">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            
+                            
+                            <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;company&#x2F;ccclub-mnnit" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            
+                            
+                            <a href="https:&#x2F;&#x2F;github.com&#x2F;cc-mnnit" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            
+                        
+                    </div>
+                    <p>
+                        Connect to stay updated about our events, projects and blogs!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Computer Coding Club. All rights reserved.</p>
+        <div class="footer-made-with">
+            <p>Made with</p>
+            <i class="fas fa-heart"></i>
+            <p>by Team CC</p>
+        </div>
+    </div>
+</footer>
+
         </div>
 
         
@@ -726,7 +924,7 @@ Skill certifications, domain-specific tracks.<br />
                     
                         <li><a href="/cc-website/contrihub" class="text-sm">
                             <i class="fa-solid fa-code-branch mr-2"></i>
-                            ContriHub
+                            Projects
                         </a></li>
                     
                 

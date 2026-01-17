@@ -89,7 +89,7 @@
       <meta property="og:url" content="/cc-website/" />
       <meta property="og:type" content="website" />
       
-      <meta property="og:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta property="og:image" content="/cc-website/cc-club-thumbnail.jpg" />
       
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -102,13 +102,13 @@
           
       
       
-      <meta name="twitter:site" content="@your_club_handle" />
+      <meta name="twitter:site" content="@ccclub_mnnit" />
       
       
-      <meta name="twitter:creator" content="@your_club_handle" />
+      <meta name="twitter:creator" content="@ccclub_mnnit" />
       
       
-      <meta name="twitter:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta name="twitter:image" content="/cc-website/cc-club-thumbnail.jpg" />
       
 
       <!-- Browser address bar color -->
@@ -283,6 +283,11 @@
 
 
 
+
+
+    
+
+
 <div class="navbar opacity-95 fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-500/15 backdrop-blur-3xl">
     <!-- Mobile hamburger (and Desktop on Root Page) -->
     <div class="flex-none lg:hidden">
@@ -300,22 +305,33 @@
     
     <!-- Logo -->
     <div class="flex-1">
-        <a href="/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+        <a href="/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
-                CC Club
+                <img 
+                    src="/cc-website/images/logo/cclogo.png" 
+                    alt="CC Club" 
+                    class="h-18 w-auto"
+                    style="padding: 10px;"
+                />
             
         </a>
     </div>
-    <!-- Desktop Menu -->
-    <div class="flex-none hidden lg:flex">
-        <ul class="menu menu-horizontal px-1 items-center">
+<!-- Desktop AND Mobile Menu - Theme toggle always visible -->
+<div class="flex-none flex lg:flex">
+    <ul class="menu menu-horizontal px-1 items-center">
+        <!-- Desktop navigation items (hidden on mobile) -->
+        <div class="hidden lg:flex lg:contents">
             
             
             
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/about">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/about">
                                 <i class="fa-solid fa-circle-info"></i>
                                 About
                             </a>
@@ -323,8 +339,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/blog">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/blog">
                                 <i class="fa-solid fa-blog"></i>
                                 Blog
                             </a>
@@ -332,8 +352,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/events">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/events">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 Events
                             </a>
@@ -341,17 +365,25 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contrihub">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/contrihub">
                                 <i class="fa-solid fa-code-branch"></i>
-                                ContriHub
+                                Projects
                             </a>
                         </li>
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/impact">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/impact">
                                 <i class="fa-solid fa-rocket"></i>
                                 Impact
                             </a>
@@ -359,8 +391,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/roadmaps">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/roadmaps">
                                 <i class="fa-solid fa-route"></i>
                                 Roadmaps
                             </a>
@@ -368,8 +404,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/resources">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/resources">
                                 <i class="fa-solid fa-book-open"></i>
                                 Resources
                             </a>
@@ -385,15 +425,17 @@
                             </div>
                             <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
                                 
+                                    
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/team">
+                                        <a class="btn btn-ghost hover:no-underline " href="/cc-website/team">
                                             <i class="fa-solid fa-user-group"></i>
                                             Current Team
                                         </a>
                                     </li>
                                 
+                                    
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/alumni">
+                                        <a class="btn btn-ghost hover:no-underline " href="/cc-website/alumni">
                                             <i class="fa-solid fa-graduation-cap"></i>
                                             Alumni
                                         </a>
@@ -404,8 +446,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contact">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/contact">
                                 <i class="fa-solid fa-envelope"></i>
                                 Contact
                             </a>
@@ -413,25 +459,55 @@
                     
                 
             
-            
 
             
-            
-                
-            
-            
-            <li>
-                <label class="swap swap-rotate btn btn-ghost">
-                  <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color"/>
-                  <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
-                  <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
-                </label>
-            </li>
-            
+        </div>
 
-        </ul>
-    </div>
+        
+            
+        
+        
+        <li class="flex items-center">
+            <label class="swap swap-rotate btn btn-ghost btn-circle">
+              <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color"/>
+              <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
+              <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
+            </label>
+        </li>
+        
+    </ul>
 </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    
+    const navLinks = document.querySelectorAll('.navbar a[href]:not(.logo-link)');
+    
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+                if (link.classList.contains('active-nav')) {
+            return;
+        }
+        
+        let isActive = false;
+        
+        if (linkPath === '/') {
+            isActive = (currentPath === '/' || currentPath === '');
+        } else {
+            isActive = currentPath.startsWith(linkPath);
+        }
+        
+        if (isActive) {
+            link.classList.add('active-nav');
+        } else {
+            link.classList.remove('active-nav');
+        }
+    });
+});
+</script>
 
 
             
@@ -445,134 +521,1186 @@
                 <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
                     <main class="prose w-full">
                         
-    <div class="mb-12 pb-4 border-b border-gray-500/15">
-        <h1 class="flex items-center gap-3">
-            Learning Roadmaps
-            
-                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">UPDATED</span>
-            
+<div class="container mx-auto px-6 py-12 max-w-7xl">
+
+    
+    <div class="text-center mb-16">
+        <h1 class="text-5xl md:text-7xl font-black mb-6">
+            <span class="hero-title">Learning Roadmaps</span>
         </h1>
-        <p class="text-gray-500">Curated learning paths for different technical domains to help you grow systematically</p>
+        <p class="text-xl hero-description max-w-3xl mx-auto leading-relaxed">
+            Curated learning paths for different technical domains to help you grow systematically
+        </p>
     </div>
-    
-    <h1 id="learning-roadmaps">Learning Roadmaps</h1>
-<p>Structured learning paths to help you master different technical domains. Each roadmap includes milestones, resources, time estimates, and project ideas.</p>
-<h2 id="how-to-use-these-roadmaps">How to Use These Roadmaps</h2>
-<ol>
-<li><strong>Choose your goal</strong> - Pick a roadmap aligned with your interests</li>
-<li><strong>Follow sequentially</strong> - Each level builds on previous knowledge</li>
-<li><strong>Do the projects</strong> - Theory + Practice = Learning</li>
-<li><strong>Track progress</strong> - Mark milestones as you complete them</li>
-<li><strong>Join community</strong> - Learn together, share progress, ask questions</li>
-</ol>
-<h2 id="customizing-your-path">Customizing Your Path</h2>
-<p>These roadmaps are guides, not rigid rules:</p>
-<ul>
-<li><strong>Skip topics you know</strong> - No need to start from zero if you have experience</li>
-<li><strong>Go deeper where interested</strong> - Explore topics that excite you</li>
-<li><strong>Adjust time estimates</strong> - Everyone learns at their own pace</li>
-<li><strong>Combine roadmaps</strong> - Mix and match based on your goals</li>
-</ul>
-<hr />
-<h2 id="resources-legend">Resources Legend</h2>
-<p>Throughout the roadmaps, you'll see these icons:</p>
-<ul>
-<li>📚 <strong>Free Course</strong> - Complete course material</li>
-<li>📖 <strong>Documentation</strong> - Official docs</li>
-<li>📝 <strong>Article/Tutorial</strong> - Written guide</li>
-<li>🎥 <strong>Video</strong> - Video tutorial</li>
-<li>💻 <strong>Practice Platform</strong> - Hands-on practice</li>
-<li>📘 <strong>Book</strong> - Recommended reading</li>
-<li>🏆 <strong>Project Idea</strong> - Apply your knowledge</li>
-</ul>
-<hr />
-<h2 id="community-support">Community Support</h2>
-<ul>
-<li><strong>Study Groups</strong> - Join or form groups on Discord</li>
-<li><strong>Weekly Sessions</strong> - Regular meetups to discuss progress</li>
-<li><strong>Mentorship</strong> - Seniors and alumni available for guidance</li>
-<li><strong>Doubt Clearing</strong> - Ask questions anytime on Discord</li>
-</ul>
-<hr />
-<p><strong>Ready to start? Pick a roadmap and begin your journey! 🚀</strong></p>
-<!--
-    ROADMAPS INDEX PAGE
-    
-    Lists all available roadmaps with brief descriptions.
-    Each roadmap is a separate markdown file in this directory.
-    
-    TIPS FOR CREATING ROADMAPS:
-    - Break into clear levels (Beginner → Intermediate → Advanced)
-    - Provide time estimates
-    - Include curated resources (not exhaustive lists)
-    - Add project ideas for practice
-    - Mark prerequisites clearly
-    - Use Mermaid diagrams for visual representation
--->
-
 
     
     
-        <div class="mt-12">
-            <h2 class="text-2xl font-bold mb-6">🗺️ Available Roadmaps</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                <a href="&#x2F;cc-website&#x2F;roadmaps&#x2F;web-development&#x2F;" class="card bg-base-200 border border-gray-500/10 hover:border-primary/50 transition-colors group">
-                    <div class="card-body">
-                        <h3 class="card-title text-xl group-hover:text-primary transition-colors">Web Development Roadmap</h3>
+    <div class="grid grid-cols-1 gap-8 mb-16">
+        
+        <a href="/cc-website/roadmaps/web-development/" class="roadmap-card-link group relative block">
+
+            
+            <div class="wobble-container" data-card-index="1">
+                <div class="wobble-outer">
+                    <div class="wobble-inner">
                         
-                        <p class="text-sm text-gray-400 mb-3">Complete roadmap from beginner to full-stack web developer</p>
+                        <div class="glow-layer"></div>
+
                         
-                        <div class="flex flex-wrap gap-2 text-xs">
+                        <div
+                            class="roadmap-card-content card relative bg-[#0d0907] rounded-2xl border-4 border-[#f9b14d] overflow-hidden p-10">
+
                             
-                            <div class="badge badge-outline">Beginner to Advanced</div>
+                            <div class="shine"></div>
+
                             
+                            <div class="background">
+                                <div class="tiles">
+                                    <div class="tile tile-1"></div>
+                                    <div class="tile tile-2"></div>
+                                    <div class="tile tile-3"></div>
+                                    <div class="tile tile-4"></div>
+                                    <div class="tile tile-5"></div>
+                                    <div class="tile tile-6"></div>
+                                    <div class="tile tile-7"></div>
+                                    <div class="tile tile-8"></div>
+                                    <div class="tile tile-9"></div>
+                                    <div class="tile tile-10"></div>
+                                </div>
+                                <div class="line line-1"></div>
+                                <div class="line line-2"></div>
+                                <div class="line line-3"></div>
+                            </div>
+
                             
-                            <div class="badge badge-outline">⏱️ 6-12 months</div>
+                            <div class="card-header flex justify-between items-center mb-6 relative z-10">
+                                <div class="title-group flex items-center gap-4">
+                                    <span class="roadmap-icon text-4xl">🗺️</span>
+                                    <h2
+                                        class="text-3xl md:text-4xl font-bold text-[#f9b14d] group-hover:text-[#ffcc66] transition-colors">
+                                        Web Development Roadmap
+                                    </h2>
+                                </div>
+
+                                
+                                
+                                <div
+                                    class="time-badge flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1a1513] text-[#d1cfcd] text-sm">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>6-12 months</span>
+                                </div>
+                                
+                            </div>
+
                             
+                            <p
+                                class="description text-[#a19d9a] text-lg mb-10 leading-relaxed max-w-[90%] relative z-10">
+                                Complete roadmap from beginner to full-stack web developer
+                            </p>
+
                             
-                            <div class="badge badge-secondary">UPDATED</div>
-                            
+                            <div class="card-footer flex justify-between items-center relative z-10">
+                                <div class="difficulty-group flex items-center gap-3 text-[#a19d9a]">
+                                    <span class="flex items-center gap-2">
+                                        <i class="fa-regular fa-star"></i> Difficulty:
+                                    </span>
+                                    <span
+                                        class="difficulty-badge px-5 py-2 rounded-lg text-sm font-semibold bg-[#C2293D] text-white border border-[#FF0000]/30">
+                                        Beginner to Advanced
+                                    </span>
+                                </div>
+
+                                
+                                <div class="start-btn-wrapper">
+                                    <button
+                                        class="start-btn inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg bg-[#FFC758] text-[#0E0604] border-none cursor-pointer transition-all duration-200"
+                                        style="box-shadow: 0 0 20px rgba(255, 199, 88, 0.3);">
+                                        <span>Start Learning</span>
+                                        <span>→</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </a>
-                
-                <a href="&#x2F;cc-website&#x2F;roadmaps&#x2F;dsa&#x2F;" class="card bg-base-200 border border-gray-500/10 hover:border-primary/50 transition-colors group">
-                    <div class="card-body">
-                        <h3 class="card-title text-xl group-hover:text-primary transition-colors">Data Structures &amp; Algorithms Roadmap</h3>
-                        
-                        <p class="text-sm text-gray-400 mb-3">Master DSA from basics to competitive programming level</p>
-                        
-                        <div class="flex flex-wrap gap-2 text-xs">
-                            
-                            <div class="badge badge-outline">Beginner to Advanced</div>
-                            
-                            
-                            <div class="badge badge-outline">⏱️ 4-8 months</div>
-                            
-                            
-                            <div class="badge badge-secondary">UPDATED</div>
-                            
-                        </div>
-                    </div>
-                </a>
-                
+                </div>
             </div>
-        </div>
-    
+        </a>
+        
+        <a href="/cc-website/roadmaps/dsa/" class="roadmap-card-link group relative block">
 
-    
-    <div class="mt-8 pt-6 border-t border-gray-500/15">
-        <div class="flex flex-wrap items-center gap-4">
-            <a href="https:&#x2F;&#x2F;github.com&#x2F;Shanu-Kumawat&#x2F;cc-website&#x2F;edit&#x2F;main&#x2F;/content/roadmaps&#x2F;_index.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
-                </svg>
-                <span>Edit this page</span>
-            </a>
-        </div>
+            
+            <div class="wobble-container" data-card-index="2">
+                <div class="wobble-outer">
+                    <div class="wobble-inner">
+                        
+                        <div class="glow-layer"></div>
+
+                        
+                        <div
+                            class="roadmap-card-content card relative bg-[#0d0907] rounded-2xl border-4 border-[#f9b14d] overflow-hidden p-10">
+
+                            
+                            <div class="shine"></div>
+
+                            
+                            <div class="background">
+                                <div class="tiles">
+                                    <div class="tile tile-1"></div>
+                                    <div class="tile tile-2"></div>
+                                    <div class="tile tile-3"></div>
+                                    <div class="tile tile-4"></div>
+                                    <div class="tile tile-5"></div>
+                                    <div class="tile tile-6"></div>
+                                    <div class="tile tile-7"></div>
+                                    <div class="tile tile-8"></div>
+                                    <div class="tile tile-9"></div>
+                                    <div class="tile tile-10"></div>
+                                </div>
+                                <div class="line line-1"></div>
+                                <div class="line line-2"></div>
+                                <div class="line line-3"></div>
+                            </div>
+
+                            
+                            <div class="card-header flex justify-between items-center mb-6 relative z-10">
+                                <div class="title-group flex items-center gap-4">
+                                    <span class="roadmap-icon text-4xl">🗺️</span>
+                                    <h2
+                                        class="text-3xl md:text-4xl font-bold text-[#f9b14d] group-hover:text-[#ffcc66] transition-colors">
+                                        Data Structures &amp; Algorithms Roadmap
+                                    </h2>
+                                </div>
+
+                                
+                                
+                                <div
+                                    class="time-badge flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1a1513] text-[#d1cfcd] text-sm">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>4-8 months</span>
+                                </div>
+                                
+                            </div>
+
+                            
+                            <p
+                                class="description text-[#a19d9a] text-lg mb-10 leading-relaxed max-w-[90%] relative z-10">
+                                Master DSA from basics to competitive programming level
+                            </p>
+
+                            
+                            <div class="card-footer flex justify-between items-center relative z-10">
+                                <div class="difficulty-group flex items-center gap-3 text-[#a19d9a]">
+                                    <span class="flex items-center gap-2">
+                                        <i class="fa-regular fa-star"></i> Difficulty:
+                                    </span>
+                                    <span
+                                        class="difficulty-badge px-5 py-2 rounded-lg text-sm font-semibold bg-[#C2293D] text-white border border-[#FF0000]/30">
+                                        Beginner to Advanced
+                                    </span>
+                                </div>
+
+                                
+                                <div class="start-btn-wrapper">
+                                    <button
+                                        class="start-btn inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg bg-[#FFC758] text-[#0E0604] border-none cursor-pointer transition-all duration-200"
+                                        style="box-shadow: 0 0 20px rgba(255, 199, 88, 0.3);">
+                                        <span>Start Learning</span>
+                                        <span>→</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="/cc-website/roadmaps/machine-learning/" class="roadmap-card-link group relative block">
+
+            
+            <div class="wobble-container" data-card-index="3">
+                <div class="wobble-outer">
+                    <div class="wobble-inner">
+                        
+                        <div class="glow-layer"></div>
+
+                        
+                        <div
+                            class="roadmap-card-content card relative bg-[#0d0907] rounded-2xl border-4 border-[#f9b14d] overflow-hidden p-10">
+
+                            
+                            <div class="shine"></div>
+
+                            
+                            <div class="background">
+                                <div class="tiles">
+                                    <div class="tile tile-1"></div>
+                                    <div class="tile tile-2"></div>
+                                    <div class="tile tile-3"></div>
+                                    <div class="tile tile-4"></div>
+                                    <div class="tile tile-5"></div>
+                                    <div class="tile tile-6"></div>
+                                    <div class="tile tile-7"></div>
+                                    <div class="tile tile-8"></div>
+                                    <div class="tile tile-9"></div>
+                                    <div class="tile tile-10"></div>
+                                </div>
+                                <div class="line line-1"></div>
+                                <div class="line line-2"></div>
+                                <div class="line line-3"></div>
+                            </div>
+
+                            
+                            <div class="card-header flex justify-between items-center mb-6 relative z-10">
+                                <div class="title-group flex items-center gap-4">
+                                    <span class="roadmap-icon text-4xl">🗺️</span>
+                                    <h2
+                                        class="text-3xl md:text-4xl font-bold text-[#f9b14d] group-hover:text-[#ffcc66] transition-colors">
+                                        Machine Learning Roadmap
+                                    </h2>
+                                </div>
+
+                                
+                                
+                                <div
+                                    class="time-badge flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1a1513] text-[#d1cfcd] text-sm">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>8-12 months</span>
+                                </div>
+                                
+                            </div>
+
+                            
+                            <p
+                                class="description text-[#a19d9a] text-lg mb-10 leading-relaxed max-w-[90%] relative z-10">
+                                Complete guide from Python basics to production ML models
+                            </p>
+
+                            
+                            <div class="card-footer flex justify-between items-center relative z-10">
+                                <div class="difficulty-group flex items-center gap-3 text-[#a19d9a]">
+                                    <span class="flex items-center gap-2">
+                                        <i class="fa-regular fa-star"></i> Difficulty:
+                                    </span>
+                                    <span
+                                        class="difficulty-badge px-5 py-2 rounded-lg text-sm font-semibold bg-[#C2293D] text-white border border-[#FF0000]/30">
+                                        Intermediate to Advanced
+                                    </span>
+                                </div>
+
+                                
+                                <div class="start-btn-wrapper">
+                                    <button
+                                        class="start-btn inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg bg-[#FFC758] text-[#0E0604] border-none cursor-pointer transition-all duration-200"
+                                        style="box-shadow: 0 0 20px rgba(255, 199, 88, 0.3);">
+                                        <span>Start Learning</span>
+                                        <span>→</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="/cc-website/roadmaps/open-source/" class="roadmap-card-link group relative block">
+
+            
+            <div class="wobble-container" data-card-index="4">
+                <div class="wobble-outer">
+                    <div class="wobble-inner">
+                        
+                        <div class="glow-layer"></div>
+
+                        
+                        <div
+                            class="roadmap-card-content card relative bg-[#0d0907] rounded-2xl border-4 border-[#f9b14d] overflow-hidden p-10">
+
+                            
+                            <div class="shine"></div>
+
+                            
+                            <div class="background">
+                                <div class="tiles">
+                                    <div class="tile tile-1"></div>
+                                    <div class="tile tile-2"></div>
+                                    <div class="tile tile-3"></div>
+                                    <div class="tile tile-4"></div>
+                                    <div class="tile tile-5"></div>
+                                    <div class="tile tile-6"></div>
+                                    <div class="tile tile-7"></div>
+                                    <div class="tile tile-8"></div>
+                                    <div class="tile tile-9"></div>
+                                    <div class="tile tile-10"></div>
+                                </div>
+                                <div class="line line-1"></div>
+                                <div class="line line-2"></div>
+                                <div class="line line-3"></div>
+                            </div>
+
+                            
+                            <div class="card-header flex justify-between items-center mb-6 relative z-10">
+                                <div class="title-group flex items-center gap-4">
+                                    <span class="roadmap-icon text-4xl">🗺️</span>
+                                    <h2
+                                        class="text-3xl md:text-4xl font-bold text-[#f9b14d] group-hover:text-[#ffcc66] transition-colors">
+                                        Open Source Contribution Roadmap
+                                    </h2>
+                                </div>
+
+                                
+                                
+                                <div
+                                    class="time-badge flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1a1513] text-[#d1cfcd] text-sm">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>3-6 months</span>
+                                </div>
+                                
+                            </div>
+
+                            
+                            <p
+                                class="description text-[#a19d9a] text-lg mb-10 leading-relaxed max-w-[90%] relative z-10">
+                                Learn to contribute to open source projects and become a maintainer
+                            </p>
+
+                            
+                            <div class="card-footer flex justify-between items-center relative z-10">
+                                <div class="difficulty-group flex items-center gap-3 text-[#a19d9a]">
+                                    <span class="flex items-center gap-2">
+                                        <i class="fa-regular fa-star"></i> Difficulty:
+                                    </span>
+                                    <span
+                                        class="difficulty-badge px-5 py-2 rounded-lg text-sm font-semibold bg-[#C2293D] text-white border border-[#FF0000]/30">
+                                        Beginner to Advanced
+                                    </span>
+                                </div>
+
+                                
+                                <div class="start-btn-wrapper">
+                                    <button
+                                        class="start-btn inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg bg-[#FFC758] text-[#0E0604] border-none cursor-pointer transition-all duration-200"
+                                        style="box-shadow: 0 0 20px rgba(255, 199, 88, 0.3);">
+                                        <span>Start Learning</span>
+                                        <span>→</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="/cc-website/roadmaps/interview-prep/" class="roadmap-card-link group relative block">
+
+            
+            <div class="wobble-container" data-card-index="5">
+                <div class="wobble-outer">
+                    <div class="wobble-inner">
+                        
+                        <div class="glow-layer"></div>
+
+                        
+                        <div
+                            class="roadmap-card-content card relative bg-[#0d0907] rounded-2xl border-4 border-[#f9b14d] overflow-hidden p-10">
+
+                            
+                            <div class="shine"></div>
+
+                            
+                            <div class="background">
+                                <div class="tiles">
+                                    <div class="tile tile-1"></div>
+                                    <div class="tile tile-2"></div>
+                                    <div class="tile tile-3"></div>
+                                    <div class="tile tile-4"></div>
+                                    <div class="tile tile-5"></div>
+                                    <div class="tile tile-6"></div>
+                                    <div class="tile tile-7"></div>
+                                    <div class="tile tile-8"></div>
+                                    <div class="tile tile-9"></div>
+                                    <div class="tile tile-10"></div>
+                                </div>
+                                <div class="line line-1"></div>
+                                <div class="line line-2"></div>
+                                <div class="line line-3"></div>
+                            </div>
+
+                            
+                            <div class="card-header flex justify-between items-center mb-6 relative z-10">
+                                <div class="title-group flex items-center gap-4">
+                                    <span class="roadmap-icon text-4xl">🗺️</span>
+                                    <h2
+                                        class="text-3xl md:text-4xl font-bold text-[#f9b14d] group-hover:text-[#ffcc66] transition-colors">
+                                        Technical Interview Preparation
+                                    </h2>
+                                </div>
+
+                                
+                                
+                                <div
+                                    class="time-badge flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1a1513] text-[#d1cfcd] text-sm">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>4-6 months</span>
+                                </div>
+                                
+                            </div>
+
+                            
+                            <p
+                                class="description text-[#a19d9a] text-lg mb-10 leading-relaxed max-w-[90%] relative z-10">
+                                Comprehensive guide to crack technical interviews at top companies
+                            </p>
+
+                            
+                            <div class="card-footer flex justify-between items-center relative z-10">
+                                <div class="difficulty-group flex items-center gap-3 text-[#a19d9a]">
+                                    <span class="flex items-center gap-2">
+                                        <i class="fa-regular fa-star"></i> Difficulty:
+                                    </span>
+                                    <span
+                                        class="difficulty-badge px-5 py-2 rounded-lg text-sm font-semibold bg-[#C2293D] text-white border border-[#FF0000]/30">
+                                        Intermediate to Advanced
+                                    </span>
+                                </div>
+
+                                
+                                <div class="start-btn-wrapper">
+                                    <button
+                                        class="start-btn inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg bg-[#FFC758] text-[#0E0604] border-none cursor-pointer transition-all duration-200"
+                                        style="box-shadow: 0 0 20px rgba(255, 199, 88, 0.3);">
+                                        <span>Start Learning</span>
+                                        <span>→</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="/cc-website/roadmaps/mobile-development/" class="roadmap-card-link group relative block">
+
+            
+            <div class="wobble-container" data-card-index="6">
+                <div class="wobble-outer">
+                    <div class="wobble-inner">
+                        
+                        <div class="glow-layer"></div>
+
+                        
+                        <div
+                            class="roadmap-card-content card relative bg-[#0d0907] rounded-2xl border-4 border-[#f9b14d] overflow-hidden p-10">
+
+                            
+                            <div class="shine"></div>
+
+                            
+                            <div class="background">
+                                <div class="tiles">
+                                    <div class="tile tile-1"></div>
+                                    <div class="tile tile-2"></div>
+                                    <div class="tile tile-3"></div>
+                                    <div class="tile tile-4"></div>
+                                    <div class="tile tile-5"></div>
+                                    <div class="tile tile-6"></div>
+                                    <div class="tile tile-7"></div>
+                                    <div class="tile tile-8"></div>
+                                    <div class="tile tile-9"></div>
+                                    <div class="tile tile-10"></div>
+                                </div>
+                                <div class="line line-1"></div>
+                                <div class="line line-2"></div>
+                                <div class="line line-3"></div>
+                            </div>
+
+                            
+                            <div class="card-header flex justify-between items-center mb-6 relative z-10">
+                                <div class="title-group flex items-center gap-4">
+                                    <span class="roadmap-icon text-4xl">🗺️</span>
+                                    <h2
+                                        class="text-3xl md:text-4xl font-bold text-[#f9b14d] group-hover:text-[#ffcc66] transition-colors">
+                                        Mobile App Development Roadmap
+                                    </h2>
+                                </div>
+
+                                
+                                
+                                <div
+                                    class="time-badge flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1a1513] text-[#d1cfcd] text-sm">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>6-10 months</span>
+                                </div>
+                                
+                            </div>
+
+                            
+                            <p
+                                class="description text-[#a19d9a] text-lg mb-10 leading-relaxed max-w-[90%] relative z-10">
+                                Build native and cross-platform mobile applications
+                            </p>
+
+                            
+                            <div class="card-footer flex justify-between items-center relative z-10">
+                                <div class="difficulty-group flex items-center gap-3 text-[#a19d9a]">
+                                    <span class="flex items-center gap-2">
+                                        <i class="fa-regular fa-star"></i> Difficulty:
+                                    </span>
+                                    <span
+                                        class="difficulty-badge px-5 py-2 rounded-lg text-sm font-semibold bg-[#C2293D] text-white border border-[#FF0000]/30">
+                                        Beginner to Advanced
+                                    </span>
+                                </div>
+
+                                
+                                <div class="start-btn-wrapper">
+                                    <button
+                                        class="start-btn inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg bg-[#FFC758] text-[#0E0604] border-none cursor-pointer transition-all duration-200"
+                                        style="box-shadow: 0 0 20px rgba(255, 199, 88, 0.3);">
+                                        <span>Start Learning</span>
+                                        <span>→</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="/cc-website/roadmaps/devops/" class="roadmap-card-link group relative block">
+
+            
+            <div class="wobble-container" data-card-index="7">
+                <div class="wobble-outer">
+                    <div class="wobble-inner">
+                        
+                        <div class="glow-layer"></div>
+
+                        
+                        <div
+                            class="roadmap-card-content card relative bg-[#0d0907] rounded-2xl border-4 border-[#f9b14d] overflow-hidden p-10">
+
+                            
+                            <div class="shine"></div>
+
+                            
+                            <div class="background">
+                                <div class="tiles">
+                                    <div class="tile tile-1"></div>
+                                    <div class="tile tile-2"></div>
+                                    <div class="tile tile-3"></div>
+                                    <div class="tile tile-4"></div>
+                                    <div class="tile tile-5"></div>
+                                    <div class="tile tile-6"></div>
+                                    <div class="tile tile-7"></div>
+                                    <div class="tile tile-8"></div>
+                                    <div class="tile tile-9"></div>
+                                    <div class="tile tile-10"></div>
+                                </div>
+                                <div class="line line-1"></div>
+                                <div class="line line-2"></div>
+                                <div class="line line-3"></div>
+                            </div>
+
+                            
+                            <div class="card-header flex justify-between items-center mb-6 relative z-10">
+                                <div class="title-group flex items-center gap-4">
+                                    <span class="roadmap-icon text-4xl">🗺️</span>
+                                    <h2
+                                        class="text-3xl md:text-4xl font-bold text-[#f9b14d] group-hover:text-[#ffcc66] transition-colors">
+                                        DevOps &amp; Cloud Engineering Roadmap
+                                    </h2>
+                                </div>
+
+                                
+                                
+                                <div
+                                    class="time-badge flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1a1513] text-[#d1cfcd] text-sm">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>6-9 months</span>
+                                </div>
+                                
+                            </div>
+
+                            
+                            <p
+                                class="description text-[#a19d9a] text-lg mb-10 leading-relaxed max-w-[90%] relative z-10">
+                                Master DevOps practices, CI&#x2F;CD, and cloud infrastructure
+                            </p>
+
+                            
+                            <div class="card-footer flex justify-between items-center relative z-10">
+                                <div class="difficulty-group flex items-center gap-3 text-[#a19d9a]">
+                                    <span class="flex items-center gap-2">
+                                        <i class="fa-regular fa-star"></i> Difficulty:
+                                    </span>
+                                    <span
+                                        class="difficulty-badge px-5 py-2 rounded-lg text-sm font-semibold bg-[#C2293D] text-white border border-[#FF0000]/30">
+                                        Intermediate to Advanced
+                                    </span>
+                                </div>
+
+                                
+                                <div class="start-btn-wrapper">
+                                    <button
+                                        class="start-btn inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg bg-[#FFC758] text-[#0E0604] border-none cursor-pointer transition-all duration-200"
+                                        style="box-shadow: 0 0 20px rgba(255, 199, 88, 0.3);">
+                                        <span>Start Learning</span>
+                                        <span>→</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
     </div>
     
+
+</div>
+
+<style>
+    /* Dark/Light Theme Variables */
+    body {
+        --card-shine-opacity: .1;
+        --card-shine-gradient: conic-gradient(from 205deg at 50% 50%, rgba(249, 177, 77, 0) 0deg, #f9b14d 25deg, rgba(255, 204, 102, 0.18) 295deg, rgba(249, 177, 77, 0) 360deg);
+        --card-line-color: #2A2B2C;
+        --card-tile-color: rgba(249, 177, 77, 0.05);
+        transition: all 0.3s ease;
+    }
+
+  /* Light theme - Grid lines (gray) */
+body.light {
+    --card-line-color: #9E9E9E; /* Gray lines */
+    --card-tile-color: rgba(135, 206, 250, 0.15); /* Sky blue tiles */
+}
+
+/* For data-theme attribute version */
+[data-theme="light"] body,
+[data-theme="lofi"] body {
+    --card-line-color: #9E9E9E;
+    --card-tile-color: rgba(135, 206, 250, 0.15);
+}
+
+/* Additional specific overrides for light theme */
+[data-theme="light"] .card .background .line:before,
+[data-theme="light"] .card .background .line:after,
+[data-theme="lofi"] .card .background .line:before,
+[data-theme="lofi"] .card .background .line:after {
+    background-color: #9E9E9E; /* Gray lines */
+}
+
+[data-theme="light"] .card .background .tiles .tile,
+[data-theme="lofi"] .card .background .tiles .tile {
+    background-color: rgba(135, 206, 250, 0.15); /* Sky blue tiles */
+}
+
+    body.toggle .wobble-container * {
+        transition-duration: 0s !important;
+    }
+
+    /* Card Animation Styles */
+    .card .shine {
+        border-radius: inherit;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity .5s;
+        pointer-events: none;
+    }
+
+    .card .shine:before {
+        content: '';
+        width: 150%;
+        padding-bottom: 150%;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        bottom: 55%;
+        filter: blur(35px);
+        opacity: var(--card-shine-opacity);
+        transform: translateX(-50%);
+        background-image: var(--card-shine-gradient);
+    }
+
+    .card .background {
+        border-radius: inherit;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+        -webkit-mask-image: radial-gradient(circle at 60% 5%, black 0%, black 15%, transparent 60%);
+        mask-image: radial-gradient(circle at 60% 5%, black 0%, black 15%, transparent 60%);
+    }
+
+    .card .background .tiles {
+        opacity: 0;
+        transition: opacity .25s;
+    }
+
+    .card .background .tiles .tile {
+        position: absolute;
+        background-color: var(--card-tile-color);
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        opacity: 0;
+    }
+
+    .card .background .tiles .tile.tile-4,
+    .card .background .tiles .tile.tile-6,
+    .card .background .tiles .tile.tile-10 {
+        animation-delay: -2s;
+    }
+
+    .card .background .tiles .tile.tile-3,
+    .card .background .tiles .tile.tile-5,
+    .card .background .tiles .tile.tile-8 {
+        animation-delay: -4s;
+    }
+
+    .card .background .tiles .tile.tile-2,
+    .card .background .tiles .tile.tile-9 {
+        animation-delay: -6s;
+    }
+
+    .card .background .tiles .tile.tile-1 {
+        top: 0;
+        left: 0;
+        height: 10%;
+        width: 22.5%;
+    }
+
+    .card .background .tiles .tile.tile-2 {
+        top: 0;
+        left: 22.5%;
+        height: 10%;
+        width: 27.5%;
+    }
+
+    .card .background .tiles .tile.tile-3 {
+        top: 0;
+        left: 50%;
+        height: 10%;
+        width: 27.5%;
+    }
+
+    .card .background .tiles .tile.tile-4 {
+        top: 0;
+        left: 77.5%;
+        height: 10%;
+        width: 22.5%;
+    }
+
+    .card .background .tiles .tile.tile-5 {
+        top: 10%;
+        left: 0;
+        height: 22.5%;
+        width: 22.5%;
+    }
+
+    .card .background .tiles .tile.tile-6 {
+        top: 10%;
+        left: 22.5%;
+        height: 22.5%;
+        width: 27.5%;
+    }
+
+    .card .background .tiles .tile.tile-7 {
+        top: 10%;
+        left: 50%;
+        height: 22.5%;
+        width: 27.5%;
+    }
+
+    .card .background .tiles .tile.tile-8 {
+        top: 10%;
+        left: 77.5%;
+        height: 22.5%;
+        width: 22.5%;
+    }
+
+    .card .background .tiles .tile.tile-9 {
+        top: 32.5%;
+        left: 50%;
+        height: 22.5%;
+        width: 27.5%;
+    }
+
+    .card .background .tiles .tile.tile-10 {
+        top: 32.5%;
+        left: 77.5%;
+        height: 22.5%;
+        width: 22.5%;
+    }
+
+    @keyframes tile {
+
+        0%,
+        12.5%,
+        100% {
+            opacity: 1;
+        }
+
+        25%,
+        82.5% {
+            opacity: 0;
+        }
+    }
+
+    .card .background .line {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity .35s;
+    }
+
+    .card .background .line:before,
+    .card .background .line:after {
+        content: '';
+        position: absolute;
+        background-color: var(--card-line-color);
+        transition: transform .35s;
+    }
+
+    .card .background .line:before {
+        left: 0;
+        right: 0;
+        height: 1px;
+        transform-origin: 0 50%;
+        transform: scaleX(0);
+    }
+
+    .card .background .line:after {
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        transform-origin: 50% 0;
+        transform: scaleY(0);
+    }
+
+    .card .background .line.line-1:before {
+        top: 10%;
+    }
+
+    .card .background .line.line-1:after {
+        left: 22.5%;
+    }
+
+    .card .background .line.line-1:before,
+    .card .background .line.line-1:after {
+        transition-delay: .3s;
+    }
+
+    .card .background .line.line-2:before {
+        top: 32.5%;
+    }
+
+    .card .background .line.line-2:after {
+        left: 50%;
+    }
+
+    .card .background .line.line-2:before,
+    .card .background .line.line-2:after {
+        transition-delay: .15s;
+    }
+
+    .card .background .line.line-3:before {
+        top: 55%;
+    }
+
+    .card .background .line.line-3:after {
+        right: 22.5%;
+    }
+
+    /* Hover Effects */
+    .card:hover .shine {
+        opacity: 1;
+        transition-duration: .5s;
+        transition-delay: 0s;
+    }
+
+    .card:hover .background .tiles {
+        opacity: 1;
+        transition-delay: .25s;
+    }
+
+    .card:hover .background .tiles .tile {
+        animation-name: tile;
+    }
+
+    .card:hover .background .line {
+        opacity: 1;
+        transition-duration: .15s;
+    }
+
+    .card:hover .background .line:before {
+        transform: scaleX(1);
+    }
+
+    .card:hover .background .line:after {
+        transform: scaleY(1);
+    }
+
+    .card:hover .background .line.line-1:before,
+    .card:hover .background .line.line-1:after {
+        transition-delay: .0s;
+    }
+
+    .card:hover .background .line.line-2:before,
+    .card:hover .background .line.line-2:after {
+        transition-delay: .15s;
+    }
+
+    .card:hover .background .line.line-3:before,
+    .card:hover .background .line.line-3:after {
+        transition-delay: .3s;
+    }
+
+    /* Glow effect styles */
+    :root {
+        --blur: 8px;
+        --spread: 25;
+        --start: 0;
+        --active: 0;
+        --glowingeffect-border-width: 2px;
+        --gradient: radial-gradient(circle, #ff6b35 10%, #ff6b3500 20%),
+            radial-gradient(circle at 40% 40%, #ffcc66 5%, #ffcc6600 15%),
+            radial-gradient(circle at 60% 60%, #ff8c42 10%, #ff8c4200 20%),
+            radial-gradient(circle at 40% 60%, #ff4500 10%, #ff450000 20%);
+    }
+
+    .wobble-container {
+        position: relative;
+        cursor: default;
+        user-select: none;
+    }
+
+    .wobble-outer {
+        will-change: transform;
+        transition: transform 0.1s ease-out;
+    }
+
+    .wobble-inner {
+        will-change: transform;
+        transition: transform 0.1s ease-out;
+        position: relative;
+    }
+
+    .glow-layer {
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        border-radius: 1rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        filter: blur(var(--blur));
+        z-index: 5;
+    }
+
+    .glow-layer::after {
+        content: "";
+        position: absolute;
+        inset: calc(-1 * var(--glowingeffect-border-width));
+        border: var(--glowingeffect-border-width) solid transparent;
+        background: var(--gradient);
+        background-attachment: fixed;
+        opacity: calc(var(--active));
+        transition: opacity 300ms linear;
+        border-radius: 1rem;
+        -webkit-mask-image: linear-gradient(#0000, #0000), conic-gradient(from calc((var(--start) - var(--spread)) * 1deg), rgba(0, 0, 0, 0) 0deg, #000 0deg, #000 calc(var(--spread) * 1deg), rgba(0, 0, 0, 0) calc(var(--spread) * 2deg));
+        mask-image: linear-gradient(#0000, #0000), conic-gradient(from calc((var(--start) - var(--spread)) * 1deg), rgba(0, 0, 0, 0) 0deg, #000 0deg, #000 calc(var(--spread) * 1deg), rgba(0, 0, 0, 0) calc(var(--spread) * 2deg));
+        -webkit-mask-composite: source-in;
+        mask-composite: intersect;
+    }
+
+    .wobble-container:hover .glow-layer {
+        opacity: 1;
+    }
+
+    .start-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 25px rgba(249, 177, 77, 0.5) !important;
+    }
+
+    .start-btn:active {
+        transform: translateY(0);
+    }
+
+    .roadmap-card-content {
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        contain: layout-style;
+    }
+
+    .roadmap-card-link:hover .roadmap-card-content {
+        border-color: rgba(255, 204, 102, 1);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 0 2px rgba(249, 177, 77, 0.5), 0 0 40px rgba(249, 177, 77, 0.4) !important;
+    }
+
+    ::selection {
+        background: #5c161e;
+        color: white;
+    }
+</style>
+<script>
+    (function () {
+        const ease = (t) => t * (2 - t);
+        const cards = document.querySelectorAll('.wobble-container');
+        let isScrolling = false;
+        let scrollTimeout;
+
+        // Disable animations during scroll
+        function handleScrollStart() {
+            if (!isScrolling) {
+                isScrolling = true;
+                document.body.classList.add('is-scrolling');
+            }
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isScrolling = false;
+                document.body.classList.remove('is-scrolling');
+            }, 150);
+        }
+
+        // Use passive listener for better scroll performance
+        window.addEventListener('scroll', handleScrollStart, { passive: true });
+
+        cards.forEach((card) => {
+            const outer = card.querySelector('.wobble-outer');
+            const inner = card.querySelector('.wobble-inner');
+
+            const state = {
+                curOX: 0, curOY: 0,
+                curIX: 0, curIY: 0,
+                curS: 1,
+                targetOX: 0, targetOY: 0,
+                targetIX: 0, targetIY: 0,
+                targetS: 1,
+                animating: false,
+                isVisible: true
+            };
+
+            const lerp = (a, b, n) => (1 - n) * a + n * b;
+
+            function update() {
+                if (!state.animating || isScrolling) return;
+
+                state.curOX = lerp(state.curOX, state.targetOX, 0.15);
+                state.curOY = lerp(state.curOY, state.targetOY, 0.15);
+                state.curIX = lerp(state.curIX, state.targetIX, 0.15);
+                state.curIY = lerp(state.curIY, state.targetIY, 0.15);
+                state.curS = lerp(state.curS, state.targetS, 0.15);
+
+                outer.style.transform = `translate3d(${state.curOX}px, ${state.curOY}px, 0)`;
+                inner.style.transform = `translate3d(${state.curIX}px, ${state.curIY}px, 0) scale3d(${state.curS}, ${state.curS}, 1)`;
+
+                const delta = Math.abs(state.targetOX - state.curOX) + Math.abs(state.targetS - state.curS);
+                if (delta < 0.01 && state.targetS === 1) {
+                    state.animating = false;
+                    return;
+                }
+
+                requestAnimationFrame(update);
+            }
+
+            function onPointerMove(e) {
+                // Don't animate if scrolling
+                if (isScrolling) return;
+
+                const rect = card.getBoundingClientRect();
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+
+                const x = (mouseX - (rect.left + rect.width / 2)) / 30;
+                const y = (mouseY - (rect.top + rect.height / 2)) / 30;
+
+                state.targetOX = x;
+                state.targetOY = y;
+                state.targetIX = -x;
+                state.targetIY = -y;
+                state.targetS = 1.02;
+
+                const centerX = rect.left + rect.width * 0.5;
+                const centerY = rect.top + rect.height * 0.5;
+                const angle = (Math.atan2(mouseY - centerY, mouseX - centerX) * 180 / Math.PI) + 90;
+
+                inner.style.setProperty('--start', angle);
+                inner.style.setProperty('--active', '1');
+
+                if (!state.animating) {
+                    state.animating = true;
+                    update();
+                }
+            }
+
+            card.addEventListener('pointermove', onPointerMove, { passive: true });
+            card.addEventListener('pointerleave', () => {
+                state.targetOX = 0; state.targetOY = 0;
+                state.targetIX = 0; state.targetIY = 0;
+                state.targetS = 1;
+                inner.style.setProperty('--active', '0');
+                if (!state.animating) {
+                    state.animating = true;
+                    update();
+                }
+            }, { passive: true });
+        });
+    })();
+</script>
+
+<style>
+    /* Disable animations during scroll */
+    body.is-scrolling .wobble-outer,
+    body.is-scrolling .wobble-inner {
+        transition: none !important;
+    }
+
+    body.is-scrolling .card .shine,
+    body.is-scrolling .card .background .tiles,
+    body.is-scrolling .card .background .line {
+        transition: none !important;
+    }
+
+    /* Use will-change only on hover */
+    .wobble-container:hover .wobble-outer,
+    .wobble-container:hover .wobble-inner {
+        will-change: transform;
+    }
+
+    .wobble-outer,
+    .wobble-inner {
+        will-change: auto;
+    }
+
+    /* Add GPU acceleration hint */
+    .roadmap-card-content {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+
+    /* Reduce animation complexity on slower devices */
+    @media (prefers-reduced-motion: reduce) {
+
+        .wobble-outer,
+        .wobble-inner,
+        .card .shine,
+        .card .background .tiles,
+        .card .background .line,
+        .start-btn,
+        .difficulty-badge {
+            transition: none !important;
+            animation: none !important;
+        }
+    }
+</style>
 
 
                         
@@ -697,6 +1825,128 @@
               }
             </script>
 
+            
+<footer class="site-footer">
+    <!-- Main footer content -->
+    <div class="w-full py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer grid -->
+            <div class="footer-content">
+                
+                <!-- Column 1: About/Logo -->
+                <div class="footer-col space-y-4">
+                    <div class="footer-logo-container">
+                        
+                        <img src="/cc-website/images/logo/cclogo.png" alt="Logo" class="footer-logo">
+                        
+                        <h3>
+                            CC Club MNNIT
+                        </h3>
+                    </div>
+                    <p>
+                        Our mission since 2010 at MNNIT is to develop in you a passion for problem-solving, critical thinking, innovation and computer science. We strive to achieve this goal through means of events, classes and industry connects.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        
+                            
+                            <li>
+                                <a href="team">
+                                    Our Team
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="blog">
+                                    Blogs
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="contrihub">
+                                    Projects
+                                </a>
+                            </li>
+                            
+                        
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col space-y-4">
+                    <h4>Contact</h4>
+                    <div class="space-y-3">
+                        
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            computer.club@mnnit.ac.in
+                        </p>
+                        
+                        
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            MNNIT Allahabad, Prayagraj, UP - 211004
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        
+                            
+                            <a href="https:&#x2F;&#x2F;youtube.com&#x2F;@ccclub" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            
+                            
+                            <a href="https:&#x2F;&#x2F;instagram.com&#x2F;ccclub_mnnit" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            
+                            
+                            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;ccclub_mnnit" aria-label="Twitter/X">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            
+                            
+                            <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;company&#x2F;ccclub-mnnit" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            
+                            
+                            <a href="https:&#x2F;&#x2F;github.com&#x2F;cc-mnnit" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            
+                        
+                    </div>
+                    <p>
+                        Connect to stay updated about our events, projects and blogs!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Computer Coding Club. All rights reserved.</p>
+        <div class="footer-made-with">
+            <p>Made with</p>
+            <i class="fas fa-heart"></i>
+            <p>by Team CC</p>
+        </div>
+    </div>
+</footer>
+
         </div>
 
         
@@ -772,7 +2022,7 @@
                     
                         <li><a href="/cc-website/contrihub" class="text-sm">
                             <i class="fa-solid fa-code-branch mr-2"></i>
-                            ContriHub
+                            Projects
                         </a></li>
                     
                 
@@ -838,6 +2088,16 @@
             <li ><a class="hover:no-underline" href="/cc-website/roadmaps/web-development">Web Development Roadmap</a></li>
         
             <li ><a class="hover:no-underline" href="/cc-website/roadmaps/dsa">Data Structures &amp; Algorithms Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="/cc-website/roadmaps/machine-learning">Machine Learning Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="/cc-website/roadmaps/open-source">Open Source Contribution Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="/cc-website/roadmaps/interview-prep">Technical Interview Preparation</a></li>
+        
+            <li ><a class="hover:no-underline" href="/cc-website/roadmaps/mobile-development">Mobile App Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="/cc-website/roadmaps/devops">DevOps &amp; Cloud Engineering Roadmap</a></li>
         
         
         

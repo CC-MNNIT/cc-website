@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+/* ============================================
+   CARDS & GENERAL COMPONENTS
+   ============================================
+*/
+
+/* Feature cards */
+[data-theme="night"] .feature-card {
+    background: oklch(0.15 0.02 20);
+    border: 1px solid oklch(0.22 0.03 20);
+}
+
+[data-theme="night"] .feature-card:hover {
+    border-color: #FFC758;
+}
+
+[data-theme="night"] .feature-icon-bg {
+    background: oklch(0.20 0.03 20);
+}
+
+[data-theme="night"] .feature-icon {
+    color: #FFC758;
+}
+
+[data-theme="night"] .feature-title {
+    color: #FFC758;
+}
+
+[data-theme="night"] .feature-description {
+    color: #FAECEC;
+}
+
+/* Trust section */
+[data-theme="night"] .trust-section-title {
+    color: #FFC758;
+}
+
+[data-theme="night"] .trust-section-logo {
+    opacity: 0.6;
+    filter: grayscale(100%) brightness(1.5);
+}
+
+[data-theme="night"] .trust-section-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%) brightness(1);
+}
+
+/* Showcase tabs */
+[data-theme="night"] .tabs-lifted .tab {
+    background: transparent;
+    border-color: oklch(0.25 0.04 20);
+    color: #FAECEC;
+}
+
+[data-theme="night"] .tabs-lifted .tab-active,
+[data-theme="night"] .tabs-lifted .tab:checked {
+    background: oklch(0.15 0.02 20);
+    border-color: #FFC758;
+    color: #FFC758;
+}
+
+[data-theme="night"] .tab-content {
+    background: oklch(0.15 0.02 20);
+    border: 1px solid oklch(0.25 0.04 20);
+}
+
+/* Testimonial cards */
+[data-theme="night"] .testimonial-card {
+    background: oklch(0.15 0.02 20);
+    border: 1px solid oklch(0.22 0.03 20);
+}
+
+[data-theme="night"] .testimonial-card:hover {
+    border-color: #FFC758;
+}
+
+[data-theme="night"] .testimonial-stars {
+    color: #FFC758;
+}
+
+[data-theme="night"] .testimonial-quote {
+    color: #FAECEC;
+}
+
+[data-theme="night"] .testimonial-author {
+    color: #FFC758;
+}
+
+[data-theme="night"] .testimonial-role {
+    color: #FAECEC;
+    opacity: 0.8;
+}
+
+[data-theme="night"] .testimonial-avatar-border {
+    background: linear-gradient(135deg, #FFC758, #C2293D);
+}
+
+/* Cards with warm dark background */
+[data-theme="night"] .card {
+    background: oklch(0.15 0.02 20) !important;
+    border-color: oklch(0.25 0.04 20) !important;
+}
+
+[data-theme="night"] .card:hover {
+    border-color: oklch(0.80 0.15 75) !important;
+    /* Gold border on hover */
+}
+
+/* Stat icons/figures - Gold */
+[data-theme="night"] .stat-figure {
+    color: #FFC758 !important;
+}
+
+/* Stats cards */
+[data-theme="night"] .stat {
+    background: oklch(0.15 0.02 20) !important;
+}
+
+/* Inputs and forms */
+[data-theme="night"] .input,
+[data-theme="night"] .select,
+[data-theme="night"] .textarea {
+    background: oklch(0.12 0.02 20) !important;
+    border-color: oklch(0.25 0.04 20) !important;
+    color: oklch(0.92 0.01 30) !important;
+}
+
+[data-theme="night"] .input:focus,
+[data-theme="night"] .select:focus,
+[data-theme="night"] .textarea:focus {
+    border-color: oklch(0.80 0.15 75) !important;
+    outline: none;
+}
+
+/* Alert boxes */
+[data-theme="night"] .alert {
+    background: oklch(0.15 0.02 20) !important;
+    border-color: oklch(0.25 0.04 20) !important;
+}
+
+/* Borders - Subtle burgundy tint */
+[data-theme="night"] .border-gray-500\/15,
+[data-theme="night"] .border-gray-500\/10 {
+    border-color: oklch(0.20 0.03 20) !important;
+}
+
+/* Badges */
+[data-theme="night"] .badge-primary {
+    background: oklch(0.80 0.15 75) !important;
+    color: oklch(0.15 0.02 30) !important;
+}
+
+[data-theme="night"] .badge-secondary {
+    background: oklch(0.35 0.12 15) !important;
+    color: oklch(0.95 0.01 15) !important;
+}
+
+/* Icons - Gold color (except navbar which is white) */
+[data-theme="night"] i:not(.navbar i),
+[data-theme="night"] .fa:not(.navbar .fa),
+[data-theme="night"] .fab:not(.navbar .fab),
+[data-theme="night"] .fas:not(.navbar .fas),
+[data-theme="night"] .far:not(.navbar .far),
+[data-theme="night"] svg:not(.navbar svg) {
+    color: #FFC758 !important;
+}

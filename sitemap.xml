@@ -230,7 +230,22 @@
         <loc>/cc-website/roadmaps/</loc>
     </url>
     <url>
+        <loc>/cc-website/roadmaps/devops/</loc>
+    </url>
+    <url>
         <loc>/cc-website/roadmaps/dsa/</loc>
+    </url>
+    <url>
+        <loc>/cc-website/roadmaps/interview-prep/</loc>
+    </url>
+    <url>
+        <loc>/cc-website/roadmaps/machine-learning/</loc>
+    </url>
+    <url>
+        <loc>/cc-website/roadmaps/mobile-development/</loc>
+    </url>
+    <url>
+        <loc>/cc-website/roadmaps/open-source/</loc>
     </url>
     <url>
         <loc>/cc-website/roadmaps/web-development/</loc>

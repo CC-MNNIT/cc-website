@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/* ============================================
+   NAVBAR & MENU
+   ============================================
+*/
+
+/* 1. DEFAULT: All navbar links white with transition */
+[data-theme="night"] .navbar a,
+[data-theme="night"] .navbar a i,
+[data-theme="night"] .navbar a svg,
+[data-theme="night"] .navbar .menu li>a,
+[data-theme="night"] .navbar .menu li>details>summary,
+[data-theme="night"] .navbar .menu li>.btn {
+    color: #FFFFFF !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* 2. ACTIVE STATE: Golden yellow for current page - HIGHEST PRIORITY */
+[data-theme="night"] .navbar a.active-nav,
+[data-theme="night"] .navbar a.active-nav *,
+[data-theme="night"] .navbar .menu li a.active-nav,
+[data-theme="night"] .navbar .menu li a.active-nav *,
+[data-theme="night"] .navbar .menu li>a.active-nav,
+[data-theme="night"] .navbar .menu li>a.active-nav * {
+    color: #FFC758 !important;
+    background-color: rgba(255, 199, 88, 0.15) !important;
+    font-weight: 600 !important;
+    border-radius: 0.5rem !important;
+}
+
+/* Active indicator underline */
+[data-theme="night"] .navbar a.active-nav::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 2px;
+    background: #FFC758;
+    border-radius: 2px;
+}
+
+/* 3. HOVER STATE: Golden yellow on hover (but not for active) */
+[data-theme="night"] .navbar a:not(.active-nav):hover,
+[data-theme="night"] .navbar a:not(.active-nav):hover *,
+[data-theme="night"] .navbar .menu li>a:not(.active-nav):hover,
+[data-theme="night"] .navbar .menu li>a:not(.active-nav):hover *,
+[data-theme="night"] .navbar .menu li>details>summary:not(.active-nav):hover {
+    color: #FFC758 !important;
+    background-color: rgba(255, 199, 88, 0.08) !important;
+    border-radius: 0.5rem;
+    text-decoration: none !important;
+}
+
+/* 4. Dropdown menu items */
+[data-theme="night"] .navbar .dropdown-content li a.active-nav {
+    background-color: rgba(255, 199, 88, 0.2) !important;
+    color: #FFC758 !important;
+}
+
+/* 5. Logo/Brand link - don't apply background */
+[data-theme="night"] .navbar .btn-ghost.text-xl.active-nav,
+[data-theme="night"] .navbar .logo-link.active-nav {
+    background-color: transparent !important;
+}
+
+[data-theme="night"] .navbar .btn-ghost.text-xl.active-nav::after,
+[data-theme="night"] .navbar .logo-link.active-nav::after {
+    display: none;
+}
+
+/* 6. Mobile menu - sidebar active state */
+[data-theme="night"] .drawer-side .menu li a.active-nav {
+    background-color: rgba(255, 199, 88, 0.15) !important;
+    color: #FFC758 !important;
+    font-weight: 600 !important;
+    border-left: 3px solid #FFC758;
+}
+
+/* 7. Ensure dropdown parent button doesn't get active styling */
+[data-theme="night"] .navbar .dropdown>div.btn.active-nav {
+    background-color: transparent !important;
+}
+
+[data-theme="night"] .navbar .dropdown>div.btn.active-nav::after {
+    display: none;
+}
+
+/* Navbar with subtle burgundy tint */
+[data-theme="night"] .navbar {
+    background: oklch(0.12 0.03 20) !important;
+    border-bottom-color: oklch(0.25 0.05 20) !important;
+}
+
+/* Menu items */
+[data-theme="night"] .menu li>* {
+    color: oklch(0.85 0.01 30) !important;
+}
+
+[data-theme="night"] .menu li>*:hover {
+    background: oklch(0.18 0.03 20) !important;
+    color: oklch(0.80 0.15 75) !important;
+}
+
+[data-theme="night"] .menu li>*.active,
+[data-theme="night"] .menu li>.rounded.bg-gray-500\/15 {
+    background: oklch(0.22 0.04 20) !important;
+    color: oklch(0.80 0.15 75) !important;
+}
+
+/* Sidebar */
+[data-theme="night"] .drawer-side {
+    border-right-color: oklch(0.22 0.04 20) !important;
+}
+
+/* Theme toggle adjustments */
+.navbar .swap.swap-rotate {
+    display: inline-grid;
+    place-content: center;
+}
+
+/* Dark theme button */
+[data-theme="night"] .mobile-theme-toggle {
+    background: linear-gradient(135deg, #FFC758 0%, #FFD580 100%);
+    color: #0E0604;
+}
+
+[data-theme="night"] .mobile-theme-toggle:hover {
+    box-shadow: 0 6px 20px rgba(255, 199, 88, 0.4);
+}
+
+/* Icon styling */
+.mobile-theme-toggle i,
+.mobile-theme-toggle svg {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+/* Hide sun in light mode, show moon */
+.mobile-theme-toggle .swap-off {
+    display: block;
+}
+
+.mobile-theme-toggle .swap-on {
+    display: none;
+}
+
+/* Hide moon in dark mode, show sun */
+[data-theme="night"] .mobile-theme-toggle .swap-off {
+    display: none;
+}
+
+[data-theme="night"] .mobile-theme-toggle .swap-on {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .mobile-theme-toggle {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .mobile-theme-toggle i,
+    .mobile-theme-toggle svg {
+        font-size: 22px;
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 400px) {
+    .mobile-theme-toggle {
+        width: 48px;
+        height: 48px;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .mobile-theme-toggle i,
+    .mobile-theme-toggle svg {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Ensure button doesn't interfere with footer */
+.mobile-theme-toggle {
+    margin-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Accessibility */
+.mobile-theme-toggle:focus {
+    outline: 2px solid #FFC758;
+    outline-offset: 2px;
+}

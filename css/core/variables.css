@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* ============================================
+   CORE VARIABLES & THEME SETTINGS
+   ============================================
+*/
+
+/* Dark Theme (Night Mode) Variables */
+:root {
+    --font-main: 'Inter', sans-serif;
+}
+
+[data-theme="night"] {
+    /* PRIMARY COLOR - Gold/Amber for buttons, links, highlights */
+    --color-primary: oklch(0.80 0.15 75);
+    /* Gold (#FFC758 equivalent) */
+    --color-primary-content: oklch(0.20 0.02 30);
+    /* Dark text on gold */
+
+    /* SECONDARY COLOR - Burgundy/Wine for accents */
+    --color-secondary: oklch(0.35 0.12 15);
+    /* Burgundy (#491E27 equivalent) */
+    --color-secondary-content: oklch(0.95 0.01 15);
+    /* Light text on burgundy */
+
+    /* ACCENT COLOR - Red accent for special elements */
+    --color-accent: oklch(0.55 0.20 20);
+    /* Red (#C2293D equivalent) */
+    --color-accent-content: oklch(1 0 0);
+    /* White text on red */
+
+    /* NEUTRAL COLOR - For borders, dividers */
+    --color-neutral: oklch(0.25 0.02 20);
+    /* Dark brown tone */
+    --color-neutral-content: oklch(0.90 0.01 20);
+    /* Light text */
+
+    /* BACKGROUND COLORS - Dark brown/black backgrounds */
+    --color-base-100: oklch(0.10 0.02 20);
+    /* Very dark brown (#0E0604 equivalent) */
+    --color-base-200: oklch(0.15 0.02 20);
+    /* Slightly lighter */
+    --color-base-300: oklch(0.22 0.03 20);
+    /* Cards, elevated surfaces */
+    --color-base-content: oklch(0.92 0.01 30);
+    /* Light beige text (#FAECEC tint) */
+
+    /* STATE COLORS */
+    --color-info: oklch(0.65 0.15 240);
+    /* Blue for info */
+    --color-success: oklch(0.65 0.15 140);
+    /* Green for success */
+    --color-warning: oklch(0.80 0.15 75);
+    /* Gold for warnings (matches primary) */
+    --color-error: oklch(0.55 0.20 20);
+    /* Red for errors (matches accent) */
+}
+
+/* Roadmap Variables */
+:root {
+    --roadmap-card-width: 380px;
+    --roadmap-gap: 30px;
+}
+
+/* Tablet devices */
+@media (max-width: 1024px) {
+    :root {
+        --roadmap-card-width: 340px;
+        --roadmap-gap: 24px;
+    }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+    :root {
+        --roadmap-card-width: 280px;
+        --roadmap-gap: 20px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    :root {
+        --roadmap-card-width: 260px;
+        --roadmap-gap: 16px;
+    }
+}

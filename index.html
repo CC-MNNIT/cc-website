@@ -89,7 +89,7 @@
       <meta property="og:url" content="/cc-website/" />
       <meta property="og:type" content="website" />
       
-      <meta property="og:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta property="og:image" content="/cc-website/cc-club-thumbnail.jpg" />
       
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -102,13 +102,13 @@
           
       
       
-      <meta name="twitter:site" content="@your_club_handle" />
+      <meta name="twitter:site" content="@ccclub_mnnit" />
       
       
-      <meta name="twitter:creator" content="@your_club_handle" />
+      <meta name="twitter:creator" content="@ccclub_mnnit" />
       
       
-      <meta name="twitter:image" content="/cc-website/images/cc-club-thumbnail.jpg" />
+      <meta name="twitter:image" content="/cc-website/cc-club-thumbnail.jpg" />
       
 
       <!-- Browser address bar color -->
@@ -283,6 +283,11 @@
 
 
 
+
+
+    
+
+
 <div class="navbar opacity-95 fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-500/15 backdrop-blur-3xl">
     <!-- Mobile hamburger (and Desktop on Root Page) -->
     <div class="flex-none ">
@@ -294,22 +299,33 @@
     
     <!-- Logo -->
     <div class="flex-1">
-        <a href="/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+        <a href="/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
-                CC Club
+                <img 
+                    src="/cc-website/images/logo/cclogo.png" 
+                    alt="CC Club" 
+                    class="h-18 w-auto"
+                    style="padding: 10px;"
+                />
             
         </a>
     </div>
-    <!-- Desktop Menu -->
-    <div class="flex-none hidden lg:flex">
-        <ul class="menu menu-horizontal px-1 items-center">
+<!-- Desktop AND Mobile Menu - Theme toggle always visible -->
+<div class="flex-none flex lg:flex">
+    <ul class="menu menu-horizontal px-1 items-center">
+        <!-- Desktop navigation items (hidden on mobile) -->
+        <div class="hidden lg:flex lg:contents">
             
             
             
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/about">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/about">
                                 <i class="fa-solid fa-circle-info"></i>
                                 About
                             </a>
@@ -317,8 +333,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/blog">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/blog">
                                 <i class="fa-solid fa-blog"></i>
                                 Blog
                             </a>
@@ -326,8 +346,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/events">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/events">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 Events
                             </a>
@@ -335,17 +359,25 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contrihub">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/contrihub">
                                 <i class="fa-solid fa-code-branch"></i>
-                                ContriHub
+                                Projects
                             </a>
                         </li>
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/impact">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/impact">
                                 <i class="fa-solid fa-rocket"></i>
                                 Impact
                             </a>
@@ -353,8 +385,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/roadmaps">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/roadmaps">
                                 <i class="fa-solid fa-route"></i>
                                 Roadmaps
                             </a>
@@ -362,8 +398,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/resources">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/resources">
                                 <i class="fa-solid fa-book-open"></i>
                                 Resources
                             </a>
@@ -379,15 +419,17 @@
                             </div>
                             <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
                                 
+                                    
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/team">
+                                        <a class="btn btn-ghost hover:no-underline " href="/cc-website/team">
                                             <i class="fa-solid fa-user-group"></i>
                                             Current Team
                                         </a>
                                     </li>
                                 
+                                    
                                     <li>
-                                        <a class="btn btn-ghost hover:no-underline" href="/cc-website/alumni">
+                                        <a class="btn btn-ghost hover:no-underline " href="/cc-website/alumni">
                                             <i class="fa-solid fa-graduation-cap"></i>
                                             Alumni
                                         </a>
@@ -398,8 +440,12 @@
                     
                 
                     
+                        
+                        
+                            
+                        
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="/cc-website/contact">
+                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/contact">
                                 <i class="fa-solid fa-envelope"></i>
                                 Contact
                             </a>
@@ -407,25 +453,55 @@
                     
                 
             
-            
 
             
-            
-                
-            
-            
-            <li>
-                <label class="swap swap-rotate btn btn-ghost">
-                  <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color"/>
-                  <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
-                  <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
-                </label>
-            </li>
-            
+        </div>
 
-        </ul>
-    </div>
+        
+            
+        
+        
+        <li class="flex items-center">
+            <label class="swap swap-rotate btn btn-ghost btn-circle">
+              <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color"/>
+              <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
+              <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
+            </label>
+        </li>
+        
+    </ul>
 </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+    
+    const navLinks = document.querySelectorAll('.navbar a[href]:not(.logo-link)');
+    
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+                if (link.classList.contains('active-nav')) {
+            return;
+        }
+        
+        let isActive = false;
+        
+        if (linkPath === '/') {
+            isActive = (currentPath === '/' || currentPath === '');
+        } else {
+            isActive = currentPath.startsWith(linkPath);
+        }
+        
+        if (isActive) {
+            link.classList.add('active-nav');
+        } else {
+            link.classList.remove('active-nav');
+        }
+    });
+});
+</script>
 
 
             
@@ -449,53 +525,244 @@
                     <div class="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-slate-500/10 to-gray-400/10 rounded-full filter blur-3xl animate-pulse delay-2000"></div>
                 </div>
                 
-                <img src="/images/hero-background.jpg" alt="Hero Background" class="w-full h-full rounded-none object-cover object-center opacity-10">
+                <img src="/cc-website/images/hero-background.webp" alt="Hero Background" class="w-full h-full rounded-none object-cover object-center opacity-10">
                 
             </div>
             <div class="relative z-10 p-8 max-w-6xl mx-auto">
-                <div class="mb-8">
-                    <span class="inline-block px-6 py-2 rounded-full text-sm font-medium hero-badge mb-6">
-                        🚀 Learn, Build, and Grow Together
-                    </span>
-                </div>
                 <h1 class="text-6xl md:text-8xl font-black tracking-tight mb-8">
                     <span class="hero-title">
                         Computer Coding Club
                     </span>
                 </h1>
                 <p class="max-w-3xl mx-auto text-xl md:text-2xl hero-description mb-12 leading-relaxed font-light">
-                    Join a vibrant community of passionate coders, innovators, and tech enthusiasts. We organize workshops, hackathons, coding competitions, and contribute to open source projects that make a difference.
+                    🚀 Devoted to Programming, Innovation, and Computer Science
                 </p>
-                
-                    <div class="flex justify-center gap-6 flex-wrap">
-                        
-                            <a href="/about"
-                               class="group relative px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105
-                                      
-                                        hero-cta-primary
-                                      ">
-                                <span class="relative z-10">Join Us</span>
-                                
-                                <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-500 to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                
-                            </a>
-                        
-                            <a href="/blog"
-                               class="group relative px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105
-                                      
-                                        hero-cta-secondary
-                                      ">
-                                <span class="relative z-10">Explore Blog</span>
-                                
-                            </a>
-                        
-                    </div>
                 
             </div>
         </div>
     
 
     
+
+<div class="events-carousel-section">
+    
+    <div class="events-bg-decoration"></div>
+    <div class="events-glow-orb events-glow-orb-1"></div>
+    <div class="events-glow-orb events-glow-orb-2"></div>
+
+    <div class="events-intro-text">
+        <div class="events-section-title">Club Events</div>
+        <p class="events-section-subtitle">Participate in the thrill, earn the glory, and enjoy the vibe</p>
+    </div>
+
+    <div class="events-grid">
+        <div class="events-image-wrapper">
+            <div class="events-image-frame">
+                <div class="events-image-container" id="eventsImageContainer"></div>
+                <div class="events-image-glow"></div>
+            </div>
+            <div class="events-counter" id="eventsCounter">
+                <span id="currentEventNum">1</span> / <span id="totalEventNum">0</span>
+            </div>
+        </div>
+        <div class="events-content">
+            <div class="events-text-content" id="eventsTextContent">
+                <div class="events-text-inner">
+                    <h3 id="eventName" class="events-title-animate"></h3>
+                    <p class="events-designation" id="eventDesignation"></p>
+                    <p class="events-quote" id="eventQuote"></p>
+                </div>
+            </div>
+            <div class="events-divider"></div>
+            <div class="events-controls">
+                <button id="eventPrevBtn" aria-label="Previous event" class="events-btn">
+                    <svg class="arrow-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                    <span>Previous</span>
+                </button>
+                <div class="events-progress-bar">
+                    <div class="events-progress-fill" id="eventsProgressFill"></div>
+                </div>
+                <button id="eventNextBtn" aria-label="Next event" class="events-btn">
+                    <span>Next</span>
+                    <svg class="arrow-right" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.eventsCarouselData = [
+            
+            {
+                name: "Hack36",
+                type: "Annual Hackathon | 36-Hour Sprint",
+                description: "The flagship annual hackathon of MNNIT. Bring your ideas to life, compete with the best minds, and win amazing prizes in this high-energy coding marathon.",
+                image: "/cc-website/images/landing/events/hack36.webp"
+            },
+            
+            {
+                name: "Contrihub",
+                type: "Open Source | Month Long Program",
+                description: "A month-long celebration of open source. Learn the ropes of Git, GitHub, and remote collaboration while contributing to real-world projects under expert mentorship.",
+                image: "/cc-website/images/landing/events/contrihub.webp"
+            },
+            
+            {
+                name: "Codesangam",
+                type: "Development Challenge | 2-Week Event",
+                description: "A massive 2 week development challenge encompassing all tech stacks. Whether it is Web, App, or Systems, build robust solutions and showcase your engineering skills.",
+                image: "/cc-website/images/landing/events/webster.webp"
+            },
+            
+            {
+                name: "OPC (Open Programming Contest)",
+                type: "Competitive Programming | Regular",
+                description: "Sharpen your algorithmic skills with our regular competitive programming challenges. Solve complex problems under time pressure and climb the leaderboard.",
+                image: "/cc-website/images/landing/events/opc.webp"
+            },
+            
+            {
+                name: "Turings Playground",
+                type: "AI and ML | Development Challenge",
+                description: "An AI-specific development and model training challenge. Apply machine learning algorithms to solve real-world data problems and build intelligent systems.",
+                image: "/cc-website/images/landing/events/turings-playground.webp"
+            },
+            
+            {
+                name: "Weekend of Code",
+                type: "First-Year Specific | Coding and Dev",
+                description: "Designed exclusively for freshmen! Kickstart your tech journey with guided coding and development challenges tailored for those new to the world of programming.",
+                image: "/cc-website/images/landing/events/droidrush.webp"
+            },
+            
+            {
+                name: "Insomnia",
+                type: "CP Marathon | Late Night",
+                description: "The ultimate test of endurance. A late-night competitive coding marathon that pushes your logic and problem-solving limits into the early hours of the morning.",
+                image: "/cc-website/images/landing/events/Insomnia.webp"
+            },
+            
+            {
+                name: "CC Classes",
+                type: "Learning | Regular Sessions",
+                description: "Regular peer-to-peer learning sessions covering everything from basic data structures to advanced development frameworks and industry best practices.",
+                image: "/cc-website/images/landing/events/classes.webp"
+            },
+            
+            {
+                name: "Alumni Connects",
+                type: "Networking | Interactive Sessions",
+                description: "Bridging the gap between campus and industry. Connect with our distinguished alumni working at top tech giants to gain career insights and mentorship.",
+                image: "/cc-website/images/landing/events/alumni-connects.webp"
+            }
+            
+        ];
+    </script>
+</div>
+
+
+    
+    
+    
+    <div class="roadmaps-scroll-wrapper">
+        <div class="roadmaps-sticky-container">
+            <div class="roadmaps-intro-text">
+                <div class="roadmaps-title">Learning Roadmaps</div>
+                <p class="roadmaps-subtitle">Explore structured learning paths</p>
+            </div>
+
+            <div class="roadmaps-viewport">
+                <div class="roadmaps-slider-track" id="roadmapsSliderTrack">
+                    
+                    
+                    <div class="roadmap-card">
+                        <img src="/cc-website/images/roadmaps/web-development.webp" alt="Web Development">
+                        <div class="roadmap-card-content">
+                            <h3>Web Development</h3>
+                            <p>Become a full-stack developer with our comprehensive roadmap. Learn HTML, CSS, JavaScript, React, Node.js, databases, and deployment strategies step by step.</p>
+                            <a href="/cc-website/roadmaps/web-development/" class="roadmap-btn-action">Start Learning</a>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="roadmap-card">
+                        <img src="/cc-website/images/roadmaps/dsa-fundamentals.webp" alt="DSA Fundamentals">
+                        <div class="roadmap-card-content">
+                            <h3>DSA Fundamentals</h3>
+                            <p>Master data structures and algorithms from basics to competitive programming. Structured path covering arrays, trees, graphs, dynamic programming, and advanced algorithms.</p>
+                            <a href="/cc-website/roadmaps/dsa/" class="roadmap-btn-action">Start Learning</a>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="roadmap-card">
+                        <img src="/cc-website/images/roadmaps/machine-learning.webp" alt="Machine Learning">
+                        <div class="roadmap-card-content">
+                            <h3>Machine Learning</h3>
+                            <p>Journey from Python basics to building production ML models. Cover mathematics, algorithms, frameworks like TensorFlow and PyTorch, and real-world applications.</p>
+                            <a href="/cc-website/roadmaps/machine-learning/" class="roadmap-btn-action">Start Learning</a>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="roadmap-card">
+                        <img src="/cc-website/images/roadmaps/open-source.webp" alt="Open Source">
+                        <div class="roadmap-card-content">
+                            <h3>Open Source</h3>
+                            <p>Learn how to contribute to open source projects effectively. From finding good first issues to becoming a maintainer - practical guidance for your journey.</p>
+                            <a href="/cc-website/roadmaps/open-source/" class="roadmap-btn-action">Start Learning</a>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="roadmap-card">
+                        <img src="/cc-website/images/roadmaps/interview-prep.webp" alt="Interview Prep">
+                        <div class="roadmap-card-content">
+                            <h3>Interview Prep</h3>
+                            <p>Comprehensive preparation guide for technical interviews at top companies. Practice problems, system design, behavioral questions, and insider tips from alumni.</p>
+                            <a href="/cc-website/roadmaps/interview-prep/" class="roadmap-btn-action">Start Learning</a>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="roadmap-card">
+                        <img src="/cc-website/images/roadmaps/mobile-development.webp" alt="Mobile Development">
+                        <div class="roadmap-card-content">
+                            <h3>Mobile Development</h3>
+                            <p>Master iOS and Android development. Learn native development with Swift&#x2F;Kotlin or cross-platform with React Native and Flutter.</p>
+                            <a href="/cc-website/roadmaps/mobile-development/" class="roadmap-btn-action">Start Learning</a>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="roadmap-card">
+                        <img src="/cc-website/images/roadmaps/devops.webp" alt="DevOps &amp; Cloud">
+                        <div class="roadmap-card-content">
+                            <h3>DevOps &amp; Cloud</h3>
+                            <p>Learn DevOps practices, cloud platforms (AWS, Azure, GCP), Docker, Kubernetes, CI&#x2F;CD pipelines, and infrastructure as code.</p>
+                            <a href="/cc-website/roadmaps/devops/" class="roadmap-btn-action">Start Learning</a>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <!-- 
     
     
     
@@ -617,17 +884,17 @@
                 <div class="flex justify-center items-center gap-16 flex-wrap">
                     
                         <div class="group">
-                            <img src="/images/stats/members-200.svg" alt="200+ Active Members"
+                            <img src="/cc-website/images/stats/members-200.svg" alt="200+ Active Members"
                                  class="h-12 md:h-16 w-auto trust-section-logo transition-all duration-500 group-hover:scale-110" />
                         </div>
                     
                         <div class="group">
-                            <img src="/images/stats/events-50.svg" alt="50+ Events Organized"
+                            <img src="/cc-website/images/stats/events-50.svg" alt="50+ Events Organized"
                                  class="h-12 md:h-16 w-auto trust-section-logo transition-all duration-500 group-hover:scale-110" />
                         </div>
                     
                         <div class="group">
-                            <img src="/images/stats/projects-15.svg" alt="15+ Open Source Projects"
+                            <img src="/cc-website/images/stats/projects-15.svg" alt="15+ Open Source Projects"
                                  class="h-12 md:h-16 w-auto trust-section-logo transition-all duration-500 group-hover:scale-110" />
                         </div>
                     
@@ -668,7 +935,7 @@
                                     
                                         
                                         <div class="flex justify-center">
-                                            <img src="/images/showcase/community.jpg" 
+                                            <img src="/cc-website/images/showcase/community.jpg" 
                                                  alt="Vibrant Tech Community" 
                                                  class="rounded-xl shadow-2xl w-[1024px] h-auto object-cover border border-slate-600/30" />
                                         </div>
@@ -684,7 +951,7 @@
                                     
                                         
                                         <div class="flex justify-center">
-                                            <img src="/images/showcase/events.jpg" 
+                                            <img src="/cc-website/images/showcase/events.jpg" 
                                                  alt="Exciting Events Year-Round" 
                                                  class="rounded-xl shadow-2xl w-[1024px] h-auto object-cover border border-slate-600/30" />
                                         </div>
@@ -700,7 +967,7 @@
                                     
                                         
                                         <div class="flex justify-center">
-                                            <img src="/images/showcase/contrihub.jpg" 
+                                            <img src="/cc-website/images/showcase/contrihub.jpg" 
                                                  alt="ContriHub - Open Source Celebration" 
                                                  class="rounded-xl shadow-2xl w-[1024px] h-auto object-cover border border-slate-600/30" />
                                         </div>
@@ -716,7 +983,7 @@
                                     
                                         
                                         <div class="flex justify-center">
-                                            <img src="/images/showcase/learning.jpg" 
+                                            <img src="/cc-website/images/showcase/learning.jpg" 
                                                  alt="Structured Learning Paths" 
                                                  class="rounded-xl shadow-2xl w-[1024px] h-auto object-cover border border-slate-600/30" />
                                         </div>
@@ -777,7 +1044,7 @@
                                     
                                         <div class="mr-4">
                                             <div class="w-14 h-14 rounded-full testimonial-avatar-border p-0.5">
-                                                <img src="/images/testimonials/priya.jpg" class="w-full h-full rounded-full object-cover" />
+                                                <img src="/cc-website/images/testimonials/priya.jpg" class="w-full h-full rounded-full object-cover" />
                                             </div>
                                         </div>
                                     
@@ -822,7 +1089,7 @@
                                     
                                         <div class="mr-4">
                                             <div class="w-14 h-14 rounded-full testimonial-avatar-border p-0.5">
-                                                <img src="/images/testimonials/rahul.jpg" class="w-full h-full rounded-full object-cover" />
+                                                <img src="/cc-website/images/testimonials/rahul.jpg" class="w-full h-full rounded-full object-cover" />
                                             </div>
                                         </div>
                                     
@@ -867,7 +1134,7 @@
                                     
                                         <div class="mr-4">
                                             <div class="w-14 h-14 rounded-full testimonial-avatar-border p-0.5">
-                                                <img src="/images/testimonials/ananya.jpg" class="w-full h-full rounded-full object-cover" />
+                                                <img src="/cc-website/images/testimonials/ananya.jpg" class="w-full h-full rounded-full object-cover" />
                                             </div>
                                         </div>
                                     
@@ -904,7 +1171,7 @@
                 </p>
                 
                     <div class="mb-12">
-                        <img src="/images/cta-background.jpg" alt="CTA Image"
+                        <img src="cta-background.jpg" alt="CTA Image"
                              class="mx-auto max-w-4xl rounded-xl shadow-2xl" />
                     </div>
                 
@@ -921,13 +1188,14 @@
             </div>
         </div>
     
+-->
 
 
                     
 
 
 
-                    <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                    <nav class="pt-8 border-t border-gray-500/15">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div class="prev-nav-item">
                                 
@@ -998,6 +1266,128 @@
                 window.initMermaid();
               }
             </script>
+
+            
+<footer class="site-footer">
+    <!-- Main footer content -->
+    <div class="w-full py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer grid -->
+            <div class="footer-content">
+                
+                <!-- Column 1: About/Logo -->
+                <div class="footer-col space-y-4">
+                    <div class="footer-logo-container">
+                        
+                        <img src="/cc-website/images/logo/cclogo.png" alt="Logo" class="footer-logo">
+                        
+                        <h3>
+                            CC Club MNNIT
+                        </h3>
+                    </div>
+                    <p>
+                        Our mission since 2010 at MNNIT is to develop in you a passion for problem-solving, critical thinking, innovation and computer science. We strive to achieve this goal through means of events, classes and industry connects.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        
+                            
+                            <li>
+                                <a href="team">
+                                    Our Team
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="blog">
+                                    Blogs
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="contrihub">
+                                    Projects
+                                </a>
+                            </li>
+                            
+                        
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col space-y-4">
+                    <h4>Contact</h4>
+                    <div class="space-y-3">
+                        
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            computer.club@mnnit.ac.in
+                        </p>
+                        
+                        
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            MNNIT Allahabad, Prayagraj, UP - 211004
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        
+                            
+                            <a href="https:&#x2F;&#x2F;youtube.com&#x2F;@ccclub" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            
+                            
+                            <a href="https:&#x2F;&#x2F;instagram.com&#x2F;ccclub_mnnit" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            
+                            
+                            <a href="https:&#x2F;&#x2F;twitter.com&#x2F;ccclub_mnnit" aria-label="Twitter/X">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            
+                            
+                            <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;company&#x2F;ccclub-mnnit" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            
+                            
+                            <a href="https:&#x2F;&#x2F;github.com&#x2F;cc-mnnit" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            
+                        
+                    </div>
+                    <p>
+                        Connect to stay updated about our events, projects and blogs!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Computer Coding Club. All rights reserved.</p>
+        <div class="footer-made-with">
+            <p>Made with</p>
+            <i class="fas fa-heart"></i>
+            <p>by Team CC</p>
+        </div>
+    </div>
+</footer>
 
         </div>
 
@@ -1074,7 +1464,7 @@
                     
                         <li><a href="/cc-website/contrihub" class="text-sm">
                             <i class="fa-solid fa-code-branch mr-2"></i>
-                            ContriHub
+                            Projects
                         </a></li>
                     
                 
@@ -1308,7 +1698,7 @@
                                 
                                 
                                 <li>
-                                    <a  href="/cc-website/contrihub/2024">ContriHub 2024</a>
+                                    <a  href="/cc-website/contrihub/2025">ContriHub 2025</a>
                                 </li>
                             
                                 
@@ -1316,7 +1706,7 @@
                                 
                                 
                                 <li>
-                                    <a  href="/cc-website/contrihub/2025">ContriHub 2025</a>
+                                    <a  href="/cc-website/contrihub/2024">ContriHub 2024</a>
                                 </li>
                             
                         </ul>
@@ -1363,6 +1753,16 @@
                                 <li ><a class="hover:no-underline" href="/cc-website/roadmaps/web-development">Web Development Roadmap</a></li>
                             
                                 <li ><a class="hover:no-underline" href="/cc-website/roadmaps/dsa">Data Structures &amp; Algorithms Roadmap</a></li>
+                            
+                                <li ><a class="hover:no-underline" href="/cc-website/roadmaps/machine-learning">Machine Learning Roadmap</a></li>
+                            
+                                <li ><a class="hover:no-underline" href="/cc-website/roadmaps/open-source">Open Source Contribution Roadmap</a></li>
+                            
+                                <li ><a class="hover:no-underline" href="/cc-website/roadmaps/interview-prep">Technical Interview Preparation</a></li>
+                            
+                                <li ><a class="hover:no-underline" href="/cc-website/roadmaps/mobile-development">Mobile App Development Roadmap</a></li>
+                            
+                                <li ><a class="hover:no-underline" href="/cc-website/roadmaps/devops">DevOps &amp; Cloud Engineering Roadmap</a></li>
                             
                             
                         </ul>
@@ -1462,6 +1862,7 @@
         </script>
     </div>
 
+    
     
         <script type="text/javascript" src="/cc-website/goyo.js"></script>
         
@@ -1569,5 +1970,10 @@
             });
         </script>
     
+    <!-- Events Carousel JavaScript -->
+    <script src="/cc-website/js/events-carousel.js"></script>
+    <!-- Roadmaps Scroll JavaScript -->
+    <script src="/cc-website/js/roadmaps-scroll.js"></script>
+
 </body>
 </html>

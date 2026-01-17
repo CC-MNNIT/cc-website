@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================
+*/
+
+/* 1. Import Inter Variable Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* 2. Base Configuration */
+:root {
+    --font-main: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    /* Fallback to system fonts if Inter fails to load immediately */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3. Protect Font Awesome Icons 
+   Ensure specific icon classes preserve their font-family
+*/
+.fa,
+.fas,
+.fab,
+.far,
+.fal,
+.fad {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome" !important;
+}
+
+.fab {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 5 Brands", "FontAwesome" !important;
+}
+
+/* 4. Headings - Refined & Premium */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero-title,
+.section-title,
+.card-title {
+    font-family: var(--font-main);
+    letter-spacing: -0.03em;
+    /* Negative tracking for "Display" feel */
+}
+
+/* Level 1 Headings - Hero & Titles */
+h1,
+.hero-title,
+.events-section-title,
+.roadmaps-title {
+    font-weight: 750;
+    /* Custom bold weight */
+}
+
+/* Level 2 & 3 Headings - Section & Card Titles */
+h2,
+h3,
+.section-title,
+.card-title,
+.feature-title {
+    font-weight: 650;
+    /* Semi-bold custom weight */
+}
+
+/* 5. Theme specific colors for headings */
+[data-theme="night"] h1,
+[data-theme="night"] h2,
+[data-theme="night"] h3,
+[data-theme="night"] h4,
+[data-theme="night"] h5,
+[data-theme="night"] h6,
+[data-theme="night"] .hero-title,
+[data-theme="night"] .section-title,
+[data-theme="night"] .events-section-title,
+[data-theme="night"] .roadmaps-title {
+    background: linear-gradient(90deg, #DA7138 0%, #EC9E6E 33%, #ECB163 66%, #ECC475 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+[data-theme="night"] .card-title {
+    background: linear-gradient(90deg, #DA7138 0%, #EC9E6E 33%, #ECB163 66%, #ECC475 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* 6. Body Text */
+[data-theme="night"] p,
+[data-theme="night"] span,
+[data-theme="night"] div,
+[data-theme="night"] .prose,
+[data-theme="night"] .text-gray-500,
+[data-theme="night"] .text-gray-400 {
+    color: #FAECEC;
+}
+
+/* Exclude badge icons and other specific icons from being overridden if they use spans */
+[data-theme="night"] .badge i,
+[data-theme="night"] .btn i,
+[data-theme="night"] .navbar i {
+    /* Inherit color unless specified otherwise in specific component css */
+}
+
+/* Text with primary color class */
+[data-theme="night"] .text-primary {
+    color: #FFC758 !important;
+}
