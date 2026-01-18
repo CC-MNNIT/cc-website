@@ -828,6 +828,7 @@
         margin-bottom: 40px;
     }
 
+   
     .events-section-title {
         font-size: 40px;
         letter-spacing: -1px;
@@ -837,10 +838,6 @@
         font-size: 16px;
     }
 
-    .events-grid {
-        gap: 32px
-        grid-template-columns: 1fr;
-    }
 
     .events-text-content h3 {
         font-size: 28px;
@@ -849,20 +846,21 @@
     .events-quote {
         font-size: 16px;
     }
+    .events-grid {
+        gap: 32px; /* Fixed missing semicolon */
+        grid-template-columns: 1fr;
+    }
 
     .events-controls {
         padding-top: 24px;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap !important; /* Force items to stay in one row */
     }
 
+    /* Make buttons slightly smaller so they fit better */
     .events-btn {
-        padding: 10px 20px;
-        font-size: 13px;
-    }
-
-    .events-progress-bar {
-        min-width: 80px;
+        padding: 8px 14px;
+        font-size: 12px;
     }
 }
 
