@@ -1,7 +1,12 @@
 +++
 title = "Events"
-description = "Explore our flagship hackathons, coding classes, and daily challenges."
+description = "Hackathons, challenges, and workshops by CC Club"
+sort_by = "weight"
+weight = 3
 template = "events.html"
+
+[extra]
+toc_expand = true
 +++
 
-# Events
+# Events by CC Club

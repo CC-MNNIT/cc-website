@@ -1,67 +1,267 @@
+{#
+  EVENTS LISTING TEMPLATE (templates/events.html)
+
+  Purpose: Lists all club events with large featured carousel and minimal cards
+  URL: /events/
+#}
+
 {% extends "index.html" %}
 
+{% block header %}
+    {{ macros_header::header(config=config, lang=lang, section=section) }}
+{% endblock header %}
+
 {% block content %}
-<main class="events-main">
-    <div class="events-header">
-        <h1 class="events-title">Our Events</h1>
-        <p class="events-subtitle">From flagship hackathons to daily coding challenges, explore how we foster
-            innovation.</p>
-    </div>
+    {# Collect all events from subsections #}
+    {% set all_events = [] %}
+    {% set events_2026 = [] %}
+    {% set events_2025 = [] %}
 
-    {% set data = load_data(path="data/events.toml") %}
+    {% for subsection_path in section.subsections %}
+        {% set subsection = get_section(path=subsection_path) %}
+        {% if subsection.pages %}
+            {% for event in subsection.pages %}
+                {% set_global all_events = all_events | concat(with=[event]) %}
+                {% set event_year = event.date | date(format="%Y") %}
+                {% if event_year == "2026" %}
+                    {% set_global events_2026 = events_2026 | concat(with=[event]) %}
+                {% elif event_year == "2025" %}
+                    {% set_global events_2025 = events_2025 | concat(with=[event]) %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
 
-    <div class="events-grid-wrapper">
-        {% for event in data.events %}
-        <div class="event-card">
-            <div class="event-image-slider">
-                <div class="event-tag">{{ event.tag }}</div>
-                <div class="slider-track">
-                    {% for image in event.images %}
-                    <img src="{{ image }}" alt="{{ event.title }} slide {{ loop.index }}" class="slider-img">
-                    {% endfor %}
-                    <!-- Duplicate first image for seamless loop expectation if using keyframes, 
-                         but for simple crossfade or scroll, the CSS logic handles it. 
-                         We'll stick to a pure CSS crossfade/slide approach. -->
+    {# Large Featured Carousel #}
+    {% if all_events | length > 0 %}
+    <div class="featured-carousel" data-featured-carousel>
+        <div class="featured-slides">
+            {% for event in all_events %}
+            <div class="featured-slide {% if loop.first %}active{% endif %}">
+                {# Background Image #}
+                {% if event.extra.images %}
+                <div class="featured-slide-bg">
+                    <img src="{{ event.extra.images | first }}" alt="{{ event.title }}">
+                </div>
+                {% endif %}
+
+                {# Content Overlay #}
+                <div class="featured-slide-content">
+                    <div class="featured-slide-info">
+                        {% if event.extra.badge %}
+                        <span class="featured-badge {{ event.extra.event_type | default(value='') }}">{{ event.extra.badge }}</span>
+                        {% endif %}
+
+                        <h2 class="featured-title">{{ event.title }}</h2>
+
+                        <p class="featured-description">{{ event.description }}</p>
+
+                        <div class="featured-meta">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                {{ event.date | date(format="%B %d, %Y") }}
+                            </span>
+                            {% if event.extra.location %}
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                {{ event.extra.location }}
+                            </span>
+                            {% endif %}
+                        </div>
+
+                        <div class="featured-actions">
+                            <a href="{{ event.permalink }}" class="featured-btn primary">
+                                View Details
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                            </a>
+                            {% if event.extra.external_link %}
+                            <a href="{{ event.extra.external_link }}" target="_blank" rel="noopener" class="featured-btn secondary">
+                                Visit Site
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
+        </div>
 
-            <div class="event-content">
-                <h2 class="event-name">
-                    {% if event.link %}
-                    <a href="{{ event.link }}" target="_blank" rel="noopener noreferrer">{{ event.title }}</a>
-                    {% else %}
-                    {{ event.title }}
-                    {% endif %}
-                </h2>
-                <p class="event-description">{{ event.description }}</p>
+        {# Navigation Dots #}
+        {% if all_events | length > 1 %}
+        <div class="featured-nav">
+            {% for event in all_events %}
+            <button class="featured-dot {% if loop.first %}active{% endif %}" data-index="{{ loop.index0 }}">
+                <span class="featured-dot-label">{{ event.title }}</span>
+            </button>
+            {% endfor %}
+        </div>
 
-                <div class="event-footer">
-                    {% if event.link %}
-                    <a href="{{ event.link }}" target="_blank" rel="noopener noreferrer" class="event-btn">
-                        Visit Website
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                            <polyline points="15 3 21 3 21 9"></polyline>
-                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                        </svg>
-                    </a>
-                    {% else %}
-                    <span class="event-internal-label">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                        </svg>
-                        Internal / On-Campus
-                    </span>
-                    {% endif %}
-                </div>
+        {# Arrow Navigation #}
+        <button class="featured-arrow prev" aria-label="Previous">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+        <button class="featured-arrow next" aria-label="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {# Year Filter Tabs #}
+    <div class="events-section">
+        <div class="events-header">
+            <h2 class="events-section-title">All Events</h2>
+            <div class="events-tabs" role="tablist">
+                <button class="events-tab active" role="tab" aria-selected="true" data-year="2026">
+                    2026 <span class="events-tab-count">{{ events_2026 | length }}</span>
+                </button>
+                <button class="events-tab" role="tab" aria-selected="false" data-year="2025">
+                    2025 <span class="events-tab-count">{{ events_2025 | length }}</span>
+                </button>
             </div>
         </div>
-        {% endfor %}
+
+        {# 2026 Events #}
+        <div class="events-tab-content active" data-year="2026">
+            {% if events_2026 | length > 0 %}
+            <div class="events-list">
+                {% for event in events_2026 %}
+                <a href="{{ event.permalink }}" class="event-item">
+                    <div class="event-item-image">
+                        {% if event.extra.images %}
+                        <img src="{{ event.extra.images | first }}" alt="{{ event.title }}" loading="lazy">
+                        {% endif %}
+                    </div>
+                    <div class="event-item-content">
+                        <div class="event-item-header">
+                            <h3 class="event-item-title">{{ event.title }}</h3>
+                            {% if event.extra.badge %}
+                            <span class="event-item-badge {{ event.extra.event_type | default(value='') }}">{{ event.extra.badge }}</span>
+                            {% endif %}
+                        </div>
+                        <p class="event-item-desc">{{ event.description }}</p>
+                        <div class="event-item-meta">
+                            <span>{{ event.date | date(format="%b %d, %Y") }}</span>
+                            {% if event.extra.location %}
+                            <span>{{ event.extra.location }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="event-item-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="events-empty">
+                <p>No events for 2026 yet</p>
+            </div>
+            {% endif %}
+        </div>
+
+        {# 2025 Events #}
+        <div class="events-tab-content" data-year="2025">
+            {% if events_2025 | length > 0 %}
+            <div class="events-list">
+                {% for event in events_2025 %}
+                <a href="{{ event.permalink }}" class="event-item">
+                    <div class="event-item-image">
+                        {% if event.extra.images %}
+                        <img src="{{ event.extra.images | first }}" alt="{{ event.title }}" loading="lazy">
+                        {% endif %}
+                    </div>
+                    <div class="event-item-content">
+                        <div class="event-item-header">
+                            <h3 class="event-item-title">{{ event.title }}</h3>
+                            {% if event.extra.badge %}
+                            <span class="event-item-badge {{ event.extra.event_type | default(value='') }}">{{ event.extra.badge }}</span>
+                            {% endif %}
+                        </div>
+                        <p class="event-item-desc">{{ event.description }}</p>
+                        <div class="event-item-meta">
+                            <span>{{ event.date | date(format="%b %d, %Y") }}</span>
+                            {% if event.extra.location %}
+                            <span>{{ event.extra.location }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="event-item-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="events-empty">
+                <p>No events for 2025 yet</p>
+            </div>
+            {% endif %}
+        </div>
     </div>
-</main>
+
+    {# JavaScript #}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Featured Carousel
+            const featuredCarousel = document.querySelector('[data-featured-carousel]');
+            if (featuredCarousel) {
+                const slides = featuredCarousel.querySelectorAll('.featured-slide');
+                const dots = featuredCarousel.querySelectorAll('.featured-dot');
+                const prevBtn = featuredCarousel.querySelector('.featured-arrow.prev');
+                const nextBtn = featuredCarousel.querySelector('.featured-arrow.next');
+
+                if (slides.length > 1) {
+                    let current = 0;
+                    let timer;
+
+                    function showSlide(index) {
+                        if (index < 0) index = slides.length - 1;
+                        if (index >= slides.length) index = 0;
+
+                        slides.forEach((s, i) => s.classList.toggle('active', i === index));
+                        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+                        current = index;
+                    }
+
+                    function nextSlide() { showSlide(current + 1); }
+                    function prevSlide() { showSlide(current - 1); }
+
+                    function startTimer() { timer = setInterval(nextSlide, 5000); }
+                    function stopTimer() { clearInterval(timer); }
+
+                    dots.forEach((dot, i) => {
+                        dot.addEventListener('click', () => {
+                            stopTimer();
+                            showSlide(i);
+                            startTimer();
+                        });
+                    });
+
+                    if (prevBtn) prevBtn.addEventListener('click', () => { stopTimer(); prevSlide(); startTimer(); });
+                    if (nextBtn) nextBtn.addEventListener('click', () => { stopTimer(); nextSlide(); startTimer(); });
+
+                    featuredCarousel.addEventListener('mouseenter', stopTimer);
+                    featuredCarousel.addEventListener('mouseleave', startTimer);
+
+                    startTimer();
+                }
+            }
+
+            // Year Tabs
+            const tabs = document.querySelectorAll('.events-tab');
+            const contents = document.querySelectorAll('.events-tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const year = tab.dataset.year;
+                    tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+                    tab.classList.add('active');
+                    tab.setAttribute('aria-selected', 'true');
+                    contents.forEach(c => { c.classList.toggle('active', c.dataset.year === year); });
+                });
+            });
+        });
+    </script>
 {% endblock content %}
