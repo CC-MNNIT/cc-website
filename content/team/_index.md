@@ -4,4 +4,4 @@ description = "Meet the people behind the Computer Coding Club."
 template = "team.html"
 +++
 
-# Team
+# Our Team at CC Club
