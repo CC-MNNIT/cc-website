@@ -122,6 +122,24 @@
         <loc>/cc-website/preview/events/</loc>
     </url>
     <url>
+        <loc>/cc-website/preview/events/2025/</loc>
+    </url>
+    <url>
+        <loc>/cc-website/preview/events/2025/hack36/</loc>
+        <lastmod>2025-03-15</lastmod>
+    </url>
+    <url>
+        <loc>/cc-website/preview/events/2026/</loc>
+    </url>
+    <url>
+        <loc>/cc-website/preview/events/2026/codesangam/</loc>
+        <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+        <loc>/cc-website/preview/events/2026/docker-kubernetes-workshop/</loc>
+        <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
         <loc>/cc-website/preview/projects/</loc>
     </url>
     <url>

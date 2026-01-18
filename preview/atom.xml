@@ -5,8 +5,197 @@
     <link rel="self" type="application/atom+xml" href="/cc-website/preview/atom.xml"/>
     <link rel="alternate" type="text/html" href="/cc-website/preview/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-12-15T00:00:00+00:00</updated>
+    <updated>2026-02-10T00:00:00+00:00</updated>
     <id>/cc-website/preview/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Codesangam</title>
+        <published>2026-02-10T00:00:00+00:00</published>
+        <updated>2026-02-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2026/codesangam/"/>
+        <id>/cc-website/preview/events/2026/codesangam/</id>
+        
+        <content type="html" xml:base="/cc-website/preview/events/2026/codesangam/">&lt;h2 id=&quot;about-codesangam&quot;&gt;About Codesangam&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Codesangam&lt;&#x2F;strong&gt; is a 2-week development challenge that brings together creativity and code. Build real-world projects, collaborate with peers, and showcase your skills to the community.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;challenge-format&quot;&gt;Challenge Format&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Duration:&lt;&#x2F;strong&gt; 2 weeks of intensive development&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Teams:&lt;&#x2F;strong&gt; Solo or team participation&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Themes:&lt;&#x2F;strong&gt; Different themes each edition&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Evaluation:&lt;&#x2F;strong&gt; Based on innovation, execution, and impact&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;why-participate&quot;&gt;Why Participate&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Build portfolio-worthy projects&lt;&#x2F;li&gt;
+&lt;li&gt;Learn by doing&lt;&#x2F;li&gt;
+&lt;li&gt;Get feedback from experienced developers&lt;&#x2F;li&gt;
+&lt;li&gt;Win exciting prizes&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;stay-updated&quot;&gt;Stay Updated&lt;&#x2F;h3&gt;
+&lt;p&gt;Visit &lt;a href=&quot;https:&#x2F;&#x2F;codesangam.com&quot;&gt;codesangam.com&lt;&#x2F;a&gt; for registration and updates.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Docker &amp; Kubernetes Fundamentals Workshop</title>
+        <published>2026-01-05T00:00:00+00:00</published>
+        <updated>2026-01-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2026/docker-kubernetes-workshop/"/>
+        <id>/cc-website/preview/events/2026/docker-kubernetes-workshop/</id>
+        
+        <content type="html" xml:base="/cc-website/preview/events/2026/docker-kubernetes-workshop/">&lt;h2 id=&quot;workshop-overview&quot;&gt;Workshop Overview&lt;&#x2F;h2&gt;
+&lt;p&gt;Learn the fundamentals of &lt;strong&gt;Docker and Kubernetes&lt;&#x2F;strong&gt; in this hands-on 3-hour workshop! Whether you&#x27;re new to containerization or looking to strengthen your DevOps skills, this workshop will give you practical experience with industry-standard tools.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-you-ll-learn&quot;&gt;What You&#x27;ll Learn&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Docker Basics&lt;&#x2F;strong&gt;: Containers, images, Dockerfiles, and Docker Compose&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Containerizing Applications&lt;&#x2F;strong&gt;: Turn any application into a Docker container&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-Container Apps&lt;&#x2F;strong&gt;: Connect multiple containers using Docker Compose&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Kubernetes Introduction&lt;&#x2F;strong&gt;: Pods, services, deployments, and basic orchestration&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Real-World Use Cases&lt;&#x2F;strong&gt;: When and why to use containers in production&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;workshop-format&quot;&gt;Workshop Format&lt;&#x2F;h3&gt;
+&lt;p&gt;This is a &lt;strong&gt;hands-on, interactive workshop&lt;&#x2F;strong&gt;. You&#x27;ll:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Follow along with live coding demonstrations&lt;&#x2F;li&gt;
+&lt;li&gt;Complete practical exercises on your own laptop&lt;&#x2F;li&gt;
+&lt;li&gt;Build and deploy containerized applications&lt;&#x2F;li&gt;
+&lt;li&gt;Ask questions and get help from the instructor&lt;&#x2F;li&gt;
+&lt;li&gt;Take home complete code examples and reference materials&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;2:00 PM - 2:15 PM&lt;&#x2F;strong&gt;: Introduction and Setup Check&lt;br &#x2F;&gt;
+&lt;strong&gt;2:15 PM - 3:00 PM&lt;&#x2F;strong&gt;: Docker Fundamentals&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;What are containers?&lt;&#x2F;li&gt;
+&lt;li&gt;Docker architecture&lt;&#x2F;li&gt;
+&lt;li&gt;Creating your first container&lt;&#x2F;li&gt;
+&lt;li&gt;Writing Dockerfiles&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;3:00 PM - 3:15 PM&lt;&#x2F;strong&gt;: Break ☕&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;3:15 PM - 4:00 PM&lt;&#x2F;strong&gt;: Docker Compose &amp;amp; Multi-Container Apps&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker Compose basics&lt;&#x2F;li&gt;
+&lt;li&gt;Building a full-stack app with Docker&lt;&#x2F;li&gt;
+&lt;li&gt;Networking between containers&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;4:00 PM - 4:45 PM&lt;&#x2F;strong&gt;: Introduction to Kubernetes&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Why Kubernetes?&lt;&#x2F;li&gt;
+&lt;li&gt;Pods, services, and deployments&lt;&#x2F;li&gt;
+&lt;li&gt;Deploying your first app to Kubernetes&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;4:45 PM - 5:00 PM&lt;&#x2F;strong&gt;: Q&amp;amp;A and Resources&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Required&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Laptop (Windows&#x2F;Mac&#x2F;Linux) with admin access&lt;&#x2F;li&gt;
+&lt;li&gt;Docker Desktop installed (&lt;a href=&quot;https:&#x2F;&#x2F;docs.docker.com&#x2F;get-docker&#x2F;&quot;&gt;Installation Guide&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Basic command line knowledge&lt;&#x2F;li&gt;
+&lt;li&gt;Text editor (VS Code recommended)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Recommended&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic understanding of web applications&lt;&#x2F;li&gt;
+&lt;li&gt;Familiarity with command line tools&lt;&#x2F;li&gt;
+&lt;li&gt;GitHub account (for accessing code examples)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;No prior Docker&#x2F;Kubernetes experience needed!&lt;&#x2F;strong&gt; We&#x27;ll start from the basics.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;installation-instructions&quot;&gt;Installation Instructions&lt;&#x2F;h2&gt;
+&lt;p&gt;Please install Docker Desktop &lt;strong&gt;before the workshop&lt;&#x2F;strong&gt; to save time:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;windows-mac&quot;&gt;Windows&#x2F;Mac&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Download Docker Desktop from &lt;a href=&quot;https:&#x2F;&#x2F;www.docker.com&#x2F;products&#x2F;docker-desktop&#x2F;&quot;&gt;docker.com&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Run the installer&lt;&#x2F;li&gt;
+&lt;li&gt;Verify installation: Open terminal and run &lt;code&gt;docker --version&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;linux&quot;&gt;Linux&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Ubuntu&#x2F;Debian
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -fsSL&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;get.docker.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -o&lt;&#x2F;span&gt;&lt;span&gt; get-docker.sh
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sh get-docker.sh
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; usermod&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -aG&lt;&#x2F;span&gt;&lt;span&gt; docker $USER
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Having installation issues?&lt;&#x2F;strong&gt; Join our Discord #workshop-help channel or come 15 minutes early for setup assistance.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;about-the-instructor&quot;&gt;About the Instructor&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Rahul Kumar&lt;&#x2F;strong&gt; is a DevOps Engineer at TechCorp with 5 years of experience building and managing containerized infrastructure. He&#x27;s deployed production systems serving millions of users and is passionate about making DevOps accessible to everyone.&lt;&#x2F;p&gt;
+&lt;p&gt;Previously a CC Club member (Alumni 2020), Rahul has conducted 10+ workshops and mentored students in cloud technologies.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-to-bring&quot;&gt;What to Bring&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;💻 Laptop with Docker installed&lt;&#x2F;li&gt;
+&lt;li&gt;🔌 Charger (important!)&lt;&#x2F;li&gt;
+&lt;li&gt;📝 Notebook for taking notes (optional)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Provided&lt;&#x2F;strong&gt;: Refreshments, workshop materials, reference cheat sheets&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;registration&quot;&gt;Registration&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Limited to 50 participants&lt;&#x2F;strong&gt; - Register soon!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Prerequisites Check&lt;&#x2F;strong&gt;: We&#x27;ll send a pre-workshop email with setup instructions. Please complete the setup beforehand.&lt;&#x2F;p&gt;
+&lt;div class=&quot;text-center my-8&quot;&gt;
+    &lt;a href=&quot;https:&#x2F;&#x2F;forms.gle&#x2F;your-workshop-form&quot; class=&quot;btn btn-primary btn-lg&quot; target=&quot;_blank&quot;&gt;
+        Register for Workshop →
+    &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;workshop-materials&quot;&gt;Workshop Materials&lt;&#x2F;h2&gt;
+&lt;p&gt;After the workshop, you&#x27;ll receive:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Complete code examples and Dockerfiles&lt;&#x2F;li&gt;
+&lt;li&gt;Kubernetes configuration files&lt;&#x2F;li&gt;
+&lt;li&gt;Curated resource list for further learning&lt;&#x2F;li&gt;
+&lt;li&gt;Certificate of participation&lt;&#x2F;li&gt;
+&lt;li&gt;Access to recorded Q&amp;amp;A session&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;faqs&quot;&gt;FAQs&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Q: Is this suitable for beginners?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+A: Yes! We start from basics. Just bring curiosity and willingness to learn.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Q: Will this be recorded?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+A: We&#x27;ll record the Q&amp;amp;A session for participants. Live coding won&#x27;t be recorded.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Q: Can I get a certificate?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+A: Yes, all attendees receive a certificate of participation.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Q: What if I can&#x27;t install Docker?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+A: Come 15 minutes early, we&#x27;ll help you set up.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Q: Will you cover advanced Kubernetes topics?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+A: This is a fundamentals workshop. We&#x27;ll share resources for advanced learning.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;contact&quot;&gt;Contact&lt;&#x2F;h2&gt;
+&lt;p&gt;Questions? Email workshops@ccclub.edu or message on Discord.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;strong&gt;Don&#x27;t miss out! This workshop fills up fast. Register today! 🚀&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;!-- 
+    WORKSHOP EVENT TEMPLATE
+    
+    Workshops are shorter, focused learning sessions. Key differences from hackathons:
+    - Shorter duration (2-4 hours typically)
+    - Specific learning outcomes
+    - Prerequisites and setup instructions
+    - Instructor information
+    - Smaller capacity
+    - Less complex schedule
+    
+    CUSTOMIZE THIS TEMPLATE:
+    1. Update topic and title
+    2. Adjust duration and schedule
+    3. List clear prerequisites
+    4. Provide setup instructions
+    5. Emphasize hands-on nature
+    6. Include instructor credentials
+--&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Getting Started with React Hooks: A Complete Guide</title>
         <published>2025-12-15T00:00:00+00:00</published>
@@ -1020,6 +1209,39 @@
 &lt;p&gt;Always sync with remote before pushing your changes.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;branching-strategies&quot;&gt;Branching Strategies&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll explore Git Flow, GitHub Flow, and Trunk-Based Development.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Hack36</title>
+        <published>2025-03-15T00:00:00+00:00</published>
+        <updated>2025-03-15T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/hack36/"/>
+        <id>/cc-website/preview/events/2025/hack36/</id>
+        
+        <content type="html" xml:base="/cc-website/preview/events/2025/hack36/">&lt;h2 id=&quot;about-hack36&quot;&gt;About Hack36&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Hack36&lt;&#x2F;strong&gt; is our flagship 36-hour hackathon where innovation meets execution. Teams from across the country come together to build groundbreaking projects with mentorship from industry experts and compete for exciting prizes.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-makes-hack36-special&quot;&gt;What Makes Hack36 Special&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;36 Hours&lt;&#x2F;strong&gt; of non-stop coding and innovation&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Industry Mentorship&lt;&#x2F;strong&gt; from leading tech companies&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Exciting Prizes&lt;&#x2F;strong&gt; worth lakhs&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Networking&lt;&#x2F;strong&gt; with fellow developers and recruiters&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Workshops&lt;&#x2F;strong&gt; and learning sessions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;past-editions&quot;&gt;Past Editions&lt;&#x2F;h3&gt;
+&lt;p&gt;Hack36 has consistently been one of the largest student-run hackathons in Central India, attracting 500+ participants and 100+ teams each year.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;stay-updated&quot;&gt;Stay Updated&lt;&#x2F;h3&gt;
+&lt;p&gt;Visit &lt;a href=&quot;https:&#x2F;&#x2F;hack36.com&quot;&gt;hack36.com&lt;&#x2F;a&gt; for the latest updates on upcoming editions.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
