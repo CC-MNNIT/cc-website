@@ -14,8 +14,8 @@
     }
 
     function initRoadmapsScroll() {
-        const track = document.getElementById('roadmapsSliderTrack');
-        const wrapper = document.querySelector('.roadmaps-scroll-wrapper');
+        const track = document.getElementById('lp-roadmapsSliderTrack');
+        const wrapper = document.querySelector('.lp-roadmaps-scroll-wrapper');
 
         if (!track || !wrapper) return; // Exit if elements don't exist
 

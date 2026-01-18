@@ -215,12 +215,14 @@
 /* Light theme - Card border (blue) */
 [data-theme="night"] .roadmap-card-content {
     border-color: #ad7f13 !important;
+        border-width: 10px;
 }
 /* Light theme - Card border (blue) */
 [data-theme="light"] .roadmap-card-content,
 [data-theme="lofi"] .roadmap-card-content {
     border-color: #1976D2 !important;
     box-shadow: 0 10px 30px rgba(25, 118, 210, 0.15), 0 0 0 2px rgba(25, 118, 210, 0.2);
+        border-width: 10px;
 }
 
 [data-theme="light"] .roadmap-card-link:hover .roadmap-card-content,

@@ -897,3 +897,502 @@
         font-size: 14px;
     }
 }
+
+@charset "UTF-8";
+
+/* ============================================
+   ROADMAPS SCROLL SECTION
+   ============================================
+*/
+
+/* Wrapper and horizontal scroll */
+.lp-roadmaps-scroll-wrapper {
+    /* Controls how long the scroll lasts */
+    height: 300vh;
+    position: relative;
+    margin-bottom: 100px;
+    /* Add space before footer */
+    background: radial-gradient(ellipse 900px 700px at 15% 20%, rgba(255, 199, 88, 0.06) 0%, transparent 40%),
+        radial-gradient(ellipse 800px 600px at 85% 80%, rgba(194, 41, 61, 0.05) 0%, transparent 45%),
+        radial-gradient(ellipse 700px 500px at 50% 50%, rgba(236, 158, 110, 0.03) 0%, transparent 50%);
+}
+
+[data-theme="light"] .lp-roadmaps-scroll-wrapper,
+[data-theme="lofi"] .lp-roadmaps-scroll-wrapper {
+    background: radial-gradient(ellipse 900px 700px at 15% 20%, rgba(25, 118, 210, 0.08) 0%, transparent 40%),
+        radial-gradient(ellipse 800px 600px at 85% 80%, rgba(13, 71, 161, 0.06) 0%, transparent 45%),
+        radial-gradient(ellipse 700px 500px at 50% 50%, rgba(25, 118, 210, 0.04) 0%, transparent 50%);
+}
+
+/* Extra spacing to prevent footer overlap */
+.lp-roadmaps-scroll-wrapper::after {
+    content: '';
+    display: block;
+    height: 1px;
+    clear: both;
+}
+
+.lp-roadmaps-sticky-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(45, 15, 19, 0.3) 0%, rgba(58, 18, 24, 0.2) 100%);
+}
+
+[data-theme="light"] .lp-roadmaps-sticky-container,
+[data-theme="lofi"] .lp-roadmaps-sticky-container {
+    background: linear-gradient(135deg, rgba(232, 241, 247, 0.6) 0%, rgba(240, 245, 250, 0.5) 100%);
+}
+
+.lp-roadmaps-intro-text {
+    text-align: center;
+    z-index: 10;
+    margin-bottom: 50px;
+    padding: 0 20px;
+    animation: slideUp 0.8s ease-out;
+}
+
+/* Titles and Text */
+.lp-roadmaps-title {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -0.03em;
+    background: linear-gradient(90deg, #DA7138 0%, #EC9E6E 33%, #ECB163 66%, #ECC475 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    animation: titleSlide 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-theme="light"] .lp-roadmaps-title,
+[data-theme="lofi"] .lp-roadmaps-title {
+    background: linear-gradient(90deg, #003687 0%, #0052CC 25%, #0E3386 50%, #001C3E 75%, #4169E1 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.lp-roadmaps-subtitle {
+    color: #FAECEC;
+    font-size: 18px;
+    animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+[data-theme="light"] .lp-roadmaps-subtitle,
+[data-theme="lofi"] .lp-roadmaps-subtitle {
+    color: #0E0604 !important;
+}
+
+/* Timeline/Slider Track */
+.lp-roadmaps-viewport {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+}
+
+/* The horizontal timeline line */
+.lp-roadmaps-viewport::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 199, 88, 0.2);
+    z-index: 0;
+    transform: translateY(-100px);
+}
+
+[data-theme="light"] .lp-roadmaps-viewport::before,
+[data-theme="lofi"] .lp-roadmaps-viewport::before {
+    background: rgba(25, 118, 210, 0.2);
+}
+
+.lp-roadmaps-slider-track {
+    display: flex;
+    gap: var(--roadmap-gap);
+    padding-left: 15vw;
+    padding-right: 15vw;
+    will-change: transform;
+    z-index: 1;
+    transition: transform 0.1s linear;
+}
+
+/* Ensure last card is fully visible */
+.lp-roadmaps-slider-track::after {
+    content: '';
+    display: block;
+    min-width: 20vw;
+    height: 1px;
+}
+
+/* Roadmap Card Styling */
+.lp-roadmap-card {
+    min-width: var(--roadmap-card-width);
+    max-width: var(--roadmap-card-width);
+    height: 460px;
+    background: rgba(14, 6, 4, 0.6);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1.5px solid rgba(255, 199, 88, 0.3);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    flex-shrink: 0;
+    animation: slideUp 0.6s ease-out;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-direction: column; /* Stack image and content vertically */
+}
+
+
+[data-theme="light"] .lp-roadmap-card,
+[data-theme="lofi"] .lp-roadmap-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1.5px solid rgba(25, 118, 210, 0.25);
+    box-shadow: 0 10px 30px rgba(25, 118, 210, 0.1);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lp-roadmap-card:hover {
+    border-color: rgba(255, 199, 88, 0.8);
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 40px 80px rgba(255, 199, 88, 0.4), 0 0 30px rgba(194, 41, 61, 0.2);
+}
+
+/* --- BLUE GLOW ON HOVER: LIGHT THEME --- */
+[data-theme="light"] .lp-roadmap-card:hover,
+[data-theme="lofi"] .lp-roadmap-card:hover {
+    border-color: #1976D2 !important; /* Matches your light theme blue */
+    transform: translateY(-15px) scale(1.03); /* Subtle lift and scale */
+    /* Vibrant blue glow effect */
+    box-shadow: 0 20px 40px rgba(25, 118, 210, 0.25), 
+                0 0 30px rgba(25, 118, 210, 0.15) !important;
+}
+/* Timeline connection point */
+.lp-roadmap-card::after {
+    content: '';
+    position: absolute;
+    top: -62px;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background: #0E0604;
+    border: 4px solid #FFC758;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgba(255, 199, 88, 0.5);
+}
+
+[data-theme="light"] .lp-roadmap-card::after,
+[data-theme="lofi"] .lp-roadmap-card::after {
+    background: #E8F1F7;
+    border-color: #1976D2;
+    box-shadow: 0 0 15px rgba(25, 118, 210, 0.3);
+}
+
+/* Card Image */
+.lp-roadmap-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+
+.lp-roadmap-card:hover img {
+    opacity: 1;
+    filter: brightness(1.1);
+}
+
+/* Card Content */
+.lp-roadmap-card-content {
+   /* Explicitly remove the 2px border/shadow causing the line */
+    border: none !important;
+    box-shadow: none !important;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Internal stacking for text and button */
+    flex-grow: 1; /* Occupies all leftover space below the image */
+    justify-content: space-between; /* Pushes button to bottom */
+}
+
+
+.lp-roadmap-text-wrapper {
+    flex-grow: 0;
+    margin-bottom: 16px;
+}
+
+/* Light theme - Card border (blue) */
+[data-theme="night"] .lp-roadmap-card-content {
+    border-color: #ad7f13 !important;
+}
+/* Light theme - Card border (blue) */
+[data-theme="light"] .lp-roadmap-card-content,
+[data-theme="lofi"] .lp-roadmap-card-content {
+    border-color: #1976D2 !important;
+    box-shadow: 0 10px 30px rgba(25, 118, 210, 0.15), 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+[data-theme="light"] .roadmap-card-link:hover .lp-roadmap-card-content,
+[data-theme="lofi"] .roadmap-card-link:hover .lp-roadmap-card-content {
+    border-color: #1976D2 !important;
+    box-shadow: 0 15px 40px rgba(25, 118, 210, 0.3),
+        0 0 0 2px rgba(25, 118, 210, 0.4),
+        0 0 40px rgba(25, 118, 210, 0.25) !important;
+}
+
+/* Dark theme - Card Border & Shadow */
+[data-theme="night"] .lp-roadmap-card-content {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(249, 177, 77, 0.3);
+}
+
+.lp-roadmap-card-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+    background: linear-gradient(90deg, #DA7138 0%, #EC9E6E 33%, #ECB163 66%, #ECC475 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+[data-theme="light"] .lp-roadmap-card-content h3,
+[data-theme="lofi"] .lp-roadmap-card-content h3 {
+    background: linear-gradient(90deg, #003687 0%, #0052CC 25%, #0E3386 50%, #001C3E 75%, #4169E1 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.lp-roadmap-card-content p {
+    color: #FAECEC;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    font-size: 14px;
+
+}
+
+[data-theme="light"] .lp-roadmap-card-content p,
+[data-theme="lofi"] .lp-roadmap-card-content p {
+    color: #0E0604 !important;
+}
+
+/* --- UPDATED ACTION BUTTON --- */
+.lp-roadmap-btn-action {
+    margin-top: auto; /* Forces button to the bottom */
+    width: fit-content;
+    padding: 12px 24px;
+    /* Removed gradient for a flatter look to match your request */
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-size: 14px;
+    border: none !important; /* Strips the transparent border line */
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    box-shadow: none !important;
+}
+
+.lp-roadmap-btn-action:hover {
+    transform: translateY(-2px);
+    background: #5e0a0a !important;
+}
+[data-theme="light"] .lp-roadmap-btn-action,
+[data-theme="lofi"] .lp-roadmap-btn-action {
+    background: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%);
+    color: #FAECEC;
+}
+
+.lp-roadmap-btn-action:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(255, 0, 0, 0.5);
+    background: linear-gradient(135deg, #FF0000 0%, #E63946 100%);
+    border-color: #FFFFFF;
+}
+
+[data-theme="light"] .lp-roadmap-btn-action:hover,
+[data-theme="lofi"] .lp-roadmap-btn-action:hover {
+    background: linear-gradient(135deg, #0D47A1 0%, #1976D2 100%);
+    box-shadow: 0 15px 40px rgba(25, 118, 210, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN FOR ROADMAP
+   ============================================ */
+
+/* Tablet devices */
+@media (max-width: 1024px) {
+    .lp-roadmaps-title {
+        font-size: 48px;
+    }
+
+    .lp-roadmaps-slider-track {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    /* Card content adjustment */
+    .lp-roadmap-card-content {
+        padding: 8px !important;
+    }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+    .lp-roadmaps-scroll-wrapper {
+        height: 250vh;
+        margin-bottom: 60px;
+    }
+
+    .lp-roadmaps-intro-text {
+        margin-bottom: 30px;
+    }
+
+    .lp-roadmaps-title {
+        font-size: 36px;
+        letter-spacing: -0.03em;
+    }
+
+    .lp-roadmaps-subtitle {
+        font-size: 16px;
+    }
+
+    .lp-roadmaps-slider-track {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .lp-roadmap-card {
+        min-width: 280px;
+        max-width: 280px;
+    }
+
+    .lp-roadmap-card img {
+        height: 180px;
+    }
+
+    .lp-roadmap-card-content h3 {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .lp-roadmap-card-content p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .lp-roadmap-btn-action {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .lp-roadmap-card::after {
+        top: -50px;
+        width: 12px;
+        height: 12px;
+        border-width: 3px;
+    }
+
+    .lp-roadmaps-viewport::before {
+        transform: translateY(-80px);
+    }
+
+    /* Card content adjustment */
+    .lp-roadmap-card-content {
+        padding: 24px !important;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .lp-roadmaps-title {
+        font-size: 28px;
+    }
+
+    .lp-roadmaps-subtitle {
+        font-size: 14px;
+    }
+
+    .lp-roadmap-card {
+        min-width: 260px;
+        max-width: 220px;
+    }
+
+    .lp-roadmap-card img {
+        height: 160px;
+    }
+
+    .lp-roadmap-card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .lp-roadmap-card-content p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    /* Card content adjustment */
+    .lp-roadmap-card-content {
+        padding: 12px 16px 16px 16px !important;
+    }
+}
+
+/* --- ACTION BUTTON: NIGHT THEME (Maroon with High-Contrast White Text) --- */
+[data-theme="night"] .lp-roadmap-btn-action {
+    margin-top: auto;
+    width: fit-content;
+    padding: 12px 24px;
+    /* Deep Maroon Gradient */
+    background: linear-gradient(135deg, #800000 0%, #4A0808 100%) !important;
+    /* Pure white text for maximum contrast against maroon */
+    color: #FFFFFF !important;
+    border: 1px solid #B03030 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+                0 0 10px rgba(128, 0, 0, 0.2) !important;
+    font-weight: 900; /* Extra bold to ensure text is sharp */
+    border-radius: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="night"] .lp-roadmap-btn-action:hover {
+    transform: translateY(-2px);
+    /* Slightly lighter maroon on hover to indicate interaction */
+    background: linear-gradient(135deg, #A52A2A 0%, #800000 100%) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Keep the blue button for Light Theme as requested previously */
+[data-theme="light"] .lp-roadmap-btn-action,
+[data-theme="lofi"] .lp-roadmap-btn-action {
+    margin-top: auto;
+    width: fit-content;
+    padding: 12px 24px;
+    background: #1976D2 !important; 
+    color: #FFFFFF !important;
+    border-radius: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
