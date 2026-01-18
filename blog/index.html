@@ -487,745 +487,939 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
                     <main class="prose w-full">
                         
-    <div class="mb-12 pb-4 border-b border-gray-500/15">
-        <h1 class="flex items-center gap-3">
-            Blog
-            
-        </h1>
-        <p class="text-gray-500">Insights, tutorials, and stories from the CC Club community.</p>
-    </div>
-    
-    
-        
-    
+<main class="blog-container">
+    <div class="blog-header">
+        <h1 class="blog-title">Blog</h1>
+        <p class="blog-description">Insights, tutorials, and stories from the CC Club community.</p>
 
-    
-    <div class="mb-8">
-        <div class="relative max-w-md">
-            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-            </div>
-            <input type="text" id="blog-search-input" placeholder="Search all articles..." class="input input-bordered w-full pl-10" />
-        </div>
-        <div class="mt-2 text-sm text-gray-500">
-            💡 Tip: Browse by <a href="/cc-website/categories" class="link link-hover">category</a> or <a href="/cc-website/tags" class="link link-hover">tag</a> using the badges below each article
-        </div>
+
     </div>
 
-    
-    
-    
+    <!-- Search Toolbar -->
+    <div class="blog-search-wrapper">
+        <input type="text" id="blogSearch" class="blog-search-input" placeholder="Search articles by title or tag..."
+            aria-label="Search articles">
+
+        <a href="https://github.com/Start-Automating/cc-website" target="_blank" rel="noopener noreferrer"
+            class="btn-search-action" title="Write a Blog Post">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+            <span class="btn-text">Write</span>
+        </a>
+    </div>
+
+    <!-- Pro Tip Banner -->
+    <div class="search-pro-tip">
+        💡 Tip: Click on any tag or category below to filter.
+    </div>
+
+
+    <!-- Blog Feed -->
+    <div class="blog-feed" id="blogFeed">
         
-    
-
-    
-    <div id="default-blog-list">
         
-            
-                <h2 class="text-2xl font-bold mb-6">Recent Posts</h2>
-            
-            <div class="grid gap-8 mt-8">
+        
+
+        
+        <div class="blog-card" data-title="getting started with react hooks: a complete guide"
+            data-tags="react javascript web-development frontend tutorial tutorial">
+            <div class="card-header-row">
                 
-                    <article class="card bg-base-200 shadow-xl border border-gray-500/15 transition hover:border-gray-500/40">
-                        <div class="card-body">
-                            <h2 class="card-title">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;react-hooks-guide&#x2F;" class="hover:text-primary transition-colors">Getting Started with React Hooks: A Complete Guide</a>
-                                
-                                    <div class="badge badge-secondary">NEW</div>
-                                
-                            </h2>
-                            <div class="text-sm text-gray-500 mb-2 flex flex-wrap gap-2 items-center">
-                                
-                                    <span>December 15, 2025</span>
-                                
-                                
-                                
-                                    <span>• 10 min read</span>
-                                
-
-                                
-                                    <span>• by Arjun Sharma</span>
-                                
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/categories/tutorial" class="badge badge-primary badge-sm" title="View all posts in category 'tutorial'">tutorial</a>
-                                    
-                                
-                                
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/tags/react" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'react'">react</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/javascript" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'javascript'">javascript</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/web-development" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'web-development'">web-development</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/frontend" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'frontend'">frontend</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/tutorial" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'tutorial'">tutorial</a>
-                                    
-                                
-                            </div>
-                            <p class="text-base-content/80">
-                                
-                                    Learn React Hooks from scratch with practical examples. This beginner-friendly guide covers useState, useEffect, useContext, and custom hooks.
-                                
-                            </p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;react-hooks-guide&#x2F;" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </article>
+                <span class="card-badge">NEW</span>
                 
-                    <article class="card bg-base-200 shadow-xl border border-gray-500/15 transition hover:border-gray-500/40">
-                        <div class="card-body">
-                            <h2 class="card-title">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;react-performance-optimization&#x2F;" class="hover:text-primary transition-colors">Optimizing React Performance: Tips and Tricks</a>
-                                
-                            </h2>
-                            <div class="text-sm text-gray-500 mb-2 flex flex-wrap gap-2 items-center">
-                                
-                                    <span>October 25, 2025</span>
-                                
-                                
-                                
-                                    <span>• 10 min read</span>
-                                
 
-                                
-                                    <span>• by Meera Iyer</span>
-                                
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/categories/guide" class="badge badge-primary badge-sm" title="View all posts in category 'guide'">guide</a>
-                                    
-                                
-                                
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/tags/react" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'react'">react</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/performance" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'performance'">performance</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/javascript" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'javascript'">javascript</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/optimization" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'optimization'">optimization</a>
-                                    
-                                
-                            </div>
-                            <p class="text-base-content/80">
-                                
-                                    Boost your React app&#x27;s performance with these proven optimization techniques including memoization, lazy loading, and more.
-                                
-                            </p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;react-performance-optimization&#x2F;" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </article>
                 
-                    <article class="card bg-base-200 shadow-xl border border-gray-500/15 transition hover:border-gray-500/40">
-                        <div class="card-body">
-                            <h2 class="card-title">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;cybersecurity-basics&#x2F;" class="hover:text-primary transition-colors">Cybersecurity Basics Every Developer Should Know</a>
-                                
-                                    <div class="badge badge-secondary">Important</div>
-                                
-                            </h2>
-                            <div class="text-sm text-gray-500 mb-2 flex flex-wrap gap-2 items-center">
-                                
-                                    <span>September 08, 2025</span>
-                                
-                                
-                                
-                                    <span>• 16 min read</span>
-                                
-
-                                
-                                    <span>• by Deepak Singh</span>
-                                
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/categories/guide" class="badge badge-primary badge-sm" title="View all posts in category 'guide'">guide</a>
-                                    
-                                
-                                
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/tags/cybersecurity" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'cybersecurity'">cybersecurity</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/security" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'security'">security</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/web-development" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'web-development'">web-development</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/best-practices" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'best-practices'">best-practices</a>
-                                    
-                                
-                            </div>
-                            <p class="text-base-content/80">
-                                
-                                    Essential security practices to protect your applications from common vulnerabilities and attacks.
-                                
-                            </p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;cybersecurity-basics&#x2F;" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </article>
-                
-                    <article class="card bg-base-200 shadow-xl border border-gray-500/15 transition hover:border-gray-500/40">
-                        <div class="card-body">
-                            <h2 class="card-title">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;summer-hackathon-recap&#x2F;" class="hover:text-primary transition-colors">Summer Hackathon 2025: 48 Hours of Innovation and Collaboration</a>
-                                
-                                    <div class="badge badge-secondary">NEW</div>
-                                
-                            </h2>
-                            <div class="text-sm text-gray-500 mb-2 flex flex-wrap gap-2 items-center">
-                                
-                                    <span>August 25, 2025</span>
-                                
-                                
-                                
-                                    <span>• 7 min read</span>
-                                
-
-                                
-                                    <span>• by Priya Mehra</span>
-                                
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/categories/news" class="badge badge-primary badge-sm" title="View all posts in category 'news'">news</a>
-                                    
-                                
-                                
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/tags/hackathon" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'hackathon'">hackathon</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/events" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'events'">events</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/community" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'community'">community</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/projects" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'projects'">projects</a>
-                                    
-                                
-                            </div>
-                            <p class="text-base-content/80">
-                                
-                                    A detailed recap of our Summer Hackathon 2025 - 150 participants, 30 teams, and amazing projects built in 48 hours.
-                                
-                            </p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;summer-hackathon-recap&#x2F;" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </article>
-                
-                    <article class="card bg-base-200 shadow-xl border border-gray-500/15 transition hover:border-gray-500/40">
-                        <div class="card-body">
-                            <h2 class="card-title">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;graphql-vs-rest&#x2F;" class="hover:text-primary transition-colors">GraphQL vs REST: A Practical Comparison</a>
-                                
-                            </h2>
-                            <div class="text-sm text-gray-500 mb-2 flex flex-wrap gap-2 items-center">
-                                
-                                    <span>August 14, 2025</span>
-                                
-                                
-                                
-                                    <span>• 9 min read</span>
-                                
-
-                                
-                                    <span>• by Rohan Malhotra</span>
-                                
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/categories/comparison" class="badge badge-primary badge-sm" title="View all posts in category 'comparison'">comparison</a>
-                                    
-                                
-                                
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/tags/graphql" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'graphql'">graphql</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/rest" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'rest'">rest</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/api" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'api'">api</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/backend" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'backend'">backend</a>
-                                    
-                                
-                            </div>
-                            <p class="text-base-content/80">
-                                
-                                    Understand the differences between GraphQL and REST APIs with real examples and guidance on choosing the right approach.
-                                
-                            </p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;graphql-vs-rest&#x2F;" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </article>
-                
-                    <article class="card bg-base-200 shadow-xl border border-gray-500/15 transition hover:border-gray-500/40">
-                        <div class="card-body">
-                            <h2 class="card-title">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;progressive-web-apps&#x2F;" class="hover:text-primary transition-colors">Building Progressive Web Apps (PWA) in 2025</a>
-                                
-                            </h2>
-                            <div class="text-sm text-gray-500 mb-2 flex flex-wrap gap-2 items-center">
-                                
-                                    <span>July 22, 2025</span>
-                                
-                                
-                                
-                                    <span>• 13 min read</span>
-                                
-
-                                
-                                    <span>• by Karthik Nair</span>
-                                
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/categories/guide" class="badge badge-primary badge-sm" title="View all posts in category 'guide'">guide</a>
-                                    
-                                
-                                
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/tags/pwa" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'pwa'">pwa</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/javascript" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'javascript'">javascript</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/web-development" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'web-development'">web-development</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/mobile" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'mobile'">mobile</a>
-                                    
-                                
-                            </div>
-                            <p class="text-base-content/80">
-                                
-                                    Create fast, reliable, and engaging web apps that work offline using modern PWA techniques.
-                                
-                            </p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;progressive-web-apps&#x2F;" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </article>
-                
-                    <article class="card bg-base-200 shadow-xl border border-gray-500/15 transition hover:border-gray-500/40">
-                        <div class="card-body">
-                            <h2 class="card-title">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;typescript-why-care&#x2F;" class="hover:text-primary transition-colors">TypeScript: Why JavaScript Developers Should Care</a>
-                                
-                            </h2>
-                            <div class="text-sm text-gray-500 mb-2 flex flex-wrap gap-2 items-center">
-                                
-                                    <span>June 18, 2025</span>
-                                
-                                
-                                
-                                    <span>• 11 min read</span>
-                                
-
-                                
-                                    <span>• by Anjali Verma</span>
-                                
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/categories/opinion" class="badge badge-primary badge-sm" title="View all posts in category 'opinion'">opinion</a>
-                                    
-                                
-                                
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/tags/typescript" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'typescript'">typescript</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/javascript" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'javascript'">javascript</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/web-development" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'web-development'">web-development</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/tutorial" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'tutorial'">tutorial</a>
-                                    
-                                
-                            </div>
-                            <p class="text-base-content/80">
-                                
-                                    Discover how TypeScript&#x27;s type system can catch bugs early, improve code quality, and boost developer productivity.
-                                
-                            </p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;typescript-why-care&#x2F;" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </article>
-                
-                    <article class="card bg-base-200 shadow-xl border border-gray-500/15 transition hover:border-gray-500/40">
-                        <div class="card-body">
-                            <h2 class="card-title">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;docker-for-beginners&#x2F;" class="hover:text-primary transition-colors">Docker for Beginners: Containerize Your Apps</a>
-                                
-                            </h2>
-                            <div class="text-sm text-gray-500 mb-2 flex flex-wrap gap-2 items-center">
-                                
-                                    <span>May 12, 2025</span>
-                                
-                                
-                                
-                                    <span>• 14 min read</span>
-                                
-
-                                
-                                    <span>• by Vikram Reddy</span>
-                                
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/categories/tutorial" class="badge badge-primary badge-sm" title="View all posts in category 'tutorial'">tutorial</a>
-                                    
-                                
-                                
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/tags/docker" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'docker'">docker</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/devops" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'devops'">devops</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/cloud" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'cloud'">cloud</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/tutorial" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'tutorial'">tutorial</a>
-                                    
-                                
-                            </div>
-                            <p class="text-base-content/80">
-                                
-                                    Learn Docker basics, create Dockerfiles, and deploy containerized applications with this beginner-friendly guide.
-                                
-                            </p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;docker-for-beginners&#x2F;" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </article>
-                
-                    <article class="card bg-base-200 shadow-xl border border-gray-500/15 transition hover:border-gray-500/40">
-                        <div class="card-body">
-                            <h2 class="card-title">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;git-best-practices&#x2F;" class="hover:text-primary transition-colors">Git Best Practices for Team Collaboration</a>
-                                
-                            </h2>
-                            <div class="text-sm text-gray-500 mb-2 flex flex-wrap gap-2 items-center">
-                                
-                                    <span>April 05, 2025</span>
-                                
-                                
-                                
-                                    <span>• 10 min read</span>
-                                
-
-                                
-                                    <span>• by Priya Sharma</span>
-                                
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/categories/guide" class="badge badge-primary badge-sm" title="View all posts in category 'guide'">guide</a>
-                                    
-                                
-                                
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/tags/git" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'git'">git</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/collaboration" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'collaboration'">collaboration</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/development-tools" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'development-tools'">development-tools</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/best-practices" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'best-practices'">best-practices</a>
-                                    
-                                
-                            </div>
-                            <p class="text-base-content/80">
-                                
-                                    Master Git workflows, branching strategies, and commit conventions for effective team collaboration.
-                                
-                            </p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;git-best-practices&#x2F;" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </article>
-                
-                    <article class="card bg-base-200 shadow-xl border border-gray-500/15 transition hover:border-gray-500/40">
-                        <div class="card-body">
-                            <h2 class="card-title">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;intro-to-ml-python&#x2F;" class="hover:text-primary transition-colors">Introduction to Machine Learning with Python</a>
-                                
-                                    <div class="badge badge-secondary">NEW</div>
-                                
-                            </h2>
-                            <div class="text-sm text-gray-500 mb-2 flex flex-wrap gap-2 items-center">
-                                
-                                    <span>March 10, 2025</span>
-                                
-                                
-                                
-                                    <span>• 15 min read</span>
-                                
-
-                                
-                                    <span>• by Amit Kumar</span>
-                                
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/categories/tutorial" class="badge badge-primary badge-sm" title="View all posts in category 'tutorial'">tutorial</a>
-                                    
-                                
-                                
-                                
-                                
-                                    
-                                        
-                                        <a href="/cc-website/tags/python" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'python'">python</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/machine-learning" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'machine-learning'">machine-learning</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/ai" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'ai'">ai</a>
-                                    
-                                        
-                                        <a href="/cc-website/tags/tutorial" class="badge badge-ghost badge-outline badge-sm hover:badge-primary transition-colors" title="View all posts tagged 'tutorial'">tutorial</a>
-                                    
-                                
-                            </div>
-                            <p class="text-base-content/80">
-                                
-                                    Start your ML journey with Python, NumPy, and scikit-learn. Learn fundamental concepts with hands-on examples.
-                                
-                            </p>
-                            <div class="card-actions justify-end mt-4">
-                                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;intro-to-ml-python&#x2F;" class="btn btn-primary btn-sm">Read More</a>
-                            </div>
-                        </div>
-                    </article>
+                <button class="card-category filter-trigger"
+                    data-filter="tutorial">tutorial</button>
                 
             </div>
-        
 
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;react-hooks-guide&#x2F;">Getting Started with React Hooks: A Complete Guide</a>
+            </h2>
+            <p class="card-excerpt">Learn React Hooks from scratch with practical examples. This beginner-friendly guide covers useState, useEffect, useContext, and custom hooks.</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://github.com/ruanyf.png" alt="Sidharth Roy"
+                    class="meta-avatar">
+                <span>By <a href="https://github.com/ruanyf" target="_blank"
+                        rel="noopener noreferrer" class="author-link">Sidharth Roy</a></span>
+                
+                <span>•</span>
+                
+
+                <span>Dec 15, 2025</span>
+
+                
+                <span>• 10 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="react">#react</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="javascript">#javascript</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="web-development">#web-development</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="frontend">#frontend</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="tutorial">#tutorial</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
         
-        
-            <div class="join grid grid-cols-2 mt-8" id="blog-pagination">
+        <div class="blog-card" data-title="optimizing react performance: tips and tricks"
+            data-tags="react performance javascript optimization guide">
+            <div class="card-header-row">
                 
-                    <button class="join-item btn btn-outline btn-disabled">Previous page</button>
+
                 
-                
-                    <a href="&#x2F;cc-website&#x2F;blog&#x2F;page&#x2F;2&#x2F;" class="join-item btn btn-outline">Next page</a>
+                <button class="card-category filter-trigger"
+                    data-filter="guide">guide</button>
                 
             </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;react-performance-optimization&#x2F;">Optimizing React Performance: Tips and Tricks</a>
+            </h2>
+            <p class="card-excerpt">Boost your React app&#x27;s performance with these proven optimization techniques including memoization, lazy loading, and more.</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://ui-avatars.com/api/?name=Meera +Iyer&background=random&color=fff&size=64" alt="Meera Iyer" class="meta-avatar">
+                <span>By Meera Iyer</span>
+                
+                <span>•</span>
+                
+
+                <span>Oct 25, 2025</span>
+
+                
+                <span>• 10 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="react">#react</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="performance">#performance</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="javascript">#javascript</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="optimization">#optimization</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="cybersecurity basics every developer should know"
+            data-tags="cybersecurity web best-practices guide">
+            <div class="card-header-row">
+                
+                <span class="card-badge">Important</span>
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="guide">guide</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;cybersecurity-basics&#x2F;">Cybersecurity Basics Every Developer Should Know</a>
+            </h2>
+            <p class="card-excerpt">Essential security practices to protect your applications from common vulnerabilities and attacks.</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://github.com/torvalds.png" alt="Deepak Singh"
+                    class="meta-avatar">
+                <span>By <a href="https://github.com/torvalds" target="_blank"
+                        rel="noopener noreferrer" class="author-link">Deepak Singh</a></span>
+                
+                <span>•</span>
+                
+
+                <span>Sep 08, 2025</span>
+
+                
+                <span>• 16 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="cybersecurity">#cybersecurity</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="web">#web</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="best-practices">#best-practices</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="summer hackathon 2025: 48 hours of innovation and collaboration"
+            data-tags="hackathon events community projects news">
+            <div class="card-header-row">
+                
+                <span class="card-badge">NEW</span>
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="news">news</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;summer-hackathon-recap&#x2F;">Summer Hackathon 2025: 48 Hours of Innovation and Collaboration</a>
+            </h2>
+            <p class="card-excerpt">A detailed recap of our Summer Hackathon 2025 - 150 participants, 30 teams, and amazing projects built in 48 hours.</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://ui-avatars.com/api/?name=Priya +Mehra&background=random&color=fff&size=64" alt="Priya Mehra" class="meta-avatar">
+                <span>By Priya Mehra</span>
+                
+                <span>•</span>
+                
+
+                <span>Aug 25, 2025</span>
+
+                
+                <span>• 7 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="hackathon">#hackathon</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="events">#events</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="community">#community</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="projects">#projects</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="graphql vs rest: a practical comparison"
+            data-tags="graphql rest api backend comparison">
+            <div class="card-header-row">
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="comparison">comparison</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;graphql-vs-rest&#x2F;">GraphQL vs REST: A Practical Comparison</a>
+            </h2>
+            <p class="card-excerpt">Understand the differences between GraphQL and REST APIs with real examples and guidance on choosing the right approach.</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://ui-avatars.com/api/?name=Rohan +Malhotra&background=random&color=fff&size=64" alt="Rohan Malhotra" class="meta-avatar">
+                <span>By Rohan Malhotra</span>
+                
+                <span>•</span>
+                
+
+                <span>Aug 14, 2025</span>
+
+                
+                <span>• 9 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="graphql">#graphql</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="rest">#rest</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="api">#api</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="backend">#backend</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="building progressive web apps (pwa) in 2025"
+            data-tags="pwa javascript web-development mobile guide">
+            <div class="card-header-row">
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="guide">guide</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;progressive-web-apps&#x2F;">Building Progressive Web Apps (PWA) in 2025</a>
+            </h2>
+            <p class="card-excerpt">Create fast, reliable, and engaging web apps that work offline using modern PWA techniques.</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://ui-avatars.com/api/?name=Karthik +Nair&background=random&color=fff&size=64" alt="Karthik Nair" class="meta-avatar">
+                <span>By Karthik Nair</span>
+                
+                <span>•</span>
+                
+
+                <span>Jul 22, 2025</span>
+
+                
+                <span>• 13 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="pwa">#pwa</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="javascript">#javascript</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="web-development">#web-development</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="mobile">#mobile</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="typescript: why javascript developers should care"
+            data-tags="typescript javascript web-development tutorial opinion">
+            <div class="card-header-row">
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="opinion">opinion</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;typescript-why-care&#x2F;">TypeScript: Why JavaScript Developers Should Care</a>
+            </h2>
+            <p class="card-excerpt">Discover how TypeScript&#x27;s type system can catch bugs early, improve code quality, and boost developer productivity.</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://github.com/gaearon.png" alt="Anjali Verma"
+                    class="meta-avatar">
+                <span>By <a href="https://github.com/gaearon" target="_blank"
+                        rel="noopener noreferrer" class="author-link">Anjali Verma</a></span>
+                
+                <span>•</span>
+                
+
+                <span>Jun 18, 2025</span>
+
+                
+                <span>• 11 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="typescript">#typescript</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="javascript">#javascript</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="web-development">#web-development</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="tutorial">#tutorial</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="docker for beginners: containerize your apps"
+            data-tags="docker devops cloud tutorial tutorial">
+            <div class="card-header-row">
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="tutorial">tutorial</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;docker-for-beginners&#x2F;">Docker for Beginners: Containerize Your Apps</a>
+            </h2>
+            <p class="card-excerpt">Learn Docker basics, create Dockerfiles, and deploy containerized applications with this beginner-friendly guide.</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://github.com/shivammathur.png" alt="Arjun Patel"
+                    class="meta-avatar">
+                <span>By <a href="https://github.com/shivammathur" target="_blank"
+                        rel="noopener noreferrer" class="author-link">Arjun Patel</a></span>
+                
+                <span>•</span>
+                
+
+                <span>May 12, 2025</span>
+
+                
+                <span>• 154 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="docker">#docker</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="devops">#devops</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="cloud">#cloud</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="tutorial">#tutorial</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="git best practices for team collaboration"
+            data-tags="git collaboration development-tools best-practices guide">
+            <div class="card-header-row">
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="guide">guide</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;git-best-practices&#x2F;">Git Best Practices for Team Collaboration</a>
+            </h2>
+            <p class="card-excerpt">Master Git workflows, branching strategies, and commit conventions for effective team collaboration.</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://ui-avatars.com/api/?name=Priya +Sharma&background=random&color=fff&size=64" alt="Priya Sharma" class="meta-avatar">
+                <span>By Priya Sharma</span>
+                
+                <span>•</span>
+                
+
+                <span>Apr 05, 2025</span>
+
+                
+                <span>• 10 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="git">#git</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="collaboration">#collaboration</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="development-tools">#development-tools</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="best-practices">#best-practices</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="introduction to machine learning with python"
+            data-tags="python machine-learning ai tutorial tutorial">
+            <div class="card-header-row">
+                
+                <span class="card-badge">NEW</span>
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="tutorial">tutorial</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;intro-to-ml-python&#x2F;">Introduction to Machine Learning with Python</a>
+            </h2>
+            <p class="card-excerpt">Start your ML journey with Python, NumPy, and scikit-learn. Learn fundamental concepts with hands-on examples.</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://ui-avatars.com/api/?name=Amit +Kumar&background=random&color=fff&size=64" alt="Amit Kumar" class="meta-avatar">
+                <span>By Amit Kumar</span>
+                
+                <span>•</span>
+                
+
+                <span>Mar 10, 2025</span>
+
+                
+                <span>• 15 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="python">#python</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="machine-learning">#machine-learning</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="ai">#ai</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="tutorial">#tutorial</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="css grid vs flexbox: when to use which"
+            data-tags="css frontend web-development design comparison">
+            <div class="card-header-row">
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="comparison">comparison</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;css-grid-vs-flexbox&#x2F;">CSS Grid vs Flexbox: When to Use Which</a>
+            </h2>
+            <p class="card-excerpt">A practical comparison of CSS Grid and Flexbox with real-world examples to help you choose the right layout tool.</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://ui-avatars.com/api/?name=Sneha +Patel&background=random&color=fff&size=64" alt="Sneha Patel" class="meta-avatar">
+                <span>By Sneha Patel</span>
+                
+                <span>•</span>
+                
+
+                <span>Feb 20, 2025</span>
+
+                
+                <span>• 8 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="css">#css</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="frontend">#frontend</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="web-development">#web-development</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="design">#design</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="building a rest api with node.js and express"
+            data-tags="nodejs backend api express tutorial tutorial">
+            <div class="card-header-row">
+                
+                <span class="card-badge">Tutorial</span>
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="tutorial">tutorial</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2025&#x2F;nodejs-rest-api&#x2F;">Building a REST API with Node.js and Express</a>
+            </h2>
+            <p class="card-excerpt">Learn how to build a robust REST API using Node.js, Express, and MongoDB with best practices for authentication and error handling.</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://github.com/fabpot.png" alt="Priya Sharma"
+                    class="meta-avatar">
+                <span>By <a href="https://github.com/fabpot" target="_blank"
+                        rel="noopener noreferrer" class="author-link">Priya Sharma</a></span>
+                
+                <span>•</span>
+                
+
+                <span>Jan 15, 2025</span>
+
+                
+                <span>• 12 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="nodejs">#nodejs</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="backend">#backend</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="api">#api</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="express">#express</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="tutorial">#tutorial</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="introduction to competitive programming"
+            data-tags="competitive-programming algorithms dsa interview guide">
+            <div class="card-header-row">
+                
+                <span class="card-badge">Career</span>
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="guide">guide</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2024&#x2F;competitive-programming-intro&#x2F;">Introduction to Competitive Programming</a>
+            </h2>
+            <p class="card-excerpt">Start your competitive programming journey. Learn algorithms, practice strategies, and ace coding interviews!</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://ui-avatars.com/api/?name=Neha +Gupta&background=random&color=fff&size=64" alt="Neha Gupta" class="meta-avatar">
+                <span>By Neha Gupta</span>
+                
+                <span>•</span>
+                
+
+                <span>Nov 05, 2024</span>
+
+                
+                <span>• 14 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="competitive-programming">#competitive-programming</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="algorithms">#algorithms</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="dsa">#dsa</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="interview">#interview</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="linux commands every developer must know"
+            data-tags="linux terminal devops productivity guide">
+            <div class="card-header-row">
+                
+                <span class="card-badge">Essential</span>
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="guide">guide</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2024&#x2F;linux-commands&#x2F;">Linux Commands Every Developer Must Know</a>
+            </h2>
+            <p class="card-excerpt">Essential Linux terminal commands for developers. Master the command line and boost your productivity!</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://github.com/kovidgoyal.png" alt="Rohan Gupta"
+                    class="meta-avatar">
+                <span>By <a href="https://github.com/kovidgoyal" target="_blank"
+                        rel="noopener noreferrer" class="author-link">Rohan Gupta</a></span>
+                
+                <span>•</span>
+                
+
+                <span>Sep 10, 2024</span>
+
+                
+                <span>• 102 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="linux">#linux</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="terminal">#terminal</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="devops">#devops</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="productivity">#productivity</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="understanding javascript async&#x2F;await"
+            data-tags="javascript async web-development tutorial tutorial">
+            <div class="card-header-row">
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="tutorial">tutorial</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2024&#x2F;javascript-async-await&#x2F;">Understanding JavaScript Async&#x2F;Await</a>
+            </h2>
+            <p class="card-excerpt">Master asynchronous JavaScript with async&#x2F;await syntax. Say goodbye to callback hell!</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://ui-avatars.com/api/?name=Sanjay +Kumar&background=random&color=fff&size=64" alt="Sanjay Kumar" class="meta-avatar">
+                <span>By Sanjay Kumar</span>
+                
+                <span>•</span>
+                
+
+                <span>Jun 22, 2024</span>
+
+                
+                <span>• 9 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="javascript">#javascript</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="async">#async</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="web-development">#web-development</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="tutorial">#tutorial</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-card" data-title="getting started with python for data science"
+            data-tags="python data-science tutorial beginner tutorial">
+            <div class="card-header-row">
+                
+
+                
+                <button class="card-category filter-trigger"
+                    data-filter="tutorial">tutorial</button>
+                
+            </div>
+
+            <h2 class="card-title">
+                <a href="&#x2F;cc-website&#x2F;blog&#x2F;2024&#x2F;python-data-science&#x2F;">Getting Started with Python for Data Science</a>
+            </h2>
+            <p class="card-excerpt">Begin your data science journey with Python, pandas, and matplotlib. Perfect for beginners!</p>
+
+            <div class="card-meta">
+                
+                
+                <img src="https://ui-avatars.com/api/?name=Ankit +Sharma&background=random&color=fff&size=64" alt="Ankit Sharma" class="meta-avatar">
+                <span>By Ankit Sharma</span>
+                
+                <span>•</span>
+                
+
+                <span>Mar 15, 2024</span>
+
+                
+                <span>• 11 min read</span>
+                
+
+                <div class="meta-tags">
+                    
+                    
+                    <button class="meta-tag filter-trigger" data-filter="python">#python</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="data-science">#data-science</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="tutorial">#tutorial</button>
+                    
+                    <button class="meta-tag filter-trigger" data-filter="beginner">#beginner</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
         
     </div>
 
-    
-    <div id="search-results-list" class="hidden">
-        <div id="search-results-grid" class="grid gap-8 mt-8"></div>
+    <div class="no-results" id="noResults">
+        <p>No articles found matching your query.</p>
     </div>
 
-    
-        <div class="mt-16 pt-8 border-t border-gray-500/15">
-            <h2 id="contributing-to-the-blog">Contributing to the Blog</h2>
-<p>We encourage all club members to share their knowledge! Whether you're a beginner documenting your learning journey or an expert sharing advanced concepts, your voice matters.</p>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
-  <div class="collapse-title font-semibold">
-    How to Write a Blog Post:
-  </div>
-  <div class="collapse-content text-sm">
-    <ol>
-<li>Check out our example blog posts in the <code>blog/2025/</code> folder</li>
-<li>Fork the repository and create your markdown file</li>
-<li>Follow the <a href="https://github.com/your-org/cc-website/blob/main/CONTRIBUTING.md">contribution guidelines</a></li>
-<li>Submit a pull request</li>
-</ol>
+    <!-- Pagination removed for global search -->
 
-  </div>
-</div>
 
-        </div>
-    
 
-    
-    <div class="mt-8 pt-6 border-t border-gray-500/15">
-        <div class="flex flex-wrap items-center gap-4">
-            <a href="https:&#x2F;&#x2F;github.com&#x2F;Shanu-Kumawat&#x2F;cc-website&#x2F;edit&#x2F;main&#x2F;/content/blog&#x2F;_index.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
-                </svg>
-                <span>Edit this page</span>
-            </a>
-        </div>
-    </div>
-    
+</main>
+
+<style>
+    /* Inline styles for interactive elements that are unique to this template's logic */
+    .filter-trigger {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .card-category.filter-trigger {
+        text-decoration: none;
+        background: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    .card-category.filter-trigger:hover {
+        text-decoration: underline;
+        opacity: 0.8;
+    }
+
+    /* Base link styles */
+    .card-title a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .card-title a:hover {
+        color: var(--color-primary);
+    }
+</style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const searchInput = document.getElementById('blog-search-input');
-        const defaultList = document.getElementById('default-blog-list');
-        const resultsList = document.getElementById('search-results-list');
-        const resultsGrid = document.getElementById('search-results-grid');
-        const paginator = document.getElementById('blog-pagination');
-        
-        let searchReady = false;
-        
-        if (typeof loadSearchLibraries === 'function') {
-            loadSearchLibraries(() => {
-                searchReady = true;
-                console.log("Blog search index loaded.");
-            });
-        }
+    document.addEventListener('DOMContentLoaded', function () {
+        const searchInput = document.getElementById('blogSearch');
+        const cards = document.querySelectorAll('.blog-card');
+        const noResults = document.getElementById('noResults');
+        const filterTriggers = document.querySelectorAll('.filter-trigger');
 
-        function createCardHTML(item) {
-            const dateStr = item.date || '';
-            const excerpt = item.body ? item.body.substring(0, 200) + '...' : '';
-            return `
-            <article class="card bg-base-200 shadow-xl border border-gray-500/15">
-                <div class="card-body">
-                    <h2 class="card-title">
-                        <a href="${item.id}" class="hover:text-primary">${item.title}</a>
-                    </h2>
-                    ${dateStr ? `<div class="text-sm text-gray-500 mb-2">${dateStr}</div>` : ''}
-                    <p class="text-base-content/80">${excerpt}</p>
-                    <div class="card-actions justify-end mt-4">
-                        <a href="${item.id}" class="btn btn-primary btn-sm">Read More</a>
-                    </div>
-                </div>
-            </article>`;
-        }
 
-        if (searchInput) {
-            searchInput.addEventListener('input', function(e) {
-                const query = e.target.value.trim();
-                if (query.length > 0) {
-                    defaultList.classList.add('hidden');
-                    if (paginator) paginator.classList.add('hidden');
-                    resultsList.classList.remove('hidden');
 
-                    if (searchReady && window.searchIndex) {
-                        const docs = Object.values(window.searchIndex.documentStore.docs);
-                        const fuse = new Fuse(docs, { keys: ['title', 'body'], threshold: 0.3 });
-                        const results = fuse.search(query).filter(r => r.item.id.includes('/blog/'));
-                        
-                        resultsGrid.innerHTML = results.length > 0 
-                            ? results.map(r => createCardHTML(r.item)).join('')
-                            : `<div class="col-span-full text-center py-10">No matches for "${query}"</div>`;
-                    } else {
-                        resultsGrid.innerHTML = `<div class="col-span-full text-center py-10"><div class="loading loading-spinner text-primary"></div><p>Indexing posts...</p></div>`;
-                    }
+        function performFilter(term) {
+            term = term.toLowerCase().trim();
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title') || '';
+                const tags = card.getAttribute('data-tags') || '';
+                const isMatch = title.includes(term) || tags.includes(term);
+
+                if (isMatch) {
+                    card.style.display = 'block';
+                    card.classList.remove('hidden');
+                    visibleCount++;
                 } else {
-                    defaultList.classList.remove('hidden');
-                    if (paginator) paginator.classList.remove('hidden');
-                    resultsList.classList.add('hidden');
+                    card.style.display = 'none';
+                    card.classList.add('hidden');
                 }
             });
+
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+                noResults.classList.add('visible');
+            } else {
+                noResults.style.display = 'none';
+                noResults.classList.remove('visible');
+            }
         }
+
+        // Input Event Listener
+        searchInput.addEventListener('input', function (e) {
+            performFilter(e.target.value);
+        });
+
+        // Click Event Listeners
+        filterTriggers.forEach(trigger => {
+            trigger.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Get filter term
+                // Ensure we don't have newlines/whitespace issues
+                const filterText = (this.getAttribute('data-filter') || this.innerText).trim();
+                console.log(`Trigger clicked. Filter text: "${filterText}"`);
+
+                // update input
+                searchInput.value = filterText;
+
+                // Perform filter
+                performFilter(filterText);
+
+                // Smooth scroll
+                const wrapper = document.querySelector('.blog-search-wrapper');
+                if (wrapper) {
+                    window.scrollTo({
+                        top: wrapper.offsetTop - 30,
+                        behavior: 'smooth'
+                    });
+                }
+
+                searchInput.focus();
+            });
+        });
     });
 </script>
 
@@ -1250,14 +1444,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                         
 
-<div class="hidden lg:block" data-toc-expand="true">
+<div class="hidden lg:block" >
     <div class="sticky top-20 px-4 py-2 border-l border-gray-500/15">
         <h4 class="text-lg font-bold mb-1">ON THIS PAGE</h4>
             <ul class="menu menu-sm toc-menu">
             
                 <li>
                     
-                    <a href="/cc-website/blog/#contributing-to-the-blog" class="toc-link">Contributing to the Blog</a>
+                    <a href="/cc-website/blog/#blog" class="toc-link">Blog</a>
                     
                 </li>
             

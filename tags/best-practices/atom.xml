@@ -46,13 +46,6 @@
 &lt;li&gt;✅ Keep dependencies updated&lt;&#x2F;li&gt;
 &lt;li&gt;✅ Use security headers&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;OWASP ZAP&lt;&#x2F;li&gt;
-&lt;li&gt;Burp Suite&lt;&#x2F;li&gt;
-&lt;li&gt;npm audit&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;More security tutorials coming soon!&lt;&#x2F;p&gt;
 </content>
         
     </entry>
