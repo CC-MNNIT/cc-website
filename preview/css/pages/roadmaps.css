@@ -141,7 +141,8 @@
     max-width: var(--roadmap-card-width);
     background: rgba(35, 25, 25, 0.95);
     backdrop-filter: blur(20px);
-    border-radius: 0; /* Changed from 24px to 0 for square corners */
+    border-radius: 0;
+    /* Changed from 24px to 0 for square corners */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     border: 1.5px solid rgba(255, 199, 88, 0.5);
     position: relative;
@@ -149,6 +150,7 @@
     flex-shrink: 0;
     animation: slideUp 0.6s ease-out;
 }
+
 [data-theme="light"] .roadmap-card,
 [data-theme="lofi"] .roadmap-card {
     background: rgba(245, 250, 255, 0.98);
@@ -195,7 +197,8 @@
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 0; /* Remove rounded corners */
+    border-radius: 0;
+    /* Remove rounded corners */
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     opacity: 1;
@@ -993,10 +996,10 @@
     display: block;
     /* Apply SVG folder clip-path */
     clip-path: url(#folderMask);
-    
+
     /* Enhanced shadow and border */
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), 
-                0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25),
+        0 4px 12px rgba(0, 0, 0, 0.15);
     border: 1.5px solid rgba(255, 199, 88, 0.4);
 }
 
@@ -1005,8 +1008,8 @@
 [data-theme="light"] .folder-card,
 [data-theme="lofi"] .folder-card {
     background: rgba(245, 250, 255, 0.98);
-    box-shadow: 0 12px 40px rgba(25, 118, 210, 0.15), 
-                0 4px 12px rgba(25, 118, 210, 0.1);
+    box-shadow: 0 12px 40px rgba(25, 118, 210, 0.15),
+        0 4px 12px rgba(25, 118, 210, 0.1);
     border: 1.5px solid rgba(25, 118, 210, 0.35);
 }
 
@@ -1053,17 +1056,17 @@
 .roadmap-card-link:hover .folder-card {
     background: rgba(45, 30, 30, 0.98);
     transform: translateY(-12px) scale(1.03);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 
-                0 6px 16px rgba(0, 0, 0, 0.2),
-                0 0 40px rgba(255, 199, 88, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35),
+        0 6px 16px rgba(0, 0, 0, 0.2),
+        0 0 40px rgba(255, 199, 88, 0.3);
 }
 
 [data-theme="light"] .roadmap-card-link:hover .folder-card,
 [data-theme="lofi"] .roadmap-card-link:hover .folder-card {
     background: rgba(250, 254, 255, 0.99);
-    box-shadow: 0 20px 60px rgba(25, 118, 210, 0.2), 
-                0 6px 16px rgba(25, 118, 210, 0.12),
-                0 0 40px rgba(25, 118, 210, 0.25);
+    box-shadow: 0 20px 60px rgba(25, 118, 210, 0.2),
+        0 6px 16px rgba(25, 118, 210, 0.12),
+        0 0 40px rgba(25, 118, 210, 0.25);
 }
 
 .roadmap-card-link:hover .card-border {
@@ -1075,7 +1078,7 @@
 }
 
 /* Card Content */
-.card-content {
+.folder-card-content {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1095,8 +1098,8 @@
     border-radius: 0 0 16px 16px;
 }
 
-[data-theme="light"] .card-content,
-[data-theme="lofi"] .card-content {
+[data-theme="light"] .folder-card-content,
+[data-theme="lofi"] .folder-card-content {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(240, 245, 250, 0.4) 30%, rgba(240, 245, 250, 0.95) 100%);
 }
 
@@ -1114,7 +1117,7 @@
 }
 
 
-.card-image {
+.folder-card-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -1146,32 +1149,32 @@
     border-color: rgba(25, 118, 210, 0.35);
 }
 
-[data-theme="light"] .card-image,
-[data-theme="lofi"] .card-image {
+[data-theme="light"] .folder-card-image,
+[data-theme="lofi"] .folder-card-image {
     filter: none;
 }
 
-.roadmap-card-link:hover .card-image {
+.roadmap-card-link:hover .folder-card-image {
     transform: scale(1.08);
     filter: brightness(0.65) saturate(1.15);
 }
 
-[data-theme="light"] .roadmap-card-link:hover .card-image,
-[data-theme="lofi"] .roadmap-card-link:hover .card-image {
+[data-theme="light"] .roadmap-card-link:hover .folder-card-image,
+[data-theme="lofi"] .roadmap-card-link:hover .folder-card-image {
     filter: brightness(0.70) saturate(1.1);
 }
 
-.roadmap-card-link:hover .card-content {
+.roadmap-card-link:hover .folder-card-content {
     background: linear-gradient(180deg, rgba(13, 9, 7, 0) 0%, rgba(13, 9, 7, 0.9) 40%, rgba(13, 9, 7, 0.98) 100%);
 }
 
-[data-theme="light"] .roadmap-card-link:hover .card-content,
-[data-theme="lofi"] .roadmap-card-link:hover .card-content {
+[data-theme="light"] .roadmap-card-link:hover .folder-card-content,
+[data-theme="lofi"] .roadmap-card-link:hover .folder-card-content {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(240, 245, 250, 0.85) 40%, rgba(240, 245, 250, 0.98) 100%);
 }
 
 /* Card Title */
-.card-title {
+.folder-card-title {
     font-size: 1.8rem;
     font-weight: 800;
     margin: 0 0 1.25rem 0;
@@ -1184,15 +1187,15 @@
     letter-spacing: -0.5px;
 }
 
-[data-theme="light"] .card-title,
-[data-theme="lofi"] .card-title {
+[data-theme="light"] .folder-card-title,
+[data-theme="lofi"] .folder-card-title {
     background: var(--title-gradient-light);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-.roadmap-card-link:hover .card-title {
+.roadmap-card-link:hover .folder-card-title {
     transform: scale(1.06);
 }
 
@@ -1260,7 +1263,7 @@
         height: 430px;
     }
 
-    .card-title {
+    .folder-card-title {
         font-size: 1.65rem;
     }
 }
@@ -1274,7 +1277,7 @@
         height: 420px;
     }
 
-    .card-title {
+    .folder-card-title {
         font-size: 1.55rem;
     }
 }
@@ -1291,11 +1294,11 @@
         max-width: 100%;
     }
 
-    .card-title {
+    .folder-card-title {
         font-size: 1.6rem;
     }
 
-    .card-content {
+    .folder-card-content {
         padding: 2rem;
         min-height: 140px;
     }
@@ -1311,11 +1314,11 @@
         height: 380px;
     }
 
-    .card-title {
+    .folder-card-title {
         font-size: 1.5rem;
     }
 
-    .card-content {
+    .folder-card-content {
         padding: 1.75rem 1.5rem;
         min-height: 130px;
     }
@@ -1340,12 +1343,12 @@
         height: 350px;
     }
 
-    .card-title {
+    .folder-card-title {
         font-size: 1.35rem;
         margin: 0 0 0.75rem 0;
     }
 
-    .card-content {
+    .folder-card-content {
         padding: 1.5rem 1.25rem;
         min-height: 120px;
     }
@@ -1370,12 +1373,12 @@
         height: 300px;
     }
 
-    .card-title {
+    .folder-card-title {
         font-size: 1.2rem;
         margin: 0 0 0.5rem 0;
     }
 
-    .card-content {
+    .folder-card-content {
         padding: 1.25rem 1rem;
         min-height: 100px;
     }
@@ -1388,9 +1391,9 @@
 
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
-    .folder-card,
-    .card-image,
-    .card-title,
+
+    .folder-card-image,
+    .folder-card-title,
     .card-glow,
     .card-border,
     .dash {
