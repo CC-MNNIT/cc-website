@@ -7,90 +7,59 @@
 # - repo_url: GitHub repository URL (string)
 # - authors: Array of GitHub usernames (strings)
 
-[[projects]]
-title = "CC Website"
-description = "The official website for the Computer Coding Club, built with Zola and Tailwind CSS. Features a custom theme, event management, and resource sharing."
-icon = "fa-solid fa-globe"
-tech_stack = ["Zola", "Tailwind CSS", "Rust"]
-repo_url = "https://github.com/cc-mnnit/cc-website"
-authors = ["Shanu-Kumawat", "torvalds", "karpathy", "yyx990803"]
 
 [[projects]]
-title = "Algoverse"
-description = "A comprehensive library of algorithms and data structures implemented in C++, Java, and Python. Designed for competitive programming preparation."
-icon = "fa-solid fa-brain"
-tech_stack = ["C++", "Python", "Algorithms"]
-repo_url = "https://github.com/cc-mnnit/algoverse"
-authors = ["gaearon", "sindresorhus", "antfu"]
-
-[[projects]]
-title = "Campus Connect"
-description = "A mobile application to bridge the gap between students and administration. Features real-time notices, event updates, and a grievance redressal system."
-icon = "fa-solid fa-mobile-screen"
-tech_stack = ["Flutter", "Firebase", "Dart"]
-repo_url = "https://github.com/cc-mnnit/campus-connect"
-authors = ["bradtraversy", "tiangolo", "addyosmani"]
-
-[[projects]]
-title = "CodeCompete"
-description = "Real-time competitive programming platform with virtual contests, problem archives, and leaderboards. Built for internal club assessments."
-icon = "fa-solid fa-laptop-code"
-tech_stack = ["MERN Stack", "Docker", "Redis"]
-repo_url = "https://github.com/cc-mnnit/code-compete"
-authors = ["taylorotwell", "josevalim", "davidfowl"]
-
-[[projects]]
-title = "ResoBunk"
-description = "A student resource sharing portal for notes, pyq, and study materials. Includes a rating system and anonymous uploads."
-icon = "fa-solid fa-book-bookmark"
-tech_stack = ["Next.js", "Supabase", "TypeScript"]
-repo_url = "https://github.com/cc-mnnit/reso-bunk"
-authors = ["getify", "midudev", "ThePrimeagen"]
-
-[[projects]]
-title = "AttendEase"
-description = "Automated attendance system using facial recognition and geofencing. Reduces proxy attendance and streamlines record keeping."
-icon = "fa-solid fa-user-check"
-tech_stack = ["Python", "OpenCV", "Django"]
-repo_url = "https://github.com/cc-mnnit/attendease"
-authors = ["geohot", "kentcdodds", "wesbos"]
-
-[[projects]]
-title = "ShellX"
-description = "A lightweight, custom shell implementation in Rust with support for piping, redirection, and custom signal handling."
-icon = "fa-solid fa-terminal"
-tech_stack = ["Rust", "Systems", "Linux"]
-repo_url = "https://github.com/cc-mnnit/shellx"
-authors = ["hiteshchoudhary", "ry", "torvalds"]
-
-[[projects]]
-title = "ClubAPI"
-description = "Centralized backend service powering the club's various apps. Handles authentication, event data, and third-party integrations."
-icon = "fa-solid fa-server"
-tech_stack = ["Go", "gRPC", "PostgreSQL"]
-repo_url = "https://github.com/cc-mnnit/club-api"
-authors = ["karpathy", "antfu", "davidfowl"]
-
-[[projects]]
-title = "BitVote"
-description = "Decentralized voting application ensuring transparency and immutability. Built for student council elections using smart contracts."
-icon = "fa-brands fa-ethereum"
-tech_stack = ["Solidity", "Hardhat", "React"]
-repo_url = "https://github.com/cc-mnnit/bitvote"
-authors = ["yyx990803", "gaearon", "taylorotwell"]
-
-[[projects]]
-title = "NetGuard"
-description = "A high-performance network traffic analyzer and firewall rule manager. Visualizes packet flows in real-time."
+title = "Blackjack"
+description = "Comprehensive blockchain bot detection system using ML and Pyth Network. Analyzes trading patterns to identify automated bots and MEV attacks with real-time monitoring."
 icon = "fa-solid fa-shield-halved"
-tech_stack = ["Rust", "eBPF", "Tauri"]
-repo_url = "https://github.com/cc-mnnit/netguard"
-authors = ["geohot", "torvalds", "ry"]
+tech_stack = ["Spring Boot", "React", "Solidity"]
+repo_url = "https://github.com/samudraneel05/Blackjack"
+authors = ["samudraneel05"]
 
 [[projects]]
-title = "VoxelEngine"
-description = "A lightweight 3D voxel game engine. Features dynamic lighting, procedural terrain generation, and modding support."
-icon = "fa-solid fa-cubes"
-tech_stack = ["C++", "OpenGL", "Lua"]
-repo_url = "https://github.com/cc-mnnit/voxel-engine"
-authors = ["ThePrimeagen", "tiangolo", "sindresorhus"]
+title = "Obliviate"
+description = "Enterprise AI governance platform for surgical machine unlearning and RAG hallucination prevention. Provides GDPR compliance and trust-gating for LLM outputs."
+icon = "fa-solid fa-brain"
+tech_stack = ["FastAPI", "React", "PyTorch"]
+repo_url = "https://github.com/Kanishkuu/Obliviate"
+authors = ["Kanishkuu", "DarshShah10", "Hashbrownsss", "Krish-4801"]
+
+[[projects]]
+title = "AurisMeta"
+description = "Routing metadata security layer for encrypted messaging apps. Uses adaptive privacy techniques and AI-driven adversary simulation to prevent metadata leakage."
+icon = "fa-solid fa-lock"
+tech_stack = ["Python", "Pathway", "Streamlit"]
+repo_url = "https://github.com/rohits1450/AurisMeta"
+authors = ["rohits1450"]
+
+[[projects]]
+title = "InfraSketch"
+description = "Visual infrastructure design tool with drag-and-drop interface. Automatically generates Terraform code from cloud architecture diagrams for AWS, GCP, Azure."
+icon = "fa-solid fa-diagram-project"
+tech_stack = ["Next.js", "TypeScript", "React Flow"]
+repo_url = "https://github.com/MrinalVarshney/InfraSketch-"
+authors = ["MrinalVarshney"]
+
+[[projects]]
+title = "Sushrut"
+description = "Intelligent healthcare assistant with conversational AI, touchless biometric authentication, multilingual support, and medical report summarization for accessibility."
+icon = "fa-solid fa-user-doctor"
+tech_stack = ["Spring Boot", "React", "FastAPI"]
+repo_url = "https://github.com/aviral-mishra-1008/sushrut_hack36"
+authors = ["aviral-mishra-1008", "Ayushman444", "IWantToBeVS", "mangalgithub"]
+
+[[projects]]
+title = "MotiClubs"
+description = "Android platform for efficient college club communication and collaboration at MNNIT. Eliminates WhatsApp clutter with organized channels and announcements."
+icon = "fa-solid fa-users"
+tech_stack = ["Kotlin", "Jetpack Compose", "Firebase"]
+repo_url = "https://github.com/CC-MNNIT/MotiClubs"
+authors = ["shank03", "hackeramitkumar"]
+
+[[projects]]
+title = "CodeSangam"
+description = "Event management platform for coding competitions including DroidRush, Webster, Softablitz, and Logical Rhythm. Features team registration, abstract submission, and live leaderboards."
+icon = "fa-solid fa-code"
+tech_stack = ["Go", "React", "TypeScript"]
+repo_url = "https://github.com/CC-MNNIT/CodeSangam"
+authors = ["shank03", "PriyavKaneria", "sanskaromar"]
