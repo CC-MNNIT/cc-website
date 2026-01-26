@@ -5,6 +5,7 @@ description = "A 2-week development challenge that brings together creativity an
 template = "events/single.html"
 
 [extra]
+visible = true
 event_type = "challenge"
 status = "upcoming"
 badge = "CHALLENGE"
