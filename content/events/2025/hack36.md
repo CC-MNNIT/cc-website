@@ -5,7 +5,8 @@ description = "Our flagship 36-hour hackathon where innovation meets execution. 
 template = "events/single.html"
 
 [extra]
-visible = true
+show_banner = true
+banner_image = "events/hack36/banner.svg"
 event_type = "hackathon"
 status = "completed"
 badge = "FLAGSHIP"

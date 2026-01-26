@@ -5,7 +5,8 @@ description = "Hands-on workshop covering containerization with Docker and orche
 template = "events/single.html"
 
 [extra]
-visible = true
+show_banner = true
+banner_image = "events/docker-kubernetes-workshop/banner.jpg"
 event_type = "workshop"
 status = "upcoming"
 badge = "UPCOMING"

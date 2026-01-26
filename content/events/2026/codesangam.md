@@ -5,7 +5,8 @@ description = "A 2-week development challenge that brings together creativity an
 template = "events/single.html"
 
 [extra]
-visible = true
+show_banner = true
+banner_image = "events/codesangam/banner.svg"
 event_type = "challenge"
 status = "upcoming"
 badge = "CHALLENGE"

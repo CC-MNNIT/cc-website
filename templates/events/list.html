@@ -48,25 +48,27 @@
         {% endif %}
     {% endfor %}
 
-    {# Filter visible events for carousel and grid #}
-    {% set visible_events = [] %}
+    {# Filter events for banner carousel (show_banner = true) #}
+    {% set banner_events = [] %}
     {% for event in all_events %}
-        {% if event.extra.visible is defined and event.extra.visible == true %}
-            {% set_global visible_events = visible_events | concat(with=[event]) %}
+        {% if event.extra.show_banner is defined and event.extra.show_banner == true %}
+            {% set_global banner_events = banner_events | concat(with=[event]) %}
         {% endif %}
     {% endfor %}
 
     {# ========== HERO CAROUSEL ========== #}
-    {% if visible_events | length > 0 %}
+    {% if banner_events | length > 0 %}
     <section class="events-hero" data-hero-carousel>
         <div class="hero-carousel-container">
             {# Slides #}
             <div class="hero-slides">
-                {% for event in visible_events %}
+                {% for event in banner_events %}
                 <article class="hero-slide {% if loop.first %}active{% endif %}" data-index="{{ loop.index0 }}">
                     {# Background with parallax #}
-                    <div class="hero-slide-bg {% if not event.extra.images %}no-image{% endif %}">
-                        {% if event.extra.images %}
+                    <div class="hero-slide-bg {% if not event.extra.banner_image and not event.extra.images %}no-image{% endif %}">
+                        {% if event.extra.banner_image %}
+                        <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ event.extra.banner_image) }}" alt="{{ event.title }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
+                        {% elif event.extra.images %}
                         {% set first_image = event.extra.images | first %}
                         <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ first_image) }}" alt="{{ event.title }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
                         {% endif %}
@@ -126,20 +128,20 @@
                     <div class="hero-slide-number">
                         <span class="current">{{ loop.index }}</span>
                         <span class="separator">/</span>
-                        <span class="total">{{ visible_events | length }}</span>
+                        <span class="total">{{ banner_events | length }}</span>
                     </div>
                 </article>
                 {% endfor %}
             </div>
 
             {# Navigation #}
-            {% if visible_events | length > 1 %}
+            {% if banner_events | length > 1 %}
             <div class="hero-navigation">
                 <button class="hero-nav-btn hero-prev" aria-label="Previous slide">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
                 </button>
                 <div class="hero-progress">
-                    {% for event in visible_events %}
+                    {% for event in banner_events %}
                     <button class="hero-progress-item {% if loop.first %}active{% endif %}" data-index="{{ loop.index0 }}" aria-label="{{ event.title }}">
                         <span class="hero-progress-bar"></span>
                         <span class="hero-progress-label">{{ event.title }}</span>
@@ -212,7 +214,7 @@
 
         {# Events Grid #}
         <div class="events-grid" data-events-grid>
-            {% for event in visible_events %}
+            {% for event in all_events %}
             <a href="{{ event.permalink }}" class="event-card"
                data-year="{{ event.date | date(format='%Y') }}"
                data-domain="{{ event.extra.event_type | default(value='other') }}">
