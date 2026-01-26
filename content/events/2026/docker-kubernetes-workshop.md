@@ -6,7 +6,7 @@ template = "events/single.html"
 
 [extra]
 show_banner = true
-banner_image = "events/docker-kubernetes-workshop/banner.jpg"
+banner_image = "images/events/banner.jpg"
 event_type = "workshop"
 status = "upcoming"
 badge = "UPCOMING"

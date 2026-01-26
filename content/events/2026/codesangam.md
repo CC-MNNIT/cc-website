@@ -6,7 +6,7 @@ template = "events/single.html"
 
 [extra]
 show_banner = true
-banner_image = "events/codesangam/banner.svg"
+banner_image = "images/events/codesangam/1.svg"
 event_type = "challenge"
 status = "upcoming"
 badge = "CHALLENGE"

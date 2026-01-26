@@ -6,7 +6,7 @@ template = "events/single.html"
 
 [extra]
 show_banner = true
-banner_image = "events/hack36/banner.svg"
+banner_image = "images/events/hack36/1.svg"
 event_type = "hackathon"
 status = "completed"
 badge = "FLAGSHIP"

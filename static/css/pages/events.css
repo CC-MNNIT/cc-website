@@ -23,7 +23,7 @@
     height: 75vh;
     min-height: 550px;
     max-height: 750px;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     border-radius: 28px;
     overflow: hidden;
 }
@@ -85,14 +85,34 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 0;
+    overflow: hidden;
 }
 
 .hero-slide-bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transform: scale(1.1);
     transition: transform 8s ease-out;
+    display: block;
+}
+
+/* SVG images need special handling */
+.hero-slide-bg img[src$=".svg"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .hero-slide.active .hero-slide-bg img {
@@ -105,6 +125,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
 }
 
 [data-theme="night"] .hero-slide-overlay {
@@ -650,11 +671,12 @@
    2. EVENTS LISTING
    =========================================== */
 .events-listing {
-    margin-top: 2rem;
+    margin-top: 0;
 }
 
 .events-listing-header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+    padding-top: 0.5rem;
 }
 
 .events-listing-title-row {
@@ -2834,7 +2856,7 @@
         min-height: 500px;
         max-height: 650px;
         border-radius: 20px;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
 
     .hero-slide-content {
@@ -2894,75 +2916,168 @@
 /* Large phones / Small tablets */
 @media (max-width: 768px) {
     .events-hero {
-        height: auto;
-        min-height: 85vh;
+        height: 90vh;
+        min-height: 500px;
         max-height: none;
         border-radius: 0;
-        margin: -1rem -1rem 2rem -1rem;
+        margin: -1rem -1rem 1.5rem -1rem;
         width: calc(100% + 2rem);
+    }
+
+    .hero-carousel-container,
+    .hero-slides,
+    .hero-slide {
+        height: 100%;
     }
 
     .hero-slide-content {
         padding: 2rem 1.5rem;
-        padding-bottom: 7rem;
-        align-items: flex-start;
-        justify-content: flex-end;
+        padding-bottom: 8rem;
+        align-items: flex-end;
+        justify-content: flex-start;
+        height: 100%;
+    }
+
+    /* Enhanced overlay for better text readability on mobile */
+    .hero-slide-overlay {
+        background: linear-gradient(
+            to top,
+            rgba(14, 6, 4, 0.85) 0%,
+            rgba(14, 6, 4, 0.6) 30%,
+            rgba(14, 6, 4, 0.3) 60%,
+            rgba(14, 6, 4, 0.1) 100%
+        ) !important;
+        z-index: 1;
+    }
+
+    [data-theme="lofi"] .hero-slide-overlay,
+    [data-theme="light"] .hero-slide-overlay {
+        background: linear-gradient(
+            to top,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.7) 30%,
+            rgba(255, 255, 255, 0.4) 60%,
+            rgba(255, 255, 255, 0.1) 100%
+        ) !important;
+        z-index: 1;
+    }
+
+    .hero-slide-inner {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Ensure image renders on mobile */
+    .hero-slide-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .hero-slide-bg img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        max-width: none;
+        max-height: none;
+        object-fit: cover;
+        object-position: center center;
     }
 
     .hero-slide-badges {
         margin-bottom: 1rem;
+        gap: 0.6rem;
     }
 
     .hero-type-badge,
     .hero-status-badge {
-        padding: 0.4rem 0.75rem;
+        padding: 0.4rem 0.8rem;
         font-size: 0.65rem;
+        letter-spacing: 0.08em;
     }
 
     .hero-slide-title {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
         line-height: 1.15;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.85rem;
+        word-break: break-word;
+        hyphens: auto;
     }
 
     .hero-slide-desc {
         font-size: 0.95rem;
-        line-height: 1.5;
-        -webkit-line-clamp: 3;
+        line-height: 1.6;
         display: -webkit-box;
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
+        max-width: 100%;
     }
 
     .hero-slide-meta {
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-bottom: 1.25rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .hero-meta-item {
-        font-size: 0.85rem;
+        font-size: 0.875rem;
+        gap: 0.5rem;
+    }
+
+    .hero-meta-item svg {
+        width: 18px;
+        height: 18px;
     }
 
     .hero-slide-actions {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         width: 100%;
         gap: 0.75rem;
     }
 
     .hero-btn {
-        width: 100%;
+        flex: 1;
         justify-content: center;
-        padding: 0.875rem 1.5rem;
-        font-size: 0.85rem;
+        padding: 0.95rem 1.25rem;
+        font-size: 0.875rem;
+        min-height: 48px;
+        border-radius: 12px;
+    }
+
+    /* Make secondary button less prominent on mobile */
+    .hero-btn-secondary {
+        flex: 0.8;
     }
 
     .hero-navigation {
         left: 1rem;
         right: 1rem;
-        bottom: 1.25rem;
+        bottom: 1.5rem;
         gap: 0.75rem;
+        backdrop-filter: blur(10px);
+        padding: 0.5rem;
+        border-radius: 12px;
+    }
+
+    [data-theme="night"] .hero-navigation {
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    [data-theme="lofi"] .hero-navigation,
+    [data-theme="light"] .hero-navigation {
+        background: rgba(255, 255, 255, 0.5);
     }
 
     .hero-nav-btn {
@@ -2983,8 +3098,8 @@
     }
 
     .hero-progress-item {
-        width: 28px;
-        height: 3px;
+        width: 32px;
+        height: 3.5px;
     }
 
     .hero-slide-number {
@@ -3185,36 +3300,87 @@
 /* Small phones */
 @media (max-width: 480px) {
     .events-hero {
-        min-height: 90vh;
+        min-height: 92vh;
     }
 
     .hero-slide-content {
-        padding: 1.25rem;
-        padding-bottom: 6rem;
+        padding: 1.5rem 1.25rem;
+        padding-bottom: 7rem;
+        min-height: 92vh;
+    }
+
+    /* Enhanced gradient overlay for better text contrast */
+    .hero-slide-overlay {
+        background: linear-gradient(
+            to top,
+            rgba(14, 6, 4, 0.97) 0%,
+            rgba(14, 6, 4, 0.9) 35%,
+            rgba(14, 6, 4, 0.65) 65%,
+            rgba(14, 6, 4, 0.3) 100%
+        ) !important;
+    }
+
+    [data-theme="lofi"] .hero-slide-overlay,
+    [data-theme="light"] .hero-slide-overlay {
+        background: linear-gradient(
+            to top,
+            rgba(255, 255, 255, 0.99) 0%,
+            rgba(255, 255, 255, 0.95) 35%,
+            rgba(255, 255, 255, 0.8) 65%,
+            rgba(255, 255, 255, 0.4) 100%
+        ) !important;
+    }
+
+    .hero-slide-badges {
+        gap: 0.5rem;
+    }
+
+    .hero-type-badge,
+    .hero-status-badge {
+        padding: 0.35rem 0.7rem;
+        font-size: 0.6rem;
     }
 
     .hero-slide-title {
-        font-size: 1.85rem;
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.02em;
     }
 
     .hero-slide-desc {
-        font-size: 0.9rem;
+        font-size: 0.875rem;
+        line-height: 1.5;
         -webkit-line-clamp: 2;
+        margin-bottom: 1rem;
+    }
+
+    .hero-slide-meta {
+        gap: 0.875rem;
+        margin-bottom: 1.25rem;
     }
 
     .hero-meta-item {
         font-size: 0.8rem;
+        gap: 0.4rem;
     }
 
     .hero-meta-item svg {
-        width: 14px;
-        height: 14px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .hero-slide-actions {
+        flex-direction: column;
+        gap: 0.625rem;
     }
 
     .hero-btn {
-        padding: 0.75rem 1.25rem;
+        width: 100%;
+        flex: none;
+        padding: 0.875rem 1.25rem;
         font-size: 0.8rem;
         border-radius: 10px;
+        min-height: 46px;
     }
 
     .hero-btn svg {
@@ -3222,8 +3388,15 @@
         height: 16px;
     }
 
+    .hero-btn-secondary {
+        flex: none;
+    }
+
     .hero-navigation {
-        bottom: 1rem;
+        bottom: 1.25rem;
+        left: 0.875rem;
+        right: 0.875rem;
+        padding: 0.4rem;
     }
 
     .hero-nav-btn {
@@ -3231,8 +3404,18 @@
         height: 40px;
     }
 
+    .hero-nav-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .hero-progress {
+        gap: 0.35rem;
+    }
+
     .hero-progress-item {
-        width: 24px;
+        width: 28px;
+        height: 3px;
     }
 
     /* Event cards */
@@ -3336,18 +3519,57 @@
 
 /* Extra small phones */
 @media (max-width: 360px) {
+    .events-hero {
+        min-height: 95vh;
+    }
+
+    .hero-slide-content {
+        padding: 1.25rem 1rem;
+        padding-bottom: 6.5rem;
+    }
+
     .hero-slide-title {
-        font-size: 1.6rem;
+        font-size: 1.75rem;
+        letter-spacing: -0.015em;
+    }
+
+    .hero-slide-desc {
+        font-size: 0.825rem;
     }
 
     .hero-slide-badges {
-        gap: 0.5rem;
+        gap: 0.4rem;
     }
 
     .hero-type-badge,
     .hero-status-badge {
         padding: 0.3rem 0.6rem;
-        font-size: 0.6rem;
+        font-size: 0.575rem;
+    }
+
+    .hero-slide-meta {
+        gap: 0.75rem;
+    }
+
+    .hero-meta-item {
+        font-size: 0.75rem;
+    }
+
+    .hero-meta-item svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .hero-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.775rem;
+        min-height: 44px;
+    }
+
+    .hero-navigation {
+        padding: 0.35rem;
+        left: 0.75rem;
+        right: 0.75rem;
     }
 
     .hero-nav-btn {
@@ -3355,8 +3577,14 @@
         height: 36px;
     }
 
+    .hero-nav-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
     .hero-progress-item {
-        width: 20px;
+        width: 24px;
+        height: 2.5px;
     }
 
     .year-hero-year {
@@ -3377,23 +3605,44 @@
 
     .hero-slide-content {
         padding: 1.5rem 2rem;
-        padding-bottom: 5rem;
+        padding-bottom: 5.5rem;
+        min-height: 100vh;
+        justify-content: center;
     }
 
     .hero-slide-title {
         font-size: 2rem;
+        margin-bottom: 0.5rem;
     }
 
     .hero-slide-desc {
         -webkit-line-clamp: 2;
+        font-size: 0.9rem;
+        margin-bottom: 0.875rem;
+    }
+
+    .hero-slide-meta {
+        margin-bottom: 1rem;
+        gap: 1rem;
     }
 
     .hero-slide-actions {
         flex-direction: row;
+        gap: 0.75rem;
     }
 
     .hero-btn {
         width: auto;
+        flex: 1;
+        padding: 0.8rem 1.25rem;
+    }
+
+    .hero-btn-secondary {
+        flex: 0.8;
+    }
+
+    .hero-navigation {
+        bottom: 1.25rem;
     }
 
     .event-hero {
@@ -3403,6 +3652,11 @@
 
 /* Touch device optimizations */
 @media (hover: none) and (pointer: coarse) {
+    /* Improved touch feedback */
+    .event-card {
+        transition: transform 0.15s ease;
+    }
+
     .event-card:active {
         transform: scale(0.98);
     }
@@ -3417,7 +3671,7 @@
         transform: scale(1);
     }
 
-    /* Better touch targets */
+    /* Better touch targets - WCAG AA compliant */
     .hero-nav-btn {
         min-width: 44px;
         min-height: 44px;
@@ -3425,29 +3679,38 @@
 
     .filter-btn {
         min-height: 44px;
-        padding: 0.6rem 1rem;
+        padding: 0.7rem 1.1rem;
     }
 
     .hero-btn {
         min-height: 48px;
     }
 
-    /* Active states for touch */
+    /* Active states for touch with proper feedback */
     .hero-nav-btn:active {
         transform: scale(0.95);
+        transition: transform 0.1s ease;
     }
 
     .filter-btn:active {
         transform: scale(0.97);
+        transition: transform 0.1s ease;
     }
 
     .hero-btn:active {
         transform: scale(0.98);
+        transition: transform 0.1s ease;
     }
 
-    /* Disable hover effects on touch */
+    .hero-progress-item:active {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+    }
+
+    /* Disable hover effects on touch devices */
     .event-card:hover {
         transform: none;
+        box-shadow: none;
     }
 
     .event-card:hover .event-card-visual img {
@@ -3460,6 +3723,25 @@
 
     .gallery-item:hover {
         transform: none;
+    }
+
+    /* Remove hover states on buttons for touch */
+    .hero-btn:hover {
+        transform: none;
+    }
+
+    .hero-nav-btn:hover {
+        transform: none;
+    }
+
+    /* Enhanced tap highlight */
+    * {
+        -webkit-tap-highlight-color: rgba(255, 199, 88, 0.1);
+    }
+
+    [data-theme="lofi"] *,
+    [data-theme="light"] * {
+        -webkit-tap-highlight-color: rgba(25, 118, 210, 0.1);
     }
 }
 
@@ -3478,19 +3760,49 @@
 @supports (padding: max(0px)) {
     @media (max-width: 768px) {
         .events-hero {
-            padding-left: max(1rem, env(safe-area-inset-left));
-            padding-right: max(1rem, env(safe-area-inset-right));
+            padding-left: max(0rem, env(safe-area-inset-left));
+            padding-right: max(0rem, env(safe-area-inset-right));
+        }
+
+        .hero-slide-content {
+            padding-left: max(1.5rem, calc(1.5rem + env(safe-area-inset-left)));
+            padding-right: max(1.5rem, calc(1.5rem + env(safe-area-inset-right)));
         }
 
         .hero-navigation {
-            left: max(1rem, env(safe-area-inset-left));
-            right: max(1rem, env(safe-area-inset-right));
-            bottom: max(1.25rem, env(safe-area-inset-bottom));
+            left: max(1rem, calc(1rem + env(safe-area-inset-left)));
+            right: max(1rem, calc(1rem + env(safe-area-inset-right)));
+            bottom: max(1.5rem, calc(1.5rem + env(safe-area-inset-bottom)));
         }
 
         .event-hero {
-            padding-left: max(1rem, env(safe-area-inset-left));
-            padding-right: max(1rem, env(safe-area-inset-right));
+            padding-left: max(0rem, env(safe-area-inset-left));
+            padding-right: max(0rem, env(safe-area-inset-right));
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-slide-content {
+            padding-left: max(1.25rem, calc(1.25rem + env(safe-area-inset-left)));
+            padding-right: max(1.25rem, calc(1.25rem + env(safe-area-inset-right)));
+        }
+
+        .hero-navigation {
+            left: max(0.875rem, calc(0.875rem + env(safe-area-inset-left)));
+            right: max(0.875rem, calc(0.875rem + env(safe-area-inset-right)));
+            bottom: max(1.25rem, calc(1.25rem + env(safe-area-inset-bottom)));
+        }
+    }
+
+    @media (max-width: 360px) {
+        .hero-slide-content {
+            padding-left: max(1rem, calc(1rem + env(safe-area-inset-left)));
+            padding-right: max(1rem, calc(1rem + env(safe-area-inset-right)));
+        }
+
+        .hero-navigation {
+            left: max(0.75rem, calc(0.75rem + env(safe-area-inset-left)));
+            right: max(0.75rem, calc(0.75rem + env(safe-area-inset-right)));
         }
     }
 }

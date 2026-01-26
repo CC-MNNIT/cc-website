@@ -67,10 +67,10 @@
                     {# Background with parallax #}
                     <div class="hero-slide-bg {% if not event.extra.banner_image and not event.extra.images %}no-image{% endif %}">
                         {% if event.extra.banner_image %}
-                        <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ event.extra.banner_image) }}" alt="{{ event.title }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
+                        <img src="{{ get_url(path=event.extra.banner_image) }}" alt="{{ event.title }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
                         {% elif event.extra.images %}
                         {% set first_image = event.extra.images | first %}
-                        <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ first_image) }}" alt="{{ event.title }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
+                        <img src="{{ get_url(path=first_image) }}" alt="{{ event.title }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
                         {% endif %}
                         <div class="hero-slide-overlay"></div>
                     </div>
