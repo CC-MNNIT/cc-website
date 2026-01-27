@@ -7,7 +7,7 @@ template = "events/single.html"
 [extra]
 show_banner = true
 banner_image = "images/events/banner.jpg"
-event_type = "workshop"
+event_type = "hackathon"
 status = "upcoming"
 badge = "UPCOMING"
 location = "Computer Lab 3, MNNIT"
