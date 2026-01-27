@@ -34,8 +34,8 @@
 &lt;li&gt;Model evaluation&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h2 id=&quot;installation&quot;&gt;Installation&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;pip install numpy pandas scikit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;learn matplotlib
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;pip install numpy pandas scikit-learn matplotlib
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;your-first-ml-model&quot;&gt;Your First ML Model&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll build a simple linear regression model to predict house prices!&lt;&#x2F;p&gt;
 &lt;p&gt;Full tutorial coming soon...&lt;&#x2F;p&gt;

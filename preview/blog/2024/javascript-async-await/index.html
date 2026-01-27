@@ -499,23 +499,23 @@ document.addEventListener('DOMContentLoaded', function() {
     <h2 id="async-javascript-made-easy">Async JavaScript Made Easy</h2>
 <p>Async/await revolutionized how we write asynchronous code in JavaScript.</p>
 <h2 id="before-async-await">Before Async/Await</h2>
-<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="font-style:italic;color:#5c6773;">// Callback Hell
-</span><span style="color:#ffd580;">getUserData</span><span>(userId</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffa759;">function</span><span>(</span><span style="color:#ffcc66;">user</span><span>) {
-</span><span>  </span><span style="color:#ffd580;">getOrders</span><span>(user</span><span style="color:#f29e74;">.</span><span>id</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffa759;">function</span><span>(</span><span style="color:#ffcc66;">orders</span><span>) {
-</span><span>    </span><span style="color:#ffd580;">getOrderDetails</span><span>(orders[</span><span style="color:#ffcc66;">0</span><span>]</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffa759;">function</span><span>(</span><span style="color:#ffcc66;">details</span><span>) {
-</span><span>      </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>(details)</span><span style="color:#ccc9c2cc;">;
-</span><span>    })</span><span style="color:#ccc9c2cc;">;
-</span><span>  })</span><span style="color:#ccc9c2cc;">;
-</span><span>})</span><span style="color:#ccc9c2cc;">;
-</span></code></pre>
+<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">&#x2F;&#x2F; Callback Hell
+getUserData(userId, function(user) {
+  getOrders(user.id, function(orders) {
+    getOrderDetails(orders[0], function(details) {
+      console.log(details);
+    });
+  });
+});
+</code></pre>
 <h2 id="with-async-await">With Async/Await</h2>
-<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">async function </span><span style="color:#ffd580;">getUserOrders</span><span>(</span><span style="color:#ffcc66;">userId</span><span>) {
-</span><span>  </span><span style="color:#ffa759;">const </span><span>user </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">await </span><span style="color:#ffd580;">getUserData</span><span>(userId)</span><span style="color:#ccc9c2cc;">;
-</span><span>  </span><span style="color:#ffa759;">const </span><span>orders </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">await </span><span style="color:#ffd580;">getOrders</span><span>(user</span><span style="color:#f29e74;">.</span><span>id)</span><span style="color:#ccc9c2cc;">;
-</span><span>  </span><span style="color:#ffa759;">const </span><span>details </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">await </span><span style="color:#ffd580;">getOrderDetails</span><span>(orders[</span><span style="color:#ffcc66;">0</span><span>])</span><span style="color:#ccc9c2cc;">;
-</span><span>  </span><span style="color:#ffa759;">return </span><span>details</span><span style="color:#ccc9c2cc;">;
-</span><span>}
-</span></code></pre>
+<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">async function getUserOrders(userId) {
+  const user = await getUserData(userId);
+  const orders = await getOrders(user.id);
+  const details = await getOrderDetails(orders[0]);
+  return details;
+}
+</code></pre>
 <p>Much cleaner!</p>
 
 

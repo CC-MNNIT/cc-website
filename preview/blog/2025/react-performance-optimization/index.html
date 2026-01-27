@@ -501,18 +501,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <h2 id="key-techniques">Key Techniques</h2>
 <h3 id="1-react-memo">1. React.memo</h3>
 <p>Prevent unnecessary re-renders:</p>
-<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">const </span><span>ExpensiveComponent </span><span style="color:#f29e74;">= </span><span>React</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">memo</span><span>(({ </span><span style="color:#ffcc66;">data </span><span>}) </span><span style="color:#ffa759;">=&gt; </span><span>{
-</span><span>  </span><span style="color:#ffa759;">return </span><span>&lt;</span><span style="color:#73d0ff;">div</span><span>&gt;{data}</span><span style="color:#f29e74;">&lt;/</span><span>div</span><span style="color:#f29e74;">&gt;</span><span style="color:#ccc9c2cc;">;
-</span><span>})</span><span style="color:#ccc9c2cc;">;
-</span></code></pre>
+<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">const ExpensiveComponent = React.memo(({ data }) =&gt; {
+  return &lt;div&gt;{data}&lt;&#x2F;div&gt;;
+});
+</code></pre>
 <h3 id="2-usememo-usecallback">2. useMemo &amp; useCallback</h3>
 <p>Memoize expensive computations:</p>
-<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">const </span><span>memoizedValue </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useMemo</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span style="color:#ffd580;">computeExpensive</span><span>(a</span><span style="color:#ccc9c2cc;">, </span><span>b)</span><span style="color:#ccc9c2cc;">, </span><span>[a</span><span style="color:#ccc9c2cc;">, </span><span>b])</span><span style="color:#ccc9c2cc;">;
-</span><span style="color:#ffa759;">const </span><span>memoizedCallback </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useCallback</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span style="color:#ffd580;">doSomething</span><span>(a)</span><span style="color:#ccc9c2cc;">, </span><span>[a])</span><span style="color:#ccc9c2cc;">;
-</span></code></pre>
+<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">const memoizedValue = useMemo(() =&gt; computeExpensive(a, b), [a, b]);
+const memoizedCallback = useCallback(() =&gt; doSomething(a), [a]);
+</code></pre>
 <h3 id="3-code-splitting">3. Code Splitting</h3>
-<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">const </span><span>LazyComponent </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">lazy</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span style="color:#f29e74;">import</span><span>(</span><span style="color:#bae67e;">&#39;./LazyComponent&#39;</span><span>))</span><span style="color:#ccc9c2cc;">;
-</span></code></pre>
+<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">const LazyComponent = lazy(() =&gt; import(&#x27;.&#x2F;LazyComponent&#x27;));
+</code></pre>
 <h3 id="4-virtual-lists">4. Virtual Lists</h3>
 <p>Use react-window for long lists.</p>
 <h2 id="profiling-tools">Profiling Tools</h2>

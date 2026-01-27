@@ -280,6 +280,18 @@
     border-color: rgba(168, 85, 247, 0.4);
 }
 
+[data-theme="night"] .hero-type-badge.buildfest {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(79, 70, 229, 0.2) 100%);
+    color: #818CF8;
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+[data-theme="night"] .hero-type-badge.open-source {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.2) 0%, rgba(13, 148, 136, 0.2) 100%);
+    color: #2DD4BF;
+    border-color: rgba(20, 184, 166, 0.4);
+}
+
 [data-theme="night"] .hero-status-badge {
     background: rgba(255, 255, 255, 0.1);
     color: #FAECEC;
@@ -317,6 +329,20 @@
     background: rgba(14, 116, 144, 0.1);
     color: #0E7490;
     border-color: rgba(14, 116, 144, 0.25);
+}
+
+[data-theme="lofi"] .hero-type-badge.buildfest,
+[data-theme="light"] .hero-type-badge.buildfest {
+    background: rgba(79, 70, 229, 0.1);
+    color: #4F46E5;
+    border-color: rgba(79, 70, 229, 0.25);
+}
+
+[data-theme="lofi"] .hero-type-badge.open-source,
+[data-theme="light"] .hero-type-badge.open-source {
+    background: rgba(13, 148, 136, 0.1);
+    color: #0F766E;
+    border-color: rgba(13, 148, 136, 0.25);
 }
 
 [data-theme="lofi"] .hero-status-badge,
@@ -659,8 +685,13 @@
 }
 
 @keyframes progressFill {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 .hero-progress-label {
@@ -969,6 +1000,16 @@
     border-color: rgba(6, 182, 212, 0.4);
 }
 
+[data-theme="night"] .event-card-type.buildfest {
+    color: #818CF8;
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+[data-theme="night"] .event-card-type.open-source {
+    color: #2DD4BF;
+    border-color: rgba(20, 184, 166, 0.4);
+}
+
 [data-theme="lofi"] .event-card-type,
 [data-theme="light"] .event-card-type {
     background: rgba(255, 255, 255, 0.9);
@@ -986,6 +1027,82 @@
 [data-theme="light"] .event-card-type.challenge {
     color: #0E7490;
     border-color: rgba(14, 116, 144, 0.25);
+}
+
+/* Card Status Badge */
+.event-card-status {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+}
+
+[data-theme="night"] .event-card-status {
+    background: rgba(0, 0, 0, 0.6);
+    color: #FAECEC;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="night"] .event-card-status.upcoming {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ADE80;
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+[data-theme="night"] .event-card-status.ongoing {
+    background: rgba(239, 68, 68, 0.15);
+    color: #F87171;
+    border-color: rgba(239, 68, 68, 0.4);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+}
+
+[data-theme="night"] .event-card-status.completed {
+    background: rgba(100, 116, 139, 0.2);
+    color: #94A3B8;
+    border-color: rgba(100, 116, 139, 0.3);
+}
+
+[data-theme="lofi"] .event-card-status,
+[data-theme="light"] .event-card-status {
+    background: rgba(255, 255, 255, 0.9);
+    color: #64748b;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="lofi"] .event-card-status.upcoming,
+[data-theme="light"] .event-card-status.upcoming {
+    background: rgba(34, 197, 94, 0.1);
+    color: #15803d;
+    border-color: rgba(22, 163, 74, 0.25);
+}
+
+[data-theme="lofi"] .event-card-status.ongoing,
+[data-theme="light"] .event-card-status.ongoing {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    border-color: rgba(220, 38, 38, 0.25);
+}
+
+[data-theme="lofi"] .event-card-status.completed,
+[data-theme="light"] .event-card-status.completed {
+    background: rgba(0, 0, 0, 0.05);
+    color: #64748b;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="lofi"] .event-card-type.buildfest,
+[data-theme="light"] .event-card-type.buildfest {
+    color: #4F46E5;
+    border-color: rgba(79, 70, 229, 0.25);
+}
+
+[data-theme="lofi"] .event-card-type.open-source,
+[data-theme="light"] .event-card-type.open-source {
+    color: #0F766E;
+    border-color: rgba(13, 148, 136, 0.25);
 }
 
 /* External Link Indicator */
@@ -1079,6 +1196,7 @@
     flex: 1;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -1392,6 +1510,18 @@
     border-color: rgba(6, 182, 212, 0.4);
 }
 
+[data-theme="night"] .event-type-badge.buildfest {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(79, 70, 229, 0.2) 100%);
+    color: #818CF8;
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+[data-theme="night"] .event-type-badge.open-source {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.2) 0%, rgba(13, 148, 136, 0.2) 100%);
+    color: #2DD4BF;
+    border-color: rgba(20, 184, 166, 0.4);
+}
+
 [data-theme="night"] .event-status-badge {
     background: rgba(255, 255, 255, 0.1);
     color: #FAECEC;
@@ -1434,6 +1564,20 @@
     background: rgba(14, 116, 144, 0.1);
     color: #0E7490;
     border-color: rgba(14, 116, 144, 0.25);
+}
+
+[data-theme="lofi"] .event-type-badge.buildfest,
+[data-theme="light"] .event-type-badge.buildfest {
+    background: rgba(79, 70, 229, 0.1);
+    color: #4F46E5;
+    border-color: rgba(79, 70, 229, 0.25);
+}
+
+[data-theme="lofi"] .event-type-badge.open-source,
+[data-theme="light"] .event-type-badge.open-source {
+    background: rgba(13, 148, 136, 0.1);
+    color: #0F766E;
+    border-color: rgba(13, 148, 136, 0.25);
 }
 
 [data-theme="lofi"] .event-status-badge,
@@ -2005,9 +2149,17 @@
     background: linear-gradient(to top, rgba(25, 118, 210, 0.08) 0%, rgba(25, 118, 210, 0.02) 100%);
 }
 
-.podium-place.place-1 .podium-stand { height: 100px; }
-.podium-place.place-2 .podium-stand { height: 70px; }
-.podium-place.place-3 .podium-stand { height: 50px; }
+.podium-place.place-1 .podium-stand {
+    height: 100px;
+}
+
+.podium-place.place-2 .podium-stand {
+    height: 70px;
+}
+
+.podium-place.place-3 .podium-stand {
+    height: 50px;
+}
 
 /* Honorable Mentions */
 .winners-list {
@@ -2940,25 +3092,21 @@
 
     /* Enhanced overlay for better text readability on mobile */
     .hero-slide-overlay {
-        background: linear-gradient(
-            to top,
-            rgba(14, 6, 4, 0.85) 0%,
-            rgba(14, 6, 4, 0.6) 30%,
-            rgba(14, 6, 4, 0.3) 60%,
-            rgba(14, 6, 4, 0.1) 100%
-        ) !important;
+        background: linear-gradient(to top,
+                rgba(14, 6, 4, 0.85) 0%,
+                rgba(14, 6, 4, 0.6) 30%,
+                rgba(14, 6, 4, 0.3) 60%,
+                rgba(14, 6, 4, 0.1) 100%) !important;
         z-index: 1;
     }
 
     [data-theme="lofi"] .hero-slide-overlay,
     [data-theme="light"] .hero-slide-overlay {
-        background: linear-gradient(
-            to top,
-            rgba(255, 255, 255, 0.9) 0%,
-            rgba(255, 255, 255, 0.7) 30%,
-            rgba(255, 255, 255, 0.4) 60%,
-            rgba(255, 255, 255, 0.1) 100%
-        ) !important;
+        background: linear-gradient(to top,
+                rgba(255, 255, 255, 0.9) 0%,
+                rgba(255, 255, 255, 0.7) 30%,
+                rgba(255, 255, 255, 0.4) 60%,
+                rgba(255, 255, 255, 0.1) 100%) !important;
         z-index: 1;
     }
 
@@ -3311,24 +3459,20 @@
 
     /* Enhanced gradient overlay for better text contrast */
     .hero-slide-overlay {
-        background: linear-gradient(
-            to top,
-            rgba(14, 6, 4, 0.97) 0%,
-            rgba(14, 6, 4, 0.9) 35%,
-            rgba(14, 6, 4, 0.65) 65%,
-            rgba(14, 6, 4, 0.3) 100%
-        ) !important;
+        background: linear-gradient(to top,
+                rgba(14, 6, 4, 0.97) 0%,
+                rgba(14, 6, 4, 0.9) 35%,
+                rgba(14, 6, 4, 0.65) 65%,
+                rgba(14, 6, 4, 0.3) 100%) !important;
     }
 
     [data-theme="lofi"] .hero-slide-overlay,
     [data-theme="light"] .hero-slide-overlay {
-        background: linear-gradient(
-            to top,
-            rgba(255, 255, 255, 0.99) 0%,
-            rgba(255, 255, 255, 0.95) 35%,
-            rgba(255, 255, 255, 0.8) 65%,
-            rgba(255, 255, 255, 0.4) 100%
-        ) !important;
+        background: linear-gradient(to top,
+                rgba(255, 255, 255, 0.99) 0%,
+                rgba(255, 255, 255, 0.95) 35%,
+                rgba(255, 255, 255, 0.8) 65%,
+                rgba(255, 255, 255, 0.4) 100%) !important;
     }
 
     .hero-slide-badges {
@@ -3652,6 +3796,7 @@
 
 /* Touch device optimizations */
 @media (hover: none) and (pointer: coarse) {
+
     /* Improved touch feedback */
     .event-card {
         transition: transform 0.15s ease;

@@ -512,13 +512,13 @@ document.addEventListener('DOMContentLoaded', function() {
 ✅ Responsive design<br />
 ✅ Fast load time</p>
 <h2 id="service-worker-example">Service Worker Example</h2>
-<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span>self</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">addEventListener</span><span>(</span><span style="color:#bae67e;">&#39;fetch&#39;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">event </span><span style="color:#ffa759;">=&gt; </span><span>{
-</span><span>  event</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">respondWith</span><span>(
-</span><span>    caches</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">match</span><span>(event</span><span style="color:#f29e74;">.</span><span>request)
-</span><span>      </span><span style="color:#f29e74;">.</span><span style="color:#f28779;">then</span><span>(</span><span style="color:#ffcc66;">response </span><span style="color:#ffa759;">=&gt; </span><span>response </span><span style="color:#f29e74;">|| </span><span style="color:#ffd580;">fetch</span><span>(event</span><span style="color:#f29e74;">.</span><span>request))
-</span><span>  )</span><span style="color:#ccc9c2cc;">;
-</span><span>})</span><span style="color:#ccc9c2cc;">;
-</span></code></pre>
+<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">self.addEventListener(&#x27;fetch&#x27;, event =&gt; {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response =&gt; response || fetch(event.request))
+  );
+});
+</code></pre>
 <p>Full implementation guide coming next week!</p>
 
 

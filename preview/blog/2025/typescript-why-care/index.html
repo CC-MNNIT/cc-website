@@ -506,20 +506,20 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><strong>Documentation</strong>: Types serve as inline docs</li>
 </ol>
 <h2 id="from-javascript-to-typescript">From JavaScript to TypeScript</h2>
-<pre data-lang="typescript" style="background-color:#212733;color:#ccc9c2;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="font-style:italic;color:#5c6773;">// JavaScript
-</span><span style="color:#ffa759;">function </span><span style="color:#ffd580;">add</span><span>(</span><span style="color:#ffcc66;">a</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">b</span><span>) {
-</span><span>  </span><span style="color:#ffa759;">return </span><span>a </span><span style="color:#f29e74;">+ </span><span>b</span><span style="color:#ccc9c2cc;">;
-</span><span>}
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;">// TypeScript
-</span><span style="color:#ffa759;">function </span><span style="color:#ffd580;">add</span><span>(</span><span style="color:#ffcc66;">a</span><span style="color:#f29e74;">: </span><span style="font-style:italic;color:#5ccfe6;">number</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">b</span><span style="color:#f29e74;">: </span><span style="font-style:italic;color:#5ccfe6;">number</span><span>)</span><span style="color:#f29e74;">: </span><span style="font-style:italic;color:#5ccfe6;">number </span><span>{
-</span><span>  </span><span style="color:#ffa759;">return </span><span>a </span><span style="color:#f29e74;">+ </span><span>b</span><span style="color:#ccc9c2cc;">;
-</span><span>}
-</span></code></pre>
+<pre data-lang="typescript" class="language-typescript "><code class="language-typescript" data-lang="typescript">&#x2F;&#x2F; JavaScript
+function add(a, b) {
+  return a + b;
+}
+
+&#x2F;&#x2F; TypeScript
+function add(a: number, b: number): number {
+  return a + b;
+}
+</code></pre>
 <h2 id="getting-started">Getting Started</h2>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">npm</span><span> install</span><span style="color:#ffcc66;"> -g</span><span> typescript
-</span><span style="color:#ffd580;">tsc</span><span style="color:#ffcc66;"> --init
-</span></code></pre>
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">npm install -g typescript
+tsc --init
+</code></pre>
 <p>More examples and patterns coming soon!</p>
 
 

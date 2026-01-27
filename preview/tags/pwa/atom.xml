@@ -39,13 +39,13 @@
 ✅ Responsive design&lt;br &#x2F;&gt;
 ✅ Fast load time&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;service-worker-example&quot;&gt;Service Worker Example&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;addEventListener&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;fetch&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;event &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;respondWith&lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    caches&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;match&lt;&#x2F;span&gt;&lt;span&gt;(event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;request)
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;|| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;fetch&lt;&#x2F;span&gt;&lt;span&gt;(event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;request))
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;self.addEventListener(&amp;#x27;fetch&amp;#x27;, event =&amp;gt; {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response =&amp;gt; response || fetch(event.request))
+  );
+});
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Full implementation guide coming next week!&lt;&#x2F;p&gt;
 </content>
         

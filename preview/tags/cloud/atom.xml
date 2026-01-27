@@ -35,14 +35,14 @@
 &lt;li&gt;&lt;strong&gt;Docker Hub&lt;&#x2F;strong&gt;: Repository for images&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;your-first-dockerfile&quot;&gt;Your First Dockerfile&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;dockerfile&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; node:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;16-alpine
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;WORKDIR &lt;&#x2F;span&gt;&lt;span&gt;&#x2F;app
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; package*.json .&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;RUN &lt;&#x2F;span&gt;&lt;span&gt;npm install
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; . .
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;EXPOSE &lt;&#x2F;span&gt;&lt;span&gt;3000
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;CMD &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;npm&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;start&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;dockerfile&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;FROM node:16-alpine
+WORKDIR &amp;#x2F;app
+COPY package*.json .&amp;#x2F;
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD [&amp;quot;npm&amp;quot;, &amp;quot;start&amp;quot;]
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll deploy this to AWS ECS in the next tutorial!&lt;&#x2F;p&gt;
 </content>

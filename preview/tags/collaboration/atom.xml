@@ -27,12 +27,12 @@
 &lt;p&gt;Working in a team? These Git best practices will save you from merge conflicts and confusion.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;key-practices&quot;&gt;Key Practices&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-meaningful-commit-messages&quot;&gt;1. Meaningful Commit Messages&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Bad
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; commit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -m &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;fixed stuff&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Good
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; commit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -m &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;fix: resolve authentication bug in login flow&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# Bad
+git commit -m &amp;quot;fixed stuff&amp;quot;
+
+# Good
+git commit -m &amp;quot;fix: resolve authentication bug in login flow&amp;quot;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;2-branch-naming-convention&quot;&gt;2. Branch Naming Convention&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;feature&#x2F;user-authentication&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;

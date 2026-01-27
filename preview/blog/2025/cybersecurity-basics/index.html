@@ -502,12 +502,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Security isn't optional. Learn to protect your apps from day one.</p>
 <h2 id="common-vulnerabilities">Common Vulnerabilities</h2>
 <h3 id="1-sql-injection">1. SQL Injection</h3>
-<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="font-style:italic;color:#5c6773;">// Vulnerable
-</span><span>db</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">query</span><span>(</span><span style="color:#bae67e;">`SELECT * FROM users WHERE id = ${</span><span>userId</span><span style="color:#bae67e;">}`</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;">// Safe
-</span><span>db</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">query</span><span>(</span><span style="color:#bae67e;">&#39;SELECT * FROM users WHERE id = ?&#39;</span><span style="color:#ccc9c2cc;">, </span><span>[userId])</span><span style="color:#ccc9c2cc;">;
-</span></code></pre>
+<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">&#x2F;&#x2F; Vulnerable
+db.query(`SELECT * FROM users WHERE id = ${userId}`);
+
+&#x2F;&#x2F; Safe
+db.query(&#x27;SELECT * FROM users WHERE id = ?&#x27;, [userId]);
+</code></pre>
 <h3 id="2-xss-cross-site-scripting">2. XSS (Cross-Site Scripting)</h3>
 <p>Always sanitize user input before rendering.</p>
 <h3 id="3-csrf-cross-site-request-forgery">3. CSRF (Cross-Site Request Forgery)</h3>

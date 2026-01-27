@@ -5,12 +5,12 @@
     <link rel="self" type="application/atom+xml" href="/cc-website/preview/atom.xml"/>
     <link rel="alternate" type="text/html" href="/cc-website/preview/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-02-10T00:00:00+00:00</updated>
+    <updated>2026-01-07T00:00:00+00:00</updated>
     <id>/cc-website/preview/atom.xml</id>
     <entry xml:lang="en">
-        <title>Codesangam</title>
-        <published>2026-02-10T00:00:00+00:00</published>
-        <updated>2026-02-10T00:00:00+00:00</updated>
+        <title>Weekend of Code 2026</title>
+        <published>2026-01-07T00:00:00+00:00</published>
+        <updated>2026-01-07T00:00:00+00:00</updated>
         
         <author>
           <name>
@@ -20,41 +20,26 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2026/codesangam/"/>
-        <id>/cc-website/preview/events/2026/codesangam/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2026/weekend-of-code/"/>
+        <id>/cc-website/preview/events/2026/weekend-of-code/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/2026/codesangam/">&lt;h2 id=&quot;about-codesangam&quot;&gt;About Codesangam&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Codesangam&lt;&#x2F;strong&gt; is a 2-week development challenge that brings together creativity and code. Build real-world projects, collaborate with peers, and showcase your skills to the community.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;challenge-format&quot;&gt;Challenge Format&lt;&#x2F;h3&gt;
+        <content type="html" xml:base="/cc-website/preview/events/2026/weekend-of-code/">&lt;h2 id=&quot;about-weekend-of-code-2026&quot;&gt;About Weekend of Code 2026&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Weekend of Code&lt;&#x2F;strong&gt; is the annual internal hackathon of MNNIT Allahabad, designed to kickstart the coding journey for freshers and provide a platform for seniors to showcase their development skills.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h3&gt;
+&lt;p&gt;This year, we are expecting over &lt;strong&gt;500+ participants&lt;&#x2F;strong&gt; to join us for a weekend of intense coding, learning, and fun.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Duration:&lt;&#x2F;strong&gt; 2 weeks of intensive development&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Teams:&lt;&#x2F;strong&gt; Solo or team participation (max 4 members)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Themes:&lt;&#x2F;strong&gt; Different themes each edition&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Evaluation:&lt;&#x2F;strong&gt; Based on innovation, execution, and impact&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;DevJam&lt;&#x2F;strong&gt; - Development Hackathon: Build innovative web, app, or system-level solutions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Turing&#x27;s Playground&lt;&#x2F;strong&gt; - AI&#x2F;ML Hackathon: Solve real-world problems using machine learning and AI.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;CodeStart&lt;&#x2F;strong&gt; - Competitive Programming: Test your algorithmic skills in an ICPC-style contest.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;timeline&quot;&gt;Timeline&lt;&#x2F;h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Week 1:&lt;&#x2F;strong&gt; Project ideation and development&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Week 2:&lt;&#x2F;strong&gt; Refinement and submission&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Final Day:&lt;&#x2F;strong&gt; Presentations and judging&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;h3 id=&quot;why-participate&quot;&gt;Why Participate&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Build portfolio-worthy projects&lt;&#x2F;li&gt;
-&lt;li&gt;Learn by doing with real-world challenges&lt;&#x2F;li&gt;
-&lt;li&gt;Get feedback from experienced developers&lt;&#x2F;li&gt;
-&lt;li&gt;Win exciting prizes worth Rs. 75,000&lt;&#x2F;li&gt;
-&lt;li&gt;Network with developers from across India&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;registration&quot;&gt;Registration&lt;&#x2F;h3&gt;
-&lt;p&gt;Registration opens on &lt;strong&gt;January 15, 2026&lt;&#x2F;strong&gt;. Visit &lt;a href=&quot;https:&#x2F;&#x2F;codesangam.com&quot;&gt;codesangam.com&lt;&#x2F;a&gt; for registration and updates.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
     <entry xml:lang="en">
-        <title>Docker &amp; Kubernetes Fundamentals Workshop</title>
-        <published>2026-01-05T00:00:00+00:00</published>
-        <updated>2026-01-05T00:00:00+00:00</updated>
+        <title>OPC</title>
+        <published>2025-12-30T00:00:00+00:00</published>
+        <updated>2025-12-30T00:00:00+00:00</updated>
         
         <author>
           <name>
@@ -64,142 +49,36 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2026/docker-kubernetes-workshop/"/>
-        <id>/cc-website/preview/events/2026/docker-kubernetes-workshop/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/opc/"/>
+        <id>/cc-website/preview/events/2025/opc/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/2026/docker-kubernetes-workshop/">&lt;h2 id=&quot;workshop-overview&quot;&gt;Workshop Overview&lt;&#x2F;h2&gt;
-&lt;p&gt;Learn the fundamentals of &lt;strong&gt;Docker and Kubernetes&lt;&#x2F;strong&gt; in this hands-on 3-hour workshop! Whether you&#x27;re new to containerization or looking to strengthen your DevOps skills, this workshop will give you practical experience with industry-standard tools.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;what-you-ll-learn&quot;&gt;What You&#x27;ll Learn&lt;&#x2F;h3&gt;
+        <content type="html" xml:base="/cc-website/preview/events/2025/opc/">&lt;h1 id=&quot;write-the-full-details-of-the-event-below-using-markdown&quot;&gt;Write the full details of the event below using Markdown.&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;about-opc&quot;&gt;About OPC&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;OPC (Online Programming Contest)&lt;&#x2F;strong&gt; is a competitive coding event organized by the Computer Coding Club to challenge problem-solving skills, logical thinking, and coding speed. It brings together programmers of all levels to compete, learn, and push their limits in a high-energy contest environment.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-makes-opc-special&quot;&gt;What Makes OPC Special&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Docker Basics&lt;&#x2F;strong&gt;: Containers, images, Dockerfiles, and Docker Compose&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Containerizing Applications&lt;&#x2F;strong&gt;: Turn any application into a Docker container&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-Container Apps&lt;&#x2F;strong&gt;: Connect multiple containers using Docker Compose&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Kubernetes Introduction&lt;&#x2F;strong&gt;: Pods, services, deployments, and basic orchestration&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Real-World Use Cases&lt;&#x2F;strong&gt;: When and why to use containers in production&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Real Competitive Experience&lt;&#x2F;strong&gt; – Problems inspired by real CP platforms&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;High-Intensity Environment&lt;&#x2F;strong&gt; – Time-bound challenges that test accuracy &amp;amp; speed&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Open for All Skill Levels&lt;&#x2F;strong&gt; – Beginners to advanced coders&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Recognition &amp;amp; Rankings&lt;&#x2F;strong&gt; – Performance-based leaderboard&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Community Driven&lt;&#x2F;strong&gt; – Connect with fellow coders through CC Club&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;One Last Battle of the Year&lt;&#x2F;strong&gt; – End 2025 on a high note&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;workshop-format&quot;&gt;Workshop Format&lt;&#x2F;h3&gt;
-&lt;p&gt;This is a &lt;strong&gt;hands-on, interactive workshop&lt;&#x2F;strong&gt;. You&#x27;ll:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow along with live coding demonstrations&lt;&#x2F;li&gt;
-&lt;li&gt;Complete practical exercises on your own laptop&lt;&#x2F;li&gt;
-&lt;li&gt;Build and deploy containerized applications&lt;&#x2F;li&gt;
-&lt;li&gt;Ask questions and get help from the instructor&lt;&#x2F;li&gt;
-&lt;li&gt;Take home complete code examples and reference materials&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;2:00 PM - 2:15 PM&lt;&#x2F;strong&gt;: Introduction and Setup Check&lt;br &#x2F;&gt;
-&lt;strong&gt;2:15 PM - 3:00 PM&lt;&#x2F;strong&gt;: Docker Fundamentals&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;What are containers?&lt;&#x2F;li&gt;
-&lt;li&gt;Docker architecture&lt;&#x2F;li&gt;
-&lt;li&gt;Creating your first container&lt;&#x2F;li&gt;
-&lt;li&gt;Writing Dockerfiles&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;3:00 PM - 3:15 PM&lt;&#x2F;strong&gt;: Break ☕&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;3:15 PM - 4:00 PM&lt;&#x2F;strong&gt;: Docker Compose &amp;amp; Multi-Container Apps&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Docker Compose basics&lt;&#x2F;li&gt;
-&lt;li&gt;Building a full-stack app with Docker&lt;&#x2F;li&gt;
-&lt;li&gt;Networking between containers&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;4:00 PM - 4:45 PM&lt;&#x2F;strong&gt;: Introduction to Kubernetes&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Why Kubernetes?&lt;&#x2F;li&gt;
-&lt;li&gt;Pods, services, and deployments&lt;&#x2F;li&gt;
-&lt;li&gt;Deploying your first app to Kubernetes&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;4:45 PM - 5:00 PM&lt;&#x2F;strong&gt;: Q&amp;amp;A and Resources&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Required&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Laptop (Windows&#x2F;Mac&#x2F;Linux) with admin access&lt;&#x2F;li&gt;
-&lt;li&gt;Docker Desktop installed (&lt;a href=&quot;https:&#x2F;&#x2F;docs.docker.com&#x2F;get-docker&#x2F;&quot;&gt;Installation Guide&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Basic command line knowledge&lt;&#x2F;li&gt;
-&lt;li&gt;Text editor (VS Code recommended)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Recommended&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Basic understanding of web applications&lt;&#x2F;li&gt;
-&lt;li&gt;Familiarity with command line tools&lt;&#x2F;li&gt;
-&lt;li&gt;GitHub account (for accessing code examples)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;No prior Docker&#x2F;Kubernetes experience needed!&lt;&#x2F;strong&gt; We&#x27;ll start from the basics.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;installation-instructions&quot;&gt;Installation Instructions&lt;&#x2F;h2&gt;
-&lt;p&gt;Please install Docker Desktop &lt;strong&gt;before the workshop&lt;&#x2F;strong&gt; to save time:&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;windows-mac&quot;&gt;Windows&#x2F;Mac&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;&#x2F;h3&gt;
 &lt;ol&gt;
-&lt;li&gt;Download Docker Desktop from &lt;a href=&quot;https:&#x2F;&#x2F;www.docker.com&#x2F;products&#x2F;docker-desktop&#x2F;&quot;&gt;docker.com&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Run the installer&lt;&#x2F;li&gt;
-&lt;li&gt;Verify installation: Open terminal and run &lt;code&gt;docker --version&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Competitive Programming&lt;&#x2F;strong&gt; - Algorithms and problem solving.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Logic &amp;amp; Analytical Thinking&lt;&#x2F;strong&gt; - Logical and analytical reasoning&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Skill Building &amp;amp; Consistency&lt;&#x2F;strong&gt; - Daily practice and consistency&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Time Management&lt;&#x2F;strong&gt; – Solving problems accurately under strict time constraints.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Coding Speed &amp;amp; Accuracy&lt;&#x2F;strong&gt; - Writing correct and optimized code quickly.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Real Contest Experience&lt;&#x2F;strong&gt; - Exposure to competitive programming environments&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Learning Through Challenges&lt;&#x2F;strong&gt; - Improving by tackling diverse and tricky problems.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;h3 id=&quot;linux&quot;&gt;Linux&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Ubuntu&#x2F;Debian
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -fsSL&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;get.docker.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -o&lt;&#x2F;span&gt;&lt;span&gt; get-docker.sh
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sh get-docker.sh
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; usermod&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -aG&lt;&#x2F;span&gt;&lt;span&gt; docker $USER
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;&lt;strong&gt;Having installation issues?&lt;&#x2F;strong&gt; Join our Discord #workshop-help channel or come 15 minutes early for setup assistance.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;about-the-instructor&quot;&gt;About the Instructor&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Rahul Kumar&lt;&#x2F;strong&gt; is a DevOps Engineer at TechCorp with 5 years of experience building and managing containerized infrastructure. He&#x27;s deployed production systems serving millions of users and is passionate about making DevOps accessible to everyone.&lt;&#x2F;p&gt;
-&lt;p&gt;Previously a CC Club member (Alumni 2020), Rahul has conducted 10+ workshops and mentored students in cloud technologies.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;what-to-bring&quot;&gt;What to Bring&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;stats-from-2025-edition&quot;&gt;Stats from 2025 Edition&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;💻 Laptop with Docker installed&lt;&#x2F;li&gt;
-&lt;li&gt;🔌 Charger (important!)&lt;&#x2F;li&gt;
-&lt;li&gt;📝 Notebook for taking notes (optional)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;240+&lt;&#x2F;strong&gt; Participants&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;2.5&lt;&#x2F;strong&gt; hours of coding&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Provided&lt;&#x2F;strong&gt;: Refreshments, workshop materials, reference cheat sheets&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;registration&quot;&gt;Registration&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Limited to 50 participants&lt;&#x2F;strong&gt; - Register soon!&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Prerequisites Check&lt;&#x2F;strong&gt;: We&#x27;ll send a pre-workshop email with setup instructions. Please complete the setup beforehand.&lt;&#x2F;p&gt;
-&lt;div class=&quot;text-center my-8&quot;&gt;
-    &lt;a href=&quot;https:&#x2F;&#x2F;forms.gle&#x2F;your-workshop-form&quot; class=&quot;btn btn-primary btn-lg&quot; target=&quot;_blank&quot;&gt;
-        Register for Workshop →
-    &lt;&#x2F;a&gt;
-&lt;&#x2F;div&gt;
-&lt;h2 id=&quot;workshop-materials&quot;&gt;Workshop Materials&lt;&#x2F;h2&gt;
-&lt;p&gt;After the workshop, you&#x27;ll receive:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Complete code examples and Dockerfiles&lt;&#x2F;li&gt;
-&lt;li&gt;Kubernetes configuration files&lt;&#x2F;li&gt;
-&lt;li&gt;Curated resource list for further learning&lt;&#x2F;li&gt;
-&lt;li&gt;Certificate of participation&lt;&#x2F;li&gt;
-&lt;li&gt;Access to recorded Q&amp;amp;A session&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;faqs&quot;&gt;FAQs&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Q: Is this suitable for beginners?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
-A: Yes! We start from basics. Just bring curiosity and willingness to learn.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Will this be recorded?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
-A: We&#x27;ll record the Q&amp;amp;A session for participants. Live coding won&#x27;t be recorded.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Can I get a certificate?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
-A: Yes, all attendees receive a certificate of participation.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Q: What if I can&#x27;t install Docker?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
-A: Come 15 minutes early, we&#x27;ll help you set up.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Will you cover advanced Kubernetes topics?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
-A: This is a fundamentals workshop. We&#x27;ll share resources for advanced learning.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;contact&quot;&gt;Contact&lt;&#x2F;h2&gt;
-&lt;p&gt;Questions? Email workshops@ccclub.edu or message on Discord.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;&lt;strong&gt;Don&#x27;t miss out! This workshop fills up fast. Register today! 🚀&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;!-- 
-    WORKSHOP EVENT TEMPLATE
-    
-    Workshops are shorter, focused learning sessions. Key differences from hackathons:
-    - Shorter duration (2-4 hours typically)
-    - Specific learning outcomes
-    - Prerequisites and setup instructions
-    - Instructor information
-    - Smaller capacity
-    - Less complex schedule
-    
-    CUSTOMIZE THIS TEMPLATE:
-    1. Update topic and title
-    2. Adjust duration and schedule
-    3. List clear prerequisites
-    4. Provide setup instructions
-    5. Emphasize hands-on nature
-    6. Include instructor credentials
---&gt;
 </content>
         
     </entry>
@@ -268,295 +147,295 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;h2 id=&quot;usestate-managing-component-state&quot;&gt;useState: Managing Component State&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;code&gt;useState&lt;&#x2F;code&gt; hook lets you add state to function components. It returns an array with two elements: the current state value and a function to update it.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;basic-syntax&quot;&gt;Basic Syntax&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;React&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;{ useState } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;react&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;Counter&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Declare state variable &amp;#39;count&amp;#39; with initial value 0
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setCount] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;You clicked {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt;} times&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;button onClick&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{() =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setCount&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt; + 1)}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        Click &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;me
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;import React, { useState } from &amp;#x27;react&amp;#x27;;
+
+function Counter() {
+  &amp;#x2F;&amp;#x2F; Declare state variable &amp;#x27;count&amp;#x27; with initial value 0
+  const [count, setCount] = useState(0);
+
+  return (
+    &amp;lt;div&amp;gt;
+      &amp;lt;p&amp;gt;You clicked {count} times&amp;lt;&amp;#x2F;p&amp;gt;
+      &amp;lt;button onClick={() =&amp;gt; setCount(count + 1)}&amp;gt;
+        Click me
+      &amp;lt;&amp;#x2F;button&amp;gt;
+    &amp;lt;&amp;#x2F;div&amp;gt;
+  );
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;multiple-state-variables&quot;&gt;Multiple State Variables&lt;&#x2F;h3&gt;
 &lt;p&gt;You can use &lt;code&gt;useState&lt;&#x2F;code&gt; multiple times in a single component:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;UserProfile&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setName] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[age&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setAge] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[email&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setEmail] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;handleSubmit &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;e&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    e&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;preventDefault&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;({ name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;age&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;email })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;form onSubmit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{handleSubmit}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
-&lt;&#x2F;span&gt;&lt;span&gt;        value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{name} 
-&lt;&#x2F;span&gt;&lt;span&gt;        onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{(e) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setName&lt;&#x2F;span&gt;&lt;span&gt;(e.target.value)} 
-&lt;&#x2F;span&gt;&lt;span&gt;        placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;Name&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
-&lt;&#x2F;span&gt;&lt;span&gt;        type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;number&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{age} 
-&lt;&#x2F;span&gt;&lt;span&gt;        onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{(e) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setAge&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;Number&lt;&#x2F;span&gt;&lt;span&gt;(e.target.value))} 
-&lt;&#x2F;span&gt;&lt;span&gt;        placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;Age&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
-&lt;&#x2F;span&gt;&lt;span&gt;        type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;email&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{email} 
-&lt;&#x2F;span&gt;&lt;span&gt;        onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{(e) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setEmail&lt;&#x2F;span&gt;&lt;span&gt;(e.target.value)} 
-&lt;&#x2F;span&gt;&lt;span&gt;        placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;Email&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;button type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;submit&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Submit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;form&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;function UserProfile() {
+  const [name, setName] = useState(&amp;#x27;&amp;#x27;);
+  const [age, setAge] = useState(0);
+  const [email, setEmail] = useState(&amp;#x27;&amp;#x27;);
+
+  const handleSubmit = (e) =&amp;gt; {
+    e.preventDefault();
+    console.log({ name, age, email });
+  };
+
+  return (
+    &amp;lt;form onSubmit={handleSubmit}&amp;gt;
+      &amp;lt;input 
+        value={name} 
+        onChange={(e) =&amp;gt; setName(e.target.value)} 
+        placeholder=&amp;quot;Name&amp;quot;
+      &amp;#x2F;&amp;gt;
+      &amp;lt;input 
+        type=&amp;quot;number&amp;quot;
+        value={age} 
+        onChange={(e) =&amp;gt; setAge(Number(e.target.value))} 
+        placeholder=&amp;quot;Age&amp;quot;
+      &amp;#x2F;&amp;gt;
+      &amp;lt;input 
+        type=&amp;quot;email&amp;quot;
+        value={email} 
+        onChange={(e) =&amp;gt; setEmail(e.target.value)} 
+        placeholder=&amp;quot;Email&amp;quot;
+      &amp;#x2F;&amp;gt;
+      &amp;lt;button type=&amp;quot;submit&amp;quot;&amp;gt;Submit&amp;lt;&amp;#x2F;button&amp;gt;
+    &amp;lt;&amp;#x2F;form&amp;gt;
+  );
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;state-with-objects-and-arrays&quot;&gt;State with Objects and Arrays&lt;&#x2F;h3&gt;
 &lt;p&gt;When working with objects or arrays, always create a new reference:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;TodoList&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[todos&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setTodos] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;([])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;addTodo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;text&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Create new array with spread operator
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setTodos&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;todos&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;{ id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;Date&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;now&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;text&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;completed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;false &lt;&#x2F;span&gt;&lt;span&gt;}])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;toggleTodo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;id&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setTodos&lt;&#x2F;span&gt;&lt;span&gt;(todos&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;todo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; 
-&lt;&#x2F;span&gt;&lt;span&gt;      todo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span&gt;id 
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;todo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;completed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;!&lt;&#x2F;span&gt;&lt;span&gt;todo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;completed }
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;todo
-&lt;&#x2F;span&gt;&lt;span&gt;    ))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;todos&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;todo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;div key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{todo.id}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
-&lt;&#x2F;span&gt;&lt;span&gt;            type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;checkbox&amp;quot; 
-&lt;&#x2F;span&gt;&lt;span&gt;            checked&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{todo.completed}
-&lt;&#x2F;span&gt;&lt;span&gt;            onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{() =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;toggleTodo&lt;&#x2F;span&gt;&lt;span&gt;(todo.id)}
-&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;span style&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{{ 
-&lt;&#x2F;span&gt;&lt;span&gt;            textDecoration&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;todo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;completed &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;line-through&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;none&amp;#39; 
-&lt;&#x2F;span&gt;&lt;span&gt;          }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;            {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;todo&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;text&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      ))}
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;function TodoList() {
+  const [todos, setTodos] = useState([]);
+
+  const addTodo = (text) =&amp;gt; {
+    &amp;#x2F;&amp;#x2F; Create new array with spread operator
+    setTodos([...todos, { id: Date.now(), text, completed: false }]);
+  };
+
+  const toggleTodo = (id) =&amp;gt; {
+    setTodos(todos.map(todo =&amp;gt; 
+      todo.id === id 
+        ? { ...todo, completed: !todo.completed }
+        : todo
+    ));
+  };
+
+  return (
+    &amp;lt;div&amp;gt;
+      {todos.map(todo =&amp;gt; (
+        &amp;lt;div key={todo.id}&amp;gt;
+          &amp;lt;input 
+            type=&amp;quot;checkbox&amp;quot; 
+            checked={todo.completed}
+            onChange={() =&amp;gt; toggleTodo(todo.id)}
+          &amp;#x2F;&amp;gt;
+          &amp;lt;span style={{ 
+            textDecoration: todo.completed ? &amp;#x27;line-through&amp;#x27; : &amp;#x27;none&amp;#x27; 
+          }}&amp;gt;
+            {todo.text}
+          &amp;lt;&amp;#x2F;span&amp;gt;
+        &amp;lt;&amp;#x2F;div&amp;gt;
+      ))}
+    &amp;lt;&amp;#x2F;div&amp;gt;
+  );
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;useeffect-handling-side-effects&quot;&gt;useEffect: Handling Side Effects&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;code&gt;useEffect&lt;&#x2F;code&gt; hook lets you perform side effects in function components - things like data fetching, subscriptions, or manually changing the DOM.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;basic-usage&quot;&gt;Basic Usage&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;React&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;{ useState&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;useEffect } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;react&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;UserData&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setUser] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;null&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setLoading] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; This runs after every render
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;fetch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;https:&#x2F;&#x2F;api.example.com&#x2F;user&#x2F;1&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;response&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;json&lt;&#x2F;span&gt;&lt;span&gt;())
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;data &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setUser&lt;&#x2F;span&gt;&lt;span&gt;(data)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setLoading&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;      })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Empty dependency array = run only once on mount
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(loading) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;Loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{user.name}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;import React, { useState, useEffect } from &amp;#x27;react&amp;#x27;;
+
+function UserData() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() =&amp;gt; {
+    &amp;#x2F;&amp;#x2F; This runs after every render
+    fetch(&amp;#x27;https:&amp;#x2F;&amp;#x2F;api.example.com&amp;#x2F;user&amp;#x2F;1&amp;#x27;)
+      .then(response =&amp;gt; response.json())
+      .then(data =&amp;gt; {
+        setUser(data);
+        setLoading(false);
+      });
+  }, []); &amp;#x2F;&amp;#x2F; Empty dependency array = run only once on mount
+
+  if (loading) return &amp;lt;p&amp;gt;Loading...&amp;lt;&amp;#x2F;p&amp;gt;;
+  return &amp;lt;div&amp;gt;{user.name}&amp;lt;&amp;#x2F;div&amp;gt;;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;dependency-array&quot;&gt;Dependency Array&lt;&#x2F;h3&gt;
 &lt;p&gt;The second argument to &lt;code&gt;useEffect&lt;&#x2F;code&gt; is the &lt;strong&gt;dependency array&lt;&#x2F;strong&gt;. It controls when the effect runs:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Run on every render
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;Runs on every render&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Run only once (on mount)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;Runs once on mount&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Run when specific values change
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;Runs when count changes&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[count])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Multiple dependencies
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;Runs when count or name changes&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;name])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&amp;#x2F;&amp;#x2F; Run on every render
+useEffect(() =&amp;gt; {
+  console.log(&amp;#x27;Runs on every render&amp;#x27;);
+});
+
+&amp;#x2F;&amp;#x2F; Run only once (on mount)
+useEffect(() =&amp;gt; {
+  console.log(&amp;#x27;Runs once on mount&amp;#x27;);
+}, []);
+
+&amp;#x2F;&amp;#x2F; Run when specific values change
+useEffect(() =&amp;gt; {
+  console.log(&amp;#x27;Runs when count changes&amp;#x27;);
+}, [count]);
+
+&amp;#x2F;&amp;#x2F; Multiple dependencies
+useEffect(() =&amp;gt; {
+  console.log(&amp;#x27;Runs when count or name changes&amp;#x27;);
+}, [count, name]);
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;cleanup-functions&quot;&gt;Cleanup Functions&lt;&#x2F;h3&gt;
 &lt;p&gt;Return a cleanup function to avoid memory leaks:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Subscribe to something
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;subscription &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;subscribeToData&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Cleanup function
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    subscription&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;unsubscribe&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;useEffect(() =&amp;gt; {
+  &amp;#x2F;&amp;#x2F; Subscribe to something
+  const subscription = subscribeToData();
+
+  &amp;#x2F;&amp;#x2F; Cleanup function
+  return () =&amp;gt; {
+    subscription.unsubscribe();
+  };
+}, []);
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;practical-example-document-title&quot;&gt;Practical Example: Document Title&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;PageTitle&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setCount] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;title &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;`You clicked ${&lt;&#x2F;span&gt;&lt;span&gt;count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;} times`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[count])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Update title when count changes
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;button onClick&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{() =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setCount&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt; + 1)}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      Clicked {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;times
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;function PageTitle() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() =&amp;gt; {
+    document.title = `You clicked ${count} times`;
+  }, [count]); &amp;#x2F;&amp;#x2F; Update title when count changes
+
+  return (
+    &amp;lt;button onClick={() =&amp;gt; setCount(count + 1)}&amp;gt;
+      Clicked {count} times
+    &amp;lt;&amp;#x2F;button&amp;gt;
+  );
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;usecontext-sharing-data-across-components&quot;&gt;useContext: Sharing Data Across Components&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;code&gt;useContext&lt;&#x2F;code&gt; makes it easy to share data between components without prop drilling.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;creating-context&quot;&gt;Creating Context&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;React&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;{ createContext&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;useContext&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;useState } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;react&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Create context
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;ThemeContext &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;createContext&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Provider component
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;ThemeProvider&lt;&#x2F;span&gt;&lt;span&gt;({ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;children &lt;&#x2F;span&gt;&lt;span&gt;}) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[theme&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setTheme] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;toggleTheme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setTheme&lt;&#x2F;span&gt;&lt;span&gt;(theme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;dark&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;ThemeContext&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;Provider value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{{ theme&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;toggleTheme }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;ThemeContext&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;Provider&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Custom hook to use the context
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useTheme&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;context &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useContext&lt;&#x2F;span&gt;&lt;span&gt;(ThemeContext)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;!&lt;&#x2F;span&gt;&lt;span&gt;context) {
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;throw &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;Error&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;useTheme must be used within ThemeProvider&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;context&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Using the context
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;ThemedButton&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;{ theme&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;toggleTheme } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useTheme&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;button 
-&lt;&#x2F;span&gt;&lt;span&gt;      onClick&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{toggleTheme}
-&lt;&#x2F;span&gt;&lt;span&gt;      style&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{{
-&lt;&#x2F;span&gt;&lt;span&gt;        background&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;theme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;#fff&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;#333&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;        color&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;theme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;#333&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;#fff&amp;#39;
-&lt;&#x2F;span&gt;&lt;span&gt;      }}
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      Toggle &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;Theme &lt;&#x2F;span&gt;&lt;span&gt;(Current: {theme})
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; App component
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;App&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;ThemeProvider&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;ThemedButton &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;ThemeProvider&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;import React, { createContext, useContext, useState } from &amp;#x27;react&amp;#x27;;
+
+&amp;#x2F;&amp;#x2F; Create context
+const ThemeContext = createContext();
+
+&amp;#x2F;&amp;#x2F; Provider component
+function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState(&amp;#x27;light&amp;#x27;);
+
+  const toggleTheme = () =&amp;gt; {
+    setTheme(theme === &amp;#x27;light&amp;#x27; ? &amp;#x27;dark&amp;#x27; : &amp;#x27;light&amp;#x27;);
+  };
+
+  return (
+    &amp;lt;ThemeContext.Provider value={{ theme, toggleTheme }}&amp;gt;
+      {children}
+    &amp;lt;&amp;#x2F;ThemeContext.Provider&amp;gt;
+  );
+}
+
+&amp;#x2F;&amp;#x2F; Custom hook to use the context
+function useTheme() {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error(&amp;#x27;useTheme must be used within ThemeProvider&amp;#x27;);
+  }
+  return context;
+}
+
+&amp;#x2F;&amp;#x2F; Using the context
+function ThemedButton() {
+  const { theme, toggleTheme } = useTheme();
+
+  return (
+    &amp;lt;button 
+      onClick={toggleTheme}
+      style={{
+        background: theme === &amp;#x27;light&amp;#x27; ? &amp;#x27;#fff&amp;#x27; : &amp;#x27;#333&amp;#x27;,
+        color: theme === &amp;#x27;light&amp;#x27; ? &amp;#x27;#333&amp;#x27; : &amp;#x27;#fff&amp;#x27;
+      }}
+    &amp;gt;
+      Toggle Theme (Current: {theme})
+    &amp;lt;&amp;#x2F;button&amp;gt;
+  );
+}
+
+&amp;#x2F;&amp;#x2F; App component
+function App() {
+  return (
+    &amp;lt;ThemeProvider&amp;gt;
+      &amp;lt;ThemedButton &amp;#x2F;&amp;gt;
+    &amp;lt;&amp;#x2F;ThemeProvider&amp;gt;
+  );
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;custom-hooks-reusable-logic&quot;&gt;Custom Hooks: Reusable Logic&lt;&#x2F;h2&gt;
 &lt;p&gt;Custom hooks let you extract component logic into reusable functions. They must start with &quot;use&quot;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;example-usefetch-hook&quot;&gt;Example: useFetch Hook&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useFetch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;url&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[data&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setData] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;null&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setLoading] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[error&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setError] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;null&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;fetch&lt;&#x2F;span&gt;&lt;span&gt;(url)
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;response&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;json&lt;&#x2F;span&gt;&lt;span&gt;())
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;data &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setData&lt;&#x2F;span&gt;&lt;span&gt;(data)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setLoading&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;      })
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;catch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;error &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setError&lt;&#x2F;span&gt;&lt;span&gt;(error)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setLoading&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;      })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[url])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;{ data&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;error }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Using the custom hook
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;UserProfile&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;{ data&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;error } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useFetch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;https:&#x2F;&#x2F;api.example.com&#x2F;user&#x2F;1&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(loading) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;Loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(error) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;Error&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;{error&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;message}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{data.name}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;function useFetch(url) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() =&amp;gt; {
+    fetch(url)
+      .then(response =&amp;gt; response.json())
+      .then(data =&amp;gt; {
+        setData(data);
+        setLoading(false);
+      })
+      .catch(error =&amp;gt; {
+        setError(error);
+        setLoading(false);
+      });
+  }, [url]);
+
+  return { data, loading, error };
+}
+
+&amp;#x2F;&amp;#x2F; Using the custom hook
+function UserProfile() {
+  const { data, loading, error } = useFetch(&amp;#x27;https:&amp;#x2F;&amp;#x2F;api.example.com&amp;#x2F;user&amp;#x2F;1&amp;#x27;);
+
+  if (loading) return &amp;lt;p&amp;gt;Loading...&amp;lt;&amp;#x2F;p&amp;gt;;
+  if (error) return &amp;lt;p&amp;gt;Error: {error.message}&amp;lt;&amp;#x2F;p&amp;gt;;
+  return &amp;lt;div&amp;gt;{data.name}&amp;lt;&amp;#x2F;div&amp;gt;;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;example-uselocalstorage-hook&quot;&gt;Example: useLocalStorage Hook&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useLocalStorage&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;initialValue&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setValue] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;try &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;item &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;window&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;localStorage&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;getItem&lt;&#x2F;span&gt;&lt;span&gt;(key)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;item &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f29e74;&quot;&gt;JSON&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;parse&lt;&#x2F;span&gt;&lt;span&gt;(item) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;initialValue&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;catch &lt;&#x2F;span&gt;&lt;span&gt;(error) {
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;initialValue&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    }
-&lt;&#x2F;span&gt;&lt;span&gt;  })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setStoredValue &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;newValue&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;try &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setValue&lt;&#x2F;span&gt;&lt;span&gt;(newValue)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;      window&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;localStorage&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;setItem&lt;&#x2F;span&gt;&lt;span&gt;(key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f29e74;&quot;&gt;JSON&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;stringify&lt;&#x2F;span&gt;&lt;span&gt;(newValue))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;catch &lt;&#x2F;span&gt;&lt;span&gt;(error) {
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;error&lt;&#x2F;span&gt;&lt;span&gt;(error)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    }
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;[value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setStoredValue]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Usage
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;App&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setName] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useLocalStorage&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;name&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
-&lt;&#x2F;span&gt;&lt;span&gt;      value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{name}
-&lt;&#x2F;span&gt;&lt;span&gt;      onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{(e) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setName&lt;&#x2F;span&gt;&lt;span&gt;(e.target.value)}
-&lt;&#x2F;span&gt;&lt;span&gt;      placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;Your name (persisted in localStorage)&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;function useLocalStorage(key, initialValue) {
+  const [value, setValue] = useState(() =&amp;gt; {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+      return initialValue;
+    }
+  });
+
+  const setStoredValue = (newValue) =&amp;gt; {
+    try {
+      setValue(newValue);
+      window.localStorage.setItem(key, JSON.stringify(newValue));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  return [value, setStoredValue];
+}
+
+&amp;#x2F;&amp;#x2F; Usage
+function App() {
+  const [name, setName] = useLocalStorage(&amp;#x27;name&amp;#x27;, &amp;#x27;&amp;#x27;);
+
+  return (
+    &amp;lt;input 
+      value={name}
+      onChange={(e) =&amp;gt; setName(e.target.value)}
+      placeholder=&amp;quot;Your name (persisted in localStorage)&amp;quot;
+    &amp;#x2F;&amp;gt;
+  );
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;best-practices-and-common-pitfalls&quot;&gt;Best Practices and Common Pitfalls&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;white-check-mark-do-s&quot;&gt;✅ Do&#x27;s&lt;&#x2F;h3&gt;
 &lt;ol&gt;
@@ -574,23 +453,23 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;li&gt;&lt;strong&gt;Don&#x27;t skip the dependency array&lt;&#x2F;strong&gt; - Leads to unexpected behavior&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h3 id=&quot;common-mistakes&quot;&gt;Common Mistakes&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; ❌ Wrong: Mutating state directly
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[items&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setItems] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;([])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;items&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;(newItem)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; DON&amp;#39;T DO THIS
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; ✅ Correct: Create new array
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setItems&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;items&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;newItem])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; ❌ Wrong: Missing dependencies
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(count)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; count is used but not in dependencies
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; ✅ Correct: Include all dependencies
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(count)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[count])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&amp;#x2F;&amp;#x2F; ❌ Wrong: Mutating state directly
+const [items, setItems] = useState([]);
+items.push(newItem); &amp;#x2F;&amp;#x2F; DON&amp;#x27;T DO THIS
+
+&amp;#x2F;&amp;#x2F; ✅ Correct: Create new array
+setItems([...items, newItem]);
+
+&amp;#x2F;&amp;#x2F; ❌ Wrong: Missing dependencies
+useEffect(() =&amp;gt; {
+  console.log(count); &amp;#x2F;&amp;#x2F; count is used but not in dependencies
+}, []);
+
+&amp;#x2F;&amp;#x2F; ✅ Correct: Include all dependencies
+useEffect(() =&amp;gt; {
+  console.log(count);
+}, [count]);
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
 &lt;p&gt;React Hooks have transformed how we write React applications. They make code more readable, reusable, and easier to test. Start with &lt;code&gt;useState&lt;&#x2F;code&gt; and &lt;code&gt;useEffect&lt;&#x2F;code&gt;, get comfortable with &lt;code&gt;useContext&lt;&#x2F;code&gt;, and then create your own custom hooks to encapsulate reusable logic.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Key Takeaways:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
@@ -638,6 +517,97 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
         
     </entry>
     <entry xml:lang="en">
+        <title>Code Of The Day</title>
+        <published>2025-12-03T00:00:00+00:00</published>
+        <updated>2025-12-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/code-of-the-day/"/>
+        <id>/cc-website/preview/events/2025/code-of-the-day/</id>
+        
+        <content type="html" xml:base="/cc-website/preview/events/2025/code-of-the-day/">&lt;h2 id=&quot;about-code-of-the-day&quot;&gt;About Code of the Day&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Code of the Day 2025&lt;&#x2F;strong&gt; was a 7-day competitive programming challenge organized by the Computer Coding Club, MNNIT Allahabad as part of CyberQuest under Avishkar 2025, the institute’s annual technical fest. The event was designed to build consistency and strengthen problem-solving skills by releasing one thoughtfully crafted problem every day.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-makes-code-of-the-day-special&quot;&gt;What Makes Code of the Day Special&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Consistency over speed&lt;&#x2F;strong&gt; Consistency focused competitive coding&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Daily excitement&lt;&#x2F;strong&gt; New challenges released every day&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Sneak peek teasers&lt;&#x2F;strong&gt; Pre-release teasers build excitement&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Learning support&lt;&#x2F;strong&gt; Timed hints for guided learning&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Fair play focused&lt;&#x2F;strong&gt; Strict rules ensure fair competition&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Community-driven&lt;&#x2F;strong&gt; Student-driven problem creation&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Competitive Programming&lt;&#x2F;strong&gt; - Algorithms and problem solving.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Logic &amp;amp; Analytical Thinking&lt;&#x2F;strong&gt; - Logical and analytical reasoning&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Skill Building &amp;amp; Consistency&lt;&#x2F;strong&gt; - Daily practice and consistency&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;stats-from-2025-edition&quot;&gt;Stats from 2025 Edition&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;270+&lt;&#x2F;strong&gt; Participants&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7&lt;&#x2F;strong&gt; Days of coding&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Hack36 9.0</title>
+        <published>2025-11-09T00:00:00+00:00</published>
+        <updated>2025-11-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/hack36/"/>
+        <id>/cc-website/preview/events/2025/hack36/</id>
+        
+        <content type="html" xml:base="/cc-website/preview/events/2025/hack36/">&lt;h2 id=&quot;about-hack36&quot;&gt;About Hack36&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Hack36 9.0&lt;&#x2F;strong&gt; is the annual national-level hackathon organized by the Computer Coding Club (CC), MNNIT Allahabad. It is a 36-hour-long coding marathon where developers, designers, and innovators from across the country come together to solve real-world problems using technology.&lt;&#x2F;p&gt;
+&lt;p&gt;This year’s edition, Hack36 9.0 Secure, is part of the Network Security Bootcamp at MNNIT, supported by ISEA Phase III under the Ministry of Electronics and IT (MeitY).&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-makes-hack36-9-0-special&quot;&gt;What Makes Hack36 9.0 Special&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;36 Hours&lt;&#x2F;strong&gt; of non-stop building, coding, and innovation&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cybersecurity&lt;&#x2F;strong&gt;-Focused Theme (Hack36 9.0 Secure)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Mentorship &amp;amp; Guidance&lt;&#x2F;strong&gt; from industry professionals and academicians&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Internship &amp;amp; Job Opportunities&lt;&#x2F;strong&gt; through recruiters and sponsors&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Networking&lt;&#x2F;strong&gt; with top developers, designers, and innovators nationwide&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Hands-on Exposure&lt;&#x2F;strong&gt; to latest tools, cloud platforms, and APIs&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Prizes, Recognition &amp;amp; Swags&lt;&#x2F;strong&gt; for top-performing teams&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Post-Hackathon Support&lt;&#x2F;strong&gt; like incubation&#x2F;funding guidance for strong projects&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;&#x2F;h3&gt;
+&lt;p&gt;This year we had 5 exciting tracks:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Network Security&lt;&#x2F;strong&gt; - Securing communication systems and networks&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Secure Information Retrieval&lt;&#x2F;strong&gt; - Safe and reliable data search &amp;amp; access&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Security in Artificial Intelligence&lt;&#x2F;strong&gt; - Protecting AI models and systems&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Web2 Security&lt;&#x2F;strong&gt; - Securing web apps, APIs, and online services&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Web3 Security&lt;&#x2F;strong&gt; - Blockchain, smart contract, and decentralized security&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;stats-from-2026-edition&quot;&gt;Stats from 2026 Edition&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;600+&lt;&#x2F;strong&gt; Participants&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;120+&lt;&#x2F;strong&gt; Teams&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;36&lt;&#x2F;strong&gt; Hours of coding&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;25+&lt;&#x2F;strong&gt; Mentors from industry&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Rs. 1,00,000&lt;&#x2F;strong&gt; Prize Pool&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>Optimizing React Performance: Tips and Tricks</title>
         <published>2025-10-25T00:00:00+00:00</published>
         <updated>2025-10-25T00:00:00+00:00</updated>
@@ -658,18 +628,18 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;h2 id=&quot;key-techniques&quot;&gt;Key Techniques&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-react-memo&quot;&gt;1. React.memo&lt;&#x2F;h3&gt;
 &lt;p&gt;Prevent unnecessary re-renders:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;ExpensiveComponent &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;React&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;memo&lt;&#x2F;span&gt;&lt;span&gt;(({ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;data &lt;&#x2F;span&gt;&lt;span&gt;}) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{data}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;const ExpensiveComponent = React.memo(({ data }) =&amp;gt; {
+  return &amp;lt;div&amp;gt;{data}&amp;lt;&amp;#x2F;div&amp;gt;;
+});
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;2-usememo-usecallback&quot;&gt;2. useMemo &amp;amp; useCallback&lt;&#x2F;h3&gt;
 &lt;p&gt;Memoize expensive computations:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;memoizedValue &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useMemo&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;computeExpensive&lt;&#x2F;span&gt;&lt;span&gt;(a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;b)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;b])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;memoizedCallback &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useCallback&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;doSomething&lt;&#x2F;span&gt;&lt;span&gt;(a)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[a])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;const memoizedValue = useMemo(() =&amp;gt; computeExpensive(a, b), [a, b]);
+const memoizedCallback = useCallback(() =&amp;gt; doSomething(a), [a]);
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;3-code-splitting&quot;&gt;3. Code Splitting&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;LazyComponent &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;lazy&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;import&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;.&#x2F;LazyComponent&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;const LazyComponent = lazy(() =&amp;gt; import(&amp;#x27;.&amp;#x2F;LazyComponent&amp;#x27;));
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;4-virtual-lists&quot;&gt;4. Virtual Lists&lt;&#x2F;h3&gt;
 &lt;p&gt;Use react-window for long lists.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;profiling-tools&quot;&gt;Profiling Tools&lt;&#x2F;h2&gt;
@@ -680,6 +650,130 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;results&quot;&gt;Results&lt;&#x2F;h2&gt;
 &lt;p&gt;Apply these and see 50-70% performance improvement!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>CodeSangam</title>
+        <published>2025-10-11T00:00:00+00:00</published>
+        <updated>2025-10-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/codesangam/"/>
+        <id>/cc-website/preview/events/2025/codesangam/</id>
+        
+        <content type="html" xml:base="/cc-website/preview/events/2025/codesangam/">&lt;h2 id=&quot;about-codesangam-2025&quot;&gt;About CodeSangam 2025&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;CodeSangam 2025&lt;&#x2F;strong&gt; is a month-long development fest organized by the &lt;strong&gt;Computer Coding Club (CCC), MNNIT Allahabad&lt;&#x2F;strong&gt;, where innovation meets execution. It brings together developers, designers, and tech enthusiasts to build real-world projects, learn modern technologies, and compete across multiple development domains.&lt;&#x2F;p&gt;
+&lt;p&gt;The fest is designed to promote hands-on building culture, teamwork, and skill development through a series of exciting events conducted over multiple weeks.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-makes-codesangam-special&quot;&gt;What Makes CodeSangam Special&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Multiple events&lt;&#x2F;strong&gt; covering diverse development fields&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Hands-on project building&lt;&#x2F;strong&gt; with real-world use cases&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Competitive environment&lt;&#x2F;strong&gt; with exciting prizes and recognition&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Learning-focused challenges&lt;&#x2F;strong&gt; to improve development skills&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Collaboration and networking&lt;&#x2F;strong&gt; with talented peers at MNNIT&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;events-tracks&quot;&gt;Events &#x2F; Tracks&lt;&#x2F;h3&gt;
+&lt;p&gt;This year, CodeSangam featured &lt;strong&gt;5 major development events&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Webster&lt;&#x2F;strong&gt; - Web development event&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Droidrush&lt;&#x2F;strong&gt; - Android app development event&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Logical Rhythm&lt;&#x2F;strong&gt; - ML-based development event&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Softablitz&lt;&#x2F;strong&gt; - Java-based desktop app development event&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ContriHub&lt;&#x2F;strong&gt; - Open-source contribution challenge&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;stats-from-2025-edition&quot;&gt;Stats from 2025 Edition&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;500+&lt;&#x2F;strong&gt; Participants&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;100+&lt;&#x2F;strong&gt; Teams&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Contrihub</title>
+        <published>2025-09-20T00:00:00+00:00</published>
+        <updated>2025-09-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/contrihub/"/>
+        <id>/cc-website/preview/events/2025/contrihub/</id>
+        
+        <content type="html" xml:base="/cc-website/preview/events/2025/contrihub/">&lt;h2 id=&quot;about-contrihub&quot;&gt;About ContriHUB&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;ContriHUB&lt;&#x2F;strong&gt; is a month-long open-source celebration where collaboration meets contribution. Organized every October alongside &lt;strong&gt;Hacktoberfest&lt;&#x2F;strong&gt;, ContriHUB aims to bring more &lt;strong&gt;MNNITians&lt;&#x2F;strong&gt; into the open-source ecosystem by encouraging meaningful contributions to real-world projects.&lt;&#x2F;p&gt;
+&lt;p&gt;From fixing bugs to building new features, every pull request counts—and every contributor becomes part of a growing community of open-source enthusiasts.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-is-contrihub&quot;&gt;What is ContriHUB?&lt;&#x2F;h2&gt;
+&lt;p&gt;ContriHUB is a &lt;strong&gt;month-long open-source contest&lt;&#x2F;strong&gt;, designed to help students get hands-on experience with GitHub and open-source workflows.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-makes-contrihub-special&quot;&gt;What Makes ContriHUB Special&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;🗓 &lt;strong&gt;Month-long Open Source Sprint&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🌍 &lt;strong&gt;Aligned with Hacktoberfest&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🧑‍💻 &lt;strong&gt;Beginner-friendly &amp;amp; Advanced Projects&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🏆 &lt;strong&gt;Points-based Contribution System&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🎁 &lt;strong&gt;Goodies &amp;amp; Swag for Top Contributors&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🤝 &lt;strong&gt;Community-driven Learning Experience&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;how-it-works&quot;&gt;How It Works&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Browse projects under the ContriHUB GitHub organization&lt;&#x2F;li&gt;
+&lt;li&gt;Pick a project that interests you&lt;&#x2F;li&gt;
+&lt;li&gt;Choose an issue and start working on it&lt;&#x2F;li&gt;
+&lt;li&gt;Submit a pull request following the contribution guidelines&lt;&#x2F;li&gt;
+&lt;li&gt;Earn points based on issue difficulty&lt;&#x2F;li&gt;
+&lt;li&gt;Climb the leaderboard and win exciting goodies 🎉&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;project-tracks-repositories&quot;&gt;Project Tracks &amp;amp; Repositories&lt;&#x2F;h2&gt;
+&lt;p&gt;ContriHUB hosts a diverse range of open-source projects across multiple domains:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;web-development&quot;&gt;Web Development&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CodeSangam&lt;&#x2F;strong&gt; – Event website built with HTML, Go, and React&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Robotics_Club_Website&lt;&#x2F;strong&gt; – Official website for MNNIT Robotics Club&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;NoteSphere&lt;&#x2F;strong&gt; – Student feedback portal (React)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Chamber_of_Secrets&lt;&#x2F;strong&gt; – Real-time social interaction app (MERN)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;mobile-applications&quot;&gt;Mobile Applications&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Easy2Do&lt;&#x2F;strong&gt; – Android productivity app&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Just-Share&lt;&#x2F;strong&gt; – Kotlin app for file sharing via Wi-Fi&#x2F;Bluetooth&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Music-Player&lt;&#x2F;strong&gt; – Java-based music player application&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;machine-learning-python-tools&quot;&gt;Machine Learning &amp;amp; Python Tools&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Graph-Analyzer&lt;&#x2F;strong&gt; – Web app for analyzing graph images&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;SecureFace&lt;&#x2F;strong&gt; – Face recognition-based access control system&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;systems-simulations&quot;&gt;Systems &amp;amp; Simulations&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Congestion-Control-Simulator&lt;&#x2F;strong&gt; – TCP congestion control algorithm simulator&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;utilities-campus-solutions&quot;&gt;Utilities &amp;amp; Campus Solutions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;EAT_EASY&lt;&#x2F;strong&gt; – Mess management web application&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;CREDLOCKS&lt;&#x2F;strong&gt; – Community platform for student growth and resources&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;MovieScreen&lt;&#x2F;strong&gt; – Django-based movie project&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;EyeProtection&lt;&#x2F;strong&gt; – Browser extension for screen-time health&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;event-core-repositories&quot;&gt;Event &amp;amp; Core Repositories&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ContriHUB-24&lt;&#x2F;strong&gt; – Core repository for ContriHUB 2024 edition&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;🔗 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;ContriHUB&#x2F;repositories&quot;&gt;Explore all repositories&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;✨ Grab your tickets, join the parade of contributors, and let your code shine on the open-source carnival stage!&lt;&#x2F;p&gt;
 </content>
         
     </entry>
@@ -703,12 +797,12 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;p&gt;Security isn&#x27;t optional. Learn to protect your apps from day one.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;common-vulnerabilities&quot;&gt;Common Vulnerabilities&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-sql-injection&quot;&gt;1. SQL Injection&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Vulnerable
-&lt;&#x2F;span&gt;&lt;span&gt;db&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;query&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;`SELECT * FROM users WHERE id = ${&lt;&#x2F;span&gt;&lt;span&gt;userId&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;}`&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Safe
-&lt;&#x2F;span&gt;&lt;span&gt;db&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;query&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;SELECT * FROM users WHERE id = ?&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[userId])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&amp;#x2F;&amp;#x2F; Vulnerable
+db.query(`SELECT * FROM users WHERE id = ${userId}`);
+
+&amp;#x2F;&amp;#x2F; Safe
+db.query(&amp;#x27;SELECT * FROM users WHERE id = ?&amp;#x27;, [userId]);
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;2-xss-cross-site-scripting&quot;&gt;2. XSS (Cross-Site Scripting)&lt;&#x2F;h3&gt;
 &lt;p&gt;Always sanitize user input before rendering.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;3-csrf-cross-site-request-forgery&quot;&gt;3. CSRF (Cross-Site Request Forgery)&lt;&#x2F;h3&gt;
@@ -1084,13 +1178,13 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 ✅ Responsive design&lt;br &#x2F;&gt;
 ✅ Fast load time&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;service-worker-example&quot;&gt;Service Worker Example&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;addEventListener&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;fetch&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;event &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;respondWith&lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    caches&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;match&lt;&#x2F;span&gt;&lt;span&gt;(event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;request)
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;|| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;fetch&lt;&#x2F;span&gt;&lt;span&gt;(event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;request))
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;self.addEventListener(&amp;#x27;fetch&amp;#x27;, event =&amp;gt; {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response =&amp;gt; response || fetch(event.request))
+  );
+});
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Full implementation guide coming next week!&lt;&#x2F;p&gt;
 </content>
         
@@ -1121,20 +1215,20 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;li&gt;&lt;strong&gt;Documentation&lt;&#x2F;strong&gt;: Types serve as inline docs&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h2 id=&quot;from-javascript-to-typescript&quot;&gt;From JavaScript to TypeScript&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;typescript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-typescript &quot;&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; JavaScript
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; TypeScript
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;typescript&quot; class=&quot;language-typescript &quot;&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;&amp;#x2F;&amp;#x2F; JavaScript
+function add(a, b) {
+  return a + b;
+}
+
+&amp;#x2F;&amp;#x2F; TypeScript
+function add(a: number, b: number): number {
+  return a + b;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -g&lt;&#x2F;span&gt;&lt;span&gt; typescript
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;tsc&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; --init
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install -g typescript
+tsc --init
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;More examples and patterns coming soon!&lt;&#x2F;p&gt;
 </content>
         
@@ -1167,14 +1261,14 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;li&gt;&lt;strong&gt;Docker Hub&lt;&#x2F;strong&gt;: Repository for images&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;your-first-dockerfile&quot;&gt;Your First Dockerfile&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;dockerfile&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; node:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;16-alpine
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;WORKDIR &lt;&#x2F;span&gt;&lt;span&gt;&#x2F;app
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; package*.json .&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;RUN &lt;&#x2F;span&gt;&lt;span&gt;npm install
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; . .
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;EXPOSE &lt;&#x2F;span&gt;&lt;span&gt;3000
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;CMD &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;npm&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;start&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;dockerfile&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;FROM node:16-alpine
+WORKDIR &amp;#x2F;app
+COPY package*.json .&amp;#x2F;
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD [&amp;quot;npm&amp;quot;, &amp;quot;start&amp;quot;]
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll deploy this to AWS ECS in the next tutorial!&lt;&#x2F;p&gt;
 </content>
@@ -1200,12 +1294,12 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;p&gt;Working in a team? These Git best practices will save you from merge conflicts and confusion.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;key-practices&quot;&gt;Key Practices&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-meaningful-commit-messages&quot;&gt;1. Meaningful Commit Messages&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Bad
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; commit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -m &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;fixed stuff&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Good
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; commit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -m &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;fix: resolve authentication bug in login flow&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# Bad
+git commit -m &amp;quot;fixed stuff&amp;quot;
+
+# Good
+git commit -m &amp;quot;fix: resolve authentication bug in login flow&amp;quot;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;2-branch-naming-convention&quot;&gt;2. Branch Naming Convention&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;feature&#x2F;user-authentication&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
@@ -1216,52 +1310,6 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;p&gt;Always sync with remote before pushing your changes.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;branching-strategies&quot;&gt;Branching Strategies&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll explore Git Flow, GitHub Flow, and Trunk-Based Development.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Hack36</title>
-        <published>2025-03-15T00:00:00+00:00</published>
-        <updated>2025-03-15T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/hack36/"/>
-        <id>/cc-website/preview/events/2025/hack36/</id>
-        
-        <content type="html" xml:base="/cc-website/preview/events/2025/hack36/">&lt;h2 id=&quot;about-hack36&quot;&gt;About Hack36&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Hack36&lt;&#x2F;strong&gt; is our flagship 36-hour hackathon where innovation meets execution. Teams from across the country come together to build groundbreaking projects with mentorship from industry experts and compete for exciting prizes.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;what-makes-hack36-special&quot;&gt;What Makes Hack36 Special&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;36 Hours&lt;&#x2F;strong&gt; of non-stop coding and innovation&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Industry Mentorship&lt;&#x2F;strong&gt; from leading tech companies&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Exciting Prizes&lt;&#x2F;strong&gt; worth lakhs&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Networking&lt;&#x2F;strong&gt; with fellow developers and recruiters&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Workshops&lt;&#x2F;strong&gt; and learning sessions&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;&#x2F;h3&gt;
-&lt;p&gt;This year we had 5 exciting tracks:&lt;&#x2F;p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;HealthTech&lt;&#x2F;strong&gt; - Solutions for healthcare challenges&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;EdTech&lt;&#x2F;strong&gt; - Revolutionizing education&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;FinTech&lt;&#x2F;strong&gt; - Financial technology innovations&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Sustainability&lt;&#x2F;strong&gt; - Green tech for a better future&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Open Innovation&lt;&#x2F;strong&gt; - Build anything amazing&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;h3 id=&quot;stats-from-2025-edition&quot;&gt;Stats from 2025 Edition&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;500+&lt;&#x2F;strong&gt; Participants&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;100+&lt;&#x2F;strong&gt; Teams&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;48&lt;&#x2F;strong&gt; Hours of coding&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;20+&lt;&#x2F;strong&gt; Mentors from industry&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Rs. 2,00,000&lt;&#x2F;strong&gt; Prize Pool&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
 </content>
         
     </entry>
@@ -1292,8 +1340,8 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;li&gt;Model evaluation&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h2 id=&quot;installation&quot;&gt;Installation&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;pip install numpy pandas scikit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;learn matplotlib
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;pip install numpy pandas scikit-learn matplotlib
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;your-first-ml-model&quot;&gt;Your First ML Model&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll build a simple linear regression model to predict house prices!&lt;&#x2F;p&gt;
 &lt;p&gt;Full tutorial coming soon...&lt;&#x2F;p&gt;
@@ -1377,12 +1425,89 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;li&gt;MongoDB setup (local or Atlas)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;project-setup&quot;&gt;Project Setup&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; my-rest-api
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; my-rest-api
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; init&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -y
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install express mongoose jsonwebtoken bcrypt dotenv
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir my-rest-api
+cd my-rest-api
+npm init -y
+npm install express mongoose jsonwebtoken bcrypt dotenv
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Stay tuned for the complete implementation!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Weekend of Code</title>
+        <published>2025-01-07T00:00:00+00:00</published>
+        <updated>2025-01-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/weekend-of-code/"/>
+        <id>/cc-website/preview/events/2025/weekend-of-code/</id>
+        
+        <content type="html" xml:base="/cc-website/preview/events/2025/weekend-of-code/">&lt;h2 id=&quot;about-weekend-of-code&quot;&gt;About Weekend of Code&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Weekend of Code&lt;&#x2F;strong&gt; is a multi-event coding fest exclusively for first- and second-year students, bringing together three core competitions—DevJam (development hackathon), Turing’s Playground (AI&#x2F;ML hackathon), and CodeStart (ICPC-style coding contest). It’s a focused platform to learn, build, compete, and push your problem-solving skills.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-makes-weekend-of-code-special&quot;&gt;What Makes Weekend of Code Special&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Three Competitive Events&lt;&#x2F;strong&gt; across development, AI&#x2F;ML, and competitive programming&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Industry Mentorship&lt;&#x2F;strong&gt; from leading tech companies&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Exclusively for 1st &amp;amp; 2nd Years&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Mentorship &amp;amp; Guidance&lt;&#x2F;strong&gt; from peers&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Workshops&lt;&#x2F;strong&gt; and learning sessions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Insomnia</title>
+        <published>2024-11-17T00:00:00+00:00</published>
+        <updated>2024-11-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/insomnia/"/>
+        <id>/cc-website/preview/events/2025/insomnia/</id>
+        
+        <content type="html" xml:base="/cc-website/preview/events/2025/insomnia/">&lt;h2 id=&quot;about-insomnia&quot;&gt;About Insomnia&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Insomnia&lt;&#x2F;strong&gt; is the flagship competitive programming contest of &lt;strong&gt;MNNIT Allahabad&lt;&#x2F;strong&gt;, where logic meets endurance and teamwork meets strategy. Conducted as part of &lt;strong&gt;Avishkar&lt;&#x2F;strong&gt;, our annual tech fest, Insomnia brings together programmers from across the country to compete in a high-pressure, high-energy coding marathon.&lt;&#x2F;p&gt;
+&lt;p&gt;Inspired by the &lt;strong&gt;ACM-ICPC style&lt;&#x2F;strong&gt;, the contest challenges teams to think fast, code smart, and stay sharp till the very last minute.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;what-is-insomnia&quot;&gt;What is Insomnia?&lt;&#x2F;h2&gt;
+&lt;p&gt;Insomnia is a &lt;strong&gt;3-hour ICPC-style team programming contest&lt;&#x2F;strong&gt; hosted on &lt;strong&gt;Codeforces&lt;&#x2F;strong&gt;, where teams of up to three members solve a curated set of algorithmic problems under strict time and penalty constraints.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;what-makes-insomnia-special&quot;&gt;What Makes Insomnia Special&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;⏱ &lt;strong&gt;3 Hours of Intense Competitive Coding&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;👥 &lt;strong&gt;Team-based ICPC Format (Up to 3 Members)&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🧠 &lt;strong&gt;Carefully Curated Problem Set&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🏆 &lt;strong&gt;Attractive Cash Prizes &amp;amp; Recognition&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🌐 &lt;strong&gt;Hosted on Codeforces Platform&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🎯 &lt;strong&gt;Open to Students Across the Country&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🎉 &lt;strong&gt;Part of Avishkar – MNNIT’s Tech Fest&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;how-it-works&quot;&gt;How It Works&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Form a team of up to 3 members&lt;&#x2F;li&gt;
+&lt;li&gt;Register for the contest on Codeforces&lt;&#x2F;li&gt;
+&lt;li&gt;Log in at the contest time and start solving problems&lt;&#x2F;li&gt;
+&lt;li&gt;Submit solutions within the time limit&lt;&#x2F;li&gt;
+&lt;li&gt;Rank higher by solving more problems with fewer penalties&lt;&#x2F;li&gt;
+&lt;li&gt;Top teams win cash prizes and bragging rights 🚀&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;✨ Gear up for a sleepless night of logic, strategy, and code. Gather your team, push your limits, and prove your mettle at &lt;strong&gt;Insomnia&lt;&#x2F;strong&gt; — where only the sharpest minds stay awake till the end. 🌙🔥&lt;&#x2F;p&gt;
 </content>
         
     </entry>
@@ -1447,39 +1572,39 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
         <content type="html" xml:base="/cc-website/preview/blog/2024/linux-commands/">&lt;h2 id=&quot;master-the-terminal&quot;&gt;Master the Terminal&lt;&#x2F;h2&gt;
 &lt;p&gt;The Linux terminal is a developer&#x27;s superpower. Learn these essential commands!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;file-operations&quot;&gt;File Operations&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Navigate
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;path&#x2F;to&#x2F;directory
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;pwd
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;ls&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -la
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Create&#x2F;Delete
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; project
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;touch&lt;&#x2F;span&gt;&lt;span&gt; file.txt
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -rf&lt;&#x2F;span&gt;&lt;span&gt; folder&#x2F;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Copy&#x2F;Move
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; source.txt dest.txt
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;mv&lt;&#x2F;span&gt;&lt;span&gt; old.txt new.txt
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# Navigate
+cd &amp;#x2F;path&amp;#x2F;to&amp;#x2F;directory
+pwd
+ls -la
+
+# Create&amp;#x2F;Delete
+mkdir project
+touch file.txt
+rm -rf folder&amp;#x2F;
+
+# Copy&amp;#x2F;Move
+cp source.txt dest.txt
+mv old.txt new.txt
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;process-management&quot;&gt;Process Management&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# View processes
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;ps&lt;&#x2F;span&gt;&lt;span&gt; aux &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;grep&lt;&#x2F;span&gt;&lt;span&gt; node
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;top
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;htop
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Kill process
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;kill&lt;&#x2F;span&gt;&lt;span&gt; -9 PID
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# View processes
+ps aux | grep node
+top
+htop
+
+# Kill process
+kill -9 PID
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;network-commands&quot;&gt;Network Commands&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;api.example.com
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;wget&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;file.zip
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;netstat&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -tuln
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl https:&amp;#x2F;&amp;#x2F;api.example.com
+wget https:&amp;#x2F;&amp;#x2F;file.zip
+netstat -tuln
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;text-processing&quot;&gt;Text Processing&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;grep &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;error&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; logs.txt
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sed &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;s&#x2F;old&#x2F;new&#x2F;g&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt; file.txt
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;awk &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;{print $1}&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt; data.txt
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;grep &amp;quot;error&amp;quot; logs.txt
+sed &amp;#x27;s&amp;#x2F;old&amp;#x2F;new&amp;#x2F;g&amp;#x27; file.txt
+awk &amp;#x27;{print $1}&amp;#x27; data.txt
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Practice these daily!&lt;&#x2F;p&gt;
 </content>
         
@@ -1503,23 +1628,23 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
         <content type="html" xml:base="/cc-website/preview/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
 &lt;p&gt;Async&#x2F;await revolutionized how we write asynchronous code in JavaScript.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;before-async-await&quot;&gt;Before Async&#x2F;Await&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Callback Hell
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserData&lt;&#x2F;span&gt;&lt;span&gt;(userId&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;user&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrders&lt;&#x2F;span&gt;&lt;span&gt;(user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;orders&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrderDetails&lt;&#x2F;span&gt;&lt;span&gt;(orders[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;details&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(details)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&amp;#x2F;&amp;#x2F; Callback Hell
+getUserData(userId, function(user) {
+  getOrders(user.id, function(orders) {
+    getOrderDetails(orders[0], function(details) {
+      console.log(details);
+    });
+  });
+});
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;with-async-await&quot;&gt;With Async&#x2F;Await&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;async function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserOrders&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;userId&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;user &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserData&lt;&#x2F;span&gt;&lt;span&gt;(userId)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;orders &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrders&lt;&#x2F;span&gt;&lt;span&gt;(user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;details &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrderDetails&lt;&#x2F;span&gt;&lt;span&gt;(orders[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;details&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;async function getUserOrders(userId) {
+  const user = await getUserData(userId);
+  const orders = await getOrders(user.id);
+  const details = await getOrderDetails(orders[0]);
+  return details;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Much cleaner!&lt;&#x2F;p&gt;
 </content>
         
@@ -1550,10 +1675,10 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;li&gt;Great community&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;essential-libraries&quot;&gt;Essential Libraries&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;pandas &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;pd
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;numpy &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;np
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;matplotlib&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;pyplot &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;plt
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;your-first-analysis&quot;&gt;Your First Analysis&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll analyze a real dataset and create visualizations!&lt;&#x2F;p&gt;
 </content>

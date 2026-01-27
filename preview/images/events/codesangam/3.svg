@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-  <rect fill="#0d1117" width="100%" height="100%"/>
-  <circle cx="140" cy="140" r="35" fill="#00d4ff" opacity="0.2"/>
-  <circle cx="260" cy="140" r="35" fill="#00d4ff" opacity="0.2"/>
-  <circle cx="200" cy="140" r="35" fill="#00d4ff" opacity="0.4"/>
-  <text fill="#00d4ff" x="50%" y="78%" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14">Team Collaboration</text>
-</svg>

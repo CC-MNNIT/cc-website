@@ -508,14 +508,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><strong>Docker Hub</strong>: Repository for images</li>
 </ul>
 <h2 id="your-first-dockerfile">Your First Dockerfile</h2>
-<pre data-lang="dockerfile" style="background-color:#212733;color:#ccc9c2;" class="language-dockerfile "><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#ffa759;">FROM</span><span> node:</span><span style="color:#73d0ff;">16-alpine
-</span><span style="color:#ffa759;">WORKDIR </span><span>/app
-</span><span style="color:#ffa759;">COPY</span><span> package*.json ./
-</span><span style="color:#ffa759;">RUN </span><span>npm install
-</span><span style="color:#ffa759;">COPY</span><span> . .
-</span><span style="color:#ffa759;">EXPOSE </span><span>3000
-</span><span style="color:#f29e74;">CMD </span><span>[</span><span style="color:#bae67e;">&quot;npm&quot;</span><span>, </span><span style="color:#bae67e;">&quot;start&quot;</span><span>]
-</span></code></pre>
+<pre data-lang="dockerfile" class="language-dockerfile "><code class="language-dockerfile" data-lang="dockerfile">FROM node:16-alpine
+WORKDIR &#x2F;app
+COPY package*.json .&#x2F;
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD [&quot;npm&quot;, &quot;start&quot;]
+</code></pre>
 <h2 id="next-steps">Next Steps</h2>
 <p>We'll deploy this to AWS ECS in the next tutorial!</p>
 

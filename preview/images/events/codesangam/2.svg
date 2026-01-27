@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-  <rect fill="#0a192f" width="100%" height="100%"/>
-  <path d="M100 150 L150 100 L200 150 L250 100 L300 150" stroke="#00d4ff" stroke-width="3" fill="none"/>
-  <text fill="#ffffff" x="50%" y="75%" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16">2-Week Development Challenge</text>
-</svg>
