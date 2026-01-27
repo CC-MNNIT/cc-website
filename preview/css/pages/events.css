@@ -1593,6 +1593,87 @@
     color: #FFFFFF;
 }
 
+/* Extra Badge (Flagship) */
+.hero-extra-badge,
+.event-card-extra-badge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-extra-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    border-radius: 8px;
+}
+
+/* Flagship Style - Hero */
+[data-theme="night"] .hero-extra-badge.flagship {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+    color: #FCD34D;
+    border: 1px solid rgba(234, 179, 8, 0.4);
+    box-shadow: 0 0 15px rgba(234, 179, 8, 0.15);
+}
+
+[data-theme="lofi"] .hero-extra-badge.flagship,
+[data-theme="light"] .hero-extra-badge.flagship {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+    color: #B45309;
+    border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+/* Flagship Style - Card */
+[data-theme="night"] .event-card-extra-badge.flagship {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+    color: #FCD34D;
+    border: 1px solid rgba(234, 179, 8, 0.4);
+    box-shadow: 0 0 10px rgba(234, 179, 8, 0.1);
+}
+
+[data-theme="lofi"] .event-card-extra-badge.flagship,
+[data-theme="light"] .event-card-extra-badge.flagship {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+    color: #B45309;
+    border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+/* Live Style - Pulsing Red */
+.hero-extra-badge.live,
+.event-card-extra-badge.live {
+    background: rgba(239, 68, 68, 0.2);
+    color: #F87171;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    box-shadow: 0 0 0 rgba(239, 68, 68, 0.4);
+    animation: pulse-red 2s infinite;
+}
+
+[data-theme="lofi"] .hero-extra-badge.live,
+[data-theme="light"] .hero-extra-badge.live,
+[data-theme="lofi"] .event-card-extra-badge.live,
+[data-theme="light"] .event-card-extra-badge.live {
+    background: rgba(220, 38, 38, 0.15);
+    color: #DC2626;
+    border-color: rgba(220, 38, 38, 0.3);
+}
+
+@keyframes pulse-red {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
+}
+
 /* Event Hero Title */
 .event-hero-title {
     font-size: 3.5rem;
