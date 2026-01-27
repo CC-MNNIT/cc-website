@@ -500,9 +500,19 @@ document.addEventListener('DOMContentLoaded', function() {
                         Computer Coding Club
                     </span>
                 </h1>
-                <p class="max-w-3xl mx-auto text-xl md:text-2xl hero-description mb-12 leading-relaxed font-light">
-                    🚀 Devoted to Programming, Innovation, and Computer Science
-                </p>
+                <div class="max-w-3xl mx-auto mb-12" style="min-height:2.5em;display:flex;justify-content:center;align-items:center;">
+                    <p class="text-xl md:text-2xl hero-description leading-relaxed font-light" style="text-align:center;">
+                        <span id="typed-text"></span><span id="cursor" style="display:inline-block;width:3px;height:1.2em;background:linear-gradient(180deg,#FFC758,#DA7138);margin-left:2px;vertical-align:text-bottom;animation:blink 0.8s ease-in-out infinite;box-shadow:0 0 8px rgba(255,199,88,0.6);border-radius:1px;"></span>
+                    </p>
+                </div>
+                <style>@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}</style>
+                <script>
+                (function(){
+                    var t="🚀 Devoted to Programming, Innovation, and Computer Science",el=document.getElementById("typed-text"),i=0;
+                    function type(){if(i<t.length){el.textContent+=t.charAt(i);i++;setTimeout(type,",".includes(t.charAt(i-1))?200:50);}};
+                    setTimeout(type,600);
+                })();
+                </script>
                 
             </div>
         </div>
@@ -1495,14 +1505,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
             <li>
-                <a  href="/cc-website/preview/projects">Projects</a>
-            </li>
-        
-            
-            
-            
-            
-            <li>
                 
                     <details open>
                         <summary ><a class="hover:no-underline" href="/cc-website/preview/blog">Blog</a></summary>
@@ -1559,6 +1561,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             <li>
                 <a  href="/cc-website/preview/team">Our Team</a>
+            </li>
+        
+            
+            
+            
+            
+            <li>
+                <a  href="/cc-website/preview/projects">Projects</a>
             </li>
         
             
