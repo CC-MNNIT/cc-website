@@ -4,59 +4,123 @@
 [faculty]
 name = "Dr. DKE"
 title = "Faculty In-Charge"
-image = "https://ui-avatars.com/api/?name=DKE&background=0e0604&color=00ffff&size=256"
+image = "/images/teams/dke.jpg"
 linkedin = "https://linkedin.com"
 email = "dke@mnnit.ac.in"
 profile_url = "https://mnnit.ac.in/prof_detail?id=123"
 
 # Group 2: CCRs (Computer Coding Club Representatives)
 [[ccrs]]
-name = "Shanu Kumawat"
+name = "Ayushman Tiwari"
 role = "CCR"
-image = "https://ui-avatars.com/api/?name=Shanu+Kumawat&background=0e0604&color=00ffff&size=256"
-linkedin = "https://linkedin.com/in/shanu"
-github = "https://github.com/shanu-kumawat"
-instagram = "https://instagram.com/shanu"
+image = "/images/teams/ayushman_tiwari.jpg"
+linkedin = "https://www.linkedin.com/in/ayushman-tiwari-a7807b243/"
+github = "https://github.com/Ayushman444"
+instagram = "https://instagram.com/ayush__mn"
 
 [[ccrs]]
-name = "Aditi Sharma"
+name = "Aviral Mishra"
 role = "CCR"
-image = "https://ui-avatars.com/api/?name=Aditi+Sharma&background=0e0604&color=00ffff&size=256"
-linkedin = "https://linkedin.com/in/aditi"
-github = "https://github.com/aditi"
-instagram = "https://instagram.com/aditi"
+image = "/images/teams/aviral_mishra.jpg"
+linkedin = "https://linkedin.com/in/aviral-mishra-india"
+github = "https://github.com/aviral-mishra-1008"
+instagram = "https://instagram.com/avi.m_pyg"
 
 [[ccrs]]
-name = "Rahul Verma"
+name = "Utsav Kasvala"
 role = "CCR"
-image = "https://ui-avatars.com/api/?name=Rahul+Verma&background=0e0604&color=00ffff&size=256"
-linkedin = "https://linkedin.com/in/rahul"
-github = "https://github.com/rahul"
-instagram = "https://instagram.com/rahul"
+image = "/images/teams/utsav_kasvala.jpg"
+linkedin = "https://www.linkedin.com/in/utsav-kasvala-239786280"
+github = "https://github.com/utsav-kasvala"
+instagram = "https://www.instagram.com/utsav___kasvala"
 
 [[ccrs]]
-name = "Priya Singh"
+name = "Sumit Verma"
 role = "CCR"
-image = "https://ui-avatars.com/api/?name=Priya+Singh&background=0e0604&color=00ffff&size=256"
-linkedin = "https://linkedin.com/in/priya"
-github = "https://github.com/priya"
-instagram = "https://instagram.com/priya"
+image = "/images/teams/sumit_verma.jpg"
+linkedin = "https://www.linkedin.com/in/sumit-verma-smt"
+github = "https://github.com/smt96700"
+instagram = "https://www.instagram.com/sumit96_verma"
 
 [[ccrs]]
-name = "Amit Patel"
+name = "Sushmit Patel"
 role = "CCR"
-image = "https://ui-avatars.com/api/?name=Amit+Patel&background=0e0604&color=00ffff&size=256"
-linkedin = "https://linkedin.com/in/amit"
-github = "https://github.com/amit"
-instagram = "https://instagram.com/amit"
+image = "/images/teams/sushmit_patel.jpg"
+linkedin = "https://www.linkedin.com/in/sushmit-patel-181063258/"
+github = "https://github.com/Sushmitpatel"
+instagram = "https://www.instagram.com/sushmit3460"
 
 [[ccrs]]
-name = "Neha Gupta"
+name = "Aditya Raj"
 role = "CCR"
-image = "https://ui-avatars.com/api/?name=Neha+Gupta&background=0e0604&color=00ffff&size=256"
-linkedin = "https://linkedin.com/in/neha"
-github = "https://github.com/neha"
-instagram = "https://instagram.com/neha"
+image = "/images/teams/aditya_raj.jpg"
+linkedin = "https://in.linkedin.com/in/aditya-raj-07a295256"
+github = "https://github.com/adityatny"
+instagram = "https://instagram.com/adityaraj.0177"
+
+[[ccrs]]
+name = "Gantavya Rohatgi"
+role = "CCR"
+image = "/images/teams/gantavya_rohatgi.jpg"
+linkedin = "https://www.linkedin.com/in/gantavyarohatgi"
+github = ""
+instagram = ""
+
+[[ccrs]]
+name = "Sahaj Srivastava"
+role = "CCR"
+image = "/images/teams/sahaj_srivastava.jpg"
+linkedin = "https://www.linkedin.com/in/sahaj96/"
+github = "https://github.com/sahaj-96"
+instagram = "https://www.instagram.com/_sahaj96/"
+
+[[ccrs]]
+name = "Aryan Mishra"
+role = "CCR"
+image = "/images/teams/aryan_mishra.jpg"
+linkedin = "https://www.linkedin.com/in/aryan-lem"
+github = "https://github.com/aryan-lem"
+instagram = "https://www.instagram.com/lemnis_kate1.23"
+
+[[ccrs]]
+name = "Rajnandini Patel"
+role = "CCR"
+image = "/images/teams/rajnandini_patel.jpg"
+linkedin = "https://www.linkedin.com/in/rajnandinipatel31/"
+github = "https://github.com/Rajnandinii"
+instagram = "https://instagram.com/_nandini.patel81"
+
+[[ccrs]]
+name = "Nihal Yadav"
+role = "CCR"
+image = "/images/teams/nihal_yadav.jpg"
+linkedin = "https://www.linkedin.com/in/nihal2908"
+github = "https://github.com/nihal2908"
+instagram = "https://www.instagram.com/nihal.yadav.000"
+
+[[ccrs]]
+name = "Shikhar Gupta"
+role = "CCR"
+image = "/images/teams/shikhar_gupta.jpg"
+linkedin = "https://www.linkedin.com/in/shikhargupta812"
+github = "https://github.com/shikhartheone"
+instagram = "https://www.instagram.com/shikhargupta_0812/"
+
+[[ccrs]]
+name = "Sarthak Porwal"
+role = "CCR"
+image = "/images/teams/sarthak_porwal.jpg"
+linkedin = "https://www.linkedin.com/in/sarthak-porwal-8a9b40256/"
+github = "https://github.com/sarthakporwal"
+instagram = "https://www.instagram.com/sarthak.porwal/"
+
+[[ccrs]]
+name = "Uday Nauhbar"
+role = "CCR"
+image = "/images/teams/uday_nauhbar.jpg"
+linkedin = "https://www.linkedin.com/in/uday-nauhbar-0b2b7124b/"
+github = "https://github.com/Uday061"
+instagram = "https://www.instagram.com/uday.661/"
 
 # Group 3: Design Team (3 Leads)
 [[design]]
