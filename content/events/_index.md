@@ -8,3 +8,5 @@ template = "events/list.html"
 [extra]
 toc_expand = true
 +++
+
+# Events by CC Club

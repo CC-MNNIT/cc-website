@@ -9,7 +9,7 @@ estimated_time = "8-12 months"
 prerequisites = "Python programming, mathematics basics"
 badge = "POPULAR"
 # Landing page carousel
-carousel_image = "roadmaps/machine-learning.webp"
+carousel_image = "roadmaps/machine-learning-cyber.webp"
 carousel_title = "Machine Learning"
 carousel_description = "Journey from Python basics to building production ML models. Cover mathematics, algorithms, frameworks like TensorFlow and PyTorch, and real-world applications."
 +++

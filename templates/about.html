@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block content %}
+<main class="about-main">
+    <div class="about-container">
+        <div class="about-header">
+            <h1 class="about-title">{{ section.title }}</h1>
+            {% if section.description %}
+            <p class="about-subtitle">{{ section.description }}</p>
+            {% endif %}
+        </div>
+
+        <div class="about-content prose">
+            {{ section.content | safe }}
+        </div>
+    </div>
+</main>
+{% endblock content %}

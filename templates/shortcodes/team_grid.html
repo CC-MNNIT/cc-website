@@ -2,93 +2,96 @@
 {% set group_name = group | default(value="faculty") %}
 
 {% if group_name == "faculty" and team_data.faculty %}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 not-prose my-8">
-        {% for member in team_data.faculty %}
-        <div class="card bg-base-200 shadow-xl border border-gray-500/15">
-            <figure class="px-6 pt-6">
-                <div class="avatar">
-                    <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                        <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ member.image | default(value='default-avatar.png')) }}" alt="{{ member.name }}" />
-                    </div>
-                </div>
-            </figure>
-            <div class="card-body items-center text-center">
-                <h3 class="card-title">{{ member.name }}</h3>
-                <p class="text-sm text-gray-500">{{ member.designation }}</p>
-                <div class="card-actions mt-2">
-                    {% if member.linkedin %}
-                    <a href="{{ member.linkedin }}" target="_blank" class="btn btn-ghost btn-circle btn-sm">
-                        <i class="fa-brands fa-linkedin text-xl"></i>
-                    </a>
-                    {% endif %}
-                    {% if member.email %}
-                    <a href="mailto:{{ member.email }}" class="btn btn-ghost btn-circle btn-sm">
-                        <i class="fa-solid fa-envelope text-xl"></i>
-                    </a>
-                    {% endif %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 not-prose my-8">
+    {% for member in team_data.faculty %}
+    <div class="card bg-base-200 shadow-xl border border-gray-500/15">
+        <figure class="px-6 pt-6">
+            <div class="avatar">
+                <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ member.image | default(value='default-avatar.webp')) }}"
+                        alt="{{ member.name }}" />
                 </div>
             </div>
+        </figure>
+        <div class="card-body items-center text-center">
+            <h3 class="card-title">{{ member.name }}</h3>
+            <p class="text-sm text-gray-500">{{ member.designation }}</p>
+            <div class="card-actions mt-2">
+                {% if member.linkedin %}
+                <a href="{{ member.linkedin }}" target="_blank" class="btn btn-ghost btn-circle btn-sm">
+                    <i class="fa-brands fa-linkedin text-xl"></i>
+                </a>
+                {% endif %}
+                {% if member.email %}
+                <a href="mailto:{{ member.email }}" class="btn btn-ghost btn-circle btn-sm">
+                    <i class="fa-solid fa-envelope text-xl"></i>
+                </a>
+                {% endif %}
+            </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+</div>
 {% elif group_name == "coordinators" and team_data.coordinators %}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 not-prose my-8">
-        {% for member in team_data.coordinators %}
-        <div class="card bg-base-200 shadow-xl border border-gray-500/15">
-            <figure class="px-6 pt-6">
-                <div class="avatar">
-                    <div class="w-24 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2">
-                        <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ member.image | default(value='default-avatar.png')) }}" alt="{{ member.name }}" />
-                    </div>
-                </div>
-            </figure>
-            <div class="card-body items-center text-center">
-                <h3 class="card-title">{{ member.name }}</h3>
-                <p class="text-sm text-gray-500">{{ member.role }}</p>
-                <div class="card-actions mt-2">
-                    {% if member.github %}
-                    <a href="{{ member.github }}" target="_blank" class="btn btn-ghost btn-circle btn-sm">
-                        <i class="fa-brands fa-github text-xl"></i>
-                    </a>
-                    {% endif %}
-                    {% if member.linkedin %}
-                    <a href="{{ member.linkedin }}" target="_blank" class="btn btn-ghost btn-circle btn-sm">
-                        <i class="fa-brands fa-linkedin text-xl"></i>
-                    </a>
-                    {% endif %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 not-prose my-8">
+    {% for member in team_data.coordinators %}
+    <div class="card bg-base-200 shadow-xl border border-gray-500/15">
+        <figure class="px-6 pt-6">
+            <div class="avatar">
+                <div class="w-24 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2">
+                    <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ member.image | default(value='default-avatar.webp')) }}"
+                        alt="{{ member.name }}" />
                 </div>
             </div>
+        </figure>
+        <div class="card-body items-center text-center">
+            <h3 class="card-title">{{ member.name }}</h3>
+            <p class="text-sm text-gray-500">{{ member.role }}</p>
+            <div class="card-actions mt-2">
+                {% if member.github %}
+                <a href="{{ member.github }}" target="_blank" class="btn btn-ghost btn-circle btn-sm">
+                    <i class="fa-brands fa-github text-xl"></i>
+                </a>
+                {% endif %}
+                {% if member.linkedin %}
+                <a href="{{ member.linkedin }}" target="_blank" class="btn btn-ghost btn-circle btn-sm">
+                    <i class="fa-brands fa-linkedin text-xl"></i>
+                </a>
+                {% endif %}
+            </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+</div>
 {% elif group_name == "executives" and team_data.executives %}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 not-prose my-8">
-        {% for member in team_data.executives %}
-        <div class="card bg-base-200 shadow-xl border border-gray-500/15">
-            <figure class="px-6 pt-6">
-                <div class="avatar">
-                    <div class="w-24 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
-                        <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ member.image | default(value='default-avatar.png')) }}" alt="{{ member.name }}" />
-                    </div>
-                </div>
-            </figure>
-            <div class="card-body items-center text-center">
-                <h3 class="card-title">{{ member.name }}</h3>
-                <p class="text-sm text-gray-500">{{ member.role }}</p>
-                <div class="card-actions mt-2">
-                    {% if member.github %}
-                    <a href="{{ member.github }}" target="_blank" class="btn btn-ghost btn-circle btn-sm">
-                        <i class="fa-brands fa-github text-xl"></i>
-                    </a>
-                    {% endif %}
-                    {% if member.linkedin %}
-                    <a href="{{ member.linkedin }}" target="_blank" class="btn btn-ghost btn-circle btn-sm">
-                        <i class="fa-brands fa-linkedin text-xl"></i>
-                    </a>
-                    {% endif %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 not-prose my-8">
+    {% for member in team_data.executives %}
+    <div class="card bg-base-200 shadow-xl border border-gray-500/15">
+        <figure class="px-6 pt-6">
+            <div class="avatar">
+                <div class="w-24 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
+                    <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ member.image | default(value='default-avatar.webp')) }}"
+                        alt="{{ member.name }}" />
                 </div>
             </div>
+        </figure>
+        <div class="card-body items-center text-center">
+            <h3 class="card-title">{{ member.name }}</h3>
+            <p class="text-sm text-gray-500">{{ member.role }}</p>
+            <div class="card-actions mt-2">
+                {% if member.github %}
+                <a href="{{ member.github }}" target="_blank" class="btn btn-ghost btn-circle btn-sm">
+                    <i class="fa-brands fa-github text-xl"></i>
+                </a>
+                {% endif %}
+                {% if member.linkedin %}
+                <a href="{{ member.linkedin }}" target="_blank" class="btn btn-ghost btn-circle btn-sm">
+                    <i class="fa-brands fa-linkedin text-xl"></i>
+                </a>
+                {% endif %}
+            </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+</div>
 {% endif %}

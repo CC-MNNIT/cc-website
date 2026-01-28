@@ -46,20 +46,20 @@ highlight_theme = "ayu-mirage"
 [extra]
 # Image Base URL - Change this to CDN URL in future (e.g. https://cdn.jsdelivr.net/gh/org/cc-images)
 # Currently set to local path
-image_base_url = "/images"
+image_base_url = "images"
 
 # Custom footer HTML (used in bottom bar)
 footer_html = "Powered by <a href='https://www.getzola.org' class='font-medium hover:text-primary transition-colors duration-200'>Zola</a> and <a href='https://github.com/hahwul/goyo' class='font-medium hover:text-primary transition-colors duration-200'>Goyo</a>"
 
 # Default thumbnail for social media sharing (when page doesn't specify one)
-default_thumbnail = "cc-club-thumbnail.jpg"
+default_thumbnail = "cc-club-thumbnail.webp"
 
 # Google Analytics tag (optional - leave empty to disable)
 # TODO: Add your Google Analytics ID if needed (format: "G-XXXXXXXXXX")
 gtag = ""
 
 # Footer Configuration
-footer_logo = "logo/cclogo.png"  # Update with your actual logo path
+footer_logo = "logo/cclogo.webp"  # Update with your actual logo path
 footer_title = "CC Club MNNIT"
 footer_description = "Our mission since 2010 at MNNIT is to develop in you a passion for problem-solving, critical thinking, innovation and computer science. We strive to achieve this goal through means of events, classes and industry connects."
 footer_email = "computer.club@mnnit.ac.in"
@@ -99,10 +99,10 @@ edit_url = "https://github.com/Shanu-Kumawat/cc-website/edit/main/"
 # Logo Configuration
 [extra.logo]
 text = "CC Club"                           # Text to show when no logo image
-image_path = "logo/cclogo.png"                            # Add logo: "logo.png" (place in static/images/)
+image_path = "logo/cclogo.webp"                            # Add logo: "logo.webp" (place in static/images/)
 image_padding = "10px"                     # Padding around logo image
-# dark_image_path = "images/logo-dark.png" # Optional: Different logo for dark theme
-# light_image_path = "images/logo/light-bgm-cc-logo.png" # Optional: Different logo for light theme
+# dark_image_path = "images/logo-dark.webp" # Optional: Different logo for dark theme
+# light_image_path = "images/logo/light-bgm-cc-logo.webp" # Optional: Different logo for light theme
 
 # Social Media Configuration
 [extra.twitter]

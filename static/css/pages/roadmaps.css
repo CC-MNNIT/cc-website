@@ -6,6 +6,45 @@
 */
 
 /* Wrapper and horizontal scroll */
+.roadmaps-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 24px 100px;
+    position: relative;
+}
+
+/* ============================================
+   GRID LAYOUT
+   ============================================ */
+
+.roadmaps-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 640px) {
+    .roadmaps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .roadmaps-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+.roadmaps-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
 .roadmaps-scroll-wrapper {
     /* Controls how long the scroll lasts */
     height: 300vh;
@@ -61,15 +100,17 @@
 
 /* Titles and Text */
 .roadmaps-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    letter-spacing: -0.03em;
-    background: linear-gradient(90deg, #DA7138 0%, #EC9E6E 33%, #ECB163 66%, #ECC475 100%) !important;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: -0.04em;
+    font-family: var(--font-main);
+    display: inline-block;
+    background: linear-gradient(135deg, #FFC758 0%, #FFD700 50%, #FFA500 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
-    animation: titleSlide 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-shadow: 0 0 60px rgba(255, 199, 88, 0.3);
 }
 
 [data-theme="light"] .roadmaps-title,
@@ -81,14 +122,17 @@
 }
 
 .roadmaps-subtitle {
-    color: #FAECEC;
-    font-size: 18px;
-    animation: slideUp 0.8s ease-out 0.2s both;
+    font-size: 1.2rem;
+    color: var(--color-base-content);
+    opacity: 0.6;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
 }
 
 [data-theme="light"] .roadmaps-subtitle,
 [data-theme="lofi"] .roadmaps-subtitle {
-    color: #0E0604 !important;
+    color: var(--color-base-content) !important;
 }
 
 /* Timeline/Slider Track */
@@ -135,15 +179,16 @@
     height: 1px;
 }
 
-/* Roadmap Card Styling */
+/* If you want the entire card to have square corners too */
 .roadmap-card {
     min-width: var(--roadmap-card-width);
     max-width: var(--roadmap-card-width);
-    background: rgba(20, 20, 20, 0.8);
+    background: rgba(35, 25, 25, 0.95);
     backdrop-filter: blur(20px);
-    border-radius: 24px;
+    border-radius: 0;
+    /* Changed from 24px to 0 for square corners */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border: 1.5px solid rgba(255, 199, 88, 0.3);
+    border: 1.5px solid rgba(255, 199, 88, 0.5);
     position: relative;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     flex-shrink: 0;
@@ -152,9 +197,9 @@
 
 [data-theme="light"] .roadmap-card,
 [data-theme="lofi"] .roadmap-card {
-    background: rgba(255, 255, 255, 0.92);
-    border: 1.5px solid rgba(25, 118, 210, 0.25);
-    box-shadow: 0 10px 30px rgba(25, 118, 210, 0.1);
+    background: rgba(245, 250, 255, 0.98);
+    border: 1.5px solid rgba(25, 118, 210, 0.4);
+    box-shadow: 0 10px 30px rgba(25, 118, 210, 0.15);
 }
 
 .roadmap-card:hover {
@@ -191,13 +236,15 @@
     box-shadow: 0 0 15px rgba(25, 118, 210, 0.3);
 }
 
-/* Card Image */
+/* Card Image - Full coverage without rounded corners */
 .roadmap-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
+    border-radius: 0;
+    /* Remove rounded corners */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     opacity: 1;
     transition: all 0.4s ease;
 }
@@ -942,4 +989,349 @@
             transform: none !important;
         }
     }
+}
+
+/* ============================================
+   ROADMAPS GRID CARDS SECTION - CYBER DECK STYLE
+   ============================================
+*/
+
+/* Variables for theming */
+/* Variables for theming */
+:root {
+    --card-glow-dark: #FFC758;
+    --card-glow-light: #1976D2;
+    --card-bg-dark: rgba(20, 15, 10, 0.95);
+    --card-bg-light: rgba(255, 255, 255, 0.95);
+    --title-gradient-dark: linear-gradient(135deg, #DA7138 0%, #EC9E6E 50%, #ECC475 100%);
+    --title-gradient-light: linear-gradient(135deg, #000C40 0%, #1565C0 50%, #42A5F5 100%);
+
+    /* Spring Physics for Premium Feel */
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-smooth: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Grid Layout - 2 columns */
+.roadmaps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem;
+    margin-bottom: 4rem;
+}
+
+/* Card Link */
+.roadmap-card-link {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    border: none !important;
+    outline: none !important;
+}
+
+.roadmap-card-link:hover {
+    border: none !important;
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
+
+/* Cyber Card Container - Chamfered Edges */
+.cyber-card {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background: rgba(30, 25, 20, 0.7);
+    /* Lighter, more transparent */
+    backdrop-filter: blur(16px);
+    transition: transform 0.5s var(--ease-spring), box-shadow 0.5s var(--ease-smooth);
+
+    /* Permanent subtle gold border - defines shape */
+    border: 1px solid rgba(255, 199, 88, 0.15);
+    transition: border-color 0.3s ease;
+
+    /* Top-Right and Bottom-Left Chamfers */
+    clip-path: polygon(0 0,
+            calc(100% - 30px) 0,
+            100% 30px,
+            100% 100%,
+            30px 100%,
+            0 calc(100% - 30px));
+
+    /* Deep shadow + Top Rim Light */
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    /* Rim Light */
+}
+
+[data-theme="light"] .cyber-card,
+[data-theme="lofi"] .cyber-card {
+    background: rgba(255, 255, 255, 0.8);
+    /* Glassy white */
+    border: 1px solid rgba(25, 118, 210, 0.15);
+    /* Blue subtle border */
+    box-shadow:
+        0 10px 30px rgba(25, 118, 210, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    /* Bright rim light */
+}
+
+/* Hover Effect: Lift and Glow */
+.roadmap-card-link:hover .cyber-card {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 199, 88, 0.5);
+    /* Brighter border on hover */
+}
+
+[data-theme="light"] .roadmap-card-link:hover .cyber-card,
+[data-theme="lofi"] .roadmap-card-link:hover .cyber-card {
+    border-color: rgba(25, 118, 210, 0.5);
+    /* Brighter blue border */
+    box-shadow: 0 20px 50px rgba(25, 118, 210, 0.15);
+}
+
+/* Tech Border Lines (Pseudo-borders) */
+.cyber-border {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+
+    /* Draw borders mostly transparent, but visible */
+    /* Base border color is subtle */
+    background: linear-gradient(135deg, rgba(255, 199, 88, 0.15) 0%, rgba(255, 199, 88, 0.05) 50%, rgba(255, 199, 88, 0.15) 100%);
+}
+
+.cyber-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 1.5px;
+    background: #FFC758;
+    transform-origin: right;
+    transition: width 0.4s var(--ease-spring);
+    box-shadow: 0 0 10px #FFC758;
+}
+
+.cyber-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 1.5px;
+    background: #FFC758;
+    transform-origin: left;
+    transition: width 0.4s var(--ease-spring);
+    box-shadow: 0 0 10px #FFC758;
+}
+
+/* Light Theme Borders */
+[data-theme="light"] .cyber-border,
+[data-theme="lofi"] .cyber-border {
+    background: linear-gradient(135deg, rgba(25, 118, 210, 0.1) 0%, rgba(25, 118, 210, 0.05) 50%, rgba(25, 118, 210, 0.1) 100%);
+}
+
+[data-theme="light"] .cyber-border::before,
+[data-theme="light"] .cyber-border::after,
+[data-theme="lofi"] .cyber-border::before,
+[data-theme="lofi"] .cyber-border::after {
+    background: #1976D2;
+    box-shadow: 0 0 10px #1976D2;
+}
+
+
+/* Hover Animation: Extend Lines with Spring */
+.roadmap-card-link:hover .cyber-border::before,
+.roadmap-card-link:hover .cyber-border::after {
+    width: 120px;
+}
+
+/* Glint removed per user feedback */
+
+/* Cyber Glow - Internal Ambient Light */
+.cyber-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 100%, rgba(255, 199, 88, 0.2), transparent 60%);
+    opacity: 0.3;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+[data-theme="light"] .cyber-glow,
+[data-theme="lofi"] .cyber-glow {
+    /* Stronger Blue/Cyan glow against the new dark gradient */
+    background: radial-gradient(circle at 50% 100%, rgba(66, 165, 245, 0.4), transparent 70%);
+}
+
+.roadmap-card-link:hover .cyber-glow {
+    opacity: 0.8;
+}
+
+/* Scanlines / Texture */
+.cyber-lines {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.1) 3px,
+            rgba(0, 0, 0, 0.1) 4px);
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+/* Image Wrapper */
+.image-wrapper {
+    position: absolute;
+    inset: 2px;
+    /* Slight inset for border look */
+    z-index: 0;
+    /* Match the clip path but slightly smaller? No, keep standard for now */
+    clip-path: polygon(0 0,
+            calc(100% - 30px) 0,
+            100% 30px,
+            100% 100%,
+            30px 100%,
+            0 calc(100% - 30px));
+}
+
+.cyber-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-spring), filter 0.6s ease;
+    filter: brightness(0.75) grayscale(20%);
+    /* Brighter, less gray */
+}
+
+.roadmap-card-link:hover .cyber-card-image {
+    transform: scale(1.08);
+    filter: brightness(1.0) grayscale(0%);
+}
+
+[data-theme="light"] .cyber-card-image,
+[data-theme="lofi"] .cyber-card-image {
+    filter: brightness(1.05) hue-rotate(170deg);
+    /* Turn Gold to True Blue */
+}
+
+[data-theme="light"] .roadmap-card-link:hover .cyber-card-image,
+[data-theme="lofi"] .roadmap-card-link:hover .cyber-card-image {
+    filter: brightness(1.1) hue-rotate(170deg);
+    /* Bright blue on hover */
+}
+
+
+/* Content Area */
+.cyber-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    z-index: 20;
+    background: linear-gradient(to top, rgba(14, 6, 4, 1) 15%, rgba(14, 6, 4, 0.7) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    /* Align text to left for tech look? or Center? Let's check template. Template was center. */
+    align-items: center;
+    clip-path: polygon(0 0,
+            100% 0,
+            100% 100%,
+            30px 100%,
+            0 calc(100% - 30px));
+}
+
+[data-theme="light"] .cyber-card-content,
+[data-theme="lofi"] .cyber-card-content {
+    /* User requested "Black" instead of "White" for better contrast/glow */
+    background: linear-gradient(to top, rgba(5, 20, 40, 0.95) 15%, rgba(5, 20, 40, 0.7) 60%, transparent 100%);
+}
+
+.cyber-card-title {
+    font-size: 1.6rem;
+    /* Slightly smaller for elegance */
+    font-weight: 800;
+    margin: 0;
+    text-align: center;
+    background: var(--title-gradient-dark);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Cinematic spacing */
+    margin-bottom: 0.75rem;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Lift text off bg */
+}
+
+[data-theme="light"] .cyber-card-title,
+[data-theme="lofi"] .cyber-card-title {
+    /* White/Cyan text to pop against the dark navy gradient */
+    background: linear-gradient(135deg, #FFFFFF 0%, #E3F2FD 50%, #90CAF9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Tech Underline - Animated Bar */
+.tech-underline {
+    width: 30px;
+    height: 3px;
+    background: #FFC758;
+    box-shadow: 0 0 15px #FFC758;
+    transition: width 0.4s var(--ease-spring);
+    border-radius: 2px;
+}
+
+[data-theme="light"] .tech-underline,
+[data-theme="lofi"] .tech-underline {
+    background: #1976D2;
+    box-shadow: 0 0 10px #1976D2;
+}
+
+.roadmap-card-link:hover .tech-underline {
+    width: 80%;
+    /* Don't go full width, looks cleaner */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .roadmaps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cyber-card {
+        height: 350px;
+    }
+
+    .cyber-card-title {
+        font-size: 1.5rem;
+    }
+
+    .roadmap-card-link:hover .tech-underline {
+        width: 60%;
+    }
+}
+
+/* Selection styling */
+::selection {
+    background: #5c161e;
+    color: white;
+}
+
+[data-theme="light"] ::selection,
+[data-theme="lofi"] ::selection {
+    background: #1976D2;
+    color: white;
 }

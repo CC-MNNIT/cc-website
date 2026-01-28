@@ -8,22 +8,36 @@
 
 .team-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
 }
 
 .team-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
     margin-bottom: 1rem;
     font-family: var(--font-main);
     color: var(--color-base-content);
+    display: inline-block;
+}
+
+[data-theme="night"] .team-title {
+    background: linear-gradient(135deg, #FFC758 0%, #FFD700 50%, #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 60px rgba(255, 199, 88, 0.3);
 }
 
 .team-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: var(--color-base-content);
-    opacity: 0.7;
+    opacity: 0.6;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
 }
 
 /* Sections */
@@ -32,7 +46,7 @@
 }
 
 .section-title {
-    font-size: 1.75rem;
+    font-size: 2.25rem;
     font-weight: 700;
     color: var(--color-base-content);
     text-align: center;
@@ -60,7 +74,7 @@
 .faculty-card {
     min-width: 320px;
     /* Enhanced glow for lead card with gold theme */
-    box-shadow: 
+    box-shadow:
         0 0 20px rgba(255, 199, 88, 0.15),
         0 20px 40px -10px rgba(0, 0, 0, 0.3);
 }
@@ -70,7 +84,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .team-grid .team-card {
@@ -83,7 +97,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .team-flex-center .team-card {
@@ -97,14 +111,17 @@
 
 /* Keyframe Animations - Using Gold/Amber theme colors */
 @keyframes techGlow {
-    0%, 100% { 
-        box-shadow: 
+
+    0%,
+    100% {
+        box-shadow:
             0 0 5px rgba(255, 199, 88, 0.3),
             0 0 10px rgba(255, 199, 88, 0.2),
             inset 0 0 15px rgba(255, 199, 88, 0.05);
     }
-    50% { 
-        box-shadow: 
+
+    50% {
+        box-shadow:
             0 0 15px rgba(255, 199, 88, 0.5),
             0 0 30px rgba(255, 199, 88, 0.3),
             inset 0 0 20px rgba(255, 199, 88, 0.1);
@@ -112,37 +129,63 @@
 }
 
 @keyframes scanLine {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(100%); }
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
 }
 
 @keyframes borderPulse {
-    0%, 100% { border-color: rgba(255, 199, 88, 0.25); }
-    50% { border-color: rgba(255, 199, 88, 0.6); }
+
+    0%,
+    100% {
+        border-color: rgba(255, 199, 88, 0.25);
+    }
+
+    50% {
+        border-color: rgba(255, 199, 88, 0.6);
+    }
 }
 
 @keyframes floatUp {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 /* Card Styling - Hexagonal/Angular Tech Design */
 .team-card {
-    background: linear-gradient(135deg, 
-        rgba(20, 15, 10, 0.95) 0%, 
-        rgba(30, 22, 15, 0.95) 50%,
-        rgba(25, 18, 12, 0.98) 100%);
+    background: linear-gradient(135deg,
+            rgba(20, 15, 10, 0.95) 0%,
+            rgba(30, 22, 15, 0.95) 50%,
+            rgba(25, 18, 12, 0.98) 100%);
     /* Edgy hexagonal corners using clip-path */
-    clip-path: polygon(
-        15px 0,           /* top-left cut */
-        calc(100% - 15px) 0,  /* top-right cut */
-        100% 15px,        /* right-top corner */
-        100% calc(100% - 15px), /* right-bottom corner */
-        calc(100% - 15px) 100%, /* bottom-right cut */
-        15px 100%,        /* bottom-left cut */
-        0 calc(100% - 15px),    /* left-bottom corner */
-        0 15px            /* left-top corner */
-    );
+    clip-path: polygon(15px 0,
+            /* top-left cut */
+            calc(100% - 15px) 0,
+            /* top-right cut */
+            100% 15px,
+            /* right-top corner */
+            100% calc(100% - 15px),
+            /* right-bottom corner */
+            calc(100% - 15px) 100%,
+            /* bottom-right cut */
+            15px 100%,
+            /* bottom-left cut */
+            0 calc(100% - 15px),
+            /* left-bottom corner */
+            0 15px
+            /* left-top corner */
+        );
     padding: 1.75rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -160,12 +203,12 @@
     content: '';
     position: absolute;
     inset: -2px;
-    background: linear-gradient(45deg, 
-        transparent 0%,
-        rgba(255, 199, 88, 0.1) 25%,
-        rgba(194, 41, 61, 0.15) 50%,
-        rgba(255, 199, 88, 0.1) 75%,
-        transparent 100%);
+    background: linear-gradient(45deg,
+            transparent 0%,
+            rgba(255, 199, 88, 0.1) 25%,
+            rgba(194, 41, 61, 0.15) 50%,
+            rgba(255, 199, 88, 0.1) 75%,
+            transparent 100%);
     clip-path: inherit;
     z-index: -1;
     opacity: 0;
@@ -180,10 +223,10 @@
     left: 0;
     right: 0;
     height: 50%;
-    background: linear-gradient(180deg, 
-        rgba(255, 199, 88, 0) 0%,
-        rgba(255, 199, 88, 0.03) 50%,
-        rgba(255, 199, 88, 0) 100%);
+    background: linear-gradient(180deg,
+            rgba(255, 199, 88, 0) 0%,
+            rgba(255, 199, 88, 0.03) 50%,
+            rgba(255, 199, 88, 0) 100%);
     opacity: 0;
     pointer-events: none;
     z-index: 10;
@@ -194,10 +237,10 @@
     transform: translateY(-10px) scale(1.02);
     border-color: rgba(255, 199, 88, 0.6);
     animation: techGlow 1.5s ease-in-out infinite;
-    background: linear-gradient(135deg, 
-        rgba(40, 25, 15, 0.98) 0%, 
-        rgba(50, 30, 20, 0.95) 50%,
-        rgba(45, 28, 18, 0.98) 100%);
+    background: linear-gradient(135deg,
+            rgba(40, 25, 15, 0.98) 0%,
+            rgba(50, 30, 20, 0.95) 50%,
+            rgba(45, 28, 18, 0.98) 100%);
 }
 
 .team-card:hover::before {
@@ -242,8 +285,8 @@
 
 /* Image - Rounded with gold glow */
 .card-image-wrapper {
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
     margin-bottom: 1.5rem;
     position: relative;
     /* Rounded/circular shape for image */
@@ -257,10 +300,10 @@
     position: absolute;
     inset: -3px;
     /* Gold/Burgundy gradient border */
-    background: linear-gradient(135deg, 
-        rgba(255, 199, 88, 0.4) 0%, 
-        rgba(194, 41, 61, 0.5) 50%, 
-        rgba(255, 199, 88, 0.4) 100%);
+    background: linear-gradient(135deg,
+            rgba(255, 199, 88, 0.4) 0%,
+            rgba(194, 41, 61, 0.5) 50%,
+            rgba(255, 199, 88, 0.4) 100%);
     border-radius: 50%;
     z-index: -1;
     opacity: 0.8;
@@ -283,10 +326,10 @@
 
 .team-card:hover .card-image-wrapper::before {
     opacity: 1;
-    background: linear-gradient(135deg, 
-        rgba(255, 199, 88, 0.6) 0%, 
-        rgba(194, 41, 61, 0.7) 50%, 
-        rgba(255, 199, 88, 0.6) 100%);
+    background: linear-gradient(135deg,
+            rgba(255, 199, 88, 0.6) 0%,
+            rgba(194, 41, 61, 0.7) 50%,
+            rgba(255, 199, 88, 0.6) 100%);
 }
 
 .team-card:hover .card-image {
@@ -374,12 +417,12 @@
 /* ===== LIGHT THEME CARD STYLING ===== */
 [data-theme="light"] .team-card,
 [data-theme="lofi"] .team-card {
-    background: linear-gradient(135deg, 
-        rgba(255, 255, 255, 0.95) 0%, 
-        rgba(245, 248, 255, 0.95) 50%,
-        rgba(240, 245, 255, 0.98) 100%);
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(245, 248, 255, 0.95) 50%,
+            rgba(240, 245, 255, 0.98) 100%);
     border: 2px solid rgba(21, 101, 192, 0.2);
-    box-shadow: 
+    box-shadow:
         0 4px 20px rgba(0, 12, 64, 0.08),
         0 2px 8px rgba(21, 101, 192, 0.05);
 }
@@ -387,11 +430,11 @@
 [data-theme="light"] .team-card:hover,
 [data-theme="lofi"] .team-card:hover {
     border-color: rgba(21, 101, 192, 0.5);
-    background: linear-gradient(135deg, 
-        rgba(255, 255, 255, 0.98) 0%, 
-        rgba(240, 248, 255, 0.98) 50%,
-        rgba(235, 245, 255, 0.98) 100%);
-    box-shadow: 
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(240, 248, 255, 0.98) 50%,
+            rgba(235, 245, 255, 0.98) 100%);
+    box-shadow:
         0 0 15px rgba(21, 101, 192, 0.2),
         0 0 30px rgba(66, 165, 245, 0.15),
         0 10px 40px rgba(0, 12, 64, 0.12);
@@ -401,21 +444,21 @@
 /* Light theme glowing border effect */
 [data-theme="light"] .team-card::before,
 [data-theme="lofi"] .team-card::before {
-    background: linear-gradient(45deg, 
-        transparent 0%,
-        rgba(21, 101, 192, 0.1) 25%,
-        rgba(66, 165, 245, 0.15) 50%,
-        rgba(21, 101, 192, 0.1) 75%,
-        transparent 100%);
+    background: linear-gradient(45deg,
+            transparent 0%,
+            rgba(21, 101, 192, 0.1) 25%,
+            rgba(66, 165, 245, 0.15) 50%,
+            rgba(21, 101, 192, 0.1) 75%,
+            transparent 100%);
 }
 
 /* Light theme scan line effect */
 [data-theme="light"] .team-card::after,
 [data-theme="lofi"] .team-card::after {
-    background: linear-gradient(180deg, 
-        rgba(21, 101, 192, 0) 0%,
-        rgba(21, 101, 192, 0.03) 50%,
-        rgba(21, 101, 192, 0) 100%);
+    background: linear-gradient(180deg,
+            rgba(21, 101, 192, 0) 0%,
+            rgba(21, 101, 192, 0.03) 50%,
+            rgba(21, 101, 192, 0) 100%);
 }
 
 /* Light theme corner accents */
@@ -436,18 +479,18 @@
 /* Light theme image wrapper */
 [data-theme="light"] .card-image-wrapper::before,
 [data-theme="lofi"] .card-image-wrapper::before {
-    background: linear-gradient(135deg, 
-        rgba(0, 12, 64, 0.3) 0%, 
-        rgba(21, 101, 192, 0.4) 50%, 
-        rgba(66, 165, 245, 0.3) 100%);
+    background: linear-gradient(135deg,
+            rgba(0, 12, 64, 0.3) 0%,
+            rgba(21, 101, 192, 0.4) 50%,
+            rgba(66, 165, 245, 0.3) 100%);
 }
 
 [data-theme="light"] .team-card:hover .card-image-wrapper::before,
 [data-theme="lofi"] .team-card:hover .card-image-wrapper::before {
-    background: linear-gradient(135deg, 
-        rgba(0, 12, 64, 0.5) 0%, 
-        rgba(21, 101, 192, 0.6) 50%, 
-        rgba(66, 165, 245, 0.5) 100%);
+    background: linear-gradient(135deg,
+            rgba(0, 12, 64, 0.5) 0%,
+            rgba(21, 101, 192, 0.6) 50%,
+            rgba(66, 165, 245, 0.5) 100%);
 }
 
 /* Light theme social links */
@@ -468,7 +511,7 @@
 /* Light theme faculty card */
 [data-theme="light"] .faculty-card,
 [data-theme="lofi"] .faculty-card {
-    box-shadow: 
+    box-shadow:
         0 0 20px rgba(21, 101, 192, 0.1),
         0 20px 40px -10px rgba(0, 12, 64, 0.15);
 }
@@ -484,7 +527,7 @@
     }
 
     .card-image-wrapper {
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
     }
 }

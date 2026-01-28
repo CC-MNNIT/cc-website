@@ -11,31 +11,34 @@
         {% set data = load_data(path="data/projects.toml") %}
         {% for project in data.projects %}
         <a href="{{ project.repo_url }}" target="_blank" rel="noopener noreferrer" class="project-card group">
-            <div class="card-header">
-                <div class="project-icon">
-                    <i class="{{ project.icon }}"></i>
+            <div class="project-card-inner">
+                <div class="card-header">
+                    <div class="project-icon">
+                        <i class="{{ project.icon }}"></i>
+                    </div>
+                    <h2 class="project-title">{{ project.title }}</h2>
                 </div>
-                <h2 class="project-title">{{ project.title }}</h2>
-            </div>
 
-            <p class="project-description">{{ project.description }}</p>
+                <p class="project-description">{{ project.description }}</p>
 
-            <div class="tech-stack">
-                {% for tech in project.tech_stack %}
-                <span class="tech-badge">{{ tech }}</span>
-                {% endfor %}
-            </div>
-
-            <div class="card-footer">
-                <div class="avatar-stack">
-                    {% for author in project.authors %}
-                    <img src="https://github.com/{{ author }}.png" alt="{{ author }}" class="avatar"
-                        title="{{ author }}">
+                <div class="tech-stack">
+                    {% for tech in project.tech_stack %}
+                    <span class="tech-badge">{{ tech }}</span>
                     {% endfor %}
                 </div>
-                <div class="view-code">
-                    <span>View Code</span>
-                    <i class="fa-solid fa-arrow-right-long"></i>
+
+                <div class="card-footer">
+                    <div class="avatar-stack {% if project.authors | length > 4 %}avatar-stack-many{% endif %}">
+                        {% for author in project.authors %}
+                        <div class="avatar-wrapper" title="{{ author }}">
+                            <img src="https://github.com/{{ author }}.png" alt="{{ author }}" class="avatar-img">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="view-code">
+                        <span>View Code</span>
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </div>
                 </div>
             </div>
         </a>

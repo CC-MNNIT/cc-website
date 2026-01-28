@@ -126,25 +126,25 @@ subtitle = "Explore our community, events, and impact"
 name = "Community"
 title = "Vibrant Tech Community"
 description = "Join 200+ students passionate about technology. From beginners to advanced developers, everyone finds their place in our inclusive community."
-image = "showcase/community.jpg"
+image = "showcase/community.webp"
 
 [[extra.showcase_section.tabs]]
 name = "Events"
 title = "Exciting Events Year-Round"
 description = "Hackathons, workshops, guest lectures, and meetups. We organize 50+ events annually covering the latest in tech."
-image = "showcase/events.jpg"
+image = "showcase/events.webp"
 
 [[extra.showcase_section.tabs]]
 name = "ContriHub"
 title = "ContriHub - Open Source Celebration"
 description = "Our flagship event where students make meaningful contributions to open source in a beginner-friendly, supportive environment."
-image = "showcase/contrihub.jpg"
+image = "showcase/contrihub.webp"
 
 [[extra.showcase_section.tabs]]
 name = "Learning"
 title = "Structured Learning Paths"
 description = "Follow curated roadmaps for web development, DSA, machine learning, and more. Learn at your own pace with community support."
-image = "showcase/learning.jpg"
+image = "showcase/learning.webp"
 
 # Social Proof Section - Testimonials from members and alumni
 [extra.social_proof_section]
@@ -154,26 +154,26 @@ title = "What Our Members Say"
 author = "Priya Sharma"
 role = "Software Engineer at Google | CC Club Alumni 2023"
 quote = "CC Club transformed my coding journey. From struggling with basic syntax to contributing to major open source projects - the supportive community made all the difference."
-avatar = "testimonials/priya.jpg"
+avatar = "testimonials/priya.webp"
 
 [[extra.social_proof_section.testimonials]]
 author = "Rahul Verma"
 role = "SDE at Amazon | CC Club President 2022"
 quote = "Leading CC Club was the best decision of my college life. The skills I learned in organizing events and mentoring juniors helped me land my dream job."
-avatar = "testimonials/rahul.jpg"
+avatar = "testimonials/rahul.webp"
 
 [[extra.social_proof_section.testimonials]]
 author = "Ananya Gupta"
 role = "ML Engineer at Microsoft | ContriHub Participant 2024"
 quote = "ContriHub gave me the confidence to contribute to open source. Now I'm a maintainer of two popular Python libraries!"
-avatar = "testimonials/ananya.jpg"
+avatar = "testimonials/ananya.webp"
 
 # Final CTA Section - Encourage action
 [extra.final_cta_section]
 title = "Ready to Level Up Your Skills?"
 description = "Join Computer Coding Club today and become part of a community that will support your growth from day one. Whether you're a complete beginner or an experienced developer, there's a place for you here."
 button = { text = "Get Started", url = "/about" }
-image = "cta-background.jpg"
+image = "cta-background.webp"
 +++
 
 <!-- 

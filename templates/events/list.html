@@ -1,274 +1,444 @@
 {#
-  EVENTS LISTING TEMPLATE (templates/events.html)
+EVENTS LISTING TEMPLATE (templates/events.html)
 
-  Features:
-  - Hero carousel with parallax effect
-  - Year + Domain filters
-  - Elegant event cards
+Features:
+- Hero carousel with parallax effect
+- Year + Domain filters
+- Elegant event cards
 #}
 
 {% extends "index.html" %}
 
 {% block header %}
-    {{ macros_header::header(config=config, lang=lang, section=section) }}
+{{ macros_header::header(config=config, lang=lang, section=section) }}
 {% endblock header %}
 
 {% block content %}
-    {# Collect all events from subsections #}
-    {% set all_events = [] %}
-    {% set events_2026 = [] %}
-    {% set events_2025 = [] %}
-    {% set hackathons = [] %}
-    {% set challenges = [] %}
-    {% set workshops = [] %}
-    {% set programs = [] %}
+{# Collect all events from subsections #}
+{% set all_events = [] %}
+{% set events_2026 = [] %}
+{% set events_2025 = [] %}
+{% set hackathons = [] %}
+{% set challenges = [] %}
+{% set workshops = [] %}
+{% set programs = [] %}
+{% set buildfests = [] %}
+{% set contests = [] %}
+{% set open_source = [] %}
 
-    {% for subsection_path in section.subsections %}
-        {% set subsection = get_section(path=subsection_path) %}
-        {% if subsection.pages %}
-            {% for event in subsection.pages %}
-                {% set_global all_events = all_events | concat(with=[event]) %}
-                {% set event_year = event.date | date(format="%Y") %}
-                {% if event_year == "2026" %}
-                    {% set_global events_2026 = events_2026 | concat(with=[event]) %}
-                {% elif event_year == "2025" %}
-                    {% set_global events_2025 = events_2025 | concat(with=[event]) %}
-                {% endif %}
-                {# Group by event type #}
-                {% if event.extra.event_type == "hackathon" %}
-                    {% set_global hackathons = hackathons | concat(with=[event]) %}
-                {% elif event.extra.event_type == "challenge" %}
-                    {% set_global challenges = challenges | concat(with=[event]) %}
-                {% elif event.extra.event_type == "workshop" %}
-                    {% set_global workshops = workshops | concat(with=[event]) %}
-                {% elif event.extra.event_type == "program" %}
-                    {% set_global programs = programs | concat(with=[event]) %}
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-    {% endfor %}
+{% for subsection_path in section.subsections %}
+{% set subsection = get_section(path=subsection_path) %}
+{% if subsection.pages %}
+{% for event in subsection.pages %}
+{% set_global all_events = all_events | concat(with=[event]) %}
+{% set event_year = event.date | date(format="%Y") %}
+{% if event.extra.event_type != "program" %}
+{% if event_year == "2026" %}
+{% set_global events_2026 = events_2026 | concat(with=[event]) %}
+{% elif event_year == "2025" %}
+{% set_global events_2025 = events_2025 | concat(with=[event]) %}
+{% endif %}
+{% endif %}
+{# Group by event type #}
+{% if event.extra.event_type == "hackathon" %}
+{% set_global hackathons = hackathons | concat(with=[event]) %}
+{% elif event.extra.event_type == "challenge" %}
+{% set_global challenges = challenges | concat(with=[event]) %}
+{% elif event.extra.event_type == "workshop" %}
+{% set_global workshops = workshops | concat(with=[event]) %}
+{% elif event.extra.event_type == "program" %}
+{% set_global programs = programs | concat(with=[event]) %}
+{% elif event.extra.event_type == "buildfest" %}
+{% set_global buildfests = buildfests | concat(with=[event]) %}
+{% elif event.extra.event_type == "contest" %}
+{% set_global contests = contests | concat(with=[event]) %}
+{% elif event.extra.event_type == "open-source" %}
+{% set_global open_source = open_source | concat(with=[event]) %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
 
-    {# ========== HERO CAROUSEL ========== #}
-    {% if all_events | length > 0 %}
-    <section class="events-hero" data-hero-carousel>
-        <div class="hero-carousel-container">
-            {# Slides #}
-            <div class="hero-slides">
-                {% for event in all_events %}
-                <article class="hero-slide {% if loop.first %}active{% endif %}" data-index="{{ loop.index0 }}">
-                    {# Background with parallax #}
-                    <div class="hero-slide-bg">
-                        {% if event.extra.images %}
-                        {% set first_image = event.extra.images | first %}
-                        <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ first_image) }}" alt="{{ event.title }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
-                        {% endif %}
-                        <div class="hero-slide-overlay"></div>
-                    </div>
 
-                    {# Content #}
-                    <div class="hero-slide-content">
-                        <div class="hero-slide-inner">
-                            {# Badge & Status #}
-                            <div class="hero-slide-badges">
-                                {% if event.extra.event_type %}
-                                <span class="hero-type-badge {{ event.extra.event_type }}">{{ event.extra.event_type }}</span>
-                                {% endif %}
-                                {% if event.extra.status %}
-                                <span class="hero-status-badge {{ event.extra.status }}">{{ event.extra.status }}</span>
-                                {% endif %}
-                            </div>
 
-                            {# Title #}
-                            <h1 class="hero-slide-title">{{ event.title }}</h1>
+{# Sort events: Ongoing/Live first #}
+{% set priority_events = [] %}
+{% set other_events = [] %}
+{% for event in all_events %}
+{% set status = event.extra.status | default(value="") | lower %}
+{% if status == "ongoing" or status == "live" %}
+{% set_global priority_events = priority_events | concat(with=[event]) %}
+{% else %}
+{% set_global other_events = other_events | concat(with=[event]) %}
+{% endif %}
+{% endfor %}
+{% set_global all_events = priority_events | concat(with=other_events) %}
 
-                            {# Description #}
-                            <p class="hero-slide-desc">{{ event.description }}</p>
+{# Filter events for banner carousel (show_banner = true) #}
+{% set banner_events = [] %}
+{% for event in all_events %}
+{% if event.extra.show_banner is defined and event.extra.show_banner == true %}
+{% set_global banner_events = banner_events | concat(with=[event]) %}
+{% endif %}
+{% endfor %}
 
-                            {# Meta info #}
-                            <div class="hero-slide-meta">
-                                <div class="hero-meta-item">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                                    <span>{{ event.date | date(format="%B %d, %Y") }}</span>
-                                </div>
-                                {% if event.extra.location %}
-                                <div class="hero-meta-item">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                                    <span>{{ event.extra.location }}</span>
-                                </div>
-                                {% endif %}
-                            </div>
-
-                            {# Action Buttons #}
-                            <div class="hero-slide-actions">
-                                <a href="{{ event.permalink }}" class="hero-btn hero-btn-primary">
-                                    <span>Explore Event</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                                </a>
-                                {% if event.extra.external_link %}
-                                <a href="{{ event.extra.external_link }}" target="_blank" rel="noopener" class="hero-btn hero-btn-secondary">
-                                    <span>Official Site</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                </a>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-
-                    {# Slide Number #}
-                    <div class="hero-slide-number">
-                        <span class="current">{{ loop.index }}</span>
-                        <span class="separator">/</span>
-                        <span class="total">{{ all_events | length }}</span>
-                    </div>
-                </article>
-                {% endfor %}
-            </div>
-
-            {# Navigation #}
-            {% if all_events | length > 1 %}
-            <div class="hero-navigation">
-                <button class="hero-nav-btn hero-prev" aria-label="Previous slide">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-                </button>
-                <div class="hero-progress">
-                    {% for event in all_events %}
-                    <button class="hero-progress-item {% if loop.first %}active{% endif %}" data-index="{{ loop.index0 }}" aria-label="{{ event.title }}">
-                        <span class="hero-progress-bar"></span>
-                        <span class="hero-progress-label">{{ event.title }}</span>
-                    </button>
-                    {% endfor %}
-                </div>
-                <button class="hero-nav-btn hero-next" aria-label="Next slide">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-                </button>
-            </div>
-            {% endif %}
-        </div>
-    </section>
-    {% endif %}
-
-    {# ========== EVENTS LISTING ========== #}
-    <section class="events-listing">
-        {# Section Header with Filters #}
-        <header class="events-listing-header">
-            <div class="events-listing-title-row">
-                <h2 class="events-listing-title">All Events</h2>
-                <p class="events-listing-subtitle">Explore our hackathons, challenges, and workshops</p>
-            </div>
-
-            {# Filter Controls #}
-            <div class="events-filters">
-                {# Year Filter #}
-                <div class="filter-group">
-                    <span class="filter-label">Year</span>
-                    <div class="filter-buttons" role="tablist" data-filter="year">
-                        <button class="filter-btn active" role="tab" data-value="all">All</button>
-                        <button class="filter-btn" role="tab" data-value="2026">2026 <span class="filter-count">{{ events_2026 | length }}</span></button>
-                        <button class="filter-btn" role="tab" data-value="2025">2025 <span class="filter-count">{{ events_2025 | length }}</span></button>
-                    </div>
-                </div>
-
-                {# Domain Filter #}
-                <div class="filter-group">
-                    <span class="filter-label">Category</span>
-                    <div class="filter-buttons" role="tablist" data-filter="domain">
-                        <button class="filter-btn active" role="tab" data-value="all">All</button>
-                        {% if hackathons | length > 0 %}
-                        <button class="filter-btn" role="tab" data-value="hackathon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                            Hackathons
-                        </button>
-                        {% endif %}
-                        {% if challenges | length > 0 %}
-                        <button class="filter-btn" role="tab" data-value="challenge">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                            Challenges
-                        </button>
-                        {% endif %}
-                        {% if workshops | length > 0 %}
-                        <button class="filter-btn" role="tab" data-value="workshop">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                            Workshops
-                        </button>
-                        {% endif %}
-                        {% if programs | length > 0 %}
-                        <button class="filter-btn" role="tab" data-value="program">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                            Programs
-                        </button>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        {# Events Grid #}
-        <div class="events-grid" data-events-grid>
-            {% for event in all_events %}
-            <a href="{{ event.permalink }}" class="event-card"
-               data-year="{{ event.date | date(format='%Y') }}"
-               data-domain="{{ event.extra.event_type | default(value='other') }}">
-                {# Card Image #}
-                <div class="event-card-visual">
-                    {% if event.extra.images %}
+{# ========== HERO CAROUSEL ========== #}
+{% if banner_events | length > 0 %}
+<section class="events-hero" data-hero-carousel>
+    <div class="hero-carousel-container">
+        {# Slides #}
+        <div class="hero-slides">
+            {% for event in banner_events %}
+            <article class="hero-slide {% if loop.first %}active{% endif %}" data-index="{{ loop.index0 }}">
+                {# Background with parallax #}
+                <div
+                    class="hero-slide-bg {% if not event.extra.banner_image and not event.extra.images %}no-image{% endif %}">
+                    {% if event.extra.banner_image %}
+                    <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ event.extra.banner_image) }}"
+                        alt="{{ event.title }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
+                    {% elif event.extra.images %}
                     {% set first_image = event.extra.images | first %}
-                    <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ first_image) }}" alt="{{ event.title }}" loading="lazy">
+                    <img src="{{ get_url(path=first_image) }}" alt="{{ event.title }}"
+                        loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
                     {% endif %}
-                    <div class="event-card-visual-overlay"></div>
-
-                    {# Floating badges #}
-                    <div class="event-card-badges">
-                        {% if event.extra.event_type %}
-                        <span class="event-card-type {{ event.extra.event_type }}">{{ event.extra.event_type }}</span>
-                        {% endif %}
-                    </div>
-
-                    {# External link indicator #}
-                    {% if event.extra.external_link %}
-                    <div class="event-card-external" title="Has external site">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    </div>
-                    {% endif %}
+                    <div class="hero-slide-overlay"></div>
                 </div>
 
-                {# Card Content #}
-                <div class="event-card-body">
-                    <h3 class="event-card-title">{{ event.title }}</h3>
-                    <p class="event-card-desc">{{ event.description }}</p>
-
-                    <div class="event-card-footer">
-                        <div class="event-card-meta">
-                            <span class="event-card-date">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                                {{ event.date | date(format="%b %Y") }}
-                            </span>
-                            {% if event.extra.location %}
-                            <span class="event-card-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                                {{ event.extra.location }}
-                            </span>
+                {# Content #}
+                <div class="hero-slide-content">
+                    <div class="hero-slide-inner">
+                        {# Badge & Status #}
+                        <div class="hero-slide-badges">
+                            {% if event.extra.event_type %}
+                            <span class="hero-type-badge {{ event.extra.event_type }}">{{ event.extra.event_type
+                                }}</span>
+                            {% endif %}
+                            {% if event.extra.status %}
+                            <span class="hero-status-badge {{ event.extra.status }}">{{ event.extra.status }}</span>
+                            {% endif %}
+                            {% if event.extra.badge %}
+                            <span class="hero-extra-badge {{ event.extra.badge | lower }}">{{ event.extra.badge
+                                }}</span>
                             {% endif %}
                         </div>
-                        <span class="event-card-arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                        </span>
+
+                        {# Title #}
+                        <h1 class="hero-slide-title">{{ event.title }}</h1>
+
+                        {# Description #}
+                        <p class="hero-slide-desc">{{ event.description }}</p>
+
+                        {# Meta info #}
+                        <div class="hero-slide-meta">
+                            <div class="hero-meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                {% if event.extra.date_label %}
+                                <span>{{ event.extra.date_label }}</span>
+                                {% else %}
+                                <span>{{ event.date | date(format="%B %d, %Y") }}</span>
+                                {% endif %}
+                            </div>
+                            {% if event.extra.location %}
+                            <div class="hero-meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                <span>{{ event.extra.location }}</span>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        {# Action Buttons #}
+                        <div class="hero-slide-actions">
+                            <a href="{{ event.permalink }}" class="hero-btn hero-btn-primary">
+                                <span>Explore Event</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg>
+                            </a>
+                            {% if event.extra.external_link %}
+                            <a href="{{ event.extra.external_link }}" target="_blank" rel="noopener"
+                                class="hero-btn hero-btn-secondary">
+                                <span>Official Site</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
-            </a>
+
+                {# Slide Number #}
+                <div class="hero-slide-number">
+                    <span class="current">{{ loop.index }}</span>
+                    <span class="separator">/</span>
+                    <span class="total">{{ banner_events | length }}</span>
+                </div>
+            </article>
             {% endfor %}
         </div>
 
-        {# Empty State #}
-        <div class="events-empty-state" data-empty-state style="display: none;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-            <p>No events found matching your filters</p>
-            <button class="events-reset-filters" data-reset-filters>Reset Filters</button>
+        {# Navigation #}
+        {% if banner_events | length > 1 %}
+        <div class="hero-navigation">
+            <button class="hero-nav-btn hero-prev" aria-label="Previous slide">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
+            </button>
+            <div class="hero-progress">
+                {% for event in banner_events %}
+                <button class="hero-progress-item {% if loop.first %}active{% endif %}" data-index="{{ loop.index0 }}"
+                    aria-label="{{ event.title }}">
+                    <span class="hero-progress-bar"></span>
+                    <span class="hero-progress-label">{{ event.title }}</span>
+                </button>
+                {% endfor %}
+            </div>
+            <button class="hero-nav-btn hero-next" aria-label="Next slide">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <polyline points="9 18 15 12 9 6" />
+                </svg>
+            </button>
         </div>
-    </section>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
 
-    {# ========== JAVASCRIPT ========== #}
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
+{# ========== EVENTS LISTING ========== #}
+<section class="events-listing">
+    {# Section Header with Filters #}
+    <header class="events-listing-header">
+        <div class="events-listing-title-row">
+            <h2 class="events-listing-title">All Events</h2>
+            <p class="events-listing-subtitle">Explore our hackathons, challenges, and workshops</p>
+        </div>
+
+        {# Filter Controls #}
+        <div class="events-filters">
+            {# Year Filter #}
+            <div class="filter-group">
+                <span class="filter-label">Year</span>
+                <div class="filter-buttons" role="tablist" data-filter="year">
+                    <button class="filter-btn active" role="tab" data-value="all">All</button>
+                    <button class="filter-btn" role="tab" data-value="2026">2026 <span class="filter-count">{{
+                            events_2026 | length }}</span></button>
+                    <button class="filter-btn" role="tab" data-value="2025">2025 <span class="filter-count">{{
+                            events_2025 | length }}</span></button>
+                </div>
+            </div>
+
+            {# Domain Filter #}
+            <div class="filter-group">
+                <span class="filter-label">Category</span>
+                <div class="filter-buttons" role="tablist" data-filter="domain">
+                    <button class="filter-btn active" role="tab" data-value="all">All</button>
+                    {% if hackathons | length > 0 %}
+                    <button class="filter-btn" role="tab" data-value="hackathon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                        Hackathons
+                    </button>
+                    {% endif %}
+                    {% if challenges | length > 0 %}
+                    <button class="filter-btn" role="tab" data-value="challenge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        Challenges
+                    </button>
+                    {% endif %}
+                    {% if workshops | length > 0 %}
+                    <button class="filter-btn" role="tab" data-value="workshop">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                        Workshops
+                    </button>
+                    {% endif %}
+                    {% if programs | length > 0 %}
+                    <button class="filter-btn" role="tab" data-value="program">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                        Programs
+                    </button>
+                    {% endif %}
+                    {% if buildfests | length > 0 %}
+                    <button class="filter-btn" role="tab" data-value="buildfest">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                            <path d="M4 22h16" />
+                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+                        </svg>
+                        Buildfest
+                    </button>
+                    {% endif %}
+                    {% if open_source | length > 0 %}
+                    <button class="filter-btn" role="tab" data-value="open-source">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M6 3v12" />
+                            <circle cx="18" cy="6" r="3" />
+                            <circle cx="6" cy="18" r="3" />
+                            <path d="M18 9a9 9 0 0 1-9 9" />
+                        </svg>
+                        Open Source
+                    </button>
+                    {% endif %}
+                    {% if contests | length > 0 %}
+                    <button class="filter-btn" role="tab" data-value="contest">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
+                        Contests
+                    </button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {# Events Grid #}
+    <div class="events-grid" data-events-grid>
+        {% for event in all_events %}
+        {% set event_year_attr = event.date | date(format='%Y') %}
+        {% if event.extra.event_type == "program" %}
+        {% set event_year_attr = "program" %}
+        {% endif %}
+        <a href="{{ event.permalink }}" class="event-card" data-year="{{ event_year_attr }}"
+            data-domain="{{ event.extra.event_type | default(value='other') }}">
+            {# Card Image #}
+            <div class="event-card-visual {% if not event.extra.images %}no-image{% endif %}">
+                {% if event.extra.images %}
+                {% set first_image = event.extra.images | first %}
+                <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ first_image) }}" alt="{{ event.title }}"
+                    loading="lazy">
+                {% endif %}
+                <div class="event-card-visual-overlay"></div>
+
+                {# Floating badges #}
+                <div class="event-card-badges">
+                    {% if event.extra.event_type %}
+                    <span class="event-card-type {{ event.extra.event_type }}">{{ event.extra.event_type }}</span>
+                    {% endif %}
+                    {% if event.extra.status %}
+                    <span class="event-card-status {{ event.extra.status }}">{{ event.extra.status }}</span>
+                    {% endif %}
+                    {% if event.extra.badge %}
+                    <span class="event-card-extra-badge {{ event.extra.badge | lower }}">{{ event.extra.badge }}</span>
+                    {% endif %}
+                </div>
+
+                {# External link indicator #}
+                {% if event.extra.external_link %}
+                <div class="event-card-external" title="Has external site">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                </div>
+                {% endif %}
+            </div>
+
+            {# Card Content #}
+            <div class="event-card-body">
+                <h3 class="event-card-title">{{ event.title }}</h3>
+                <p class="event-card-desc">{{ event.description }}</p>
+
+                <div class="event-card-footer">
+                    <div class="event-card-meta">
+                        <span class="event-card-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            {% if event.extra.date_label %}
+                            {{ event.extra.date_label }}
+                            {% else %}
+                            {{ event.date | date(format="%b %Y") }}
+                            {% endif %}
+                        </span>
+                        {% if event.extra.location %}
+                        <span class="event-card-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            {{ event.extra.location }}
+                        </span>
+                        {% endif %}
+                    </div>
+                    <span class="event-card-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    {# Empty State #}
+    <div class="events-empty-state" data-empty-state style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M16 16s-1.5-2-4-2-4 2-4 2" />
+            <line x1="9" y1="9" x2="9.01" y2="9" />
+            <line x1="15" y1="9" x2="15.01" y2="9" />
+        </svg>
+        <p>No events found matching your filters</p>
+        <button class="events-reset-filters" data-reset-filters>Reset Filters</button>
+    </div>
+</section>
+
+{# ========== JAVASCRIPT ========== #}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
         // ===== HERO CAROUSEL =====
         const heroCarousel = document.querySelector('[data-hero-carousel]');
         if (heroCarousel) {
@@ -404,5 +574,5 @@
             });
         }
     });
-    </script>
+</script>
 {% endblock content %}

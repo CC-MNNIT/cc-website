@@ -9,7 +9,7 @@ estimated_time = "4-6 months"
 prerequisites = "DSA basics, coding skills"
 badge = "CAREER"
 # Landing page carousel
-carousel_image = "roadmaps/interview-prep.webp"
+carousel_image = "roadmaps/interview-prep-cyber.webp"
 carousel_title = "Interview Prep"
 carousel_description = "Comprehensive preparation guide for technical interviews at top companies. Practice problems, system design, behavioral questions, and insider tips from alumni."
 +++

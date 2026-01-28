@@ -9,7 +9,7 @@ estimated_time = "6-9 months"
 prerequisites = "Linux basics, programming fundamentals"
 badge = "HIGH DEMAND"
 # Landing page carousel
-carousel_image = "roadmaps/devops.webp"
+carousel_image = "roadmaps/devops-cyber.webp"
 carousel_title = "DevOps & Cloud"
 carousel_description = "Learn DevOps practices, cloud platforms (AWS, Azure, GCP), Docker, Kubernetes, CI/CD pipelines, and infrastructure as code."
 +++

@@ -9,7 +9,7 @@ estimated_time = "6-10 months"
 prerequisites = "Basic programming knowledge"
 badge = "TRENDING"
 # Landing page carousel
-carousel_image = "roadmaps/mobile-development.webp"
+carousel_image = "roadmaps/mobile-development-cyber.webp"
 carousel_title = "Mobile Development"
 carousel_description = "Master iOS and Android development. Learn native development with Swift/Kotlin or cross-platform with React Native and Flutter."
 +++

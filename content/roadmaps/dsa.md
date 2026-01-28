@@ -9,7 +9,7 @@ estimated_time = "4-8 months"
 prerequisites = "Basic programming knowledge in any language"
 badge = "UPDATED"
 # Landing page carousel
-carousel_image = "roadmaps/dsa-fundamentals.webp"
+carousel_image = "roadmaps/dsa-cyber.webp"
 carousel_title = "DSA Fundamentals"
 carousel_description = "Master data structures and algorithms from basics to competitive programming. Structured path covering arrays, trees, graphs, dynamic programming, and advanced algorithms."
 +++

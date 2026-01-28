@@ -6,4 +6,4 @@ template = "blog.html"
 # paginate_by = 10 # Canceled to enable global client-side search
 +++
 
-# Blog
+# Blog by CC Club Community

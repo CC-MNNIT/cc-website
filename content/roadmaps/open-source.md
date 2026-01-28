@@ -9,7 +9,7 @@ estimated_time = "3-6 months"
 prerequisites = "Git basics, programming in any language"
 badge = "COMMUNITY"
 # Landing page carousel
-carousel_image = "roadmaps/open-source.webp"
+carousel_image = "roadmaps/open-source-cyber.webp"
 carousel_title = "Open Source"
 carousel_description = "Learn how to contribute to open source projects effectively. From finding good first issues to becoming a maintainer - practical guidance for your journey."
 +++

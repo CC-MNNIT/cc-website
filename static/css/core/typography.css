@@ -89,12 +89,17 @@ h3,
 }
 
 [data-theme="night"] .card-title {
-    background: linear-gradient(90deg, #DA7138 0%, #EC9E6E 33%, #ECB163 66%, #ECC475 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
+    color: #FFFFFF !important;
 }
+
+.card-title:after {
+    display: none !important;
+}
+
 
 /* 6. Body Text */
 [data-theme="night"] p,

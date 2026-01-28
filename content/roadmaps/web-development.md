@@ -9,7 +9,7 @@ estimated_time = "6-12 months"
 prerequisites = "Basic computer skills, willingness to learn"
 badge = "UPDATED"
 # Landing page carousel
-carousel_image = "roadmaps/web-development.webp"
+carousel_image = "roadmaps/web-development-cyber.webp"
 carousel_title = "Web Development"
 carousel_description = "Become a full-stack developer with our comprehensive roadmap. Learn HTML, CSS, JavaScript, React, Node.js, databases, and deployment strategies step by step."
 +++

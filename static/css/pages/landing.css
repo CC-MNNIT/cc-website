@@ -1117,12 +1117,24 @@
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
     opacity: 1;
-    transition: all 0.4s ease;
+    /* Removed 'all' to prevent hue-rotate transition (rainbow effect) on theme switch */
+    transition: transform 0.4s ease;
 }
 
 .lp-roadmap-card:hover img {
     opacity: 1;
     filter: brightness(1.1);
+}
+
+[data-theme="light"] .lp-roadmap-card img,
+[data-theme="lofi"] .lp-roadmap-card img {
+    filter: brightness(1.05) hue-rotate(170deg);
+    /* Turn Gold to True Blue */
+}
+
+[data-theme="light"] .lp-roadmap-card:hover img,
+[data-theme="lofi"] .lp-roadmap-card:hover img {
+    filter: brightness(1.1) hue-rotate(170deg);
 }
 
 /* Card Content */

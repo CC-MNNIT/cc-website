@@ -16,7 +16,12 @@
         <div class="faculty-wrapper">
             <div class="team-card faculty-card">
                 <div class="card-image-wrapper">
+                    {% if data.faculty.image is starting_with("http") %}
                     <img src="{{ data.faculty.image }}" alt="{{ data.faculty.name }}" class="card-image">
+                    {% else %}
+                    <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ data.faculty.image) }}"
+                        alt="{{ data.faculty.name }}" class="card-image">
+                    {% endif %}
                 </div>
                 <div class="card-content">
                     <h3 class="member-name">{{ data.faculty.name }}</h3>
@@ -54,7 +59,12 @@
             {% for member in data.ccrs %}
             <div class="team-card">
                 <div class="card-image-wrapper">
+                    {% if member.image is starting_with("http") %}
                     <img src="{{ member.image }}" alt="{{ member.name }}" class="card-image">
+                    {% else %}
+                    <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ member.image) }}"
+                        alt="{{ member.name }}" class="card-image">
+                    {% endif %}
                 </div>
                 <div class="card-content">
                     <h3 class="member-name">{{ member.name }}</h3>
@@ -91,7 +101,12 @@
             {% for member in data.design %}
             <div class="team-card lead-card">
                 <div class="card-image-wrapper">
+                    {% if member.image is starting_with("http") %}
                     <img src="{{ member.image }}" alt="{{ member.name }}" class="card-image">
+                    {% else %}
+                    <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ member.image) }}"
+                        alt="{{ member.name }}" class="card-image">
+                    {% endif %}
                 </div>
                 <div class="card-content">
                     <h3 class="member-name">{{ member.name }}</h3>
@@ -129,7 +144,12 @@
             {% for member in data.marketing %}
             <div class="team-card lead-card">
                 <div class="card-image-wrapper">
+                    {% if member.image is starting_with("http") %}
                     <img src="{{ member.image }}" alt="{{ member.name }}" class="card-image">
+                    {% else %}
+                    <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ member.image) }}"
+                        alt="{{ member.name }}" class="card-image">
+                    {% endif %}
                 </div>
                 <div class="card-content">
                     <h3 class="member-name">{{ member.name }}</h3>
