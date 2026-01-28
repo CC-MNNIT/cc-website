@@ -33,20 +33,20 @@
 &lt;li&gt;&lt;strong&gt;Documentation&lt;&#x2F;strong&gt;: Types serve as inline docs&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h2 id=&quot;from-javascript-to-typescript&quot;&gt;From JavaScript to TypeScript&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;typescript&quot; class=&quot;language-typescript &quot;&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;&amp;#x2F;&amp;#x2F; JavaScript
-function add(a, b) {
-  return a + b;
-}
-
-&amp;#x2F;&amp;#x2F; TypeScript
-function add(a: number, b: number): number {
-  return a + b;
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;typescript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-typescript &quot;&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; JavaScript
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; TypeScript
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install -g typescript
-tsc --init
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -g&lt;&#x2F;span&gt;&lt;span&gt; typescript
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;tsc&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; --init
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;More examples and patterns coming soon!&lt;&#x2F;p&gt;
 </content>
         
@@ -79,14 +79,14 @@ tsc --init
 &lt;li&gt;&lt;strong&gt;Docker Hub&lt;&#x2F;strong&gt;: Repository for images&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;your-first-dockerfile&quot;&gt;Your First Dockerfile&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;dockerfile&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;FROM node:16-alpine
-WORKDIR &amp;#x2F;app
-COPY package*.json .&amp;#x2F;
-RUN npm install
-COPY . .
-EXPOSE 3000
-CMD [&amp;quot;npm&amp;quot;, &amp;quot;start&amp;quot;]
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;dockerfile&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; node:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;16-alpine
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;WORKDIR &lt;&#x2F;span&gt;&lt;span&gt;&#x2F;app
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; package*.json .&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;RUN &lt;&#x2F;span&gt;&lt;span&gt;npm install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; . .
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;EXPOSE &lt;&#x2F;span&gt;&lt;span&gt;3000
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;CMD &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;npm&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;start&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll deploy this to AWS ECS in the next tutorial!&lt;&#x2F;p&gt;
 </content>
@@ -119,8 +119,8 @@ CMD [&amp;quot;npm&amp;quot;, &amp;quot;start&amp;quot;]
 &lt;li&gt;Model evaluation&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h2 id=&quot;installation&quot;&gt;Installation&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;pip install numpy pandas scikit-learn matplotlib
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;pip install numpy pandas scikit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;learn matplotlib
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;your-first-ml-model&quot;&gt;Your First ML Model&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll build a simple linear regression model to predict house prices!&lt;&#x2F;p&gt;
 &lt;p&gt;Full tutorial coming soon...&lt;&#x2F;p&gt;
@@ -160,11 +160,11 @@ CMD [&amp;quot;npm&amp;quot;, &amp;quot;start&amp;quot;]
 &lt;li&gt;MongoDB setup (local or Atlas)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;project-setup&quot;&gt;Project Setup&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir my-rest-api
-cd my-rest-api
-npm init -y
-npm install express mongoose jsonwebtoken bcrypt dotenv
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; my-rest-api
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; my-rest-api
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; init&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -y
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install express mongoose jsonwebtoken bcrypt dotenv
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Stay tuned for the complete implementation!&lt;&#x2F;p&gt;
 </content>
         
@@ -188,23 +188,23 @@ npm install express mongoose jsonwebtoken bcrypt dotenv
         <content type="html" xml:base="/cc-website/preview/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
 &lt;p&gt;Async&#x2F;await revolutionized how we write asynchronous code in JavaScript.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;before-async-await&quot;&gt;Before Async&#x2F;Await&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&amp;#x2F;&amp;#x2F; Callback Hell
-getUserData(userId, function(user) {
-  getOrders(user.id, function(orders) {
-    getOrderDetails(orders[0], function(details) {
-      console.log(details);
-    });
-  });
-});
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Callback Hell
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserData&lt;&#x2F;span&gt;&lt;span&gt;(userId&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;user&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrders&lt;&#x2F;span&gt;&lt;span&gt;(user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;orders&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrderDetails&lt;&#x2F;span&gt;&lt;span&gt;(orders[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;details&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(details)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;with-async-await&quot;&gt;With Async&#x2F;Await&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;async function getUserOrders(userId) {
-  const user = await getUserData(userId);
-  const orders = await getOrders(user.id);
-  const details = await getOrderDetails(orders[0]);
-  return details;
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;async function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserOrders&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;userId&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;user &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserData&lt;&#x2F;span&gt;&lt;span&gt;(userId)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;orders &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrders&lt;&#x2F;span&gt;&lt;span&gt;(user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;details &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrderDetails&lt;&#x2F;span&gt;&lt;span&gt;(orders[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;details&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Much cleaner!&lt;&#x2F;p&gt;
 </content>
         
@@ -235,10 +235,10 @@ getUserData(userId, function(user) {
 &lt;li&gt;Great community&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;essential-libraries&quot;&gt;Essential Libraries&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;pandas &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;pd
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;numpy &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;np
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;matplotlib&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;pyplot &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;plt
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;your-first-analysis&quot;&gt;Your First Analysis&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll analyze a real dataset and create visualizations!&lt;&#x2F;p&gt;
 </content>

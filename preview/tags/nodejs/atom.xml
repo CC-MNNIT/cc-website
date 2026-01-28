@@ -40,11 +40,11 @@
 &lt;li&gt;MongoDB setup (local or Atlas)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;project-setup&quot;&gt;Project Setup&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir my-rest-api
-cd my-rest-api
-npm init -y
-npm install express mongoose jsonwebtoken bcrypt dotenv
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; my-rest-api
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; my-rest-api
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; init&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -y
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install express mongoose jsonwebtoken bcrypt dotenv
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Stay tuned for the complete implementation!&lt;&#x2F;p&gt;
 </content>
         

@@ -91,7 +91,7 @@
       <meta property="og:url" content="/cc-website/preview/" />
       <meta property="og:type" content="website" />
       
-      <meta property="og:image" content="/cc-website/preview/cc-club-thumbnail.jpg" />
+      <meta property="og:image" content="/cc-website/preview/cc-club-thumbnail.webp" />
       
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -110,7 +110,7 @@
       <meta name="twitter:creator" content="@ccclub_mnnit" />
       
       
-      <meta name="twitter:image" content="/cc-website/preview/cc-club-thumbnail.jpg" />
+      <meta name="twitter:image" content="/cc-website/preview/cc-club-thumbnail.webp" />
       
 
       <!-- Browser address bar color -->
@@ -310,7 +310,7 @@
         <a href="/cc-website/preview" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
                 <img 
-                    src="/cc-website/preview/images/logo/cclogo.png" 
+                    src="/cc-website/preview/images/logo/cclogo.webp" 
                     alt="CC Club" 
                     class="h-18 w-auto"
                     style="padding: 10px;"
@@ -547,295 +547,295 @@ document.addEventListener('DOMContentLoaded', function() {
 <h2 id="usestate-managing-component-state">useState: Managing Component State</h2>
 <p>The <code>useState</code> hook lets you add state to function components. It returns an array with two elements: the current state value and a function to update it.</p>
 <h3 id="basic-syntax">Basic Syntax</h3>
-<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">import React, { useState } from &#x27;react&#x27;;
-
-function Counter() {
-  &#x2F;&#x2F; Declare state variable &#x27;count&#x27; with initial value 0
-  const [count, setCount] = useState(0);
-
-  return (
-    &lt;div&gt;
-      &lt;p&gt;You clicked {count} times&lt;&#x2F;p&gt;
-      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
-        Click me
-      &lt;&#x2F;button&gt;
-    &lt;&#x2F;div&gt;
-  );
-}
-</code></pre>
+<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">import </span><span>React</span><span style="color:#ccc9c2cc;">, </span><span>{ useState } </span><span style="color:#ffa759;">from </span><span style="color:#bae67e;">&#39;react&#39;</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="color:#ffa759;">function </span><span style="color:#ffd580;">Counter</span><span>() {
+</span><span>  </span><span style="font-style:italic;color:#5c6773;">// Declare state variable &#39;count&#39; with initial value 0
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[count</span><span style="color:#ccc9c2cc;">, </span><span>setCount] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>(</span><span style="color:#ffcc66;">0</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">return </span><span>(
+</span><span>    &lt;</span><span style="color:#73d0ff;">div</span><span>&gt;
+</span><span>      &lt;</span><span style="color:#73d0ff;">p</span><span>&gt;You clicked {</span><span style="color:#ffcc66;">count</span><span>} times</span><span style="color:#f29e74;">&lt;/</span><span>p</span><span style="color:#f29e74;">&gt;
+</span><span>      </span><span style="color:#f29e74;">&lt;</span><span>button onClick</span><span style="color:#f29e74;">=</span><span>{() =&gt; </span><span style="color:#ffd580;">setCount</span><span>(</span><span style="color:#ffcc66;">count</span><span> + 1)}</span><span style="color:#f29e74;">&gt;
+</span><span>        Click </span><span style="color:#ffcc66;">me
+</span><span>      </span><span style="color:#f29e74;">&lt;/</span><span>button</span><span style="color:#f29e74;">&gt;
+</span><span>    </span><span style="color:#f29e74;">&lt;/</span><span>div</span><span style="color:#f29e74;">&gt;
+</span><span>  )</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span></code></pre>
 <h3 id="multiple-state-variables">Multiple State Variables</h3>
 <p>You can use <code>useState</code> multiple times in a single component:</p>
-<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">function UserProfile() {
-  const [name, setName] = useState(&#x27;&#x27;);
-  const [age, setAge] = useState(0);
-  const [email, setEmail] = useState(&#x27;&#x27;);
-
-  const handleSubmit = (e) =&gt; {
-    e.preventDefault();
-    console.log({ name, age, email });
-  };
-
-  return (
-    &lt;form onSubmit={handleSubmit}&gt;
-      &lt;input 
-        value={name} 
-        onChange={(e) =&gt; setName(e.target.value)} 
-        placeholder=&quot;Name&quot;
-      &#x2F;&gt;
-      &lt;input 
-        type=&quot;number&quot;
-        value={age} 
-        onChange={(e) =&gt; setAge(Number(e.target.value))} 
-        placeholder=&quot;Age&quot;
-      &#x2F;&gt;
-      &lt;input 
-        type=&quot;email&quot;
-        value={email} 
-        onChange={(e) =&gt; setEmail(e.target.value)} 
-        placeholder=&quot;Email&quot;
-      &#x2F;&gt;
-      &lt;button type=&quot;submit&quot;&gt;Submit&lt;&#x2F;button&gt;
-    &lt;&#x2F;form&gt;
-  );
-}
-</code></pre>
+<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">function </span><span style="color:#ffd580;">UserProfile</span><span>() {
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[name</span><span style="color:#ccc9c2cc;">, </span><span>setName] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>(</span><span style="color:#bae67e;">&#39;&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[age</span><span style="color:#ccc9c2cc;">, </span><span>setAge] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>(</span><span style="color:#ffcc66;">0</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[email</span><span style="color:#ccc9c2cc;">, </span><span>setEmail] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>(</span><span style="color:#bae67e;">&#39;&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">const </span><span style="color:#ffd580;">handleSubmit </span><span style="color:#f29e74;">= </span><span>(</span><span style="color:#ffcc66;">e</span><span>) </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>    e</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">preventDefault</span><span>()</span><span style="color:#ccc9c2cc;">;
+</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>({ name</span><span style="color:#ccc9c2cc;">, </span><span>age</span><span style="color:#ccc9c2cc;">, </span><span>email })</span><span style="color:#ccc9c2cc;">;
+</span><span>  }</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">return </span><span>(
+</span><span>    </span><span style="color:#f29e74;">&lt;</span><span>form onSubmit</span><span style="color:#f29e74;">=</span><span>{handleSubmit}</span><span style="color:#f29e74;">&gt;
+</span><span>      </span><span style="color:#f29e74;">&lt;</span><span style="color:#ffcc66;">input 
+</span><span>        value</span><span style="color:#f29e74;">=</span><span>{name} 
+</span><span>        onChange</span><span style="color:#f29e74;">=</span><span>{(e) =&gt; </span><span style="color:#ffd580;">setName</span><span>(e.target.value)} 
+</span><span>        placeholder</span><span style="color:#f29e74;">=</span><span style="color:#bae67e;">&quot;Name&quot;
+</span><span>      </span><span style="color:#f29e74;">/&gt;
+</span><span>      </span><span style="color:#f29e74;">&lt;</span><span style="color:#ffcc66;">input 
+</span><span>        type</span><span style="color:#f29e74;">=</span><span style="color:#bae67e;">&quot;number&quot;
+</span><span>        value</span><span style="color:#f29e74;">=</span><span>{age} 
+</span><span>        onChange</span><span style="color:#f29e74;">=</span><span>{(e) =&gt; </span><span style="color:#ffd580;">setAge</span><span>(</span><span style="color:#ffcc66;">Number</span><span>(e.target.value))} 
+</span><span>        placeholder</span><span style="color:#f29e74;">=</span><span style="color:#bae67e;">&quot;Age&quot;
+</span><span>      </span><span style="color:#f29e74;">/&gt;
+</span><span>      </span><span style="color:#f29e74;">&lt;</span><span style="color:#ffcc66;">input 
+</span><span>        type</span><span style="color:#f29e74;">=</span><span style="color:#bae67e;">&quot;email&quot;
+</span><span>        value</span><span style="color:#f29e74;">=</span><span>{email} 
+</span><span>        onChange</span><span style="color:#f29e74;">=</span><span>{(e) =&gt; </span><span style="color:#ffd580;">setEmail</span><span>(e.target.value)} 
+</span><span>        placeholder</span><span style="color:#f29e74;">=</span><span style="color:#bae67e;">&quot;Email&quot;
+</span><span>      </span><span style="color:#f29e74;">/&gt;
+</span><span>      </span><span style="color:#f29e74;">&lt;</span><span>button type</span><span style="color:#f29e74;">=</span><span style="color:#bae67e;">&quot;submit&quot;</span><span style="color:#f29e74;">&gt;</span><span>Submit</span><span style="color:#f29e74;">&lt;/</span><span>button</span><span style="color:#f29e74;">&gt;
+</span><span>    </span><span style="color:#f29e74;">&lt;/</span><span>form</span><span style="color:#f29e74;">&gt;
+</span><span>  )</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span></code></pre>
 <h3 id="state-with-objects-and-arrays">State with Objects and Arrays</h3>
 <p>When working with objects or arrays, always create a new reference:</p>
-<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">function TodoList() {
-  const [todos, setTodos] = useState([]);
-
-  const addTodo = (text) =&gt; {
-    &#x2F;&#x2F; Create new array with spread operator
-    setTodos([...todos, { id: Date.now(), text, completed: false }]);
-  };
-
-  const toggleTodo = (id) =&gt; {
-    setTodos(todos.map(todo =&gt; 
-      todo.id === id 
-        ? { ...todo, completed: !todo.completed }
-        : todo
-    ));
-  };
-
-  return (
-    &lt;div&gt;
-      {todos.map(todo =&gt; (
-        &lt;div key={todo.id}&gt;
-          &lt;input 
-            type=&quot;checkbox&quot; 
-            checked={todo.completed}
-            onChange={() =&gt; toggleTodo(todo.id)}
-          &#x2F;&gt;
-          &lt;span style={{ 
-            textDecoration: todo.completed ? &#x27;line-through&#x27; : &#x27;none&#x27; 
-          }}&gt;
-            {todo.text}
-          &lt;&#x2F;span&gt;
-        &lt;&#x2F;div&gt;
-      ))}
-    &lt;&#x2F;div&gt;
-  );
-}
-</code></pre>
+<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">function </span><span style="color:#ffd580;">TodoList</span><span>() {
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[todos</span><span style="color:#ccc9c2cc;">, </span><span>setTodos] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>([])</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">const </span><span style="color:#ffd580;">addTodo </span><span style="color:#f29e74;">= </span><span>(</span><span style="color:#ffcc66;">text</span><span>) </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">// Create new array with spread operator
+</span><span>    </span><span style="color:#ffd580;">setTodos</span><span>([</span><span style="color:#f29e74;">...</span><span>todos</span><span style="color:#ccc9c2cc;">, </span><span>{ id</span><span style="color:#ccc9c2cc;">: </span><span style="font-style:italic;color:#5ccfe6;">Date</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">now</span><span>()</span><span style="color:#ccc9c2cc;">, </span><span>text</span><span style="color:#ccc9c2cc;">, </span><span>completed</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffcc66;">false </span><span>}])</span><span style="color:#ccc9c2cc;">;
+</span><span>  }</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">const </span><span style="color:#ffd580;">toggleTodo </span><span style="color:#f29e74;">= </span><span>(</span><span style="color:#ffcc66;">id</span><span>) </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>    </span><span style="color:#ffd580;">setTodos</span><span>(todos</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">map</span><span>(</span><span style="color:#ffcc66;">todo </span><span style="color:#ffa759;">=&gt; 
+</span><span>      todo</span><span style="color:#f29e74;">.</span><span>id </span><span style="color:#f29e74;">=== </span><span>id 
+</span><span>        </span><span style="color:#f29e74;">? </span><span>{ </span><span style="color:#f29e74;">...</span><span>todo</span><span style="color:#ccc9c2cc;">, </span><span>completed</span><span style="color:#ccc9c2cc;">: </span><span style="color:#f29e74;">!</span><span>todo</span><span style="color:#f29e74;">.</span><span>completed }
+</span><span>        </span><span style="color:#f29e74;">: </span><span>todo
+</span><span>    ))</span><span style="color:#ccc9c2cc;">;
+</span><span>  }</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">return </span><span>(
+</span><span>    &lt;</span><span style="color:#73d0ff;">div</span><span>&gt;
+</span><span>      {</span><span style="color:#ffcc66;">todos</span><span>.</span><span style="color:#ffcc66;">map</span><span>(</span><span style="color:#ffcc66;">todo </span><span style="color:#f29e74;">=&gt; </span><span>(
+</span><span>        </span><span style="color:#f29e74;">&lt;</span><span>div key</span><span style="color:#f29e74;">=</span><span>{todo.id}</span><span style="color:#f29e74;">&gt;
+</span><span>          </span><span style="color:#f29e74;">&lt;</span><span style="color:#ffcc66;">input 
+</span><span>            type</span><span style="color:#f29e74;">=</span><span style="color:#bae67e;">&quot;checkbox&quot; 
+</span><span>            checked</span><span style="color:#f29e74;">=</span><span>{todo.completed}
+</span><span>            onChange</span><span style="color:#f29e74;">=</span><span>{() =&gt; </span><span style="color:#ffd580;">toggleTodo</span><span>(todo.id)}
+</span><span>          </span><span style="color:#f29e74;">/&gt;
+</span><span>          </span><span style="color:#f29e74;">&lt;</span><span>span style</span><span style="color:#f29e74;">=</span><span>{{ 
+</span><span>            textDecoration</span><span style="color:#ccc9c2cc;">: </span><span>todo</span><span style="color:#f29e74;">.</span><span>completed </span><span style="color:#f29e74;">? </span><span style="color:#bae67e;">&#39;line-through&#39; </span><span style="color:#f29e74;">: </span><span style="color:#bae67e;">&#39;none&#39; 
+</span><span>          }}</span><span style="color:#f29e74;">&gt;
+</span><span>            {</span><span style="color:#ffcc66;">todo</span><span>.</span><span style="color:#ffcc66;">text</span><span>}
+</span><span>          </span><span style="color:#f29e74;">&lt;/</span><span>span</span><span style="color:#f29e74;">&gt;
+</span><span>        </span><span style="color:#f29e74;">&lt;/</span><span>div</span><span style="color:#f29e74;">&gt;
+</span><span>      ))}
+</span><span>    </span><span style="color:#f29e74;">&lt;/</span><span>div</span><span style="color:#f29e74;">&gt;
+</span><span>  )</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span></code></pre>
 <h2 id="useeffect-handling-side-effects">useEffect: Handling Side Effects</h2>
 <p>The <code>useEffect</code> hook lets you perform side effects in function components - things like data fetching, subscriptions, or manually changing the DOM.</p>
 <h3 id="basic-usage">Basic Usage</h3>
-<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">import React, { useState, useEffect } from &#x27;react&#x27;;
-
-function UserData() {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() =&gt; {
-    &#x2F;&#x2F; This runs after every render
-    fetch(&#x27;https:&#x2F;&#x2F;api.example.com&#x2F;user&#x2F;1&#x27;)
-      .then(response =&gt; response.json())
-      .then(data =&gt; {
-        setUser(data);
-        setLoading(false);
-      });
-  }, []); &#x2F;&#x2F; Empty dependency array = run only once on mount
-
-  if (loading) return &lt;p&gt;Loading...&lt;&#x2F;p&gt;;
-  return &lt;div&gt;{user.name}&lt;&#x2F;div&gt;;
-}
-</code></pre>
+<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">import </span><span>React</span><span style="color:#ccc9c2cc;">, </span><span>{ useState</span><span style="color:#ccc9c2cc;">, </span><span>useEffect } </span><span style="color:#ffa759;">from </span><span style="color:#bae67e;">&#39;react&#39;</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="color:#ffa759;">function </span><span style="color:#ffd580;">UserData</span><span>() {
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[user</span><span style="color:#ccc9c2cc;">, </span><span>setUser] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>(</span><span style="color:#ffcc66;">null</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[loading</span><span style="color:#ccc9c2cc;">, </span><span>setLoading] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>(</span><span style="color:#ffcc66;">true</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffd580;">useEffect</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">// This runs after every render
+</span><span>    </span><span style="color:#ffd580;">fetch</span><span>(</span><span style="color:#bae67e;">&#39;https://api.example.com/user/1&#39;</span><span>)
+</span><span>      </span><span style="color:#f29e74;">.</span><span style="color:#f28779;">then</span><span>(</span><span style="color:#ffcc66;">response </span><span style="color:#ffa759;">=&gt; </span><span>response</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">json</span><span>())
+</span><span>      </span><span style="color:#f29e74;">.</span><span style="color:#f28779;">then</span><span>(</span><span style="color:#ffcc66;">data </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>        </span><span style="color:#ffd580;">setUser</span><span>(data)</span><span style="color:#ccc9c2cc;">;
+</span><span>        </span><span style="color:#ffd580;">setLoading</span><span>(</span><span style="color:#ffcc66;">false</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>      })</span><span style="color:#ccc9c2cc;">;
+</span><span>  }</span><span style="color:#ccc9c2cc;">, </span><span>[])</span><span style="color:#ccc9c2cc;">; </span><span style="font-style:italic;color:#5c6773;">// Empty dependency array = run only once on mount
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">if </span><span>(loading) </span><span style="color:#ffa759;">return </span><span>&lt;</span><span style="color:#73d0ff;">p</span><span>&gt;Loading</span><span style="color:#f29e74;">...&lt;/</span><span>p</span><span style="color:#f29e74;">&gt;</span><span style="color:#ccc9c2cc;">;
+</span><span>  </span><span style="color:#ffa759;">return </span><span>&lt;</span><span style="color:#73d0ff;">div</span><span>&gt;{user.name}</span><span style="color:#f29e74;">&lt;/</span><span>div</span><span style="color:#f29e74;">&gt;</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span></code></pre>
 <h3 id="dependency-array">Dependency Array</h3>
 <p>The second argument to <code>useEffect</code> is the <strong>dependency array</strong>. It controls when the effect runs:</p>
-<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">&#x2F;&#x2F; Run on every render
-useEffect(() =&gt; {
-  console.log(&#x27;Runs on every render&#x27;);
-});
-
-&#x2F;&#x2F; Run only once (on mount)
-useEffect(() =&gt; {
-  console.log(&#x27;Runs once on mount&#x27;);
-}, []);
-
-&#x2F;&#x2F; Run when specific values change
-useEffect(() =&gt; {
-  console.log(&#x27;Runs when count changes&#x27;);
-}, [count]);
-
-&#x2F;&#x2F; Multiple dependencies
-useEffect(() =&gt; {
-  console.log(&#x27;Runs when count or name changes&#x27;);
-}, [count, name]);
-</code></pre>
+<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="font-style:italic;color:#5c6773;">// Run on every render
+</span><span style="color:#ffd580;">useEffect</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>  </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>(</span><span style="color:#bae67e;">&#39;Runs on every render&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>})</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// Run only once (on mount)
+</span><span style="color:#ffd580;">useEffect</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>  </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>(</span><span style="color:#bae67e;">&#39;Runs once on mount&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>}</span><span style="color:#ccc9c2cc;">, </span><span>[])</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// Run when specific values change
+</span><span style="color:#ffd580;">useEffect</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>  </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>(</span><span style="color:#bae67e;">&#39;Runs when count changes&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>}</span><span style="color:#ccc9c2cc;">, </span><span>[count])</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// Multiple dependencies
+</span><span style="color:#ffd580;">useEffect</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>  </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>(</span><span style="color:#bae67e;">&#39;Runs when count or name changes&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>}</span><span style="color:#ccc9c2cc;">, </span><span>[count</span><span style="color:#ccc9c2cc;">, </span><span>name])</span><span style="color:#ccc9c2cc;">;
+</span></code></pre>
 <h3 id="cleanup-functions">Cleanup Functions</h3>
 <p>Return a cleanup function to avoid memory leaks:</p>
-<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">useEffect(() =&gt; {
-  &#x2F;&#x2F; Subscribe to something
-  const subscription = subscribeToData();
-
-  &#x2F;&#x2F; Cleanup function
-  return () =&gt; {
-    subscription.unsubscribe();
-  };
-}, []);
-</code></pre>
+<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffd580;">useEffect</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>  </span><span style="font-style:italic;color:#5c6773;">// Subscribe to something
+</span><span>  </span><span style="color:#ffa759;">const </span><span>subscription </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">subscribeToData</span><span>()</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="font-style:italic;color:#5c6773;">// Cleanup function
+</span><span>  </span><span style="color:#ffa759;">return </span><span>() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>    subscription</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">unsubscribe</span><span>()</span><span style="color:#ccc9c2cc;">;
+</span><span>  }</span><span style="color:#ccc9c2cc;">;
+</span><span>}</span><span style="color:#ccc9c2cc;">, </span><span>[])</span><span style="color:#ccc9c2cc;">;
+</span></code></pre>
 <h3 id="practical-example-document-title">Practical Example: Document Title</h3>
-<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">function PageTitle() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() =&gt; {
-    document.title = `You clicked ${count} times`;
-  }, [count]); &#x2F;&#x2F; Update title when count changes
-
-  return (
-    &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
-      Clicked {count} times
-    &lt;&#x2F;button&gt;
-  );
-}
-</code></pre>
+<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">function </span><span style="color:#ffd580;">PageTitle</span><span>() {
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[count</span><span style="color:#ccc9c2cc;">, </span><span>setCount] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>(</span><span style="color:#ffcc66;">0</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffd580;">useEffect</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>    document</span><span style="color:#f29e74;">.</span><span>title </span><span style="color:#f29e74;">= </span><span style="color:#bae67e;">`You clicked ${</span><span>count</span><span style="color:#bae67e;">} times`</span><span style="color:#ccc9c2cc;">;
+</span><span>  }</span><span style="color:#ccc9c2cc;">, </span><span>[count])</span><span style="color:#ccc9c2cc;">; </span><span style="font-style:italic;color:#5c6773;">// Update title when count changes
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">return </span><span>(
+</span><span>    </span><span style="color:#f29e74;">&lt;</span><span>button onClick</span><span style="color:#f29e74;">=</span><span>{() =&gt; </span><span style="color:#ffd580;">setCount</span><span>(</span><span style="color:#ffcc66;">count</span><span> + 1)}</span><span style="color:#f29e74;">&gt;
+</span><span>      Clicked {</span><span style="color:#ffcc66;">count</span><span>} </span><span style="color:#ffcc66;">times
+</span><span>    </span><span style="color:#f29e74;">&lt;/</span><span>button</span><span style="color:#f29e74;">&gt;
+</span><span>  )</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span></code></pre>
 <h2 id="usecontext-sharing-data-across-components">useContext: Sharing Data Across Components</h2>
 <p><code>useContext</code> makes it easy to share data between components without prop drilling.</p>
 <h3 id="creating-context">Creating Context</h3>
-<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">import React, { createContext, useContext, useState } from &#x27;react&#x27;;
-
-&#x2F;&#x2F; Create context
-const ThemeContext = createContext();
-
-&#x2F;&#x2F; Provider component
-function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(&#x27;light&#x27;);
-
-  const toggleTheme = () =&gt; {
-    setTheme(theme === &#x27;light&#x27; ? &#x27;dark&#x27; : &#x27;light&#x27;);
-  };
-
-  return (
-    &lt;ThemeContext.Provider value={{ theme, toggleTheme }}&gt;
-      {children}
-    &lt;&#x2F;ThemeContext.Provider&gt;
-  );
-}
-
-&#x2F;&#x2F; Custom hook to use the context
-function useTheme() {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error(&#x27;useTheme must be used within ThemeProvider&#x27;);
-  }
-  return context;
-}
-
-&#x2F;&#x2F; Using the context
-function ThemedButton() {
-  const { theme, toggleTheme } = useTheme();
-
-  return (
-    &lt;button 
-      onClick={toggleTheme}
-      style={{
-        background: theme === &#x27;light&#x27; ? &#x27;#fff&#x27; : &#x27;#333&#x27;,
-        color: theme === &#x27;light&#x27; ? &#x27;#333&#x27; : &#x27;#fff&#x27;
-      }}
-    &gt;
-      Toggle Theme (Current: {theme})
-    &lt;&#x2F;button&gt;
-  );
-}
-
-&#x2F;&#x2F; App component
-function App() {
-  return (
-    &lt;ThemeProvider&gt;
-      &lt;ThemedButton &#x2F;&gt;
-    &lt;&#x2F;ThemeProvider&gt;
-  );
-}
-</code></pre>
+<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">import </span><span>React</span><span style="color:#ccc9c2cc;">, </span><span>{ createContext</span><span style="color:#ccc9c2cc;">, </span><span>useContext</span><span style="color:#ccc9c2cc;">, </span><span>useState } </span><span style="color:#ffa759;">from </span><span style="color:#bae67e;">&#39;react&#39;</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// Create context
+</span><span style="color:#ffa759;">const </span><span>ThemeContext </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">createContext</span><span>()</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// Provider component
+</span><span style="color:#ffa759;">function </span><span style="color:#ffd580;">ThemeProvider</span><span>({ </span><span style="color:#ffcc66;">children </span><span>}) {
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[theme</span><span style="color:#ccc9c2cc;">, </span><span>setTheme] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>(</span><span style="color:#bae67e;">&#39;light&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">const </span><span style="color:#ffd580;">toggleTheme </span><span style="color:#f29e74;">= </span><span>() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>    </span><span style="color:#ffd580;">setTheme</span><span>(theme </span><span style="color:#f29e74;">=== </span><span style="color:#bae67e;">&#39;light&#39; </span><span style="color:#f29e74;">? </span><span style="color:#bae67e;">&#39;dark&#39; </span><span style="color:#f29e74;">: </span><span style="color:#bae67e;">&#39;light&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>  }</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">return </span><span>(
+</span><span>    </span><span style="color:#f29e74;">&lt;</span><span>ThemeContext</span><span style="color:#f29e74;">.</span><span>Provider value</span><span style="color:#f29e74;">=</span><span>{{ theme</span><span style="color:#ccc9c2cc;">, </span><span>toggleTheme }}</span><span style="color:#f29e74;">&gt;
+</span><span>      {</span><span style="color:#ffcc66;">children</span><span>}
+</span><span>    </span><span style="color:#f29e74;">&lt;/</span><span>ThemeContext</span><span style="color:#f29e74;">.</span><span>Provider</span><span style="color:#f29e74;">&gt;
+</span><span>  )</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// Custom hook to use the context
+</span><span style="color:#ffa759;">function </span><span style="color:#ffd580;">useTheme</span><span>() {
+</span><span>  </span><span style="color:#ffa759;">const </span><span>context </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useContext</span><span>(ThemeContext)</span><span style="color:#ccc9c2cc;">;
+</span><span>  </span><span style="color:#ffa759;">if </span><span>(</span><span style="color:#f29e74;">!</span><span>context) {
+</span><span>    </span><span style="color:#ffa759;">throw </span><span style="color:#f29e74;">new </span><span style="color:#73d0ff;">Error</span><span>(</span><span style="color:#bae67e;">&#39;useTheme must be used within ThemeProvider&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>  }
+</span><span>  </span><span style="color:#ffa759;">return </span><span>context</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// Using the context
+</span><span style="color:#ffa759;">function </span><span style="color:#ffd580;">ThemedButton</span><span>() {
+</span><span>  </span><span style="color:#ffa759;">const </span><span>{ theme</span><span style="color:#ccc9c2cc;">, </span><span>toggleTheme } </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useTheme</span><span>()</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">return </span><span>(
+</span><span>    </span><span style="color:#f29e74;">&lt;</span><span style="color:#ffcc66;">button 
+</span><span>      onClick</span><span style="color:#f29e74;">=</span><span>{toggleTheme}
+</span><span>      style</span><span style="color:#f29e74;">=</span><span>{{
+</span><span>        background</span><span style="color:#ccc9c2cc;">: </span><span>theme </span><span style="color:#f29e74;">=== </span><span style="color:#bae67e;">&#39;light&#39; </span><span style="color:#f29e74;">? </span><span style="color:#bae67e;">&#39;#fff&#39; </span><span style="color:#f29e74;">: </span><span style="color:#bae67e;">&#39;#333&#39;</span><span style="color:#ccc9c2cc;">,
+</span><span>        color</span><span style="color:#ccc9c2cc;">: </span><span>theme </span><span style="color:#f29e74;">=== </span><span style="color:#bae67e;">&#39;light&#39; </span><span style="color:#f29e74;">? </span><span style="color:#bae67e;">&#39;#333&#39; </span><span style="color:#f29e74;">: </span><span style="color:#bae67e;">&#39;#fff&#39;
+</span><span>      }}
+</span><span>    </span><span style="color:#f29e74;">&gt;
+</span><span>      Toggle </span><span style="color:#ffd580;">Theme </span><span>(Current: {theme})
+</span><span>    </span><span style="color:#f29e74;">&lt;/</span><span>button</span><span style="color:#f29e74;">&gt;
+</span><span>  )</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// App component
+</span><span style="color:#ffa759;">function </span><span style="color:#ffd580;">App</span><span>() {
+</span><span>  </span><span style="color:#ffa759;">return </span><span>(
+</span><span>    &lt;</span><span style="color:#73d0ff;">ThemeProvider</span><span>&gt;
+</span><span>      </span><span style="color:#f29e74;">&lt;</span><span>ThemedButton </span><span style="color:#f29e74;">/&gt;
+</span><span>    </span><span style="color:#f29e74;">&lt;/</span><span>ThemeProvider</span><span style="color:#f29e74;">&gt;
+</span><span>  )</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span></code></pre>
 <h2 id="custom-hooks-reusable-logic">Custom Hooks: Reusable Logic</h2>
 <p>Custom hooks let you extract component logic into reusable functions. They must start with "use".</p>
 <h3 id="example-usefetch-hook">Example: useFetch Hook</h3>
-<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">function useFetch(url) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() =&gt; {
-    fetch(url)
-      .then(response =&gt; response.json())
-      .then(data =&gt; {
-        setData(data);
-        setLoading(false);
-      })
-      .catch(error =&gt; {
-        setError(error);
-        setLoading(false);
-      });
-  }, [url]);
-
-  return { data, loading, error };
-}
-
-&#x2F;&#x2F; Using the custom hook
-function UserProfile() {
-  const { data, loading, error } = useFetch(&#x27;https:&#x2F;&#x2F;api.example.com&#x2F;user&#x2F;1&#x27;);
-
-  if (loading) return &lt;p&gt;Loading...&lt;&#x2F;p&gt;;
-  if (error) return &lt;p&gt;Error: {error.message}&lt;&#x2F;p&gt;;
-  return &lt;div&gt;{data.name}&lt;&#x2F;div&gt;;
-}
-</code></pre>
+<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">function </span><span style="color:#ffd580;">useFetch</span><span>(</span><span style="color:#ffcc66;">url</span><span>) {
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[data</span><span style="color:#ccc9c2cc;">, </span><span>setData] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>(</span><span style="color:#ffcc66;">null</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[loading</span><span style="color:#ccc9c2cc;">, </span><span>setLoading] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>(</span><span style="color:#ffcc66;">true</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[error</span><span style="color:#ccc9c2cc;">, </span><span>setError] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>(</span><span style="color:#ffcc66;">null</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffd580;">useEffect</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>    </span><span style="color:#ffd580;">fetch</span><span>(url)
+</span><span>      </span><span style="color:#f29e74;">.</span><span style="color:#f28779;">then</span><span>(</span><span style="color:#ffcc66;">response </span><span style="color:#ffa759;">=&gt; </span><span>response</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">json</span><span>())
+</span><span>      </span><span style="color:#f29e74;">.</span><span style="color:#f28779;">then</span><span>(</span><span style="color:#ffcc66;">data </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>        </span><span style="color:#ffd580;">setData</span><span>(data)</span><span style="color:#ccc9c2cc;">;
+</span><span>        </span><span style="color:#ffd580;">setLoading</span><span>(</span><span style="color:#ffcc66;">false</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>      })
+</span><span>      </span><span style="color:#f29e74;">.</span><span style="color:#f28779;">catch</span><span>(</span><span style="color:#ffcc66;">error </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>        </span><span style="color:#ffd580;">setError</span><span>(error)</span><span style="color:#ccc9c2cc;">;
+</span><span>        </span><span style="color:#ffd580;">setLoading</span><span>(</span><span style="color:#ffcc66;">false</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>      })</span><span style="color:#ccc9c2cc;">;
+</span><span>  }</span><span style="color:#ccc9c2cc;">, </span><span>[url])</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">return </span><span>{ data</span><span style="color:#ccc9c2cc;">, </span><span>loading</span><span style="color:#ccc9c2cc;">, </span><span>error }</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// Using the custom hook
+</span><span style="color:#ffa759;">function </span><span style="color:#ffd580;">UserProfile</span><span>() {
+</span><span>  </span><span style="color:#ffa759;">const </span><span>{ data</span><span style="color:#ccc9c2cc;">, </span><span>loading</span><span style="color:#ccc9c2cc;">, </span><span>error } </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useFetch</span><span>(</span><span style="color:#bae67e;">&#39;https://api.example.com/user/1&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">if </span><span>(loading) </span><span style="color:#ffa759;">return </span><span>&lt;</span><span style="color:#73d0ff;">p</span><span>&gt;Loading</span><span style="color:#f29e74;">...&lt;/</span><span>p</span><span style="color:#f29e74;">&gt;</span><span style="color:#ccc9c2cc;">;
+</span><span>  </span><span style="color:#ffa759;">if </span><span>(error) </span><span style="color:#ffa759;">return </span><span>&lt;</span><span style="color:#73d0ff;">p</span><span>&gt;</span><span style="color:#73d0ff;">Error</span><span style="color:#ccc9c2cc;">: </span><span>{error</span><span style="color:#f29e74;">.</span><span>message}</span><span style="color:#f29e74;">&lt;/</span><span>p</span><span style="color:#f29e74;">&gt;</span><span style="color:#ccc9c2cc;">;
+</span><span>  </span><span style="color:#ffa759;">return </span><span>&lt;</span><span style="color:#73d0ff;">div</span><span>&gt;{data.name}</span><span style="color:#f29e74;">&lt;/</span><span>div</span><span style="color:#f29e74;">&gt;</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span></code></pre>
 <h3 id="example-uselocalstorage-hook">Example: useLocalStorage Hook</h3>
-<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">function useLocalStorage(key, initialValue) {
-  const [value, setValue] = useState(() =&gt; {
-    try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      return initialValue;
-    }
-  });
-
-  const setStoredValue = (newValue) =&gt; {
-    try {
-      setValue(newValue);
-      window.localStorage.setItem(key, JSON.stringify(newValue));
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  return [value, setStoredValue];
-}
-
-&#x2F;&#x2F; Usage
-function App() {
-  const [name, setName] = useLocalStorage(&#x27;name&#x27;, &#x27;&#x27;);
-
-  return (
-    &lt;input 
-      value={name}
-      onChange={(e) =&gt; setName(e.target.value)}
-      placeholder=&quot;Your name (persisted in localStorage)&quot;
-    &#x2F;&gt;
-  );
-}
-</code></pre>
+<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">function </span><span style="color:#ffd580;">useLocalStorage</span><span>(</span><span style="color:#ffcc66;">key</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">initialValue</span><span>) {
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[value</span><span style="color:#ccc9c2cc;">, </span><span>setValue] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>    </span><span style="color:#ffa759;">try </span><span>{
+</span><span>      </span><span style="color:#ffa759;">const </span><span>item </span><span style="color:#f29e74;">= </span><span>window</span><span style="color:#f29e74;">.</span><span>localStorage</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">getItem</span><span>(key)</span><span style="color:#ccc9c2cc;">;
+</span><span>      </span><span style="color:#ffa759;">return </span><span>item </span><span style="color:#f29e74;">? </span><span style="font-style:italic;color:#f29e74;">JSON</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">parse</span><span>(item) </span><span style="color:#f29e74;">: </span><span>initialValue</span><span style="color:#ccc9c2cc;">;
+</span><span>    } </span><span style="color:#ffa759;">catch </span><span>(error) {
+</span><span>      </span><span style="color:#ffa759;">return </span><span>initialValue</span><span style="color:#ccc9c2cc;">;
+</span><span>    }
+</span><span>  })</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">const </span><span style="color:#ffd580;">setStoredValue </span><span style="color:#f29e74;">= </span><span>(</span><span style="color:#ffcc66;">newValue</span><span>) </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>    </span><span style="color:#ffa759;">try </span><span>{
+</span><span>      </span><span style="color:#ffd580;">setValue</span><span>(newValue)</span><span style="color:#ccc9c2cc;">;
+</span><span>      window</span><span style="color:#f29e74;">.</span><span>localStorage</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">setItem</span><span>(key</span><span style="color:#ccc9c2cc;">, </span><span style="font-style:italic;color:#f29e74;">JSON</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">stringify</span><span>(newValue))</span><span style="color:#ccc9c2cc;">;
+</span><span>    } </span><span style="color:#ffa759;">catch </span><span>(error) {
+</span><span>      </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">error</span><span>(error)</span><span style="color:#ccc9c2cc;">;
+</span><span>    }
+</span><span>  }</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">return </span><span>[value</span><span style="color:#ccc9c2cc;">, </span><span>setStoredValue]</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// Usage
+</span><span style="color:#ffa759;">function </span><span style="color:#ffd580;">App</span><span>() {
+</span><span>  </span><span style="color:#ffa759;">const </span><span>[name</span><span style="color:#ccc9c2cc;">, </span><span>setName] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useLocalStorage</span><span>(</span><span style="color:#bae67e;">&#39;name&#39;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#bae67e;">&#39;&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>  </span><span style="color:#ffa759;">return </span><span>(
+</span><span>    </span><span style="color:#f29e74;">&lt;</span><span style="color:#ffcc66;">input 
+</span><span>      value</span><span style="color:#f29e74;">=</span><span>{name}
+</span><span>      onChange</span><span style="color:#f29e74;">=</span><span>{(e) =&gt; </span><span style="color:#ffd580;">setName</span><span>(e.target.value)}
+</span><span>      placeholder</span><span style="color:#f29e74;">=</span><span style="color:#bae67e;">&quot;Your name (persisted in localStorage)&quot;
+</span><span>    </span><span style="color:#f29e74;">/&gt;
+</span><span>  )</span><span style="color:#ccc9c2cc;">;
+</span><span>}
+</span></code></pre>
 <h2 id="best-practices-and-common-pitfalls">Best Practices and Common Pitfalls</h2>
 <h3 id="white-check-mark-do-s">✅ Do's</h3>
 <ol>
@@ -853,23 +853,23 @@ function App() {
 <li><strong>Don't skip the dependency array</strong> - Leads to unexpected behavior</li>
 </ol>
 <h3 id="common-mistakes">Common Mistakes</h3>
-<pre data-lang="javascript" class="language-javascript "><code class="language-javascript" data-lang="javascript">&#x2F;&#x2F; ❌ Wrong: Mutating state directly
-const [items, setItems] = useState([]);
-items.push(newItem); &#x2F;&#x2F; DON&#x27;T DO THIS
-
-&#x2F;&#x2F; ✅ Correct: Create new array
-setItems([...items, newItem]);
-
-&#x2F;&#x2F; ❌ Wrong: Missing dependencies
-useEffect(() =&gt; {
-  console.log(count); &#x2F;&#x2F; count is used but not in dependencies
-}, []);
-
-&#x2F;&#x2F; ✅ Correct: Include all dependencies
-useEffect(() =&gt; {
-  console.log(count);
-}, [count]);
-</code></pre>
+<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="font-style:italic;color:#5c6773;">// ❌ Wrong: Mutating state directly
+</span><span style="color:#ffa759;">const </span><span>[items</span><span style="color:#ccc9c2cc;">, </span><span>setItems] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">useState</span><span>([])</span><span style="color:#ccc9c2cc;">;
+</span><span>items</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">push</span><span>(newItem)</span><span style="color:#ccc9c2cc;">; </span><span style="font-style:italic;color:#5c6773;">// DON&#39;T DO THIS
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// ✅ Correct: Create new array
+</span><span style="color:#ffd580;">setItems</span><span>([</span><span style="color:#f29e74;">...</span><span>items</span><span style="color:#ccc9c2cc;">, </span><span>newItem])</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// ❌ Wrong: Missing dependencies
+</span><span style="color:#ffd580;">useEffect</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>  </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>(count)</span><span style="color:#ccc9c2cc;">; </span><span style="font-style:italic;color:#5c6773;">// count is used but not in dependencies
+</span><span>}</span><span style="color:#ccc9c2cc;">, </span><span>[])</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// ✅ Correct: Include all dependencies
+</span><span style="color:#ffd580;">useEffect</span><span>(() </span><span style="color:#ffa759;">=&gt; </span><span>{
+</span><span>  </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>(count)</span><span style="color:#ccc9c2cc;">;
+</span><span>}</span><span style="color:#ccc9c2cc;">, </span><span>[count])</span><span style="color:#ccc9c2cc;">;
+</span></code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>React Hooks have transformed how we write React applications. They make code more readable, reusable, and easier to test. Start with <code>useState</code> and <code>useEffect</code>, get comfortable with <code>useContext</code>, and then create your own custom hooks to encapsulate reusable logic.</p>
 <p><strong>Key Takeaways:</strong></p>
@@ -1279,7 +1279,7 @@ useEffect(() =&gt; {
                 <div class="footer-col space-y-4">
                     <div class="footer-logo-container">
                         
-                        <img src="/cc-website/preview/images/logo/cclogo.png" alt="Logo" class="footer-logo">
+                        <img src="/cc-website/preview/images/logo/cclogo.webp" alt="Logo" class="footer-logo">
                         
                         <h3>
                             CC Club MNNIT

@@ -146,295 +146,295 @@
 &lt;h2 id=&quot;usestate-managing-component-state&quot;&gt;useState: Managing Component State&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;code&gt;useState&lt;&#x2F;code&gt; hook lets you add state to function components. It returns an array with two elements: the current state value and a function to update it.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;basic-syntax&quot;&gt;Basic Syntax&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;import React, { useState } from &amp;#x27;react&amp;#x27;;
-
-function Counter() {
-  &amp;#x2F;&amp;#x2F; Declare state variable &amp;#x27;count&amp;#x27; with initial value 0
-  const [count, setCount] = useState(0);
-
-  return (
-    &amp;lt;div&amp;gt;
-      &amp;lt;p&amp;gt;You clicked {count} times&amp;lt;&amp;#x2F;p&amp;gt;
-      &amp;lt;button onClick={() =&amp;gt; setCount(count + 1)}&amp;gt;
-        Click me
-      &amp;lt;&amp;#x2F;button&amp;gt;
-    &amp;lt;&amp;#x2F;div&amp;gt;
-  );
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;React&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;{ useState } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;react&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;Counter&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Declare state variable &amp;#39;count&amp;#39; with initial value 0
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setCount] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;You clicked {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt;} times&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;button onClick&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{() =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setCount&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt; + 1)}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        Click &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;me
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;multiple-state-variables&quot;&gt;Multiple State Variables&lt;&#x2F;h3&gt;
 &lt;p&gt;You can use &lt;code&gt;useState&lt;&#x2F;code&gt; multiple times in a single component:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;function UserProfile() {
-  const [name, setName] = useState(&amp;#x27;&amp;#x27;);
-  const [age, setAge] = useState(0);
-  const [email, setEmail] = useState(&amp;#x27;&amp;#x27;);
-
-  const handleSubmit = (e) =&amp;gt; {
-    e.preventDefault();
-    console.log({ name, age, email });
-  };
-
-  return (
-    &amp;lt;form onSubmit={handleSubmit}&amp;gt;
-      &amp;lt;input 
-        value={name} 
-        onChange={(e) =&amp;gt; setName(e.target.value)} 
-        placeholder=&amp;quot;Name&amp;quot;
-      &amp;#x2F;&amp;gt;
-      &amp;lt;input 
-        type=&amp;quot;number&amp;quot;
-        value={age} 
-        onChange={(e) =&amp;gt; setAge(Number(e.target.value))} 
-        placeholder=&amp;quot;Age&amp;quot;
-      &amp;#x2F;&amp;gt;
-      &amp;lt;input 
-        type=&amp;quot;email&amp;quot;
-        value={email} 
-        onChange={(e) =&amp;gt; setEmail(e.target.value)} 
-        placeholder=&amp;quot;Email&amp;quot;
-      &amp;#x2F;&amp;gt;
-      &amp;lt;button type=&amp;quot;submit&amp;quot;&amp;gt;Submit&amp;lt;&amp;#x2F;button&amp;gt;
-    &amp;lt;&amp;#x2F;form&amp;gt;
-  );
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;UserProfile&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setName] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[age&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setAge] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[email&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setEmail] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;handleSubmit &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;e&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    e&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;preventDefault&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;({ name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;age&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;email })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;form onSubmit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{handleSubmit}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
+&lt;&#x2F;span&gt;&lt;span&gt;        value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{name} 
+&lt;&#x2F;span&gt;&lt;span&gt;        onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{(e) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setName&lt;&#x2F;span&gt;&lt;span&gt;(e.target.value)} 
+&lt;&#x2F;span&gt;&lt;span&gt;        placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;Name&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
+&lt;&#x2F;span&gt;&lt;span&gt;        type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;number&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{age} 
+&lt;&#x2F;span&gt;&lt;span&gt;        onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{(e) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setAge&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;Number&lt;&#x2F;span&gt;&lt;span&gt;(e.target.value))} 
+&lt;&#x2F;span&gt;&lt;span&gt;        placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;Age&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
+&lt;&#x2F;span&gt;&lt;span&gt;        type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;email&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{email} 
+&lt;&#x2F;span&gt;&lt;span&gt;        onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{(e) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setEmail&lt;&#x2F;span&gt;&lt;span&gt;(e.target.value)} 
+&lt;&#x2F;span&gt;&lt;span&gt;        placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;Email&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;button type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;submit&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Submit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;form&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;state-with-objects-and-arrays&quot;&gt;State with Objects and Arrays&lt;&#x2F;h3&gt;
 &lt;p&gt;When working with objects or arrays, always create a new reference:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;function TodoList() {
-  const [todos, setTodos] = useState([]);
-
-  const addTodo = (text) =&amp;gt; {
-    &amp;#x2F;&amp;#x2F; Create new array with spread operator
-    setTodos([...todos, { id: Date.now(), text, completed: false }]);
-  };
-
-  const toggleTodo = (id) =&amp;gt; {
-    setTodos(todos.map(todo =&amp;gt; 
-      todo.id === id 
-        ? { ...todo, completed: !todo.completed }
-        : todo
-    ));
-  };
-
-  return (
-    &amp;lt;div&amp;gt;
-      {todos.map(todo =&amp;gt; (
-        &amp;lt;div key={todo.id}&amp;gt;
-          &amp;lt;input 
-            type=&amp;quot;checkbox&amp;quot; 
-            checked={todo.completed}
-            onChange={() =&amp;gt; toggleTodo(todo.id)}
-          &amp;#x2F;&amp;gt;
-          &amp;lt;span style={{ 
-            textDecoration: todo.completed ? &amp;#x27;line-through&amp;#x27; : &amp;#x27;none&amp;#x27; 
-          }}&amp;gt;
-            {todo.text}
-          &amp;lt;&amp;#x2F;span&amp;gt;
-        &amp;lt;&amp;#x2F;div&amp;gt;
-      ))}
-    &amp;lt;&amp;#x2F;div&amp;gt;
-  );
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;TodoList&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[todos&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setTodos] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;([])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;addTodo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;text&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Create new array with spread operator
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setTodos&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;todos&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;{ id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;Date&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;now&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;text&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;completed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;false &lt;&#x2F;span&gt;&lt;span&gt;}])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;toggleTodo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;id&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setTodos&lt;&#x2F;span&gt;&lt;span&gt;(todos&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;todo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; 
+&lt;&#x2F;span&gt;&lt;span&gt;      todo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span&gt;id 
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;todo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;completed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;!&lt;&#x2F;span&gt;&lt;span&gt;todo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;completed }
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;todo
+&lt;&#x2F;span&gt;&lt;span&gt;    ))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;todos&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;todo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;div key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{todo.id}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
+&lt;&#x2F;span&gt;&lt;span&gt;            type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;checkbox&amp;quot; 
+&lt;&#x2F;span&gt;&lt;span&gt;            checked&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{todo.completed}
+&lt;&#x2F;span&gt;&lt;span&gt;            onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{() =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;toggleTodo&lt;&#x2F;span&gt;&lt;span&gt;(todo.id)}
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;span style&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{{ 
+&lt;&#x2F;span&gt;&lt;span&gt;            textDecoration&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;todo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;completed &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;line-through&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;none&amp;#39; 
+&lt;&#x2F;span&gt;&lt;span&gt;          }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;todo&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;text&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      ))}
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;useeffect-handling-side-effects&quot;&gt;useEffect: Handling Side Effects&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;code&gt;useEffect&lt;&#x2F;code&gt; hook lets you perform side effects in function components - things like data fetching, subscriptions, or manually changing the DOM.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;basic-usage&quot;&gt;Basic Usage&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;import React, { useState, useEffect } from &amp;#x27;react&amp;#x27;;
-
-function UserData() {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() =&amp;gt; {
-    &amp;#x2F;&amp;#x2F; This runs after every render
-    fetch(&amp;#x27;https:&amp;#x2F;&amp;#x2F;api.example.com&amp;#x2F;user&amp;#x2F;1&amp;#x27;)
-      .then(response =&amp;gt; response.json())
-      .then(data =&amp;gt; {
-        setUser(data);
-        setLoading(false);
-      });
-  }, []); &amp;#x2F;&amp;#x2F; Empty dependency array = run only once on mount
-
-  if (loading) return &amp;lt;p&amp;gt;Loading...&amp;lt;&amp;#x2F;p&amp;gt;;
-  return &amp;lt;div&amp;gt;{user.name}&amp;lt;&amp;#x2F;div&amp;gt;;
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;React&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;{ useState&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;useEffect } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;react&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;UserData&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setUser] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;null&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setLoading] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; This runs after every render
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;fetch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;https:&#x2F;&#x2F;api.example.com&#x2F;user&#x2F;1&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;response&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;json&lt;&#x2F;span&gt;&lt;span&gt;())
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;data &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setUser&lt;&#x2F;span&gt;&lt;span&gt;(data)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setLoading&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Empty dependency array = run only once on mount
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(loading) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;Loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{user.name}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;dependency-array&quot;&gt;Dependency Array&lt;&#x2F;h3&gt;
 &lt;p&gt;The second argument to &lt;code&gt;useEffect&lt;&#x2F;code&gt; is the &lt;strong&gt;dependency array&lt;&#x2F;strong&gt;. It controls when the effect runs:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&amp;#x2F;&amp;#x2F; Run on every render
-useEffect(() =&amp;gt; {
-  console.log(&amp;#x27;Runs on every render&amp;#x27;);
-});
-
-&amp;#x2F;&amp;#x2F; Run only once (on mount)
-useEffect(() =&amp;gt; {
-  console.log(&amp;#x27;Runs once on mount&amp;#x27;);
-}, []);
-
-&amp;#x2F;&amp;#x2F; Run when specific values change
-useEffect(() =&amp;gt; {
-  console.log(&amp;#x27;Runs when count changes&amp;#x27;);
-}, [count]);
-
-&amp;#x2F;&amp;#x2F; Multiple dependencies
-useEffect(() =&amp;gt; {
-  console.log(&amp;#x27;Runs when count or name changes&amp;#x27;);
-}, [count, name]);
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Run on every render
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;Runs on every render&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Run only once (on mount)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;Runs once on mount&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Run when specific values change
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;Runs when count changes&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[count])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Multiple dependencies
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;Runs when count or name changes&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;name])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;cleanup-functions&quot;&gt;Cleanup Functions&lt;&#x2F;h3&gt;
 &lt;p&gt;Return a cleanup function to avoid memory leaks:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;useEffect(() =&amp;gt; {
-  &amp;#x2F;&amp;#x2F; Subscribe to something
-  const subscription = subscribeToData();
-
-  &amp;#x2F;&amp;#x2F; Cleanup function
-  return () =&amp;gt; {
-    subscription.unsubscribe();
-  };
-}, []);
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Subscribe to something
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;subscription &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;subscribeToData&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Cleanup function
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    subscription&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;unsubscribe&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;practical-example-document-title&quot;&gt;Practical Example: Document Title&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;function PageTitle() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() =&amp;gt; {
-    document.title = `You clicked ${count} times`;
-  }, [count]); &amp;#x2F;&amp;#x2F; Update title when count changes
-
-  return (
-    &amp;lt;button onClick={() =&amp;gt; setCount(count + 1)}&amp;gt;
-      Clicked {count} times
-    &amp;lt;&amp;#x2F;button&amp;gt;
-  );
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;PageTitle&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setCount] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;title &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;`You clicked ${&lt;&#x2F;span&gt;&lt;span&gt;count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;} times`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[count])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Update title when count changes
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;button onClick&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{() =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setCount&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt; + 1)}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      Clicked {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;times
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;usecontext-sharing-data-across-components&quot;&gt;useContext: Sharing Data Across Components&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;code&gt;useContext&lt;&#x2F;code&gt; makes it easy to share data between components without prop drilling.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;creating-context&quot;&gt;Creating Context&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;import React, { createContext, useContext, useState } from &amp;#x27;react&amp;#x27;;
-
-&amp;#x2F;&amp;#x2F; Create context
-const ThemeContext = createContext();
-
-&amp;#x2F;&amp;#x2F; Provider component
-function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(&amp;#x27;light&amp;#x27;);
-
-  const toggleTheme = () =&amp;gt; {
-    setTheme(theme === &amp;#x27;light&amp;#x27; ? &amp;#x27;dark&amp;#x27; : &amp;#x27;light&amp;#x27;);
-  };
-
-  return (
-    &amp;lt;ThemeContext.Provider value={{ theme, toggleTheme }}&amp;gt;
-      {children}
-    &amp;lt;&amp;#x2F;ThemeContext.Provider&amp;gt;
-  );
-}
-
-&amp;#x2F;&amp;#x2F; Custom hook to use the context
-function useTheme() {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error(&amp;#x27;useTheme must be used within ThemeProvider&amp;#x27;);
-  }
-  return context;
-}
-
-&amp;#x2F;&amp;#x2F; Using the context
-function ThemedButton() {
-  const { theme, toggleTheme } = useTheme();
-
-  return (
-    &amp;lt;button 
-      onClick={toggleTheme}
-      style={{
-        background: theme === &amp;#x27;light&amp;#x27; ? &amp;#x27;#fff&amp;#x27; : &amp;#x27;#333&amp;#x27;,
-        color: theme === &amp;#x27;light&amp;#x27; ? &amp;#x27;#333&amp;#x27; : &amp;#x27;#fff&amp;#x27;
-      }}
-    &amp;gt;
-      Toggle Theme (Current: {theme})
-    &amp;lt;&amp;#x2F;button&amp;gt;
-  );
-}
-
-&amp;#x2F;&amp;#x2F; App component
-function App() {
-  return (
-    &amp;lt;ThemeProvider&amp;gt;
-      &amp;lt;ThemedButton &amp;#x2F;&amp;gt;
-    &amp;lt;&amp;#x2F;ThemeProvider&amp;gt;
-  );
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;React&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;{ createContext&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;useContext&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;useState } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;react&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Create context
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;ThemeContext &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;createContext&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Provider component
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;ThemeProvider&lt;&#x2F;span&gt;&lt;span&gt;({ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;children &lt;&#x2F;span&gt;&lt;span&gt;}) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[theme&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setTheme] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;toggleTheme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setTheme&lt;&#x2F;span&gt;&lt;span&gt;(theme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;dark&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;ThemeContext&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;Provider value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{{ theme&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;toggleTheme }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;ThemeContext&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;Provider&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Custom hook to use the context
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useTheme&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;context &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useContext&lt;&#x2F;span&gt;&lt;span&gt;(ThemeContext)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;!&lt;&#x2F;span&gt;&lt;span&gt;context) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;throw &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;Error&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;useTheme must be used within ThemeProvider&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;context&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Using the context
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;ThemedButton&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;{ theme&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;toggleTheme } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useTheme&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;button 
+&lt;&#x2F;span&gt;&lt;span&gt;      onClick&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{toggleTheme}
+&lt;&#x2F;span&gt;&lt;span&gt;      style&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{{
+&lt;&#x2F;span&gt;&lt;span&gt;        background&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;theme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;#fff&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;#333&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        color&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;theme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;#333&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;#fff&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;      }}
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      Toggle &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;Theme &lt;&#x2F;span&gt;&lt;span&gt;(Current: {theme})
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; App component
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;App&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;ThemeProvider&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;ThemedButton &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;ThemeProvider&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;custom-hooks-reusable-logic&quot;&gt;Custom Hooks: Reusable Logic&lt;&#x2F;h2&gt;
 &lt;p&gt;Custom hooks let you extract component logic into reusable functions. They must start with &quot;use&quot;.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;example-usefetch-hook&quot;&gt;Example: useFetch Hook&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;function useFetch(url) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() =&amp;gt; {
-    fetch(url)
-      .then(response =&amp;gt; response.json())
-      .then(data =&amp;gt; {
-        setData(data);
-        setLoading(false);
-      })
-      .catch(error =&amp;gt; {
-        setError(error);
-        setLoading(false);
-      });
-  }, [url]);
-
-  return { data, loading, error };
-}
-
-&amp;#x2F;&amp;#x2F; Using the custom hook
-function UserProfile() {
-  const { data, loading, error } = useFetch(&amp;#x27;https:&amp;#x2F;&amp;#x2F;api.example.com&amp;#x2F;user&amp;#x2F;1&amp;#x27;);
-
-  if (loading) return &amp;lt;p&amp;gt;Loading...&amp;lt;&amp;#x2F;p&amp;gt;;
-  if (error) return &amp;lt;p&amp;gt;Error: {error.message}&amp;lt;&amp;#x2F;p&amp;gt;;
-  return &amp;lt;div&amp;gt;{data.name}&amp;lt;&amp;#x2F;div&amp;gt;;
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useFetch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;url&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[data&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setData] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;null&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setLoading] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[error&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setError] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;null&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;fetch&lt;&#x2F;span&gt;&lt;span&gt;(url)
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;response&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;json&lt;&#x2F;span&gt;&lt;span&gt;())
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;data &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setData&lt;&#x2F;span&gt;&lt;span&gt;(data)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setLoading&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      })
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;catch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;error &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setError&lt;&#x2F;span&gt;&lt;span&gt;(error)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setLoading&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[url])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;{ data&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;error }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Using the custom hook
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;UserProfile&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;{ data&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;error } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useFetch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;https:&#x2F;&#x2F;api.example.com&#x2F;user&#x2F;1&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(loading) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;Loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(error) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;Error&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;{error&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;message}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{data.name}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;example-uselocalstorage-hook&quot;&gt;Example: useLocalStorage Hook&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;function useLocalStorage(key, initialValue) {
-  const [value, setValue] = useState(() =&amp;gt; {
-    try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      return initialValue;
-    }
-  });
-
-  const setStoredValue = (newValue) =&amp;gt; {
-    try {
-      setValue(newValue);
-      window.localStorage.setItem(key, JSON.stringify(newValue));
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  return [value, setStoredValue];
-}
-
-&amp;#x2F;&amp;#x2F; Usage
-function App() {
-  const [name, setName] = useLocalStorage(&amp;#x27;name&amp;#x27;, &amp;#x27;&amp;#x27;);
-
-  return (
-    &amp;lt;input 
-      value={name}
-      onChange={(e) =&amp;gt; setName(e.target.value)}
-      placeholder=&amp;quot;Your name (persisted in localStorage)&amp;quot;
-    &amp;#x2F;&amp;gt;
-  );
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useLocalStorage&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;initialValue&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setValue] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;try &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;item &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;window&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;localStorage&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;getItem&lt;&#x2F;span&gt;&lt;span&gt;(key)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;item &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f29e74;&quot;&gt;JSON&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;parse&lt;&#x2F;span&gt;&lt;span&gt;(item) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;initialValue&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;catch &lt;&#x2F;span&gt;&lt;span&gt;(error) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;initialValue&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setStoredValue &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;newValue&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;try &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setValue&lt;&#x2F;span&gt;&lt;span&gt;(newValue)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      window&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;localStorage&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;setItem&lt;&#x2F;span&gt;&lt;span&gt;(key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f29e74;&quot;&gt;JSON&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;stringify&lt;&#x2F;span&gt;&lt;span&gt;(newValue))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;catch &lt;&#x2F;span&gt;&lt;span&gt;(error) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;error&lt;&#x2F;span&gt;&lt;span&gt;(error)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;[value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setStoredValue]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;App&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setName] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useLocalStorage&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;name&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
+&lt;&#x2F;span&gt;&lt;span&gt;      value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{name}
+&lt;&#x2F;span&gt;&lt;span&gt;      onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{(e) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setName&lt;&#x2F;span&gt;&lt;span&gt;(e.target.value)}
+&lt;&#x2F;span&gt;&lt;span&gt;      placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;Your name (persisted in localStorage)&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;best-practices-and-common-pitfalls&quot;&gt;Best Practices and Common Pitfalls&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;white-check-mark-do-s&quot;&gt;✅ Do&#x27;s&lt;&#x2F;h3&gt;
 &lt;ol&gt;
@@ -452,23 +452,23 @@ function App() {
 &lt;li&gt;&lt;strong&gt;Don&#x27;t skip the dependency array&lt;&#x2F;strong&gt; - Leads to unexpected behavior&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h3 id=&quot;common-mistakes&quot;&gt;Common Mistakes&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&amp;#x2F;&amp;#x2F; ❌ Wrong: Mutating state directly
-const [items, setItems] = useState([]);
-items.push(newItem); &amp;#x2F;&amp;#x2F; DON&amp;#x27;T DO THIS
-
-&amp;#x2F;&amp;#x2F; ✅ Correct: Create new array
-setItems([...items, newItem]);
-
-&amp;#x2F;&amp;#x2F; ❌ Wrong: Missing dependencies
-useEffect(() =&amp;gt; {
-  console.log(count); &amp;#x2F;&amp;#x2F; count is used but not in dependencies
-}, []);
-
-&amp;#x2F;&amp;#x2F; ✅ Correct: Include all dependencies
-useEffect(() =&amp;gt; {
-  console.log(count);
-}, [count]);
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; ❌ Wrong: Mutating state directly
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[items&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setItems] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;([])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;items&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;(newItem)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; DON&amp;#39;T DO THIS
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; ✅ Correct: Create new array
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setItems&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;items&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;newItem])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; ❌ Wrong: Missing dependencies
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(count)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; count is used but not in dependencies
+&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; ✅ Correct: Include all dependencies
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(count)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[count])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
 &lt;p&gt;React Hooks have transformed how we write React applications. They make code more readable, reusable, and easier to test. Start with &lt;code&gt;useState&lt;&#x2F;code&gt; and &lt;code&gt;useEffect&lt;&#x2F;code&gt;, get comfortable with &lt;code&gt;useContext&lt;&#x2F;code&gt;, and then create your own custom hooks to encapsulate reusable logic.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Key Takeaways:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
@@ -627,18 +627,18 @@ useEffect(() =&amp;gt; {
 &lt;h2 id=&quot;key-techniques&quot;&gt;Key Techniques&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-react-memo&quot;&gt;1. React.memo&lt;&#x2F;h3&gt;
 &lt;p&gt;Prevent unnecessary re-renders:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;const ExpensiveComponent = React.memo(({ data }) =&amp;gt; {
-  return &amp;lt;div&amp;gt;{data}&amp;lt;&amp;#x2F;div&amp;gt;;
-});
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;ExpensiveComponent &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;React&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;memo&lt;&#x2F;span&gt;&lt;span&gt;(({ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;data &lt;&#x2F;span&gt;&lt;span&gt;}) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{data}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;2-usememo-usecallback&quot;&gt;2. useMemo &amp;amp; useCallback&lt;&#x2F;h3&gt;
 &lt;p&gt;Memoize expensive computations:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;const memoizedValue = useMemo(() =&amp;gt; computeExpensive(a, b), [a, b]);
-const memoizedCallback = useCallback(() =&amp;gt; doSomething(a), [a]);
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;memoizedValue &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useMemo&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;computeExpensive&lt;&#x2F;span&gt;&lt;span&gt;(a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;b)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;b])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;memoizedCallback &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useCallback&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;doSomething&lt;&#x2F;span&gt;&lt;span&gt;(a)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[a])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;3-code-splitting&quot;&gt;3. Code Splitting&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;const LazyComponent = lazy(() =&amp;gt; import(&amp;#x27;.&amp;#x2F;LazyComponent&amp;#x27;));
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;LazyComponent &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;lazy&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;import&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;.&#x2F;LazyComponent&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;4-virtual-lists&quot;&gt;4. Virtual Lists&lt;&#x2F;h3&gt;
 &lt;p&gt;Use react-window for long lists.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;profiling-tools&quot;&gt;Profiling Tools&lt;&#x2F;h2&gt;
@@ -796,12 +796,12 @@ const memoizedCallback = useCallback(() =&amp;gt; doSomething(a), [a]);
 &lt;p&gt;Security isn&#x27;t optional. Learn to protect your apps from day one.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;common-vulnerabilities&quot;&gt;Common Vulnerabilities&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-sql-injection&quot;&gt;1. SQL Injection&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&amp;#x2F;&amp;#x2F; Vulnerable
-db.query(`SELECT * FROM users WHERE id = ${userId}`);
-
-&amp;#x2F;&amp;#x2F; Safe
-db.query(&amp;#x27;SELECT * FROM users WHERE id = ?&amp;#x27;, [userId]);
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Vulnerable
+&lt;&#x2F;span&gt;&lt;span&gt;db&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;query&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;`SELECT * FROM users WHERE id = ${&lt;&#x2F;span&gt;&lt;span&gt;userId&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;}`&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Safe
+&lt;&#x2F;span&gt;&lt;span&gt;db&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;query&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;SELECT * FROM users WHERE id = ?&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[userId])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;2-xss-cross-site-scripting&quot;&gt;2. XSS (Cross-Site Scripting)&lt;&#x2F;h3&gt;
 &lt;p&gt;Always sanitize user input before rendering.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;3-csrf-cross-site-request-forgery&quot;&gt;3. CSRF (Cross-Site Request Forgery)&lt;&#x2F;h3&gt;
@@ -1177,13 +1177,13 @@ db.query(&amp;#x27;SELECT * FROM users WHERE id = ?&amp;#x27;, [userId]);
 ✅ Responsive design&lt;br &#x2F;&gt;
 ✅ Fast load time&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;service-worker-example&quot;&gt;Service Worker Example&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;self.addEventListener(&amp;#x27;fetch&amp;#x27;, event =&amp;gt; {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response =&amp;gt; response || fetch(event.request))
-  );
-});
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;addEventListener&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;fetch&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;event &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;respondWith&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    caches&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;match&lt;&#x2F;span&gt;&lt;span&gt;(event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;request)
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;|| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;fetch&lt;&#x2F;span&gt;&lt;span&gt;(event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;request))
+&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Full implementation guide coming next week!&lt;&#x2F;p&gt;
 </content>
         
@@ -1214,20 +1214,20 @@ db.query(&amp;#x27;SELECT * FROM users WHERE id = ?&amp;#x27;, [userId]);
 &lt;li&gt;&lt;strong&gt;Documentation&lt;&#x2F;strong&gt;: Types serve as inline docs&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h2 id=&quot;from-javascript-to-typescript&quot;&gt;From JavaScript to TypeScript&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;typescript&quot; class=&quot;language-typescript &quot;&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;&amp;#x2F;&amp;#x2F; JavaScript
-function add(a, b) {
-  return a + b;
-}
-
-&amp;#x2F;&amp;#x2F; TypeScript
-function add(a: number, b: number): number {
-  return a + b;
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;typescript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-typescript &quot;&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; JavaScript
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; TypeScript
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install -g typescript
-tsc --init
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -g&lt;&#x2F;span&gt;&lt;span&gt; typescript
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;tsc&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; --init
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;More examples and patterns coming soon!&lt;&#x2F;p&gt;
 </content>
         
@@ -1260,14 +1260,14 @@ tsc --init
 &lt;li&gt;&lt;strong&gt;Docker Hub&lt;&#x2F;strong&gt;: Repository for images&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;your-first-dockerfile&quot;&gt;Your First Dockerfile&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;dockerfile&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;FROM node:16-alpine
-WORKDIR &amp;#x2F;app
-COPY package*.json .&amp;#x2F;
-RUN npm install
-COPY . .
-EXPOSE 3000
-CMD [&amp;quot;npm&amp;quot;, &amp;quot;start&amp;quot;]
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;dockerfile&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; node:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;16-alpine
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;WORKDIR &lt;&#x2F;span&gt;&lt;span&gt;&#x2F;app
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; package*.json .&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;RUN &lt;&#x2F;span&gt;&lt;span&gt;npm install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; . .
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;EXPOSE &lt;&#x2F;span&gt;&lt;span&gt;3000
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;CMD &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;npm&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;start&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll deploy this to AWS ECS in the next tutorial!&lt;&#x2F;p&gt;
 </content>
@@ -1293,12 +1293,12 @@ CMD [&amp;quot;npm&amp;quot;, &amp;quot;start&amp;quot;]
 &lt;p&gt;Working in a team? These Git best practices will save you from merge conflicts and confusion.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;key-practices&quot;&gt;Key Practices&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-meaningful-commit-messages&quot;&gt;1. Meaningful Commit Messages&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# Bad
-git commit -m &amp;quot;fixed stuff&amp;quot;
-
-# Good
-git commit -m &amp;quot;fix: resolve authentication bug in login flow&amp;quot;
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Bad
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; commit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -m &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;fixed stuff&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Good
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; commit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -m &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;fix: resolve authentication bug in login flow&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;2-branch-naming-convention&quot;&gt;2. Branch Naming Convention&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;feature&#x2F;user-authentication&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
@@ -1339,8 +1339,8 @@ git commit -m &amp;quot;fix: resolve authentication bug in login flow&amp;quot;
 &lt;li&gt;Model evaluation&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h2 id=&quot;installation&quot;&gt;Installation&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;pip install numpy pandas scikit-learn matplotlib
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;pip install numpy pandas scikit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;learn matplotlib
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;your-first-ml-model&quot;&gt;Your First ML Model&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll build a simple linear regression model to predict house prices!&lt;&#x2F;p&gt;
 &lt;p&gt;Full tutorial coming soon...&lt;&#x2F;p&gt;
@@ -1424,11 +1424,11 @@ git commit -m &amp;quot;fix: resolve authentication bug in login flow&amp;quot;
 &lt;li&gt;MongoDB setup (local or Atlas)&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;project-setup&quot;&gt;Project Setup&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir my-rest-api
-cd my-rest-api
-npm init -y
-npm install express mongoose jsonwebtoken bcrypt dotenv
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; my-rest-api
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; my-rest-api
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; init&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -y
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install express mongoose jsonwebtoken bcrypt dotenv
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Stay tuned for the complete implementation!&lt;&#x2F;p&gt;
 </content>
         
@@ -1631,39 +1631,39 @@ npm install express mongoose jsonwebtoken bcrypt dotenv
         <content type="html" xml:base="/cc-website/preview/blog/2024/linux-commands/">&lt;h2 id=&quot;master-the-terminal&quot;&gt;Master the Terminal&lt;&#x2F;h2&gt;
 &lt;p&gt;The Linux terminal is a developer&#x27;s superpower. Learn these essential commands!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;file-operations&quot;&gt;File Operations&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# Navigate
-cd &amp;#x2F;path&amp;#x2F;to&amp;#x2F;directory
-pwd
-ls -la
-
-# Create&amp;#x2F;Delete
-mkdir project
-touch file.txt
-rm -rf folder&amp;#x2F;
-
-# Copy&amp;#x2F;Move
-cp source.txt dest.txt
-mv old.txt new.txt
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Navigate
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;path&#x2F;to&#x2F;directory
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;pwd
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;ls&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -la
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Create&#x2F;Delete
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; project
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;touch&lt;&#x2F;span&gt;&lt;span&gt; file.txt
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -rf&lt;&#x2F;span&gt;&lt;span&gt; folder&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Copy&#x2F;Move
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; source.txt dest.txt
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;mv&lt;&#x2F;span&gt;&lt;span&gt; old.txt new.txt
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;process-management&quot;&gt;Process Management&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# View processes
-ps aux | grep node
-top
-htop
-
-# Kill process
-kill -9 PID
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# View processes
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;ps&lt;&#x2F;span&gt;&lt;span&gt; aux &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;grep&lt;&#x2F;span&gt;&lt;span&gt; node
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;top
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;htop
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Kill process
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;kill&lt;&#x2F;span&gt;&lt;span&gt; -9 PID
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;network-commands&quot;&gt;Network Commands&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl https:&amp;#x2F;&amp;#x2F;api.example.com
-wget https:&amp;#x2F;&amp;#x2F;file.zip
-netstat -tuln
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;api.example.com
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;wget&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;file.zip
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;netstat&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -tuln
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;text-processing&quot;&gt;Text Processing&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;grep &amp;quot;error&amp;quot; logs.txt
-sed &amp;#x27;s&amp;#x2F;old&amp;#x2F;new&amp;#x2F;g&amp;#x27; file.txt
-awk &amp;#x27;{print $1}&amp;#x27; data.txt
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;grep &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;error&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; logs.txt
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sed &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;s&#x2F;old&#x2F;new&#x2F;g&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt; file.txt
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;awk &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;{print $1}&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt; data.txt
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Practice these daily!&lt;&#x2F;p&gt;
 </content>
         
@@ -1687,23 +1687,23 @@ awk &amp;#x27;{print $1}&amp;#x27; data.txt
         <content type="html" xml:base="/cc-website/preview/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
 &lt;p&gt;Async&#x2F;await revolutionized how we write asynchronous code in JavaScript.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;before-async-await&quot;&gt;Before Async&#x2F;Await&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&amp;#x2F;&amp;#x2F; Callback Hell
-getUserData(userId, function(user) {
-  getOrders(user.id, function(orders) {
-    getOrderDetails(orders[0], function(details) {
-      console.log(details);
-    });
-  });
-});
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Callback Hell
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserData&lt;&#x2F;span&gt;&lt;span&gt;(userId&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;user&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrders&lt;&#x2F;span&gt;&lt;span&gt;(user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;orders&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrderDetails&lt;&#x2F;span&gt;&lt;span&gt;(orders[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;details&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(details)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;with-async-await&quot;&gt;With Async&#x2F;Await&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;async function getUserOrders(userId) {
-  const user = await getUserData(userId);
-  const orders = await getOrders(user.id);
-  const details = await getOrderDetails(orders[0]);
-  return details;
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;async function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserOrders&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;userId&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;user &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserData&lt;&#x2F;span&gt;&lt;span&gt;(userId)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;orders &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrders&lt;&#x2F;span&gt;&lt;span&gt;(user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;details &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrderDetails&lt;&#x2F;span&gt;&lt;span&gt;(orders[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;details&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Much cleaner!&lt;&#x2F;p&gt;
 </content>
         
@@ -1734,10 +1734,10 @@ getUserData(userId, function(user) {
 &lt;li&gt;Great community&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;essential-libraries&quot;&gt;Essential Libraries&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;python&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;pandas &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;pd
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;numpy &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;np
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;matplotlib&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;pyplot &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;plt
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;your-first-analysis&quot;&gt;Your First Analysis&lt;&#x2F;h2&gt;
 &lt;p&gt;We&#x27;ll analyze a real dataset and create visualizations!&lt;&#x2F;p&gt;
 </content>
