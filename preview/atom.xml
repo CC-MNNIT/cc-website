@@ -1463,6 +1463,66 @@ npm install express mongoose jsonwebtoken bcrypt dotenv
         
     </entry>
     <entry xml:lang="en">
+        <title>Alumni Industry Connect</title>
+        <published>2025-01-01T00:00:00+00:00</published>
+        <updated>2025-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/programs/alumni-connect/"/>
+        <id>/cc-website/preview/events/programs/alumni-connect/</id>
+        
+        <content type="html" xml:base="/cc-website/preview/events/programs/alumni-connect/">&lt;h2 id=&quot;about-alumni-connect&quot;&gt;About Alumni Connect&lt;&#x2F;h2&gt;
+&lt;p&gt;The &lt;strong&gt;Alumni Industry Connect&lt;&#x2F;strong&gt; series brings back our most successful alumni to share their industry experiences, career advice, and technical insights.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;why-attend&quot;&gt;Why Attend?&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Real-world Insights&lt;&#x2F;strong&gt;: Learn what it takes to crack interviews at FAANG and startups.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Networking&lt;&#x2F;strong&gt;: Connect with seniors working in your dream companies.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Technical Deep Dives&lt;&#x2F;strong&gt;: Sessions on System Design, Cloud Computing, and AI&#x2F;ML trends.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;past-speakers&quot;&gt;Past Speakers&lt;&#x2F;h3&gt;
+&lt;p&gt;We have hosted alumni from &lt;strong&gt;Google, Microsoft, Amazon, Uber, PhonePe&lt;&#x2F;strong&gt;, and high-growth startups.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>CC Classes</title>
+        <published>2025-01-01T00:00:00+00:00</published>
+        <updated>2025-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/preview/events/programs/cc-classes/"/>
+        <id>/cc-website/preview/events/programs/cc-classes/</id>
+        
+        <content type="html" xml:base="/cc-website/preview/events/programs/cc-classes/">&lt;h2 id=&quot;about-cc-classes&quot;&gt;About CC Classes&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;CC Classes&lt;&#x2F;strong&gt; are student-led mentorship sessions designed to help freshers and sophomores master the art of programming. From the basics of C++ to advanced Competitive Programming and Development, we cover it all.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-we-cover&quot;&gt;What We Cover&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Introduction to Programming&lt;&#x2F;strong&gt;: C, C++, and Python basics.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Data Structures &amp;amp; Algorithms&lt;&#x2F;strong&gt;: Arrays, Linked Lists, Trees, Graphs, and DP.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Web Development&lt;&#x2F;strong&gt;: HTML, CSS, JS, React, and Node.js.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;App Development&lt;&#x2F;strong&gt;: Flutter and Kotlin.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;System Design&lt;&#x2F;strong&gt;: Basics of scalable architecture.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;p&gt;Classes are typically held &lt;strong&gt;every week&lt;&#x2F;strong&gt; in the CC Club Room or Lecture Halls. Follow our socials for specific timings!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>Insomnia</title>
         <published>2024-11-17T00:00:00+00:00</published>
         <updated>2024-11-17T00:00:00+00:00</updated>
