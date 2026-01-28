@@ -121,7 +121,11 @@ Features:
                                     <line x1="8" y1="2" x2="8" y2="6" />
                                     <line x1="3" y1="10" x2="21" y2="10" />
                                 </svg>
+                                {% if event.extra.date_label %}
+                                <span>{{ event.extra.date_label }}</span>
+                                {% else %}
                                 <span>{{ event.date | date(format="%B %d, %Y") }}</span>
+                                {% endif %}
                             </div>
                             {% if event.extra.location %}
                             <div class="hero-meta-item">
@@ -315,7 +319,11 @@ Features:
     {# Events Grid #}
     <div class="events-grid" data-events-grid>
         {% for event in all_events %}
-        <a href="{{ event.permalink }}" class="event-card" data-year="{{ event.date | date(format='%Y') }}"
+        {% set event_year_attr = event.date | date(format='%Y') %}
+        {% if event.extra.event_type == "program" %}
+        {% set event_year_attr = "program" %}
+        {% endif %}
+        <a href="{{ event.permalink }}" class="event-card" data-year="{{ event_year_attr }}"
             data-domain="{{ event.extra.event_type | default(value='other') }}">
             {# Card Image #}
             <div class="event-card-visual {% if not event.extra.images %}no-image{% endif %}">
@@ -367,7 +375,11 @@ Features:
                                 <line x1="8" y1="2" x2="8" y2="6" />
                                 <line x1="3" y1="10" x2="21" y2="10" />
                             </svg>
+                            {% if event.extra.date_label %}
+                            {{ event.extra.date_label }}
+                            {% else %}
                             {{ event.date | date(format="%b %Y") }}
+                            {% endif %}
                         </span>
                         {% if event.extra.location %}
                         <span class="event-card-location">

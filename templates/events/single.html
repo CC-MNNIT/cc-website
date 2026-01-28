@@ -66,7 +66,11 @@ Features:
                 </svg>
                 <div>
                     <span class="meta-label">Date</span>
+                    {% if page.extra.date_label %}
+                    <span class="meta-value">{{ page.extra.date_label }}</span>
+                    {% else %}
                     <span class="meta-value">{{ page.date | date(format="%B %d, %Y") }}</span>
+                    {% endif %}
                 </div>
             </div>
             {% if page.extra.location %}
