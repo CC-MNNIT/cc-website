@@ -82,6 +82,7 @@ nav = [
     { name = "About", url = "about", type = "url", icon = "fa-solid fa-circle-info" },
     { name = "Blog", url = "blog", type = "url", icon = "fa-solid fa-blog" },
     { name = "Events", url = "events", type = "url", icon = "fa-solid fa-calendar-days" },
+    { name = "Calendar", url = "https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view", type = "url", icon = "fa-solid fa-calendar-check" },
     { name = "Projects", url = "projects", type = "url", icon = "fa-solid fa-code-branch" },
     { name = "Roadmaps", url = "roadmaps", type = "url", icon = "fa-solid fa-route" },
     # { name = "Resources", url = "resources", type = "url", icon = "fa-solid fa-book-open" },
