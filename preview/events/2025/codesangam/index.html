@@ -1506,6 +1506,108 @@ Built for smooth performance and easy navigation, ICMT makes daily task manageme
 </div>
 
 
+
+<div id="gallery-lightbox" class="gallery-lightbox">
+    <button class="lightbox-close" aria-label="Close lightbox">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6" />
+        </svg>
+    </button>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 6 15 12 9 18" />
+        </svg>
+    </button>
+    <div class="lightbox-content">
+        <img id="lightbox-image" src="" alt="Gallery image">
+    </div>
+    <div class="lightbox-counter">
+        <span id="lightbox-current">1</span> / <span id="lightbox-total">3</span>
+    </div>
+</div>
+
+<script>
+(function() {
+    const lightbox = document.getElementById('gallery-lightbox');
+    if (!lightbox) return;
+
+    const lightboxImg = document.getElementById('lightbox-image');
+    const lightboxCurrent = document.getElementById('lightbox-current');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+    const prevBtn = lightbox.querySelector('.lightbox-prev');
+    const nextBtn = lightbox.querySelector('.lightbox-next');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    let currentIndex = 0;
+    const images = [];
+
+    // Collect all image sources
+    galleryItems.forEach((item, index) => {
+        const img = item.querySelector('img');
+        if (img) {
+            images.push(img.src);
+            item.addEventListener('click', () => openLightbox(index));
+        }
+    });
+
+    function openLightbox(index) {
+        currentIndex = index;
+        updateLightboxImage();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function updateLightboxImage() {
+        lightboxImg.src = images[currentIndex];
+        lightboxCurrent.textContent = currentIndex + 1;
+    }
+
+    function showNext() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateLightboxImage();
+    }
+
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateLightboxImage();
+    }
+
+    // Event listeners
+    closeBtn.addEventListener('click', closeLightbox);
+    nextBtn.addEventListener('click', showNext);
+    prevBtn.addEventListener('click', showPrev);
+
+    // Close on background click
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target.classList.contains('lightbox-content')) {
+            closeLightbox();
+        }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
+    });
+})();
+</script>
+
+
+
                         
 
 
