@@ -1,0 +1,35 @@
+name: Image Analyzer Bot (Post-Merge Optimizer)
+
+on:
+  push:
+    branches:
+      - main
+      - preview
+    paths:
+      - 'static/images/teams/**'
+
+jobs:
+  optimize-deployed-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: pip install opencv-python-headless numpy
+
+      - name: Run Image Preprocessor
+        run: python .github/scripts/team-image-preprocessor.py
+
+      - name: Commit and Push Directly
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: post-merge image optimization [skip ci]"
+          file_pattern: 'static/images/teams/*'

@@ -2,11 +2,11 @@
 
 # Group 1: Faculty (Single Entry)
 [faculty]
-name = "Dr. DKE"
+name = "Dr. Vibhav Prakash Singh"
 title = "Faculty In-Charge"
 image = "teams/dke.webp"
-email = "dke@mnnit.ac.in"
-profile_url = "https://mnnit.ac.in/prof_detail?id=123"
+email = "vibhav@mnnit.ac.in"
+profile_url = "https://www.mnnit.ac.in/profile/previewr.php?id=1785"
 
 # Group 2: CCRs (Computer Coding Club Representatives)
 [[ccrs]]
