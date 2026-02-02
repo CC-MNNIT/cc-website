@@ -586,24 +586,24 @@
 
                 function type() {
                     const currentWord = words[wordIndex];
-                    let typeSpeed = 100;
+                    let typeSpeed = 50;
 
                     if (isDeleting) {
                         textElement.textContent = currentWord.substring(0, charIndex - 1);
                         charIndex--;
-                        typeSpeed = 50; // Faster deleting
+                        typeSpeed = 25; // Faster deleting
                     } else {
                         textElement.textContent = currentWord.substring(0, charIndex + 1);
                         charIndex++;
                     }
 
                     if (!isDeleting && charIndex === currentWord.length) {
-                        typeSpeed = 2000; // Pause at end of word
+                        typeSpeed = 1000; // Pause at end of word
                         isDeleting = true;
                     } else if (isDeleting && charIndex === 0) {
                         isDeleting = false;
                         wordIndex = (wordIndex + 1) % words.length;
-                        typeSpeed = 500; // Pause before next word
+                        typeSpeed = 200; // Pause before next word
                     }
 
                     setTimeout(type, typeSpeed);
@@ -1628,6 +1628,14 @@
             
             
             <li>
+                <a  href="/cc-website/preview/projects">Projects</a>
+            </li>
+        
+            
+            
+            
+            
+            <li>
                 
                     <details open>
                         <summary ><a class="hover:no-underline" href="/cc-website/preview/blog">Blog</a></summary>
@@ -1683,14 +1691,6 @@
             
             
             <li>
-                <a  href="/cc-website/preview/projects">Projects</a>
-            </li>
-        
-            
-            
-            
-            
-            <li>
                 <a  href="/cc-website/preview/about">About Us</a>
             </li>
         
@@ -1713,13 +1713,13 @@
                                 <li>
                                     
                                         <details open>
-                                            <summary ><a class="hover:no-underline" href="/cc-website/preview/events/2026">Events 2026</a></summary>
+                                            <summary ><a class="hover:no-underline" href="/cc-website/preview/events/programs">Programs</a></summary>
                                             <ul>
                                                 
                                                 
-                                                    <li ><a class="hover:no-underline" href="/cc-website/preview/events/2026/insomnia">Insomnia 2026</a></li>
+                                                    <li ><a class="hover:no-underline" href="/cc-website/preview/events/programs/cc-classes">CC Classes</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="/cc-website/preview/events/2026/weekend-of-code">Weekend of Code 2026</a></li>
+                                                    <li ><a class="hover:no-underline" href="/cc-website/preview/events/programs/alumni-connect">Alumni Industry Connect</a></li>
                                                 
                                                 
                                             </ul>
@@ -1734,13 +1734,13 @@
                                 <li>
                                     
                                         <details open>
-                                            <summary ><a class="hover:no-underline" href="/cc-website/preview/events/programs">Programs</a></summary>
+                                            <summary ><a class="hover:no-underline" href="/cc-website/preview/events/2026">Events 2026</a></summary>
                                             <ul>
                                                 
                                                 
-                                                    <li ><a class="hover:no-underline" href="/cc-website/preview/events/programs/cc-classes">CC Classes</a></li>
+                                                    <li ><a class="hover:no-underline" href="/cc-website/preview/events/2026/insomnia">Insomnia 2026</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="/cc-website/preview/events/programs/alumni-connect">Alumni Industry Connect</a></li>
+                                                    <li ><a class="hover:no-underline" href="/cc-website/preview/events/2026/weekend-of-code">Weekend of Code 2026</a></li>
                                                 
                                                 
                                             </ul>
