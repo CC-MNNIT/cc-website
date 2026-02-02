@@ -63,3 +63,11 @@ icon = "fa-solid fa-code"
 tech_stack = ["Go", "React", "TypeScript"]
 repo_url = "https://github.com/CC-MNNIT/CodeSangam"
 authors = ["shank03", "PriyavKaneria", "sanskaromar","Ayushman444","imsubratpandey","tan-inv","lokesh-wagh","smt96700","meisabhishekpatel"]
+
+[[projects]]
+title = "Gesto"
+description = "First-of-its-kind web app for custom gesture training and recognition. Uses efficient data formats and lightweight neural networks for real-time, zero-latency predictions directly in the browser."
+icon = "fa-solid fa-hand-sparkles"
+tech_stack = ["TensorFlow.js", "Next.js", "FastAPI"]
+repo_url = "https://devfolio.co/projects/gesto-244d"
+authors = ["PriyavKaneria", "sanskaromar", "shauryaDugar"]
