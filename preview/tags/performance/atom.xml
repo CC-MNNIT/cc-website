@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Computer Coding Club - performance</title>
     <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
-    <link rel="self" type="application/atom+xml" href="/cc-website/preview/tags/performance/atom.xml"/>
-    <link rel="alternate" type="text/html" href="/cc-website/preview/"/>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/preview/tags/performance/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/preview/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-10-25T00:00:00+00:00</updated>
-    <id>/cc-website/preview/tags/performance/atom.xml</id>
+    <id>https://cc-club.in/preview/tags/performance/atom.xml</id>
     <entry xml:lang="en">
         <title>Optimizing React Performance: Tips and Tricks</title>
         <published>2025-10-25T00:00:00+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/react-performance-optimization/"/>
-        <id>/cc-website/preview/blog/2025/react-performance-optimization/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/react-performance-optimization/"/>
+        <id>https://cc-club.in/preview/blog/2025/react-performance-optimization/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/react-performance-optimization/">&lt;h2 id=&quot;make-react-blazing-fast&quot;&gt;Make React Blazing Fast&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/react-performance-optimization/">&lt;h2 id=&quot;make-react-blazing-fast&quot;&gt;Make React Blazing Fast&lt;&#x2F;h2&gt;
 &lt;p&gt;Slow React app? These optimization techniques will help you achieve better performance.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;key-techniques&quot;&gt;Key Techniques&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-react-memo&quot;&gt;1. React.memo&lt;&#x2F;h3&gt;

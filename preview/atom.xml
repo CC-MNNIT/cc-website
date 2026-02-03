@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Computer Coding Club</title>
     <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
-    <link rel="self" type="application/atom+xml" href="/cc-website/preview/atom.xml"/>
-    <link rel="alternate" type="text/html" href="/cc-website/preview/"/>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/preview/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/preview/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2026-02-15T00:00:00+00:00</updated>
-    <id>/cc-website/preview/atom.xml</id>
+    <id>https://cc-club.in/preview/atom.xml</id>
     <entry xml:lang="en">
         <title>Insomnia 2026</title>
         <published>2026-02-15T00:00:00+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2026/insomnia/"/>
-        <id>/cc-website/preview/events/2026/insomnia/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2026/insomnia/"/>
+        <id>https://cc-club.in/preview/events/2026/insomnia/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/2026/insomnia/">&lt;h2 id=&quot;about-insomnia-2026&quot;&gt;About Insomnia 2026&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/events/2026/insomnia/">&lt;h2 id=&quot;about-insomnia-2026&quot;&gt;About Insomnia 2026&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;Insomnia&lt;&#x2F;strong&gt; returns in 2026 as the flagship competitive programming contest of &lt;strong&gt;MNNIT Allahabad&lt;&#x2F;strong&gt;. It&#x27;s not just a contest; it&#x27;s a test of endurance, logic, and coffee tolerance.&lt;&#x2F;p&gt;
 &lt;p&gt;Inspired by the &lt;strong&gt;ACM-ICPC&lt;&#x2F;strong&gt; format, Insomnia pushes teams to their limits.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
@@ -59,10 +59,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2026/weekend-of-code/"/>
-        <id>/cc-website/preview/events/2026/weekend-of-code/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2026/weekend-of-code/"/>
+        <id>https://cc-club.in/preview/events/2026/weekend-of-code/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/2026/weekend-of-code/">&lt;h2 id=&quot;about-weekend-of-code-2026&quot;&gt;About Weekend of Code 2026&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/events/2026/weekend-of-code/">&lt;h2 id=&quot;about-weekend-of-code-2026&quot;&gt;About Weekend of Code 2026&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;Weekend of Code&lt;&#x2F;strong&gt; is the annual internal hackathon of MNNIT Allahabad, designed to kickstart the coding journey for freshers and provide a platform for seniors to showcase their development skills.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h3&gt;
 &lt;p&gt;This year, we are expecting over &lt;strong&gt;500+ participants&lt;&#x2F;strong&gt; to join us for a weekend of intense coding, learning, and fun.&lt;&#x2F;p&gt;
@@ -88,10 +88,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/opc/"/>
-        <id>/cc-website/preview/events/2025/opc/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/opc/"/>
+        <id>https://cc-club.in/preview/events/2025/opc/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/2025/opc/">&lt;h2 id=&quot;about-opc&quot;&gt;About OPC&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/opc/">&lt;h2 id=&quot;about-opc&quot;&gt;About OPC&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;OPC (Online Programming Contest)&lt;&#x2F;strong&gt; is a competitive coding event organized by the Computer Coding Club to challenge problem-solving skills, logical thinking, and coding speed. It brings together programmers of all levels to compete, learn, and push their limits in a high-energy contest environment.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;what-makes-opc-special&quot;&gt;What Makes OPC Special&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -133,10 +133,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/react-hooks-guide/"/>
-        <id>/cc-website/preview/blog/2025/react-hooks-guide/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/react-hooks-guide/"/>
+        <id>https://cc-club.in/preview/blog/2025/react-hooks-guide/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/react-hooks-guide/">&lt;!-- 
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/react-hooks-guide/">&lt;!-- 
     BLOG POST CONTENT GUIDE
     
     Write your content below using Markdown syntax.
@@ -567,10 +567,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/code-of-the-day/"/>
-        <id>/cc-website/preview/events/2025/code-of-the-day/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/code-of-the-day/"/>
+        <id>https://cc-club.in/preview/events/2025/code-of-the-day/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/2025/code-of-the-day/">&lt;h2 id=&quot;about-code-of-the-day&quot;&gt;About Code of the Day&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/code-of-the-day/">&lt;h2 id=&quot;about-code-of-the-day&quot;&gt;About Code of the Day&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;Code of the Day 2025&lt;&#x2F;strong&gt; was a 7-day competitive programming challenge organized by the Computer Coding Club, MNNIT Allahabad as part of CyberQuest under Avishkar 2025, the institute’s annual technical fest. The event was designed to build consistency and strengthen problem-solving skills by releasing one thoughtfully crafted problem every day.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;what-makes-code-of-the-day-special&quot;&gt;What Makes Code of the Day Special&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -608,10 +608,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/hack36/"/>
-        <id>/cc-website/preview/events/2025/hack36/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/hack36/"/>
+        <id>https://cc-club.in/preview/events/2025/hack36/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/2025/hack36/">&lt;h2 id=&quot;about-hack36&quot;&gt;About Hack36&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/hack36/">&lt;h2 id=&quot;about-hack36&quot;&gt;About Hack36&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;Hack36 9.0&lt;&#x2F;strong&gt; is the annual national-level hackathon organized by the Computer Coding Club (CC), MNNIT Allahabad. It is a 36-hour-long coding marathon where developers, designers, and innovators from across the country come together to solve real-world problems using technology.&lt;&#x2F;p&gt;
 &lt;p&gt;This year’s edition, Hack36 9.0 Secure, is part of the Network Security Bootcamp at MNNIT, supported by ISEA Phase III under the Ministry of Electronics and IT (MeitY).&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;what-makes-hack36-9-0-special&quot;&gt;What Makes Hack36 9.0 Special&lt;&#x2F;h3&gt;
@@ -658,10 +658,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/react-performance-optimization/"/>
-        <id>/cc-website/preview/blog/2025/react-performance-optimization/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/react-performance-optimization/"/>
+        <id>https://cc-club.in/preview/blog/2025/react-performance-optimization/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/react-performance-optimization/">&lt;h2 id=&quot;make-react-blazing-fast&quot;&gt;Make React Blazing Fast&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/react-performance-optimization/">&lt;h2 id=&quot;make-react-blazing-fast&quot;&gt;Make React Blazing Fast&lt;&#x2F;h2&gt;
 &lt;p&gt;Slow React app? These optimization techniques will help you achieve better performance.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;key-techniques&quot;&gt;Key Techniques&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-react-memo&quot;&gt;1. React.memo&lt;&#x2F;h3&gt;
@@ -704,10 +704,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/codesangam/"/>
-        <id>/cc-website/preview/events/2025/codesangam/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/codesangam/"/>
+        <id>https://cc-club.in/preview/events/2025/codesangam/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/2025/codesangam/">&lt;h2 id=&quot;about-codesangam-2025&quot;&gt;About CodeSangam 2025&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/codesangam/">&lt;h2 id=&quot;about-codesangam-2025&quot;&gt;About CodeSangam 2025&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;CodeSangam 2025&lt;&#x2F;strong&gt; is a month-long development fest organized by the &lt;strong&gt;Computer Coding Club (CCC), MNNIT Allahabad&lt;&#x2F;strong&gt;, where innovation meets execution. It brings together developers, designers, and tech enthusiasts to build real-world projects, learn modern technologies, and compete across multiple development domains.&lt;&#x2F;p&gt;
 &lt;p&gt;The fest is designed to promote hands-on building culture, teamwork, and skill development through a series of exciting events conducted over multiple weeks.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;what-makes-codesangam-special&quot;&gt;What Makes CodeSangam Special&lt;&#x2F;h3&gt;
@@ -748,10 +748,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/contrihub/"/>
-        <id>/cc-website/preview/events/2025/contrihub/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/contrihub/"/>
+        <id>https://cc-club.in/preview/events/2025/contrihub/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/2025/contrihub/">&lt;h2 id=&quot;about-contrihub&quot;&gt;About ContriHUB&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/contrihub/">&lt;h2 id=&quot;about-contrihub&quot;&gt;About ContriHUB&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;ContriHUB&lt;&#x2F;strong&gt; is a month-long open-source celebration where collaboration meets contribution. Organized every October alongside &lt;strong&gt;Hacktoberfest&lt;&#x2F;strong&gt;, ContriHUB aims to bring more &lt;strong&gt;MNNITians&lt;&#x2F;strong&gt; into the open-source ecosystem by encouraging meaningful contributions to real-world projects.&lt;&#x2F;p&gt;
 &lt;p&gt;From fixing bugs to building new features, every pull request counts—and every contributor becomes part of a growing community of open-source enthusiasts.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-is-contrihub&quot;&gt;What is ContriHUB?&lt;&#x2F;h2&gt;
@@ -828,10 +828,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/cybersecurity-basics/"/>
-        <id>/cc-website/preview/blog/2025/cybersecurity-basics/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/cybersecurity-basics/"/>
+        <id>https://cc-club.in/preview/blog/2025/cybersecurity-basics/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/cybersecurity-basics/">&lt;h2 id=&quot;security-first&quot;&gt;Security First&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/cybersecurity-basics/">&lt;h2 id=&quot;security-first&quot;&gt;Security First&lt;&#x2F;h2&gt;
 &lt;p&gt;Security isn&#x27;t optional. Learn to protect your apps from day one.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;common-vulnerabilities&quot;&gt;Common Vulnerabilities&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-sql-injection&quot;&gt;1. SQL Injection&lt;&#x2F;h3&gt;
@@ -870,10 +870,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/summer-hackathon-recap/"/>
-        <id>/cc-website/preview/blog/2025/summer-hackathon-recap/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/summer-hackathon-recap/"/>
+        <id>https://cc-club.in/preview/blog/2025/summer-hackathon-recap/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/summer-hackathon-recap/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/summer-hackathon-recap/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;strong&gt;CC Club Summer Hackathon 2025&lt;&#x2F;strong&gt; concluded on August 24th with incredible energy, innovative projects, and a strong sense of community. Over 150 students from all years and branches came together for an intense 48-hour coding marathon that pushed creativity, problem-solving, and collaboration to new heights.&lt;&#x2F;p&gt;
 &lt;p&gt;This year&#x27;s theme was &lt;strong&gt;&quot;Tech for Social Good&quot;&lt;&#x2F;strong&gt; - challenging teams to build solutions that address real-world problems and create positive social impact.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;event-highlights&quot;&gt;Event Highlights&lt;&#x2F;h3&gt;
@@ -1147,10 +1147,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/graphql-vs-rest/"/>
-        <id>/cc-website/preview/blog/2025/graphql-vs-rest/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/graphql-vs-rest/"/>
+        <id>https://cc-club.in/preview/blog/2025/graphql-vs-rest/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/graphql-vs-rest/">&lt;h2 id=&quot;the-api-debate&quot;&gt;The API Debate&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/graphql-vs-rest/">&lt;h2 id=&quot;the-api-debate&quot;&gt;The API Debate&lt;&#x2F;h2&gt;
 &lt;p&gt;GraphQL has gained massive popularity, but is it always better than REST? Let&#x27;s compare objectively.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;rest-api&quot;&gt;REST API&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;Pros:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
@@ -1197,10 +1197,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/progressive-web-apps/"/>
-        <id>/cc-website/preview/blog/2025/progressive-web-apps/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/progressive-web-apps/"/>
+        <id>https://cc-club.in/preview/blog/2025/progressive-web-apps/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/progressive-web-apps/">&lt;h2 id=&quot;pwas-the-future-of-web-apps&quot;&gt;PWAs: The Future of Web Apps&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/progressive-web-apps/">&lt;h2 id=&quot;pwas-the-future-of-web-apps&quot;&gt;PWAs: The Future of Web Apps&lt;&#x2F;h2&gt;
 &lt;p&gt;Progressive Web Apps combine the best of web and mobile apps. Install them on your phone, use them offline, receive push notifications!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;key-features&quot;&gt;Key Features&lt;&#x2F;h2&gt;
 &lt;ul&gt;
@@ -1240,10 +1240,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/typescript-why-care/"/>
-        <id>/cc-website/preview/blog/2025/typescript-why-care/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/typescript-why-care/"/>
+        <id>https://cc-club.in/preview/blog/2025/typescript-why-care/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/typescript-why-care/">&lt;h2 id=&quot;the-typescript-revolution&quot;&gt;The TypeScript Revolution&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/typescript-why-care/">&lt;h2 id=&quot;the-typescript-revolution&quot;&gt;The TypeScript Revolution&lt;&#x2F;h2&gt;
 &lt;p&gt;TypeScript has become the standard for large-scale JavaScript applications. Here&#x27;s why.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;benefits-of-typescript&quot;&gt;Benefits of TypeScript&lt;&#x2F;h2&gt;
 &lt;ol&gt;
@@ -1284,10 +1284,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/docker-for-beginners/"/>
-        <id>/cc-website/preview/blog/2025/docker-for-beginners/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/docker-for-beginners/"/>
+        <id>https://cc-club.in/preview/blog/2025/docker-for-beginners/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/docker-for-beginners/">&lt;h2 id=&quot;why-docker&quot;&gt;Why Docker?&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/docker-for-beginners/">&lt;h2 id=&quot;why-docker&quot;&gt;Why Docker?&lt;&#x2F;h2&gt;
 &lt;p&gt;Docker revolutionized software deployment. Learn how to package your applications with all dependencies.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-is-docker&quot;&gt;What is Docker?&lt;&#x2F;h2&gt;
 &lt;p&gt;Docker is a platform for developing, shipping, and running applications in containers.&lt;&#x2F;p&gt;
@@ -1325,10 +1325,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/git-best-practices/"/>
-        <id>/cc-website/preview/blog/2025/git-best-practices/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/git-best-practices/"/>
+        <id>https://cc-club.in/preview/blog/2025/git-best-practices/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/git-best-practices/">&lt;h2 id=&quot;git-collaboration-essentials&quot;&gt;Git Collaboration Essentials&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/git-best-practices/">&lt;h2 id=&quot;git-collaboration-essentials&quot;&gt;Git Collaboration Essentials&lt;&#x2F;h2&gt;
 &lt;p&gt;Working in a team? These Git best practices will save you from merge conflicts and confusion.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;key-practices&quot;&gt;Key Practices&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;1-meaningful-commit-messages&quot;&gt;1. Meaningful Commit Messages&lt;&#x2F;h3&gt;
@@ -1364,10 +1364,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/intro-to-ml-python/"/>
-        <id>/cc-website/preview/blog/2025/intro-to-ml-python/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/intro-to-ml-python/"/>
+        <id>https://cc-club.in/preview/blog/2025/intro-to-ml-python/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/intro-to-ml-python/">&lt;h2 id=&quot;welcome-to-machine-learning&quot;&gt;Welcome to Machine Learning&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/intro-to-ml-python/">&lt;h2 id=&quot;welcome-to-machine-learning&quot;&gt;Welcome to Machine Learning&lt;&#x2F;h2&gt;
 &lt;p&gt;Machine Learning is transforming every industry. This guide will help you get started with practical Python examples.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;topics-covered&quot;&gt;Topics Covered&lt;&#x2F;h2&gt;
 &lt;ol&gt;
@@ -1399,10 +1399,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/css-grid-vs-flexbox/"/>
-        <id>/cc-website/preview/blog/2025/css-grid-vs-flexbox/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/css-grid-vs-flexbox/"/>
+        <id>https://cc-club.in/preview/blog/2025/css-grid-vs-flexbox/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/css-grid-vs-flexbox/">&lt;h2 id=&quot;the-layout-dilemma&quot;&gt;The Layout Dilemma&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/css-grid-vs-flexbox/">&lt;h2 id=&quot;the-layout-dilemma&quot;&gt;The Layout Dilemma&lt;&#x2F;h2&gt;
 &lt;p&gt;Choosing between CSS Grid and Flexbox can be confusing. Both are powerful, but they excel in different scenarios.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;quick-answer&quot;&gt;Quick Answer&lt;&#x2F;h2&gt;
 &lt;ul&gt;
@@ -1443,10 +1443,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/nodejs-rest-api/"/>
-        <id>/cc-website/preview/blog/2025/nodejs-rest-api/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/nodejs-rest-api/"/>
+        <id>https://cc-club.in/preview/blog/2025/nodejs-rest-api/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/nodejs-rest-api/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/nodejs-rest-api/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
 &lt;p&gt;Building RESTful APIs is a fundamental skill for backend developers. In this comprehensive guide, we&#x27;ll create a production-ready REST API using Node.js and Express.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-you-ll-learn&quot;&gt;What You&#x27;ll Learn&lt;&#x2F;h2&gt;
 &lt;ul&gt;
@@ -1485,10 +1485,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/weekend-of-code/"/>
-        <id>/cc-website/preview/events/2025/weekend-of-code/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/weekend-of-code/"/>
+        <id>https://cc-club.in/preview/events/2025/weekend-of-code/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/2025/weekend-of-code/">&lt;h2 id=&quot;about-weekend-of-code&quot;&gt;About Weekend of Code&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/weekend-of-code/">&lt;h2 id=&quot;about-weekend-of-code&quot;&gt;About Weekend of Code&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;Weekend of Code&lt;&#x2F;strong&gt; is a multi-event coding fest exclusively for first- and second-year students, bringing together three core competitions—DevJam (development hackathon), Turing’s Playground (AI&#x2F;ML hackathon), and CodeStart (ICPC-style coding contest). It’s a focused platform to learn, build, compete, and push your problem-solving skills.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;what-makes-weekend-of-code-special&quot;&gt;What Makes Weekend of Code Special&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -1514,10 +1514,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/programs/alumni-connect/"/>
-        <id>/cc-website/preview/events/programs/alumni-connect/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/programs/alumni-connect/"/>
+        <id>https://cc-club.in/preview/events/programs/alumni-connect/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/programs/alumni-connect/">&lt;h2 id=&quot;about-alumni-connect&quot;&gt;About Alumni Connect&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/events/programs/alumni-connect/">&lt;h2 id=&quot;about-alumni-connect&quot;&gt;About Alumni Connect&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;strong&gt;Alumni Industry Connect&lt;&#x2F;strong&gt; series brings back our most successful alumni to share their industry experiences, career advice, and technical insights.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;why-attend&quot;&gt;Why Attend?&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -1543,10 +1543,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/programs/cc-classes/"/>
-        <id>/cc-website/preview/events/programs/cc-classes/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/programs/cc-classes/"/>
+        <id>https://cc-club.in/preview/events/programs/cc-classes/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/programs/cc-classes/">&lt;h2 id=&quot;about-cc-classes&quot;&gt;About CC Classes&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/events/programs/cc-classes/">&lt;h2 id=&quot;about-cc-classes&quot;&gt;About CC Classes&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;CC Classes&lt;&#x2F;strong&gt; are student-led mentorship sessions designed to help freshers and sophomores master the art of programming. From the basics of C++ to advanced Competitive Programming and Development, we cover it all.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;what-we-cover&quot;&gt;What We Cover&lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -1574,10 +1574,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/events/2025/insomnia/"/>
-        <id>/cc-website/preview/events/2025/insomnia/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/insomnia/"/>
+        <id>https://cc-club.in/preview/events/2025/insomnia/</id>
         
-        <content type="html" xml:base="/cc-website/preview/events/2025/insomnia/">&lt;h2 id=&quot;about-insomnia&quot;&gt;About Insomnia&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/insomnia/">&lt;h2 id=&quot;about-insomnia&quot;&gt;About Insomnia&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;Insomnia&lt;&#x2F;strong&gt; is the flagship competitive programming contest of &lt;strong&gt;MNNIT Allahabad&lt;&#x2F;strong&gt;, where logic meets endurance and teamwork meets strategy. Conducted as part of &lt;strong&gt;Avishkar&lt;&#x2F;strong&gt;, our annual tech fest, Insomnia brings together programmers from across the country to compete in a high-pressure, high-energy coding marathon.&lt;&#x2F;p&gt;
 &lt;p&gt;Inspired by the &lt;strong&gt;ACM-ICPC style&lt;&#x2F;strong&gt;, the contest challenges teams to think fast, code smart, and stay sharp till the very last minute.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
@@ -1622,10 +1622,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2024/competitive-programming-intro/"/>
-        <id>/cc-website/preview/blog/2024/competitive-programming-intro/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2024/competitive-programming-intro/"/>
+        <id>https://cc-club.in/preview/blog/2024/competitive-programming-intro/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2024/competitive-programming-intro/">&lt;h2 id=&quot;why-competitive-programming&quot;&gt;Why Competitive Programming?&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2024/competitive-programming-intro/">&lt;h2 id=&quot;why-competitive-programming&quot;&gt;Why Competitive Programming?&lt;&#x2F;h2&gt;
 &lt;p&gt;CP improves problem-solving skills and is essential for cracking coding interviews at top companies.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;platforms&quot;&gt;Platforms&lt;&#x2F;h3&gt;
@@ -1664,10 +1664,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2024/linux-commands/"/>
-        <id>/cc-website/preview/blog/2024/linux-commands/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2024/linux-commands/"/>
+        <id>https://cc-club.in/preview/blog/2024/linux-commands/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2024/linux-commands/">&lt;h2 id=&quot;master-the-terminal&quot;&gt;Master the Terminal&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2024/linux-commands/">&lt;h2 id=&quot;master-the-terminal&quot;&gt;Master the Terminal&lt;&#x2F;h2&gt;
 &lt;p&gt;The Linux terminal is a developer&#x27;s superpower. Learn these essential commands!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;file-operations&quot;&gt;File Operations&lt;&#x2F;h2&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Navigate
@@ -1720,10 +1720,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2024/javascript-async-await/"/>
-        <id>/cc-website/preview/blog/2024/javascript-async-await/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2024/javascript-async-await/"/>
+        <id>https://cc-club.in/preview/blog/2024/javascript-async-await/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
 &lt;p&gt;Async&#x2F;await revolutionized how we write asynchronous code in JavaScript.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;before-async-await&quot;&gt;Before Async&#x2F;Await&lt;&#x2F;h2&gt;
 &lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Callback Hell
@@ -1760,10 +1760,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2024/python-data-science/"/>
-        <id>/cc-website/preview/blog/2024/python-data-science/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2024/python-data-science/"/>
+        <id>https://cc-club.in/preview/blog/2024/python-data-science/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2024/python-data-science/">&lt;h2 id=&quot;welcome-to-data-science&quot;&gt;Welcome to Data Science&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2024/python-data-science/">&lt;h2 id=&quot;welcome-to-data-science&quot;&gt;Welcome to Data Science&lt;&#x2F;h2&gt;
 &lt;p&gt;Data Science is one of the hottest fields in tech. Start your journey here with Python!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;why-python&quot;&gt;Why Python?&lt;&#x2F;h2&gt;
 &lt;ul&gt;

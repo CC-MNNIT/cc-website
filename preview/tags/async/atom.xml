@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Computer Coding Club - async</title>
     <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
-    <link rel="self" type="application/atom+xml" href="/cc-website/preview/tags/async/atom.xml"/>
-    <link rel="alternate" type="text/html" href="/cc-website/preview/"/>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/preview/tags/async/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/preview/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2024-06-22T00:00:00+00:00</updated>
-    <id>/cc-website/preview/tags/async/atom.xml</id>
+    <id>https://cc-club.in/preview/tags/async/atom.xml</id>
     <entry xml:lang="en">
         <title>Understanding JavaScript Async&#x2F;Await</title>
         <published>2024-06-22T00:00:00+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2024/javascript-async-await/"/>
-        <id>/cc-website/preview/blog/2024/javascript-async-await/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2024/javascript-async-await/"/>
+        <id>https://cc-club.in/preview/blog/2024/javascript-async-await/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
 &lt;p&gt;Async&#x2F;await revolutionized how we write asynchronous code in JavaScript.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;before-async-await&quot;&gt;Before Async&#x2F;Await&lt;&#x2F;h2&gt;
 &lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Callback Hell

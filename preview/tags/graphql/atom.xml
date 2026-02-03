@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Computer Coding Club - graphql</title>
     <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
-    <link rel="self" type="application/atom+xml" href="/cc-website/preview/tags/graphql/atom.xml"/>
-    <link rel="alternate" type="text/html" href="/cc-website/preview/"/>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/preview/tags/graphql/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/preview/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-08-14T00:00:00+00:00</updated>
-    <id>/cc-website/preview/tags/graphql/atom.xml</id>
+    <id>https://cc-club.in/preview/tags/graphql/atom.xml</id>
     <entry xml:lang="en">
         <title>GraphQL vs REST: A Practical Comparison</title>
         <published>2025-08-14T00:00:00+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/graphql-vs-rest/"/>
-        <id>/cc-website/preview/blog/2025/graphql-vs-rest/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/graphql-vs-rest/"/>
+        <id>https://cc-club.in/preview/blog/2025/graphql-vs-rest/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/graphql-vs-rest/">&lt;h2 id=&quot;the-api-debate&quot;&gt;The API Debate&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/graphql-vs-rest/">&lt;h2 id=&quot;the-api-debate&quot;&gt;The API Debate&lt;&#x2F;h2&gt;
 &lt;p&gt;GraphQL has gained massive popularity, but is it always better than REST? Let&#x27;s compare objectively.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;rest-api&quot;&gt;REST API&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;Pros:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;

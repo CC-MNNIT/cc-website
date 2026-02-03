@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Computer Coding Club - python</title>
     <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
-    <link rel="self" type="application/atom+xml" href="/cc-website/preview/tags/python/atom.xml"/>
-    <link rel="alternate" type="text/html" href="/cc-website/preview/"/>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/preview/tags/python/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/preview/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-03-10T00:00:00+00:00</updated>
-    <id>/cc-website/preview/tags/python/atom.xml</id>
+    <id>https://cc-club.in/preview/tags/python/atom.xml</id>
     <entry xml:lang="en">
         <title>Introduction to Machine Learning with Python</title>
         <published>2025-03-10T00:00:00+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2025/intro-to-ml-python/"/>
-        <id>/cc-website/preview/blog/2025/intro-to-ml-python/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/intro-to-ml-python/"/>
+        <id>https://cc-club.in/preview/blog/2025/intro-to-ml-python/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2025/intro-to-ml-python/">&lt;h2 id=&quot;welcome-to-machine-learning&quot;&gt;Welcome to Machine Learning&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/intro-to-ml-python/">&lt;h2 id=&quot;welcome-to-machine-learning&quot;&gt;Welcome to Machine Learning&lt;&#x2F;h2&gt;
 &lt;p&gt;Machine Learning is transforming every industry. This guide will help you get started with practical Python examples.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;topics-covered&quot;&gt;Topics Covered&lt;&#x2F;h2&gt;
 &lt;ol&gt;
@@ -55,10 +55,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/preview/blog/2024/python-data-science/"/>
-        <id>/cc-website/preview/blog/2024/python-data-science/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2024/python-data-science/"/>
+        <id>https://cc-club.in/preview/blog/2024/python-data-science/</id>
         
-        <content type="html" xml:base="/cc-website/preview/blog/2024/python-data-science/">&lt;h2 id=&quot;welcome-to-data-science&quot;&gt;Welcome to Data Science&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2024/python-data-science/">&lt;h2 id=&quot;welcome-to-data-science&quot;&gt;Welcome to Data Science&lt;&#x2F;h2&gt;
 &lt;p&gt;Data Science is one of the hottest fields in tech. Start your journey here with Python!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;why-python&quot;&gt;Why Python?&lt;&#x2F;h2&gt;
 &lt;ul&gt;
