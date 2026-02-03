@@ -12,15 +12,18 @@
 /* --- Header --- */
 .blog-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
 }
 
 .blog-title {
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
     margin-bottom: 1rem;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
     color: var(--color-base-content);
+    display: inline-block;
 }
 
 /* Premium Gradient Override */
@@ -33,19 +36,19 @@
 }
 
 [data-theme="night"] .blog-title {
-    background: linear-gradient(90deg, #DA7138 0%, #EC9E6E 33%, #ECB163 66%, #ECC475 100%);
+    background: linear-gradient(135deg, #FFC758 0%, #FFD700 50%, #FFA500 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 0 60px rgba(255, 199, 88, 0.3);
 }
 
 .blog-description {
     font-size: 1.2rem;
     color: var(--color-base-content);
-    opacity: 0.8;
-    line-height: 1.6;
+    opacity: 0.6;
+    line-height: 1.7;
     max-width: 600px;
-    margin: 0 auto;
     margin: 0 auto;
 }
 
@@ -208,7 +211,8 @@
     display: block;
     text-decoration: none;
     background: var(--color-base-100);
-    border: 1px solid var(--color-border);
+    /* border: 1px solid var(--color-border);    */
+    border: 1px solid rgba(41, 168, 211, 0.42);
     border-radius: 16px;
     padding: 2rem;
     transition: all 0.3s ease;
@@ -228,7 +232,7 @@
 
 [data-theme="light"] .blog-card {
     background: #FFFFFF;
-    border-color: rgba(0, 0, 0, 0.08);
+    border: 0.5px solid rgba(0, 0, 0, 0.432);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
@@ -320,10 +324,6 @@
     transition: color 0.2s ease;
 }
 
-.author-link:hover {
-    color: var(--color-primary);
-    text-decoration: underline;
-}
 
 /* --- Tags (Chips) --- */
 .meta-tags {
@@ -441,3 +441,15 @@
     background: #FFFFFF;
     border-color: #E0E0E0;
 }
+
+[data-theme="night"] .blog-card {
+        border: 0.5px solid rgba(255, 255, 255, 0.189);
+    }
+
+[data-theme="light"] .blog-card {
+        border: 0.5px solid rgba(0, 0, 0, 0.432);
+    }
+    
+.search-pro-tip {
+        margin-bottom: 10px;
+    }

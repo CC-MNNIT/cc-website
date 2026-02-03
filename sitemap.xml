@@ -125,19 +125,54 @@
         <loc>/cc-website/events/2025/</loc>
     </url>
     <url>
+        <loc>/cc-website/events/2025/code-of-the-day/</loc>
+        <lastmod>2025-12-03</lastmod>
+    </url>
+    <url>
+        <loc>/cc-website/events/2025/codesangam/</loc>
+        <lastmod>2025-10-11</lastmod>
+    </url>
+    <url>
+        <loc>/cc-website/events/2025/contrihub/</loc>
+        <lastmod>2025-09-20</lastmod>
+    </url>
+    <url>
         <loc>/cc-website/events/2025/hack36/</loc>
-        <lastmod>2025-03-15</lastmod>
+        <lastmod>2025-11-09</lastmod>
+    </url>
+    <url>
+        <loc>/cc-website/events/2025/insomnia/</loc>
+        <lastmod>2024-11-17</lastmod>
+    </url>
+    <url>
+        <loc>/cc-website/events/2025/opc/</loc>
+        <lastmod>2025-12-30</lastmod>
+    </url>
+    <url>
+        <loc>/cc-website/events/2025/weekend-of-code/</loc>
+        <lastmod>2025-01-07</lastmod>
     </url>
     <url>
         <loc>/cc-website/events/2026/</loc>
     </url>
     <url>
-        <loc>/cc-website/events/2026/codesangam/</loc>
-        <lastmod>2026-02-10</lastmod>
+        <loc>/cc-website/events/2026/insomnia/</loc>
+        <lastmod>2026-02-15</lastmod>
     </url>
     <url>
-        <loc>/cc-website/events/2026/docker-kubernetes-workshop/</loc>
-        <lastmod>2026-01-05</lastmod>
+        <loc>/cc-website/events/2026/weekend-of-code/</loc>
+        <lastmod>2026-01-07</lastmod>
+    </url>
+    <url>
+        <loc>/cc-website/events/programs/</loc>
+    </url>
+    <url>
+        <loc>/cc-website/events/programs/alumni-connect/</loc>
+        <lastmod>2025-01-01</lastmod>
+    </url>
+    <url>
+        <loc>/cc-website/events/programs/cc-classes/</loc>
+        <lastmod>2025-01-01</lastmod>
     </url>
     <url>
         <loc>/cc-website/projects/</loc>

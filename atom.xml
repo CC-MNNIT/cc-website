@@ -5,12 +5,12 @@
     <link rel="self" type="application/atom+xml" href="/cc-website/atom.xml"/>
     <link rel="alternate" type="text/html" href="/cc-website/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-02-10T00:00:00+00:00</updated>
+    <updated>2026-02-15T00:00:00+00:00</updated>
     <id>/cc-website/atom.xml</id>
     <entry xml:lang="en">
-        <title>Codesangam</title>
-        <published>2026-02-10T00:00:00+00:00</published>
-        <updated>2026-02-10T00:00:00+00:00</updated>
+        <title>Insomnia 2026</title>
+        <published>2026-02-15T00:00:00+00:00</published>
+        <updated>2026-02-15T00:00:00+00:00</updated>
         
         <author>
           <name>
@@ -20,41 +20,36 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/events/2026/codesangam/"/>
-        <id>/cc-website/events/2026/codesangam/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/events/2026/insomnia/"/>
+        <id>/cc-website/events/2026/insomnia/</id>
         
-        <content type="html" xml:base="/cc-website/events/2026/codesangam/">&lt;h2 id=&quot;about-codesangam&quot;&gt;About Codesangam&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Codesangam&lt;&#x2F;strong&gt; is a 2-week development challenge that brings together creativity and code. Build real-world projects, collaborate with peers, and showcase your skills to the community.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;challenge-format&quot;&gt;Challenge Format&lt;&#x2F;h3&gt;
+        <content type="html" xml:base="/cc-website/events/2026/insomnia/">&lt;h2 id=&quot;about-insomnia-2026&quot;&gt;About Insomnia 2026&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Insomnia&lt;&#x2F;strong&gt; returns in 2026 as the flagship competitive programming contest of &lt;strong&gt;MNNIT Allahabad&lt;&#x2F;strong&gt;. It&#x27;s not just a contest; it&#x27;s a test of endurance, logic, and coffee tolerance.&lt;&#x2F;p&gt;
+&lt;p&gt;Inspired by the &lt;strong&gt;ACM-ICPC&lt;&#x2F;strong&gt; format, Insomnia pushes teams to their limits.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;what-to-expect&quot;&gt;What to Expect&lt;&#x2F;h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Duration:&lt;&#x2F;strong&gt; 2 weeks of intensive development&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Teams:&lt;&#x2F;strong&gt; Solo or team participation (max 4 members)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Themes:&lt;&#x2F;strong&gt; Different themes each edition&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Evaluation:&lt;&#x2F;strong&gt; Based on innovation, execution, and impact&lt;&#x2F;li&gt;
+&lt;li&gt;🧠 &lt;strong&gt;Algorithmic Challenges:&lt;&#x2F;strong&gt; Problems ranging from brain-teasers to advanced graph theory.&lt;&#x2F;li&gt;
+&lt;li&gt;🕒 &lt;strong&gt;The Night Grind:&lt;&#x2F;strong&gt; High-intensity coding atmosphere that lasts into the night.&lt;&#x2F;li&gt;
+&lt;li&gt;🤝 &lt;strong&gt;Team Strategy:&lt;&#x2F;strong&gt; Work in teams of up to 3 to optimize your solutions.&lt;&#x2F;li&gt;
+&lt;li&gt;🏆 &lt;strong&gt;Grand Prizes:&lt;&#x2F;strong&gt; Rewards for the top-performing teams.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;timeline&quot;&gt;Timeline&lt;&#x2F;h3&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;format&quot;&gt;Format&lt;&#x2F;h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Week 1:&lt;&#x2F;strong&gt; Project ideation and development&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Week 2:&lt;&#x2F;strong&gt; Refinement and submission&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Final Day:&lt;&#x2F;strong&gt; Presentations and judging&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Platform:&lt;&#x2F;strong&gt; Codeforces (hosted as a gym&#x2F;contest)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Duration:&lt;&#x2F;strong&gt; 3 to 5 Hours&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Team Size:&lt;&#x2F;strong&gt; 1-3 Members&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Eligibility:&lt;&#x2F;strong&gt; Open to all college students.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;h3 id=&quot;why-participate&quot;&gt;Why Participate&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Build portfolio-worthy projects&lt;&#x2F;li&gt;
-&lt;li&gt;Learn by doing with real-world challenges&lt;&#x2F;li&gt;
-&lt;li&gt;Get feedback from experienced developers&lt;&#x2F;li&gt;
-&lt;li&gt;Win exciting prizes worth Rs. 75,000&lt;&#x2F;li&gt;
-&lt;li&gt;Network with developers from across India&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;registration&quot;&gt;Registration&lt;&#x2F;h3&gt;
-&lt;p&gt;Registration opens on &lt;strong&gt;January 15, 2026&lt;&#x2F;strong&gt;. Visit &lt;a href=&quot;https:&#x2F;&#x2F;codesangam.com&quot;&gt;codesangam.com&lt;&#x2F;a&gt; for registration and updates.&lt;&#x2F;p&gt;
+&lt;p&gt;Get ready to code till you drop! 🌙💻&lt;&#x2F;p&gt;
 </content>
         
     </entry>
     <entry xml:lang="en">
-        <title>Docker &amp; Kubernetes Fundamentals Workshop</title>
-        <published>2026-01-05T00:00:00+00:00</published>
-        <updated>2026-01-05T00:00:00+00:00</updated>
+        <title>Weekend of Code 2026</title>
+        <published>2026-01-07T00:00:00+00:00</published>
+        <updated>2026-01-07T00:00:00+00:00</updated>
         
         <author>
           <name>
@@ -64,142 +59,64 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="/cc-website/events/2026/docker-kubernetes-workshop/"/>
-        <id>/cc-website/events/2026/docker-kubernetes-workshop/</id>
+        <link rel="alternate" type="text/html" href="/cc-website/events/2026/weekend-of-code/"/>
+        <id>/cc-website/events/2026/weekend-of-code/</id>
         
-        <content type="html" xml:base="/cc-website/events/2026/docker-kubernetes-workshop/">&lt;h2 id=&quot;workshop-overview&quot;&gt;Workshop Overview&lt;&#x2F;h2&gt;
-&lt;p&gt;Learn the fundamentals of &lt;strong&gt;Docker and Kubernetes&lt;&#x2F;strong&gt; in this hands-on 3-hour workshop! Whether you&#x27;re new to containerization or looking to strengthen your DevOps skills, this workshop will give you practical experience with industry-standard tools.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;what-you-ll-learn&quot;&gt;What You&#x27;ll Learn&lt;&#x2F;h3&gt;
+        <content type="html" xml:base="/cc-website/events/2026/weekend-of-code/">&lt;h2 id=&quot;about-weekend-of-code-2026&quot;&gt;About Weekend of Code 2026&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Weekend of Code&lt;&#x2F;strong&gt; is the annual internal hackathon of MNNIT Allahabad, designed to kickstart the coding journey for freshers and provide a platform for seniors to showcase their development skills.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h3&gt;
+&lt;p&gt;This year, we are expecting over &lt;strong&gt;500+ participants&lt;&#x2F;strong&gt; to join us for a weekend of intense coding, learning, and fun.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Docker Basics&lt;&#x2F;strong&gt;: Containers, images, Dockerfiles, and Docker Compose&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Containerizing Applications&lt;&#x2F;strong&gt;: Turn any application into a Docker container&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-Container Apps&lt;&#x2F;strong&gt;: Connect multiple containers using Docker Compose&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Kubernetes Introduction&lt;&#x2F;strong&gt;: Pods, services, deployments, and basic orchestration&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Real-World Use Cases&lt;&#x2F;strong&gt;: When and why to use containers in production&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;DevJam&lt;&#x2F;strong&gt; - Development Hackathon: Build innovative web, app, or system-level solutions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Turing&#x27;s Playground&lt;&#x2F;strong&gt; - AI&#x2F;ML Hackathon: Solve real-world problems using machine learning and AI.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;CodeStart&lt;&#x2F;strong&gt; - Competitive Programming: Test your algorithmic skills in an ICPC-style contest.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;workshop-format&quot;&gt;Workshop Format&lt;&#x2F;h3&gt;
-&lt;p&gt;This is a &lt;strong&gt;hands-on, interactive workshop&lt;&#x2F;strong&gt;. You&#x27;ll:&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OPC</title>
+        <published>2025-12-30T00:00:00+00:00</published>
+        <updated>2025-12-30T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/events/2025/opc/"/>
+        <id>/cc-website/events/2025/opc/</id>
+        
+        <content type="html" xml:base="/cc-website/events/2025/opc/">&lt;h2 id=&quot;about-opc&quot;&gt;About OPC&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;OPC (Online Programming Contest)&lt;&#x2F;strong&gt; is a competitive coding event organized by the Computer Coding Club to challenge problem-solving skills, logical thinking, and coding speed. It brings together programmers of all levels to compete, learn, and push their limits in a high-energy contest environment.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-makes-opc-special&quot;&gt;What Makes OPC Special&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow along with live coding demonstrations&lt;&#x2F;li&gt;
-&lt;li&gt;Complete practical exercises on your own laptop&lt;&#x2F;li&gt;
-&lt;li&gt;Build and deploy containerized applications&lt;&#x2F;li&gt;
-&lt;li&gt;Ask questions and get help from the instructor&lt;&#x2F;li&gt;
-&lt;li&gt;Take home complete code examples and reference materials&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Real Competitive Experience&lt;&#x2F;strong&gt; – Problems inspired by real CP platforms&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;High-Intensity Environment&lt;&#x2F;strong&gt; – Time-bound challenges that test accuracy &amp;amp; speed&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Open for All Skill Levels&lt;&#x2F;strong&gt; – Beginners to advanced coders&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Recognition &amp;amp; Rankings&lt;&#x2F;strong&gt; – Performance-based leaderboard&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Community Driven&lt;&#x2F;strong&gt; – Connect with fellow coders through CC Club&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;One Last Battle of the Year&lt;&#x2F;strong&gt; – End 2025 on a high note&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;2:00 PM - 2:15 PM&lt;&#x2F;strong&gt;: Introduction and Setup Check&lt;br &#x2F;&gt;
-&lt;strong&gt;2:15 PM - 3:00 PM&lt;&#x2F;strong&gt;: Docker Fundamentals&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;What are containers?&lt;&#x2F;li&gt;
-&lt;li&gt;Docker architecture&lt;&#x2F;li&gt;
-&lt;li&gt;Creating your first container&lt;&#x2F;li&gt;
-&lt;li&gt;Writing Dockerfiles&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;3:00 PM - 3:15 PM&lt;&#x2F;strong&gt;: Break ☕&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;3:15 PM - 4:00 PM&lt;&#x2F;strong&gt;: Docker Compose &amp;amp; Multi-Container Apps&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Docker Compose basics&lt;&#x2F;li&gt;
-&lt;li&gt;Building a full-stack app with Docker&lt;&#x2F;li&gt;
-&lt;li&gt;Networking between containers&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;4:00 PM - 4:45 PM&lt;&#x2F;strong&gt;: Introduction to Kubernetes&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Why Kubernetes?&lt;&#x2F;li&gt;
-&lt;li&gt;Pods, services, and deployments&lt;&#x2F;li&gt;
-&lt;li&gt;Deploying your first app to Kubernetes&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;4:45 PM - 5:00 PM&lt;&#x2F;strong&gt;: Q&amp;amp;A and Resources&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Required&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Laptop (Windows&#x2F;Mac&#x2F;Linux) with admin access&lt;&#x2F;li&gt;
-&lt;li&gt;Docker Desktop installed (&lt;a href=&quot;https:&#x2F;&#x2F;docs.docker.com&#x2F;get-docker&#x2F;&quot;&gt;Installation Guide&lt;&#x2F;a&gt;)&lt;&#x2F;li&gt;
-&lt;li&gt;Basic command line knowledge&lt;&#x2F;li&gt;
-&lt;li&gt;Text editor (VS Code recommended)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Recommended&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Basic understanding of web applications&lt;&#x2F;li&gt;
-&lt;li&gt;Familiarity with command line tools&lt;&#x2F;li&gt;
-&lt;li&gt;GitHub account (for accessing code examples)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;No prior Docker&#x2F;Kubernetes experience needed!&lt;&#x2F;strong&gt; We&#x27;ll start from the basics.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;installation-instructions&quot;&gt;Installation Instructions&lt;&#x2F;h2&gt;
-&lt;p&gt;Please install Docker Desktop &lt;strong&gt;before the workshop&lt;&#x2F;strong&gt; to save time:&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;windows-mac&quot;&gt;Windows&#x2F;Mac&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;&#x2F;h3&gt;
 &lt;ol&gt;
-&lt;li&gt;Download Docker Desktop from &lt;a href=&quot;https:&#x2F;&#x2F;www.docker.com&#x2F;products&#x2F;docker-desktop&#x2F;&quot;&gt;docker.com&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Run the installer&lt;&#x2F;li&gt;
-&lt;li&gt;Verify installation: Open terminal and run &lt;code&gt;docker --version&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Competitive Programming&lt;&#x2F;strong&gt; - Algorithms and problem solving.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Logic &amp;amp; Analytical Thinking&lt;&#x2F;strong&gt; - Logical and analytical reasoning&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Skill Building &amp;amp; Consistency&lt;&#x2F;strong&gt; - Daily practice and consistency&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Time Management&lt;&#x2F;strong&gt; – Solving problems accurately under strict time constraints.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Coding Speed &amp;amp; Accuracy&lt;&#x2F;strong&gt; - Writing correct and optimized code quickly.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Real Contest Experience&lt;&#x2F;strong&gt; - Exposure to competitive programming environments&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Learning Through Challenges&lt;&#x2F;strong&gt; - Improving by tackling diverse and tricky problems.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;h3 id=&quot;linux&quot;&gt;Linux&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Ubuntu&#x2F;Debian
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -fsSL&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;get.docker.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -o&lt;&#x2F;span&gt;&lt;span&gt; get-docker.sh
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sh get-docker.sh
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; usermod&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -aG&lt;&#x2F;span&gt;&lt;span&gt; docker $USER
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;&lt;strong&gt;Having installation issues?&lt;&#x2F;strong&gt; Join our Discord #workshop-help channel or come 15 minutes early for setup assistance.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;about-the-instructor&quot;&gt;About the Instructor&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Rahul Kumar&lt;&#x2F;strong&gt; is a DevOps Engineer at TechCorp with 5 years of experience building and managing containerized infrastructure. He&#x27;s deployed production systems serving millions of users and is passionate about making DevOps accessible to everyone.&lt;&#x2F;p&gt;
-&lt;p&gt;Previously a CC Club member (Alumni 2020), Rahul has conducted 10+ workshops and mentored students in cloud technologies.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;what-to-bring&quot;&gt;What to Bring&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;stats-from-2025-edition&quot;&gt;Stats from 2025 Edition&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;💻 Laptop with Docker installed&lt;&#x2F;li&gt;
-&lt;li&gt;🔌 Charger (important!)&lt;&#x2F;li&gt;
-&lt;li&gt;📝 Notebook for taking notes (optional)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;240+&lt;&#x2F;strong&gt; Participants&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;2.5&lt;&#x2F;strong&gt; hours of coding&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Provided&lt;&#x2F;strong&gt;: Refreshments, workshop materials, reference cheat sheets&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;registration&quot;&gt;Registration&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Limited to 50 participants&lt;&#x2F;strong&gt; - Register soon!&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Prerequisites Check&lt;&#x2F;strong&gt;: We&#x27;ll send a pre-workshop email with setup instructions. Please complete the setup beforehand.&lt;&#x2F;p&gt;
-&lt;div class=&quot;text-center my-8&quot;&gt;
-    &lt;a href=&quot;https:&#x2F;&#x2F;forms.gle&#x2F;your-workshop-form&quot; class=&quot;btn btn-primary btn-lg&quot; target=&quot;_blank&quot;&gt;
-        Register for Workshop →
-    &lt;&#x2F;a&gt;
-&lt;&#x2F;div&gt;
-&lt;h2 id=&quot;workshop-materials&quot;&gt;Workshop Materials&lt;&#x2F;h2&gt;
-&lt;p&gt;After the workshop, you&#x27;ll receive:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Complete code examples and Dockerfiles&lt;&#x2F;li&gt;
-&lt;li&gt;Kubernetes configuration files&lt;&#x2F;li&gt;
-&lt;li&gt;Curated resource list for further learning&lt;&#x2F;li&gt;
-&lt;li&gt;Certificate of participation&lt;&#x2F;li&gt;
-&lt;li&gt;Access to recorded Q&amp;amp;A session&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;faqs&quot;&gt;FAQs&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Q: Is this suitable for beginners?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
-A: Yes! We start from basics. Just bring curiosity and willingness to learn.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Will this be recorded?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
-A: We&#x27;ll record the Q&amp;amp;A session for participants. Live coding won&#x27;t be recorded.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Can I get a certificate?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
-A: Yes, all attendees receive a certificate of participation.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Q: What if I can&#x27;t install Docker?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
-A: Come 15 minutes early, we&#x27;ll help you set up.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Q: Will you cover advanced Kubernetes topics?&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
-A: This is a fundamentals workshop. We&#x27;ll share resources for advanced learning.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;contact&quot;&gt;Contact&lt;&#x2F;h2&gt;
-&lt;p&gt;Questions? Email workshops@ccclub.edu or message on Discord.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;&lt;strong&gt;Don&#x27;t miss out! This workshop fills up fast. Register today! 🚀&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;!-- 
-    WORKSHOP EVENT TEMPLATE
-    
-    Workshops are shorter, focused learning sessions. Key differences from hackathons:
-    - Shorter duration (2-4 hours typically)
-    - Specific learning outcomes
-    - Prerequisites and setup instructions
-    - Instructor information
-    - Smaller capacity
-    - Less complex schedule
-    
-    CUSTOMIZE THIS TEMPLATE:
-    1. Update topic and title
-    2. Adjust duration and schedule
-    3. List clear prerequisites
-    4. Provide setup instructions
-    5. Emphasize hands-on nature
-    6. Include instructor credentials
---&gt;
 </content>
         
     </entry>
@@ -638,6 +555,97 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
         
     </entry>
     <entry xml:lang="en">
+        <title>Code Of The Day</title>
+        <published>2025-12-03T00:00:00+00:00</published>
+        <updated>2025-12-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/events/2025/code-of-the-day/"/>
+        <id>/cc-website/events/2025/code-of-the-day/</id>
+        
+        <content type="html" xml:base="/cc-website/events/2025/code-of-the-day/">&lt;h2 id=&quot;about-code-of-the-day&quot;&gt;About Code of the Day&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Code of the Day 2025&lt;&#x2F;strong&gt; was a 7-day competitive programming challenge organized by the Computer Coding Club, MNNIT Allahabad as part of CyberQuest under Avishkar 2025, the institute’s annual technical fest. The event was designed to build consistency and strengthen problem-solving skills by releasing one thoughtfully crafted problem every day.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-makes-code-of-the-day-special&quot;&gt;What Makes Code of the Day Special&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Consistency over speed&lt;&#x2F;strong&gt; Consistency focused competitive coding&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Daily excitement&lt;&#x2F;strong&gt; New challenges released every day&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Sneak peek teasers&lt;&#x2F;strong&gt; Pre-release teasers build excitement&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Learning support&lt;&#x2F;strong&gt; Timed hints for guided learning&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Fair play focused&lt;&#x2F;strong&gt; Strict rules ensure fair competition&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Community-driven&lt;&#x2F;strong&gt; Student-driven problem creation&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Competitive Programming&lt;&#x2F;strong&gt; - Algorithms and problem solving.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Logic &amp;amp; Analytical Thinking&lt;&#x2F;strong&gt; - Logical and analytical reasoning&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Skill Building &amp;amp; Consistency&lt;&#x2F;strong&gt; - Daily practice and consistency&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;stats-from-2025-edition&quot;&gt;Stats from 2025 Edition&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;270+&lt;&#x2F;strong&gt; Participants&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;7&lt;&#x2F;strong&gt; Days of coding&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Hack36 9.0</title>
+        <published>2025-11-09T00:00:00+00:00</published>
+        <updated>2025-11-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/events/2025/hack36/"/>
+        <id>/cc-website/events/2025/hack36/</id>
+        
+        <content type="html" xml:base="/cc-website/events/2025/hack36/">&lt;h2 id=&quot;about-hack36&quot;&gt;About Hack36&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Hack36 9.0&lt;&#x2F;strong&gt; is the annual national-level hackathon organized by the Computer Coding Club (CC), MNNIT Allahabad. It is a 36-hour-long coding marathon where developers, designers, and innovators from across the country come together to solve real-world problems using technology.&lt;&#x2F;p&gt;
+&lt;p&gt;This year’s edition, Hack36 9.0 Secure, is part of the Network Security Bootcamp at MNNIT, supported by ISEA Phase III under the Ministry of Electronics and IT (MeitY).&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-makes-hack36-9-0-special&quot;&gt;What Makes Hack36 9.0 Special&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;36 Hours&lt;&#x2F;strong&gt; of non-stop building, coding, and innovation&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cybersecurity&lt;&#x2F;strong&gt;-Focused Theme (Hack36 9.0 Secure)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Mentorship &amp;amp; Guidance&lt;&#x2F;strong&gt; from industry professionals and academicians&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Internship &amp;amp; Job Opportunities&lt;&#x2F;strong&gt; through recruiters and sponsors&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Networking&lt;&#x2F;strong&gt; with top developers, designers, and innovators nationwide&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Hands-on Exposure&lt;&#x2F;strong&gt; to latest tools, cloud platforms, and APIs&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Prizes, Recognition &amp;amp; Swags&lt;&#x2F;strong&gt; for top-performing teams&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Post-Hackathon Support&lt;&#x2F;strong&gt; like incubation&#x2F;funding guidance for strong projects&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;&#x2F;h3&gt;
+&lt;p&gt;This year we had 5 exciting tracks:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Network Security&lt;&#x2F;strong&gt; - Securing communication systems and networks&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Secure Information Retrieval&lt;&#x2F;strong&gt; - Safe and reliable data search &amp;amp; access&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Security in Artificial Intelligence&lt;&#x2F;strong&gt; - Protecting AI models and systems&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Web2 Security&lt;&#x2F;strong&gt; - Securing web apps, APIs, and online services&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Web3 Security&lt;&#x2F;strong&gt; - Blockchain, smart contract, and decentralized security&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;stats-from-2026-edition&quot;&gt;Stats from 2026 Edition&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;600+&lt;&#x2F;strong&gt; Participants&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;120+&lt;&#x2F;strong&gt; Teams&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;36&lt;&#x2F;strong&gt; Hours of coding&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;25+&lt;&#x2F;strong&gt; Mentors from industry&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Rs. 1,00,000&lt;&#x2F;strong&gt; Prize Pool&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>Optimizing React Performance: Tips and Tricks</title>
         <published>2025-10-25T00:00:00+00:00</published>
         <updated>2025-10-25T00:00:00+00:00</updated>
@@ -680,6 +688,130 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;results&quot;&gt;Results&lt;&#x2F;h2&gt;
 &lt;p&gt;Apply these and see 50-70% performance improvement!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>CodeSangam</title>
+        <published>2025-10-11T00:00:00+00:00</published>
+        <updated>2025-10-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/events/2025/codesangam/"/>
+        <id>/cc-website/events/2025/codesangam/</id>
+        
+        <content type="html" xml:base="/cc-website/events/2025/codesangam/">&lt;h2 id=&quot;about-codesangam-2025&quot;&gt;About CodeSangam 2025&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;CodeSangam 2025&lt;&#x2F;strong&gt; is a month-long development fest organized by the &lt;strong&gt;Computer Coding Club (CCC), MNNIT Allahabad&lt;&#x2F;strong&gt;, where innovation meets execution. It brings together developers, designers, and tech enthusiasts to build real-world projects, learn modern technologies, and compete across multiple development domains.&lt;&#x2F;p&gt;
+&lt;p&gt;The fest is designed to promote hands-on building culture, teamwork, and skill development through a series of exciting events conducted over multiple weeks.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-makes-codesangam-special&quot;&gt;What Makes CodeSangam Special&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Multiple events&lt;&#x2F;strong&gt; covering diverse development fields&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Hands-on project building&lt;&#x2F;strong&gt; with real-world use cases&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Competitive environment&lt;&#x2F;strong&gt; with exciting prizes and recognition&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Learning-focused challenges&lt;&#x2F;strong&gt; to improve development skills&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Collaboration and networking&lt;&#x2F;strong&gt; with talented peers at MNNIT&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;events-tracks&quot;&gt;Events &#x2F; Tracks&lt;&#x2F;h3&gt;
+&lt;p&gt;This year, CodeSangam featured &lt;strong&gt;5 major development events&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Webster&lt;&#x2F;strong&gt; - Web development event&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Droidrush&lt;&#x2F;strong&gt; - Android app development event&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Logical Rhythm&lt;&#x2F;strong&gt; - ML-based development event&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Softablitz&lt;&#x2F;strong&gt; - Java-based desktop app development event&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ContriHub&lt;&#x2F;strong&gt; - Open-source contribution challenge&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;stats-from-2025-edition&quot;&gt;Stats from 2025 Edition&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;500+&lt;&#x2F;strong&gt; Participants&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;100+&lt;&#x2F;strong&gt; Teams&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Contrihub</title>
+        <published>2025-09-20T00:00:00+00:00</published>
+        <updated>2025-09-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/events/2025/contrihub/"/>
+        <id>/cc-website/events/2025/contrihub/</id>
+        
+        <content type="html" xml:base="/cc-website/events/2025/contrihub/">&lt;h2 id=&quot;about-contrihub&quot;&gt;About ContriHUB&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;ContriHUB&lt;&#x2F;strong&gt; is a month-long open-source celebration where collaboration meets contribution. Organized every October alongside &lt;strong&gt;Hacktoberfest&lt;&#x2F;strong&gt;, ContriHUB aims to bring more &lt;strong&gt;MNNITians&lt;&#x2F;strong&gt; into the open-source ecosystem by encouraging meaningful contributions to real-world projects.&lt;&#x2F;p&gt;
+&lt;p&gt;From fixing bugs to building new features, every pull request counts—and every contributor becomes part of a growing community of open-source enthusiasts.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-is-contrihub&quot;&gt;What is ContriHUB?&lt;&#x2F;h2&gt;
+&lt;p&gt;ContriHUB is a &lt;strong&gt;month-long open-source contest&lt;&#x2F;strong&gt;, designed to help students get hands-on experience with GitHub and open-source workflows.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-makes-contrihub-special&quot;&gt;What Makes ContriHUB Special&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;🗓 &lt;strong&gt;Month-long Open Source Sprint&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🌍 &lt;strong&gt;Aligned with Hacktoberfest&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🧑‍💻 &lt;strong&gt;Beginner-friendly &amp;amp; Advanced Projects&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🏆 &lt;strong&gt;Points-based Contribution System&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🎁 &lt;strong&gt;Goodies &amp;amp; Swag for Top Contributors&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🤝 &lt;strong&gt;Community-driven Learning Experience&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;how-it-works&quot;&gt;How It Works&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Browse projects under the ContriHUB GitHub organization&lt;&#x2F;li&gt;
+&lt;li&gt;Pick a project that interests you&lt;&#x2F;li&gt;
+&lt;li&gt;Choose an issue and start working on it&lt;&#x2F;li&gt;
+&lt;li&gt;Submit a pull request following the contribution guidelines&lt;&#x2F;li&gt;
+&lt;li&gt;Earn points based on issue difficulty&lt;&#x2F;li&gt;
+&lt;li&gt;Climb the leaderboard and win exciting goodies 🎉&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;project-tracks-repositories&quot;&gt;Project Tracks &amp;amp; Repositories&lt;&#x2F;h2&gt;
+&lt;p&gt;ContriHUB hosts a diverse range of open-source projects across multiple domains:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;web-development&quot;&gt;Web Development&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CodeSangam&lt;&#x2F;strong&gt; – Event website built with HTML, Go, and React&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Robotics_Club_Website&lt;&#x2F;strong&gt; – Official website for MNNIT Robotics Club&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;NoteSphere&lt;&#x2F;strong&gt; – Student feedback portal (React)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Chamber_of_Secrets&lt;&#x2F;strong&gt; – Real-time social interaction app (MERN)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;mobile-applications&quot;&gt;Mobile Applications&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Easy2Do&lt;&#x2F;strong&gt; – Android productivity app&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Just-Share&lt;&#x2F;strong&gt; – Kotlin app for file sharing via Wi-Fi&#x2F;Bluetooth&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Music-Player&lt;&#x2F;strong&gt; – Java-based music player application&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;machine-learning-python-tools&quot;&gt;Machine Learning &amp;amp; Python Tools&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Graph-Analyzer&lt;&#x2F;strong&gt; – Web app for analyzing graph images&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;SecureFace&lt;&#x2F;strong&gt; – Face recognition-based access control system&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;systems-simulations&quot;&gt;Systems &amp;amp; Simulations&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Congestion-Control-Simulator&lt;&#x2F;strong&gt; – TCP congestion control algorithm simulator&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;utilities-campus-solutions&quot;&gt;Utilities &amp;amp; Campus Solutions&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;EAT_EASY&lt;&#x2F;strong&gt; – Mess management web application&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;CREDLOCKS&lt;&#x2F;strong&gt; – Community platform for student growth and resources&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;MovieScreen&lt;&#x2F;strong&gt; – Django-based movie project&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;EyeProtection&lt;&#x2F;strong&gt; – Browser extension for screen-time health&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;event-core-repositories&quot;&gt;Event &amp;amp; Core Repositories&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ContriHUB-24&lt;&#x2F;strong&gt; – Core repository for ContriHUB 2024 edition&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;🔗 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;ContriHUB&#x2F;repositories&quot;&gt;Explore all repositories&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;✨ Grab your tickets, join the parade of contributors, and let your code shine on the open-source carnival stage!&lt;&#x2F;p&gt;
 </content>
         
     </entry>
@@ -1220,52 +1352,6 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
         
     </entry>
     <entry xml:lang="en">
-        <title>Hack36</title>
-        <published>2025-03-15T00:00:00+00:00</published>
-        <updated>2025-03-15T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="/cc-website/events/2025/hack36/"/>
-        <id>/cc-website/events/2025/hack36/</id>
-        
-        <content type="html" xml:base="/cc-website/events/2025/hack36/">&lt;h2 id=&quot;about-hack36&quot;&gt;About Hack36&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Hack36&lt;&#x2F;strong&gt; is our flagship 36-hour hackathon where innovation meets execution. Teams from across the country come together to build groundbreaking projects with mentorship from industry experts and compete for exciting prizes.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;what-makes-hack36-special&quot;&gt;What Makes Hack36 Special&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;36 Hours&lt;&#x2F;strong&gt; of non-stop coding and innovation&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Industry Mentorship&lt;&#x2F;strong&gt; from leading tech companies&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Exciting Prizes&lt;&#x2F;strong&gt; worth lakhs&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Networking&lt;&#x2F;strong&gt; with fellow developers and recruiters&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Workshops&lt;&#x2F;strong&gt; and learning sessions&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;&#x2F;h3&gt;
-&lt;p&gt;This year we had 5 exciting tracks:&lt;&#x2F;p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;HealthTech&lt;&#x2F;strong&gt; - Solutions for healthcare challenges&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;EdTech&lt;&#x2F;strong&gt; - Revolutionizing education&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;FinTech&lt;&#x2F;strong&gt; - Financial technology innovations&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Sustainability&lt;&#x2F;strong&gt; - Green tech for a better future&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Open Innovation&lt;&#x2F;strong&gt; - Build anything amazing&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;h3 id=&quot;stats-from-2025-edition&quot;&gt;Stats from 2025 Edition&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;500+&lt;&#x2F;strong&gt; Participants&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;100+&lt;&#x2F;strong&gt; Teams&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;48&lt;&#x2F;strong&gt; Hours of coding&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;20+&lt;&#x2F;strong&gt; Mentors from industry&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Rs. 2,00,000&lt;&#x2F;strong&gt; Prize Pool&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
         <title>Introduction to Machine Learning with Python</title>
         <published>2025-03-10T00:00:00+00:00</published>
         <updated>2025-03-10T00:00:00+00:00</updated>
@@ -1383,6 +1469,143 @@ A: This is a fundamentals workshop. We&#x27;ll share resources for advanced lear
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install express mongoose jsonwebtoken bcrypt dotenv
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Stay tuned for the complete implementation!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Weekend of Code</title>
+        <published>2025-01-07T00:00:00+00:00</published>
+        <updated>2025-01-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/events/2025/weekend-of-code/"/>
+        <id>/cc-website/events/2025/weekend-of-code/</id>
+        
+        <content type="html" xml:base="/cc-website/events/2025/weekend-of-code/">&lt;h2 id=&quot;about-weekend-of-code&quot;&gt;About Weekend of Code&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Weekend of Code&lt;&#x2F;strong&gt; is a multi-event coding fest exclusively for first- and second-year students, bringing together three core competitions—DevJam (development hackathon), Turing’s Playground (AI&#x2F;ML hackathon), and CodeStart (ICPC-style coding contest). It’s a focused platform to learn, build, compete, and push your problem-solving skills.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-makes-weekend-of-code-special&quot;&gt;What Makes Weekend of Code Special&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Three Competitive Events&lt;&#x2F;strong&gt; across development, AI&#x2F;ML, and competitive programming&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Industry Mentorship&lt;&#x2F;strong&gt; from leading tech companies&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Exclusively for 1st &amp;amp; 2nd Years&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Mentorship &amp;amp; Guidance&lt;&#x2F;strong&gt; from peers&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Workshops&lt;&#x2F;strong&gt; and learning sessions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Alumni Industry Connect</title>
+        <published>2025-01-01T00:00:00+00:00</published>
+        <updated>2025-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/events/programs/alumni-connect/"/>
+        <id>/cc-website/events/programs/alumni-connect/</id>
+        
+        <content type="html" xml:base="/cc-website/events/programs/alumni-connect/">&lt;h2 id=&quot;about-alumni-connect&quot;&gt;About Alumni Connect&lt;&#x2F;h2&gt;
+&lt;p&gt;The &lt;strong&gt;Alumni Industry Connect&lt;&#x2F;strong&gt; series brings back our most successful alumni to share their industry experiences, career advice, and technical insights.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;why-attend&quot;&gt;Why Attend?&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Real-world Insights&lt;&#x2F;strong&gt;: Learn what it takes to crack interviews at FAANG and startups.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Networking&lt;&#x2F;strong&gt;: Connect with seniors working in your dream companies.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Technical Deep Dives&lt;&#x2F;strong&gt;: Sessions on System Design, Cloud Computing, and AI&#x2F;ML trends.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;past-speakers&quot;&gt;Past Speakers&lt;&#x2F;h3&gt;
+&lt;p&gt;We have hosted alumni from &lt;strong&gt;Google, Microsoft, Amazon, Uber, PhonePe&lt;&#x2F;strong&gt;, and high-growth startups.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>CC Classes</title>
+        <published>2025-01-01T00:00:00+00:00</published>
+        <updated>2025-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/events/programs/cc-classes/"/>
+        <id>/cc-website/events/programs/cc-classes/</id>
+        
+        <content type="html" xml:base="/cc-website/events/programs/cc-classes/">&lt;h2 id=&quot;about-cc-classes&quot;&gt;About CC Classes&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;CC Classes&lt;&#x2F;strong&gt; are student-led mentorship sessions designed to help freshers and sophomores master the art of programming. From the basics of C++ to advanced Competitive Programming and Development, we cover it all.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-we-cover&quot;&gt;What We Cover&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Introduction to Programming&lt;&#x2F;strong&gt;: C, C++, and Python basics.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Data Structures &amp;amp; Algorithms&lt;&#x2F;strong&gt;: Arrays, Linked Lists, Trees, Graphs, and DP.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Web Development&lt;&#x2F;strong&gt;: HTML, CSS, JS, React, and Node.js.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;App Development&lt;&#x2F;strong&gt;: Flutter and Kotlin.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;System Design&lt;&#x2F;strong&gt;: Basics of scalable architecture.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;&#x2F;h3&gt;
+&lt;p&gt;Classes are typically held &lt;strong&gt;every week&lt;&#x2F;strong&gt; in the CC Club Room or Lecture Halls. Follow our socials for specific timings!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Insomnia</title>
+        <published>2024-11-17T00:00:00+00:00</published>
+        <updated>2024-11-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/cc-website/events/2025/insomnia/"/>
+        <id>/cc-website/events/2025/insomnia/</id>
+        
+        <content type="html" xml:base="/cc-website/events/2025/insomnia/">&lt;h2 id=&quot;about-insomnia&quot;&gt;About Insomnia&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Insomnia&lt;&#x2F;strong&gt; is the flagship competitive programming contest of &lt;strong&gt;MNNIT Allahabad&lt;&#x2F;strong&gt;, where logic meets endurance and teamwork meets strategy. Conducted as part of &lt;strong&gt;Avishkar&lt;&#x2F;strong&gt;, our annual tech fest, Insomnia brings together programmers from across the country to compete in a high-pressure, high-energy coding marathon.&lt;&#x2F;p&gt;
+&lt;p&gt;Inspired by the &lt;strong&gt;ACM-ICPC style&lt;&#x2F;strong&gt;, the contest challenges teams to think fast, code smart, and stay sharp till the very last minute.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;what-is-insomnia&quot;&gt;What is Insomnia?&lt;&#x2F;h2&gt;
+&lt;p&gt;Insomnia is a &lt;strong&gt;3-hour ICPC-style team programming contest&lt;&#x2F;strong&gt; hosted on &lt;strong&gt;Codeforces&lt;&#x2F;strong&gt;, where teams of up to three members solve a curated set of algorithmic problems under strict time and penalty constraints.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;what-makes-insomnia-special&quot;&gt;What Makes Insomnia Special&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;⏱ &lt;strong&gt;3 Hours of Intense Competitive Coding&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;👥 &lt;strong&gt;Team-based ICPC Format (Up to 3 Members)&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🧠 &lt;strong&gt;Carefully Curated Problem Set&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🏆 &lt;strong&gt;Attractive Cash Prizes &amp;amp; Recognition&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🌐 &lt;strong&gt;Hosted on Codeforces Platform&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🎯 &lt;strong&gt;Open to Students Across the Country&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;🎉 &lt;strong&gt;Part of Avishkar – MNNIT’s Tech Fest&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;how-it-works&quot;&gt;How It Works&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Form a team of up to 3 members&lt;&#x2F;li&gt;
+&lt;li&gt;Register for the contest on Codeforces&lt;&#x2F;li&gt;
+&lt;li&gt;Log in at the contest time and start solving problems&lt;&#x2F;li&gt;
+&lt;li&gt;Submit solutions within the time limit&lt;&#x2F;li&gt;
+&lt;li&gt;Rank higher by solving more problems with fewer penalties&lt;&#x2F;li&gt;
+&lt;li&gt;Top teams win cash prizes and bragging rights 🚀&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;✨ Gear up for a sleepless night of logic, strategy, and code. Gather your team, push your limits, and prove your mettle at &lt;strong&gt;Insomnia&lt;&#x2F;strong&gt; — where only the sharpest minds stay awake till the end. 🌙🔥&lt;&#x2F;p&gt;
 </content>
         
     </entry>

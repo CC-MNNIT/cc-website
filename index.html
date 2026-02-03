@@ -89,7 +89,7 @@
       <meta property="og:url" content="/cc-website/" />
       <meta property="og:type" content="website" />
       
-      <meta property="og:image" content="/cc-website/cc-club-thumbnail.jpg" />
+      <meta property="og:image" content="/cc-website/cc-club-thumbnail.webp" />
       
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -108,7 +108,7 @@
       <meta name="twitter:creator" content="@ccclub_mnnit" />
       
       
-      <meta name="twitter:image" content="/cc-website/cc-club-thumbnail.jpg" />
+      <meta name="twitter:image" content="/cc-website/cc-club-thumbnail.webp" />
       
 
       <!-- Browser address bar color -->
@@ -274,199 +274,248 @@
 
 
 
-    
-    
-    
-    
-    
 
 
 
 
 
 
-    
+
+
+
+
+
+
 
 
 <div class="navbar opacity-95 fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-500/15 backdrop-blur-3xl">
     <!-- Mobile hamburger (and Desktop on Root Page) -->
     <div class="flex-none ">
         <label for="my-drawer-2" class="btn btn-square btn-ghost">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
         </label>
     </div>
     <!-- Desktop sidebar toggle -->
     
     <!-- Logo -->
     <div class="flex-1">
-        <a href="/cc-website" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+        <a href="/cc-website"
+            class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link"
+            style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
-                <img 
-                    src="/cc-website/images/logo/cclogo.png" 
-                    alt="CC Club" 
-                    class="h-18 w-auto"
-                    style="padding: 10px;"
-                />
+            <img src="/cc-website/images/logo/cclogo.webp" alt="CC Club"
+                class="h-18 w-auto" style="padding: 10px;"  />
             
         </a>
     </div>
-<!-- Desktop AND Mobile Menu - Theme toggle always visible -->
-<div class="flex-none flex lg:flex">
-    <ul class="menu menu-horizontal px-1 items-center">
-        <!-- Desktop navigation items (hidden on mobile) -->
-        <div class="hidden lg:flex lg:contents">
-            
-            
-            
+    <!-- Desktop AND Mobile Menu - Theme toggle always visible -->
+    <div class="flex-none flex lg:flex">
+        <ul class="menu menu-horizontal px-1 items-center">
+            <!-- Desktop navigation items (hidden on mobile) -->
+            <div class="hidden lg:flex lg:contents">
                 
+                
+                
+                
+                
+                
+                
+                
+                
+                <li>
                     
-                        
-                        
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="/cc-website/about">
                             
+                            <i class="fa-solid fa-circle-info"></i>
+                            About
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="/cc-website/blog">
+                            
+                            <i class="fa-solid fa-blog"></i>
+                            Blog
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="/cc-website/events">
+                            
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Events
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                    <a class="btn btn-ghost hover:no-underline "
+                        href="https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view" target="_blank" rel="noopener noreferrer">
+                        
+                            <i class="fa-solid fa-calendar-check"></i>
+                            Calendar
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="/cc-website/projects">
+                            
+                            <i class="fa-solid fa-code-branch"></i>
+                            Projects
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="/cc-website/roadmaps">
+                            
+                            <i class="fa-solid fa-route"></i>
+                            Roadmaps
+                        </a>
+                </li>
+                
+                
+                
+                <li class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        <i class="fa-solid fa-users"></i>
+                        Community
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
+                        
                         
                         <li>
-                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/about">
-                                <i class="fa-solid fa-circle-info"></i>
-                                About
-                            </a>
-                        </li>
-                    
-                
-                    
-                        
-                        
                             
-                        
-                        <li>
-                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/blog">
-                                <i class="fa-solid fa-blog"></i>
-                                Blog
-                            </a>
-                        </li>
-                    
-                
-                    
-                        
-                        
-                            
-                        
-                        <li>
-                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/events">
-                                <i class="fa-solid fa-calendar-days"></i>
-                                Events
-                            </a>
-                        </li>
-                    
-                
-                    
-                        
-                        
-                            
-                        
-                        <li>
-                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/projects">
-                                <i class="fa-solid fa-code-branch"></i>
-                                Projects
-                            </a>
-                        </li>
-                    
-                
-                    
-                        
-                        
-                            
-                        
-                        <li>
-                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/roadmaps">
-                                <i class="fa-solid fa-route"></i>
-                                Roadmaps
-                            </a>
-                        </li>
-                    
-                
-                    
-                        <li class="dropdown dropdown-end">
-                            <div tabindex="0" role="button" class="btn btn-ghost">
-                                <i class="fa-solid fa-users"></i>
-                                Community
-                                <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
-                            <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
-                                
+                                <a class="btn btn-ghost hover:no-underline "
+                                    href="/cc-website/team">
                                     
-                                    <li>
-                                        <a class="btn btn-ghost hover:no-underline " href="/cc-website/team">
-                                            <i class="fa-solid fa-user-group"></i>
-                                            Current Team
-                                        </a>
-                                    </li>
-                                
-                            </ul>
+                                    <i class="fa-solid fa-user-group"></i>
+                                    Current Team
+                                </a>
                         </li>
-                    
+                        
+                    </ul>
+                </li>
                 
+                
+                
+                
+                
+                
+                
+                <li>
                     
-                        
-                        
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="/cc-website/contact">
                             
-                        
-                        <li>
-                            <a class="btn btn-ghost hover:no-underline " href="/cc-website/contact">
-                                <i class="fa-solid fa-envelope"></i>
-                                Contact
-                            </a>
-                        </li>
-                    
+                            <i class="fa-solid fa-envelope"></i>
+                            Contact
+                        </a>
+                </li>
                 
-            
+                
+                
+
+                
+            </div>
 
             
-        </div>
-
-        
             
-        
-        
-        <li class="flex items-center">
-            <label class="swap swap-rotate btn btn-ghost btn-circle">
-              <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color"/>
-              <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
-              <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
-            </label>
-        </li>
-        
-    </ul>
-</div>
+            
+            
+            <li class="flex items-center">
+                <label class="swap swap-rotate btn btn-ghost btn-circle">
+                    <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color" />
+                    <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+                    <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                </label>
+            </li>
+            
+        </ul>
+    </div>
 </div>
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const currentPath = window.location.pathname;
-    
-    const navLinks = document.querySelectorAll('.navbar a[href]:not(.logo-link)');
-    
-    navLinks.forEach(link => {
-        const linkPath = new URL(link.href).pathname;
-                if (link.classList.contains('active-nav')) {
-            return;
-        }
-        
-        let isActive = false;
-        
-        if (linkPath === '/') {
-            isActive = (currentPath === '/' || currentPath === '');
-        } else {
-            isActive = currentPath.startsWith(linkPath);
-        }
-        
-        if (isActive) {
-            link.classList.add('active-nav');
-        } else {
-            link.classList.remove('active-nav');
-        }
+    document.addEventListener('DOMContentLoaded', function () {
+        const currentPath = window.location.pathname;
+
+        const navLinks = document.querySelectorAll('.navbar a[href]:not(.logo-link)');
+
+        navLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
+            if (link.classList.contains('active-nav')) {
+                return;
+            }
+
+            let isActive = false;
+
+            if (linkPath === '/') {
+                isActive = (currentPath === '/' || currentPath === '');
+            } else {
+                isActive = currentPath.startsWith(linkPath);
+            }
+
+            if (isActive) {
+                link.classList.add('active-nav');
+            } else {
+                link.classList.remove('active-nav');
+            }
+        });
     });
-});
 </script>
 
 
@@ -480,35 +529,95 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="w-full">
                 <main class="prose w-full mx-auto">
                     
-    
-    
-        <div class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
-            <!-- Subtle Animated Background -->
-            <div class="absolute inset-0">
-                <div class="absolute inset-0 hero-background"></div>
-                <div class="absolute inset-0 opacity-20">
-                    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-gray-500/10 to-slate-500/10 rounded-full filter blur-3xl animate-pulse"></div>
-                    <div class="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-slate-500/10 to-gray-400/10 rounded-full filter blur-3xl animate-pulse delay-2000"></div>
-                </div>
-                
-                <img src="/cc-website/images/hero-background.webp" alt="Hero Background" class="w-full h-full rounded-none object-cover object-center opacity-10">
-                
+
+
+<div class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+    <!-- Subtle Animated Background -->
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 hero-background"></div>
+        <div class="absolute inset-0 opacity-20">
+            <div
+                class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-gray-500/10 to-slate-500/10 rounded-full filter blur-3xl animate-pulse">
             </div>
-            <div class="relative z-10 p-8 max-w-6xl mx-auto">
-                <h1 class="text-6xl md:text-8xl font-black tracking-tight mb-8">
-                    <span class="hero-title">
-                        Computer Coding Club
-                    </span>
-                </h1>
-                <p class="max-w-3xl mx-auto text-xl md:text-2xl hero-description mb-12 leading-relaxed font-light">
-                    🚀 Devoted to Programming, Innovation, and Computer Science
-                </p>
-                
+            <div
+                class="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-slate-500/10 to-gray-400/10 rounded-full filter blur-3xl animate-pulse delay-2000">
             </div>
         </div>
-    
+        
+        <img src="/cc-website/images/hero-background.webp"
+            alt="Hero Background" class="w-full h-full rounded-none object-cover object-center opacity-10">
+        
+    </div>
+    <div class="relative z-10 p-8 max-w-6xl mx-auto">
+        <h1 class="text-6xl md:text-8xl font-black tracking-tight mb-8">
+            <span class="hero-title">
+                Computer Coding Club
+            </span>
+        </h1>
+        <div class="max-w-3xl mx-auto mb-12"
+            style="min-height:2.5em;display:flex;justify-content:center;align-items:center;">
+            <p class="text-xl md:text-2xl hero-description leading-relaxed font-light" style="text-align:center;">
+                <span>Devoted to </span><span id="typed-text"
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-[#FFC758] to-[#DA7138] font-medium"></span><span
+                    id="cursor"
+                    style="display:inline-block;width:3px;height:1.2em;background:linear-gradient(180deg,#FFC758,#DA7138);margin-left:2px;vertical-align:text-bottom;animation:blink 0.8s ease-in-out infinite;box-shadow:0 0 8px rgba(255,199,88,0.6);border-radius:1px;"></span>
+            </p>
+        </div>
+        <style>
+            @keyframes blink {
 
-    
+                0%,
+                100% {
+                    opacity: 1
+                }
+
+                50% {
+                    opacity: 0
+                }
+            }
+        </style>
+        <script>
+            (function () {
+                const textElement = document.getElementById("typed-text");
+                const words = ["Programming", "Innovation", "Computer Science"];
+                let wordIndex = 0;
+                let charIndex = 0;
+                let isDeleting = false;
+
+                function type() {
+                    const currentWord = words[wordIndex];
+                    let typeSpeed = 50;
+
+                    if (isDeleting) {
+                        textElement.textContent = currentWord.substring(0, charIndex - 1);
+                        charIndex--;
+                        typeSpeed = 25; // Faster deleting
+                    } else {
+                        textElement.textContent = currentWord.substring(0, charIndex + 1);
+                        charIndex++;
+                    }
+
+                    if (!isDeleting && charIndex === currentWord.length) {
+                        typeSpeed = 1000; // Pause at end of word
+                        isDeleting = true;
+                    } else if (isDeleting && charIndex === 0) {
+                        isDeleting = false;
+                        wordIndex = (wordIndex + 1) % words.length;
+                        typeSpeed = 200; // Pause before next word
+                    }
+
+                    setTimeout(type, typeSpeed);
+                }
+
+                setTimeout(type, 1000);
+            })();
+        </script>
+        
+    </div>
+</div>
+
+
+
 
 <div class="events-carousel-section">
     
@@ -543,7 +652,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="events-controls">
                 <button id="eventPrevBtn" aria-label="Previous event" class="events-btn">
                     <svg class="arrow-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                     </svg>
                     <span>Previous</span>
                 </button>
@@ -553,7 +662,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button id="eventNextBtn" aria-label="Next event" class="events-btn">
                     <span>Next</span>
                     <svg class="arrow-right" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                 </button>
             </div>
@@ -563,75 +672,75 @@ document.addEventListener('DOMContentLoaded', function() {
     <script>
         window.eventsCarouselData = [
             
-            {
-                name: "Hack36",
+        {
+            name: "Hack36",
                 type: "Annual Hackathon | 36-Hour Sprint",
-                description: "The flagship annual hackathon of MNNIT. Bring your ideas to life, compete with the best minds, and win amazing prizes in this high-energy coding marathon.",
-                image: "/cc-website/images/landing/events/hack36.webp"
-            },
-            
-            {
-                name: "Contrihub",
+                    description: "The flagship annual hackathon of MNNIT. Bring your ideas to life, compete with the best minds, and win amazing prizes in this high-energy coding marathon.",
+                        image: "/cc-website/images/landing/events/hack36.webp"
+        } , 
+        
+        {
+            name: "Contrihub",
                 type: "Open Source | Month Long Program",
-                description: "A month-long celebration of open source. Learn the ropes of Git, GitHub, and remote collaboration while contributing to real-world projects under expert mentorship.",
-                image: "/cc-website/images/landing/events/contrihub.webp"
-            },
-            
-            {
-                name: "Codesangam",
+                    description: "A month-long celebration of open source. Learn the ropes of Git, GitHub, and remote collaboration while contributing to real-world projects under expert mentorship.",
+                        image: "/cc-website/images/landing/events/contrihub.webp"
+        } , 
+        
+        {
+            name: "Codesangam",
                 type: "Development Challenge | 2-Week Event",
-                description: "A massive 2 week development challenge encompassing all tech stacks. Whether it is Web, App, or Systems, build robust solutions and showcase your engineering skills.",
-                image: "/cc-website/images/landing/events/webster.webp"
-            },
-            
-            {
-                name: "OPC (Open Programming Contest)",
+                    description: "A massive 2 week development challenge encompassing all tech stacks. Whether it is Web, App, or Systems, build robust solutions and showcase your engineering skills.",
+                        image: "/cc-website/images/landing/events/webster.webp"
+        } , 
+        
+        {
+            name: "OPC (Open Programming Contest)",
                 type: "Competitive Programming | Regular",
-                description: "Sharpen your algorithmic skills with our regular competitive programming challenges. Solve complex problems under time pressure and climb the leaderboard.",
-                image: "/cc-website/images/landing/events/opc.webp"
-            },
-            
-            {
-                name: "Turings Playground",
+                    description: "Sharpen your algorithmic skills with our regular competitive programming challenges. Solve complex problems under time pressure and climb the leaderboard.",
+                        image: "/cc-website/images/landing/events/opc.webp"
+        } , 
+        
+        {
+            name: "Turings Playground",
                 type: "AI and ML | Development Challenge",
-                description: "An AI-specific development and model training challenge. Apply machine learning algorithms to solve real-world data problems and build intelligent systems.",
-                image: "/cc-website/images/landing/events/turings-playground.webp"
-            },
-            
-            {
-                name: "Weekend of Code",
+                    description: "An AI-specific development and model training challenge. Apply machine learning algorithms to solve real-world data problems and build intelligent systems.",
+                        image: "/cc-website/images/landing/events/turings-playground.webp"
+        } , 
+        
+        {
+            name: "Weekend of Code",
                 type: "First-Year Specific | Coding and Dev",
-                description: "Designed exclusively for freshmen! Kickstart your tech journey with guided coding and development challenges tailored for those new to the world of programming.",
-                image: "/cc-website/images/landing/events/droidrush.webp"
-            },
-            
-            {
-                name: "Insomnia",
+                    description: "Designed exclusively for freshmen! Kickstart your tech journey with guided coding and development challenges tailored for those new to the world of programming.",
+                        image: "/cc-website/images/landing/events/droidrush.webp"
+        } , 
+        
+        {
+            name: "Insomnia",
                 type: "CP Marathon | Late Night",
-                description: "The ultimate test of endurance. A late-night competitive coding marathon that pushes your logic and problem-solving limits into the early hours of the morning.",
-                image: "/cc-website/images/landing/events/Insomnia.webp"
-            },
-            
-            {
-                name: "CC Classes",
+                    description: "The ultimate test of endurance. A late-night competitive coding marathon that pushes your logic and problem-solving limits into the early hours of the morning.",
+                        image: "/cc-website/images/landing/events/Insomnia.webp"
+        } , 
+        
+        {
+            name: "CC Classes",
                 type: "Learning | Regular Sessions",
-                description: "Regular peer-to-peer learning sessions covering everything from basic data structures to advanced development frameworks and industry best practices.",
-                image: "/cc-website/images/landing/events/classes.webp"
-            },
-            
-            {
-                name: "Alumni Connects",
+                    description: "Regular peer-to-peer learning sessions covering everything from basic data structures to advanced development frameworks and industry best practices.",
+                        image: "/cc-website/images/landing/events/classes.webp"
+        } , 
+        
+        {
+            name: "Alumni Connects",
                 type: "Networking | Interactive Sessions",
-                description: "Bridging the gap between campus and industry. Connect with our distinguished alumni working at top tech giants to gain career insights and mentorship.",
-                image: "/cc-website/images/landing/events/alumni-connects.webp"
-            }
-            
+                    description: "Bridging the gap between campus and industry. Connect with our distinguished alumni working at top tech giants to gain career insights and mentorship.",
+                        image: "/cc-website/images/landing/events/alumni-connects.webp"
+        } 
+        
         ];
     </script>
 </div>
 
 
-   
+
 
 
 <div class="lp-roadmaps-scroll-wrapper">
@@ -646,7 +755,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 
                 <div class="lp-roadmap-card">
-                    <img src="/cc-website/images/roadmaps/web-development.webp" alt="Web Development">
+                    <img src="/cc-website/images/roadmaps/web-development-cyber.webp"
+                        alt="Web Development">
                     <div class="lp-roadmap-card-content">
                         <div class="lp-roadmap-text-wrapper">
                             <h3>Web Development</h3>
@@ -659,7 +769,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 
                 <div class="lp-roadmap-card">
-                    <img src="/cc-website/images/roadmaps/dsa-fundamentals.webp" alt="DSA Fundamentals">
+                    <img src="/cc-website/images/roadmaps/dsa-cyber.webp"
+                        alt="DSA Fundamentals">
                     <div class="lp-roadmap-card-content">
                         <div class="lp-roadmap-text-wrapper">
                             <h3>DSA Fundamentals</h3>
@@ -672,7 +783,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 
                 <div class="lp-roadmap-card">
-                    <img src="/cc-website/images/roadmaps/machine-learning.webp" alt="Machine Learning">
+                    <img src="/cc-website/images/roadmaps/machine-learning-cyber.webp"
+                        alt="Machine Learning">
                     <div class="lp-roadmap-card-content">
                         <div class="lp-roadmap-text-wrapper">
                             <h3>Machine Learning</h3>
@@ -685,7 +797,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 
                 <div class="lp-roadmap-card">
-                    <img src="/cc-website/images/roadmaps/open-source.webp" alt="Open Source">
+                    <img src="/cc-website/images/roadmaps/open-source-cyber.webp"
+                        alt="Open Source">
                     <div class="lp-roadmap-card-content">
                         <div class="lp-roadmap-text-wrapper">
                             <h3>Open Source</h3>
@@ -698,7 +811,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 
                 <div class="lp-roadmap-card">
-                    <img src="/cc-website/images/roadmaps/interview-prep.webp" alt="Interview Prep">
+                    <img src="/cc-website/images/roadmaps/interview-prep-cyber.webp"
+                        alt="Interview Prep">
                     <div class="lp-roadmap-card-content">
                         <div class="lp-roadmap-text-wrapper">
                             <h3>Interview Prep</h3>
@@ -711,7 +825,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 
                 <div class="lp-roadmap-card">
-                    <img src="/cc-website/images/roadmaps/mobile-development.webp" alt="Mobile Development">
+                    <img src="/cc-website/images/roadmaps/mobile-development-cyber.webp"
+                        alt="Mobile Development">
                     <div class="lp-roadmap-card-content">
                         <div class="lp-roadmap-text-wrapper">
                             <h3>Mobile Development</h3>
@@ -724,11 +839,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 
                 <div class="lp-roadmap-card">
-                    <img src="/cc-website/images/roadmaps/devops.webp" alt="DevOps &amp; Cloud">
+                    <img src="/cc-website/images/roadmaps/devops-cyber.webp"
+                        alt="DevOps">
                     <div class="lp-roadmap-card-content">
                         <div class="lp-roadmap-text-wrapper">
-                            <h3>DevOps &amp; Cloud</h3>
-                            <p>Learn DevOps practices, cloud platforms (AWS, Azure, GCP), Docker, Kubernetes, CI&#x2F;CD pipelines, and infrastructure as code.</p>
+                            <h3>DevOps</h3>
+                            <p>Master DevOps practices, CI&#x2F;CD, and cloud infrastructure</p>
                         </div>
                         <a href="/cc-website/roadmaps/devops/" class="lp-roadmap-btn-action">Start Learning</a>
                     </div>
@@ -741,7 +857,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
-    <!-- 
+<!-- 
     
     
     
@@ -914,7 +1030,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     
                                         
                                         <div class="flex justify-center">
-                                            <img src="/cc-website/images/showcase/community.jpg" 
+                                            <img src="/cc-website/images/showcase/community.webp" 
                                                  alt="Vibrant Tech Community" 
                                                  class="rounded-xl shadow-2xl w-[1024px] h-auto object-cover border border-slate-600/30" />
                                         </div>
@@ -930,7 +1046,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     
                                         
                                         <div class="flex justify-center">
-                                            <img src="/cc-website/images/showcase/events.jpg" 
+                                            <img src="/cc-website/images/showcase/events.webp" 
                                                  alt="Exciting Events Year-Round" 
                                                  class="rounded-xl shadow-2xl w-[1024px] h-auto object-cover border border-slate-600/30" />
                                         </div>
@@ -946,7 +1062,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     
                                         
                                         <div class="flex justify-center">
-                                            <img src="/cc-website/images/showcase/contrihub.jpg" 
+                                            <img src="/cc-website/images/showcase/contrihub.webp" 
                                                  alt="ContriHub - Open Source Celebration" 
                                                  class="rounded-xl shadow-2xl w-[1024px] h-auto object-cover border border-slate-600/30" />
                                         </div>
@@ -962,7 +1078,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     
                                         
                                         <div class="flex justify-center">
-                                            <img src="/cc-website/images/showcase/learning.jpg" 
+                                            <img src="/cc-website/images/showcase/learning.webp" 
                                                  alt="Structured Learning Paths" 
                                                  class="rounded-xl shadow-2xl w-[1024px] h-auto object-cover border border-slate-600/30" />
                                         </div>
@@ -1023,7 +1139,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     
                                         <div class="mr-4">
                                             <div class="w-14 h-14 rounded-full testimonial-avatar-border p-0.5">
-                                                <img src="/cc-website/images/testimonials/priya.jpg" class="w-full h-full rounded-full object-cover" />
+                                                <img src="/cc-website/images/testimonials/priya.webp" class="w-full h-full rounded-full object-cover" />
                                             </div>
                                         </div>
                                     
@@ -1068,7 +1184,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     
                                         <div class="mr-4">
                                             <div class="w-14 h-14 rounded-full testimonial-avatar-border p-0.5">
-                                                <img src="/cc-website/images/testimonials/rahul.jpg" class="w-full h-full rounded-full object-cover" />
+                                                <img src="/cc-website/images/testimonials/rahul.webp" class="w-full h-full rounded-full object-cover" />
                                             </div>
                                         </div>
                                     
@@ -1113,7 +1229,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     
                                         <div class="mr-4">
                                             <div class="w-14 h-14 rounded-full testimonial-avatar-border p-0.5">
-                                                <img src="/cc-website/images/testimonials/ananya.jpg" class="w-full h-full rounded-full object-cover" />
+                                                <img src="/cc-website/images/testimonials/ananya.webp" class="w-full h-full rounded-full object-cover" />
                                             </div>
                                         </div>
                                     
@@ -1150,8 +1266,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 </p>
                 
                     <div class="mb-12">
-                        <img src="cta-background.jpg" alt="CTA Image"
+                        
+                        <img src="/cc-website/images/cta-background.webp" alt="CTA Image"
                              class="mx-auto max-w-4xl rounded-xl shadow-2xl" />
+                        
                     </div>
                 
                 
@@ -1258,7 +1376,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="footer-col space-y-4">
                     <div class="footer-logo-container">
                         
-                        <img src="/cc-website/images/logo/cclogo.png" alt="Logo" class="footer-logo">
+                        <img src="/cc-website/images/logo/cclogo.webp" alt="Logo" class="footer-logo">
                         
                         <h3>
                             CC Club MNNIT
@@ -1441,6 +1559,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                 
                     
+                        <li><a href="/cc-website/https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view" class="text-sm">
+                            <i class="fa-solid fa-calendar-check mr-2"></i>
+                            Calendar
+                        </a></li>
+                    
+                
+                    
                         <li><a href="/cc-website/projects" class="text-sm">
                             <i class="fa-solid fa-code-branch mr-2"></i>
                             Projects
@@ -1503,6 +1628,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
             <li>
+                <a  href="/cc-website/team">Our Team</a>
+            </li>
+        
+            
+            
+            
+            
+            <li>
                 
                     <details open>
                         <summary ><a class="hover:no-underline" href="/cc-website/blog">Blog</a></summary>
@@ -1558,15 +1691,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
             <li>
-                <a  href="/cc-website/team">Our Team</a>
-            </li>
-        
-            
-            
-            
-            
-            <li>
-                <a  href="/cc-website/about">About Computer Coding Club</a>
+                <a  href="/cc-website/about">About Us</a>
             </li>
         
             
@@ -1592,9 +1717,30 @@ document.addEventListener('DOMContentLoaded', function() {
                                             <ul>
                                                 
                                                 
-                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2026/codesangam">Codesangam</a></li>
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2026/insomnia">Insomnia 2026</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2026/docker-kubernetes-workshop">Docker &amp; Kubernetes Fundamentals Workshop</a></li>
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2026/weekend-of-code">Weekend of Code 2026</a></li>
+                                                
+                                                
+                                            </ul>
+                                        </details>
+                                    
+                                </li>
+                            
+                                
+                                
+                                
+                                
+                                <li>
+                                    
+                                        <details open>
+                                            <summary ><a class="hover:no-underline" href="/cc-website/events/programs">Programs</a></summary>
+                                            <ul>
+                                                
+                                                
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/programs/cc-classes">CC Classes</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/programs/alumni-connect">Alumni Industry Connect</a></li>
                                                 
                                                 
                                             </ul>
@@ -1613,7 +1759,19 @@ document.addEventListener('DOMContentLoaded', function() {
                                             <ul>
                                                 
                                                 
-                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2025/hack36">Hack36</a></li>
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2025/opc">OPC</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2025/code-of-the-day">Code Of The Day</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2025/hack36">Hack36 9.0</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2025/codesangam">CodeSangam</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2025/contrihub">Contrihub</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2025/weekend-of-code">Weekend of Code</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="/cc-website/events/2025/insomnia">Insomnia</a></li>
                                                 
                                                 
                                             </ul>
@@ -1649,7 +1807,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                                 <li ><a class="hover:no-underline" href="/cc-website/roadmaps/mobile-development">Mobile App Development Roadmap</a></li>
                             
-                                <li ><a class="hover:no-underline" href="/cc-website/roadmaps/devops">DevOps &amp; Cloud Engineering Roadmap</a></li>
+                                <li ><a class="hover:no-underline" href="/cc-website/roadmaps/devops">DevOps Roadmap</a></li>
                             
                             
                         </ul>
@@ -1742,7 +1900,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
     
-    
+
         <script type="text/javascript" src="/cc-website/goyo.js"></script>
         
         <!-- Lazy load search functionality -->
@@ -1849,10 +2007,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         </script>
     
-    <!-- Events Carousel JavaScript -->
-    <script src="/cc-website/js/events-carousel.js"></script>
-    <!-- Roadmaps Scroll JavaScript -->
-    <script src="/cc-website/js/roadmaps-scroll.js"></script>
+<!-- Events Carousel JavaScript -->
+<script src="/cc-website/js/events-carousel.js"></script>
+<!-- Roadmaps Scroll JavaScript -->
+<script src="/cc-website/js/roadmaps-scroll.js"></script>
 
 </body>
 </html>
