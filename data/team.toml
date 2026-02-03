@@ -2,11 +2,11 @@
 
 # Group 1: Faculty (Single Entry)
 [faculty]
-name = "Dr. DKE"
+name = "Dr. Vibhav Prakash Singh"
 title = "Faculty In-Charge"
 image = "teams/dke.webp"
-email = "dke@mnnit.ac.in"
-profile_url = "https://mnnit.ac.in/prof_detail?id=123"
+email = "vibhav@mnnit.ac.in"
+profile_url = "https://www.mnnit.ac.in/profile/previewr.php?id=1785"
 
 # Group 2: CCRs (Computer Coding Club Representatives)
 [[ccrs]]
@@ -107,6 +107,30 @@ linkedin = "https://www.linkedin.com/in/uday-nauhbar-0b2b7124b/"
 github = "https://github.com/Uday061"
 instagram = "https://www.instagram.com/uday.661/"
 
+[[ccrs]]
+name = "Lokesh Wagh"
+role = "CCR"
+image = "teams/lokesh_wagh.webp"
+linkedin = "https://www.linkedin.com/in/lokesh-wagh12"
+github = "https://github.com/lokesh-wagh"
+instagram = "https://www.instagram.com/_lokesh_wagh"
+
+[[ccrs]]
+name = "Shubham Garg"
+role = "CCR"
+image = "teams/shubham_garg.webp"
+linkedin = "https://www.linkedin.com/in/shubham-garg-167983260/"
+github = "https://github.com/Shubham-garg1234"
+instagram = "https://www.instagram.com/real__shubh/"
+
+[[ccrs]]
+name = "Tanishka Thakur"
+role = "CCR"
+image = "teams/tanishka_thakur.webp"
+linkedin = "https://www.linkedin.com/in/tanishka-thakur-915893250"
+github = "https://www.github.com/tan-inv"
+instagram = "https://www.instagram.com/tanishka_0304"
+
 # Group 3: Design Team (3 Leads)
 [[design]]
 name = "Shikhar Gupta"
@@ -124,4 +148,39 @@ image = "teams/sarthak_porwal.webp"
 linkedin = "https://www.linkedin.com/in/sarthak-porwal-8a9b40256/"
 github = "https://github.com/sarthakporwal"
 instagram = "https://www.instagram.com/sarthak.porwal/"
+
+[[marketing]]
+name = "Siddharth Chaubal"
+role = "Marketing Team"
+image = "teams/siddharth_chaubal.webp"
+linkedin = "https://www.linkedin.com/in/siddharth-chaubal-473aaa257"
+github = "https://github.com/sidtriedcoding"
+instagram = "https://www.instagram.com/sidu_2401"
+
+[[marketing]]
+name = "Divyanshu Yadav"
+role = "Marketing Team"
+image = "teams/divyanshu_yadav.webp"
+linkedin = "https://www.linkedin.com/in/divyanshu-yadav-506506274"
+instagram = "https://www.instagram.com/divyanshuyadav000"
+
+[[marketing]]
+name = "Ritik Chaudhry"
+role = "Marketing Team"
+image = "teams/ritik_chaudhry.webp"
+linkedin = "https://www.linkedin.com/in/ritik-chaudhry"
+instagram = "https://www.instagram.com/ritik._.chaudhry"
+
+[[design]]
+name = "Prakhar"
+role = "Design Team"
+image = "teams/prakhar.webp"
+
+[[design]]
+name = "Vaishnavi Tiwari"
+role = "Design Team"
+image = "teams/vaishnavi_tiwari.webp"
+linkedin = "https://www.linkedin.com/in/vaishnavi704"
+instagram = "https://www.instagram.com/vaishnavitiwari_104"
+
 

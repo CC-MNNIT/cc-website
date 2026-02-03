@@ -8,9 +8,9 @@ template = "events/single.html"
 event_type = "buildfest"
 status = "ongoing"
 badge = "LIVE"
-external_link = "#"
+external_link = "https://weekendofcode2k26.devfolio.co/overview"
 location = "MNNIT Allahabad"
-participants = "500+"
+participants = "500"
 banner_image = "events/2026/weekend-of-code/banner.webp"
 show_banner = true
 

@@ -285,8 +285,8 @@
 
 /* Image - Rounded with gold glow */
 .card-image-wrapper {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 1.5rem;
     position: relative;
     /* Rounded/circular shape for image */
@@ -527,7 +527,7 @@
     }
 
     .card-image-wrapper {
-        width: 140px;
-        height: 140px;
+        width: 170px;
+        height: 170px;
     }
 }

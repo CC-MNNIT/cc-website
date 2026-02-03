@@ -261,7 +261,7 @@
 }
 
 .project-card:hover::before {
-    opacity: 1;
+    opacity: 0.5;
 }
 
 /* Shrink inner to reveal border */
@@ -291,8 +291,7 @@
 }
 
 .project-card:hover::after {
-    opacity: 0.4;
-    animation: cornerGlow 1.5s ease-in-out infinite;
+    opacity: 0.25;
 }
 
 /* Tech scan line effect on hover */
@@ -315,7 +314,7 @@
 }
 
 .project-card:hover .project-card-inner::before {
-    opacity: 0.6;
+    opacity: 0.3;
     animation: scanLine 2s linear infinite;
 }
 

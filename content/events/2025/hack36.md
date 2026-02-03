@@ -86,7 +86,7 @@ award = "3rd Place"
 
 [[extra.projects]]
 name = "MarlOS"
-team = "Tech Titans"
+team = "Async Await"
 description = "A decentralized multi-agent reinforcement learning operating system built at Hack36 that enables distributed computing without a central orchestrator like Kubernetes. It uses a P2P ZeroMQ network with Ed25519-secured messaging, and an economic fairness layer (MarlCredits) to prevent resource monopolies. With RL-based cooperative bidding and self-healing job migration, MarlOS creates a self-regulating compute swarm that is secure, fair, and autonomous."
 
 tech = ["ZeroMQ", "PyTorch + Stable-Baselines3", "Ed25519 Cryptography", "Docker"]

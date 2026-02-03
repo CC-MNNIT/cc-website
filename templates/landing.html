@@ -58,24 +58,24 @@
 
                 function type() {
                     const currentWord = words[wordIndex];
-                    let typeSpeed = 100;
+                    let typeSpeed = 50;
 
                     if (isDeleting) {
                         textElement.textContent = currentWord.substring(0, charIndex - 1);
                         charIndex--;
-                        typeSpeed = 50; // Faster deleting
+                        typeSpeed = 25; // Faster deleting
                     } else {
                         textElement.textContent = currentWord.substring(0, charIndex + 1);
                         charIndex++;
                     }
 
                     if (!isDeleting && charIndex === currentWord.length) {
-                        typeSpeed = 2000; // Pause at end of word
+                        typeSpeed = 1000; // Pause at end of word
                         isDeleting = true;
                     } else if (isDeleting && charIndex === 0) {
                         isDeleting = false;
                         wordIndex = (wordIndex + 1) % words.length;
-                        typeSpeed = 500; // Pause before next word
+                        typeSpeed = 200; // Pause before next word
                     }
 
                     setTimeout(type, typeSpeed);

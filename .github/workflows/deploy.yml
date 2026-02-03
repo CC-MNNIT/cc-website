@@ -19,7 +19,7 @@ jobs:
   # Deploy to production (root of gh-pages)
   deploy_production:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, '[skip ci]')
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -62,7 +62,7 @@ jobs:
   # Deploy to preview (preview subfolder of gh-pages)
   deploy_preview:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/preview'
+    if: github.ref == 'refs/heads/preview' && !contains(github.event.head_commit.message, '[skip ci]')
     steps:
       - name: Checkout
         uses: actions/checkout@v4

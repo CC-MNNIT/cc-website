@@ -14,37 +14,27 @@ We'd love to hear from you! Whether you have a question about our events, want t
 ## Contact Information
 
 ### General Inquiries
-**Email**: info@ccclub.edu  
-**Phone**: +91-XXXX-XXXXXX
+**Email**: [computer.club@mnnit.ac.in](mailto:computer.club@mnnit.ac.in)
 
-### Event Partnerships
-**Email**: events@ccclub.edu
-
-### Technical Support
-**Email**: tech@ccclub.edu
+### Visit Us
+**Department**: Computer Science & Engineering Department  
+**Address**: Barrister Mullah Colony, MNNIT Allahabad Campus, Teliarganj, Prayagraj, Uttar Pradesh 211004  
 
 ---
 
 ## Connect Online
 
-### Discord
-[Join our server](https://discord.gg/ccclub) - This is where our community lives!
+Stay updated with our latest events and announcements:
 
-### Social Media
-- **Instagram**: [@ccclub_official](https://instagram.com/ccclub_official)
-- **LinkedIn**: [Computer Coding Club](https://linkedin.com/company/ccclub)
-- **Twitter**: [@ccclub_official](https://twitter.com/ccclub_official)
-- **GitHub**: [@ccclub-org](https://github.com/ccclub-org)
-- **YouTube**: [CC Club Channel](https://youtube.com/@ccclub)
+- **LinkedIn**: [Computer Coding Club](https://www.linkedin.com/company/computer-coding-club-mnnit/)
+- **Instagram**: [@cc.club.mnnit](https://www.instagram.com/cc.club.mnnit/)
+- **GitHub**: [CC-MNNIT](https://github.com/CC-MNNIT)
+- **Discord**: [Join our Community](https://discord.gg/EDv6fM5yUm)
 
 ---
 
-## Visit Us
+## Find Us
 
-**Office**: Room 203, Computer Science Department  
-**Meeting Times**: Every Saturday, 4:00 PM - 6:00 PM  
-**Campus**: [Your College Name], [City]
-
-<div class="map-container" style="margin-top: 2rem; border-radius: 0.5rem; overflow: hidden;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.066632023506!2d77.22732101508245!3d28.62779318241964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1623456789012!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<div class="map-container" style="margin-top: 2rem; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.35707607037!2d81.8593253!3d25.493135199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399aca7bb9319a3d%3A0x3475d6436c2d6f7f!2sBarrister%20Mullah%20Colony%2C%20Teliarganj%2C%20Prayagraj%2C%20Uttar%20Pradesh%20211004!5e0!3m2!1sen!2sin!4v1770045058922!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
