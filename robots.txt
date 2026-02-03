@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: /cc-website/sitemap.xml
+Sitemap: https://cc-club.in/sitemap.xml
