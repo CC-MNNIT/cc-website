@@ -7,9 +7,6 @@
         <loc>https://cc-club.in/preview/about/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/alumni/</loc>
-    </url>
-    <url>
         <loc>https://cc-club.in/preview/blog/</loc>
     </url>
     <url>
@@ -178,55 +175,10 @@
         <loc>https://cc-club.in/preview/projects/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/resources/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/cloud-devops/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/competitive-programming/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/cs-fundamentals/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/cybersecurity/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/design-resources/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/development-tools/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/interview-preparation/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/learning-platforms/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/machine-learning-ai/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/miscellaneous/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/mobile-development/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/open-source/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/practice-projects/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/technical-reading/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/resources/web-development/</loc>
-    </url>
-    <url>
         <loc>https://cc-club.in/preview/roadmaps/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/preview/roadmaps/cp/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/preview/roadmaps/devops/</loc>
