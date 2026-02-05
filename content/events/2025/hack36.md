@@ -28,7 +28,8 @@ images = [
     "events/2025/hack36/8.webp",
     "events/2025/hack36/9.webp",
     "events/2025/hack36/10.webp",
-    "events/2025/hack36/11.webp"
+    "events/2025/hack36/11.webp",
+    "events/2025/hack36/12.webp"
 ]
 
 # --- Winners (The Podium) ---

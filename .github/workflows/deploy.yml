@@ -26,13 +26,21 @@ jobs:
         with:
           submodules: recursive  # Fetches the 'goyo' theme
 
+      - name: Determine Base URL
+        id: check_cname
+        run: |
+          if [ -f CNAME ]; then
+            echo "BASE_URL=https://$(head -n 1 CNAME)/" >> $GITHUB_OUTPUT
+          else
+            echo "BASE_URL=/${{ github.event.repository.name }}/" >> $GITHUB_OUTPUT
+          fi
+
       - name: Build production
         uses: shalzz/zola-deploy-action@v0.21.0
         env:
           PAGES_BRANCH: gh-pages
           BUILD_ONLY: true
-          # Dynamically set base URL to /repo-name/
-          BUILD_FLAGS: --base-url /${{ github.event.repository.name }}/
+          BUILD_FLAGS: --base-url ${{ steps.check_cname.outputs.BASE_URL }}
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v4
@@ -69,13 +77,21 @@ jobs:
         with:
           submodules: recursive  # Fetches the 'goyo' theme
 
+      - name: Determine Preview Base URL
+        id: check_cname_preview
+        run: |
+          if [ -f CNAME ]; then
+            echo "BASE_URL=https://$(head -n 1 CNAME)/preview/" >> $GITHUB_OUTPUT
+          else
+            echo "BASE_URL=/${{ github.event.repository.name }}/preview/" >> $GITHUB_OUTPUT
+          fi
+
       - name: Build preview
         uses: shalzz/zola-deploy-action@v0.21.0
         env:
           PAGES_BRANCH: gh-pages
           BUILD_ONLY: true
-          # Dynamically set base URL to /repo-name/preview/
-          BUILD_FLAGS: --base-url /${{ github.event.repository.name }}/preview/
+          BUILD_FLAGS: --base-url ${{ steps.check_cname_preview.outputs.BASE_URL }}
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v4

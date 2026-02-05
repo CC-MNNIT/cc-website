@@ -1,0 +1,49 @@
+name: Optimize Assets & Fix References
+
+on:
+  push:
+    branches:
+      - main
+      - preview
+    paths:
+      - 'static/images/**'
+      - '!static/images/teams/**' # Exclude teams (handled by separate bot)
+
+# 1. Concurrency: Prevent race conditions if multiple pushes happen
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  optimize-assets:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to push changes
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0 # Full history for reliable git operations
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          pip install Pillow
+
+      - name: Run Optimization Script
+        run: |
+          python .github/scripts/optimize-assets.py
+
+      - name: Commit & Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-optimize assets and update refs [skip ci]"
+          file_pattern: 'static/images/** content/** data/** config.toml'
+          branch: ${{ github.ref }}
+          # 2. Safety: Auto-commit action handles rebase/pull automatically if remote changed

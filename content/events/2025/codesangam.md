@@ -20,7 +20,15 @@ show_banner = true
 images = [
     "events/2025/codesangam/1.webp",
     "events/2025/codesangam/2.webp",
-    "events/2025/codesangam/3.webp"
+    "events/2025/codesangam/3.webp",
+    "events/2025/codesangam/4.webp",
+    "events/2025/codesangam/5.webp",
+    "events/2025/codesangam/6.webp",
+    "events/2025/codesangam/7.webp",
+    "events/2025/codesangam/8.webp",
+    "events/2025/codesangam/9.webp",
+    "events/2025/codesangam/10.webp",
+    "events/2025/codesangam/11.webp"
 ]
 
 # --- Winners 

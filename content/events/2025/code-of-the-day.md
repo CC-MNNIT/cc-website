@@ -18,7 +18,13 @@ images = [
     "events/2025/code-of-the-day/1.webp",
     "events/2025/code-of-the-day/2.webp",
     "events/2025/code-of-the-day/3.webp",
-    "events/2025/code-of-the-day/4.webp"
+    "events/2025/code-of-the-day/4.webp",
+    "events/2025/code-of-the-day/5.webp",
+    "events/2025/code-of-the-day/6.webp",
+    "events/2025/code-of-the-day/7.webp",
+    "events/2025/code-of-the-day/8.webp",
+    "events/2025/code-of-the-day/9.webp",
+    "events/2025/code-of-the-day/10.webp"
 ]
 
 # --- Winners (The Podium) ---

@@ -26,12 +26,20 @@ github = "https://github.com/aviral-mishra-1008"
 instagram = "https://instagram.com/avi.m_pyg"
 
 [[ccrs]]
-name = "Utsav Kasvala"
+name = "Uday Nauhbar"
 role = "CCR"
-image = "teams/utsav_kasvala.webp"
-linkedin = "https://www.linkedin.com/in/utsav-kasvala-239786280"
-github = "https://github.com/utsav-kasvala"
-instagram = "https://www.instagram.com/utsav___kasvala"
+image = "teams/uday_nauhbar.webp"
+linkedin = "https://www.linkedin.com/in/uday-nauhbar-0b2b7124b/"
+github = "https://github.com/Uday061"
+instagram = "https://www.instagram.com/uday.661/"
+
+[[ccrs]]
+name = "Aryan Mishra"
+role = "CCR"
+image = "teams/aryan_mishra.webp"
+linkedin = "https://www.linkedin.com/in/aryan-lem"
+github = "https://github.com/aryan-lem"
+instagram = "https://www.instagram.com/lemnis_kate1.23"
 
 [[ccrs]]
 name = "Sumit Verma"
@@ -40,6 +48,14 @@ image = "teams/sumit_verma.webp"
 linkedin = "https://www.linkedin.com/in/sumit-verma-smt"
 github = "https://github.com/smt96700"
 instagram = "https://www.instagram.com/sumit96_verma"
+
+[[ccrs]]
+name = "Nihal Yadav"
+role = "CCR"
+image = "teams/nihal_yadav.webp"
+linkedin = "https://www.linkedin.com/in/nihal2908"
+github = "https://github.com/nihal2908"
+instagram = "https://www.instagram.com/nihal.yadav.000"
 
 [[ccrs]]
 name = "Sushmit Patel"
@@ -58,10 +74,20 @@ github = "https://github.com/adityatny"
 instagram = "https://instagram.com/adityaraj.0177"
 
 [[ccrs]]
-name = "Gantavya Rohatgi"
+name = "Lokesh Wagh"
 role = "CCR"
-image = "teams/gantavya_rohatgi.webp"
-linkedin = "https://www.linkedin.com/in/gantavyarohatgi"
+image = "teams/lokesh_wagh.webp"
+linkedin = "https://www.linkedin.com/in/lokesh-wagh12"
+github = "https://github.com/lokesh-wagh"
+instagram = "https://www.instagram.com/_lokesh_wagh"
+
+[[ccrs]]
+name = "Mrinal Varshney"
+role = "CCR"
+image = "teams/mrinal.webp"
+linkedin = "https://www.linkedin.com/in/mrinal-varshney-971a27250/"
+github = "https://github.com/MrinalVarshney"
+instagram = "https://instagram.com/mrinal_varshney"
 
 [[ccrs]]
 name = "Sahaj Srivastava"
@@ -72,12 +98,12 @@ github = "https://github.com/sahaj-96"
 instagram = "https://www.instagram.com/_sahaj96/"
 
 [[ccrs]]
-name = "Aryan Mishra"
+name = "Tanishka Thakur"
 role = "CCR"
-image = "teams/aryan_mishra.webp"
-linkedin = "https://www.linkedin.com/in/aryan-lem"
-github = "https://github.com/aryan-lem"
-instagram = "https://www.instagram.com/lemnis_kate1.23"
+image = "teams/tanishka_thakur.webp"
+linkedin = "https://www.linkedin.com/in/tanishka-thakur-915893250"
+github = "https://www.github.com/tan-inv"
+instagram = "https://www.instagram.com/tanishka_0304"
 
 [[ccrs]]
 name = "Rajnandini Patel"
@@ -88,32 +114,18 @@ github = "https://github.com/Rajnandinii"
 instagram = "https://instagram.com/_nandini.patel81"
 
 [[ccrs]]
-name = "Nihal Yadav"
+name = "Gantavya Rohatgi"
 role = "CCR"
-image = "teams/nihal_yadav.webp"
-linkedin = "https://www.linkedin.com/in/nihal2908"
-github = "https://github.com/nihal2908"
-instagram = "https://www.instagram.com/nihal.yadav.000"
-
-
-
-
+image = "teams/gantavya_rohatgi.webp"
+linkedin = "https://www.linkedin.com/in/gantavyarohatgi"
 
 [[ccrs]]
-name = "Uday Nauhbar"
+name = "Utsav Kasvala"
 role = "CCR"
-image = "teams/uday_nauhbar.webp"
-linkedin = "https://www.linkedin.com/in/uday-nauhbar-0b2b7124b/"
-github = "https://github.com/Uday061"
-instagram = "https://www.instagram.com/uday.661/"
-
-[[ccrs]]
-name = "Lokesh Wagh"
-role = "CCR"
-image = "teams/lokesh_wagh.webp"
-linkedin = "https://www.linkedin.com/in/lokesh-wagh12"
-github = "https://github.com/lokesh-wagh"
-instagram = "https://www.instagram.com/_lokesh_wagh"
+image = "teams/utsav_kasvala.webp"
+linkedin = "https://www.linkedin.com/in/utsav-kasvala-239786280"
+github = "https://github.com/utsav-kasvala"
+instagram = "https://www.instagram.com/utsav___kasvala"
 
 [[ccrs]]
 name = "Shubham Garg"
@@ -122,14 +134,6 @@ image = "teams/shubham_garg.webp"
 linkedin = "https://www.linkedin.com/in/shubham-garg-167983260/"
 github = "https://github.com/Shubham-garg1234"
 instagram = "https://www.instagram.com/real__shubh/"
-
-[[ccrs]]
-name = "Tanishka Thakur"
-role = "CCR"
-image = "teams/tanishka_thakur.webp"
-linkedin = "https://www.linkedin.com/in/tanishka-thakur-915893250"
-github = "https://www.github.com/tan-inv"
-instagram = "https://www.instagram.com/tanishka_0304"
 
 # Group 3: Design Team (3 Leads)
 [[design]]
@@ -143,7 +147,7 @@ instagram = "https://www.instagram.com/shikhargupta_0812/"
 # Group 4: Marketing Team
 [[marketing]]
 name = "Sarthak Porwal"
-role = "Marketing Team"
+role = "Marketing Lead"
 image = "teams/sarthak_porwal.webp"
 linkedin = "https://www.linkedin.com/in/sarthak-porwal-8a9b40256/"
 github = "https://github.com/sarthakporwal"
@@ -151,7 +155,7 @@ instagram = "https://www.instagram.com/sarthak.porwal/"
 
 [[marketing]]
 name = "Siddharth Chaubal"
-role = "Marketing Team"
+role = "Marketing Lead"
 image = "teams/siddharth_chaubal.webp"
 linkedin = "https://www.linkedin.com/in/siddharth-chaubal-473aaa257"
 github = "https://github.com/sidtriedcoding"
@@ -159,26 +163,26 @@ instagram = "https://www.instagram.com/sidu_2401"
 
 [[marketing]]
 name = "Divyanshu Yadav"
-role = "Marketing Team"
+role = "Marketing Lead"
 image = "teams/divyanshu_yadav.webp"
 linkedin = "https://www.linkedin.com/in/divyanshu-yadav-506506274"
 instagram = "https://www.instagram.com/divyanshuyadav000"
 
 [[marketing]]
 name = "Ritik Chaudhry"
-role = "Marketing Team"
+role = "Marketing Lead"
 image = "teams/ritik_chaudhry.webp"
 linkedin = "https://www.linkedin.com/in/ritik-chaudhry"
 instagram = "https://www.instagram.com/ritik._.chaudhry"
 
 [[design]]
 name = "Prakhar"
-role = "Design Team"
+role = "Design Lead"
 image = "teams/prakhar.webp"
 
 [[design]]
 name = "Vaishnavi Tiwari"
-role = "Design Team"
+role = "Design Lead"
 image = "teams/vaishnavi_tiwari.webp"
 linkedin = "https://www.linkedin.com/in/vaishnavi704"
 instagram = "https://www.instagram.com/vaishnavitiwari_104"

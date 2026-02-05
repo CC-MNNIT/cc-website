@@ -1,20 +1,46 @@
 import cv2
 import os
+import json
+import hashlib
 from pathlib import Path
 
 # Configs
 SCRIPT_DIR = Path(__file__).parent
 BASE_DIR = SCRIPT_DIR.parent.parent
 IMAGE_ROOT = BASE_DIR / "static" / "images" / "teams"
+MANIFEST_FILE = BASE_DIR / ".github" / "data" / "team_images_manifest.json"
 TARGET_SIZE = 500 
 CASCADE_PATH = SCRIPT_DIR / "haarcascade_frontalface_default.xml"
 
 # Initialize cascade 
 face_cascade = cv2.CascadeClassifier(str(CASCADE_PATH))
 
-# Safety Check: Ensure cascade loaded
+# Safety Check
 if face_cascade.empty():
-    raise IOError(f"[ERROR] Could not load face cascade from {CASCADE_PATH}. Check if the file is in the scripts folder.")
+    raise IOError(f"[ERROR] Could not load face cascade from {CASCADE_PATH}.")
+
+def load_manifest():
+    if MANIFEST_FILE.exists():
+        try:
+            return json.loads(MANIFEST_FILE.read_text())
+        except json.JSONDecodeError:
+            return {}
+    return {}
+
+def save_manifest(manifest):
+    MANIFEST_FILE.parent.mkdir(parents=True, exist_ok=True)
+    MANIFEST_FILE.write_text(json.dumps(manifest, indent=2))
+
+def calculate_hash(file_path):
+    """Calculates MD5 hash of a file."""
+    hash_md5 = hashlib.md5()
+    try:
+        with open(file_path, "rb") as f:
+            for chunk in iter(lambda: f.read(4096), b""):
+                hash_md5.update(chunk)
+        return hash_md5.hexdigest()
+    except FileNotFoundError:
+        return None
 
 def get_face_centered_crop(img):
     height, width = img.shape[:2]
@@ -41,22 +67,33 @@ def main():
         print(f"[ERROR] {IMAGE_ROOT} not found.")
         return
 
+    manifest = load_manifest()
+    new_manifest = {}
     valid_extensions = {'.jpg', '.jpeg', '.png', '.webp'}
+    processed_count = 0
+
+    print("🔍 Scanning images...")
 
     for full_path in IMAGE_ROOT.iterdir():
         if full_path.suffix.lower() not in valid_extensions:
             continue
 
+        filename = full_path.name
+        current_hash = calculate_hash(full_path)
+
+        # CHECK 1: Is this specific file content already processed?
+        if filename in manifest and manifest[filename] == current_hash:
+            # Keep record in new manifest
+            new_manifest[filename] = current_hash
+            continue
+
+        print(f"⚙️  Processing: {filename}")
+
         img = cv2.imread(str(full_path))
         if img is None: 
+            print(f"⚠️  Could not read image: {filename}")
             continue
 
-        # Only skip if shape IS target size AND it is already a .webp
-        if img.shape[:2] == (TARGET_SIZE, TARGET_SIZE) and full_path.suffix.lower() == ".webp":
-            continue
-
-        print(f"Processing: {full_path.name}")
-        
         # 1. Apply face-centered square crop
         cropped_img = get_face_centered_crop(img)
         current_h = cropped_img.shape[0]
@@ -68,13 +105,30 @@ def main():
         else:
             final_img = cropped_img
 
-        # 3. Save as WebP and Cleanup
+        # 3. Save as WebP
         output_path = full_path.with_suffix(".webp")
         cv2.imwrite(str(output_path), final_img, [cv2.IMWRITE_WEBP_QUALITY, 92])
         
-        # Delete original if it was a different format
+        # 4. Hash the RESULT
+        # We must hash the *result* file (output_path) so next run sees it as "done".
+        # If we overwrote the file, calculate hash of the new file.
+        # If we created a new file (jpg->webp), we calculate hash of the new webp.
+        
+        final_hash = calculate_hash(output_path)
+        new_manifest[output_path.name] = final_hash
+
+        # Cleanup original if different ext
         if full_path != output_path:
             full_path.unlink()
+            print(f"   Converted & Deleted Original: {filename} -> {output_path.name}")
+        else:
+            print(f"   Optimized: {filename}")
+            
+        processed_count += 1
+
+    # Save updated manifest
+    save_manifest(new_manifest)
+    print(f"✅ Scanning complete. Processed {processed_count} images.")
 
 if __name__ == "__main__":
     main()

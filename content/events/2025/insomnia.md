@@ -19,7 +19,9 @@ banner_image = "events/2025/insomnia/4.webp"
 images = [
     "events/2025/insomnia/1.webp",
     "events/2025/insomnia/2.webp",
-    "events/2025/insomnia/3.webp"
+    "events/2025/insomnia/3.webp",
+    "events/2025/insomnia/5.webp",
+    "events/2025/insomnia/6.webp"
 ]
 
 # --- Winners (The Podium) ---

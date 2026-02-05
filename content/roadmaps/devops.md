@@ -15,10 +15,6 @@ carousel_title = "DevOps"
 carousel_description = "Master DevOps practices, CI/CD, and cloud infrastructure"
 +++
 
-# DevOps Roadmap
-
-Start your journey into DevOps by mastering the foundational tools: the Linux command line and Git version control. These are the daily drivers for every DevOps engineer.
-
 ## Phase 1: Linux & Git (1 week)
 
 **Objective**: A lot of us grew up using windows or mac, but overall experience of deployments and devops is best experienced by Linux and its distributions as almost all of the servers run on Linux. So first step is to get comfortable with the terminal and Git. This makes the life easy as scripting becomes easy.
@@ -57,7 +53,7 @@ Start your journey into DevOps by mastering the foundational tools: the Linux co
 - We have knowingly kept this Github Actions tutorial short and crisp as a deep dive involve more familiriaty with Devops and would recommend you to basically watch these and then learn by deploying a basic react app of your to github pages using github actions [Tutorial](https://www.youtube.com/watch?v=iebVPISad54)
 
 
-## Phase 2: Understanding Networking Fundamentals 
+## Phase 2: Understanding Networking Fundamentals (1 Week)
 
 **Knowing the networking is like knowing the plumbing of Internet**
 
@@ -69,7 +65,7 @@ Start your journey into DevOps by mastering the foundational tools: the Linux co
 
 - If you want an in-depth Computer Networking Course, you can check out these awesome lectures by **Professor Mayank Pandey (HoD,CSED, MNNIT Allahabad)** : [Lectures](https://www.youtube.com/playlist?list=PLE-JBws6HCXL25EhottYz9YHgE9_M2Tjg)
 
-## Phase 3: Understanding Docker
+## Phase 3: Understanding Docker (1 Week)
 
 **What is Docker?**
 
@@ -85,7 +81,7 @@ Start your journey into DevOps by mastering the foundational tools: the Linux co
 
 - You can next try to use your Github Education Pack to buy yourself a free domain and then try to replace the github.io domain with your own custom one
 
-## Phase 4: Understanding Nginx
+## Phase 4: Understanding Nginx (1-2 Days)
 
 **What is Nginx?**
 
@@ -99,7 +95,7 @@ Start your journey into DevOps by mastering the foundational tools: the Linux co
 
 - Now with all this knowledge in hand and access to Free cloud credits from Github Education Pack, you can try to deploy your full stack application on a VPS with your own custom domain name using Nginx as a reverse proxy and SSL certificate. This will be challenging and you should use LLMs for assistance all along, but this will serve as a great learning experience 
 
-## Phase 5: Understanding Kubernetes
+## Phase 5: Understanding Kubernetes (1-2 Weeks)
 
 **What is Kubernetes?**
 
@@ -107,7 +103,7 @@ Start your journey into DevOps by mastering the foundational tools: the Linux co
 
 [More about Kubernetes on this link](https://www.redhat.com/en/topics/containers/what-is-kubernetes) | [Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=KVBON1lA9N8)
 
-## Phase 6: Jenkins Is All You Need
+## Phase 6: Jenkins Is All You Need (2-3 Weeks)
 
 - Github Action is cool, its smart and comes right out of the box, write a YAML file and boom there it goes, but it is not always the case. For a lot of corporations, the data, the scale and the environment of build is something which they wish to tighly control, this is where Jenkins comes in, it is a service which needs to be managed by setting up dedicated pods/servers and then using this organizations build entirely secure and custom business workflows and CI/CD Pipelines. This gives a webUI and lot of flexibility to manage your builds and deployments through a vast library of plugins and providing you freedom to write your own Jenkins Pluggins. 
 
@@ -117,7 +113,7 @@ Start your journey into DevOps by mastering the foundational tools: the Linux co
 
 - Now you understand docker and using docker to run basic Jenkins config is a good approach, so we recommend following video to understand Jenkins and then configure a very basic pipeline with SCM Polling [Resource](https://www.youtube.com/watch?v=6YZvp2GwT0A)
 
-## A Cloud Native Mindset
+## A Cloud Native Mindset 
 
 - Congratulations!! You made it till the end, we hope you learnt a lot in this process and understood all the fundamentals well, DevOps will help you take your projects to the production scale and prepare you to step into the world of cloud native development. Most organizations today run on cloud, they extend their services on cloud and deploy to cloud. Additionally its very important to understand that in the industry, project development goes hand-in-hand with CI/CD Driven Deployment and Testing. Hence we conclude this roadmap by providing you a peek into the Cloud Native Mindset and leaving some resources for understanding Testing
 
