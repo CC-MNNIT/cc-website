@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Computer Coding Club - computer-science</title>
+    <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/preview/tags/computer-science/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/preview/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-02-08T00:00:00+00:00</updated>
+    <id>https://cc-club.in/preview/tags/computer-science/atom.xml</id>
+    <entry xml:lang="en">
+        <title>From Theory to Practice: Data Structures</title>
+        <published>2026-02-08T00:00:00+00:00</published>
+        <updated>2026-02-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/from-theory-to-practice/"/>
+        <id>https://cc-club.in/preview/blog/2026/from-theory-to-practice/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;We’ve all been there: staring at a whiteboard covered in nodes and edges, memorizing time complexities for an exam, and wondering, &lt;em&gt;&quot;When am I actually going to use this?&quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;In the academic world, Data Structures are often taught as abstract mathematical concepts. We learn how to balance an AVL tree or reverse a Linked List, but the context is frequently limited to passing test cases.&lt;&#x2F;p&gt;
+&lt;p&gt;However, in the realm of software engineering, these structures are the invisible scaffolding holding up the digital world. From the database indexing your search queries to the graph algorithms routing your Uber, data structures are everywhere.&lt;&#x2F;p&gt;
+&lt;p&gt;This post aims to bridge that gap—taking you &lt;strong&gt;from theory to practice&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+</feed>

@@ -10,101 +10,50 @@
         <loc>https://cc-club.in/preview/blog/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/blog/2024/</loc>
+        <loc>https://cc-club.in/preview/blog/2026/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/blog/2024/competitive-programming-intro/</loc>
-        <lastmod>2024-11-05</lastmod>
+        <loc>https://cc-club.in/preview/blog/2026/client-side-solana-101/</loc>
+        <lastmod>2026-02-08</lastmod>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/blog/2024/javascript-async-await/</loc>
-        <lastmod>2024-06-22</lastmod>
+        <loc>https://cc-club.in/preview/blog/2026/from-theory-to-practice/</loc>
+        <lastmod>2026-02-08</lastmod>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/blog/2024/linux-commands/</loc>
-        <lastmod>2024-09-10</lastmod>
+        <loc>https://cc-club.in/preview/blog/2026/internet-history/</loc>
+        <lastmod>2026-02-05</lastmod>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/blog/2024/python-data-science/</loc>
-        <lastmod>2024-03-15</lastmod>
+        <loc>https://cc-club.in/preview/blog/2026/ml-models-fail/</loc>
+        <lastmod>2026-02-07</lastmod>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/blog/2025/</loc>
+        <loc>https://cc-club.in/preview/blog/2026/openprinting/</loc>
+        <lastmod>2026-02-05</lastmod>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/blog/2025/css-grid-vs-flexbox/</loc>
-        <lastmod>2025-02-20</lastmod>
+        <loc>https://cc-club.in/preview/blog/2026/rl-video-game/</loc>
+        <lastmod>2026-02-08</lastmod>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/blog/2025/cybersecurity-basics/</loc>
-        <lastmod>2025-09-08</lastmod>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/blog/2025/docker-for-beginners/</loc>
-        <lastmod>2025-05-12</lastmod>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/blog/2025/git-best-practices/</loc>
-        <lastmod>2025-04-05</lastmod>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/blog/2025/graphql-vs-rest/</loc>
-        <lastmod>2025-08-14</lastmod>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/blog/2025/intro-to-ml-python/</loc>
-        <lastmod>2025-03-10</lastmod>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/blog/2025/nodejs-rest-api/</loc>
-        <lastmod>2025-01-15</lastmod>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/blog/2025/progressive-web-apps/</loc>
-        <lastmod>2025-07-22</lastmod>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/blog/2025/react-hooks-guide/</loc>
-        <lastmod>2025-12-15</lastmod>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/blog/2025/react-performance-optimization/</loc>
-        <lastmod>2025-10-25</lastmod>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/blog/2025/summer-hackathon-recap/</loc>
-        <lastmod>2025-08-25</lastmod>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/blog/2025/typescript-why-care/</loc>
-        <lastmod>2025-06-18</lastmod>
+        <loc>https://cc-club.in/preview/blog/2026/time-complexity/</loc>
+        <lastmod>2026-02-08</lastmod>
     </url>
     <url>
         <loc>https://cc-club.in/preview/categories/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/categories/comparison/</loc>
+        <loc>https://cc-club.in/preview/categories/history/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/categories/comparison/page/1/</loc>
+        <loc>https://cc-club.in/preview/categories/history/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/categories/guide/</loc>
+        <loc>https://cc-club.in/preview/categories/tech/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/categories/guide/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/categories/news/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/categories/news/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/categories/opinion/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/categories/opinion/page/1/</loc>
+        <loc>https://cc-club.in/preview/categories/tech/page/1/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/preview/categories/tutorial/</loc>
@@ -205,82 +154,34 @@
         <loc>https://cc-club.in/preview/tags/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/ai/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/ai/page/1/</loc>
-    </url>
-    <url>
         <loc>https://cc-club.in/preview/tags/algorithms/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/preview/tags/algorithms/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/api/</loc>
+        <loc>https://cc-club.in/preview/tags/big-o/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/api/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/big-o/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/async/</loc>
+        <loc>https://cc-club.in/preview/tags/blockchain/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/async/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/blockchain/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/backend/</loc>
+        <loc>https://cc-club.in/preview/tags/computer-science/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/backend/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/computer-science/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/beginner/</loc>
+        <loc>https://cc-club.in/preview/tags/cups/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/beginner/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/best-practices/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/best-practices/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/cloud/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/cloud/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/collaboration/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/collaboration/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/community/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/community/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/competitive-programming/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/competitive-programming/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/css/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/css/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/cybersecurity/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/cybersecurity/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/cups/page/1/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/preview/tags/data-science/</loc>
@@ -289,82 +190,40 @@
         <loc>https://cc-club.in/preview/tags/data-science/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/design/</loc>
+        <loc>https://cc-club.in/preview/tags/data-structures/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/design/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/data-structures/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/development-tools/</loc>
+        <loc>https://cc-club.in/preview/tags/development/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/development-tools/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/development/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/devops/</loc>
+        <loc>https://cc-club.in/preview/tags/games/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/devops/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/games/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/docker/</loc>
+        <loc>https://cc-club.in/preview/tags/google/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/docker/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/google/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/dsa/</loc>
+        <loc>https://cc-club.in/preview/tags/history/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/dsa/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/history/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/events/</loc>
+        <loc>https://cc-club.in/preview/tags/internet/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/events/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/express/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/express/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/frontend/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/frontend/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/git/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/git/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/graphql/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/graphql/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/hackathon/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/hackathon/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/interview/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/interview/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/javascript/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/javascript/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/internet/page/1/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/preview/tags/linux/</loc>
@@ -379,94 +238,40 @@
         <loc>https://cc-club.in/preview/tags/machine-learning/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/mobile/</loc>
+        <loc>https://cc-club.in/preview/tags/mlops/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/mobile/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/mlops/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/nodejs/</loc>
+        <loc>https://cc-club.in/preview/tags/openprinting/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/nodejs/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/openprinting/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/optimization/</loc>
+        <loc>https://cc-club.in/preview/tags/reinforcement-learning/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/optimization/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/reinforcement-learning/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/performance/</loc>
+        <loc>https://cc-club.in/preview/tags/solana/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/performance/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/solana/page/1/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/productivity/</loc>
+        <loc>https://cc-club.in/preview/tags/time-complexity/</loc>
     </url>
     <url>
-        <loc>https://cc-club.in/preview/tags/productivity/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/projects/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/projects/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/pwa/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/pwa/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/python/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/python/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/react/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/react/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/rest/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/rest/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/terminal/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/terminal/page/1/</loc>
+        <loc>https://cc-club.in/preview/tags/time-complexity/page/1/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/preview/tags/tutorial/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/preview/tags/tutorial/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/typescript/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/typescript/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/web-development/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/web-development/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/web/</loc>
-    </url>
-    <url>
-        <loc>https://cc-club.in/preview/tags/web/page/1/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/preview/team/</loc>

@@ -5,12 +5,12 @@
     <link rel="self" type="application/atom+xml" href="https://cc-club.in/preview/tags/tutorial/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://cc-club.in/preview/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-06-18T00:00:00+00:00</updated>
+    <updated>2026-02-08T00:00:00+00:00</updated>
     <id>https://cc-club.in/preview/tags/tutorial/atom.xml</id>
     <entry xml:lang="en">
-        <title>TypeScript: Why JavaScript Developers Should Care</title>
-        <published>2025-06-18T00:00:00+00:00</published>
-        <updated>2025-06-18T00:00:00+00:00</updated>
+        <title>Client Side Solana 101: From Web2 Dev to Web3 Builder</title>
+        <published>2026-02-08T00:00:00+00:00</published>
+        <updated>2026-02-08T00:00:00+00:00</updated>
         
         <author>
           <name>
@@ -20,228 +20,11 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/typescript-why-care/"/>
-        <id>https://cc-club.in/preview/blog/2025/typescript-why-care/</id>
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/client-side-solana-101/"/>
+        <id>https://cc-club.in/preview/blog/2026/client-side-solana-101/</id>
         
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/typescript-why-care/">&lt;h2 id=&quot;the-typescript-revolution&quot;&gt;The TypeScript Revolution&lt;&#x2F;h2&gt;
-&lt;p&gt;TypeScript has become the standard for large-scale JavaScript applications. Here&#x27;s why.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;benefits-of-typescript&quot;&gt;Benefits of TypeScript&lt;&#x2F;h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Type Safety&lt;&#x2F;strong&gt;: Catch errors at compile time&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Better IDE Support&lt;&#x2F;strong&gt;: Intelligent autocomplete&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Refactoring Confidence&lt;&#x2F;strong&gt;: Rename variables safely&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Documentation&lt;&#x2F;strong&gt;: Types serve as inline docs&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;h2 id=&quot;from-javascript-to-typescript&quot;&gt;From JavaScript to TypeScript&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;typescript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-typescript &quot;&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; JavaScript
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; TypeScript
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -g&lt;&#x2F;span&gt;&lt;span&gt; typescript
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;tsc&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; --init
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;More examples and patterns coming soon!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Docker for Beginners: Containerize Your Apps</title>
-        <published>2025-05-12T00:00:00+00:00</published>
-        <updated>2025-05-12T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/docker-for-beginners/"/>
-        <id>https://cc-club.in/preview/blog/2025/docker-for-beginners/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/docker-for-beginners/">&lt;h2 id=&quot;why-docker&quot;&gt;Why Docker?&lt;&#x2F;h2&gt;
-&lt;p&gt;Docker revolutionized software deployment. Learn how to package your applications with all dependencies.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;what-is-docker&quot;&gt;What is Docker?&lt;&#x2F;h2&gt;
-&lt;p&gt;Docker is a platform for developing, shipping, and running applications in containers.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;key-concepts&quot;&gt;Key Concepts&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Images&lt;&#x2F;strong&gt;: Blueprint for containers&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Containers&lt;&#x2F;strong&gt;: Running instances of images&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Dockerfile&lt;&#x2F;strong&gt;: Instructions to build an image&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Docker Hub&lt;&#x2F;strong&gt;: Repository for images&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;your-first-dockerfile&quot;&gt;Your First Dockerfile&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;dockerfile&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; node:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;16-alpine
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;WORKDIR &lt;&#x2F;span&gt;&lt;span&gt;&#x2F;app
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; package*.json .&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;RUN &lt;&#x2F;span&gt;&lt;span&gt;npm install
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; . .
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;EXPOSE &lt;&#x2F;span&gt;&lt;span&gt;3000
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;CMD &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;npm&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;start&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;&#x2F;h2&gt;
-&lt;p&gt;We&#x27;ll deploy this to AWS ECS in the next tutorial!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Introduction to Machine Learning with Python</title>
-        <published>2025-03-10T00:00:00+00:00</published>
-        <updated>2025-03-10T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/intro-to-ml-python/"/>
-        <id>https://cc-club.in/preview/blog/2025/intro-to-ml-python/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/intro-to-ml-python/">&lt;h2 id=&quot;welcome-to-machine-learning&quot;&gt;Welcome to Machine Learning&lt;&#x2F;h2&gt;
-&lt;p&gt;Machine Learning is transforming every industry. This guide will help you get started with practical Python examples.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;topics-covered&quot;&gt;Topics Covered&lt;&#x2F;h2&gt;
-&lt;ol&gt;
-&lt;li&gt;What is Machine Learning?&lt;&#x2F;li&gt;
-&lt;li&gt;Setting up your environment&lt;&#x2F;li&gt;
-&lt;li&gt;Data preprocessing&lt;&#x2F;li&gt;
-&lt;li&gt;Linear regression example&lt;&#x2F;li&gt;
-&lt;li&gt;Model evaluation&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;pip install numpy pandas scikit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;learn matplotlib
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;your-first-ml-model&quot;&gt;Your First ML Model&lt;&#x2F;h2&gt;
-&lt;p&gt;We&#x27;ll build a simple linear regression model to predict house prices!&lt;&#x2F;p&gt;
-&lt;p&gt;Full tutorial coming soon...&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Building a REST API with Node.js and Express</title>
-        <published>2025-01-15T00:00:00+00:00</published>
-        <updated>2025-01-15T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/nodejs-rest-api/"/>
-        <id>https://cc-club.in/preview/blog/2025/nodejs-rest-api/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/nodejs-rest-api/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
-&lt;p&gt;Building RESTful APIs is a fundamental skill for backend developers. In this comprehensive guide, we&#x27;ll create a production-ready REST API using Node.js and Express.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;what-you-ll-learn&quot;&gt;What You&#x27;ll Learn&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Setting up an Express server&lt;&#x2F;li&gt;
-&lt;li&gt;Implementing CRUD operations&lt;&#x2F;li&gt;
-&lt;li&gt;Authentication with JWT&lt;&#x2F;li&gt;
-&lt;li&gt;Error handling middleware&lt;&#x2F;li&gt;
-&lt;li&gt;API documentation with Swagger&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Basic JavaScript knowledge&lt;&#x2F;li&gt;
-&lt;li&gt;Node.js installed (v16+)&lt;&#x2F;li&gt;
-&lt;li&gt;MongoDB setup (local or Atlas)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;project-setup&quot;&gt;Project Setup&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; my-rest-api
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; my-rest-api
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; init&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -y
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install express mongoose jsonwebtoken bcrypt dotenv
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Stay tuned for the complete implementation!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Understanding JavaScript Async&#x2F;Await</title>
-        <published>2024-06-22T00:00:00+00:00</published>
-        <updated>2024-06-22T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2024/javascript-async-await/"/>
-        <id>https://cc-club.in/preview/blog/2024/javascript-async-await/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
-&lt;p&gt;Async&#x2F;await revolutionized how we write asynchronous code in JavaScript.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;before-async-await&quot;&gt;Before Async&#x2F;Await&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Callback Hell
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserData&lt;&#x2F;span&gt;&lt;span&gt;(userId&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;user&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrders&lt;&#x2F;span&gt;&lt;span&gt;(user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;orders&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrderDetails&lt;&#x2F;span&gt;&lt;span&gt;(orders[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;details&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(details)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;with-async-await&quot;&gt;With Async&#x2F;Await&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;async function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserOrders&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;userId&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;user &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserData&lt;&#x2F;span&gt;&lt;span&gt;(userId)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;orders &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrders&lt;&#x2F;span&gt;&lt;span&gt;(user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;details &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrderDetails&lt;&#x2F;span&gt;&lt;span&gt;(orders[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;details&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Much cleaner!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Getting Started with Python for Data Science</title>
-        <published>2024-03-15T00:00:00+00:00</published>
-        <updated>2024-03-15T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2024/python-data-science/"/>
-        <id>https://cc-club.in/preview/blog/2024/python-data-science/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2024/python-data-science/">&lt;h2 id=&quot;welcome-to-data-science&quot;&gt;Welcome to Data Science&lt;&#x2F;h2&gt;
-&lt;p&gt;Data Science is one of the hottest fields in tech. Start your journey here with Python!&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;why-python&quot;&gt;Why Python?&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Easy to learn&lt;&#x2F;li&gt;
-&lt;li&gt;Rich ecosystem (NumPy, pandas, scikit-learn)&lt;&#x2F;li&gt;
-&lt;li&gt;Industry standard&lt;&#x2F;li&gt;
-&lt;li&gt;Great community&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;essential-libraries&quot;&gt;Essential Libraries&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;pandas &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;pd
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;numpy &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;np
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;matplotlib&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;pyplot &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;plt
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;your-first-analysis&quot;&gt;Your First Analysis&lt;&#x2F;h2&gt;
-&lt;p&gt;We&#x27;ll analyze a real dataset and create visualizations!&lt;&#x2F;p&gt;
-</content>
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Are you a web developer curious about diving into the world of Web3? Welcome to your gateway into Solana development! This comprehensive guide will take you from absolute beginner to building your first Solana application, all from your local machine.&lt;&#x2F;p&gt;</summary>
         
     </entry>
 </feed>

@@ -47,6 +47,383 @@
         
     </entry>
     <entry xml:lang="en">
+        <title>Client Side Solana 101: From Web2 Dev to Web3 Builder</title>
+        <published>2026-02-08T00:00:00+00:00</published>
+        <updated>2026-02-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/client-side-solana-101/"/>
+        <id>https://cc-club.in/preview/blog/2026/client-side-solana-101/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Are you a web developer curious about diving into the world of Web3? Welcome to your gateway into Solana development! This comprehensive guide will take you from absolute beginner to building your first Solana application, all from your local machine.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>From Theory to Practice: Data Structures</title>
+        <published>2026-02-08T00:00:00+00:00</published>
+        <updated>2026-02-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/from-theory-to-practice/"/>
+        <id>https://cc-club.in/preview/blog/2026/from-theory-to-practice/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;We’ve all been there: staring at a whiteboard covered in nodes and edges, memorizing time complexities for an exam, and wondering, &lt;em&gt;&quot;When am I actually going to use this?&quot;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;In the academic world, Data Structures are often taught as abstract mathematical concepts. We learn how to balance an AVL tree or reverse a Linked List, but the context is frequently limited to passing test cases.&lt;&#x2F;p&gt;
+&lt;p&gt;However, in the realm of software engineering, these structures are the invisible scaffolding holding up the digital world. From the database indexing your search queries to the graph algorithms routing your Uber, data structures are everywhere.&lt;&#x2F;p&gt;
+&lt;p&gt;This post aims to bridge that gap—taking you &lt;strong&gt;from theory to practice&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Looking at Reinforcement Learning Through the Lens of Video Games</title>
+        <published>2026-02-08T00:00:00+00:00</published>
+        <updated>2026-02-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/rl-video-game/"/>
+        <id>https://cc-club.in/preview/blog/2026/rl-video-game/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Learning a video game for the first time is rarely smooth. You press random buttons, lose repeatedly, make mistakes, and slowly begin to understand what works and what does not. Over time, without reading any manual, you get better. This natural learning process closely mirrors how Reinforcement Learning works.&lt;&#x2F;p&gt;
+&lt;p&gt;Reinforcement Learning is a branch of machine learning where an agent learns by interacting with an environment and receiving feedback in the form of rewards or penalties. Video games provide a simple and intuitive way to understand this concept because they naturally involve decision-making, consequences, and improvement over time.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Mastering Time Complexity: A Complete Guide to Algorithm Analysis</title>
+        <published>2026-02-08T00:00:00+00:00</published>
+        <updated>2026-02-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/time-complexity/"/>
+        <id>https://cc-club.in/preview/blog/2026/time-complexity/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Ever wondered why some programs run blazingly fast while others crawl? The secret lies in understanding &lt;strong&gt;time complexity&lt;&#x2F;strong&gt; – the language we use to describe how an algorithm&#x27;s performance scales with input size. Whether you&#x27;re preparing for technical interviews, optimizing production code, or simply curious about what makes algorithms tick, mastering time complexity is your key to writing efficient, scalable software.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Why Most Machine Learning Models Fail in Production</title>
+        <published>2026-02-07T00:00:00+00:00</published>
+        <updated>2026-02-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/ml-models-fail/"/>
+        <id>https://cc-club.in/preview/blog/2026/ml-models-fail/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Training a machine learning model that shows &lt;strong&gt;95% accuracy&lt;&#x2F;strong&gt; feels like success.&lt;br &#x2F;&gt;
+But deploying that same model into production often turns that success into silence — wrong predictions, confused users, and no clear errors.&lt;&#x2F;p&gt;
+&lt;p&gt;This is not a rare problem.&lt;&#x2F;p&gt;
+&lt;p&gt;In fact, &lt;strong&gt;most ML models fail not because the algorithm is bad, but because the real world is messy&lt;&#x2F;strong&gt;.&lt;br &#x2F;&gt;
+This blog explains &lt;strong&gt;what goes wrong&lt;&#x2F;strong&gt;, &lt;strong&gt;why it happens&lt;&#x2F;strong&gt;, and &lt;strong&gt;how real systems deal with it&lt;&#x2F;strong&gt;, using simple language and real examples.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Internet Before Search Engines</title>
+        <published>2026-02-05T00:00:00+00:00</published>
+        <updated>2026-02-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/internet-history/"/>
+        <id>https://cc-club.in/preview/blog/2026/internet-history/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2026/internet-history/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Hello everyone!
+This is Devansh, and today through this blogpost, I am going to take you back in time. A time when most of us students were not even born. What was about to be born, was a technology so powerful, that it was about to change everything.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-birth-of-internet&quot;&gt;The Birth of Internet&lt;&#x2F;h3&gt;
+&lt;p&gt;Before talking about how it appeared, let&#x27;s talk about why it appeared.
+It started because The US was scared. Scared that it&#x27;s communication system might be destroyed by a nuclear attack. They wanted to build a network that would still work even if a part of it was destroyed. This was in the early 1960s.&lt;&#x2F;p&gt;
+&lt;p&gt;In 1969, It happened.
+ARPANET appeared. It was basically a computer network that connected 4 universities of the United States.
+The first message they sent was &quot;LOGIN&quot;, but the system crashed right after &quot;LO&quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;The data was sent by the concept of packet switching, which is basically sending data in form of packets via multiple paths instead of a single wire.
+For a long time, the internet was used only by universities, researchers and military labs.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;1-january-1983&quot;&gt;1 January, 1983&lt;&#x2F;h3&gt;
+&lt;p&gt;Every machine on ARPANET switched to TCP&#x2F;IP. To keep it simple, let&#x27;s just say different networks could now connect to each other, making a network of networks: &lt;strong&gt;inter-net&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tim-berners-lee-invents-world-wide-web&quot;&gt;Tim Berners Lee invents World Wide Web&lt;&#x2F;h3&gt;
+&lt;p&gt;Back in those days, scientists had data on different computers. There was no easy way to link information, and then he invented HTML, HTTP, URLs and Web Server.
+He helped them solve the scientists&#x27; problem, but he ended up taking an important decision.
+He kept it FREE. He did not patent the World Wide Web. This meant that the normal humans could use it.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;internet-goes-public&quot;&gt;Internet Goes Public&lt;&#x2F;h3&gt;
+&lt;p&gt;Yes, we had the internet Live and accessible for the people. ISPs appeared, people created websites, chat rooms and some early e-commerce also started.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-real-question&quot;&gt;The Real Question&lt;&#x2F;h2&gt;
+&lt;p&gt;Till now, we have discussed briefly how it originated and became accessible to the public.
+Now we will focus on the time period before the search engines came.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-are-search-engines&quot;&gt;What are Search Engines?&lt;&#x2F;h3&gt;
+&lt;p&gt;Search engines basically help us find things on the internet. We are familiar with Linear Search Algorithm, which finds data in a container in linear time, or Binary Search, which finds data inside an ordered container in logarithmic time.
+Similarly, Search Engines internally run some algorithm, and find desired web page for us across millions of web pages.&lt;&#x2F;p&gt;
+&lt;p&gt;So when I say &quot;Internet before Search Engines&quot;, does that look similar to finding &lt;code&gt;target&lt;&#x2F;code&gt; from an array &lt;code&gt;nums[]&lt;&#x2F;code&gt; without any technique?
+EXACTLY!&lt;&#x2F;p&gt;
+&lt;p&gt;In order to find data from an array without any technique, we have to do it manually using our human eyes. This was a similar situation with the internet.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;Internet = [Website1, Website2, Website3, ... millions more]
+&lt;&#x2F;span&gt;&lt;span&gt;Target = &amp;quot;some information&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;and you had no idea which site has it, where that site is and even if that site exists or not. Seems quite tough right? Yes it was.&lt;&#x2F;p&gt;
+&lt;p&gt;Then what did people do?
+They did it manually.
+They clicked links, they browsed directories (We will talk what directories were in a while),
+they found new website URLs in newspapers, television and bookmarked them.&lt;&#x2F;p&gt;
+&lt;p&gt;The linear search analogy I gave was just an example. It&#x27;s actually more closer to:
+Searching an unindexed, unsorted, partially invisible array where you don’t even know the bounds.
+and that&#x27;s worse than O(n)&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-were-web-directories&quot;&gt;What were web directories?&lt;&#x2F;h3&gt;
+&lt;p&gt;Before modern search engines like Google existed, the internet relied on web directories to help users find information. These directories were not powered by algorithms or AI, but by humans manually organizing websites into categories.
+Think of web directories as the table of contents of the early internet.&lt;&#x2F;p&gt;
+&lt;p&gt;Instead of typing a query and getting ranked results, users navigated like this:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;Computers
+&lt;&#x2F;span&gt;&lt;span&gt; └── Programming
+&lt;&#x2F;span&gt;&lt;span&gt;     └── Languages
+&lt;&#x2F;span&gt;&lt;span&gt;         └── C++
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Each category contained links to websites that humans believed belonged there.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;conclusion-life-before-search-engines&quot;&gt;Conclusion: Life Before Search Engines&lt;&#x2F;h3&gt;
+&lt;p&gt;The internet before search engines was not broken — it was simply unorganized. Information existed, but discovering it required patience, memory, and human effort. Users didn’t search the web; they navigated it.&lt;&#x2F;p&gt;
+&lt;p&gt;Finding information felt like exploring an unknown space: browsing directories, following hyperlinks, relying on recommendations, and carefully bookmarking useful pages. This process resembled manually scanning an unindexed dataset — effective at small scale, but increasingly inefficient as the web grew.
+Understanding the internet before search engines reminds us that today’s instant access is not accidental. It is the result of decades of evolution, driven by the same core computer science principle:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;At scale, organization must be algorithmic.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And that single shift reshaped the internet forever.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenPrinting: The Open-Source Backbone of Linux Printing</title>
+        <published>2026-02-05T00:00:00+00:00</published>
+        <updated>2026-02-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/openprinting/"/>
+        <id>https://cc-club.in/preview/blog/2026/openprinting/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2026/openprinting/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Printing is one of those “boring but essential” capabilities that most users expect to just &lt;em&gt;work&lt;&#x2F;em&gt;. On Linux, that smooth experience is largely thanks to the &lt;strong&gt;OpenPrinting&lt;&#x2F;strong&gt; community and the software stack it maintains.&lt;&#x2F;p&gt;
+&lt;p&gt;Whether you are a sysadmin managing a fleet of printers or a developer looking to contribute to open source, understanding how Linux talks to paper is crucial. This post explains the architecture of OpenPrinting, how its major components (especially CUPS and IPP) fit together, and provides a cheat sheet for daily operations.&lt;&#x2F;p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;
+  &lt;span&gt;**Quick Summary (TL;DR):** OpenPrinting enables standardized, driverless printing on Linux using **CUPS** (the spooler) and **IPP** (the protocol). This guide covers architecture, CLI commands, troubleshooting, and contribution paths.&lt;&#x2F;span&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;what-is-openprinting&quot;&gt;What is OpenPrinting?&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;Community&lt;&#x2F;div&gt;
+ &lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Standards&lt;&#x2F;div&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;OpenPrinting is an open-source initiative focused on improving printing support on Linux and Unix-like systems. Historically, printing relied on fragile, vendor-specific drivers. OpenPrinting aims to eliminate those pain points by collaborating with printer vendors and Linux distributions to promote &lt;strong&gt;standardized protocols&lt;&#x2F;strong&gt; and &lt;strong&gt;user-space solutions&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;core-components&quot;&gt;Core Components&lt;&#x2F;h2&gt;
+&lt;p&gt;The Linux printing stack is modular. Here are the key players:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;1-cups-common-unix-printing-system&quot;&gt;1. CUPS (Common UNIX Printing System)&lt;&#x2F;h3&gt;
+&lt;p&gt;CUPS is the heart of Linux printing. It runs entirely in user space, acting as the print server that manages jobs and queues.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Role:&lt;&#x2F;strong&gt; Spooler, Scheduler, Filter Manager.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Key Config:&lt;&#x2F;strong&gt; &lt;code&gt;&#x2F;etc&#x2F;cups&#x2F;cupsd.conf&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Logs:&lt;&#x2F;strong&gt; &lt;code&gt;&#x2F;var&#x2F;log&#x2F;cups&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;upload.wikimedia.org&#x2F;wikipedia&#x2F;commons&#x2F;d&#x2F;dc&#x2F;Cups12-web-interface.png&quot; alt=&quot;CUPS Web Interface&quot; style=&quot;width: 100%;&quot; &#x2F;&gt;
+&lt;h3 id=&quot;2-ipp-internet-printing-protocol&quot;&gt;2. IPP (Internet Printing Protocol)&lt;&#x2F;h3&gt;
+&lt;p&gt;If CUPS is the heart, IPP is the language it speaks. IPP is a modern network protocol that handles discovery, job submission, and status reporting. It is the foundation of &lt;strong&gt;Driverless Printing&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;3-driverless-printing-ipp-everywhere&quot;&gt;3. Driverless Printing (IPP Everywhere)&lt;&#x2F;h3&gt;
+&lt;div class=&quot;badge badge-soft badge-success&quot;&gt;Modern Standard&lt;&#x2F;div&gt;
+&lt;p&gt;Gone are the days of hunting for specific PPD (PostScript Printer Description) files.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;How it works:&lt;&#x2F;strong&gt; Printers advertise their capabilities (paper size, color, resolution) via IPP.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;The Benefit:&lt;&#x2F;strong&gt; CUPS auto-configures compatible printers without downloading external drivers.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Printer Applications:&lt;&#x2F;strong&gt; For legacy devices that don&#x27;t speak IPP natively, &quot;Printer Applications&quot; act as software emulators to make them compliant.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;how-it-works-the-architecture&quot;&gt;How It Works: The Architecture&lt;&#x2F;h2&gt;
+&lt;p&gt;Understanding the flow of a print job helps immensely when things go wrong.&lt;&#x2F;p&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;cc-club.in&#x2F;preview&#x2F;images&#x2F;https:&#x2F;&#x2F;www.novell.com&#x2F;documentation&#x2F;nnls&#x2F;iprinthealth&#x2F;graphics&#x2F;print_psm001_a.gif&quot; alt=&quot;Linux Printing Architecture Diagram&quot; class=&quot;rounded-lg shadow-md&quot; &#x2F;&gt;
+&lt;pre class=&quot;mermaid border border-gray-500&#x2F;15&quot;&gt;
+ graph LR
+    User[User Application] --&amp;gt;|Submit Job| CUPS[CUPS Scheduler]
+    CUPS --&amp;gt;|Process| Filters[Filters&amp;#x2F;Ghostscript]
+    Filters --&amp;gt;|Convert| Backend[&amp;quot;Backend (USB&amp;#x2F;Net)&amp;quot;]
+    Backend --&amp;gt;|IPP&amp;#x2F;Data| Printer[Physical Printer]
+    Printer -.-&amp;gt;|Status| CUPS
+&lt;&#x2F;pre&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Application:&lt;&#x2F;strong&gt; (e.g., LibreOffice) sends a PDF&#x2F;PostScript to CUPS.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;CUPS:&lt;&#x2F;strong&gt; Queues the job and determines which filters are needed.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Filters:&lt;&#x2F;strong&gt; Convert the input format into the specific raster or command language the printer understands.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Backend:&lt;&#x2F;strong&gt; Transmits the data over USB or Network (via IPP) to the device.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;sysadmin-cheat-sheet-practical-commands&quot;&gt;Sysadmin Cheat Sheet: Practical Commands&lt;&#x2F;h2&gt;
+&lt;p&gt;These commands assume CUPS is installed. They are essential for headless server management.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;setup-discovery&quot;&gt;Setup &amp;amp; Discovery&lt;&#x2F;h3&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500&#x2F;15 border&quot;&gt;
+  &lt;div class=&quot;collapse-title font-semibold&quot;&gt;
+    Click to view Device Discovery Commands
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;collapse-content text-sm&quot;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lpinfo -v&lt;&#x2F;code&gt;: List available devices&#x2F;backends&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;ippfind&lt;&#x2F;code&gt;: Scan network for IPP printers&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;avahi-browse -rt _ipp._tcp&lt;&#x2F;code&gt;: Detailed mDNS discovery&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;driverless&lt;&#x2F;code&gt;: List driverless-capable devices&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;h3 id=&quot;managing-printers&quot;&gt;Managing Printers&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Add a driverless printer (IPP Everywhere)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; lpadmin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span&gt; OfficePrinter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -E -v&lt;&#x2F;span&gt;&lt;span&gt; ipp:&#x2F;&#x2F;printer.local&#x2F;ipp&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -m&lt;&#x2F;span&gt;&lt;span&gt; everywhere
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Set as default
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; lpoptions&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -d&lt;&#x2F;span&gt;&lt;span&gt; OfficePrinter
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Check status of all printers
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;lpstat&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -p -d
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;job-management&quot;&gt;Job Management&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Print a PDF file
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;lp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -d&lt;&#x2F;span&gt;&lt;span&gt; OfficePrinter document.pdf
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Cancel a specific job
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;cancel &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;job-id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Nuke the queue (cancel all jobs)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;cancel&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -a&lt;&#x2F;span&gt;&lt;span&gt; OfficePrinter
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;troubleshooting-guide&quot;&gt;Troubleshooting Guide&lt;&#x2F;h2&gt;
+&lt;p&gt;When printing fails, it usually fails silently. Here is how to make it talk.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;1-the-printer-is-not-discovered&quot;&gt;1. The Printer is Not Discovered&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Check mDNS:&lt;&#x2F;strong&gt; Driverless printing relies on Bonjour&#x2F;Avahi.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;avahi-browse&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -a
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Firewall:&lt;&#x2F;strong&gt; Ensure TCP port 631 (IPP) and UDP port 5353 (mDNS) are open.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;2-filter-failed-errors&quot;&gt;2. &quot;Filter Failed&quot; Errors&lt;&#x2F;h3&gt;
+&lt;p&gt;This usually means CUPS couldn&#x27;t convert the file.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Debug Mode:&lt;&#x2F;strong&gt; This is your best friend.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Edit &lt;code&gt;&#x2F;etc&#x2F;cups&#x2F;cupsd.conf&lt;&#x2F;code&gt; and change &lt;code&gt;LogLevel warn&lt;&#x2F;code&gt; to &lt;code&gt;LogLevel debug&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Restart CUPS: &lt;code&gt;sudo systemctl restart cups&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Watch the logs live:&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;journalctl&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -u&lt;&#x2F;span&gt;&lt;span&gt; cups&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -f
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;3-legacy-usb-issues&quot;&gt;3. Legacy USB Issues&lt;&#x2F;h3&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-warning alert-soft&quot;&gt;
+  &lt;span&gt;Warning: Legacy USB printers often require specific permissions. Check lsusb to see if the kernel detects the device, and ensure your user is in the lp group.&lt;&#x2F;span&gt;
+&lt;&#x2F;div&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;contributing-to-openprinting&quot;&gt;Contributing to OpenPrinting&lt;&#x2F;h2&gt;
+&lt;p&gt;OpenPrinting is a community-driven project. We need help from developers (C&#x2F;C++), documentation writers, and testers.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;where-to-start&quot;&gt;Where to start?&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Organization:&lt;&#x2F;strong&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;OpenPrinting&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;OpenPrinting&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Key Repos:&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cups&lt;&#x2F;code&gt;: The core printing system.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;ipp-usb&lt;&#x2F;code&gt;: Daemon for treating USB devices as network devices.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;cups-filters&lt;&#x2F;code&gt;: The backend filters.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;for-gsoc-applicants&quot;&gt;For GSoC Applicants&lt;&#x2F;h3&gt;
+&lt;p&gt;If you are looking to join via Google Summer of Code:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Don&#x27;t just ask &quot;How can I help?&quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;Pick a &quot;Good First Issue&quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;Reproduce a bug and post your logs.&lt;&#x2F;li&gt;
+&lt;li&gt;Write a small documentation fix to learn the PR workflow.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;faq&quot;&gt;FAQ&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Q: Is OpenPrinting part of the Linux kernel?&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;No. Printing happens in user space. The kernel only handles the raw communication (USB&#x2F;Network packets). This architecture improves system stability—a bad printer driver cannot crash your kernel.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Q: Will my 15-year-old printer work?&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Likely, yes. While modern workflows prefer IPP, OpenPrinting maintains legacy databases (Foomatic) and Printer Applications to keep older hardware running.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Q: Is IPP secure?&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;IPP supports TLS (IPPS) and access control. In an enterprise environment, always use &lt;code&gt;ipps:&#x2F;&#x2F;&lt;&#x2F;code&gt; and enforce authentication in &lt;code&gt;cupsd.conf&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;&#x2F;h2&gt;
+&lt;p&gt;OpenPrinting quietly powers one of the most important subsystems on Linux. Its focus on standards, driverless workflows, and community collaboration ensures printing remains reliable and future-proof.&lt;&#x2F;p&gt;
+&lt;p&gt;Whether you&#x27;re a sysadmin debugging a queue or a student looking for your first open-source commit, the ecosystem is welcoming and vital.&lt;&#x2F;p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert-soft&quot;&gt;
+  &lt;span&gt;Ready to experiment? Try setting up a local print queue on your machine today using the command line examples above!&lt;&#x2F;span&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;pretty-link-card group&quot;&gt;
+  &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;OpenPrinting&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;block&quot;&gt;
+    &lt;div class=&quot;flex items-start gap-4 p-5&quot;&gt;
+      
+      &lt;div class=&quot;flex-1 min-w-0&quot;&gt;
+        &lt;div class=&quot;flex items-start justify-between gap-2 mb-2&quot;&gt;
+          &lt;h3 class=&quot;pretty-link-title&quot;&gt;
+            OpenPrinting on GitHub
+          &lt;&#x2F;h3&gt;
+          &lt;div class=&quot;pretty-link-icon-wrapper&quot;&gt;
+            &lt;svg class=&quot;pretty-link-icon&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;&gt;
+              &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14&quot;&gt;&lt;&#x2F;path&gt;
+            &lt;&#x2F;svg&gt;
+          &lt;&#x2F;div&gt;
+        &lt;&#x2F;div&gt;
+        
+        &lt;p class=&quot;pretty-link-description&quot;&gt;Source code and issues for the OpenPrinting project&lt;&#x2F;p&gt;
+        
+        &lt;div class=&quot;pretty-link-url&quot;&gt;
+          &lt;svg class=&quot;w-3.5 h-3.5 mr-1.5 opacity-60&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;&gt;
+            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1&quot;&gt;&lt;&#x2F;path&gt;
+          &lt;&#x2F;svg&gt;
+          github.com&amp;#x2F;OpenPrinting
+        &lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>Weekend of Code 2026</title>
         <published>2026-01-07T00:00:00+00:00</published>
         <updated>2026-01-07T00:00:00+00:00</updated>
@@ -117,440 +494,6 @@
 &lt;li&gt;&lt;strong&gt;240+&lt;&#x2F;strong&gt; Participants&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;2.5&lt;&#x2F;strong&gt; hours of coding&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Getting Started with React Hooks: A Complete Guide</title>
-        <published>2025-12-15T00:00:00+00:00</published>
-        <updated>2025-12-15T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/react-hooks-guide/"/>
-        <id>https://cc-club.in/preview/blog/2025/react-hooks-guide/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/react-hooks-guide/">&lt;!-- 
-    BLOG POST CONTENT GUIDE
-    
-    Write your content below using Markdown syntax.
-    
-    MARKDOWN BASICS:
-    - # Heading 1
-    - ## Heading 2
-    - ### Heading 3
-    - **bold text**
-    - *italic text*
-    - [link text](URL)
-    - ![alt text](image-url)
-    - `inline code`
-    - Lists: use - or 1., 2., 3.
-    
-    TIPS FOR GREAT BLOG POSTS:
-    - Start with a clear introduction
-    - Use headings to structure content
-    - Include code examples with proper highlighting
-    - Add images&#x2F;diagrams where helpful
-    - End with a conclusion or call-to-action
-    - Link to relevant resources
---&gt;
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
-&lt;p&gt;React Hooks revolutionized the way we write React components when they were introduced in React 16.8. They allow you to use state and other React features without writing class components, making your code more concise and easier to understand.&lt;&#x2F;p&gt;
-&lt;p&gt;In this comprehensive guide, we&#x27;ll explore the most commonly used React Hooks with practical examples. Whether you&#x27;re new to React or looking to modernize your codebase, this tutorial will help you master Hooks.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;What you&#x27;ll learn:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;What are React Hooks and why they matter&lt;&#x2F;li&gt;
-&lt;li&gt;Understanding &lt;code&gt;useState&lt;&#x2F;code&gt; for state management&lt;&#x2F;li&gt;
-&lt;li&gt;Side effects with &lt;code&gt;useEffect&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Context API with &lt;code&gt;useContext&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Creating custom hooks&lt;&#x2F;li&gt;
-&lt;li&gt;Best practices and common pitfalls&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;what-are-react-hooks&quot;&gt;What Are React Hooks?&lt;&#x2F;h2&gt;
-&lt;p&gt;Hooks are &lt;strong&gt;functions that let you &quot;hook into&quot; React features&lt;&#x2F;strong&gt; from function components. Before Hooks, you had to use class components to access state and lifecycle methods. Now, you can do everything with functions.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Key Benefits:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;✅ Simpler, more readable code&lt;&#x2F;li&gt;
-&lt;li&gt;✅ Better code reusability with custom hooks&lt;&#x2F;li&gt;
-&lt;li&gt;✅ Easier to test&lt;&#x2F;li&gt;
-&lt;li&gt;✅ No need for &lt;code&gt;this&lt;&#x2F;code&gt; keyword&lt;&#x2F;li&gt;
-&lt;li&gt;✅ Better separation of concerns&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;usestate-managing-component-state&quot;&gt;useState: Managing Component State&lt;&#x2F;h2&gt;
-&lt;p&gt;The &lt;code&gt;useState&lt;&#x2F;code&gt; hook lets you add state to function components. It returns an array with two elements: the current state value and a function to update it.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;basic-syntax&quot;&gt;Basic Syntax&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;React&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;{ useState } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;react&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;Counter&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Declare state variable &amp;#39;count&amp;#39; with initial value 0
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setCount] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;You clicked {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt;} times&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;button onClick&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{() =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setCount&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt; + 1)}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        Click &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;me
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;multiple-state-variables&quot;&gt;Multiple State Variables&lt;&#x2F;h3&gt;
-&lt;p&gt;You can use &lt;code&gt;useState&lt;&#x2F;code&gt; multiple times in a single component:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;UserProfile&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setName] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[age&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setAge] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[email&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setEmail] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;handleSubmit &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;e&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    e&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;preventDefault&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;({ name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;age&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;email })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;form onSubmit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{handleSubmit}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
-&lt;&#x2F;span&gt;&lt;span&gt;        value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{name} 
-&lt;&#x2F;span&gt;&lt;span&gt;        onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{(e) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setName&lt;&#x2F;span&gt;&lt;span&gt;(e.target.value)} 
-&lt;&#x2F;span&gt;&lt;span&gt;        placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;Name&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
-&lt;&#x2F;span&gt;&lt;span&gt;        type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;number&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{age} 
-&lt;&#x2F;span&gt;&lt;span&gt;        onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{(e) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setAge&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;Number&lt;&#x2F;span&gt;&lt;span&gt;(e.target.value))} 
-&lt;&#x2F;span&gt;&lt;span&gt;        placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;Age&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
-&lt;&#x2F;span&gt;&lt;span&gt;        type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;email&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;        value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{email} 
-&lt;&#x2F;span&gt;&lt;span&gt;        onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{(e) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setEmail&lt;&#x2F;span&gt;&lt;span&gt;(e.target.value)} 
-&lt;&#x2F;span&gt;&lt;span&gt;        placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;Email&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;button type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;submit&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Submit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;form&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;state-with-objects-and-arrays&quot;&gt;State with Objects and Arrays&lt;&#x2F;h3&gt;
-&lt;p&gt;When working with objects or arrays, always create a new reference:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;TodoList&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[todos&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setTodos] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;([])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;addTodo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;text&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Create new array with spread operator
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setTodos&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;todos&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;{ id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;Date&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;now&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;text&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;completed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;false &lt;&#x2F;span&gt;&lt;span&gt;}])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;toggleTodo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;id&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setTodos&lt;&#x2F;span&gt;&lt;span&gt;(todos&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;todo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; 
-&lt;&#x2F;span&gt;&lt;span&gt;      todo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span&gt;id 
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;todo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;completed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;!&lt;&#x2F;span&gt;&lt;span&gt;todo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;completed }
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;todo
-&lt;&#x2F;span&gt;&lt;span&gt;    ))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;todos&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;todo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;div key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{todo.id}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
-&lt;&#x2F;span&gt;&lt;span&gt;            type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;checkbox&amp;quot; 
-&lt;&#x2F;span&gt;&lt;span&gt;            checked&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{todo.completed}
-&lt;&#x2F;span&gt;&lt;span&gt;            onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{() =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;toggleTodo&lt;&#x2F;span&gt;&lt;span&gt;(todo.id)}
-&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;span style&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{{ 
-&lt;&#x2F;span&gt;&lt;span&gt;            textDecoration&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;todo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;completed &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;line-through&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;none&amp;#39; 
-&lt;&#x2F;span&gt;&lt;span&gt;          }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;            {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;todo&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;text&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      ))}
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;useeffect-handling-side-effects&quot;&gt;useEffect: Handling Side Effects&lt;&#x2F;h2&gt;
-&lt;p&gt;The &lt;code&gt;useEffect&lt;&#x2F;code&gt; hook lets you perform side effects in function components - things like data fetching, subscriptions, or manually changing the DOM.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;basic-usage&quot;&gt;Basic Usage&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;React&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;{ useState&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;useEffect } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;react&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;UserData&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setUser] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;null&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setLoading] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; This runs after every render
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;fetch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;https:&#x2F;&#x2F;api.example.com&#x2F;user&#x2F;1&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;response&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;json&lt;&#x2F;span&gt;&lt;span&gt;())
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;data &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setUser&lt;&#x2F;span&gt;&lt;span&gt;(data)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setLoading&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;      })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Empty dependency array = run only once on mount
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(loading) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;Loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{user.name}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;dependency-array&quot;&gt;Dependency Array&lt;&#x2F;h3&gt;
-&lt;p&gt;The second argument to &lt;code&gt;useEffect&lt;&#x2F;code&gt; is the &lt;strong&gt;dependency array&lt;&#x2F;strong&gt;. It controls when the effect runs:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Run on every render
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;Runs on every render&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Run only once (on mount)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;Runs once on mount&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Run when specific values change
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;Runs when count changes&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[count])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Multiple dependencies
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;Runs when count or name changes&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;name])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;cleanup-functions&quot;&gt;Cleanup Functions&lt;&#x2F;h3&gt;
-&lt;p&gt;Return a cleanup function to avoid memory leaks:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Subscribe to something
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;subscription &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;subscribeToData&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Cleanup function
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    subscription&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;unsubscribe&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;practical-example-document-title&quot;&gt;Practical Example: Document Title&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;PageTitle&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setCount] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;title &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;`You clicked ${&lt;&#x2F;span&gt;&lt;span&gt;count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;} times`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[count])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Update title when count changes
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;button onClick&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{() =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setCount&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt; + 1)}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      Clicked {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;times
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;usecontext-sharing-data-across-components&quot;&gt;useContext: Sharing Data Across Components&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;code&gt;useContext&lt;&#x2F;code&gt; makes it easy to share data between components without prop drilling.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;creating-context&quot;&gt;Creating Context&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;React&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;{ createContext&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;useContext&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;useState } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;react&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Create context
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;ThemeContext &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;createContext&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Provider component
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;ThemeProvider&lt;&#x2F;span&gt;&lt;span&gt;({ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;children &lt;&#x2F;span&gt;&lt;span&gt;}) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[theme&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setTheme] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;toggleTheme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setTheme&lt;&#x2F;span&gt;&lt;span&gt;(theme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;dark&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;ThemeContext&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;Provider value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{{ theme&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;toggleTheme }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;ThemeContext&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;Provider&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Custom hook to use the context
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useTheme&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;context &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useContext&lt;&#x2F;span&gt;&lt;span&gt;(ThemeContext)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;!&lt;&#x2F;span&gt;&lt;span&gt;context) {
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;throw &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;Error&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;useTheme must be used within ThemeProvider&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;context&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Using the context
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;ThemedButton&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;{ theme&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;toggleTheme } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useTheme&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;button 
-&lt;&#x2F;span&gt;&lt;span&gt;      onClick&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{toggleTheme}
-&lt;&#x2F;span&gt;&lt;span&gt;      style&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{{
-&lt;&#x2F;span&gt;&lt;span&gt;        background&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;theme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;#fff&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;#333&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;        color&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;theme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;light&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;#333&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;#fff&amp;#39;
-&lt;&#x2F;span&gt;&lt;span&gt;      }}
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      Toggle &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;Theme &lt;&#x2F;span&gt;&lt;span&gt;(Current: {theme})
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; App component
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;App&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;ThemeProvider&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;ThemedButton &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;ThemeProvider&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;custom-hooks-reusable-logic&quot;&gt;Custom Hooks: Reusable Logic&lt;&#x2F;h2&gt;
-&lt;p&gt;Custom hooks let you extract component logic into reusable functions. They must start with &quot;use&quot;.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;example-usefetch-hook&quot;&gt;Example: useFetch Hook&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useFetch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;url&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[data&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setData] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;null&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setLoading] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[error&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setError] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;null&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;fetch&lt;&#x2F;span&gt;&lt;span&gt;(url)
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;response&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;json&lt;&#x2F;span&gt;&lt;span&gt;())
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;data &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setData&lt;&#x2F;span&gt;&lt;span&gt;(data)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setLoading&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;      })
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;catch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;error &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setError&lt;&#x2F;span&gt;&lt;span&gt;(error)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setLoading&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;      })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[url])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;{ data&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;error }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Using the custom hook
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;UserProfile&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;{ data&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;error } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useFetch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;https:&#x2F;&#x2F;api.example.com&#x2F;user&#x2F;1&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(loading) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;Loading&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(error) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;Error&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;{error&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;message}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{data.name}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;example-uselocalstorage-hook&quot;&gt;Example: useLocalStorage Hook&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useLocalStorage&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;initialValue&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setValue] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;try &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;item &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;window&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;localStorage&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;getItem&lt;&#x2F;span&gt;&lt;span&gt;(key)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;item &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f29e74;&quot;&gt;JSON&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;parse&lt;&#x2F;span&gt;&lt;span&gt;(item) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;initialValue&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;catch &lt;&#x2F;span&gt;&lt;span&gt;(error) {
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;initialValue&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    }
-&lt;&#x2F;span&gt;&lt;span&gt;  })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setStoredValue &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;newValue&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;try &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setValue&lt;&#x2F;span&gt;&lt;span&gt;(newValue)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;      window&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;localStorage&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;setItem&lt;&#x2F;span&gt;&lt;span&gt;(key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f29e74;&quot;&gt;JSON&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;stringify&lt;&#x2F;span&gt;&lt;span&gt;(newValue))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;catch &lt;&#x2F;span&gt;&lt;span&gt;(error) {
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;error&lt;&#x2F;span&gt;&lt;span&gt;(error)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    }
-&lt;&#x2F;span&gt;&lt;span&gt;  }&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;[value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setStoredValue]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Usage
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;App&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setName] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useLocalStorage&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;name&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;input 
-&lt;&#x2F;span&gt;&lt;span&gt;      value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{name}
-&lt;&#x2F;span&gt;&lt;span&gt;      onChange&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{(e) =&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setName&lt;&#x2F;span&gt;&lt;span&gt;(e.target.value)}
-&lt;&#x2F;span&gt;&lt;span&gt;      placeholder&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;Your name (persisted in localStorage)&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&#x2F;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;best-practices-and-common-pitfalls&quot;&gt;Best Practices and Common Pitfalls&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;white-check-mark-do-s&quot;&gt;✅ Do&#x27;s&lt;&#x2F;h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Always call hooks at the top level&lt;&#x2F;strong&gt; - Don&#x27;t call hooks inside loops, conditions, or nested functions&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Use descriptive names&lt;&#x2F;strong&gt; - &lt;code&gt;[user, setUser]&lt;&#x2F;code&gt; is better than &lt;code&gt;[data, setData]&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Keep effects focused&lt;&#x2F;strong&gt; - One effect per concern&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Extract custom hooks&lt;&#x2F;strong&gt; - Reuse logic across components&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Specify dependencies correctly&lt;&#x2F;strong&gt; - Include all values used in the effect&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;h3 id=&quot;x-don-ts&quot;&gt;❌ Don&#x27;ts&lt;&#x2F;h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Don&#x27;t forget cleanup functions&lt;&#x2F;strong&gt; - Prevents memory leaks&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Don&#x27;t mutate state directly&lt;&#x2F;strong&gt; - Always use setter functions&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Don&#x27;t use stale closures&lt;&#x2F;strong&gt; - Be careful with async functions in effects&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Don&#x27;t skip the dependency array&lt;&#x2F;strong&gt; - Leads to unexpected behavior&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;h3 id=&quot;common-mistakes&quot;&gt;Common Mistakes&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; ❌ Wrong: Mutating state directly
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[items&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;setItems] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;([])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;items&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;(newItem)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; DON&amp;#39;T DO THIS
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; ✅ Correct: Create new array
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;setItems&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;items&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;newItem])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; ❌ Wrong: Missing dependencies
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(count)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; count is used but not in dependencies
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; ✅ Correct: Include all dependencies
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useEffect&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(count)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[count])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
-&lt;p&gt;React Hooks have transformed how we write React applications. They make code more readable, reusable, and easier to test. Start with &lt;code&gt;useState&lt;&#x2F;code&gt; and &lt;code&gt;useEffect&lt;&#x2F;code&gt;, get comfortable with &lt;code&gt;useContext&lt;&#x2F;code&gt;, and then create your own custom hooks to encapsulate reusable logic.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Key Takeaways:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hooks let you use React features in function components&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;useState&lt;&#x2F;code&gt; manages component state&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;useEffect&lt;&#x2F;code&gt; handles side effects and lifecycle&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;useContext&lt;&#x2F;code&gt; shares data without prop drilling&lt;&#x2F;li&gt;
-&lt;li&gt;Custom hooks extract reusable logic&lt;&#x2F;li&gt;
-&lt;li&gt;Always follow the Rules of Hooks&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;further-resources&quot;&gt;Further Resources&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;react.dev&#x2F;reference&#x2F;react&quot;&gt;Official React Hooks Documentation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;react-hooks-cheatsheet.com&#x2F;&quot;&gt;React Hooks Cheat Sheet&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;usehooks.com&#x2F;&quot;&gt;UseHooks - Collection of Custom Hooks&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.freecodecamp.org&#x2F;news&#x2F;tag&#x2F;react-hooks&#x2F;&quot;&gt;React Hooks Course on FreeCodeCamp&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Ready to practice?&lt;&#x2F;strong&gt; Try building a simple todo app or weather app using Hooks. The best way to learn is by doing!&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;&lt;strong&gt;Questions or feedback?&lt;&#x2F;strong&gt; Drop a comment below or reach out to me on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;arjun-dev&quot;&gt;GitHub&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;arjun-sharma-dev&quot;&gt;LinkedIn&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Found this helpful?&lt;&#x2F;strong&gt; Share it with your friends and fellow developers!&lt;&#x2F;p&gt;
-&lt;!-- 
-    WRITING YOUR OWN BLOG POST?
-    
-    Use this as a template! Here&#x27;s what to keep:
-    - Clear frontmatter with all required fields
-    - Introduction that sets context
-    - Well-structured sections with headings
-    - Code examples with proper syntax highlighting
-    - Practical examples readers can try
-    - Best practices section
-    - Conclusion summarizing key points
-    - Links to further resources
-    - Author bio&#x2F;contact at the end
-    
-    TIPS:
-    - Write for your target audience (beginner&#x2F;intermediate&#x2F;advanced)
-    - Use real-world examples
-    - Explain &quot;why&quot; not just &quot;how&quot;
-    - Add images&#x2F;diagrams where helpful
-    - Proofread before submitting PR
---&gt;
 </content>
         
     </entry>
@@ -642,52 +585,6 @@
 &lt;li&gt;&lt;strong&gt;25+&lt;&#x2F;strong&gt; Mentors from industry&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Rs. 1,00,000&lt;&#x2F;strong&gt; Prize Pool&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Optimizing React Performance: Tips and Tricks</title>
-        <published>2025-10-25T00:00:00+00:00</published>
-        <updated>2025-10-25T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/react-performance-optimization/"/>
-        <id>https://cc-club.in/preview/blog/2025/react-performance-optimization/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/react-performance-optimization/">&lt;h2 id=&quot;make-react-blazing-fast&quot;&gt;Make React Blazing Fast&lt;&#x2F;h2&gt;
-&lt;p&gt;Slow React app? These optimization techniques will help you achieve better performance.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;key-techniques&quot;&gt;Key Techniques&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;1-react-memo&quot;&gt;1. React.memo&lt;&#x2F;h3&gt;
-&lt;p&gt;Prevent unnecessary re-renders:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;ExpensiveComponent &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;React&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;memo&lt;&#x2F;span&gt;&lt;span&gt;(({ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;data &lt;&#x2F;span&gt;&lt;span&gt;}) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{data}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;2-usememo-usecallback&quot;&gt;2. useMemo &amp;amp; useCallback&lt;&#x2F;h3&gt;
-&lt;p&gt;Memoize expensive computations:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;memoizedValue &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useMemo&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;computeExpensive&lt;&#x2F;span&gt;&lt;span&gt;(a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;b)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;b])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;memoizedCallback &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;useCallback&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;doSomething&lt;&#x2F;span&gt;&lt;span&gt;(a)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[a])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;3-code-splitting&quot;&gt;3. Code Splitting&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;LazyComponent &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;lazy&lt;&#x2F;span&gt;&lt;span&gt;(() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;import&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;.&#x2F;LazyComponent&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;4-virtual-lists&quot;&gt;4. Virtual Lists&lt;&#x2F;h3&gt;
-&lt;p&gt;Use react-window for long lists.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;profiling-tools&quot;&gt;Profiling Tools&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;React DevTools Profiler&lt;&#x2F;li&gt;
-&lt;li&gt;Chrome Performance Tab&lt;&#x2F;li&gt;
-&lt;li&gt;Lighthouse&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;results&quot;&gt;Results&lt;&#x2F;h2&gt;
-&lt;p&gt;Apply these and see 50-70% performance improvement!&lt;&#x2F;p&gt;
 </content>
         
     </entry>
@@ -812,663 +709,6 @@
 &lt;p&gt;🔗 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;ContriHUB&#x2F;repositories&quot;&gt;Explore all repositories&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;✨ Grab your tickets, join the parade of contributors, and let your code shine on the open-source carnival stage!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Cybersecurity Basics Every Developer Should Know</title>
-        <published>2025-09-08T00:00:00+00:00</published>
-        <updated>2025-09-08T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/cybersecurity-basics/"/>
-        <id>https://cc-club.in/preview/blog/2025/cybersecurity-basics/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/cybersecurity-basics/">&lt;h2 id=&quot;security-first&quot;&gt;Security First&lt;&#x2F;h2&gt;
-&lt;p&gt;Security isn&#x27;t optional. Learn to protect your apps from day one.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;common-vulnerabilities&quot;&gt;Common Vulnerabilities&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;1-sql-injection&quot;&gt;1. SQL Injection&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Vulnerable
-&lt;&#x2F;span&gt;&lt;span&gt;db&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;query&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;`SELECT * FROM users WHERE id = ${&lt;&#x2F;span&gt;&lt;span&gt;userId&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;}`&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Safe
-&lt;&#x2F;span&gt;&lt;span&gt;db&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;query&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;SELECT * FROM users WHERE id = ?&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;[userId])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;2-xss-cross-site-scripting&quot;&gt;2. XSS (Cross-Site Scripting)&lt;&#x2F;h3&gt;
-&lt;p&gt;Always sanitize user input before rendering.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;3-csrf-cross-site-request-forgery&quot;&gt;3. CSRF (Cross-Site Request Forgery)&lt;&#x2F;h3&gt;
-&lt;p&gt;Use CSRF tokens for state-changing operations.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;security-checklist&quot;&gt;Security Checklist&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;✅ Use HTTPS everywhere&lt;&#x2F;li&gt;
-&lt;li&gt;✅ Hash passwords (bcrypt)&lt;&#x2F;li&gt;
-&lt;li&gt;✅ Implement rate limiting&lt;&#x2F;li&gt;
-&lt;li&gt;✅ Validate all inputs&lt;&#x2F;li&gt;
-&lt;li&gt;✅ Keep dependencies updated&lt;&#x2F;li&gt;
-&lt;li&gt;✅ Use security headers&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Summer Hackathon 2025: 48 Hours of Innovation and Collaboration</title>
-        <published>2025-08-25T00:00:00+00:00</published>
-        <updated>2025-08-25T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/summer-hackathon-recap/"/>
-        <id>https://cc-club.in/preview/blog/2025/summer-hackathon-recap/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/summer-hackathon-recap/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
-&lt;p&gt;The &lt;strong&gt;CC Club Summer Hackathon 2025&lt;&#x2F;strong&gt; concluded on August 24th with incredible energy, innovative projects, and a strong sense of community. Over 150 students from all years and branches came together for an intense 48-hour coding marathon that pushed creativity, problem-solving, and collaboration to new heights.&lt;&#x2F;p&gt;
-&lt;p&gt;This year&#x27;s theme was &lt;strong&gt;&quot;Tech for Social Good&quot;&lt;&#x2F;strong&gt; - challenging teams to build solutions that address real-world problems and create positive social impact.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;event-highlights&quot;&gt;Event Highlights&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;📊 &lt;strong&gt;150 participants&lt;&#x2F;strong&gt; across 30 teams&lt;&#x2F;li&gt;
-&lt;li&gt;⏱️ &lt;strong&gt;48 hours&lt;&#x2F;strong&gt; of non-stop coding&lt;&#x2F;li&gt;
-&lt;li&gt;💰 &lt;strong&gt;₹1,00,000&lt;&#x2F;strong&gt; in prizes&lt;&#x2F;li&gt;
-&lt;li&gt;🎤 &lt;strong&gt;5 mentors&lt;&#x2F;strong&gt; from industry (Google, Microsoft, Amazon)&lt;&#x2F;li&gt;
-&lt;li&gt;🏆 &lt;strong&gt;3 winning teams&lt;&#x2F;strong&gt; with outstanding projects&lt;&#x2F;li&gt;
-&lt;li&gt;🎁 &lt;strong&gt;10+ sponsor prizes&lt;&#x2F;strong&gt; including cloud credits and swag&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;the-journey-day-by-day&quot;&gt;The Journey: Day by Day&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;day-0-registration-and-kick-off-friday-evening&quot;&gt;Day 0: Registration and Kick-off (Friday Evening)&lt;&#x2F;h3&gt;
-&lt;p&gt;The excitement was palpable as teams checked in at the main auditorium. After a brief opening ceremony, our faculty advisor Prof. Rajesh Kumar welcomed participants and emphasized the importance of learning over winning.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Keynote Speaker&lt;&#x2F;strong&gt;: Vikram Singh (SDE-2, Google, CC Alumni 2020) shared his hackathon experiences and offered valuable advice:&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&quot;Focus on solving a real problem. The best hackathon projects are those that you&#x27;re passionate about. Don&#x27;t try to impress judges with complex tech - impress them with thoughtful solutions.&quot;&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;Teams received their problem statements and immediately dove into brainstorming sessions. The energy in the room was electric!&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;day-1-building-and-prototyping-saturday&quot;&gt;Day 1: Building and Prototyping (Saturday)&lt;&#x2F;h3&gt;
-&lt;p&gt;Teams worked tirelessly through the night, fueled by coffee, snacks, and determination. The venue buzzed with activity:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Morning (6 AM - 12 PM)&lt;&#x2F;strong&gt;: Teams finalized their tech stacks and started building MVPs&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Afternoon (12 PM - 6 PM)&lt;&#x2F;strong&gt;: Mentorship sessions - industry experts provided guidance on architecture, design, and implementation&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Evening (6 PM - 12 AM)&lt;&#x2F;strong&gt;: Feature development and testing&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Night (12 AM - 6 AM)&lt;&#x2F;strong&gt;: Bug fixes and UI polish (yes, many teams pulled all-nighters!)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Mentor Insights&lt;&#x2F;strong&gt;: Our mentors conducted 1-on-1 sessions with teams, offering feedback on:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;System design and architecture choices&lt;&#x2F;li&gt;
-&lt;li&gt;API design best practices&lt;&#x2F;li&gt;
-&lt;li&gt;UI&#x2F;UX improvements&lt;&#x2F;li&gt;
-&lt;li&gt;Deployment strategies&lt;&#x2F;li&gt;
-&lt;li&gt;Presentation tips&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;day-2-final-sprint-and-presentations-sunday&quot;&gt;Day 2: Final Sprint and Presentations (Sunday)&lt;&#x2F;h3&gt;
-&lt;p&gt;The final day was a race against time. Teams scrambled to complete features, fix bugs, and prepare presentations.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Morning (6 AM - 12 PM)&lt;&#x2F;strong&gt;: Last-minute features and bug fixes&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;12 PM - Code Freeze&lt;&#x2F;strong&gt;: All development stops, focus shifts to presentations&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;1 PM - 6 PM&lt;&#x2F;strong&gt;: Team presentations and demos&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;6 PM - 7 PM&lt;&#x2F;strong&gt;: Judge deliberations&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;7 PM - 8 PM&lt;&#x2F;strong&gt;: Award ceremony and closing&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;the-projects-innovation-in-action&quot;&gt;The Projects: Innovation in Action&lt;&#x2F;h2&gt;
-&lt;p&gt;Here are some standout projects that caught everyone&#x27;s attention:&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;1st-place-medal-1st-place-educonnect&quot;&gt;🥇 1st Place: EduConnect&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Team&lt;&#x2F;strong&gt;: CodeCrafters (Rohan, Sneha, Aditya, Meera)&lt;br &#x2F;&gt;
-&lt;strong&gt;Problem&lt;&#x2F;strong&gt;: Rural students lack access to quality educational resources&lt;br &#x2F;&gt;
-&lt;strong&gt;Solution&lt;&#x2F;strong&gt;: A mobile-first platform connecting rural students with volunteer teachers via video calls, offline content caching, and regional language support&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Tech Stack&lt;&#x2F;strong&gt;: React Native, Node.js, MongoDB, WebRTC&lt;br &#x2F;&gt;
-&lt;strong&gt;Prize&lt;&#x2F;strong&gt;: ₹50,000&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Why it Won&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Solved a real, pressing problem&lt;&#x2F;li&gt;
-&lt;li&gt;Well-thought-out offline-first architecture&lt;&#x2F;li&gt;
-&lt;li&gt;Clean, intuitive UI tested with actual users&lt;&#x2F;li&gt;
-&lt;li&gt;Comprehensive presentation with market research&lt;&#x2F;li&gt;
-&lt;li&gt;Working prototype with impressive features&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Judge Feedback&lt;&#x2F;strong&gt;: &quot;This team demonstrated deep understanding of their target users. The offline-first approach shows technical sophistication while keeping user needs front and center.&quot;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;2nd-place-medal-2nd-place-wastewise&quot;&gt;🥈 2nd Place: WasteWise&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Team&lt;&#x2F;strong&gt;: Green Coders (Amit, Divya, Karan)&lt;br &#x2F;&gt;
-&lt;strong&gt;Problem&lt;&#x2F;strong&gt;: Inefficient waste management in urban areas&lt;br &#x2F;&gt;
-&lt;strong&gt;Solution&lt;&#x2F;strong&gt;: AI-powered waste segregation guidance app using computer vision to identify waste types and suggest proper disposal methods&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Tech Stack&lt;&#x2F;strong&gt;: Flutter, Python (FastAPI), TensorFlow, PostgreSQL&lt;br &#x2F;&gt;
-&lt;strong&gt;Prize&lt;&#x2F;strong&gt;: ₹30,000&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Why it Stood Out&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Innovative use of ML for social good&lt;&#x2F;li&gt;
-&lt;li&gt;Trained custom model on local waste types&lt;&#x2F;li&gt;
-&lt;li&gt;Gamification to encourage user engagement&lt;&#x2F;li&gt;
-&lt;li&gt;Partnership potential with municipal corporations&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;3rd-place-medal-3rd-place-meditrack&quot;&gt;🥉 3rd Place: MediTrack&lt;&#x2F;h3&gt;
-&lt;p&gt;&lt;strong&gt;Team&lt;&#x2F;strong&gt;: HealthHackers (Priya S., Rahul, Ananya)&lt;br &#x2F;&gt;
-&lt;strong&gt;Problem&lt;&#x2F;strong&gt;: Medication adherence issues in elderly patients&lt;br &#x2F;&gt;
-&lt;strong&gt;Solution&lt;&#x2F;strong&gt;: Smart medication reminder system with caregiver notifications, pharmacy integration, and health tracking&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Tech Stack&lt;&#x2F;strong&gt;: React, Express.js, MongoDB, Twilio API&lt;br &#x2F;&gt;
-&lt;strong&gt;Prize&lt;&#x2F;strong&gt;: ₹20,000&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Key Features&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;SMS&#x2F;WhatsApp reminders (no smartphone required)&lt;&#x2F;li&gt;
-&lt;li&gt;Caregiver dashboard with real-time alerts&lt;&#x2F;li&gt;
-&lt;li&gt;Pharmacy integration for auto-refills&lt;&#x2F;li&gt;
-&lt;li&gt;Simple, elderly-friendly interface&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;special-category-winners&quot;&gt;Special Category Winners&lt;&#x2F;h2&gt;
-&lt;p&gt;Beyond the top 3, we had several special awards:&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;art-best-ui-ux-design-farmfresh&quot;&gt;🎨 Best UI&#x2F;UX Design: FarmFresh&lt;&#x2F;h3&gt;
-&lt;p&gt;A farm-to-consumer marketplace with stunning design and seamless user experience&lt;br &#x2F;&gt;
-&lt;strong&gt;Prize&lt;&#x2F;strong&gt;: ₹10,000 + Figma Pro subscription&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;bulb-most-innovative-idea-voiceable&quot;&gt;💡 Most Innovative Idea: VoiceAble&lt;&#x2F;h3&gt;
-&lt;p&gt;Accessibility tool for visually impaired users to navigate smartphones using voice commands&lt;br &#x2F;&gt;
-&lt;strong&gt;Prize&lt;&#x2F;strong&gt;: ₹10,000 + AWS credits&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;bug-best-technical-implementation-quantumleap&quot;&gt;🐛 Best Technical Implementation: QuantumLeap&lt;&#x2F;h3&gt;
-&lt;p&gt;Quantum algorithm simulator for educational purposes&lt;br &#x2F;&gt;
-&lt;strong&gt;Prize&lt;&#x2F;strong&gt;: ₹10,000 + GitHub Copilot subscription&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;rocket-best-first-time-team-studybuddy&quot;&gt;🚀 Best First-Time Team: StudyBuddy&lt;&#x2F;h3&gt;
-&lt;p&gt;AI-powered study group matching platform for students&lt;br &#x2F;&gt;
-&lt;strong&gt;Prize&lt;&#x2F;strong&gt;: ₹5,000 + CC Club mentorship&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;key-learnings-and-takeaways&quot;&gt;Key Learnings and Takeaways&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;what-worked-well&quot;&gt;What Worked Well&lt;&#x2F;h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Clear Theme&lt;&#x2F;strong&gt;: &quot;Tech for Social Good&quot; gave teams direction while allowing creativity&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Mentorship&lt;&#x2F;strong&gt;: Industry experts provided invaluable guidance&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Infrastructure&lt;&#x2F;strong&gt;: Reliable WiFi, power backup, and comfortable workspaces&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Food &amp;amp; Refreshments&lt;&#x2F;strong&gt;: 24&#x2F;7 availability kept energy levels high&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Community Spirit&lt;&#x2F;strong&gt;: Teams helped each other debug issues and share resources&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;h3 id=&quot;challenges-faced&quot;&gt;Challenges Faced&lt;&#x2F;h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Time Management&lt;&#x2F;strong&gt;: Many teams struggled with scope management&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Technical Debt&lt;&#x2F;strong&gt;: Quick implementations led to bugs during demos&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Presentation Skills&lt;&#x2F;strong&gt;: Some great projects had weak presentations&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Sleep Deprivation&lt;&#x2F;strong&gt;: All-nighters affected some teams&#x27; performance&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;h3 id=&quot;advice-for-future-participants&quot;&gt;Advice for Future Participants&lt;&#x2F;h3&gt;
-&lt;p&gt;From our winners and participants:&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&quot;Start with a clear MVP. Add features only if time permits. A working basic version beats a half-done ambitious project.&quot; - &lt;strong&gt;Rohan (EduConnect)&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&quot;Practice your pitch! We spent 40 hours coding and 2 hours on presentation. Should&#x27;ve been more balanced.&quot; - &lt;strong&gt;Amit (WasteWise)&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&quot;Don&#x27;t hesitate to ask mentors for help. They&#x27;re there for you!&quot; - &lt;strong&gt;Ananya (MediTrack)&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&quot;Use tools and frameworks you know well. This isn&#x27;t the time to learn a new tech stack.&quot; - &lt;strong&gt;Multiple Teams&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;behind-the-scenes-organizing-team-s-perspective&quot;&gt;Behind the Scenes: Organizing Team&#x27;s Perspective&lt;&#x2F;h2&gt;
-&lt;p&gt;As one of the organizers, I want to share what goes into making a hackathon successful:&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;planning-3-months-before&quot;&gt;Planning (3 Months Before)&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Venue booking and logistics&lt;&#x2F;li&gt;
-&lt;li&gt;Sponsor outreach and partnerships&lt;&#x2F;li&gt;
-&lt;li&gt;Mentor recruitment&lt;&#x2F;li&gt;
-&lt;li&gt;Marketing and registration&lt;&#x2F;li&gt;
-&lt;li&gt;Problem statement finalization&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;week-before&quot;&gt;Week Before&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Final participant confirmations&lt;&#x2F;li&gt;
-&lt;li&gt;Catering arrangements&lt;&#x2F;li&gt;
-&lt;li&gt;Swag bag preparation&lt;&#x2F;li&gt;
-&lt;li&gt;Technical infrastructure testing&lt;&#x2F;li&gt;
-&lt;li&gt;Volunteer briefings&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;during-the-event&quot;&gt;During the Event&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;24&#x2F;7 organizer availability&lt;&#x2F;li&gt;
-&lt;li&gt;Technical support for teams&lt;&#x2F;li&gt;
-&lt;li&gt;Mentor coordination&lt;&#x2F;li&gt;
-&lt;li&gt;Social media updates&lt;&#x2F;li&gt;
-&lt;li&gt;Emergency handling&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Challenges&lt;&#x2F;strong&gt;: WiFi outages at 2 AM, last-minute mentor cancellations, food delivery delays, and sleep deprivation for organizers!&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Rewards&lt;&#x2F;strong&gt;: Seeing teams&#x27; excitement, innovation, friendships formed, and knowing we created a memorable experience.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;community-impact&quot;&gt;Community Impact&lt;&#x2F;h2&gt;
-&lt;p&gt;Beyond the competition, this hackathon strengthened our community:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cross-Branch Collaboration&lt;&#x2F;strong&gt;: CSE students teamed with ECE, ME, and Civil students&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Junior-Senior Bonding&lt;&#x2F;strong&gt;: 1st years learned from 3rd&#x2F;4th years&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Skill Sharing&lt;&#x2F;strong&gt;: Teams taught each other new technologies&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Network Building&lt;&#x2F;strong&gt;: Participants connected with mentors from top companies&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Inspiration&lt;&#x2F;strong&gt;: Many attendees expressed interest in organizing future events&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;post-hackathon-opportunities&quot;&gt;Post-Hackathon Opportunities&lt;&#x2F;h3&gt;
-&lt;p&gt;Several projects received continued support:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;EduConnect&lt;&#x2F;strong&gt;: In talks with an NGO for pilot implementation&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;WasteWise&lt;&#x2F;strong&gt;: Municipal corporation expressed interest&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;MediTrack&lt;&#x2F;strong&gt;: Healthcare startup offered internships to the team&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;thank-you&quot;&gt;Thank You&lt;&#x2F;h2&gt;
-&lt;p&gt;This event wouldn&#x27;t have been possible without:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Sponsors&lt;&#x2F;strong&gt;: TechCorp, CloudServe, DevTools Inc., CodeAcademy&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Mentors&lt;&#x2F;strong&gt;: Vikram Singh (Google), Neha Gupta (Microsoft), Raj Patel (Amazon), Anjali Verma (Startup Founder), Siddharth Malhotra (Freelancer)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Faculty Advisor&lt;&#x2F;strong&gt;: Prof. Rajesh Kumar&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Organizing Team&lt;&#x2F;strong&gt;: 15 dedicated CC Club coordinators and executives&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Volunteers&lt;&#x2F;strong&gt;: 20 students who helped with logistics&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Participants&lt;&#x2F;strong&gt;: For bringing incredible energy and creativity&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;what-s-next&quot;&gt;What&#x27;s Next?&lt;&#x2F;h2&gt;
-&lt;p&gt;Mark your calendars! &lt;strong&gt;Winter Hackathon 2025&lt;&#x2F;strong&gt; is scheduled for &lt;strong&gt;December 20-22&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Stay Connected&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Join our &lt;a href=&quot;https:&#x2F;&#x2F;discord.gg&#x2F;ccclub&quot;&gt;Discord&lt;&#x2F;a&gt; for updates&lt;&#x2F;li&gt;
-&lt;li&gt;Follow us on &lt;a href=&quot;https:&#x2F;&#x2F;instagram.com&#x2F;ccclub_official&quot;&gt;Instagram&lt;&#x2F;a&gt; for behind-the-scenes content&lt;&#x2F;li&gt;
-&lt;li&gt;Star the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ccclub&#x2F;hackathon-2025&quot;&gt;hackathon repository&lt;&#x2F;a&gt; for resources&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Want to participate in the next one?&lt;&#x2F;strong&gt; Start building your skills now:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Form teams early&lt;&#x2F;li&gt;
-&lt;li&gt;Explore our &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ccclub&#x2F;project-ideas&quot;&gt;project ideas repository&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Attend our weekly coding sessions&lt;&#x2F;li&gt;
-&lt;li&gt;Build side projects&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;photo-gallery&quot;&gt;Photo Gallery&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;em&gt;[TODO: Add photo links or embed gallery here]&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Opening ceremony&lt;&#x2F;li&gt;
-&lt;li&gt;Teams brainstorming&lt;&#x2F;li&gt;
-&lt;li&gt;Midnight coding sessions&lt;&#x2F;li&gt;
-&lt;li&gt;Mentor interactions&lt;&#x2F;li&gt;
-&lt;li&gt;Project presentations&lt;&#x2F;li&gt;
-&lt;li&gt;Award ceremony&lt;&#x2F;li&gt;
-&lt;li&gt;Team celebrations&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;&#x2F;h2&gt;
-&lt;p&gt;Organizing and participating in this hackathon reminded me why I love the CC Club community. It&#x27;s not just about coding - it&#x27;s about learning, growing, and supporting each other.&lt;&#x2F;p&gt;
-&lt;p&gt;Whether you&#x27;re a beginner or an expert, there&#x27;s a place for you in our community. The next hackathon could be your breakthrough moment!&lt;&#x2F;p&gt;
-&lt;p&gt;See you at Winter Hackathon 2025! 🚀&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;&lt;strong&gt;About the Author&lt;&#x2F;strong&gt;: Priya Mehra is a Senior Coordinator at Computer Coding Club and a 4th-year CSE student. She&#x27;s passionate about building inclusive tech communities and has organized 10+ events. Connect with her on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;priya-codes&quot;&gt;GitHub&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;priya-mehra&quot;&gt;LinkedIn&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;!-- 
-    EVENT REPORT TEMPLATE NOTES:
-    
-    This is a comprehensive event report example. When writing your own:
-    
-    STRUCTURE:
-    1. Overview with key stats
-    2. Chronological event flow (day by day)
-    3. Highlight winning projects or participants
-    4. Share learnings and challenges
-    5. Thank sponsors and contributors
-    6. Call-to-action for next event
-    
-    TIPS:
-    - Use plenty of headings for scannability
-    - Include quotes from participants
-    - Add photos&#x2F;videos if possible
-    - Share both successes and challenges honestly
-    - Make it engaging, not just factual
-    - Give credit to everyone involved
-    
-    MEDIA:
-    - Replace TODO sections with actual photos
-    - Consider embedding YouTube video of highlights
-    - Create a photo gallery or carousel
-    
-    LENGTH:
-    Event reports can be longer (1500-2500 words) as they document
-    important moments for the community.
---&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>GraphQL vs REST: A Practical Comparison</title>
-        <published>2025-08-14T00:00:00+00:00</published>
-        <updated>2025-08-14T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/graphql-vs-rest/"/>
-        <id>https://cc-club.in/preview/blog/2025/graphql-vs-rest/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/graphql-vs-rest/">&lt;h2 id=&quot;the-api-debate&quot;&gt;The API Debate&lt;&#x2F;h2&gt;
-&lt;p&gt;GraphQL has gained massive popularity, but is it always better than REST? Let&#x27;s compare objectively.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;rest-api&quot;&gt;REST API&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Pros:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Simple and well-understood&lt;&#x2F;li&gt;
-&lt;li&gt;Great caching support&lt;&#x2F;li&gt;
-&lt;li&gt;Works with any HTTP client&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Cons:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Over-fetching data&lt;&#x2F;li&gt;
-&lt;li&gt;Multiple endpoints&lt;&#x2F;li&gt;
-&lt;li&gt;Versioning challenges&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;graphql&quot;&gt;GraphQL&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Pros:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Request exactly what you need&lt;&#x2F;li&gt;
-&lt;li&gt;Single endpoint&lt;&#x2F;li&gt;
-&lt;li&gt;Strong typing&lt;&#x2F;li&gt;
-&lt;li&gt;Real-time with subscriptions&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;strong&gt;Cons:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Caching complexity&lt;&#x2F;li&gt;
-&lt;li&gt;Learning curve&lt;&#x2F;li&gt;
-&lt;li&gt;Query complexity limits&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;when-to-use-each&quot;&gt;When to Use Each&lt;&#x2F;h2&gt;
-&lt;p&gt;Choose REST for simple CRUD apps. Choose GraphQL for complex data requirements with multiple clients.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Building Progressive Web Apps (PWA) in 2025</title>
-        <published>2025-07-22T00:00:00+00:00</published>
-        <updated>2025-07-22T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/progressive-web-apps/"/>
-        <id>https://cc-club.in/preview/blog/2025/progressive-web-apps/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/progressive-web-apps/">&lt;h2 id=&quot;pwas-the-future-of-web-apps&quot;&gt;PWAs: The Future of Web Apps&lt;&#x2F;h2&gt;
-&lt;p&gt;Progressive Web Apps combine the best of web and mobile apps. Install them on your phone, use them offline, receive push notifications!&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;key-features&quot;&gt;Key Features&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Offline Support&lt;&#x2F;strong&gt;: Service Workers cache assets&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Installable&lt;&#x2F;strong&gt;: Add to home screen&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Fast&lt;&#x2F;strong&gt;: Optimized loading&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Engaging&lt;&#x2F;strong&gt;: Push notifications&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;pwa-checklist&quot;&gt;PWA Checklist&lt;&#x2F;h2&gt;
-&lt;p&gt;✅ HTTPS&lt;br &#x2F;&gt;
-✅ Service Worker&lt;br &#x2F;&gt;
-✅ Manifest.json&lt;br &#x2F;&gt;
-✅ Responsive design&lt;br &#x2F;&gt;
-✅ Fast load time&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;service-worker-example&quot;&gt;Service Worker Example&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;self&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;addEventListener&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;fetch&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;event &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;respondWith&lt;&#x2F;span&gt;&lt;span&gt;(
-&lt;&#x2F;span&gt;&lt;span&gt;    caches&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;match&lt;&#x2F;span&gt;&lt;span&gt;(event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;request)
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;response &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;|| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;fetch&lt;&#x2F;span&gt;&lt;span&gt;(event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;request))
-&lt;&#x2F;span&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Full implementation guide coming next week!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>TypeScript: Why JavaScript Developers Should Care</title>
-        <published>2025-06-18T00:00:00+00:00</published>
-        <updated>2025-06-18T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/typescript-why-care/"/>
-        <id>https://cc-club.in/preview/blog/2025/typescript-why-care/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/typescript-why-care/">&lt;h2 id=&quot;the-typescript-revolution&quot;&gt;The TypeScript Revolution&lt;&#x2F;h2&gt;
-&lt;p&gt;TypeScript has become the standard for large-scale JavaScript applications. Here&#x27;s why.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;benefits-of-typescript&quot;&gt;Benefits of TypeScript&lt;&#x2F;h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Type Safety&lt;&#x2F;strong&gt;: Catch errors at compile time&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Better IDE Support&lt;&#x2F;strong&gt;: Intelligent autocomplete&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Refactoring Confidence&lt;&#x2F;strong&gt;: Rename variables safely&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Documentation&lt;&#x2F;strong&gt;: Types serve as inline docs&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;h2 id=&quot;from-javascript-to-typescript&quot;&gt;From JavaScript to TypeScript&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;typescript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-typescript &quot;&gt;&lt;code class=&quot;language-typescript&quot; data-lang=&quot;typescript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; JavaScript
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; TypeScript
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;number &lt;&#x2F;span&gt;&lt;span&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -g&lt;&#x2F;span&gt;&lt;span&gt; typescript
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;tsc&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; --init
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;More examples and patterns coming soon!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Docker for Beginners: Containerize Your Apps</title>
-        <published>2025-05-12T00:00:00+00:00</published>
-        <updated>2025-05-12T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/docker-for-beginners/"/>
-        <id>https://cc-club.in/preview/blog/2025/docker-for-beginners/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/docker-for-beginners/">&lt;h2 id=&quot;why-docker&quot;&gt;Why Docker?&lt;&#x2F;h2&gt;
-&lt;p&gt;Docker revolutionized software deployment. Learn how to package your applications with all dependencies.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;what-is-docker&quot;&gt;What is Docker?&lt;&#x2F;h2&gt;
-&lt;p&gt;Docker is a platform for developing, shipping, and running applications in containers.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;key-concepts&quot;&gt;Key Concepts&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Images&lt;&#x2F;strong&gt;: Blueprint for containers&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Containers&lt;&#x2F;strong&gt;: Running instances of images&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Dockerfile&lt;&#x2F;strong&gt;: Instructions to build an image&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Docker Hub&lt;&#x2F;strong&gt;: Repository for images&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;your-first-dockerfile&quot;&gt;Your First Dockerfile&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;dockerfile&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; node:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#73d0ff;&quot;&gt;16-alpine
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;WORKDIR &lt;&#x2F;span&gt;&lt;span&gt;&#x2F;app
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; package*.json .&#x2F;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;RUN &lt;&#x2F;span&gt;&lt;span&gt;npm install
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; . .
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;EXPOSE &lt;&#x2F;span&gt;&lt;span&gt;3000
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;CMD &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;npm&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;start&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;&#x2F;h2&gt;
-&lt;p&gt;We&#x27;ll deploy this to AWS ECS in the next tutorial!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Git Best Practices for Team Collaboration</title>
-        <published>2025-04-05T00:00:00+00:00</published>
-        <updated>2025-04-05T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/git-best-practices/"/>
-        <id>https://cc-club.in/preview/blog/2025/git-best-practices/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/git-best-practices/">&lt;h2 id=&quot;git-collaboration-essentials&quot;&gt;Git Collaboration Essentials&lt;&#x2F;h2&gt;
-&lt;p&gt;Working in a team? These Git best practices will save you from merge conflicts and confusion.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;key-practices&quot;&gt;Key Practices&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;1-meaningful-commit-messages&quot;&gt;1. Meaningful Commit Messages&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Bad
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; commit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -m &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;fixed stuff&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Good
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; commit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -m &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;fix: resolve authentication bug in login flow&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;2-branch-naming-convention&quot;&gt;2. Branch Naming Convention&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;feature&#x2F;user-authentication&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;bugfix&#x2F;navbar-overflow&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;hotfix&#x2F;security-patch&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;3-pull-before-push&quot;&gt;3. Pull Before Push&lt;&#x2F;h3&gt;
-&lt;p&gt;Always sync with remote before pushing your changes.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;branching-strategies&quot;&gt;Branching Strategies&lt;&#x2F;h2&gt;
-&lt;p&gt;We&#x27;ll explore Git Flow, GitHub Flow, and Trunk-Based Development.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Introduction to Machine Learning with Python</title>
-        <published>2025-03-10T00:00:00+00:00</published>
-        <updated>2025-03-10T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/intro-to-ml-python/"/>
-        <id>https://cc-club.in/preview/blog/2025/intro-to-ml-python/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/intro-to-ml-python/">&lt;h2 id=&quot;welcome-to-machine-learning&quot;&gt;Welcome to Machine Learning&lt;&#x2F;h2&gt;
-&lt;p&gt;Machine Learning is transforming every industry. This guide will help you get started with practical Python examples.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;topics-covered&quot;&gt;Topics Covered&lt;&#x2F;h2&gt;
-&lt;ol&gt;
-&lt;li&gt;What is Machine Learning?&lt;&#x2F;li&gt;
-&lt;li&gt;Setting up your environment&lt;&#x2F;li&gt;
-&lt;li&gt;Data preprocessing&lt;&#x2F;li&gt;
-&lt;li&gt;Linear regression example&lt;&#x2F;li&gt;
-&lt;li&gt;Model evaluation&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;pip install numpy pandas scikit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;learn matplotlib
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;your-first-ml-model&quot;&gt;Your First ML Model&lt;&#x2F;h2&gt;
-&lt;p&gt;We&#x27;ll build a simple linear regression model to predict house prices!&lt;&#x2F;p&gt;
-&lt;p&gt;Full tutorial coming soon...&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>CSS Grid vs Flexbox: When to Use Which</title>
-        <published>2025-02-20T00:00:00+00:00</published>
-        <updated>2025-02-20T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/css-grid-vs-flexbox/"/>
-        <id>https://cc-club.in/preview/blog/2025/css-grid-vs-flexbox/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/css-grid-vs-flexbox/">&lt;h2 id=&quot;the-layout-dilemma&quot;&gt;The Layout Dilemma&lt;&#x2F;h2&gt;
-&lt;p&gt;Choosing between CSS Grid and Flexbox can be confusing. Both are powerful, but they excel in different scenarios.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;quick-answer&quot;&gt;Quick Answer&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Flexbox&lt;&#x2F;strong&gt;: One-dimensional layouts (rows OR columns)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Grid&lt;&#x2F;strong&gt;: Two-dimensional layouts (rows AND columns)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;when-to-use-flexbox&quot;&gt;When to Use Flexbox&lt;&#x2F;h2&gt;
-&lt;p&gt;Perfect for:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Navigation bars&lt;&#x2F;li&gt;
-&lt;li&gt;Card layouts in a single row&lt;&#x2F;li&gt;
-&lt;li&gt;Centering items&lt;&#x2F;li&gt;
-&lt;li&gt;Distributing space between elements&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;when-to-use-grid&quot;&gt;When to Use Grid&lt;&#x2F;h2&gt;
-&lt;p&gt;Best for:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Page layouts&lt;&#x2F;li&gt;
-&lt;li&gt;Image galleries&lt;&#x2F;li&gt;
-&lt;li&gt;Dashboard layouts&lt;&#x2F;li&gt;
-&lt;li&gt;Complex 2D designs&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;practical-examples&quot;&gt;Practical Examples&lt;&#x2F;h2&gt;
-&lt;p&gt;Coming soon with interactive CodePen demos!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Building a REST API with Node.js and Express</title>
-        <published>2025-01-15T00:00:00+00:00</published>
-        <updated>2025-01-15T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2025/nodejs-rest-api/"/>
-        <id>https://cc-club.in/preview/blog/2025/nodejs-rest-api/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2025/nodejs-rest-api/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
-&lt;p&gt;Building RESTful APIs is a fundamental skill for backend developers. In this comprehensive guide, we&#x27;ll create a production-ready REST API using Node.js and Express.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;what-you-ll-learn&quot;&gt;What You&#x27;ll Learn&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Setting up an Express server&lt;&#x2F;li&gt;
-&lt;li&gt;Implementing CRUD operations&lt;&#x2F;li&gt;
-&lt;li&gt;Authentication with JWT&lt;&#x2F;li&gt;
-&lt;li&gt;Error handling middleware&lt;&#x2F;li&gt;
-&lt;li&gt;API documentation with Swagger&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Basic JavaScript knowledge&lt;&#x2F;li&gt;
-&lt;li&gt;Node.js installed (v16+)&lt;&#x2F;li&gt;
-&lt;li&gt;MongoDB setup (local or Atlas)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;project-setup&quot;&gt;Project Setup&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; my-rest-api
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; my-rest-api
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; init&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -y
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install express mongoose jsonwebtoken bcrypt dotenv
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Stay tuned for the complete implementation!&lt;&#x2F;p&gt;
 </content>
         
     </entry>
@@ -1606,179 +846,6 @@
 &lt;&#x2F;ol&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;✨ Gear up for a sleepless night of logic, strategy, and code. Gather your team, push your limits, and prove your mettle at &lt;strong&gt;Insomnia&lt;&#x2F;strong&gt; — where only the sharpest minds stay awake till the end. 🌙🔥&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Introduction to Competitive Programming</title>
-        <published>2024-11-05T00:00:00+00:00</published>
-        <updated>2024-11-05T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2024/competitive-programming-intro/"/>
-        <id>https://cc-club.in/preview/blog/2024/competitive-programming-intro/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2024/competitive-programming-intro/">&lt;h2 id=&quot;why-competitive-programming&quot;&gt;Why Competitive Programming?&lt;&#x2F;h2&gt;
-&lt;p&gt;CP improves problem-solving skills and is essential for cracking coding interviews at top companies.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;&#x2F;h2&gt;
-&lt;h3 id=&quot;platforms&quot;&gt;Platforms&lt;&#x2F;h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Codeforces&lt;&#x2F;li&gt;
-&lt;li&gt;LeetCode&lt;&#x2F;li&gt;
-&lt;li&gt;CodeChef&lt;&#x2F;li&gt;
-&lt;li&gt;AtCoder&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;topics-to-master&quot;&gt;Topics to Master&lt;&#x2F;h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Arrays &amp;amp; Strings&lt;&#x2F;li&gt;
-&lt;li&gt;Sorting &amp;amp; Searching&lt;&#x2F;li&gt;
-&lt;li&gt;Dynamic Programming&lt;&#x2F;li&gt;
-&lt;li&gt;Graphs&lt;&#x2F;li&gt;
-&lt;li&gt;Trees&lt;&#x2F;li&gt;
-&lt;li&gt;Math &amp;amp; Number Theory&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;h2 id=&quot;practice-strategy&quot;&gt;Practice Strategy&lt;&#x2F;h2&gt;
-&lt;p&gt;Start with easy problems, solve 2-3 daily, participate in contests!&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;my-journey&quot;&gt;My Journey&lt;&#x2F;h2&gt;
-&lt;p&gt;I went from beginner to Google SDE through consistent CP practice. You can too!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Linux Commands Every Developer Must Know</title>
-        <published>2024-09-10T00:00:00+00:00</published>
-        <updated>2024-09-10T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2024/linux-commands/"/>
-        <id>https://cc-club.in/preview/blog/2024/linux-commands/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2024/linux-commands/">&lt;h2 id=&quot;master-the-terminal&quot;&gt;Master the Terminal&lt;&#x2F;h2&gt;
-&lt;p&gt;The Linux terminal is a developer&#x27;s superpower. Learn these essential commands!&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;file-operations&quot;&gt;File Operations&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Navigate
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;path&#x2F;to&#x2F;directory
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;pwd
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;ls&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -la
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Create&#x2F;Delete
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; project
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;touch&lt;&#x2F;span&gt;&lt;span&gt; file.txt
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -rf&lt;&#x2F;span&gt;&lt;span&gt; folder&#x2F;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Copy&#x2F;Move
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; source.txt dest.txt
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;mv&lt;&#x2F;span&gt;&lt;span&gt; old.txt new.txt
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;process-management&quot;&gt;Process Management&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# View processes
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;ps&lt;&#x2F;span&gt;&lt;span&gt; aux &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;grep&lt;&#x2F;span&gt;&lt;span&gt; node
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;top
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;htop
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Kill process
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;kill&lt;&#x2F;span&gt;&lt;span&gt; -9 PID
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;network-commands&quot;&gt;Network Commands&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;api.example.com
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;wget&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;file.zip
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;netstat&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -tuln
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;text-processing&quot;&gt;Text Processing&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;grep &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;quot;error&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; logs.txt
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sed &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;s&#x2F;old&#x2F;new&#x2F;g&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt; file.txt
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;awk &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bae67e;&quot;&gt;&amp;#39;{print $1}&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt; data.txt
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Practice these daily!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Understanding JavaScript Async&#x2F;Await</title>
-        <published>2024-06-22T00:00:00+00:00</published>
-        <updated>2024-06-22T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2024/javascript-async-await/"/>
-        <id>https://cc-club.in/preview/blog/2024/javascript-async-await/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2024/javascript-async-await/">&lt;h2 id=&quot;async-javascript-made-easy&quot;&gt;Async JavaScript Made Easy&lt;&#x2F;h2&gt;
-&lt;p&gt;Async&#x2F;await revolutionized how we write asynchronous code in JavaScript.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;before-async-await&quot;&gt;Before Async&#x2F;Await&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;&#x2F;&#x2F; Callback Hell
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserData&lt;&#x2F;span&gt;&lt;span&gt;(userId&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;user&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrders&lt;&#x2F;span&gt;&lt;span&gt;(user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;orders&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrderDetails&lt;&#x2F;span&gt;&lt;span&gt;(orders[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;function&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;details&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5ccfe6;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28779;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(details)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;    })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  })&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;})&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;with-async-await&quot;&gt;With Async&#x2F;Await&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;async function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserOrders&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;userId&lt;&#x2F;span&gt;&lt;span&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;user &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getUserData&lt;&#x2F;span&gt;&lt;span&gt;(userId)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;orders &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrders&lt;&#x2F;span&gt;&lt;span&gt;(user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;id)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;details &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;getOrderDetails&lt;&#x2F;span&gt;&lt;span&gt;(orders[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;])&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;details&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ccc9c2cc;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Much cleaner!&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Getting Started with Python for Data Science</title>
-        <published>2024-03-15T00:00:00+00:00</published>
-        <updated>2024-03-15T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2024/python-data-science/"/>
-        <id>https://cc-club.in/preview/blog/2024/python-data-science/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/preview/blog/2024/python-data-science/">&lt;h2 id=&quot;welcome-to-data-science&quot;&gt;Welcome to Data Science&lt;&#x2F;h2&gt;
-&lt;p&gt;Data Science is one of the hottest fields in tech. Start your journey here with Python!&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;why-python&quot;&gt;Why Python?&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Easy to learn&lt;&#x2F;li&gt;
-&lt;li&gt;Rich ecosystem (NumPy, pandas, scikit-learn)&lt;&#x2F;li&gt;
-&lt;li&gt;Industry standard&lt;&#x2F;li&gt;
-&lt;li&gt;Great community&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;essential-libraries&quot;&gt;Essential Libraries&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;pandas &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;pd
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;numpy &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;np
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;matplotlib&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;pyplot &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffa759;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;plt
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;your-first-analysis&quot;&gt;Your First Analysis&lt;&#x2F;h2&gt;
-&lt;p&gt;We&#x27;ll analyze a real dataset and create visualizations!&lt;&#x2F;p&gt;
 </content>
         
     </entry>
