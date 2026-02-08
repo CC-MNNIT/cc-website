@@ -65,9 +65,9 @@ Web Development is the art of building and maintaining websites and web applicat
 3.  **Interactive Quiz**: A simple JS app that asks 5 questions and shows a score.
 
 **Resources:**
-- **HTML/CSS**: [MDN Web Docs](https://developer.mozilla.org/en-US/) (The Bible of Web Dev), [Flexbox Froggy](https://flexboxfroggy.com/).
-- **JavaScript**: [JavaScript for the Haters](https://www.youtube.com/watch?v=Akk7t6r6M6w) (Video), [JavaScript.info](https://javascript.info/).
-- **Git**: [Git & GitHub Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk).
+- **HTML/CSS**: [Web Development Course](https://www.youtube.com/watch?v=kkOuRJ69BRY).
+- **JavaScript**: [JavaScript Playlist](https://youtube.com/playlist?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&si=E6qWiUFGAIfYD3cf).
+- **Git**: [Git & GitHub Tutorial](https://www.youtube.com/watch?v=q8EevlEpQ2A&t=8645s).
 
 ---
 
@@ -99,9 +99,9 @@ Web Development is the art of building and maintaining websites and web applicat
     - Rebuild your Portfolio using React and Tailwind CSS.
 
 **Resources:**
-- **React**: [Official React Docs](https://react.dev/), [React Course for Beginners](https://www.youtube.com/watch?v=bMknfKXIFA8).
+- **React**: [Official React Docs](https://react.dev/), [React Course for Beginners](https://www.youtube.com/watch?v=bMknfKXIFA8), [React Playlist (Hindi)](https://youtube.com/playlist?list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&si=Zol0G9GRirjYhUeG).
 - **Tailwind CSS**: [Tailwind Docs](https://tailwindcss.com/docs).
-- **Backend**: [Node.js Docs](https://nodejs.org/en/docs/), [Express Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE).
+- **Backend**: [Node.js Docs](https://nodejs.org/en/docs/), [Express Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE), [Backend Playlist (Hindi, includes MongoDB)](https://youtube.com/playlist?list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW&si=Ea-U8nI2_uuOCuoy).
 - **Database**: [MongoDB University](https://university.mongodb.com/).
 
 ---
@@ -155,6 +155,10 @@ Web Development is the art of building and maintaining websites and web applicat
 - [Tailwind CSS](https://tailwindcss.com/docs) - Utility-first CSS (learn after basic CSS).
 
 **YouTube Channels:**
+- **Sheryians Coding School** - Very good for Frontend and Animations.
+- **Chai aur Code** - For Backend and React.
+- **JavaScript Mastery**, **Codesistency**, **GreatStack** - For Projects.
+- **Piyush Garg** - For basic System Design and Advanced Topics.
 - **Traversy Media** - Crash courses on everything.
 - **The Net Ninja** - Deep dives into frameworks.
 - **Web Dev Simplified** - Concepts explained clearly.
@@ -163,7 +167,3 @@ Web Development is the art of building and maintaining websites and web applicat
 **Books:**
 - *You Don't Know JS* by Kyle Simpson (Deep dive into JS mechanics).
 - *Eloquent JavaScript* by Marijn Haverbeke.
-
-**Club Resources:**
-- [PClub Discord](https://discord.gg/pclub) - #web-dev channel for help.
-- Recorded sessions on PClub YouTube channel.
