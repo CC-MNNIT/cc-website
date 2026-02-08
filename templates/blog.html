@@ -61,10 +61,10 @@
 
             <div class="card-meta">
                 {% if page.extra.author %}
-                {% if page.extra.author_github %}
-                <img src="https://github.com/{{ page.extra.author_github }}.png" alt="{{ page.extra.author }}"
-                    class="meta-avatar">
-                <span>By <a href="https://github.com/{{ page.extra.author_github }}" target="_blank"
+                {% if page.extra.author_linkedin %}
+                <img src="https://ui-avatars.com/api/?name={{page.extra.author | replace(from=" ", to="+")}}" alt="{{ page.extra.author }}"
+                    class="meta-avatar">    
+                <span>By <a href="https://www.linkedin.com/in/{{ page.extra.author_linkedin }}/" target="_blank"
                         rel="noopener noreferrer" class="author-link">{{ page.extra.author }}</a></span>
                 {% else %}
                 <img src="https://ui-avatars.com/api/?name={{ page.extra.author | replace(from=" ", to=" +")

@@ -23,6 +23,7 @@ categories = ["tutorial"]
 [extra]
 author = "Sidharth Roy"
 author_github = "ruanyf"
+author_linkedin = "devansh-bajpai-453752372"
 
 # Cover image for social media sharing and post preview
 # Place image in static/images/blog/
