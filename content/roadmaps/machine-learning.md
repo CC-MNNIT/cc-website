@@ -16,143 +16,143 @@ carousel_description = "Journey from Python basics to building production ML mod
 
 # Machine Learning Roadmap
 
-A comprehensive path to becoming a Machine Learning engineer. From fundamentals to deploying production models.
+A comprehensive path to becoming a Machine Learning Engineer, covering the fundamentals through to deploying production models.
 
 ## Overview
 
-This roadmap covers everything you need to become proficient in Machine Learning and Deep Learning.
+This roadmap details the knowledge and skills required to achieve proficiency in Machine Learning and Deep Learning. The timeline is a guideline and can be adjusted based on prior experience and learning pace.
 
-## Phase 1: Mathematics Foundation (4-6 weeks)
+## Phase 1: Mathematics Foundation (4-6 Weeks)
+
+**Note:** The duration depends on existing knowledge from foundational mathematics courses. The focus should be on developing intuition, particularly in visualizing matrices and vectors.
 
 ### Linear Algebra
-- Vectors and matrices
-- Matrix operations
-- Eigenvalues and eigenvectors
-- Applications in ML
+
+- Vectors and Matrices
+- Matrix Operations
+- Eigenvalues and Eigenvectors
+- Applications in Machine Learning
 
 ### Calculus
-- Derivatives and gradients
-- Chain rule
-- Partial derivatives
+
+- Derivatives and Gradients
+- Chain Rule
+- Partial Derivatives
 - Optimization
 
 ### Probability & Statistics
-- Probability distributions
-- Bayes theorem
-- Statistical inference
-- Hypothesis testing
 
-**Resources**:
-- 📚 Khan Academy - Linear Algebra & Calculus
-- 📘 "Mathematics for Machine Learning" (Free PDF)
-- 🎥 3Blue1Brown - Essence of Linear Algebra
+- Probability Distributions
+- Bayes' Theorem
+- Statistical Inference
+- Hypothesis Testing
 
----
+**Resources:**
 
-## Phase 2: Python for ML (3-4 weeks)
-
-### NumPy & Pandas
-- Array operations
-- Data manipulation
-- Statistical functions
-
-### Data Visualization
-- Matplotlib
-- Seaborn
-- Plotly
-
-**Practice**: Kaggle datasets exploration
+- Khan Academy - Linear Algebra & Calculus
+- [Mathematics for Machine Learning (Free PDF)](https://www.kaggle.com/discussions/getting-started/131094)
+- 3Blue1Brown - Essence of Linear Algebra: [YouTube Playlist](https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
 
 ---
 
-## Phase 3: Machine Learning Fundamentals (8-10 weeks)
+## Phase 2: Python for Machine Learning (3-4 Weeks)
+
+### Core Libraries
+
+- **NumPy & Pandas:** Array operations, data manipulation, statistical functions
+- **Data Visualization:** Matplotlib, Seaborn, Plotly
+
+**Practice:**
+
+- Kaggle beginner datasets exploration.
+- Participate in the monthly Kaggle Playground Series for Exploratory Data Analysis (EDA) practice.
+- Practice assignments: [Google Drive Folder](https://drive.google.com/drive/folders/1GIGMKYy8zQsCmcZbnPGfDmM2bOKRnBab?usp=sharing)
+
+---
+
+## Phase 3: Machine Learning Fundamentals (8-10 Weeks)
 
 ### Supervised Learning
-- Linear/Logistic Regression
+
+- Linear and Logistic Regression
 - Decision Trees
 - Random Forests
-- Support Vector Machines
+- Support Vector Machines (SVM)
 - Gradient Boosting (XGBoost, LightGBM)
 
 ### Unsupervised Learning
+
 - K-Means Clustering
 - Hierarchical Clustering
-- PCA
-- t-SNE
+- Principal Component Analysis (PCA)
+- t-Distributed Stochastic Neighbor Embedding (t-SNE)
 
-### Model Evaluation
+### Model Evaluation & Validation
+
 - Cross-validation
-- Metrics (Accuracy, Precision, Recall, F1, AUC-ROC)
+- Metrics: Accuracy, Precision, Recall, F1-Score, AUC-ROC
 - Confusion Matrix
-- Overfitting/Underfitting
+- Overfitting and Underfitting
 
-**Resources**:
-- 📚 Andrew Ng's Machine Learning Course (Coursera)
-- 💻 Scikit-learn Documentation
-- 🏆 Practice: Kaggle Competitions
+**Resources:**
+
+- Andrew Ng's Machine Learning Course (Coursera)
+- Scikit-learn Documentation
+- StatQuest with Josh Starmer for intuition: [YouTube Playlist](https://youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF)
+- **Practice:** Kaggle Competitions. Utilize Kaggle discussions and public notebooks to learn recent methodologies.
 
 ---
 
-## Phase 4: Deep Learning (10-12 weeks)
+## Phase 4: Deep Learning (10-12 Weeks)
 
-### Neural Networks Basics
+### Neural Networks Fundamentals
+
 - Perceptrons
-- Activation functions
+- Activation Functions
 - Backpropagation
-- Optimization algorithms
+- Optimization Algorithms (SGD, Adam, etc.)
 
 ### Frameworks
-- TensorFlow
+
+- TensorFlow / Keras
 - PyTorch
-- Keras
 
-### Architectures
-- CNNs (Computer Vision)
-- RNNs, LSTMs (Sequential Data)
-- Transformers (NLP)
-- GANs (Generative Models)
+### Core Architectures
 
-**Projects**:
-- Image classification
-- Object detection
-- Text generation
-- Sentiment analysis
+- Convolutional Neural Networks (CNNs) for Computer Vision
+- Recurrent Neural Networks (RNNs), LSTMs for Sequential Data
+- Transformers for Natural Language Processing (NLP)
+- Generative Adversarial Networks (GANs)
 
----
+**Project Ideas:**
 
-## Phase 5: Advanced Topics (Ongoing)
+- Image Classification
+- Object Detection
+- Text Generation
+- Sentiment Analysis
 
-### MLOps
-- Model deployment
-- Docker & Kubernetes
-- Monitoring & Logging
-- CI/CD for ML
+**Resources:**
 
-### Production ML
-- Feature engineering at scale
-- Model versioning
-- A/B testing
-- Model serving
-
-**Resources**:
-- 📚 Fast.ai Courses
-- 💻 Papers with Code
-- 🎥 Stanford CS229
+- StatQuest with Josh Starmer for foundational intuition.
+- Andrej Karpathy's Neural Networks series for in-depth understanding: [YouTube Playlist](https://youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
 
 ---
 
-## Recommended Learning Path
+## Recommended Learning Path Timeline
 
-1. **Months 1-2**: Mathematics + Python
-2. **Months 3-5**: ML Fundamentals + Projects
-3. **Months 6-8**: Deep Learning + Framework mastery
-4. **Months 9-12**: Advanced topics + Capstone project
+This timeline is flexible and should be adapted to your learning speed.
 
-## Community Support
+1. **Months 1-2:** Mathematics Foundation and Python for ML.
+2. **Months 3-5:** Machine Learning Fundamentals and applied projects.
+3. **Months 6-8:** Deep Learning and framework mastery.
+4. **Months 9-12:** Advanced topics, specialization, and a project.
 
-- Join our ML study group
-- Weekly paper reading sessions
-- Project showcases
-- Kaggle team competitions
+**Important:** Consistent implementation and coding practice in Python is crucial. Use AI tools for understanding concepts and documentation, but avoid copying code directly.
 
-**Start your ML journey today! 🚀**
+## Community and Support
+
+- Actively participate in ML events and workshops organized by cc club.
+- Join relevant Discord servers.
+- Be active on kaggle.
+
+**Start your Machine Learning journey today.**
