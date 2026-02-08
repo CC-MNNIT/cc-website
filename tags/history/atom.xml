@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Computer Coding Club - history</title>
+    <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/tags/history/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-02-05T00:00:00+00:00</updated>
+    <id>https://cc-club.in/tags/history/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Internet Before Search Engines</title>
+        <published>2026-02-05T00:00:00+00:00</published>
+        <updated>2026-02-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/blog/2026/internet-history/"/>
+        <id>https://cc-club.in/blog/2026/internet-history/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/blog/2026/internet-history/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Hello everyone!
+This is Devansh, and today through this blogpost, I am going to take you back in time. A time when most of us students were not even born. What was about to be born, was a technology so powerful, that it was about to change everything.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-birth-of-internet&quot;&gt;The Birth of Internet&lt;&#x2F;h3&gt;
+&lt;p&gt;Before talking about how it appeared, let&#x27;s talk about why it appeared.
+It started because The US was scared. Scared that it&#x27;s communication system might be destroyed by a nuclear attack. They wanted to build a network that would still work even if a part of it was destroyed. This was in the early 1960s.&lt;&#x2F;p&gt;
+&lt;p&gt;In 1969, It happened.
+ARPANET appeared. It was basically a computer network that connected 4 universities of the United States.
+The first message they sent was &quot;LOGIN&quot;, but the system crashed right after &quot;LO&quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;The data was sent by the concept of packet switching, which is basically sending data in form of packets via multiple paths instead of a single wire.
+For a long time, the internet was used only by universities, researchers and military labs.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;1-january-1983&quot;&gt;1 January, 1983&lt;&#x2F;h3&gt;
+&lt;p&gt;Every machine on ARPANET switched to TCP&#x2F;IP. To keep it simple, let&#x27;s just say different networks could now connect to each other, making a network of networks: &lt;strong&gt;inter-net&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tim-berners-lee-invents-world-wide-web&quot;&gt;Tim Berners Lee invents World Wide Web&lt;&#x2F;h3&gt;
+&lt;p&gt;Back in those days, scientists had data on different computers. There was no easy way to link information, and then he invented HTML, HTTP, URLs and Web Server.
+He helped them solve the scientists&#x27; problem, but he ended up taking an important decision.
+He kept it FREE. He did not patent the World Wide Web. This meant that the normal humans could use it.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;internet-goes-public&quot;&gt;Internet Goes Public&lt;&#x2F;h3&gt;
+&lt;p&gt;Yes, we had the internet Live and accessible for the people. ISPs appeared, people created websites, chat rooms and some early e-commerce also started.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-real-question&quot;&gt;The Real Question&lt;&#x2F;h2&gt;
+&lt;p&gt;Till now, we have discussed briefly how it originated and became accessible to the public.
+Now we will focus on the time period before the search engines came.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-are-search-engines&quot;&gt;What are Search Engines?&lt;&#x2F;h3&gt;
+&lt;p&gt;Search engines basically help us find things on the internet. We are familiar with Linear Search Algorithm, which finds data in a container in linear time, or Binary Search, which finds data inside an ordered container in logarithmic time.
+Similarly, Search Engines internally run some algorithm, and find desired web page for us across millions of web pages.&lt;&#x2F;p&gt;
+&lt;p&gt;So when I say &quot;Internet before Search Engines&quot;, does that look similar to finding &lt;code&gt;target&lt;&#x2F;code&gt; from an array &lt;code&gt;nums[]&lt;&#x2F;code&gt; without any technique?
+EXACTLY!&lt;&#x2F;p&gt;
+&lt;p&gt;In order to find data from an array without any technique, we have to do it manually using our human eyes. This was a similar situation with the internet.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;Internet = [Website1, Website2, Website3, ... millions more]
+&lt;&#x2F;span&gt;&lt;span&gt;Target = &amp;quot;some information&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;and you had no idea which site has it, where that site is and even if that site exists or not. Seems quite tough right? Yes it was.&lt;&#x2F;p&gt;
+&lt;p&gt;Then what did people do?
+They did it manually.
+They clicked links, they browsed directories (We will talk what directories were in a while),
+they found new website URLs in newspapers, television and bookmarked them.&lt;&#x2F;p&gt;
+&lt;p&gt;The linear search analogy I gave was just an example. It&#x27;s actually more closer to:
+Searching an unindexed, unsorted, partially invisible array where you don’t even know the bounds.
+and that&#x27;s worse than O(n)&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-were-web-directories&quot;&gt;What were web directories?&lt;&#x2F;h3&gt;
+&lt;p&gt;Before modern search engines like Google existed, the internet relied on web directories to help users find information. These directories were not powered by algorithms or AI, but by humans manually organizing websites into categories.
+Think of web directories as the table of contents of the early internet.&lt;&#x2F;p&gt;
+&lt;p&gt;Instead of typing a query and getting ranked results, users navigated like this:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;Computers
+&lt;&#x2F;span&gt;&lt;span&gt; └── Programming
+&lt;&#x2F;span&gt;&lt;span&gt;     └── Languages
+&lt;&#x2F;span&gt;&lt;span&gt;         └── C++
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Each category contained links to websites that humans believed belonged there.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;conclusion-life-before-search-engines&quot;&gt;Conclusion: Life Before Search Engines&lt;&#x2F;h3&gt;
+&lt;p&gt;The internet before search engines was not broken — it was simply unorganized. Information existed, but discovering it required patience, memory, and human effort. Users didn’t search the web; they navigated it.&lt;&#x2F;p&gt;
+&lt;p&gt;Finding information felt like exploring an unknown space: browsing directories, following hyperlinks, relying on recommendations, and carefully bookmarking useful pages. This process resembled manually scanning an unindexed dataset — effective at small scale, but increasingly inefficient as the web grew.
+Understanding the internet before search engines reminds us that today’s instant access is not accidental. It is the result of decades of evolution, driven by the same core computer science principle:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;At scale, organization must be algorithmic.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And that single shift reshaped the internet forever.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

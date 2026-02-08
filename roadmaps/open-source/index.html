@@ -558,188 +558,265 @@
         </h1>
         <p class="text-gray-500">Learn to contribute to open source projects and become a maintainer</p>
     </div>
-    <h1 id="open-source-contribution-roadmap">Open Source Contribution Roadmap</h1>
-<p>Your complete guide to becoming an active open source contributor and eventually a project maintainer.</p>
-<h2 id="why-open-source">Why Open Source?</h2>
-<ul>
-<li>Build real-world experience</li>
-<li>Network with developers globally</li>
-<li>Get noticed by employers</li>
-<li>Give back to the community</li>
-<li>Improve your coding skills</li>
-</ul>
-<hr />
-<h2 id="level-1-getting-started-2-3-weeks">Level 1: Getting Started (2-3 weeks)</h2>
-<h3 id="git-github-fundamentals">Git &amp; GitHub Fundamentals</h3>
-<ul>
-<li>Git basics (clone, commit, push, pull)</li>
-<li>Branching and merging</li>
-<li>Pull requests</li>
-<li>Code reviews</li>
-<li>GitHub profile optimization</li>
-</ul>
-<h3 id="finding-projects">Finding Projects</h3>
-<ul>
-<li>GitHub Explore</li>
-<li>Good First Issue labels</li>
-<li>Up For Grabs</li>
-<li>CodeTriage</li>
-<li>First Timers Only</li>
-</ul>
-<p><strong>Resources</strong>:</p>
-<ul>
-<li>📚 Git Book (free)</li>
-<li>🎥 GitHub Learning Lab</li>
-<li>💻 Practice: Fork and modify a project</li>
-</ul>
-<hr />
-<h2 id="level-2-making-your-first-contribution-3-4-weeks">Level 2: Making Your First Contribution (3-4 weeks)</h2>
-<h3 id="types-of-contributions">Types of Contributions</h3>
-<ul>
-<li>Documentation fixes</li>
-<li>Bug reports</li>
-<li>Code contributions</li>
-<li>Tests</li>
-<li>Translations</li>
-</ul>
-<h3 id="contribution-workflow">Contribution Workflow</h3>
+    <h2 id="phase-1-the-mindset-preparation">Phase 1: The Mindset &amp; Preparation</h2>
+<p><em>Before you write a single line of code, you must understand the landscape.</em></p>
+<h3 id="1-1-what-is-open-source">1.1 What is Open Source?</h3>
+<p>Open source is defined by three pillars:</p>
 <ol>
-<li>Find an issue</li>
-<li>Comment and ask to be assigned</li>
-<li>Fork the repository</li>
-<li>Create a feature branch</li>
-<li>Make changes</li>
-<li>Write tests</li>
-<li>Submit PR</li>
-<li>Address review comments</li>
+<li><strong>License</strong>: Legal permission to use, modify, and distribute.</li>
+<li><strong>Community</strong>: The people (maintainers, contributors, users) collaborating.</li>
+<li><strong>Culture</strong>: Transparency, asynchronous collaboration, and meritocracy.</li>
 </ol>
-<p><strong>First Contribution Checklist</strong>:</p>
+<h3 id="1-2-the-reality-check-expectations-vs-reality">1.2 The Reality Check (Expectations vs. Reality)</h3>
+<table><thead><tr><th style="text-align: left">Expectation</th><th style="text-align: left">Reality</th></tr></thead><tbody>
+<tr><td style="text-align: left">"I'll get hired immediately."</td><td style="text-align: left">Contribution build a portfolio over <em>time</em>. It's a marathon.</td></tr>
+<tr><td style="text-align: left">"My code will merge in 2 days."</td><td style="text-align: left">Reviews take 1-3 weeks. Patience is key.</td></tr>
+<tr><td style="text-align: left">"Maintainers will mentor me."</td><td style="text-align: left">Maintainers are busy volunteers. Research first, then ask.</td></tr>
+<tr><td style="text-align: left">"I need to be an expert."</td><td style="text-align: left">You can start with docs, tests, and small fixes.</td></tr>
+</tbody></table>
+<blockquote>
+<p><strong>The 1% Rule</strong>: After 2 years, only ~1% of starters become maintainers. The differentiator is <strong>resiliency</strong> and <strong>consistency</strong>, not raw coding talent.</p>
+</blockquote>
+<hr />
+<h2 id="phase-2-setting-up-your-forge">Phase 2: Setting Up Your Forge</h2>
+<p><em>A professional setup signals competence to maintainers.</em></p>
+<h3 id="2-1-git-github-essentials">2.1 Git &amp; GitHub Essentials</h3>
+<p>You cannot contribute effectively without mastering these basics:</p>
 <ul>
-<li>✅ Read CONTRIBUTING.md</li>
-<li>✅ Follow code style</li>
-<li>✅ Write clear commit messages</li>
-<li>✅ Add tests if needed</li>
-<li>✅ Update documentation</li>
+<li><strong>The Big 3 Commands</strong>: <code>git add</code>, <code>git commit</code>, <code>git push</code>.</li>
+<li><strong>Branching</strong>: Never commit to <code>main</code>. Use <code>feature/my-cool-feature</code>.</li>
+<li><strong>Syncing</strong>: Learn to keep your fork updated (<code>git pull upstream main</code>) to avoid conflicts.</li>
+<li><strong>Safety</strong>: Use <code>--force-with-lease</code> instead of <code>--force</code> if you must rewrite history.</li>
+</ul>
+<h3 id="2-2-environment-setup">2.2 Environment Setup</h3>
+<ul>
+<li><strong>Editor</strong>: VS Code is the standard. Extensions like <strong>GitLens</strong> and <strong>Error Lens</strong> are highly recommended.</li>
+<li><strong>Authentication</strong>: Set up <strong>SSH keys</strong> for GitHub (password auth is dead).</li>
+<li><strong>Dependencies</strong>: Know your runtime (Node.js, Python, etc.) and how to install project deps (<code>npm install</code>, <code>pip install</code>).</li>
+</ul>
+<h3 id="2-3-the-trust-based-profile">2.3 The Trust-Based Profile</h3>
+<p>Maintainers judge you by your profile in 3 seconds.</p>
+<ul>
+<li>✅ Real name/username</li>
+<li>✅ Clear profile picture</li>
+<li>✅ Informative Bio</li>
+<li>✅ Pinned repositories (show your best work)</li>
+<li>❌ Default egg avatar = "Spam account"</li>
 </ul>
 <hr />
-<h2 id="level-3-regular-contributor-2-3-months">Level 3: Regular Contributor (2-3 months)</h2>
-<h3 id="building-reputation">Building Reputation</h3>
+<h2 id="phase-3-finding-your-battlefield">Phase 3: Finding Your Battlefield</h2>
+<p><em>Don't just pick a random repo. Pick one you can survive in.</em></p>
+<h3 id="3-1-the-healthy-project-checklist">3.1 The "Healthy Project" Checklist</h3>
+<p>Use the <strong>6-Point Health Check</strong> before investing time:</p>
+<ol>
+<li><input disabled="" type="checkbox"/>
+<strong>Recent Commits</strong>: Last commit &lt; 2 weeks ago?</li>
+<li><input disabled="" type="checkbox"/>
+<strong>Responsiveness</strong>: Are issues/PRs replied to within a week?</li>
+<li><input disabled="" type="checkbox"/>
+<strong>Documentation</strong>: Does it have a good README and CONTRIBUTING.md?</li>
+<li><input disabled="" type="checkbox"/>
+<strong>Labels</strong>: Are there <code>good first issue</code> or <code>help wanted</code> labels?</li>
+<li><input disabled="" type="checkbox"/>
+<strong>CI/CD</strong>: Do they have automated tests running?</li>
+<li><input disabled="" type="checkbox"/>
+<strong>Community</strong>: Is there a Discord/Slack/Discussions tab?</li>
+</ol>
+<h3 id="3-2-where-to-look">3.2 Where to Look</h3>
 <ul>
-<li>Consistent contributions</li>
-<li>Help others in issues</li>
-<li>Participate in discussions</li>
-<li>Review pull requests</li>
-<li>Report bugs with reproductions</li>
-</ul>
-<h3 id="technical-skills">Technical Skills</h3>
-<ul>
-<li>Writing clean, maintainable code</li>
-<li>Following project conventions</li>
-<li>Writing comprehensive tests</li>
-<li>Documentation best practices</li>
-</ul>
-<p><strong>Target</strong>: 10+ merged PRs</p>
-<hr />
-<h2 id="level-4-core-contributor-3-6-months">Level 4: Core Contributor (3-6 months)</h2>
-<h3 id="advanced-contributions">Advanced Contributions</h3>
-<ul>
-<li>Major features</li>
-<li>Refactoring</li>
-<li>Performance improvements</li>
-<li>Architecture decisions</li>
-</ul>
-<h3 id="community-engagement">Community Engagement</h3>
-<ul>
-<li>Mentor new contributors</li>
-<li>Triage issues</li>
-<li>Help with releases</li>
-<li>Speak at meetups</li>
-</ul>
-<p><strong>Target</strong>: Become a trusted contributor</p>
-<hr />
-<h2 id="level-5-maintainer-6-months">Level 5: Maintainer (6+ months)</h2>
-<h3 id="responsibilities">Responsibilities</h3>
-<ul>
-<li>Review pull requests</li>
-<li>Manage issues</li>
-<li>Plan roadmap</li>
-<li>Release management</li>
-<li>Community moderation</li>
-</ul>
-<h3 id="skills-needed">Skills Needed</h3>
-<ul>
-<li>Project management</li>
-<li>Technical leadership</li>
-<li>Communication</li>
-<li>Decision making</li>
-</ul>
-<p><strong>Goal</strong>: Start or maintain your own project</p>
-<hr />
-<h2 id="best-practices">Best Practices</h2>
-<h3 id="do-s">Do's</h3>
-<p>✅ Read documentation first
-✅ Start with small contributions
-✅ Communicate clearly
-✅ Be patient and respectful
-✅ Follow project guidelines</p>
-<h3 id="don-ts">Don'ts</h3>
-<p>❌ Submit without testing
-❌ Ignore review feedback
-❌ Make breaking changes without discussion
-❌ Spam maintainers
-❌ Give up after first rejection</p>
-<hr />
-<h2 id="recommended-projects-for-beginners">Recommended Projects for Beginners</h2>
-<h3 id="documentation-friendly">Documentation-Friendly</h3>
-<ul>
-<li>freeCodeCamp</li>
-<li>The Odin Project</li>
-<li>MDN Web Docs</li>
-</ul>
-<h3 id="beginner-friendly-code">Beginner-Friendly Code</h3>
-<ul>
-<li>First Contributions</li>
-<li>Exercism</li>
-<li>Public APIs</li>
-</ul>
-<h3 id="cc-club-projects">CC Club Projects</h3>
-<ul>
-<li>Check our GitHub organization</li>
-<li>ContriHub event projects</li>
-<li>Club website</li>
+<li><strong>GitHub Explore</strong>: Tailored recommendations.</li>
+<li><strong>GoodFirstIssue.dev</strong>: Curated beginner issues.</li>
+<li><strong>CodeTriage</strong>: Subscribe to repos to get issue alerts.</li>
+<li><strong>Your Dependency Tree</strong>: Contribute to libraries you already use.</li>
 </ul>
 <hr />
-<h2 id="tools-resources">Tools &amp; Resources</h2>
-<p><strong>Essential Tools</strong>:</p>
+<h2 id="phase-4-the-first-strike-your-contribution">Phase 4: The First Strike (Your Contribution)</h2>
+<p><em>Execution matters more than intent.</em></p>
+<h3 id="4-1-the-golden-workflow">4.1 The Golden Workflow</h3>
+<pre style="background-color:#212733;color:#ccc9c2;"><code><span>┌─────────────────────────────────────────────────────────────────────────────┐
+</span><span>│                       GIT BRANCH WORKFLOW &amp; PR PROCESS                      │
+</span><span>├─────────────────────────────────────────────────────────────────────────────┤
+</span><span>│                                                                             │
+</span><span>│   [Fork &amp; Clone]                                                            │
+</span><span>│         │                                                                   │
+</span><span>│         │ Create local copy of repository                                   │
+</span><span>│         ▼                                                                   │
+</span><span>│   ┌─────────────────┐                                                       │
+</span><span>│   │ Create Branch   │                                                       │
+</span><span>│   │ (feature/fix)   │                                                       │
+</span><span>│   └────────┬────────┘                                                       │
+</span><span>│            │                                                                │
+</span><span>│            │ Branch off from main                                           │
+</span><span>│            ▼                                                                │
+</span><span>│   ┌─────────────────────┐                                                   │
+</span><span>│   │ Write Code &amp; Test   │ ◄──┐                                              │
+</span><span>│   │ (Development cycle) │    │                                              │
+</span><span>│   └──────────┬──────────┘    │                                              │
+</span><span>│              │                │                                             │
+</span><span>│              │ Code complete  │ Request Changes                             │
+</span><span>│              ▼                │                                             │
+</span><span>│   ┌─────────────────┐        │                                              │
+</span><span>│   │ Push to Origin  │        │                                              │
+</span><span>│   │ (Remote branch) │        │                                              │
+</span><span>│   └────────┬────────┘        │                                              │
+</span><span>│            │                  │                                             │
+</span><span>│            │ Push complete    │                                             │
+</span><span>│            ▼                  │                                             │
+</span><span>│   ┌──────────────────┐       │                                              │
+</span><span>│   │ Open Pull Request│       │                                              │
+</span><span>│   │ (PR to main)     │       │                                              │
+</span><span>│   └────────┬─────────┘       │                                              │
+</span><span>│            │                  │                                             │
+</span><span>│            │ PR opened        │                                             │
+</span><span>│            ▼                  │                                             │
+</span><span>│        ╔═══════════════════╗ │                                              │
+</span><span>│        ║ Review Decision   ║ │                                              │
+</span><span>│        ║ (Code review)     ║─┘                                              │
+</span><span>│        ╚════════┬══════════╝                                                │
+</span><span>│                 │                                                           │
+</span><span>│        ┌────────┴────────┐                                                  │
+</span><span>│        │                 │                                                  │
+</span><span>│   Approved          Closed/Rejected                                         │
+</span><span>│        │                 │                                                  │
+</span><span>│        ▼                 ▼                                                  │
+</span><span>│   ┌─────────┐      ┌─────────┐                                              │
+</span><span>│   │ Merged  │      │   End   │                                              │
+</span><span>│   │ (Success)│      │ (Close) │                                             │
+</span><span>│   └─────────┘      └─────────┘                                              │
+</span><span>│                                                                             │
+</span><span>└─────────────────────────────────────────────────────────────────────────────┘
+</span></code></pre>
+<ol>
+<li><strong>Fork</strong> the repository to your account.</li>
+<li><strong>Clone</strong> your fork locally.</li>
+<li><strong>Add Upstream</strong> remote (<code>git remote add upstream [original-repo-url]</code>).</li>
+<li><strong>Create Branch</strong> (<code>git checkout -b fix/issue-123</code>).</li>
+<li><strong>Code &amp; Test</strong> locally.</li>
+<li><strong>Push</strong> to your fork.</li>
+<li><strong>Open PR</strong> to the original repo.</li>
+</ol>
+<h3 id="4-2-reading-code">4.2 Reading Code</h3>
+<p>Don't read line-by-line. Use the <strong>Bird's Eye Method</strong>:</p>
+<ol>
+<li>Read <code>package.json</code> / <code>requirements.txt</code> (Dependencies).</li>
+<li>Identify Entry Points (<code>index.js</code>, <code>main.py</code>).</li>
+<li>Map the Folder Structure.</li>
+<li>Trace one feature from UI to Database.</li>
+</ol>
+<h3 id="4-3-claiming-issues">4.3 Claiming Issues</h3>
 <ul>
-<li>Git &amp; GitHub/GitLab</li>
-<li>VS Code with extensions</li>
-<li>GitHub CLI</li>
-<li>Issue trackers</li>
-</ul>
-<p><strong>Learning Resources</strong>:</p>
-<ul>
-<li>📚 "How to Contribute to Open Source" (Open Source Guides)</li>
-<li>💻 GitHub Skills</li>
-<li>🎥 YouTube: "First Contributions Tutorial"</li>
+<li><strong>Don't</strong> just say "I'll do it".</li>
+<li><strong>Do</strong> say: "Hi, I'd like to help. My plan is to modify <code>X</code> function in <code>Y</code> file to handle <code>Z</code> case. Does that sound right?"</li>
+<li><em>Why?</em> It proves you read the code and saves everyone time if you're wrong.</li>
 </ul>
 <hr />
-<h2 id="success-stories">Success Stories</h2>
-<p>Many CC Club alumni got their first tech job through their open source work:</p>
+<h2 id="phase-5-navigating-issues-prs">Phase 5: Navigating Issues &amp; PRs</h2>
+<p><em>This is where most people fail. Communication is the bottleneck.</em></p>
+<h3 id="5-1-writing-perfection-issues">5.1 Writing Perfection Issues</h3>
+<p><strong>The 5-Minute Rule</strong>: If a maintainer can't reproduce your bug in 5 minutes, they will close it.</p>
 <ul>
-<li>Priya: Contributor → Maintainer → Google SWE</li>
-<li>Rahul: 100+ PRs → Microsoft internship</li>
-<li>Ananya: Created popular library → Startup founder</li>
+<li><strong>Template</strong>:
+<ul>
+<li><strong>Environment</strong>: OS, Version, Browser.</li>
+<li><strong>Steps to Reproduce</strong>: 1, 2, 3...</li>
+<li><strong>Expected vs Actual</strong>: Clear contrast.</li>
+<li><strong>Logs/Screenshots</strong>: Evidence.</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-the-perfect-pr-description">5.2 The Perfect PR Description</h3>
+<p>Pass the <strong>3-Second Test</strong> (Title + Files Changed + Description).</p>
+<ul>
+<li><strong>Title</strong>: Use conventional commits (<code>fix(auth): handle null token</code>).</li>
+<li><strong>Body</strong>:
+<ul>
+<li><strong>Problem</strong>: What was broken? (Link issue #123)</li>
+<li><strong>Solution</strong>: How did you fix it?</li>
+<li><strong>Testing</strong>: How did you verify it? (Screenshots for UI).</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-3-review-etiquette">5.3 Review Etiquette</h3>
+<ul>
+<li><strong>Code Review is a Gift</strong>: It's free mentorship.</li>
+<li><strong>Handling Nits</strong>: Just fix them. Don't argue about commas.</li>
+<li><strong>Handling Blocks</strong>: Ask clarifying questions. "I chose X because Y. Does that align with your goal?"</li>
+<li><strong>The Iteration Loop</strong>: Batch your fixes. Don't push 1 commit per comment. Push a set of fixes and reply "Ready for re-review".</li>
 </ul>
 <hr />
-<h2 id="join-our-community">Join Our Community</h2>
+<h2 id="phase-6-the-human-element-communication">Phase 6: The Human Element (Communication)</h2>
+<p><em>Open source is 10% code, 90% communication.</em></p>
+<h3 id="6-1-async-mastery">6.1 Async Mastery</h3>
 <ul>
-<li>ContriHub: Annual open source event</li>
-<li>Weekly contribution drives</li>
-<li>Maintainer mentorship program</li>
-<li>Showcase your contributions</li>
+<li><strong>No "Hi"</strong>: Don't just say "Hi" and wait. State your question immediately.</li>
+<li><strong>No "ASAP"</strong>: Everyone is a volunteer. Expect 24-48h delays.</li>
+<li><strong>Public Default</strong>: Keep discussions in Issues/PRs, not DMs. It helps others learn.</li>
 </ul>
-<p><strong>Start contributing today! The community is waiting for you. 🚀</strong></p>
+<h3 id="6-2-asking-for-help-the-smart-way">6.2 Asking for Help (The Smart Way)</h3>
+<p>Don't ask "It's broken, help."
+<strong>Do ask</strong>:</p>
+<blockquote>
+<p>"I'm trying to do X. I tried approach A and got error B. I looked at docs section C but it didn't help. My environment is D. What am I missing?"</p>
+</blockquote>
+<h3 id="6-3-handling-rejection">6.3 Handling Rejection</h3>
+<p>It happens to everyone (even Linus Torvalds).</p>
+<ul>
+<li><strong>Soft Close</strong>: "Not in roadmap." -&gt; Move on.</li>
+<li><strong>Rework Needed</strong>: "Change approach." -&gt; Great learning opportunity.</li>
+<li><strong>Your Response</strong>: "Thanks for the feedback. I understand. I'll close this." (Professionalism &gt; Ego).</li>
+</ul>
+<hr />
+<h2 id="phase-7-the-long-game">Phase 7: The Long Game</h2>
+<p><em>From Contributor to Maintainer.</em></p>
+<h3 id="7-1-the-30-day-action-plan">7.1 The 30-Day Action Plan</h3>
+<ul>
+<li><strong>Week 1</strong>: Research, Setup, Exploration.</li>
+<li><strong>Week 2</strong>: Join Community, Deep Dive into Code.</li>
+<li><strong>Week 3</strong>: Find "Good First Issue", Write Solution.</li>
+<li><strong>Week 4</strong>: Submit PR, Iterate on Feedback, Merge.</li>
+</ul>
+<h3 id="7-2-traits-of-the-top-1">7.2 Traits of the Top 1%</h3>
+<ol>
+<li><strong>Long-term thinking</strong>: They stick around for years.</li>
+<li><strong>Generosity</strong>: They help newcomers in chats.</li>
+<li><strong>Quality over Quantity</strong>: 5 solid PRs &gt; 50 typo fixes.</li>
+<li><strong>Ownership</strong>: They fix bugs they didn't create.</li>
+</ol>
+<h3 id="7-3-avoiding-burnout">7.3 Avoiding Burnout</h3>
+<ul>
+<li>Set boundaries (e.g., "I contribute on Tuesdays").</li>
+<li>It's okay to say "I can't finish this".</li>
+<li>Pick projects you actually use.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Final Thought</strong>: The hardest part is the first PR. The second hardest is the first rejection. Once you conquer those, you are unstoppable. Good luck!</p>
+</blockquote>
+<h2 id="phase-8-the-accelerators-open-source-programs">Phase 8: The Accelerators (Open Source Programs)</h2>
+<p><em>Paid, structured mentorship programs that fast-track your career.</em></p>
+<h3 id="8-1-program-landscape">8.1 Program Landscape</h3>
+<p>Don't just rely on serendipity. These programs offer stipends and guaranteed mentorship.</p>
+<table><thead><tr><th style="text-align: left">Program</th><th style="text-align: left">Stipend</th><th style="text-align: left">Duration</th><th style="text-align: left">Eligibility</th><th style="text-align: left">Competition</th><th style="text-align: left">Best For</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>GSoC</strong></td><td style="text-align: left">$750 - $3000</td><td style="text-align: left">10-22 wks</td><td style="text-align: left">Students 18+</td><td style="text-align: left">High (20%)</td><td style="text-align: left">Prestige &amp; Students</td></tr>
+<tr><td style="text-align: left"><strong>LFX</strong></td><td style="text-align: left">$3000</td><td style="text-align: left">12-24 wks</td><td style="text-align: left">Everyone</td><td style="text-align: left">Medium (25%)</td><td style="text-align: left">Enterprise/Cloud</td></tr>
+<tr><td style="text-align: left"><strong>Outreachy</strong></td><td style="text-align: left">$7k</td><td style="text-align: left">13 wks</td><td style="text-align: left">Underrepresented</td><td style="text-align: left">High (10%)</td><td style="text-align: left">Diversity &amp; Support</td></tr>
+<tr><td style="text-align: left"><strong>C4GT</strong></td><td style="text-align: left">₹50k - ₹1L</td><td style="text-align: left">10-12 wks</td><td style="text-align: left">India Students</td><td style="text-align: left">Medium</td><td style="text-align: left">India Civic Tech</td></tr>
+</tbody></table>
+<h3 id="8-2-which-one-for-you">8.2 Which One For You?</h3>
+<ul>
+<li><strong>Google Summer of Code (GSoC)</strong>: The gold standard. Best if you are a student and want maximum resume value. Hardest to get into.</li>
+<li><strong>LFX Mentorship (Linux Foundation)</strong>: Excellent for "real world" cloud/infrastructure projects (Kubernetes, CNCF). Open to non-students.</li>
+<li><strong>Outreachy</strong>: The highest stipend and best mentorship structure. Specifically for women and underrepresented groups in tech.</li>
+</ul>
+<h3 id="8-3-strategic-timeline">8.3 Strategic Timeline</h3>
+<ul>
+<li><strong>Jan-Mar</strong>: Application Period (GSoC, Outreachy).</li>
+<li><strong>May-Aug</strong>: Coding Period (GSoC, Outreachy).</li>
+<li><strong>Year-round</strong>: LFX (Spring, Summer, Fall terms).</li>
+</ul>
+<blockquote>
+<p><strong>Pro Tip</strong>: Start contributing 3 months <em>before</em> applications open. 90% of selected candidates were already active in the community.</p>
+</blockquote>
 
 
     
@@ -808,7 +885,7 @@
                                 <div class="next-nav-item">
                                     
     
-        <a class="nav-button nav-button-next group" href="https://cc-club.in/roadmaps/interview-prep/">
+        <a class="nav-button nav-button-next group" href="https://cc-club.in/roadmaps/devops/">
             <div class="nav-button-content">
                 <div class="nav-button-direction">
                     <span class="nav-button-label">Next</span>
@@ -816,7 +893,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </div>
-                <div class="nav-button-title">Technical Interview Preparation</div>
+                <div class="nav-button-title">DevOps Roadmap</div>
             </div>
         </a>
     
@@ -838,52 +915,187 @@
                     
                     <details class="toc-details" >
                         <summary>
-                            <a href="https://cc-club.in/roadmaps/open-source/#open-source-contribution-roadmap" class="toc-link">Open Source Contribution Roadmap</a>
+                            <a href="https://cc-club.in/roadmaps/open-source/#phase-1-the-mindset-preparation" class="toc-link">Phase 1: The Mindset &amp; Preparation</a>
                         </summary>
                         <ul>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/open-source/#why-open-source" class="toc-link">Why Open Source?</a>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#1-1-what-is-open-source" class="toc-link">1.1 What is Open Source?</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/open-source/#level-1-getting-started-2-3-weeks" class="toc-link">Level 1: Getting Started (2-3 weeks)</a>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#1-2-the-reality-check-expectations-vs-reality" class="toc-link">1.2 The Reality Check (Expectations vs. Reality)</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/open-source/#phase-2-setting-up-your-forge" class="toc-link">Phase 2: Setting Up Your Forge</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#2-1-git-github-essentials" class="toc-link">2.1 Git &amp; GitHub Essentials</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/open-source/#level-2-making-your-first-contribution-3-4-weeks" class="toc-link">Level 2: Making Your First Contribution (3-4 weeks)</a>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#2-2-environment-setup" class="toc-link">2.2 Environment Setup</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/open-source/#level-3-regular-contributor-2-3-months" class="toc-link">Level 3: Regular Contributor (2-3 months)</a>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#2-3-the-trust-based-profile" class="toc-link">2.3 The Trust-Based Profile</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/open-source/#phase-3-finding-your-battlefield" class="toc-link">Phase 3: Finding Your Battlefield</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#3-1-the-healthy-project-checklist" class="toc-link">3.1 The &quot;Healthy Project&quot; Checklist</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/open-source/#level-4-core-contributor-3-6-months" class="toc-link">Level 4: Core Contributor (3-6 months)</a>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#3-2-where-to-look" class="toc-link">3.2 Where to Look</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/open-source/#phase-4-the-first-strike-your-contribution" class="toc-link">Phase 4: The First Strike (Your Contribution)</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#4-1-the-golden-workflow" class="toc-link">4.1 The Golden Workflow</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/open-source/#level-5-maintainer-6-months" class="toc-link">Level 5: Maintainer (6+ months)</a>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#4-2-reading-code" class="toc-link">4.2 Reading Code</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/open-source/#best-practices" class="toc-link">Best Practices</a>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#4-3-claiming-issues" class="toc-link">4.3 Claiming Issues</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/open-source/#phase-5-navigating-issues-prs" class="toc-link">Phase 5: Navigating Issues &amp; PRs</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#5-1-writing-perfection-issues" class="toc-link">5.1 Writing Perfection Issues</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/open-source/#recommended-projects-for-beginners" class="toc-link">Recommended Projects for Beginners</a>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#5-2-the-perfect-pr-description" class="toc-link">5.2 The Perfect PR Description</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/open-source/#tools-resources" class="toc-link">Tools &amp; Resources</a>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#5-3-review-etiquette" class="toc-link">5.3 Review Etiquette</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/open-source/#phase-6-the-human-element-communication" class="toc-link">Phase 6: The Human Element (Communication)</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#6-1-async-mastery" class="toc-link">6.1 Async Mastery</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/open-source/#success-stories" class="toc-link">Success Stories</a>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#6-2-asking-for-help-the-smart-way" class="toc-link">6.2 Asking for Help (The Smart Way)</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/open-source/#join-our-community" class="toc-link">Join Our Community</a>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#6-3-handling-rejection" class="toc-link">6.3 Handling Rejection</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/open-source/#phase-7-the-long-game" class="toc-link">Phase 7: The Long Game</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#7-1-the-30-day-action-plan" class="toc-link">7.1 The 30-Day Action Plan</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#7-2-traits-of-the-top-1" class="toc-link">7.2 Traits of the Top 1%</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#7-3-avoiding-burnout" class="toc-link">7.3 Avoiding Burnout</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/open-source/#phase-8-the-accelerators-open-source-programs" class="toc-link">Phase 8: The Accelerators (Open Source Programs)</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#8-1-program-landscape" class="toc-link">8.1 Program Landscape</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#8-2-which-one-for-you" class="toc-link">8.2 Which One For You?</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/open-source/#8-3-strategic-timeline" class="toc-link">8.3 Strategic Timeline</a>
                                 </li>
                             
                         </ul>
@@ -1234,19 +1446,13 @@
         
             <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/web-development">Web Development Roadmap</a></li>
         
-            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/dsa">Data Structures &amp; Algorithms Roadmap</a></li>
-        
             <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/machine-learning">Machine Learning Roadmap</a></li>
         
             <li class="rounded bg-gray-500/15"><a class="hover:no-underline" href="https://cc-club.in/roadmaps/open-source">Open Source Contribution Roadmap</a></li>
         
-            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/interview-prep">Technical Interview Preparation</a></li>
-        
-            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/mobile-development">Mobile App Development Roadmap</a></li>
-        
             <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/devops">DevOps Roadmap</a></li>
         
-            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/cp">Competitive Programming Mastery Roadmap</a></li>
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/competitive-programming">Competitive Programming Mastery Roadmap</a></li>
         
         
         

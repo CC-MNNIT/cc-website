@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Computer Coding Club - mlops</title>
+    <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/tags/mlops/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-02-07T00:00:00+00:00</updated>
+    <id>https://cc-club.in/tags/mlops/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Why Most Machine Learning Models Fail in Production</title>
+        <published>2026-02-07T00:00:00+00:00</published>
+        <updated>2026-02-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/blog/2026/ml-models-fail/"/>
+        <id>https://cc-club.in/blog/2026/ml-models-fail/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Training a machine learning model that shows &lt;strong&gt;95% accuracy&lt;&#x2F;strong&gt; feels like success.&lt;br &#x2F;&gt;
+But deploying that same model into production often turns that success into silence — wrong predictions, confused users, and no clear errors.&lt;&#x2F;p&gt;
+&lt;p&gt;This is not a rare problem.&lt;&#x2F;p&gt;
+&lt;p&gt;In fact, &lt;strong&gt;most ML models fail not because the algorithm is bad, but because the real world is messy&lt;&#x2F;strong&gt;.&lt;br &#x2F;&gt;
+This blog explains &lt;strong&gt;what goes wrong&lt;&#x2F;strong&gt;, &lt;strong&gt;why it happens&lt;&#x2F;strong&gt;, and &lt;strong&gt;how real systems deal with it&lt;&#x2F;strong&gt;, using simple language and real examples.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+</feed>
