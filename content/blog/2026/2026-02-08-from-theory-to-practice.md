@@ -6,8 +6,8 @@ description = "Bridge the gap between academic theory and real-world application
 tags = ["data-structures", "computer-science", "development"]
 categories = ["tech"]
 [extra]
-author = "Harsh"
-author_linkedin = "harshvardhan-singh-chauhan" 
+author = "Harshvardhan Chauhan"
+author_linkedin = "harshvardhan-singh-chauhan-b70482324" 
 +++
 
 

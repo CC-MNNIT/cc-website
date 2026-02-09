@@ -71,10 +71,10 @@
                     }}&background=random&color=fff&size=64" alt="{{ page.extra.author }}" class="meta-avatar">
                 <span>By {{ page.extra.author }}</span>
                 {% endif %}
-                <span>•</span>
+                <span class="meta-separator">•</span>
                 {% endif %}
 
-                <span>{{ page.date | date(format="%b %d, %Y") }}</span>
+                <span class="meta-date">{{ page.date | date(format="%b %d, %Y") }}</span>
 
                 {% if page.extra.reading_time %}
                 <span>• {{ page.extra.reading_time }} min read</span>
