@@ -135,6 +135,7 @@ linkedin = "https://www.linkedin.com/in/shubham-garg-167983260/"
 github = "https://github.com/Shubham-garg1234"
 instagram = "https://www.instagram.com/real__shubh/"
 
+
 # Group 3: Design Team (3 Leads)
 [[design]]
 name = "Shikhar Gupta"
@@ -186,5 +187,4 @@ role = "Design Lead"
 image = "teams/vaishnavi_tiwari.webp"
 linkedin = "https://www.linkedin.com/in/vaishnavi704"
 instagram = "https://www.instagram.com/vaishnavitiwari_104"
-
 

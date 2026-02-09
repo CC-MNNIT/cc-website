@@ -91,17 +91,27 @@
 
 /* --- Search Bar --- */
 /* --- Search Bar --- */
+
+
 .blog-search-wrapper {
     position: sticky;
     top: 90px;
-    z-index: 40;
-    /* Lower than navbar usually (50) */
+    z-index: 10;
+    /* Lower than navbar usually (50) and sidebar */
     margin-bottom: 3rem;
     background: transparent;
     padding: 10px 0;
     display: flex;
     gap: 12px;
     align-items: center;
+}
+
+/* Hide search bar when mobile drawer is open to prevent overlap */
+.drawer-toggle:checked ~ .drawer-content .blog-search-wrapper {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s;
 }
 
 .btn-search-action {
@@ -452,4 +462,39 @@
     
 .search-pro-tip {
         margin-bottom: 10px;
+}
+
+/* Response Fixes for Mobile */
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 40px 15px 80px;
     }
+
+    .blog-card {
+        padding: 1.25rem;
+    }
+
+    .card-meta {
+        flex-wrap: wrap;
+        row-gap: 0.75rem;
+    }
+
+    .meta-tags {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 0.25rem;
+    }
+    
+    .blog-search-wrapper {
+        background: var(--color-base-100); /* Prevent text overlap visibility */
+         /* Adjust margin/padding to ensure full coverage if needed, keeping simple for now */
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        word-break: break-word;
+    }
+}
