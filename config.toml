@@ -85,7 +85,7 @@ nav = [
     { name = "Calendar", url = "https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view", type = "url", icon = "fa-solid fa-calendar-check" },
     { name = "Projects", url = "projects", type = "url", icon = "fa-solid fa-code-branch" },
     { name = "Roadmaps", url = "roadmaps", type = "url", icon = "fa-solid fa-route" },
-    # { name = "Resources", url = "resources", type = "url", icon = "fa-solid fa-book-open" },
+
     { name = "Community", type = "dropdown", icon = "fa-solid fa-users", members = [
         { name = "Current Team", url = "team", type = "url", icon = "fa-solid fa-user-group" },
         # { name = "Alumni", url = "alumni", type = "url", icon = "fa-solid fa-graduation-cap" },
@@ -103,6 +103,15 @@ image_path = "logo/cclogo.webp"                            # Add logo: "logo.web
 image_padding = "10px"                     # Padding around logo image
 # dark_image_path = "images/logo-dark.webp" # Optional: Different logo for dark theme
 # light_image_path = "images/logo/light-bgm-cc-logo.webp" # Optional: Different logo for light theme
+
+# Favicon Configuration
+[extra.favicon]
+base_path = "/icons/"                              # Base path for all favicon files
+favicon_96x96 = "/icons/favicon-96x96.png"         # 96x96 PNG favicon
+favicon_svg = "/icons/favicon.svg"                 # SVG favicon
+favicon_ico = "/icons/favicon.ico"                 # ICO favicon
+apple_touch_icon = "/icons/apple-touch-icon.png"   # Apple touch icon (180x180)
+site_webmanifest = "/icons/site.webmanifest"       # Web app manifest
 
 # Social Media Configuration
 [extra.twitter]

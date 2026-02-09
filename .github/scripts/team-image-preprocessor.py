@@ -69,8 +69,10 @@ def main():
 
     manifest = load_manifest()
     new_manifest = {}
+    existing_files = set()  # Track all files we see during this scan
     valid_extensions = {'.jpg', '.jpeg', '.png', '.webp'}
     processed_count = 0
+    skipped_count = 0
 
     print("🔍 Scanning images...")
 
@@ -79,12 +81,15 @@ def main():
             continue
 
         filename = full_path.name
+        existing_files.add(filename)
         current_hash = calculate_hash(full_path)
 
-        # CHECK 1: Is this specific file content already processed?
+        # CHECK: Is this file already processed with the same hash?
         if filename in manifest and manifest[filename] == current_hash:
-            # Keep record in new manifest
+            # Keep the hash in new manifest
             new_manifest[filename] = current_hash
+            print(f"✓ Skipped (unchanged): {filename}")
+            skipped_count += 1
             continue
 
         print(f"⚙️  Processing: {filename}")
@@ -92,6 +97,7 @@ def main():
         img = cv2.imread(str(full_path))
         if img is None: 
             print(f"⚠️  Could not read image: {filename}")
+            # Still add to existing_files to prevent false deletion warnings
             continue
 
         # 1. Apply face-centered square crop
@@ -109,26 +115,38 @@ def main():
         output_path = full_path.with_suffix(".webp")
         cv2.imwrite(str(output_path), final_img, [cv2.IMWRITE_WEBP_QUALITY, 92])
         
-        # 4. Hash the RESULT
-        # We must hash the *result* file (output_path) so next run sees it as "done".
-        # If we overwrote the file, calculate hash of the new file.
-        # If we created a new file (jpg->webp), we calculate hash of the new webp.
-        
+        # 4. Hash the RESULT file
+        output_filename = output_path.name
         final_hash = calculate_hash(output_path)
-        new_manifest[output_path.name] = final_hash
+        new_manifest[output_filename] = final_hash
+        existing_files.add(output_filename)
 
-        # Cleanup original if different ext
+        # 5. Cleanup original if different extension
         if full_path != output_path:
+            existing_files.discard(filename)  # Remove old filename from tracking
             full_path.unlink()
-            print(f"   Converted & Deleted Original: {filename} -> {output_path.name}")
+            print(f"   Converted & Deleted Original: {filename} -> {output_filename}")
         else:
             print(f"   Optimized: {filename}")
             
         processed_count += 1
 
+    # CLEANUP: Remove manifest entries for files that no longer exist
+    manifest_files = set(manifest.keys())
+    removed_files = manifest_files - existing_files
+    
+    if removed_files:
+        print(f"\n🧹 Cleanup: Removing {len(removed_files)} deleted images from manifest:")
+        for f in sorted(removed_files):
+            print(f"   - {f}")
+
     # Save updated manifest
     save_manifest(new_manifest)
-    print(f"✅ Scanning complete. Processed {processed_count} images.")
+    print(f"\n✅ Complete!")
+    print(f"   Processed: {processed_count}")
+    print(f"   Skipped (unchanged): {skipped_count}")
+    print(f"   Cleaned up: {len(removed_files)}")
+    print(f"   Total in manifest: {len(new_manifest)}")
 
 if __name__ == "__main__":
     main()

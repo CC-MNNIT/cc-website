@@ -60,13 +60,23 @@
             {% if config.extra.nav is defined %}
                 {% for item in config.extra.nav %}
                     {% if item.type == "url" %}
-                        <li><a href="{{ get_url(path=item.url) | safe }}" class="text-sm">
+                        <li>
+                            {% if item.url is starting_with("http") %}
+                                <a href="{{ item.url | safe }}" class="text-sm" target="_blank" rel="noopener noreferrer">
+                            {% else %}
+                                <a href="{{ get_url(path=item.url) | safe }}" class="text-sm">
+                            {% endif %}
                             {% if item.icon %}<i class="{{ item.icon }} mr-2"></i>{% endif %}
                             {{ item.name }}
                         </a></li>
                     {% elif item.type == "dropdown" and item.members %}
                         {% for member in item.members %}
-                            <li><a href="{{ get_url(path=member.url) | safe }}" class="text-sm">
+                            <li>
+                                {% if member.url is starting_with("http") %}
+                                    <a href="{{ member.url | safe }}" class="text-sm" target="_blank" rel="noopener noreferrer">
+                                {% else %}
+                                    <a href="{{ get_url(path=member.url) | safe }}" class="text-sm">
+                                {% endif %}
                                 {% if member.icon %}<i class="{{ member.icon }} mr-2"></i>{% endif %}
                                 {{ member.name }}
                             </a></li>

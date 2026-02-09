@@ -7,6 +7,7 @@ on:
       - preview
     paths:
       - 'static/images/teams/**'
+      - '.github/data/team_images_manifest.json'
 
 jobs:
   optimize-deployed-images:
@@ -28,8 +29,8 @@ jobs:
       - name: Run Image Preprocessor
         run: python .github/scripts/team-image-preprocessor.py
 
-      - name: Commit and Push Directly
+      - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: post-merge image optimization [skip ci]"
-          file_pattern: 'static/images/teams/*'
+          file_pattern: 'static/images/teams/* .github/data/team_images_manifest.json'

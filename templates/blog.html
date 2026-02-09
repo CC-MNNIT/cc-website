@@ -14,8 +14,8 @@
         <input type="text" id="blogSearch" class="blog-search-input" placeholder="Search articles by title or tag..."
             aria-label="Search articles">
 
-        <a href="https://github.com/Start-Automating/cc-website" target="_blank" rel="noopener noreferrer"
-            class="btn-search-action" title="Write a Blog Post">
+        <a href="https://github.com/CC-MNNIT/cc-website/blob/main/CONTRIBUTING_BLOG.md" target="_blank"
+            rel="noopener noreferrer" class="btn-search-action" title="Write a Blog Post">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
@@ -61,12 +61,14 @@
 
             <div class="card-meta">
                 {% if page.extra.author %}
-                <img src="https://ui-avatars.com/api/?name={{ page.extra.author | replace(from=" ", to=" +")
-                    }}&background=random&color=fff&size=64" alt="{{ page.extra.author }}" class="meta-avatar">
                 {% if page.extra.author_linkedin %}
-                <span>By <a href="{{ page.extra.author_linkedin }}" target="_blank"
+                <img src="https://ui-avatars.com/api/?name={{page.extra.author | replace(from=" ", to=" +")}}"
+                    alt="{{ page.extra.author }}" class="meta-avatar">
+                <span>By <a href="https://www.linkedin.com/in/{{ page.extra.author_linkedin }}/" target="_blank"
                         rel="noopener noreferrer" class="author-link">{{ page.extra.author }}</a></span>
                 {% else %}
+                <img src="https://ui-avatars.com/api/?name={{ page.extra.author | replace(from=" ", to=" +")
+                    }}&background=random&color=fff&size=64" alt="{{ page.extra.author }}" class="meta-avatar">
                 <span>By {{ page.extra.author }}</span>
                 {% endif %}
                 <span>•</span>
@@ -138,7 +140,6 @@
     .card-title a:hover {
         color: var(--color-primary);
     }
-
 </style>
 
 <script>

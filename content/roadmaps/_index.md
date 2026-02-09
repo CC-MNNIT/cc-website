@@ -7,7 +7,7 @@ weight = 6
 
 [extra]
 badge = "UPDATED"
-toc_expand = false
+toc_expand = true
 +++
 
 # Roadmaps by CC Club 
