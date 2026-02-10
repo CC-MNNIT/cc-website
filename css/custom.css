@@ -39,3 +39,323 @@
 .text-sm {
     font-size: 0.875rem;
 }
+
+/* ============================================
+   CODE BLOCK THEME OVERRIDES - DARK THEME ONLY
+   ============================================
+   Replace bluish slate colors with neutral grays
+   for better dark theme aesthetics
+*/
+
+/* Override default code block background with neutral gray gradient - DARK THEME ONLY */
+[data-theme="night"] pre:not(.mermaid) {
+    background: linear-gradient(135deg, #18181b 0%, #27272a 100%) !important;
+    border: 1px solid rgba(63, 63, 70, 0.3) !important;
+}
+
+/* Darker variant - pure black to dark gray */
+[data-theme="night"][data-brightness="darker"] pre:not(.mermaid) {
+    background: linear-gradient(135deg, #0a0a0a 0%, #171717 100%) !important;
+    border: 1px solid rgba(39, 39, 42, 0.4) !important;
+}
+
+/* Lighter variant - medium gray gradient */
+[data-theme="night"][data-brightness="lighter"] pre:not(.mermaid) {
+    background: linear-gradient(135deg, #27272a 0%, #3f3f46 100%) !important;
+    border: 1px solid rgba(82, 82, 91, 0.3) !important;
+}
+
+/* Update the top border accent to match neutral theme - DARK THEME ONLY */
+[data-theme="night"] pre:not(.mermaid)::before {
+    background: linear-gradient(90deg, #71717a, #52525b) !important;
+}
+
+[data-theme="night"][data-brightness="darker"] pre:not(.mermaid)::before {
+    background: linear-gradient(90deg, #52525b, #3f3f46) !important;
+}
+
+/* Mermaid diagram containers - neutral background with transparency - DARK THEME ONLY */
+[data-theme="night"] pre.mermaid {
+    background: rgba(24, 24, 27, 0.6) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(63, 63, 70, 0.4) !important;
+    border-radius: 0.75rem !important;
+    padding: 2rem !important;
+    margin: 1.5rem 0 !important;
+}
+
+[data-theme="night"][data-brightness="darker"] pre.mermaid {
+    background: rgba(10, 10, 10, 0.7) !important;
+    border: 1px solid rgba(39, 39, 42, 0.5) !important;
+}
+
+[data-theme="night"][data-brightness="lighter"] pre.mermaid {
+    background: rgba(39, 39, 42, 0.6) !important;
+    border: 1px solid rgba(82, 82, 91, 0.4) !important;
+}
+
+/* Mermaid SVG elements styling */
+[data-theme="night"] pre.mermaid svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Inline code - neutral background - DARK THEME ONLY */
+[data-theme="night"] :not(pre) > code {
+    background: rgba(63, 63, 70, 0.3) !important;
+    border: 1px solid rgba(82, 82, 91, 0.4) !important;
+    color: #a1a1aa !important;
+}
+
+[data-theme="night"][data-brightness="darker"] :not(pre) > code {
+    background: rgba(39, 39, 42, 0.4) !important;
+    border: 1px solid rgba(63, 63, 70, 0.5) !important;
+    color: #a1a1aa !important;
+}
+
+/* ============================================
+   CODE BLOCK THEME OVERRIDES - LIGHT THEME
+   ============================================
+   Enhanced text contrast for light theme
+*/
+
+/* Light theme code blocks - better text visibility */
+[data-theme="lofi"] pre code {
+    color: #1e293b !important;
+}
+
+[data-theme="lofi"][data-brightness="darker"] pre code {
+    color: #0f172a !important;
+}
+
+[data-theme="lofi"][data-brightness="lighter"] pre code {
+    color: #334155 !important;
+}
+
+/* Light theme inline code - better contrast */
+[data-theme="lofi"] :not(pre) > code {
+    color: #1e293b !important;
+    background: rgba(100, 116, 139, 0.12) !important;
+    border: 1px solid rgba(100, 116, 139, 0.25) !important;
+}
+
+[data-theme="lofi"][data-brightness="darker"] :not(pre) > code {
+    color: #0f172a !important;
+    background: rgba(71, 85, 105, 0.15) !important;
+}
+
+[data-theme="lofi"][data-brightness="lighter"] :not(pre) > code {
+    color: #334155 !important;
+    background: rgba(148, 163, 184, 0.1) !important;
+}
+
+/* ============================================
+   SHORTCODE ELEMENT OVERRIDES - DARK THEME ONLY
+   ============================================
+   Enhanced colors for dark theme, keep defaults for light
+*/
+
+/* Alerts - Enhanced contrast for dark theme ONLY */
+[data-theme="night"] .alert {
+    border-width: 1px;
+    border-style: solid;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Alert Info - Neutral blue-gray */
+[data-theme="night"] .alert-info.alert-soft {
+    background: rgba(14, 165, 233, 0.12) !important;
+    border-color: rgba(14, 165, 233, 0.3) !important;
+    color: #bae6fd !important;
+}
+
+[data-theme="night"][data-brightness="darker"] .alert-info.alert-soft {
+    background: rgba(14, 165, 233, 0.08) !important;
+    border-color: rgba(14, 165, 233, 0.25) !important;
+    color: #7dd3fc !important;
+}
+
+/* Alert Success - Subtle green */
+[data-theme="night"] .alert-success.alert-soft {
+    background: rgba(34, 197, 94, 0.12) !important;
+    border-color: rgba(34, 197, 94, 0.3) !important;
+    color: #bbf7d0 !important;
+}
+
+[data-theme="night"][data-brightness="darker"] .alert-success.alert-soft {
+    background: rgba(34, 197, 94, 0.08) !important;
+    border-color: rgba(34, 197, 94, 0.25) !important;
+    color: #86efac !important;
+}
+
+/* Alert Warning - Amber */
+[data-theme="night"] .alert-warning.alert-soft {
+    background: rgba(245, 158, 11, 0.12) !important;
+    border-color: rgba(245, 158, 11, 0.3) !important;
+    color: #fde68a !important;
+}
+
+[data-theme="night"][data-brightness="darker"] .alert-warning.alert-soft {
+    background: rgba(245, 158, 11, 0.08) !important;
+    border-color: rgba(245, 158, 11, 0.25) !important;
+    color: #fbbf24 !important;
+}
+
+/* Alert Error - Red */
+[data-theme="night"] .alert-error.alert-soft {
+    background: rgba(239, 68, 68, 0.12) !important;
+    border-color: rgba(239, 68, 68, 0.3) !important;
+    color: #fecaca !important;
+}
+
+[data-theme="night"][data-brightness="darker"] .alert-error.alert-soft {
+    background: rgba(239, 68, 68, 0.08) !important;
+    border-color: rgba(239, 68, 68, 0.25) !important;
+    color: #fca5a5 !important;
+}
+
+/* Badges - Enhanced visibility for dark theme ONLY */
+[data-theme="night"] .badge {
+    font-weight: 600;
+    font-size: 0.8125rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+[data-theme="night"] .badge-soft {
+    border: 1px solid;
+}
+
+/* Badge Primary - Neutral gray */
+[data-theme="night"] .badge-primary.badge-soft {
+    background: rgba(156, 163, 175, 0.15) !important;
+    border-color: rgba(156, 163, 175, 0.4) !important;
+    color: #e5e7eb !important;
+}
+
+/* Badge Secondary - Darker gray */
+[data-theme="night"] .badge-secondary.badge-soft {
+    background: rgba(107, 114, 128, 0.15) !important;
+    border-color: rgba(107, 114, 128, 0.4) !important;
+    color: #d1d5db !important;
+}
+
+/* Badge Accent - Light gray */
+[data-theme="night"] .badge-accent.badge-soft {
+    background: rgba(148, 163, 184, 0.15) !important;
+    border-color: rgba(148, 163, 184, 0.4) !important;
+    color: #f1f5f9 !important;
+}
+
+/* Badge Info - Blue */
+[data-theme="night"] .badge-info.badge-soft {
+    background: rgba(14, 165, 233, 0.15) !important;
+    border-color: rgba(14, 165, 233, 0.4) !important;
+    color: #bae6fd !important;
+}
+
+/* Badge Success - Green */
+[data-theme="night"] .badge-success.badge-soft {
+    background: rgba(34, 197, 94, 0.15) !important;
+    border-color: rgba(34, 197, 94, 0.4) !important;
+    color: #bbf7d0 !important;
+}
+
+/* Badge Warning - Amber */
+[data-theme="night"] .badge-warning.badge-soft {
+    background: rgba(245, 158, 11, 0.15) !important;
+    border-color: rgba(245, 158, 11, 0.4) !important;
+    color: #fde68a !important;
+}
+
+/* Badge Error - Red */
+[data-theme="night"] .badge-error.badge-soft {
+    background: rgba(239, 68, 68, 0.15) !important;
+    border-color: rgba(239, 68, 68, 0.4) !important;
+    color: #fecaca !important;
+}
+
+/* Navigation buttons - dark theme only */
+[data-theme="night"] .nav-button {
+    background: linear-gradient(135deg, rgba(63, 63, 70, 0.08) 0%, rgba(82, 82, 91, 0.08) 100%) !important;
+    border: 1px solid rgba(63, 63, 70, 0.2) !important;
+}
+
+[data-theme="night"] .nav-button:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(82, 82, 91, 0.3) !important;
+    border-color: rgba(82, 82, 91, 0.5) !important;
+}
+
+/* Browser mockup and collapse - dark theme only */
+[data-theme="night"] .mockup-browser,
+[data-theme="night"] .collapse {
+    border-color: rgba(63, 63, 70, 0.2) !important;
+    background: rgba(24, 24, 27, 0.3) !important;
+}
+
+[data-theme="night"][data-brightness="darker"] .mockup-browser,
+[data-theme="night"][data-brightness="darker"] .collapse {
+    border-color: rgba(39, 39, 42, 0.3) !important;
+    background: rgba(10, 10, 10, 0.5) !important;
+}
+
+[data-theme="night"] .collapse-title {
+    font-weight: 600;
+    color: #e5e7eb !important;
+}
+
+/* Browser toolbar - dark theme only */
+[data-theme="night"] .mockup-browser-toolbar {
+    background: rgba(39, 39, 42, 0.5) !important;
+    border-bottom: 1px solid rgba(63, 63, 70, 0.3) !important;
+}
+
+[data-theme="night"] .mockup-browser-toolbar .input {
+    background: rgba(24, 24, 27, 0.6) !important;
+    border-color: rgba(63, 63, 70, 0.3) !important;
+    color: #d1d5db !important;
+}
+
+/* Gallery and image containers - dark theme only */
+[data-theme="night"] .gallery-item a {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+[data-theme="night"] .gallery-item a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Carousel controls - dark theme only */
+[data-theme="night"] .carousel-controls {
+    background: rgba(24, 24, 27, 0.8) !important;
+    backdrop-filter: blur(4px);
+}
+
+/* YouTube and external embeds - dark theme only */
+[data-theme="night"] .youtube-embed,
+[data-theme="night"] .codepen-embed,
+[data-theme="night"] .gist-embed {
+    border: 1px solid rgba(63, 63, 70, 0.2) !important;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+/* Pretty links - dark theme only */
+[data-theme="night"] .pretty-link {
+    background: rgba(63, 63, 70, 0.2) !important;
+    border: 1px solid rgba(82, 82, 91, 0.3) !important;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    transition: all 0.2s ease;
+}
+
+[data-theme="night"] .pretty-link:hover {
+    background: rgba(63, 63, 70, 0.35) !important;
+    border-color: rgba(82, 82, 91, 0.5) !important;
+    transform: translateY(-2px);
+}
