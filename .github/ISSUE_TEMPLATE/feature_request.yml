@@ -57,18 +57,6 @@ body:
       description: If applicable, add mockups, wireframes, or examples from other sites
       placeholder: Drag and drop images or provide links to examples
 
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority (Your Opinion)
-      description: How important is this feature to you?
-      options:
-        - Low - Nice to have
-        - Medium - Would be useful
-        - High - Very important
-    validations:
-      required: true
-
   - type: textarea
     id: additional
     attributes:
