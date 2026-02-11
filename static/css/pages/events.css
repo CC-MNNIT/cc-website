@@ -441,6 +441,10 @@
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    position: absolute;
+    bottom: 100px;
+    left: 4rem;
+    z-index: 5;
 }
 
 .hero-btn {
