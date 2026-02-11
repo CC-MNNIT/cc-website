@@ -122,3 +122,30 @@ h3,
 [data-theme="night"] .text-primary {
     color: #FFC758 !important;
 }
+
+/* Firefox text selection compatibility fix */
+@-moz-document url-prefix() {
+
+  h1::selection,
+  h2::selection,
+  h3::selection,
+  h4::selection,
+  h5::selection,
+  h6::selection,
+  .hero-title::selection,
+  .section-title::selection,
+  .events-section-title::selection,
+  .roadmaps-title::selection {
+      -webkit-text-fill-color: initial !important;
+      color: inherit !important;
+      background: color-mix(in srgb, var(--color-primary) 45%, transparent) !important;
+  }
+
+  .card-title::selection,
+  p::selection,
+  span::selection,
+  div::selection {
+      color: inherit !important;
+      background: color-mix(in srgb, var(--color-primary) 45%, transparent) !important;
+  }
+}
