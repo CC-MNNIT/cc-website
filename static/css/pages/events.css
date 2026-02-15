@@ -228,7 +228,6 @@
 
 .hero-slide-inner {
     max-width: 650px;
-    /* modification */
     padding-bottom: 8rem;
 }
 
@@ -443,8 +442,6 @@
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    /* modification */
-
     position: absolute;
     bottom: 6rem;
     left: 4rem;
@@ -3403,7 +3400,6 @@
     .hero-slide-inner {
         width: 100%;
         max-width: 100%;
-        /* modification */
         padding-bottom: 6rem;
     }
 
@@ -3484,7 +3480,6 @@
         display: flex;
         flex-direction: row;
         gap: 0.75rem;
-        /* modification */
         position: absolute;
         bottom: 8rem;
         left: 2rem;
@@ -3754,7 +3749,6 @@
         padding-bottom: 7rem;
         min-height: 92vh;
     }
-    /* modification */
     .hero-slide-inner {
         padding-bottom: 6rem;
     }
@@ -3818,7 +3812,6 @@
     .hero-slide-actions {
         flex-direction: column;
         gap: 0.625rem;
-        /* modification */
         position: absolute;
         bottom: 6rem;
         left: 1.25rem;
@@ -4072,7 +4065,7 @@
         font-size: 0.9rem;
         margin-bottom: 0.875rem;
     }
-    /* modification */
+    
     .hero-slide-inner {
         padding-bottom: 5.5rem;
     }
@@ -4085,7 +4078,6 @@
     .hero-slide-actions {
         flex-direction: row;
         gap: 0.75rem;
-        /* modification */
         position: absolute;
         bottom: 3.5rem;
         left: 1.5rem;
