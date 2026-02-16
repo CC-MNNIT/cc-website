@@ -2597,6 +2597,170 @@
     color: #16A34A;
 }
 
+/* Special Mentions */
+.special-winners-section {
+    margin: 4rem 0;
+    position: relative;
+}
+
+.special-winners-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #FFC758 0%, #FF6B6B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    letter-spacing: -0.02em;
+}
+
+.special-winners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.special-winner-card {
+    position: relative;
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.special-winner-card:hover {
+    transform: translateY(-8px);
+}
+
+[data-theme="night"] .special-winner-card {
+    background: linear-gradient(145deg, rgba(255, 199, 88, 0.1) 0%, rgba(255, 199, 88, 0.02) 100%);
+    border: 1px solid rgba(255, 199, 88, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="night"] .special-winner-card:hover {
+    border-color: rgba(255, 199, 88, 0.4);
+    box-shadow: 0 15px 40px rgba(255, 199, 88, 0.15);
+}
+
+[data-theme="lofi"] .special-winner-card,
+[data-theme="light"] .special-winner-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
+    border: 1px solid rgba(25, 118, 210, 0.15);
+    box-shadow: 0 4px 20px rgba(25, 118, 210, 0.08);
+}
+
+[data-theme="lofi"] .special-winner-card:hover,
+[data-theme="light"] .special-winner-card:hover {
+    border-color: rgba(25, 118, 210, 0.3);
+    box-shadow: 0 15px 40px rgba(25, 118, 210, 0.12);
+}
+
+.special-winner-badge {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 28px;
+    height: 28px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+[data-theme="night"] .special-winner-badge {
+    color: #FFC758;
+}
+
+[data-theme="lofi"] .special-winner-badge,
+[data-theme="light"] .special-winner-badge {
+    color: #DAA520;
+}
+
+.special-winner-avatar,
+.special-winner-avatar-placeholder {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto 1.25rem auto;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.special-winner-card:hover .special-winner-avatar,
+.special-winner-card:hover .special-winner-avatar-placeholder {
+    transform: scale(1.05);
+}
+
+[data-theme="night"] .special-winner-avatar {
+    border: 3px solid rgba(255, 199, 88, 0.4);
+    box-shadow: 0 0 15px rgba(255, 199, 88, 0.2);
+}
+
+[data-theme="night"] .special-winner-avatar-placeholder {
+    background: rgba(255, 199, 88, 0.15);
+    color: #FFC758;
+    border: 3px solid rgba(255, 199, 88, 0.4);
+    box-shadow: 0 0 15px rgba(255, 199, 88, 0.2);
+}
+
+[data-theme="lofi"] .special-winner-avatar,
+[data-theme="light"] .special-winner-avatar {
+    border: 3px solid rgba(25, 118, 210, 0.3);
+    box-shadow: 0 0 15px rgba(25, 118, 210, 0.15);
+}
+
+[data-theme="lofi"] .special-winner-avatar-placeholder,
+[data-theme="light"] .special-winner-avatar-placeholder {
+    background: rgba(25, 118, 210, 0.1);
+    color: #1976D2;
+    border: 3px solid rgba(25, 118, 210, 0.3);
+    box-shadow: 0 0 15px rgba(25, 118, 210, 0.15);
+}
+
+.special-winner-name {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+}
+
+.special-winner-project {
+    font-size: 0.95rem;
+    margin: 0 0 1.25rem 0;
+    opacity: 0.8;
+}
+
+.special-winner-prize {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 50px;
+    letter-spacing: 0.02em;
+}
+
+[data-theme="night"] .special-winner-prize {
+    background: rgba(255, 199, 88, 0.15);
+    color: #FFC758;
+    border: 1px solid rgba(255, 199, 88, 0.3);
+}
+
+[data-theme="lofi"] .special-winner-prize,
+[data-theme="light"] .special-winner-prize {
+    background: rgba(25, 118, 210, 0.1);
+    color: #1976D2;
+    border: 1px solid rgba(25, 118, 210, 0.2);
+}
+
+
 /* ===========================================
    6. PROJECTS SHOWCASE
    =========================================== */
@@ -3749,6 +3913,7 @@
         padding-bottom: 7rem;
         min-height: 92vh;
     }
+
     .hero-slide-inner {
         padding-bottom: 6rem;
     }
@@ -4065,7 +4230,7 @@
         font-size: 0.9rem;
         margin-bottom: 0.875rem;
     }
-    
+
     .hero-slide-inner {
         padding-bottom: 5.5rem;
     }

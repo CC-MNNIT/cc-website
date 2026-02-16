@@ -991,77 +991,77 @@
 </div>
 
 <script>
-(function() {
-    const lightbox = document.getElementById('gallery-lightbox');
-    if (!lightbox) return;
+    (function () {
+        const lightbox = document.getElementById('gallery-lightbox');
+        if (!lightbox) return;
 
-    const lightboxImg = document.getElementById('lightbox-image');
-    const lightboxCurrent = document.getElementById('lightbox-current');
-    const closeBtn = lightbox.querySelector('.lightbox-close');
-    const prevBtn = lightbox.querySelector('.lightbox-prev');
-    const nextBtn = lightbox.querySelector('.lightbox-next');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightboxImg = document.getElementById('lightbox-image');
+        const lightboxCurrent = document.getElementById('lightbox-current');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+        const prevBtn = lightbox.querySelector('.lightbox-prev');
+        const nextBtn = lightbox.querySelector('.lightbox-next');
+        const galleryItems = document.querySelectorAll('.gallery-item');
 
-    let currentIndex = 0;
-    const images = [];
+        let currentIndex = 0;
+        const images = [];
 
-    // Collect all image sources
-    galleryItems.forEach((item, index) => {
-        const img = item.querySelector('img');
-        if (img) {
-            images.push(img.src);
-            item.addEventListener('click', () => openLightbox(index));
+        // Collect all image sources
+        galleryItems.forEach((item, index) => {
+            const img = item.querySelector('img');
+            if (img) {
+                images.push(img.src);
+                item.addEventListener('click', () => openLightbox(index));
+            }
+        });
+
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightboxImage();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
-    });
 
-    function openLightbox(index) {
-        currentIndex = index;
-        updateLightboxImage();
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    function updateLightboxImage() {
-        lightboxImg.src = images[currentIndex];
-        lightboxCurrent.textContent = currentIndex + 1;
-    }
-
-    function showNext() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateLightboxImage();
-    }
-
-    function showPrev() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateLightboxImage();
-    }
-
-    // Event listeners
-    closeBtn.addEventListener('click', closeLightbox);
-    nextBtn.addEventListener('click', showNext);
-    prevBtn.addEventListener('click', showPrev);
-
-    // Close on background click
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox || e.target.classList.contains('lightbox-content')) {
-            closeLightbox();
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
         }
-    });
 
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (!lightbox.classList.contains('active')) return;
+        function updateLightboxImage() {
+            lightboxImg.src = images[currentIndex];
+            lightboxCurrent.textContent = currentIndex + 1;
+        }
 
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowRight') showNext();
-        if (e.key === 'ArrowLeft') showPrev();
-    });
-})();
+        function showNext() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateLightboxImage();
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateLightboxImage();
+        }
+
+        // Event listeners
+        closeBtn.addEventListener('click', closeLightbox);
+        nextBtn.addEventListener('click', showNext);
+        prevBtn.addEventListener('click', showPrev);
+
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.classList.contains('lightbox-content')) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') showNext();
+            if (e.key === 'ArrowLeft') showPrev();
+        });
+    })();
 </script>
 
 
@@ -1462,13 +1462,13 @@
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://cc-club.in/events/2026">Events 2026</a></summary>
+                        <summary ><a class="hover:no-underline" href="https://cc-club.in/events/programs">Programs</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/2026/insomnia">Insomnia 2026</a></li>
+                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/programs/cc-classes">CC Classes</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/2026/weekend-of-code">Weekend of Code 2026</a></li>
+                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/programs/alumni-connect">Alumni Industry Connect</a></li>
                             
                             
                         </ul>
@@ -1483,13 +1483,13 @@
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://cc-club.in/events/programs">Programs</a></summary>
+                        <summary ><a class="hover:no-underline" href="https://cc-club.in/events/2026">Events 2026</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/programs/cc-classes">CC Classes</a></li>
+                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/2026/insomnia">Insomnia 2026</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/programs/alumni-connect">Alumni Industry Connect</a></li>
+                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/2026/weekend-of-code">Weekend of Code 2026</a></li>
                             
                             
                         </ul>
