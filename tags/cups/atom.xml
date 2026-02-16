@@ -26,13 +26,11 @@
         <content type="html" xml:base="https://cc-club.in/blog/2026/openprinting/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
 &lt;p&gt;Printing is one of those “boring but essential” capabilities that most users expect to just &lt;em&gt;work&lt;&#x2F;em&gt;. On Linux, that smooth experience is largely thanks to the &lt;strong&gt;OpenPrinting&lt;&#x2F;strong&gt; community and the software stack it maintains.&lt;&#x2F;p&gt;
 &lt;p&gt;Whether you are a sysadmin managing a fleet of printers or a developer looking to contribute to open source, understanding how Linux talks to paper is crucial. This post explains the architecture of OpenPrinting, how its major components (especially CUPS and IPP) fit together, and provides a cheat sheet for daily operations.&lt;&#x2F;p&gt;
-&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;
-  &lt;span&gt;**Quick Summary (TL;DR):** OpenPrinting enables standardized, driverless printing on Linux using **CUPS** (the spooler) and **IPP** (the protocol). This guide covers architecture, CLI commands, troubleshooting, and contribution paths.&lt;&#x2F;span&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert- soft&quot;&gt;
+  &lt;div&gt;&lt;p&gt;&lt;strong&gt;Quick Summary (TL;DR):&lt;&#x2F;strong&gt; OpenPrinting enables standardized, driverless printing on Linux using &lt;strong&gt;CUPS&lt;&#x2F;strong&gt; (the spooler) and &lt;strong&gt;IPP&lt;&#x2F;strong&gt; (the protocol). This guide covers architecture, CLI commands, troubleshooting, and contribution paths.&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
-&lt;h2 id=&quot;what-is-openprinting&quot;&gt;What is OpenPrinting?&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;Community&lt;&#x2F;div&gt;
- &lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Standards&lt;&#x2F;div&gt;
-&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;&lt;h2 id=&quot;what-is-openprinting&quot;&gt;What is OpenPrinting?&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;Community&lt;&#x2F;div&gt; &lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Standards&lt;&#x2F;div&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;OpenPrinting is an open-source initiative focused on improving printing support on Linux and Unix-like systems. Historically, printing relied on fragile, vendor-specific drivers. OpenPrinting aims to eliminate those pain points by collaborating with printer vendors and Linux distributions to promote &lt;strong&gt;standardized protocols&lt;&#x2F;strong&gt; and &lt;strong&gt;user-space solutions&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;core-components&quot;&gt;Core Components&lt;&#x2F;h2&gt;
 &lt;p&gt;The Linux printing stack is modular. Here are the key players:&lt;&#x2F;p&gt;
@@ -129,8 +127,9 @@
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;journalctl&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -u&lt;&#x2F;span&gt;&lt;span&gt; cups&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -f
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;3-legacy-usb-issues&quot;&gt;3. Legacy USB Issues&lt;&#x2F;h3&gt;
-&lt;div role=&quot;alert&quot; class=&quot;alert alert-warning alert-soft&quot;&gt;
-  &lt;span&gt;Warning: Legacy USB printers often require specific permissions. Check lsusb to see if the kernel detects the device, and ensure your user is in the lp group.&lt;&#x2F;span&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-warning alert- soft&quot;&gt;
+  &lt;div&gt;&lt;p&gt;Warning: Legacy USB printers often require specific permissions. Check lsusb to see if the kernel detects the device, and ensure your user is in the lp group.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 &lt;hr &#x2F;&gt;
 &lt;h2 id=&quot;contributing-to-openprinting&quot;&gt;Contributing to OpenPrinting&lt;&#x2F;h2&gt;
@@ -166,10 +165,10 @@
 &lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;&#x2F;h2&gt;
 &lt;p&gt;OpenPrinting quietly powers one of the most important subsystems on Linux. Its focus on standards, driverless workflows, and community collaboration ensures printing remains reliable and future-proof.&lt;&#x2F;p&gt;
 &lt;p&gt;Whether you&#x27;re a sysadmin debugging a queue or a student looking for your first open-source commit, the ecosystem is welcoming and vital.&lt;&#x2F;p&gt;
-&lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert-soft&quot;&gt;
-  &lt;span&gt;Ready to experiment? Try setting up a local print queue on your machine today using the command line examples above!&lt;&#x2F;span&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert- soft&quot;&gt;
+  &lt;div&gt;&lt;p&gt;Ready to experiment? Try setting up a local print queue on your machine today using the command line examples above!&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
-&lt;div class=&quot;pretty-link-card group&quot;&gt;
+&lt;&#x2F;div&gt;&lt;div class=&quot;pretty-link-card group&quot;&gt;
   &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;OpenPrinting&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;block&quot;&gt;
     &lt;div class=&quot;flex items-start gap-4 p-5&quot;&gt;
       

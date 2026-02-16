@@ -559,13 +559,11 @@
     <h2 id="introduction">Introduction</h2>
 <p>Printing is one of those “boring but essential” capabilities that most users expect to just <em>work</em>. On Linux, that smooth experience is largely thanks to the <strong>OpenPrinting</strong> community and the software stack it maintains.</p>
 <p>Whether you are a sysadmin managing a fleet of printers or a developer looking to contribute to open source, understanding how Linux talks to paper is crucial. This post explains the architecture of OpenPrinting, how its major components (especially CUPS and IPP) fit together, and provides a cheat sheet for daily operations.</p>
-<div role="alert" class="alert alert-info alert-soft">
-  <span>**Quick Summary (TL;DR):** OpenPrinting enables standardized, driverless printing on Linux using **CUPS** (the spooler) and **IPP** (the protocol). This guide covers architecture, CLI commands, troubleshooting, and contribution paths.</span>
+<div role="alert" class="alert alert-info alert- soft">
+  <div><p><strong>Quick Summary (TL;DR):</strong> OpenPrinting enables standardized, driverless printing on Linux using <strong>CUPS</strong> (the spooler) and <strong>IPP</strong> (the protocol). This guide covers architecture, CLI commands, troubleshooting, and contribution paths.</p>
 </div>
-<h2 id="what-is-openprinting">What is OpenPrinting?</h2>
-<p><div class="badge badge-soft badge-primary">Community</div>
- <div class="badge badge-soft badge-secondary">Standards</div>
-</p>
+</div><h2 id="what-is-openprinting">What is OpenPrinting?</h2>
+<p><div class="badge badge-soft badge-primary">Community</div> <div class="badge badge-soft badge-secondary">Standards</div></p>
 <p>OpenPrinting is an open-source initiative focused on improving printing support on Linux and Unix-like systems. Historically, printing relied on fragile, vendor-specific drivers. OpenPrinting aims to eliminate those pain points by collaborating with printer vendors and Linux distributions to promote <strong>standardized protocols</strong> and <strong>user-space solutions</strong>.</p>
 <h2 id="core-components">Core Components</h2>
 <p>The Linux printing stack is modular. Here are the key players:</p>
@@ -662,8 +660,9 @@
 <pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">journalctl</span><span style="color:#ffcc66;"> -u</span><span> cups</span><span style="color:#ffcc66;"> -f
 </span></code></pre>
 <h3 id="3-legacy-usb-issues">3. Legacy USB Issues</h3>
-<div role="alert" class="alert alert-warning alert-soft">
-  <span>Warning: Legacy USB printers often require specific permissions. Check lsusb to see if the kernel detects the device, and ensure your user is in the lp group.</span>
+<div role="alert" class="alert alert-warning alert- soft">
+  <div><p>Warning: Legacy USB printers often require specific permissions. Check lsusb to see if the kernel detects the device, and ensure your user is in the lp group.</p>
+</div>
 </div>
 <hr />
 <h2 id="contributing-to-openprinting">Contributing to OpenPrinting</h2>
@@ -699,10 +698,10 @@
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>OpenPrinting quietly powers one of the most important subsystems on Linux. Its focus on standards, driverless workflows, and community collaboration ensures printing remains reliable and future-proof.</p>
 <p>Whether you're a sysadmin debugging a queue or a student looking for your first open-source commit, the ecosystem is welcoming and vital.</p>
-<div role="alert" class="alert alert-success alert-soft">
-  <span>Ready to experiment? Try setting up a local print queue on your machine today using the command line examples above!</span>
+<div role="alert" class="alert alert-success alert- soft">
+  <div><p>Ready to experiment? Try setting up a local print queue on your machine today using the command line examples above!</p>
 </div>
-<div class="pretty-link-card group">
+</div><div class="pretty-link-card group">
   <a href="https:&#x2F;&#x2F;github.com&#x2F;OpenPrinting" target="_blank" rel="noopener noreferrer" class="block">
     <div class="flex items-start gap-4 p-5">
       
@@ -853,10 +852,6 @@
             
             
             
-        
-            
-            
-            
                 
             
                 
@@ -878,7 +873,7 @@
         
             
             
-                <a class="nav-button nav-button-next group" href="https://cc-club.in/about/">
+                <a class="nav-button nav-button-next group" href="https://cc-club.in/projects/">
                     <div class="nav-button-content">
                         <div class="nav-button-direction">
                             <span class="nav-button-label">Next</span>
@@ -886,10 +881,14 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                             </svg>
                         </div>
-                        <div class="nav-button-title">About Us</div>
+                        <div class="nav-button-title">Projects</div>
                     </div>
                 </a>
                 
+            
+            
+        
+            
             
             
         

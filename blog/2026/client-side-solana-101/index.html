@@ -564,8 +564,9 @@
 <h2 id="what-is-solana-understanding-the-blockchain-revolution">What is Solana? Understanding the Blockchain Revolution</h2>
 <p>Solana is a high-performance blockchain platform designed to handle thousands of transactions per second while maintaining low fees. Think of it as the "internet-speed" blockchain that bridges the gap between traditional web applications and decentralized systems.</p>
 <h3 id="why-solana-stands-out">Why Solana Stands Out</h3>
-<div role="alert" class="alert alert-success alert-soft">
-  <span>**Speed & Cost:** Solana handles ~4,000 TPS in practice (theoretically up to 65,000) with fees under $0.01!</span>
+<div role="alert" class="alert alert-success alert- soft">
+  <div><p><strong>Speed &amp; Cost:</strong> Solana handles ~4,000 TPS in practice (theoretically up to 65,000) with fees under $0.01!</p>
+</div>
 </div>
 <p><img src="/images/blog/2026/solana-101/solana-vs-ethereum.webp" alt="Solana vs Ethereum — Transaction speed and cost comparison" /></p>
 <p>Solana's secret sauce is a combination of several innovations, but the headline one is <strong>Proof of History (PoH)</strong>. PoH is <em>not</em> a consensus mechanism — it's a <strong>cryptographic clock</strong>. It creates a verifiable, ordered sequence of timestamps <em>before</em> blocks are confirmed. This lets validators agree on the order of events without constant back-and-forth communication.</p>
@@ -586,8 +587,9 @@
 </span><span>    </span><span style="color:#ffa759;">pub </span><span>executable</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffa759;">bool</span><span>,     </span><span style="font-style:italic;color:#5c6773;">// Whether this account is a program
 </span><span>}
 </span></code></pre>
-<div role="alert" class="alert alert-info alert-soft">
-  <span>**Think of it like this:** If traditional databases have tables and rows, Solana has accounts and data. Every piece of information lives in an account!</span>
+<div role="alert" class="alert alert-info alert- soft">
+  <div><p><strong>Think of it like this:</strong> If traditional databases have tables and rows, Solana has accounts and data. Every piece of information lives in an account!</p>
+</div>
 </div>
 <blockquote>
 <p><strong>A note on Rent:</strong> Solana used to charge "rent" to keep accounts alive. Today, all new accounts must be <strong>rent-exempt</strong> — meaning you deposit a small, one-time amount of SOL (based on data size) that you get back when you close the account. Think of it as a refundable deposit, not an ongoing fee.</p>
@@ -610,13 +612,13 @@
 <li><strong>Utility Tokens</strong>: Access passes, memberships, governance rights</li>
 <li><strong>Real-world Assets</strong>: Tokenized stocks, real estate, or commodities</li>
 </ul>
-<p><div class="badge badge-soft badge-primary">SPL Token</div>
- is Solana's standard for all tokens, similar to how ERC-20 works on Ethereum, but more flexible and efficient.</p>
+<p><div class="badge badge-soft badge-primary">SPL Token</div> is Solana's standard for all tokens, similar to how ERC-20 works on Ethereum, but more flexible and efficient.</p>
 <h2 id="setting-up-your-solana-development-environment">Setting Up Your Solana Development Environment</h2>
 <p>Let's get your machine ready for Solana development! We'll install the Solana CLI, set up a local validator, and create your first wallet.</p>
 <h3 id="step-1-install-solana-cli">Step 1: Install Solana CLI</h3>
-<div role="alert" class="alert alert-warning alert-soft">
-  <span>**Prerequisites:** Make sure you have Node.js (v18+) and npm installed on your machine.</span>
+<div role="alert" class="alert alert-warning alert- soft">
+  <div><p><strong>Prerequisites:</strong> Make sure you have Node.js (v18+) and npm installed on your machine.</p>
+</div>
 </div>
 <p><strong>For macOS/Linux:</strong></p>
 <pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">sh</span><span style="color:#ffcc66;"> -c </span><span style="color:#bae67e;">&quot;$</span><span>(</span><span style="color:#ffd580;">curl</span><span style="color:#ffcc66;"> -sSfL</span><span style="color:#bae67e;"> https://release.solana.com/stable/install</span><span>)</span><span style="color:#bae67e;">&quot;
@@ -662,10 +664,10 @@
 </span><span style="font-style:italic;color:#5c6773;"># Check your wallet address
 </span><span style="color:#ffd580;">solana</span><span> address
 </span></code></pre>
-<div role="alert" class="alert alert-info alert-soft">
-  <span>**Security Note:** Your keypair file contains your private key. Keep it safe and never share it!</span>
+<div role="alert" class="alert alert-info alert- soft">
+  <div><p><strong>Security Note:</strong> Your keypair file contains your private key. Keep it safe and never share it!</p>
 </div>
-<h3 id="step-4-get-some-devnet-sol">Step 4: Get Some Devnet SOL</h3>
+</div><h3 id="step-4-get-some-devnet-sol">Step 4: Get Some Devnet SOL</h3>
 <p>You'll need SOL to pay for transactions (even tiny amounts). Get free devnet SOL:</p>
 <pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="font-style:italic;color:#5c6773;"># Airdrop 2 SOL to your wallet on devnet
 </span><span style="color:#ffd580;">solana</span><span> airdrop 2
@@ -681,10 +683,10 @@
 </span><span style="font-style:italic;color:#5c6773;"># In another terminal, configure CLI to use localhost
 </span><span style="color:#ffd580;">solana</span><span> config set</span><span style="color:#ffcc66;"> --url</span><span> localhost
 </span></code></pre>
-<div role="alert" class="alert alert-success alert-soft">
-  <span>**Pro Tip:** Local validator resets every time you restart it, giving you a clean testing environment!</span>
+<div role="alert" class="alert alert-success alert- soft">
+  <div><p><strong>Pro Tip:</strong> Local validator resets every time you restart it, giving you a clean testing environment!</p>
 </div>
-<h2 id="let-s-build-something-fun-your-first-token">Let's Build Something Fun: Your First Token!</h2>
+</div><h2 id="let-s-build-something-fun-your-first-token">Let's Build Something Fun: Your First Token!</h2>
 <p>Now for the exciting part - let's create and mint your very own token! We'll build a simple JavaScript application that:</p>
 <ol>
 <li>Creates a new token mint</li>
@@ -773,10 +775,10 @@
 </span><span>
 </span><span style="color:#ffd580;">main</span><span>()</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">catch</span><span>(</span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">error</span><span>)</span><span style="color:#ccc9c2cc;">;
 </span></code></pre>
-<div role="alert" class="alert alert-info alert-soft">
-  <span>**Note:** The code above automatically reads the wallet file we created in Step 3 (`~/my-solana-wallet.json`). If you saved it elsewhere, update the `walletPath` variable.</span>
+<div role="alert" class="alert alert-info alert- soft">
+  <div><p><strong>Note:</strong> The code above automatically reads the wallet file we created in Step 3 (<code>~/my-solana-wallet.json</code>). If you saved it elsewhere, update the <code>walletPath</code> variable.</p>
 </div>
-<h3 id="running-your-token-creation">Running Your Token Creation</h3>
+</div><h3 id="running-your-token-creation">Running Your Token Creation</h3>
 <pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">node</span><span> create-token.js
 </span></code></pre>
 <h3 id="adding-token-transfer-functionality">Adding Token Transfer Functionality</h3>
@@ -902,10 +904,10 @@
 <li><strong>Open your HTML file</strong>: Open <code>index.html</code> in your browser</li>
 <li><strong>Connect and test</strong>: Connect your wallet and try the operations</li>
 </ol>
-<div role="alert" class="alert alert-success alert-soft">
-  <span>**Congratulations!** 🎉 You've just created your first Solana token and built a web interface to interact with it!</span>
+<div role="alert" class="alert alert-success alert- soft">
+  <div><p><strong>Congratulations!</strong> 🎉 You've just created your first Solana token and built a web interface to interact with it!</p>
 </div>
-<h2 id="what-s-next-your-solana-journey-continues">What's Next? Your Solana Journey Continues</h2>
+</div><h2 id="what-s-next-your-solana-journey-continues">What's Next? Your Solana Journey Continues</h2>
 <p>You've taken your first steps into Solana development! Here's what you can explore next:</p>
 <h3 id="immediate-next-steps">Immediate Next Steps</h3>
 <ol>
@@ -1062,8 +1064,9 @@
 </div>
 <h2 id="conclusion">Conclusion</h2>
 <p>You've successfully completed your first Solana development journey! From understanding the fundamentals of blockchain and Web3 to setting up your development environment and creating your own token, you've gained hands-on experience with one of the fastest-growing blockchain ecosystems.</p>
-<div role="alert" class="alert alert-info alert-soft">
-  <span>**Remember:** Solana development is rapidly evolving. Stay updated with the latest documentation and community resources!</span>
+<div role="alert" class="alert alert-info alert- soft">
+  <div><p><strong>Remember:</strong> Solana development is rapidly evolving. Stay updated with the latest documentation and community resources!</p>
+</div>
 </div>
 <p>The skills you've learned today form the foundation for building sophisticated decentralized applications. Whether you want to create the next big DeFi protocol, build innovative NFT experiences, or develop tools for the Solana ecosystem, you now have the knowledge to get started.</p>
 <p>Keep experimenting, keep building, and most importantly - have fun exploring the world of decentralized applications!</p>

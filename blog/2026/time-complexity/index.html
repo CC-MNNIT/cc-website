@@ -563,10 +563,10 @@
 <hr />
 <h2 id="what-is-time-complexity">What is Time Complexity?</h2>
 <p>Time complexity is a computational concept that describes the amount of time an algorithm takes to complete as a function of the input size. Rather than measuring exact execution time (which varies by hardware), we analyze how the <strong>number of operations</strong> grows relative to input size.</p>
-<div role="alert" class="alert alert-info alert-soft">
-  <span>**Key Insight:** Time complexity answers the question: *If I double my input size, how does my runtime change?*</span>
+<div role="alert" class="alert alert-info alert- soft">
+  <div><p><strong>Key Insight:</strong> Time complexity answers the question: <em>If I double my input size, how does my runtime change?</em></p>
 </div>
-<h3 id="why-time-complexity-matters">Why Time Complexity Matters</h3>
+</div><h3 id="why-time-complexity-matters">Why Time Complexity Matters</h3>
 <ol>
 <li><strong>Scalability</strong>: An O(n²) algorithm might work fine for 100 items but become unusable at 10,000</li>
 <li><strong>Resource Efficiency</strong>: Better complexity means lower cloud costs and faster user experiences</li>
@@ -587,10 +587,10 @@
 <tr><td>O(2ⁿ)</td><td>Exponential</td><td>Recursive fibonacci (naive)</td></tr>
 <tr><td>O(n!)</td><td>Factorial</td><td>Generating all permutations</td></tr>
 </tbody></table>
-<div role="alert" class="alert alert-warning alert-soft">
-  <span>**Critical:** The difference between O(n) and O(n²) can mean the difference between milliseconds and hours for large datasets!</span>
+<div role="alert" class="alert alert-warning alert- soft">
+  <div><p><strong>Critical:</strong> The difference between O(n) and O(n²) can mean the difference between milliseconds and hours for large datasets!</p>
 </div>
-<h3 id="visualizing-growth-rates">Visualizing Growth Rates</h3>
+</div><h3 id="visualizing-growth-rates">Visualizing Growth Rates</h3>
 <pre class="mermaid border border-gray-500/15">
  graph LR
     A[&quot;Input Size: n&quot;] --&gt; B[&quot;O(1): Stays flat&quot;]
@@ -622,10 +622,10 @@
 </span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">arithmetic_operation</span><span>(</span><span style="color:#ffcc66;">a</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">b</span><span>):
 </span><span>    </span><span style="color:#ffa759;">return </span><span>a </span><span style="color:#f29e74;">+ </span><span>b </span><span style="color:#f29e74;">* </span><span style="color:#ffcc66;">2 </span><span style="color:#f29e74;">- </span><span style="color:#ffcc66;">5  </span><span style="font-style:italic;color:#5c6773;"># O(1) - fixed operations
 </span></code></pre>
-<div role="alert" class="alert alert-success alert-soft">
-  <span>**Pro Tip:** Hash tables (dictionaries in Python, objects in JavaScript) provide O(1) average-case lookup, making them invaluable for optimization!</span>
+<div role="alert" class="alert alert-success alert- soft">
+  <div><p><strong>Pro Tip:</strong> Hash tables (dictionaries in Python, objects in JavaScript) provide O(1) average-case lookup, making them invaluable for optimization!</p>
 </div>
-<h3 id="real-world-application">Real-World Application</h3>
+</div><h3 id="real-world-application">Real-World Application</h3>
 <pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Finding if a value exists in a list
 </span><span style="font-style:italic;color:#5c6773;"># Bad: O(n)
 </span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">exists_slow</span><span>(</span><span style="color:#ffcc66;">items</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">target</span><span>):
@@ -697,10 +697,10 @@
 </span><span>            max_val </span><span style="color:#f29e74;">= </span><span>num
 </span><span>    </span><span style="color:#ffa759;">return </span><span>max_val  </span><span style="font-style:italic;color:#5c6773;"># O(n) - single pass through array
 </span></code></pre>
-<div role="alert" class="alert alert-info alert-soft">
-  <span>**Note:** Multiple O(n) operations in sequence is still O(n): O(n) + O(n) + O(n) = O(3n) = O(n)</span>
+<div role="alert" class="alert alert-info alert- soft">
+  <div><p><strong>Note:</strong> Multiple O(n) operations in sequence is still O(n): O(n) + O(n) + O(n) = O(3n) = O(n)</p>
 </div>
-<h3 id="common-pitfall">Common Pitfall</h3>
+</div><h3 id="common-pitfall">Common Pitfall</h3>
 <pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># This looks like one loop, but it&#39;s actually O(n²)!
 </span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">has_duplicates_slow</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
 </span><span>    </span><span style="color:#ffa759;">for </span><span>item </span><span style="color:#ffa759;">in </span><span>arr:
@@ -752,8 +752,7 @@
 </span><span style="font-style:italic;color:#5c6773;"># Time Complexity: O(n log n)
 </span><span style="font-style:italic;color:#5c6773;"># log n levels of recursion, each doing O(n) work
 </span></code></pre>
-<p><div class="badge badge-soft badge-success">Industry Standard</div>
- Most efficient comparison-based sorting algorithms (merge sort, quicksort, heapsort) are O(n log n).</p>
+<p><div class="badge badge-soft badge-success">Industry Standard</div> Most efficient comparison-based sorting algorithms (merge sort, quicksort, heapsort) are O(n log n).</p>
 <hr />
 <h2 id="o-n2-quadratic-time">O(n²) - Quadratic Time</h2>
 <p>Common with nested loops over the same dataset. Performance degrades rapidly with larger inputs.</p>
@@ -783,10 +782,10 @@
 </span><span>                </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">True
 </span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">False
 </span></code></pre>
-<div role="alert" class="alert alert-warning alert-soft">
-  <span>**Performance Impact:** For 10,000 items, O(n²) means 100,000,000 operations. At 1 microsecond per operation, that's 100 seconds!</span>
+<div role="alert" class="alert alert-warning alert- soft">
+  <div><p><strong>Performance Impact:</strong> For 10,000 items, O(n²) means 100,000,000 operations. At 1 microsecond per operation, that's 100 seconds!</p>
 </div>
-<h3 id="when-o-n2-is-acceptable">When O(n²) is Acceptable</h3>
+</div><h3 id="when-o-n2-is-acceptable">When O(n²) is Acceptable</h3>
 <ul>
 <li>Small, fixed-size datasets (n &lt; 100)</li>
 <li>When code simplicity matters more than performance</li>
@@ -850,10 +849,10 @@
 </span><span>    </span><span style="font-style:italic;color:#5c6773;"># Total: O(n) + O(n log n) + O(n)
 </span><span>    </span><span style="font-style:italic;color:#5c6773;"># Result: O(n log n) - we keep the dominant term
 </span></code></pre>
-<div role="alert" class="alert alert-info alert-soft">
-  <span>**Rule of Thumb:** When adding complexities, keep only the largest (dominant) term.</span>
+<div role="alert" class="alert alert-info alert- soft">
+  <div><p><strong>Rule of Thumb:</strong> When adding complexities, keep only the largest (dominant) term.</p>
 </div>
-<h3 id="rule-2-nested-operations">Rule 2: Nested Operations</h3>
+</div><h3 id="rule-2-nested-operations">Rule 2: Nested Operations</h3>
 <pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">def </span><span style="color:#ffd580;">nested_example</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
 </span><span>    </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span>arr:                    </span><span style="font-style:italic;color:#5c6773;"># O(n)
 </span><span>        </span><span style="color:#ffa759;">for </span><span>j </span><span style="color:#ffa759;">in </span><span>arr:                </span><span style="font-style:italic;color:#5c6773;"># O(n)
@@ -903,8 +902,7 @@
 </span><span>        arr[i] </span><span style="color:#f29e74;">*= </span><span style="color:#ffcc66;">2
 </span><span>    </span><span style="color:#ffa759;">return </span><span>arr
 </span></code></pre>
-<p><div class="badge badge-soft badge-warning">Trade-off Alert</div>
- Often there's a trade-off: faster time complexity may require more space (and vice versa).</p>
+<p><div class="badge badge-soft badge-warning">Trade-off Alert</div> Often there's a trade-off: faster time complexity may require more space (and vice versa).</p>
 <hr />
 <h2 id="practical-optimization-strategies">Practical Optimization Strategies</h2>
 <h3 id="1-use-the-right-data-structure">1. Use the Right Data Structure</h3>
@@ -1070,10 +1068,10 @@
 </span><span>            new_array[i] </span><span style="color:#f29e74;">= </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>array[i]
 </span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>array </span><span style="color:#f29e74;">= </span><span>new_array
 </span></code></pre>
-<div role="alert" class="alert alert-info alert-soft">
-  <span>**Amortized O(1):** Over n operations, the total cost is O(n), making each operation O(1) on average.</span>
+<div role="alert" class="alert alert-info alert- soft">
+  <div><p><strong>Amortized O(1):</strong> Over n operations, the total cost is O(n), making each operation O(1) on average.</p>
 </div>
-<h3 id="best-average-and-worst-case">Best, Average, and Worst Case</h3>
+</div><h3 id="best-average-and-worst-case">Best, Average, and Worst Case</h3>
 <pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Quicksort Complexity:
 </span><span style="font-style:italic;color:#5c6773;"># - Best case: O(n log n) - perfect pivots
 </span><span style="font-style:italic;color:#5c6773;"># - Average case: O(n log n) - random pivots
@@ -1111,10 +1109,10 @@
 </span><span>
 </span><span style="font-style:italic;color:#5c6773;"># Performance: For 100,000 users, ~100,000 comparisons per search
 </span></code></pre>
-<div role="alert" class="alert alert-error alert-soft">
-  <span>**Problem:** Searching 100,000 users takes too long. Users experience lag.</span>
+<div role="alert" class="alert alert-error alert- soft">
+  <div><p><strong>Problem:</strong> Searching 100,000 users takes too long. Users experience lag.</p>
 </div>
-<h3 id="version-2-hash-table-index-o-1-exact-match">Version 2: Hash Table Index - O(1) Exact Match</h3>
+</div><h3 id="version-2-hash-table-index-o-1-exact-match">Version 2: Hash Table Index - O(1) Exact Match</h3>
 <pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">class </span><span style="color:#73d0ff;">UserDatabase_v2</span><span>:
 </span><span>    </span><span style="color:#ffa759;">def </span><span style="color:#f28779;">__init__</span><span>(</span><span style="color:#ffcc66;">self</span><span>):
 </span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>users </span><span style="color:#f29e74;">= </span><span>[]
@@ -1166,8 +1164,9 @@
 </span><span>                idx </span><span style="color:#f29e74;">+= </span><span style="color:#ffcc66;">1
 </span><span>            </span><span style="color:#ffa759;">return </span><span>results
 </span></code></pre>
-<div role="alert" class="alert alert-success alert-soft">
-  <span>**Result:** Email/username lookups are instant. Name prefix searches are logarithmic. User experience improved dramatically!</span>
+<div role="alert" class="alert alert-success alert- soft">
+  <div><p><strong>Result:</strong> Email/username lookups are instant. Name prefix searches are logarithmic. User experience improved dramatically!</p>
+</div>
 </div>
 <hr />
 <h2 id="cheat-sheet-quick-reference">Cheat Sheet: Quick Reference</h2>
@@ -1272,18 +1271,18 @@
 </div>
 <hr />
 <h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
-<div role="alert" class="alert alert-error alert-soft">
-  <span>**Mistake 1:** Assuming all single loops are O(n). Some loops might do O(n) work inside each iteration!</span>
+<div role="alert" class="alert alert-error alert- soft">
+  <div><p><strong>Mistake 1:</strong> Assuming all single loops are O(n). Some loops might do O(n) work inside each iteration!</p>
 </div>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># This is O(n²), not O(n)!
+</div><pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># This is O(n²), not O(n)!
 </span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">mistake_example</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
 </span><span>    </span><span style="color:#ffa759;">for </span><span>item </span><span style="color:#ffa759;">in </span><span>arr:  </span><span style="font-style:italic;color:#5c6773;"># O(n)
 </span><span>        arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">remove</span><span>(item)  </span><span style="font-style:italic;color:#5c6773;"># remove() is O(n)!
 </span></code></pre>
-<div role="alert" class="alert alert-error alert-soft">
-  <span>**Mistake 2:** Ignoring hidden complexity in library functions.</span>
+<div role="alert" class="alert alert-error alert- soft">
+  <div><p><strong>Mistake 2:</strong> Ignoring hidden complexity in library functions.</p>
 </div>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Python list operations and their complexities:
+</div><pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Python list operations and their complexities:
 </span><span>arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(x)      </span><span style="font-style:italic;color:#5c6773;"># O(1) amortized
 </span><span>arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">insert</span><span>(</span><span style="color:#ffcc66;">0</span><span style="color:#ccc9c2cc;">, </span><span>x)   </span><span style="font-style:italic;color:#5c6773;"># O(n)
 </span><span>arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">pop</span><span>()          </span><span style="font-style:italic;color:#5c6773;"># O(1)
@@ -1292,8 +1291,9 @@
 </span><span>x </span><span style="color:#f29e74;">in </span><span>arr           </span><span style="font-style:italic;color:#5c6773;"># O(n)
 </span><span>arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">sort</span><span>()         </span><span style="font-style:italic;color:#5c6773;"># O(n log n)
 </span></code></pre>
-<div role="alert" class="alert alert-error alert-soft">
-  <span>**Mistake 3:** Premature optimization. Profile first, optimize bottlenecks second.</span>
+<div role="alert" class="alert alert-error alert- soft">
+  <div><p><strong>Mistake 3:</strong> Premature optimization. Profile first, optimize bottlenecks second.</p>
+</div>
 </div>
 <hr />
 <h2 id="tools-and-resources">Tools and Resources</h2>
@@ -1407,8 +1407,7 @@
 <li><strong>Space constraints</strong>: Sometimes you trade time for space</li>
 <li><strong>Real-world constants</strong>: O(n log n) with large constant factors might be slower than O(n²) for small n</li>
 </ul>
-<p><div class="badge badge-soft badge-primary">Key Takeaway</div>
- Master the fundamentals (O(1), O(n), O(n²)), practice recognizing patterns, and always measure before optimizing. The best optimization is often choosing the right algorithm from the start.</p>
+<p><div class="badge badge-soft badge-primary">Key Takeaway</div> Master the fundamentals (O(1), O(n), O(n²)), practice recognizing patterns, and always measure before optimizing. The best optimization is often choosing the right algorithm from the start.</p>
 <hr />
 <h2 id="further-reading">Further Reading</h2>
 <ul>
@@ -1417,8 +1416,9 @@
 <li><strong>Grokking Algorithms</strong> - Beginner-friendly with illustrations</li>
 <li><strong>MIT OpenCourseWare</strong> - Free algorithm courses</li>
 </ul>
-<div role="alert" class="alert alert-success alert-soft">
-  <span>**Challenge:** Take one of your recent projects and analyze the time complexity of its core functions. Can you identify any optimization opportunities?</span>
+<div role="alert" class="alert alert-success alert- soft">
+  <div><p><strong>Challenge:</strong> Take one of your recent projects and analyze the time complexity of its core functions. Can you identify any optimization opportunities?</p>
+</div>
 </div>
 <hr />
 <p><em>Have questions or found this helpful? Drop your thoughts in the comments below or connect with me on LinkedIn!</em></p>
