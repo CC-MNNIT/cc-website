@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Computer Coding Club - salesforce</title>
+    <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/tags/salesforce/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-02-15T00:00:00+00:00</updated>
+    <id>https://cc-club.in/tags/salesforce/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Salesforce Internship Interview Process</title>
+        <published>2026-02-15T00:00:00+00:00</published>
+        <updated>2026-02-15T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/blog/2026/salesforce-interview-experience/"/>
+        <id>https://cc-club.in/blog/2026/salesforce-interview-experience/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/blog/2026/salesforce-interview-experience/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;
+  &lt;span&gt;**Salesforce** is a San-Francisco based Multi-national company which is often regarded as world&#x27;s best AI-CRM firm. Overall, the internship experience at Salesforce is amazing, and so is the compensation offered.&lt;&#x2F;span&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;internship-pathways&quot;&gt;Internship Pathways&lt;&#x2F;h2&gt;
+&lt;p&gt;A big chunk of the hiring at Salesforce at entry level happens through PPO conversions post summer internship. There are two ways to land an internship at Salesforce:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;On-campus&lt;&#x2F;div&gt;
+ Salesforce visits MNNIT Allahabad for summer internship. The process involves an online round (OA) followed by 2 rounds of interview for each shortlisted candidate.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Off-campus&lt;&#x2F;div&gt;
+ Salesforce often organizes a hackathon (usually called Tech Accelerator). To be aware of when these happen you can check out the &lt;div class=&quot;pretty-link-card group&quot;&gt;
+  &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;www.salesforce.com&amp;#x2F;company&amp;#x2F;careers&amp;#x2F;university&amp;#x2F;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;block&quot;&gt;
+    &lt;div class=&quot;flex items-start gap-4 p-5&quot;&gt;
+      
+      &lt;div class=&quot;flex-1 min-w-0&quot;&gt;
+        &lt;div class=&quot;flex items-start justify-between gap-2 mb-2&quot;&gt;
+          &lt;h3 class=&quot;pretty-link-title&quot;&gt;
+            FutureForce Page
+          &lt;&#x2F;h3&gt;
+          &lt;div class=&quot;pretty-link-icon-wrapper&quot;&gt;
+            &lt;svg class=&quot;pretty-link-icon&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;&gt;
+              &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14&quot;&gt;&lt;&#x2F;path&gt;
+            &lt;&#x2F;svg&gt;
+          &lt;&#x2F;div&gt;
+        &lt;&#x2F;div&gt;
+        
+        &lt;p class=&quot;pretty-link-description&quot;&gt;Salesforce University Recruiting&lt;&#x2F;p&gt;
+        
+        &lt;div class=&quot;pretty-link-url&quot;&gt;
+          &lt;svg class=&quot;w-3.5 h-3.5 mr-1.5 opacity-60&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;&gt;
+            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1&quot;&gt;&lt;&#x2F;path&gt;
+          &lt;&#x2F;svg&gt;
+          www.salesforce.com&amp;#x2F;company&amp;#x2F;careers&amp;#x2F;university&amp;#x2F;
+        &lt;&#x2F;div&gt;
+      &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+ or follow &lt;a href=&quot;https:&#x2F;&#x2F;www.instagram.com&#x2F;salesforcefutureforce&#x2F;&quot;&gt;FutureForce on Instagram&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Usually the process involves a resume based shortlisting for the hackathon after which the shortlisted candidates are invited to Salesforce Hyderabad Office for a hackathon. Interviews are conducted post hackathon and internships are awarded. If you get shortlisted for hackathon, there is a decent chance of qualifying for internships through this route.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;on-campus-process&quot;&gt;On-campus Process&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;online-assessment&quot;&gt;Online Assessment&lt;&#x2F;h3&gt;
+&lt;p&gt;The Salesforce online assessment is a timed challenge which is usually organized on HackerRank.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Format:&lt;&#x2F;strong&gt; 2-3 DSA questions only (No MCQs).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Difficulty:&lt;&#x2F;strong&gt; Leetcode Easy to Medium.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-warning alert-soft&quot;&gt;
+  &lt;span&gt;**Topics:** Greedy, 2 Pointer, Binary Search.
+*Note: The topics may differ and are very hard to predict.*&lt;&#x2F;span&gt;
+&lt;&#x2F;div&gt;
+&lt;h3 id=&quot;interviews-round-1&quot;&gt;Interviews (Round 1)&lt;&#x2F;h3&gt;
+&lt;p&gt;The candidates shortlisted for interview go through the first round which is a technical round.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Content:&lt;&#x2F;strong&gt; DSA questions followed by development stack&#x2F;projects questions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Ratio:&lt;&#x2F;strong&gt; 70-80% DSA (Leetcode Medium), 20-30% Dev&#x2F;Projects.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The development stack questions are fundamental in nature and can be answered easily if you made the project yourself.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;
+  &lt;span&gt;**Pro Tip:** Your best chances are if you don&#x27;t behave like a robot!&lt;&#x2F;span&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;One of the prime focus of the interviewers is on your ability to develop a solution and explain your reasoning.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Speak while you code.&lt;&#x2F;li&gt;
+&lt;li&gt;Explain choices for data structures.&lt;&#x2F;li&gt;
+&lt;li&gt;Discuss expected time complexity.&lt;&#x2F;li&gt;
+&lt;li&gt;If you make a mistake, point it out and correct it.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h4&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500&#x2F;15 border&quot;&gt;
+  &lt;div class=&quot;collapse-title font-semibold&quot;&gt;
+    How to Introduce Yourself
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;collapse-content text-sm&quot;&gt;
+    &lt;p&gt;Prepare a good introduction, usually interviewers ask for your introduction at the start and just saying, &quot;Hi! I am xyz from MNNIT pursuing B.Tech in x branch and I am good in coding&quot; will not be very impactful, so yes that works, but ideally your introduction should be a 1-2 minute quick summary of the highlights of your resume.&lt;&#x2F;p&gt;
+&lt;p&gt;it should be &lt;strong&gt;90%&lt;&#x2F;strong&gt; about your skills, projects, CGPA, achievements and interests and &lt;strong&gt;10%&lt;&#x2F;strong&gt; about your non-academic, non-coding skills and passion which could be any small mention like &quot;In my free time I love to play basketball&#x2F;I love to sing&#x2F;I am a travel freak and I love to explore nature etc.&quot;&lt;&#x2F;p&gt;
+
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;h3 id=&quot;interview-round-2&quot;&gt;Interview (Round 2)&lt;&#x2F;h3&gt;
+&lt;p&gt;Be ready to be asked the introduction you gave in Round 1. This is generally an &lt;strong&gt;HR-Manager round&lt;&#x2F;strong&gt;. managers try to test your culture fit&#x2F;critical thinking. Expect puzzles and managerial questions.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Common Questions:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Tell me about your weakness.&lt;&#x2F;li&gt;
+&lt;li&gt;What is your favorite subject?&lt;&#x2F;li&gt;
+&lt;li&gt;What are your greatest achievements?&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-error alert-soft&quot;&gt;
+  &lt;span&gt;**Never say a true weakness!**
+You can say anything that initially sounds negative but adds more value to you.
+
+*Example:* &quot;My weakness is that when I delve into a project I get so involved in it that I forget about food...&quot;&lt;&#x2F;span&gt;
+&lt;&#x2F;div&gt;
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h3&gt;
+&lt;p&gt;So ultimately they will ask you: &lt;strong&gt;&quot;Are there any questions?&quot;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert-soft&quot;&gt;
+  &lt;span&gt;**This is the bingo moment!** You should always ask a question.&lt;&#x2F;span&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;Read about the company, what are their latest products and what they are investing on.&lt;&#x2F;p&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500&#x2F;15 border&quot;&gt;
+  &lt;div class=&quot;collapse-title font-semibold&quot;&gt;
+    Example Questions to Ask
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;collapse-content text-sm&quot;&gt;
+    &lt;ol&gt;
+&lt;li&gt;&quot;So sir, what is Agentforce all about and how is this revolutionizing the CRM Landscape?&quot;&lt;&#x2F;li&gt;
+&lt;li&gt;&quot;So, I heard trust is the number 1 value at Salesforce, how do developers transform into their daily work?&quot;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;&#x2F;strong&gt; Do not ask about work life balance or compensation. It puts you in a favorable position to ask company-oriented questions.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;my-internship-experience&quot;&gt;My Internship Experience&lt;&#x2F;h2&gt;
+&lt;p&gt;I joined Salesforce as a summer intern in 2025. The experience was amazing!&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Stipend:&lt;&#x2F;strong&gt; Great&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Location:&lt;&#x2F;strong&gt; Hyderabad Office&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Culture:&lt;&#x2F;strong&gt; Warm and welcoming&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The office food is great, and the employee perks as well. My team was particularly very warm and welcoming, and I personally learnt a lot.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;projects-delivered&quot;&gt;Projects Delivered&lt;&#x2F;h3&gt;
+&lt;p&gt;I delivered two projects during my internship:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;An &lt;strong&gt;MCP Server&lt;&#x2F;strong&gt; for realtime Jenkins Build Monitoring and Bug-Fixes&lt;&#x2F;li&gt;
+&lt;li&gt;A distributed multi-threaded priority based &lt;strong&gt;Gateway Service&lt;&#x2F;strong&gt; to deliver webhooks.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre class=&quot;mermaid border border-gray-500&#x2F;15&quot;&gt;
+ graph TD
+    A[&amp;quot;Gateway Service&amp;quot;] --&amp;gt;|&amp;quot;Priority Based Delivery&amp;quot;| B[&amp;quot;Jenkins Controller 1&amp;quot;]
+    A --&amp;gt; C[&amp;quot;Jenkins Controller 2&amp;quot;]
+    D[&amp;quot;MCP Server&amp;quot;] --&amp;gt;|&amp;quot;Monitors&amp;quot;| B
+    D --&amp;gt;|&amp;quot;Monitors&amp;quot;| C
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;final-advice&quot;&gt;Final Advice&lt;&#x2F;h3&gt;
+&lt;p&gt;My mentor at Salesforce was from MNNIT Batch 2019 itself! Apart from that, the entire team was very approachable and so was the case with all other interns.&lt;&#x2F;p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert-soft&quot;&gt;
+  &lt;span&gt;**Seek Help!**
+During internship don&#x27;t stay stuck. Try things, but if they don&#x27;t work out, don&#x27;t waste days fixing it. You will learn a lot from your team&#x27;s principal engineer and architects, because their perspective will teach you about developing a product from the lenses of the end-user.&lt;&#x2F;span&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;PPO conversions are quite generous at Salesforce given you deliver the project on time. The manager 1 on 1s are amazing and you can share feedback with your team. If you make it Hyderabad office, always make sure to try Andhra-food cause its amazing!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;best-of-luck-dude&quot;&gt;Best of Luck Dude :)&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;media.licdn.com&#x2F;dms&#x2F;image&#x2F;v2&#x2F;D5622AQEU3TTRenGE1g&#x2F;feedshare-shrink_2048_1536&#x2F;B56Zge3zEUH0As-&#x2F;0&#x2F;1752864607599?e=1772668800&amp;amp;v=beta&amp;amp;t=0Zfo5qoWKo8lqsFHLUeOGnnD-5Brbh53vJBJpJmGNb0&quot; alt=&quot;Internship at Salesforce&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
