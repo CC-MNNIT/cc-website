@@ -7,6 +7,7 @@
     margin: 0 auto;
     padding: 60px 20px 100px;
     min-height: 100vh;
+     overflow: visible;  
 }
 
 /* --- Header --- */
@@ -94,7 +95,7 @@
 
 
 .blog-search-wrapper {
-    position: sticky;
+    position: relative;
     top: 90px;
     z-index: 10;
     /* Lower than navbar usually (50) and sidebar */
