@@ -5,8 +5,89 @@
     <link rel="self" type="application/atom+xml" href="https://cc-club.in/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://cc-club.in/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-02-15T00:00:00+00:00</updated>
+    <updated>2026-03-06T00:00:00+00:00</updated>
     <id>https://cc-club.in/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Google Offcampus Placement Process</title>
+        <published>2026-03-06T00:00:00+00:00</published>
+        <updated>2026-03-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/blog/2026/google-offcampus-placement-process/"/>
+        <id>https://cc-club.in/blog/2026/google-offcampus-placement-process/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/blog/2026/google-offcampus-placement-process/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;storage.googleapis.com&#x2F;gweb-uniblog-publish-prod&#x2F;images&#x2F;Ananta_0.width-1300.jpg&quot; alt=&quot;Google India&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert- soft&quot;&gt;
+  &lt;div&gt;&lt;p&gt;&lt;strong&gt;Google&lt;&#x2F;strong&gt; is the technology giant, probably one of the best companies to work for in the world at this moment, they have a very diverse business which spans entire AI Stack (right from chips to the models and the data), their most revenue comes from ADs, they run youtube, they run google cloud and the list goes endless, Deepmind is another powerhouse within Google responsible for all AI Stuff!!&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;&lt;h2 id=&quot;pathway&quot;&gt;Pathway&lt;&#x2F;h2&gt;
+&lt;p&gt;Firstly, the most important thing is, to apply!! Never shy away from off-campus opportunities because of low-confidence or just the belief that hardly anyone gets a response from off-campus opportunities. The responses are random in nature, but you never know when you get your chance.&lt;&#x2F;p&gt;
+&lt;p&gt;I applied to Google offcampus, 3 times (in 1st Year&#x27;s end for Step Internship, in 2nd Year&#x27;s end for Summer Internship, in 3rd Year&#x27;s end for Full time role)&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yes, the only thing to do is keep an eye on &lt;a href=&quot;https:&#x2F;&#x2F;www.google.com&#x2F;about&#x2F;careers&quot;&gt;&lt;strong&gt;Careers Page (turn on Alerts)&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Being an &lt;a href=&quot;https:&#x2F;&#x2F;icpc.global&#x2F;&quot;&gt;ICPC&lt;&#x2F;a&gt; Regionalist helps a lot, it can almost gurantee an interview call&lt;&#x2F;li&gt;
+&lt;li&gt;Summer Internship at some MNC also increases your chances of a response&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;phase-1&quot;&gt;Phase 1&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;There are no online assessment rounds at Google for Full-time opportunities, someone from the HR team at Google (generally having an xwf in name), will reach out to you if you are a match&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;They will seek you to fill an interest form, fill that at earliest&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;You will receive an interview mail from Google Team soon, usually they schedule 2 interviews together (round 1 and round 2)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;round-1-2&quot;&gt;Round 1 &amp;amp; 2&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;These are purely DSA rounds, and in each round they ask 1-2 DSA questions, the difficulty of these questions is generally leetcode medium&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert- soft&quot;&gt;
+  &lt;div&gt;&lt;p&gt;In my first round I was asked to implement a YouTube ADs class and the solution involved use of 2 heaps, and it was basically a highly modified version of this &lt;a href=&quot;https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;find-median-from-data-stream&quot;&gt;leetcode problem&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;The interviewers again look for 2 things&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Your ability to weigh the trade-offs, and build a good solution and communicate the entire thought process nicely to them&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Your code clarity, they call is neat code, and interviewers often remark positively to you if your write good code, which basically means making sure you maintain good indentation, use meaningful names for variables etc.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert- soft&quot;&gt;
+  &lt;div&gt;&lt;p&gt;Google, shares a doc link, and you code on the google doc, without use of any IDE, but don&#x27;t be too cautious of missing a ; or an indentation issue, if you notice it, the interviewers are usuallly chill about it, also at the end of interview which usually has a time limit of 45 minutes, you do a dry run with the interviewer to verify correctness.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;&lt;h2 id=&quot;round-3&quot;&gt;Round 3&lt;&#x2F;h2&gt;
+&lt;p&gt;If your round 1 and round 2 went well, you will receive the link for 3rd Round of interview, this is again a DSA round, and usually takes months to come to you&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Expect leetcode hard questions&lt;&#x2F;li&gt;
+&lt;li&gt;The process is same as round 1 &amp;amp; 2&lt;&#x2F;li&gt;
+&lt;li&gt;After this round, the HR asks for a transcript&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;additional-rounds&quot;&gt;Additional Rounds&lt;&#x2F;h2&gt;
+&lt;p&gt;This may or may not happen for you, if the Hiring team is satisfied they won&#x27;t schedule your 4th round, if they are not they may schedule a 4th round, and usually they do schedule a 4th round, this could be a DSA Round or an Googlyness Round depending on which aspect the Hiring Committee wants to test you&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;If its a DSA round, it will be just the same as round 3 with increased difficulty level of problem you get&lt;&#x2F;li&gt;
+&lt;li&gt;If its a Googlyness round, then you will get an HR-Manager type round where they wish to test whether you are a good cultural fit or not, and it is usually in form of &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@poojaauma&#x2F;the-behavioral-questions-that-helped-me-in-my-googlyness-round-6c41433ea5dd&quot;&gt;situation&#x2F;scenario based questions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;team-matching&quot;&gt;Team Matching&lt;&#x2F;h2&gt;
+&lt;p&gt;After you get great response and if hiring has not freezed, you should proceed to team matching where you may be reached out by different teams at Google for potential match of skills and cultural fit, enjoy this phase and wait for your offer&lt;&#x2F;p&gt;
+&lt;p&gt;Reaching this phase mostly means that there is a very high probability you will make it to the company!&lt;&#x2F;p&gt;
+&lt;p&gt;Good Luck!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Salesforce Internship Interview Process</title>
         <published>2026-02-15T00:00:00+00:00</published>
@@ -34,35 +115,7 @@
 &lt;p&gt;&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;On-campus&lt;&#x2F;div&gt; Salesforce visits MNNIT Allahabad for summer internship. The process involves an online round (OA) followed by 2 rounds of interview for each shortlisted candidate.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Off-campus&lt;&#x2F;div&gt; Salesforce often organizes a hackathon (usually called Tech Accelerator). To be aware of when these happen you can check out the &lt;div class=&quot;pretty-link-card group&quot;&gt;
-  &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;www.salesforce.com&amp;#x2F;company&amp;#x2F;careers&amp;#x2F;university&amp;#x2F;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;block&quot;&gt;
-    &lt;div class=&quot;flex items-start gap-4 p-5&quot;&gt;
-      
-      &lt;div class=&quot;flex-1 min-w-0&quot;&gt;
-        &lt;div class=&quot;flex items-start justify-between gap-2 mb-2&quot;&gt;
-          &lt;h3 class=&quot;pretty-link-title&quot;&gt;
-            FutureForce Page
-          &lt;&#x2F;h3&gt;
-          &lt;div class=&quot;pretty-link-icon-wrapper&quot;&gt;
-            &lt;svg class=&quot;pretty-link-icon&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;&gt;
-              &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14&quot;&gt;&lt;&#x2F;path&gt;
-            &lt;&#x2F;svg&gt;
-          &lt;&#x2F;div&gt;
-        &lt;&#x2F;div&gt;
-        
-        &lt;p class=&quot;pretty-link-description&quot;&gt;Salesforce University Recruiting&lt;&#x2F;p&gt;
-        
-        &lt;div class=&quot;pretty-link-url&quot;&gt;
-          &lt;svg class=&quot;w-3.5 h-3.5 mr-1.5 opacity-60&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;&gt;
-            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1&quot;&gt;&lt;&#x2F;path&gt;
-          &lt;&#x2F;svg&gt;
-          www.salesforce.com&amp;#x2F;company&amp;#x2F;careers&amp;#x2F;university&amp;#x2F;
-        &lt;&#x2F;div&gt;
-      &lt;&#x2F;div&gt;
-    &lt;&#x2F;div&gt;
-  &lt;&#x2F;a&gt;
-&lt;&#x2F;div&gt;
- or follow &lt;a href=&quot;https:&#x2F;&#x2F;www.instagram.com&#x2F;salesforcefutureforce&#x2F;&quot;&gt;FutureForce on Instagram&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Off-campus&lt;&#x2F;div&gt; Salesforce often organizes a hackathon (usually called Tech Accelerator). To be aware of when these happen you can check out the &lt;a href=&quot;https:&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;2026&#x2F;salesforce-interview-experience&#x2F;%22https:&#x2F;&#x2F;www.salesforce.com&#x2F;company&#x2F;careers&#x2F;university&#x2F;%22&quot;&gt;FutureForce Page&lt;&#x2F;a&gt; or follow &lt;a href=&quot;https:&#x2F;&#x2F;www.instagram.com&#x2F;salesforcefutureforce&#x2F;&quot;&gt;FutureForce on Instagram&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Usually the process involves a resume based shortlisting for the hackathon after which the shortlisted candidates are invited to Salesforce Hyderabad Office for a hackathon. Interviews are conducted post hackathon and internships are awarded. If you get shortlisted for hackathon, there is a decent chance of qualifying for internships through this route.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -72,12 +125,12 @@
 &lt;h3 id=&quot;online-assessment&quot;&gt;Online Assessment&lt;&#x2F;h3&gt;
 &lt;p&gt;The Salesforce online assessment is a timed challenge which is usually organized on HackerRank.&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Format:&lt;&#x2F;strong&gt; 2-3 DSA questions only (No MCQs).&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Difficulty:&lt;&#x2F;strong&gt; Leetcode Easy to Medium.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Format:&lt;&#x2F;strong&gt; 2-3 DSA questions only (No MCQs)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Difficulty:&lt;&#x2F;strong&gt; Generally Leetcode Medium&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;div role=&quot;alert&quot; class=&quot;alert alert-warning alert- soft&quot;&gt;
-  &lt;div&gt;&lt;p&gt;&lt;strong&gt;Topics:&lt;&#x2F;strong&gt; Greedy, 2 Pointer, Binary Search.
-&lt;em&gt;Note: The topics may differ and are very hard to predict.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+  &lt;div&gt;&lt;p&gt;&lt;strong&gt;Topics:&lt;&#x2F;strong&gt; Greedy, Arrays, 2 Pointer, Binary Search.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Note: The topics may differ and are very hard to predict.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;&lt;h3 id=&quot;interviews-round-1&quot;&gt;Interviews (Round 1)&lt;&#x2F;h3&gt;
 &lt;p&gt;The candidates shortlisted for interview go through the first round which is a technical round.&lt;&#x2F;p&gt;
@@ -89,15 +142,16 @@
 &lt;p&gt;The development stack questions are fundamental in nature and can be answered easily if you made the project yourself.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert- soft&quot;&gt;
-  &lt;div&gt;&lt;p&gt;&lt;strong&gt;Pro Tip:&lt;&#x2F;strong&gt; Your best chances are if you don&#x27;t behave like a robot!&lt;&#x2F;p&gt;
+  &lt;div&gt;&lt;p&gt;&lt;strong&gt;Pro Tip:&lt;&#x2F;strong&gt; During problem solving, its very important to speak out your thought process and communicate with the interviewer, they are not there to be impressed by you solving it in 5 minutes rather they are mostly way more interested in your approach and ability to build a solution and also explain why you came up with it, so don&#x27;t be a robot, speak.&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 &lt;p&gt;One of the prime focus of the interviewers is on your ability to develop a solution and explain your reasoning.&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Speak while you code.&lt;&#x2F;li&gt;
-&lt;li&gt;Explain choices for data structures.&lt;&#x2F;li&gt;
-&lt;li&gt;Discuss expected time complexity.&lt;&#x2F;li&gt;
-&lt;li&gt;If you make a mistake, point it out and correct it.&lt;&#x2F;li&gt;
+&lt;li&gt;Explain choices for data structures and trade-offs&lt;&#x2F;li&gt;
+&lt;li&gt;Discuss expected time complexity while coding and also if you know more than one language you can touch upon how you would do things differently in this language&lt;&#x2F;li&gt;
+&lt;li&gt;If you make a mistake, its okay!! point it out yourself and correct it&lt;&#x2F;li&gt;
+&lt;li&gt;Confidence is the key to get the job&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h4&gt;
 &lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500&#x2F;15 border&quot;&gt;
@@ -111,8 +165,8 @@
   &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 &lt;h3 id=&quot;interview-round-2&quot;&gt;Interview (Round 2)&lt;&#x2F;h3&gt;
-&lt;p&gt;Be ready to be asked the introduction you gave in Round 1. This is generally an &lt;strong&gt;HR-Manager round&lt;&#x2F;strong&gt;. managers try to test your culture fit&#x2F;critical thinking. Expect puzzles and managerial questions.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Common Questions:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Be ready to be asked the introduction you gave in Round 1. This is generally an &lt;strong&gt;HR-Manager round&lt;&#x2F;strong&gt;. managers try to test your culture fit&#x2F;critical thinking. Expect &lt;a href=&quot;https:&#x2F;&#x2F;www.geeksforgeeks.org&#x2F;aptitude&#x2F;top-100-puzzles-asked-in-interviews&#x2F;&quot;&gt;puzzles&lt;&#x2F;a&gt; and managerial questions.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Common Non Puzzle Questions:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;Tell me about your weakness.&lt;&#x2F;li&gt;
 &lt;li&gt;What is your favorite subject?&lt;&#x2F;li&gt;
@@ -123,13 +177,13 @@
 You can say anything that initially sounds negative but adds more value to you.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;em&gt;Example:&lt;&#x2F;em&gt; &quot;My weakness is that when I delve into a project I get so involved in it that I forget about food...&quot;&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
-&lt;&#x2F;div&gt;&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h3&gt;
-&lt;p&gt;So ultimately they will ask you: &lt;strong&gt;&quot;Are there any questions?&quot;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;A lot of times Managers would ask you: &lt;strong&gt;&quot;Are there any questions?&quot;&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert- soft&quot;&gt;
   &lt;div&gt;&lt;p&gt;&lt;strong&gt;This is the bingo moment!&lt;&#x2F;strong&gt; You should always ask a question.&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
-&lt;p&gt;Read about the company, what are their latest products and what they are investing on.&lt;&#x2F;p&gt;
+&lt;p&gt;Generally its good to read about the company before HR round, what are their latest products and what they are investing on.&lt;&#x2F;p&gt;
 &lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500&#x2F;15 border&quot;&gt;
   &lt;div class=&quot;collapse-title font-semibold&quot;&gt;
     Example Questions to Ask
@@ -143,7 +197,7 @@ You can say anything that initially sounds negative but adds more value to you.&
   &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;&#x2F;strong&gt; Do not ask about work life balance or compensation. It puts you in a favorable position to ask company-oriented questions.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;&#x2F;strong&gt; Do not ask about work life balance or compensation. It puts you in a favorable position to ask company-oriented questions. WLB and Compensation for Salesforce is already good.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h2 id=&quot;my-internship-experience&quot;&gt;My Internship Experience&lt;&#x2F;h2&gt;
 &lt;p&gt;I joined Salesforce as a summer intern in 2025. The experience was amazing!&lt;&#x2F;p&gt;
@@ -160,7 +214,6 @@ You can say anything that initially sounds negative but adds more value to you.&
 &lt;li&gt;A distributed multi-threaded priority based &lt;strong&gt;Gateway Service&lt;&#x2F;strong&gt; to deliver webhooks.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h3 id=&quot;final-advice&quot;&gt;Final Advice&lt;&#x2F;h3&gt;
-&lt;p&gt;My mentor at Salesforce was from MNNIT Batch 2019 itself! Apart from that, the entire team was very approachable and so was the case with all other interns.&lt;&#x2F;p&gt;
 &lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert- soft&quot;&gt;
   &lt;div&gt;&lt;p&gt;&lt;strong&gt;Seek Help!&lt;&#x2F;strong&gt;
 During internship don&#x27;t stay stuck. Try things, but if they don&#x27;t work out, don&#x27;t waste days fixing it. You will learn a lot from your team&#x27;s principal engineer and architects, because their perspective will teach you about developing a product from the lenses of the end-user.&lt;&#x2F;p&gt;
@@ -168,7 +221,7 @@ During internship don&#x27;t stay stuck. Try things, but if they don&#x27;t work
 &lt;&#x2F;div&gt;
 &lt;p&gt;PPO conversions are quite generous at Salesforce given you deliver the project on time. The manager 1 on 1s are amazing and you can share feedback with your team. If you make it Hyderabad office, always make sure to try Andhra-food cause its amazing!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;best-of-luck-dude&quot;&gt;Best of Luck Dude :)&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;media.licdn.com&#x2F;dms&#x2F;image&#x2F;v2&#x2F;D5622AQEU3TTRenGE1g&#x2F;feedshare-shrink_2048_1536&#x2F;B56Zge3zEUH0As-&#x2F;0&#x2F;1752864607599?e=1772668800&amp;amp;v=beta&amp;amp;t=0Zfo5qoWKo8lqsFHLUeOGnnD-5Brbh53vJBJpJmGNb0&quot; alt=&quot;Internship at Salesforce&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;media.licdn.com&#x2F;dms&#x2F;image&#x2F;v2&#x2F;D5622AQEU3TTRenGE1g&#x2F;feedshare-shrink_1280&#x2F;B56Zge3zEUH0Ao-&#x2F;0&#x2F;1752864607576?e=1774483200&amp;amp;v=beta&amp;amp;t=OflEajvSMwwRvPOZN3Uc1MW4BxvQONzRtQI-lvOP_OM&quot; alt=&quot;Internship at Salesforce&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>
