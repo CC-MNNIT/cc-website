@@ -28,7 +28,7 @@
                         {% if config.extra.footer_links %}
                             {% for link in config.extra.footer_links %}
                             <li>
-                                <a href="{{ link.url }}">
+                                <a href="{{ get_url(path=link.url) }}">
                                     {{ link.name }}
                                 </a>
                             </li>
