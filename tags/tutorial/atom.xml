@@ -5,8 +5,28 @@
     <link rel="self" type="application/atom+xml" href="https://cc-club.in/tags/tutorial/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://cc-club.in/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-02-08T00:00:00+00:00</updated>
+    <updated>2026-03-10T00:00:00+00:00</updated>
     <id>https://cc-club.in/tags/tutorial/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Setting up Arch Linux on WSL: A Complete Guide for Students</title>
+        <published>2026-03-10T00:00:00+00:00</published>
+        <updated>2026-03-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/blog/2026/arch-linux-wsl-setup/"/>
+        <id>https://cc-club.in/blog/2026/arch-linux-wsl-setup/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Getting a proper development environment set up on Windows can be challenging. However, with the Windows Subsystem for Linux (WSL), you can run a full Linux environment right on your Windows machine! This guide will walk you through installing &lt;strong&gt;Arch Linux on Windows using WSL&lt;&#x2F;strong&gt;, configuring a normal user, and setting up a modern developer environment.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Client Side Solana 101: From Web2 Dev to Web3 Builder</title>
         <published>2026-02-08T00:00:00+00:00</published>

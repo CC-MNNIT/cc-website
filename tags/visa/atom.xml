@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Computer Coding Club - visa</title>
+    <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/tags/visa/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-03-11T00:00:00+00:00</updated>
+    <id>https://cc-club.in/tags/visa/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Visa On-Campus Internship Recruitment Experience</title>
+        <published>2026-03-11T00:00:00+00:00</published>
+        <updated>2026-03-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/blog/2026/visa-internship-experience/"/>
+        <id>https://cc-club.in/blog/2026/visa-internship-experience/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/blog/2026/visa-internship-experience/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;In this blog, I will share my &lt;strong&gt;on-campus Visa internship recruitment experience&lt;&#x2F;strong&gt;, including details about the &lt;strong&gt;Online Assessment (OA), interview process, questions asked, and preparation tips&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;If you are preparing for upcoming internship placements, I hope this experience gives you a clearer idea of what to expect.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Quick Summary&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Company: &lt;strong&gt;Visa&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Role: &lt;strong&gt;Internship&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Recruitment Mode: &lt;strong&gt;On-Campus Placement&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Stages: &lt;strong&gt;Online Assessment → Technical + HR Interview&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;online-assessment-oa&quot;&gt;Online Assessment (OA)&lt;&#x2F;h2&gt;
+&lt;p&gt;The first stage of the recruitment process was an &lt;strong&gt;Online Assessment consisting of 4 coding questions&lt;&#x2F;strong&gt;, with a total time limit of &lt;strong&gt;70 minutes&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Fortunately, I was able to solve &lt;strong&gt;all four questions within about 40 minutes&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is a brief overview of the problems.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;question-1&quot;&gt;Question 1&lt;&#x2F;h3&gt;
+&lt;p&gt;The first problem was relatively simple, similar to a &lt;strong&gt;LeetCode Easy&lt;&#x2F;strong&gt; level question.&lt;br &#x2F;&gt;
+It required a &lt;strong&gt;very small implementation with basic logic&lt;&#x2F;strong&gt;, roughly around &lt;strong&gt;5 lines of code&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;question-2&quot;&gt;Question 2&lt;&#x2F;h3&gt;
+&lt;p&gt;The second problem was a &lt;strong&gt;simulation-based greedy problem&lt;&#x2F;strong&gt; with difficulty comparable to &lt;strong&gt;LeetCode Medium&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The challenge was not the concept itself but implementing the logic correctly and efficiently.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;question-3&quot;&gt;Question 3&lt;&#x2F;h3&gt;
+&lt;p&gt;The third problem was again &lt;strong&gt;simulation-based&lt;&#x2F;strong&gt;, but it required a &lt;strong&gt;small optimization observation&lt;&#x2F;strong&gt; to make the solution efficient enough to pass all test cases.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;question-4&quot;&gt;Question 4&lt;&#x2F;h3&gt;
+&lt;p&gt;The final problem was related to &lt;strong&gt;Topological Sort&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;You were given a set of &lt;strong&gt;directed edges&lt;&#x2F;strong&gt;, and the goal was to determine the &lt;strong&gt;topological ordering of the vertices&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Anyone familiar with &lt;strong&gt;graph algorithms&lt;&#x2F;strong&gt; and standard topological sorting techniques would find this manageable.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;how-to-prepare-for-the-online-assessment&quot;&gt;How to Prepare for the Online Assessment&lt;&#x2F;h2&gt;
+&lt;p&gt;From my experience, most of the OA problems were &lt;strong&gt;implementation-heavy rather than conceptually difficult&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;These problems often don&#x27;t require extremely advanced algorithms.&lt;br &#x2F;&gt;
+What matters more is &lt;strong&gt;strong implementation skills and the ability to write correct code quickly under time pressure&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Here are some tips that may help:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Practice implementation-based problems&lt;&#x2F;strong&gt; on platforms like LeetCode.&lt;&#x2F;li&gt;
+&lt;li&gt;Improve your &lt;strong&gt;speed in writing bug-free code&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Review &lt;strong&gt;commonly asked OA questions&lt;&#x2F;strong&gt; from previous Visa recruitment processes in other colleges.&lt;&#x2F;li&gt;
+&lt;li&gt;Carefully read the &lt;strong&gt;required time complexity mentioned in the problem statement&lt;&#x2F;strong&gt; before deciding your approach.&lt;&#x2F;li&gt;
+&lt;li&gt;Focus on &lt;strong&gt;simulation, greedy logic, and basic graph algorithms&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Interestingly, the &lt;strong&gt;topological sort problem had appeared in OAs conducted in other colleges&lt;&#x2F;strong&gt;, so reviewing previous OA questions can be quite useful.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;interview-round&quot;&gt;Interview Round&lt;&#x2F;h2&gt;
+&lt;p&gt;After the OA, shortlisted candidates were invited for an &lt;strong&gt;interview round&lt;&#x2F;strong&gt;.&lt;br &#x2F;&gt;
+Fortunately, I was among the selected students.&lt;&#x2F;p&gt;
+&lt;p&gt;The interview consisted of &lt;strong&gt;a single round&lt;&#x2F;strong&gt;, and it lasted &lt;strong&gt;around 40 minutes&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;introduction-and-background&quot;&gt;Introduction and Background&lt;&#x2F;h3&gt;
+&lt;p&gt;The interviewer started with a simple introduction:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tell me about yourself&lt;&#x2F;li&gt;
+&lt;li&gt;What skills are you most comfortable with?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This part was mostly about understanding my &lt;strong&gt;background, interests, and technical strengths&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;coding-discussion&quot;&gt;Coding Discussion&lt;&#x2F;h3&gt;
+&lt;p&gt;After the introduction, we moved to a &lt;strong&gt;coding problem&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The question was more &lt;strong&gt;practical in nature&lt;&#x2F;strong&gt; rather than a pure algorithmic challenge.&lt;&#x2F;p&gt;
+&lt;p&gt;The interviewer described a scenario where:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;You are given a &lt;strong&gt;table of data&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;You need to &lt;strong&gt;retrieve specific information from it&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Then perform certain &lt;strong&gt;operations on the retrieved data&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I don&#x27;t remember the exact problem now, but it involved &lt;strong&gt;logical thinking and practical data manipulation&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;There were also a few &lt;strong&gt;follow-up questions&lt;&#x2F;strong&gt; based on the same problem.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;discussion-on-ai-and-machine-learning&quot;&gt;Discussion on AI and Machine Learning&lt;&#x2F;h3&gt;
+&lt;p&gt;We briefly discussed &lt;strong&gt;Artificial Intelligence and Machine Learning&lt;&#x2F;strong&gt;, mainly at a conceptual level.&lt;&#x2F;p&gt;
+&lt;p&gt;The conversation focused on:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;General understanding of AI&lt;&#x2F;li&gt;
+&lt;li&gt;Practical applications&lt;&#x2F;li&gt;
+&lt;li&gt;Industry relevance&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;project-discussion&quot;&gt;Project Discussion&lt;&#x2F;h3&gt;
+&lt;p&gt;Next, I was asked to explain &lt;strong&gt;two of my projects&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The interviewer asked several follow-up questions, including:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Why did you choose &lt;strong&gt;NoSQL databases instead of SQL databases&lt;&#x2F;strong&gt;?&lt;&#x2F;li&gt;
+&lt;li&gt;What challenges did you face while building the project?&lt;&#x2F;li&gt;
+&lt;li&gt;How would you scale your system?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This part mainly tested my &lt;strong&gt;understanding of my own projects and design decisions&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;hr-type-questions&quot;&gt;HR-Type Questions&lt;&#x2F;h3&gt;
+&lt;p&gt;Towards the end of the interview, a few behavioral questions were asked, such as:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;How do you stay updated with new technologies?&lt;&#x2F;li&gt;
+&lt;li&gt;Do you prefer &lt;strong&gt;team projects or individual projects&lt;&#x2F;strong&gt;?&lt;&#x2F;li&gt;
+&lt;li&gt;What do you do when you struggle with a difficult topic?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;These questions were meant to evaluate &lt;strong&gt;communication skills, mindset, and learning attitude&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;questions-i-asked-the-interviewer&quot;&gt;Questions I Asked the Interviewer&lt;&#x2F;h2&gt;
+&lt;p&gt;At the end of the interview, the interviewer asked if I had any questions.&lt;&#x2F;p&gt;
+&lt;p&gt;I asked about &lt;strong&gt;how Visa uses Artificial Intelligence in their products and services&lt;&#x2F;strong&gt;, as I was curious about the practical applications of AI in their organization.&lt;&#x2F;p&gt;
+&lt;p&gt;The interviewer explained the use cases in detail, which was very insightful.&lt;&#x2F;p&gt;
+&lt;p&gt;Soon after that, the interview concluded.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;final-result&quot;&gt;Final Result&lt;&#x2F;h2&gt;
+&lt;p&gt;Later in the evening, we received the official email containing the list of &lt;strong&gt;selected students for the Visa internship role&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I was very happy to see my name on the list.&lt;br &#x2F;&gt;
+After the entire process, it felt incredibly rewarding to be selected.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;key-takeaways&quot;&gt;Key Takeaways&lt;&#x2F;h2&gt;
+&lt;p&gt;Here are some important lessons from my experience:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Strong &lt;strong&gt;implementation skills&lt;&#x2F;strong&gt; are extremely important for Online Assessments.&lt;&#x2F;li&gt;
+&lt;li&gt;Practice &lt;strong&gt;simulation-based problems&lt;&#x2F;strong&gt; and &lt;strong&gt;graph algorithms&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Be prepared to &lt;strong&gt;explain your projects in depth&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Stay &lt;strong&gt;calm and confident during interviews&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Always prepare &lt;strong&gt;a thoughtful question to ask the interviewer&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;I hope this experience helps future candidates better prepare for similar recruitment processes.
+If you still have any questions regarding the recruitment process or preparation, feel free to reach out!&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;em&gt;Thanks for reading! If you have any queries, feel free to connect with me on LinkedIn.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;LinkedIn:&lt;&#x2F;strong&gt;&lt;br &#x2F;&gt;
+https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;shubhranshu-mishra-092311256&#x2F;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

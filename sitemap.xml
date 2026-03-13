@@ -13,6 +13,10 @@
         <loc>https://cc-club.in/blog/2026/</loc>
     </url>
     <url>
+        <loc>https://cc-club.in/blog/2026/arch-linux-wsl-setup/</loc>
+        <lastmod>2026-03-10</lastmod>
+    </url>
+    <url>
         <loc>https://cc-club.in/blog/2026/client-side-solana-101/</loc>
         <lastmod>2026-02-08</lastmod>
     </url>
@@ -49,6 +53,10 @@
         <lastmod>2026-02-08</lastmod>
     </url>
     <url>
+        <loc>https://cc-club.in/blog/2026/visa-internship-experience/</loc>
+        <lastmod>2026-03-11</lastmod>
+    </url>
+    <url>
         <loc>https://cc-club.in/categories/</loc>
     </url>
     <url>
@@ -56,6 +64,12 @@
     </url>
     <url>
         <loc>https://cc-club.in/categories/history/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/categories/internship/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/categories/internship/page/1/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/categories/placements/</loc>
@@ -165,6 +179,12 @@
         <loc>https://cc-club.in/tags/algorithms/page/1/</loc>
     </url>
     <url>
+        <loc>https://cc-club.in/tags/arch-linux/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/arch-linux/page/1/</loc>
+    </url>
+    <url>
         <loc>https://cc-club.in/tags/big-o/</loc>
     </url>
     <url>
@@ -243,6 +263,12 @@
         <loc>https://cc-club.in/tags/internship/page/1/</loc>
     </url>
     <url>
+        <loc>https://cc-club.in/tags/interview-experience/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/interview-experience/page/1/</loc>
+    </url>
+    <url>
         <loc>https://cc-club.in/tags/linux/</loc>
     </url>
     <url>
@@ -307,6 +333,18 @@
     </url>
     <url>
         <loc>https://cc-club.in/tags/tutorial/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/visa/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/visa/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/wsl/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/wsl/page/1/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/team/</loc>
