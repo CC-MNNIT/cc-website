@@ -5,8 +5,6 @@ on:
     branches:
       - main
       - preview
-  pull_request:
-    types: [opened, synchronize, reopened]
 
 # Grant GITHUB_TOKEN the permissions to push to the repo
 permissions:
@@ -21,7 +19,7 @@ jobs:
   # Deploy to production (root of gh-pages)
   deploy_production:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, '[skip ci]')
+    if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, '[skip ci]')
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -72,7 +70,7 @@ jobs:
   # Deploy to preview (preview subfolder of gh-pages)
   deploy_preview:
     runs-on: ubuntu-latest
-    if: (github.ref == 'refs/heads/preview' || github.event_name == 'pull_request')
+    if: github.ref == 'refs/heads/preview' && !contains(github.event.head_commit.message, '[skip ci]')
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -82,16 +80,10 @@ jobs:
       - name: Determine Preview Base URL
         id: check_cname_preview
         run: |
-          FOLDER="preview"
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            FOLDER="pr-${{ github.event.pull_request.number }}"
-          fi
-          echo "FOLDER=$FOLDER" >> $GITHUB_ENV
-
           if [ -f CNAME ]; then
-            echo "BASE_URL=https://$(head -n 1 CNAME)/$FOLDER/" >> $GITHUB_OUTPUT
+            echo "BASE_URL=https://$(head -n 1 CNAME)/preview/" >> $GITHUB_OUTPUT
           else
-            echo "BASE_URL=/${{ github.event.repository.name }}/$FOLDER/" >> $GITHUB_OUTPUT
+            echo "BASE_URL=/${{ github.event.repository.name }}/preview/" >> $GITHUB_OUTPUT
           fi
 
       - name: Build preview
@@ -117,10 +109,10 @@ jobs:
           git config user.email github-actions@github.com
           
           # Remove old preview and deploy new one
-          rm -rf ${{ env.FOLDER }}
-          mkdir -p ${{ env.FOLDER }}
-          cp -r ../public/* ${{ env.FOLDER }}/
+          rm -rf preview
+          mkdir -p preview
+          cp -r ../public/* preview/
           
           # Commit and push
-          git add ${{ env.FOLDER }}
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Deploy preview to ${{ env.FOLDER }} from ${{ github.sha }}" && git push)
+          git add preview
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Deploy preview from ${{ github.sha }}" && git push)
