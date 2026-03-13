@@ -5,28 +5,28 @@ on:
     branches:
       - main
       - preview
-  pull_request:
+
+  pull_request_target:
     types: [opened, synchronize, reopened]
 
-# Grant GITHUB_TOKEN the permissions to push to the repo
 permissions:
   contents: write
 
-# Prevent concurrent deployments to gh-pages
 concurrency:
   group: gh-pages-deployment
   cancel-in-progress: false
 
 jobs:
-  # Deploy to production (root of gh-pages)
+
   deploy_production:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, '[skip ci]')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive  # Fetches the 'goyo' theme
+          submodules: recursive
 
       - name: Determine Base URL
         id: check_cname
@@ -37,90 +37,72 @@ jobs:
             echo "BASE_URL=/${{ github.event.repository.name }}/" >> $GITHUB_OUTPUT
           fi
 
-      - name: Build production
+      - name: Build
         uses: shalzz/zola-deploy-action@v0.21.0
         env:
-          PAGES_BRANCH: gh-pages
           BUILD_ONLY: true
           BUILD_FLAGS: --base-url ${{ steps.check_cname.outputs.BASE_URL }}
 
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages-repo
-          fetch-depth: 0
-
-      - name: Deploy to root (preserve preview folder)
+      - name: Deploy production
         run: |
-          cd gh-pages-repo
-          
-          # Configure git
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
+          cd gh-pages
+
+          git checkout gh-pages || git checkout --orphan gh-pages
+
           git config user.name github-actions
           git config user.email github-actions@github.com
-          
-          # Remove everything except .git, preview folder, and CNAME
-          find . -mindepth 1 -maxdepth 1 ! -name '.git' ! -name 'preview' ! -name 'CNAME' -exec rm -rf {} +
-          
-          # Copy production files
-          cp -r ../public/* .
-          
-          # Commit and push
-          git add .
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Deploy production from ${{ github.sha }}" && git push)
 
-  # Deploy to preview (preview subfolder of gh-pages)
+          find . -mindepth 1 ! -name '.git' ! -name 'preview' -exec rm -rf {} +
+
+          cp -r ../public/* .
+
+          git add .
+          git commit -m "Deploy production from ${{ github.sha }}" || echo "No changes"
+          git push origin gh-pages
+
+
   deploy_preview:
     runs-on: ubuntu-latest
-    if: (github.ref == 'refs/heads/preview' || github.event_name == 'pull_request')
+    if: github.ref == 'refs/heads/preview' || github.event_name == 'pull_request_target'
+
     steps:
-      - name: Checkout
+      - name: Checkout PR code
         uses: actions/checkout@v4
         with:
-          submodules: recursive  # Fetches the 'goyo' theme
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          ref: ${{ github.event.pull_request.head.ref || github.ref }}
+          submodules: recursive
 
-      - name: Determine Preview Base URL
-        id: check_cname_preview
+      - name: Determine Preview Folder
         run: |
-          FOLDER="preview"
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            FOLDER="pr-${{ github.event.pull_request.number }}"
-          fi
-          echo "FOLDER=$FOLDER" >> $GITHUB_ENV
-
-          if [ -f CNAME ]; then
-            echo "BASE_URL=https://$(head -n 1 CNAME)/$FOLDER/" >> $GITHUB_OUTPUT
+          if [ "${{ github.event_name }}" = "pull_request_target" ]; then
+            echo "FOLDER=pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
           else
-            echo "BASE_URL=/${{ github.event.repository.name }}/$FOLDER/" >> $GITHUB_OUTPUT
+            echo "FOLDER=preview" >> $GITHUB_ENV
           fi
 
       - name: Build preview
         uses: shalzz/zola-deploy-action@v0.21.0
         env:
-          PAGES_BRANCH: gh-pages
           BUILD_ONLY: true
-          BUILD_FLAGS: --base-url ${{ steps.check_cname_preview.outputs.BASE_URL }}
+          BUILD_FLAGS: --base-url /${{ github.event.repository.name }}/${{ env.FOLDER }}/
 
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages-repo
-          fetch-depth: 0
-
-      - name: Deploy to preview subfolder
+      - name: Deploy preview
         run: |
-          cd gh-pages-repo
-          
-          # Configure git
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
+          cd gh-pages
+
+          git checkout gh-pages || git checkout --orphan gh-pages
+
           git config user.name github-actions
           git config user.email github-actions@github.com
-          
-          # Remove old preview and deploy new one
+
           rm -rf ${{ env.FOLDER }}
           mkdir -p ${{ env.FOLDER }}
+
           cp -r ../public/* ${{ env.FOLDER }}/
-          
-          # Commit and push
+
           git add ${{ env.FOLDER }}
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Deploy preview to ${{ env.FOLDER }} from ${{ github.sha }}" && git push)
+          git commit -m "Deploy preview ${{ env.FOLDER }} from ${{ github.sha }}" || echo "No changes"
+          git push origin gh-pages
