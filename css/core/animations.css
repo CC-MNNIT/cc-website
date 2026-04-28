@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+/* ============================================
+   ANIMATIONS & KEYFRAMES
+   ============================================
+*/
+
+@keyframes floatOrb1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(50px, -50px);
+    }
+}
+
+@keyframes floatOrb2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-50px, 50px);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes titleSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes blurFadeIn {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateSmooth {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(6deg);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 25px rgba(255, 199, 88, 0.6),
+            0 0 50px rgba(255, 199, 88, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 35px rgba(255, 199, 88, 0.8),
+            0 0 70px rgba(255, 199, 88, 0.6);
+    }
+}
+
+@keyframes pulse-glow-blue {
+
+    0%,
+    100% {
+        box-shadow: 0 0 25px rgba(25, 118, 210, 0.6),
+            0 0 50px rgba(25, 118, 210, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 35px rgba(25, 118, 210, 0.8),
+            0 0 70px rgba(25, 118, 210, 0.6);
+    }
+}
+
+@keyframes pulse-glow-red {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.5),
+            0 0 40px rgba(194, 41, 61, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.7),
+            0 0 50px rgba(194, 41, 61, 0.4);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Computer Coding Club - google</title>
+    <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/tags/google/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-03-06T00:00:00+00:00</updated>
+    <id>https://cc-club.in/tags/google/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Google Offcampus Placement Process</title>
+        <published>2026-03-06T00:00:00+00:00</published>
+        <updated>2026-03-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/blog/2026/google-offcampus-placement-process/"/>
+        <id>https://cc-club.in/blog/2026/google-offcampus-placement-process/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/blog/2026/google-offcampus-placement-process/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;storage.googleapis.com&#x2F;gweb-uniblog-publish-prod&#x2F;images&#x2F;Ananta_0.width-1300.jpg&quot; alt=&quot;Google India&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert- soft&quot;&gt;
+  &lt;div&gt;&lt;p&gt;&lt;strong&gt;Google&lt;&#x2F;strong&gt; is the technology giant, probably one of the best companies to work for in the world at this moment, they have a very diverse business which spans entire AI Stack (right from chips to the models and the data), their most revenue comes from ADs, they run youtube, they run google cloud and the list goes endless, Deepmind is another powerhouse within Google responsible for all AI Stuff!!&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;&lt;h2 id=&quot;pathway&quot;&gt;Pathway&lt;&#x2F;h2&gt;
+&lt;p&gt;Firstly, the most important thing is, to apply!! Never shy away from off-campus opportunities because of low-confidence or just the belief that hardly anyone gets a response from off-campus opportunities. The responses are random in nature, but you never know when you get your chance.&lt;&#x2F;p&gt;
+&lt;p&gt;I applied to Google offcampus, 3 times (in 1st Year&#x27;s end for Step Internship, in 2nd Year&#x27;s end for Summer Internship, in 3rd Year&#x27;s end for Full time role)&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yes, the only thing to do is keep an eye on &lt;a href=&quot;https:&#x2F;&#x2F;www.google.com&#x2F;about&#x2F;careers&quot;&gt;&lt;strong&gt;Careers Page (turn on Alerts)&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Being an &lt;a href=&quot;https:&#x2F;&#x2F;icpc.global&#x2F;&quot;&gt;ICPC&lt;&#x2F;a&gt; Regionalist helps a lot, it can almost gurantee an interview call&lt;&#x2F;li&gt;
+&lt;li&gt;Summer Internship at some MNC also increases your chances of a response&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;phase-1&quot;&gt;Phase 1&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;There are no online assessment rounds at Google for Full-time opportunities, someone from the HR team at Google (generally having an xwf in name), will reach out to you if you are a match&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;They will seek you to fill an interest form, fill that at earliest&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;You will receive an interview mail from Google Team soon, usually they schedule 2 interviews together (round 1 and round 2)&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;round-1-2&quot;&gt;Round 1 &amp;amp; 2&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;These are purely DSA rounds, and in each round they ask 1-2 DSA questions, the difficulty of these questions is generally leetcode medium&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert- soft&quot;&gt;
+  &lt;div&gt;&lt;p&gt;In my first round I was asked to implement a YouTube ADs class and the solution involved use of 2 heaps, and it was basically a highly modified version of this &lt;a href=&quot;https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;find-median-from-data-stream&quot;&gt;leetcode problem&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;The interviewers again look for 2 things&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Your ability to weigh the trade-offs, and build a good solution and communicate the entire thought process nicely to them&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Your code clarity, they call is neat code, and interviewers often remark positively to you if your write good code, which basically means making sure you maintain good indentation, use meaningful names for variables etc.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert- soft&quot;&gt;
+  &lt;div&gt;&lt;p&gt;Google, shares a doc link, and you code on the google doc, without use of any IDE, but don&#x27;t be too cautious of missing a ; or an indentation issue, if you notice it, the interviewers are usuallly chill about it, also at the end of interview which usually has a time limit of 45 minutes, you do a dry run with the interviewer to verify correctness.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;&lt;h2 id=&quot;round-3&quot;&gt;Round 3&lt;&#x2F;h2&gt;
+&lt;p&gt;If your round 1 and round 2 went well, you will receive the link for 3rd Round of interview, this is again a DSA round, and usually takes months to come to you&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Expect leetcode hard questions&lt;&#x2F;li&gt;
+&lt;li&gt;The process is same as round 1 &amp;amp; 2&lt;&#x2F;li&gt;
+&lt;li&gt;After this round, the HR asks for a transcript&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;additional-rounds&quot;&gt;Additional Rounds&lt;&#x2F;h2&gt;
+&lt;p&gt;This may or may not happen for you, if the Hiring team is satisfied they won&#x27;t schedule your 4th round, if they are not they may schedule a 4th round, and usually they do schedule a 4th round, this could be a DSA Round or an Googlyness Round depending on which aspect the Hiring Committee wants to test you&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;If its a DSA round, it will be just the same as round 3 with increased difficulty level of problem you get&lt;&#x2F;li&gt;
+&lt;li&gt;If its a Googlyness round, then you will get an HR-Manager type round where they wish to test whether you are a good cultural fit or not, and it is usually in form of &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@poojaauma&#x2F;the-behavioral-questions-that-helped-me-in-my-googlyness-round-6c41433ea5dd&quot;&gt;situation&#x2F;scenario based questions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;team-matching&quot;&gt;Team Matching&lt;&#x2F;h2&gt;
+&lt;p&gt;After you get great response and if hiring has not freezed, you should proceed to team matching where you may be reached out by different teams at Google for potential match of skills and cultural fit, enjoy this phase and wait for your offer&lt;&#x2F;p&gt;
+&lt;p&gt;Reaching this phase mostly means that there is a very high probability you will make it to the company!&lt;&#x2F;p&gt;
+&lt;p&gt;Good Luck!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Internet Before Search Engines</title>
+        <published>2026-02-05T00:00:00+00:00</published>
+        <updated>2026-02-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/blog/2026/internet-history/"/>
+        <id>https://cc-club.in/blog/2026/internet-history/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/blog/2026/internet-history/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;Hello everyone!
+This is Devansh, and today through this blogpost, I am going to take you back in time. A time when most of us students were not even born. What was about to be born, was a technology so powerful, that it was about to change everything.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-birth-of-internet&quot;&gt;The Birth of Internet&lt;&#x2F;h3&gt;
+&lt;p&gt;Before talking about how it appeared, let&#x27;s talk about why it appeared.
+It started because The US was scared. Scared that it&#x27;s communication system might be destroyed by a nuclear attack. They wanted to build a network that would still work even if a part of it was destroyed. This was in the early 1960s.&lt;&#x2F;p&gt;
+&lt;p&gt;In 1969, It happened.
+ARPANET appeared. It was basically a computer network that connected 4 universities of the United States.
+The first message they sent was &quot;LOGIN&quot;, but the system crashed right after &quot;LO&quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;The data was sent by the concept of packet switching, which is basically sending data in form of packets via multiple paths instead of a single wire.
+For a long time, the internet was used only by universities, researchers and military labs.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;1-january-1983&quot;&gt;1 January, 1983&lt;&#x2F;h3&gt;
+&lt;p&gt;Every machine on ARPANET switched to TCP&#x2F;IP. To keep it simple, let&#x27;s just say different networks could now connect to each other, making a network of networks: &lt;strong&gt;inter-net&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tim-berners-lee-invents-world-wide-web&quot;&gt;Tim Berners Lee invents World Wide Web&lt;&#x2F;h3&gt;
+&lt;p&gt;Back in those days, scientists had data on different computers. There was no easy way to link information, and then he invented HTML, HTTP, URLs and Web Server.
+He helped them solve the scientists&#x27; problem, but he ended up taking an important decision.
+He kept it FREE. He did not patent the World Wide Web. This meant that the normal humans could use it.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;internet-goes-public&quot;&gt;Internet Goes Public&lt;&#x2F;h3&gt;
+&lt;p&gt;Yes, we had the internet Live and accessible for the people. ISPs appeared, people created websites, chat rooms and some early e-commerce also started.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-real-question&quot;&gt;The Real Question&lt;&#x2F;h2&gt;
+&lt;p&gt;Till now, we have discussed briefly how it originated and became accessible to the public.
+Now we will focus on the time period before the search engines came.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-are-search-engines&quot;&gt;What are Search Engines?&lt;&#x2F;h3&gt;
+&lt;p&gt;Search engines basically help us find things on the internet. We are familiar with Linear Search Algorithm, which finds data in a container in linear time, or Binary Search, which finds data inside an ordered container in logarithmic time.
+Similarly, Search Engines internally run some algorithm, and find desired web page for us across millions of web pages.&lt;&#x2F;p&gt;
+&lt;p&gt;So when I say &quot;Internet before Search Engines&quot;, does that look similar to finding &lt;code&gt;target&lt;&#x2F;code&gt; from an array &lt;code&gt;nums[]&lt;&#x2F;code&gt; without any technique?
+EXACTLY!&lt;&#x2F;p&gt;
+&lt;p&gt;In order to find data from an array without any technique, we have to do it manually using our human eyes. This was a similar situation with the internet.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;Internet = [Website1, Website2, Website3, ... millions more]
+&lt;&#x2F;span&gt;&lt;span&gt;Target = &amp;quot;some information&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;and you had no idea which site has it, where that site is and even if that site exists or not. Seems quite tough right? Yes it was.&lt;&#x2F;p&gt;
+&lt;p&gt;Then what did people do?
+They did it manually.
+They clicked links, they browsed directories (We will talk what directories were in a while),
+they found new website URLs in newspapers, television and bookmarked them.&lt;&#x2F;p&gt;
+&lt;p&gt;The linear search analogy I gave was just an example. It&#x27;s actually more closer to:
+Searching an unindexed, unsorted, partially invisible array where you don’t even know the bounds.
+and that&#x27;s worse than O(n)&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-were-web-directories&quot;&gt;What were web directories?&lt;&#x2F;h3&gt;
+&lt;p&gt;Before modern search engines like Google existed, the internet relied on web directories to help users find information. These directories were not powered by algorithms or AI, but by humans manually organizing websites into categories.
+Think of web directories as the table of contents of the early internet.&lt;&#x2F;p&gt;
+&lt;p&gt;Instead of typing a query and getting ranked results, users navigated like this:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;Computers
+&lt;&#x2F;span&gt;&lt;span&gt; └── Programming
+&lt;&#x2F;span&gt;&lt;span&gt;     └── Languages
+&lt;&#x2F;span&gt;&lt;span&gt;         └── C++
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Each category contained links to websites that humans believed belonged there.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;conclusion-life-before-search-engines&quot;&gt;Conclusion: Life Before Search Engines&lt;&#x2F;h3&gt;
+&lt;p&gt;The internet before search engines was not broken — it was simply unorganized. Information existed, but discovering it required patience, memory, and human effort. Users didn’t search the web; they navigated it.&lt;&#x2F;p&gt;
+&lt;p&gt;Finding information felt like exploring an unknown space: browsing directories, following hyperlinks, relying on recommendations, and carefully bookmarking useful pages. This process resembled manually scanning an unindexed dataset — effective at small scale, but increasingly inefficient as the web grew.
+Understanding the internet before search engines reminds us that today’s instant access is not accidental. It is the result of decades of evolution, driven by the same core computer science principle:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;At scale, organization must be algorithmic.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And that single shift reshaped the internet forever.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

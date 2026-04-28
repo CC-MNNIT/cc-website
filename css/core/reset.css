@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* ============================================
+   RESET & BASE STYLES
+   ============================================
+*/
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Gradient Background */
+[data-theme="night"] body {
+    background: radial-gradient(ellipse at top, oklch(0.15 0.04 15) 0%, oklch(0.08 0.02 20) 100%) !important;
+    background-attachment: fixed;
+}
+
+/* Font Awesome Fixes */
+.fab {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 5 Brands", "FontAwesome";
+}
+
+.fas {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome";
+    font-weight: 900;
+}
+
+.far {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome";
+    font-weight: 400;
+}

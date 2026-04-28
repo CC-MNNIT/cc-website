@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* ============================================
+   BUTTONS
+   ============================================
+*/
+
+/* Buttons - Primary (Gold) */
+[data-theme="night"] .btn-primary {
+    background: oklch(0.80 0.15 75) !important;
+    color: oklch(0.15 0.02 30) !important;
+    border: none;
+}
+
+[data-theme="night"] .btn-primary:hover {
+    background: oklch(0.75 0.16 70) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 202, 95, 0.825);
+}
+
+/* Buttons - Secondary (Burgundy) */
+[data-theme="night"] .btn-secondary {
+    background: oklch(0.35 0.12 15) !important;
+    color: oklch(0.95 0.01 15) !important;
+}
+
+[data-theme="night"] .btn-secondary:hover {
+    background: oklch(0.40 0.14 15) !important;
+}
+
+/* Buttons - Outline (Gold outline) */
+[data-theme="night"] .btn-outline {
+    border-color: oklch(0.80 0.15 75) !important;
+    color: oklch(0.80 0.15 75) !important;
+}
+
+[data-theme="night"] .btn-outline:hover {
+    background: oklch(0.80 0.15 75) !important;
+    color: oklch(0.15 0.02 30) !important;
+}
+
+/* Links - Gold color (except navbar which is handled in navbar.css) */
+[data-theme="night"] a:not(.btn):not(.navbar a) {
+    color: #FFC758 !important;
+}
+
+[data-theme="night"] a:not(.btn):not(.navbar a):hover {
+    color: #FFD580 !important;
+}

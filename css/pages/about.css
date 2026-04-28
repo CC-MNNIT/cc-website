@@ -1,0 +1,127 @@
+/* About Page Styles */
+
+.about-main {
+    min-height: 100vh;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    margin-bottom: 1rem;
+    font-family: var(--font-main);
+    color: var(--color-base-content);
+    display: inline-block;
+}
+
+[data-theme="night"] .about-title {
+    background: linear-gradient(135deg, #FFC758 0%, #FFD700 50%, #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 60px rgba(255, 199, 88, 0.3);
+}
+
+[data-theme="light"] .about-title,
+[data-theme="lofi"] .about-title {
+    background: linear-gradient(135deg, #000C40 0%, #1565C0 50%, #42A5F5 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.about-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-base-content);
+    opacity: 0.6;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Content Styling */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-base-content);
+    letter-spacing: -0.02em;
+}
+
+.about-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-base-content);
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    color: var(--color-base-content);
+    opacity: 0.9;
+}
+
+.about-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.about-content li {
+    margin-bottom: 0.5rem;
+    color: var(--color-base-content);
+    opacity: 0.9;
+}
+
+.about-content hr {
+    margin: 3rem 0;
+    border: 0;
+    height: 1px;
+    background: var(--color-border);
+    opacity: 0.3;
+}
+
+.about-content strong {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+[data-theme="light"] .about-content strong {
+    color: #1565C0;
+}
+
+.about-content a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.about-content a:hover {
+    text-decoration: underline;
+}
+
+[data-theme="light"] .about-content a {
+    color: #1565C0;
+}
