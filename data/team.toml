@@ -3,7 +3,7 @@
 # Group 1: Faculty (Single Entry)
 [faculty]
 name = "Dr. Vibhav Prakash Singh"
-title = "Faculty In-Charge"
+title = "Faculty Coordinator"
 image = "teams/dke.webp"
 email = "vibhav@mnnit.ac.in"
 profile_url = "https://www.mnnit.ac.in/profile/previewr.php?id=1785"
