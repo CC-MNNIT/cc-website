@@ -34,14 +34,16 @@ taxonomies = [
 ]
 
 [markdown]
-# Enable syntax highlighting for code blocks
-highlight_code = true
-
 # Show footnotes at the bottom of the page
 bottom_footnotes = true
 
+# Syntax highlighting configuration
+[markdown.highlighting]
+# Whether to use inline hex colours ("inline") or CSS classes ("class")
+style = "inline"
+
 # Syntax highlighting theme
-highlight_theme = "ayu-mirage"
+theme = "ayu-dark"
 
 [extra]
 # Image Base URL - Change this to CDN URL in future (e.g. https://cdn.jsdelivr.net/gh/org/cc-images)
