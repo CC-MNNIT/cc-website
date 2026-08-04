@@ -118,7 +118,7 @@
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
 &lt;p&gt;The &lt;strong&gt;Difference Array technique&lt;&#x2F;strong&gt; was the key optimization here — instead of updating every element in a range, we mark only the start and end of each range, then take a single prefix sum pass at the end.&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Reference:&lt;&#x2F;strong&gt; &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@nishant_salhotra&#x2F;programming-techniques-the-difference-array-5cb22aeedf84&quot;&gt;Programming Techniques — The Difference Array&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;&#x2F;strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@nishant_salhotra&#x2F;programming-techniques-the-difference-array-5cb22aeedf84&quot;&gt;Programming Techniques — The Difference Array&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500&#x2F;15 border&quot;&gt;
   &lt;div class=&quot;collapse-title font-semibold&quot;&gt;
@@ -357,7 +357,7 @@ https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;shubhranshu-mishra-092311256&#x2
 &lt;p&gt;&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;On-campus&lt;&#x2F;div&gt; Salesforce visits MNNIT Allahabad for summer internship. The process involves an online round (OA) followed by 2 rounds of interview for each shortlisted candidate.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Off-campus&lt;&#x2F;div&gt; Salesforce often organizes a hackathon (usually called Tech Accelerator). To be aware of when these happen you can check out the &lt;a href=&quot;https:&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;2026&#x2F;salesforce-interview-experience&#x2F;%22https:&#x2F;&#x2F;www.salesforce.com&#x2F;company&#x2F;careers&#x2F;university&#x2F;%22&quot;&gt;FutureForce Page&lt;&#x2F;a&gt; or follow &lt;a href=&quot;https:&#x2F;&#x2F;www.instagram.com&#x2F;salesforcefutureforce&#x2F;&quot;&gt;FutureForce on Instagram&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Off-campus&lt;&#x2F;div&gt; Salesforce often organizes a hackathon (usually called Tech Accelerator). To be aware of when these happen you can check out the &lt;a href=&quot;https:&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;2026&#x2F;salesforce-interview-experience&#x2F;%22https:&#x2F;&#x2F;www.salesforce.com&#x2F;company&#x2F;careers&#x2F;university&#x2F;%22&quot;&gt;FutureForce Page&lt;&#x2F;a&gt; or follow &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.instagram.com&#x2F;salesforcefutureforce&#x2F;&quot;&gt;FutureForce on Instagram&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Usually the process involves a resume based shortlisting for the hackathon after which the shortlisted candidates are invited to Salesforce Hyderabad Office for a hackathon. Interviews are conducted post hackathon and internships are awarded. If you get shortlisted for hackathon, there is a decent chance of qualifying for internships through this route.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -407,7 +407,7 @@ https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;shubhranshu-mishra-092311256&#x2
   &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 &lt;h3 id=&quot;interview-round-2&quot;&gt;Interview (Round 2)&lt;&#x2F;h3&gt;
-&lt;p&gt;Be ready to be asked the introduction you gave in Round 1. This is generally an &lt;strong&gt;HR-Manager round&lt;&#x2F;strong&gt;. managers try to test your culture fit&#x2F;critical thinking. Expect &lt;a href=&quot;https:&#x2F;&#x2F;www.geeksforgeeks.org&#x2F;aptitude&#x2F;top-100-puzzles-asked-in-interviews&#x2F;&quot;&gt;puzzles&lt;&#x2F;a&gt; and managerial questions.&lt;&#x2F;p&gt;
+&lt;p&gt;Be ready to be asked the introduction you gave in Round 1. This is generally an &lt;strong&gt;HR-Manager round&lt;&#x2F;strong&gt;. managers try to test your culture fit&#x2F;critical thinking. Expect &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.geeksforgeeks.org&#x2F;aptitude&#x2F;top-100-puzzles-asked-in-interviews&#x2F;&quot;&gt;puzzles&lt;&#x2F;a&gt; and managerial questions.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Common Non Puzzle Questions:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;Tell me about your weakness.&lt;&#x2F;li&gt;

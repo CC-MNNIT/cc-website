@@ -51,9 +51,8 @@ Similarly, Search Engines internally run some algorithm, and find desired web pa
 &lt;p&gt;So when I say &quot;Internet before Search Engines&quot;, does that look similar to finding &lt;code&gt;target&lt;&#x2F;code&gt; from an array &lt;code&gt;nums[]&lt;&#x2F;code&gt; without any technique?
 EXACTLY!&lt;&#x2F;p&gt;
 &lt;p&gt;In order to find data from an array without any technique, we have to do it manually using our human eyes. This was a similar situation with the internet.&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;Internet = [Website1, Website2, Website3, ... millions more]
-&lt;&#x2F;span&gt;&lt;span&gt;Target = &amp;quot;some information&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Internet = [Website1, Website2, Website3, ... millions more]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Target = &amp;quot;some information&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;and you had no idea which site has it, where that site is and even if that site exists or not. Seems quite tough right? Yes it was.&lt;&#x2F;p&gt;
 &lt;p&gt;Then what did people do?
 They did it manually.
@@ -66,19 +65,17 @@ and that&#x27;s worse than O(n)&lt;&#x2F;p&gt;
 &lt;p&gt;Before modern search engines like Google existed, the internet relied on web directories to help users find information. These directories were not powered by algorithms or AI, but by humans manually organizing websites into categories.
 Think of web directories as the table of contents of the early internet.&lt;&#x2F;p&gt;
 &lt;p&gt;Instead of typing a query and getting ranked results, users navigated like this:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;Computers
-&lt;&#x2F;span&gt;&lt;span&gt; └── Programming
-&lt;&#x2F;span&gt;&lt;span&gt;     └── Languages
-&lt;&#x2F;span&gt;&lt;span&gt;         └── C++
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Computers&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt; └── Programming&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;     └── Languages&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         └── C++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Each category contained links to websites that humans believed belonged there.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;conclusion-life-before-search-engines&quot;&gt;Conclusion: Life Before Search Engines&lt;&#x2F;h3&gt;
 &lt;p&gt;The internet before search engines was not broken — it was simply unorganized. Information existed, but discovering it required patience, memory, and human effort. Users didn’t search the web; they navigated it.&lt;&#x2F;p&gt;
 &lt;p&gt;Finding information felt like exploring an unknown space: browsing directories, following hyperlinks, relying on recommendations, and carefully bookmarking useful pages. This process resembled manually scanning an unindexed dataset — effective at small scale, but increasingly inefficient as the web grew.
 Understanding the internet before search engines reminds us that today’s instant access is not accidental. It is the result of decades of evolution, driven by the same core computer science principle:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;At scale, organization must be algorithmic.
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;At scale, organization must be algorithmic.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And that single shift reshaped the internet forever.&lt;&#x2F;p&gt;
 </content>
         

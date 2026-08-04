@@ -579,23 +579,21 @@ You rarely implement a raw dynamic array or hash table from scratch in productio
 <li><strong>Caching</strong>: Redis (Remote Dictionary Server) is essentially a giant, distributed HashMap. It allows applications to retrieve session data or frequent queries in microseconds.</li>
 <li><strong>Database Indexing</strong>: While B-Trees are common, Hashes are used for equality searches.</li>
 </ul>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Theory: &quot;Insert into HashMap&quot;
-</span><span>cache </span><span style="color:#f29e74;">= </span><span>{}
-</span><span>cache[</span><span style="color:#bae67e;">&quot;user_123&quot;</span><span>] </span><span style="color:#f29e74;">= </span><span style="color:#bae67e;">&quot;Harsh&quot;
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Practice: &quot;Distributed Caching pattern&quot;
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">get_user</span><span>(</span><span style="color:#ffcc66;">user_id</span><span>):
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Check cache (HashMap) first - O(1)
-</span><span>    user </span><span style="color:#f29e74;">= </span><span>redis</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">get</span><span>(user_id)
-</span><span>    </span><span style="color:#ffa759;">if </span><span>user:
-</span><span>        </span><span style="color:#ffa759;">return </span><span>user
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Fallback to DB (Slow)
-</span><span>    user </span><span style="color:#f29e74;">= </span><span>db</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">query</span><span>(</span><span style="color:#ffa759;">f</span><span style="color:#bae67e;">&quot;SELECT * FROM users WHERE id = </span><span>{user_id}</span><span style="color:#bae67e;">&quot;</span><span>)
-</span><span>    redis</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">set</span><span>(user_id</span><span style="color:#ccc9c2cc;">, </span><span>user)
-</span><span>    </span><span style="color:#ffa759;">return </span><span>user
-</span></code></pre>
-<h3 id="2-stacks-queues-managing-flow">2. Stacks &amp; Queues: Managing Flow</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Theory: &quot;Insert into HashMap&quot;</span></span>
+<span class="giallo-l"><span>cache</span><span style="color: #F29668;"> =</span><span> {}</span></span>
+<span class="giallo-l"><span>cache[</span><span style="color: #AAD94C;">&quot;user_123&quot;</span><span>]</span><span style="color: #F29668;"> =</span><span style="color: #AAD94C;"> &quot;Harsh&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Practice: &quot;Distributed Caching pattern&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> get_user</span><span>(</span><span style="color: #D2A6FF;">user_id</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Check cache (HashMap) first - O(1)</span></span>
+<span class="giallo-l"><span>    user</span><span style="color: #F29668;"> =</span><span> redis</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">get</span><span>(user_id)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span> user</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> user</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Fallback to DB (Slow)</span></span>
+<span class="giallo-l"><span>    user</span><span style="color: #F29668;"> =</span><span> db</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">query</span><span>(</span><span style="color: #FF8F40;">f</span><span style="color: #AAD94C;">&quot;SELECT * FROM users WHERE id = </span><span style="color: #95E6CB;">{</span><span>user_id</span><span style="color: #95E6CB;">}</span><span style="color: #AAD94C;">&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>    redis</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">set</span><span>(user_id</span><span style="color: #BFBDB6B3;">,</span><span> user)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> user</span></span></code></pre><h3 id="2-stacks-queues-managing-flow">2. Stacks &amp; Queues: Managing Flow</h3>
 <p><strong>Theory</strong>:</p>
 <ul>
 <li><strong>Stack</strong>: LIFO (Last In, First Out).</li>

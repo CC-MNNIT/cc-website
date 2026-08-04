@@ -613,51 +613,46 @@
 <h2 id="o-1-constant-time">O(1) - Constant Time</h2>
 <p>Operations that take the same time regardless of input size.</p>
 <h3 id="examples">Examples</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">def </span><span style="color:#ffd580;">get_first_element</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="color:#ffa759;">return </span><span>arr[</span><span style="color:#ffcc66;">0</span><span>]  </span><span style="font-style:italic;color:#5c6773;"># O(1) - direct access
-</span><span>
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">hash_lookup</span><span>(</span><span style="color:#ffcc66;">dictionary</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">key</span><span>):
-</span><span>    </span><span style="color:#ffa759;">return </span><span>dictionary[key]  </span><span style="font-style:italic;color:#5c6773;"># O(1) - hash table lookup
-</span><span>
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">arithmetic_operation</span><span>(</span><span style="color:#ffcc66;">a</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">b</span><span>):
-</span><span>    </span><span style="color:#ffa759;">return </span><span>a </span><span style="color:#f29e74;">+ </span><span>b </span><span style="color:#f29e74;">* </span><span style="color:#ffcc66;">2 </span><span style="color:#f29e74;">- </span><span style="color:#ffcc66;">5  </span><span style="font-style:italic;color:#5c6773;"># O(1) - fixed operations
-</span></code></pre>
-<div role="alert" class="alert alert-success alert- soft">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> get_first_element</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> arr[</span><span style="color: #D2A6FF;">0</span><span>]</span><span style="color: #5A6673;font-style: italic;">  # O(1) - direct access</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> hash_lookup</span><span>(</span><span style="color: #D2A6FF;">dictionary</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> key</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> dictionary[key]</span><span style="color: #5A6673;font-style: italic;">  # O(1) - hash table lookup</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> arithmetic_operation</span><span>(</span><span style="color: #D2A6FF;">a</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> b</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> a</span><span style="color: #F29668;"> +</span><span> b</span><span style="color: #F29668;"> *</span><span style="color: #D2A6FF;"> 2</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 5</span><span style="color: #5A6673;font-style: italic;">  # O(1) - fixed operations</span></span></code></pre><div role="alert" class="alert alert-success alert- soft">
   <div><p><strong>Pro Tip:</strong> Hash tables (dictionaries in Python, objects in JavaScript) provide O(1) average-case lookup, making them invaluable for optimization!</p>
 </div>
 </div><h3 id="real-world-application">Real-World Application</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Finding if a value exists in a list
-</span><span style="font-style:italic;color:#5c6773;"># Bad: O(n)
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">exists_slow</span><span>(</span><span style="color:#ffcc66;">items</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">target</span><span>):
-</span><span>    </span><span style="color:#ffa759;">return </span><span>target </span><span style="color:#f29e74;">in </span><span>items  </span><span style="font-style:italic;color:#5c6773;"># Linear search
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Good: O(1)
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">exists_fast</span><span>(</span><span style="color:#ffcc66;">items_set</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">target</span><span>):
-</span><span>    </span><span style="color:#ffa759;">return </span><span>target </span><span style="color:#f29e74;">in </span><span>items_set  </span><span style="font-style:italic;color:#5c6773;"># Set lookup
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Finding if a value exists in a list</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Bad: O(n)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> exists_slow</span><span>(</span><span style="color: #D2A6FF;">items</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> target</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> target</span><span style="color: #F29668;"> in</span><span> items</span><span style="color: #5A6673;font-style: italic;">  # Linear search</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Good: O(1)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> exists_fast</span><span>(</span><span style="color: #D2A6FF;">items_set</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> target</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> target</span><span style="color: #F29668;"> in</span><span> items_set</span><span style="color: #5A6673;font-style: italic;">  # Set lookup</span></span></code></pre>
 <hr />
 <h2 id="o-log-n-logarithmic-time">O(log n) - Logarithmic Time</h2>
 <p>The time grows logarithmically – doubling the input only adds one more step. Common in <strong>divide-and-conquer</strong> algorithms.</p>
 <h3 id="binary-search-example">Binary Search Example</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">def </span><span style="color:#ffd580;">binary_search</span><span>(</span><span style="color:#ffcc66;">sorted_arr</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">target</span><span>):
-</span><span>    left, right </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">0</span><span>, </span><span style="color:#f28779;">len</span><span>(sorted_arr) </span><span style="color:#f29e74;">- </span><span style="color:#ffcc66;">1
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">while </span><span>left </span><span style="color:#f29e74;">&lt;= </span><span>right:
-</span><span>        mid </span><span style="color:#f29e74;">= </span><span>(left </span><span style="color:#f29e74;">+ </span><span>right) </span><span style="color:#f29e74;">// </span><span style="color:#ffcc66;">2
-</span><span>        
-</span><span>        </span><span style="color:#ffa759;">if </span><span>sorted_arr[mid] </span><span style="color:#f29e74;">== </span><span>target:
-</span><span>            </span><span style="color:#ffa759;">return </span><span>mid
-</span><span>        </span><span style="color:#ffa759;">elif </span><span>sorted_arr[mid] </span><span style="color:#f29e74;">&lt; </span><span>target:
-</span><span>            left </span><span style="color:#f29e74;">= </span><span>mid </span><span style="color:#f29e74;">+ </span><span style="color:#ffcc66;">1
-</span><span>        </span><span style="color:#ffa759;">else</span><span>:
-</span><span>            right </span><span style="color:#f29e74;">= </span><span>mid </span><span style="color:#f29e74;">- </span><span style="color:#ffcc66;">1
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#f29e74;">-</span><span style="color:#ffcc66;">1  </span><span style="font-style:italic;color:#5c6773;"># Not found
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Time Complexity: O(log n)
-</span><span style="font-style:italic;color:#5c6773;"># Each iteration cuts the search space in half
-</span></code></pre>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> binary_search</span><span>(</span><span style="color: #D2A6FF;">sorted_arr</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> target</span><span>):</span></span>
+<span class="giallo-l"><span>    left</span><span style="color: #BFBDB6B3;">,</span><span> right</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F07178;"> len</span><span>(sorted_arr)</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    while</span><span> left</span><span style="color: #F29668;"> &lt;=</span><span> right</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>        mid</span><span style="color: #F29668;"> =</span><span> (left</span><span style="color: #F29668;"> +</span><span> right)</span><span style="color: #F29668;"> //</span><span style="color: #D2A6FF;"> 2</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> sorted_arr[mid]</span><span style="color: #F29668;"> ==</span><span> target</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span> mid</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        elif</span><span> sorted_arr[mid]</span><span style="color: #F29668;"> &lt;</span><span> target</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>            left</span><span style="color: #F29668;"> =</span><span> mid</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        else</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>            right</span><span style="color: #F29668;"> =</span><span> mid</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;">1</span><span style="color: #5A6673;font-style: italic;">  # Not found</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Time Complexity: O(log n)</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Each iteration cuts the search space in half</span></span></code></pre><div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
   <div class="collapse-title font-semibold">
     Why is this O(log n)? Click to understand the math
   </div>
@@ -676,113 +671,107 @@
 <h2 id="o-n-linear-time">O(n) - Linear Time</h2>
 <p>Time grows proportionally with input size. If you double the input, you double the time.</p>
 <h3 id="examples-1">Examples</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">def </span><span style="color:#ffd580;">linear_search</span><span>(</span><span style="color:#ffcc66;">arr</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">target</span><span>):
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i</span><span style="color:#ccc9c2cc;">, </span><span>item </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">enumerate</span><span>(arr):
-</span><span>        </span><span style="color:#ffa759;">if </span><span>item </span><span style="color:#f29e74;">== </span><span>target:
-</span><span>            </span><span style="color:#ffa759;">return </span><span>i
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#f29e74;">-</span><span style="color:#ffcc66;">1  </span><span style="font-style:italic;color:#5c6773;"># O(n) - might check every element
-</span><span>
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">sum_array</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    total </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">0
-</span><span>    </span><span style="color:#ffa759;">for </span><span>num </span><span style="color:#ffa759;">in </span><span>arr:
-</span><span>        total </span><span style="color:#f29e74;">+= </span><span>num
-</span><span>    </span><span style="color:#ffa759;">return </span><span>total  </span><span style="font-style:italic;color:#5c6773;"># O(n) - must visit every element
-</span><span>
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">find_max</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="color:#ffa759;">if </span><span style="color:#f29e74;">not </span><span>arr:
-</span><span>        </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">None
-</span><span>    max_val </span><span style="color:#f29e74;">= </span><span>arr[</span><span style="color:#ffcc66;">0</span><span>]
-</span><span>    </span><span style="color:#ffa759;">for </span><span>num </span><span style="color:#ffa759;">in </span><span>arr:
-</span><span>        </span><span style="color:#ffa759;">if </span><span>num </span><span style="color:#f29e74;">&gt; </span><span>max_val:
-</span><span>            max_val </span><span style="color:#f29e74;">= </span><span>num
-</span><span>    </span><span style="color:#ffa759;">return </span><span>max_val  </span><span style="font-style:italic;color:#5c6773;"># O(n) - single pass through array
-</span></code></pre>
-<div role="alert" class="alert alert-info alert- soft">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> linear_search</span><span>(</span><span style="color: #D2A6FF;">arr</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> target</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #BFBDB6B3;">,</span><span> item</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> enumerate</span><span>(arr)</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> item</span><span style="color: #F29668;"> ==</span><span> target</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span> i</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;">1</span><span style="color: #5A6673;font-style: italic;">  # O(n) - might check every element</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> sum_array</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span>    total</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> num</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>        total</span><span style="color: #F29668;"> +=</span><span> num</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> total</span><span style="color: #5A6673;font-style: italic;">  # O(n) - must visit every element</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_max</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span style="color: #F29668;"> not</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span style="color: #D2A6FF;"> None</span></span>
+<span class="giallo-l"><span>    max_val</span><span style="color: #F29668;"> =</span><span> arr[</span><span style="color: #D2A6FF;">0</span><span>]</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> num</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> num</span><span style="color: #F29668;"> &gt;</span><span> max_val</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>            max_val</span><span style="color: #F29668;"> =</span><span> num</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> max_val</span><span style="color: #5A6673;font-style: italic;">  # O(n) - single pass through array</span></span></code></pre><div role="alert" class="alert alert-info alert- soft">
   <div><p><strong>Note:</strong> Multiple O(n) operations in sequence is still O(n): O(n) + O(n) + O(n) = O(3n) = O(n)</p>
 </div>
 </div><h3 id="common-pitfall">Common Pitfall</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># This looks like one loop, but it&#39;s actually O(n²)!
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">has_duplicates_slow</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="color:#ffa759;">for </span><span>item </span><span style="color:#ffa759;">in </span><span>arr:
-</span><span>        </span><span style="color:#ffa759;">if </span><span>arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">count</span><span>(item) </span><span style="color:#f29e74;">&gt; </span><span style="color:#ffcc66;">1</span><span>:  </span><span style="font-style:italic;color:#5c6773;"># count() is O(n)!
-</span><span>            </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">True
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">False
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Better: O(n) using a set
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">has_duplicates_fast</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    seen </span><span style="color:#f29e74;">= </span><span style="font-style:italic;color:#5ccfe6;">set</span><span>()
-</span><span>    </span><span style="color:#ffa759;">for </span><span>item </span><span style="color:#ffa759;">in </span><span>arr:
-</span><span>        </span><span style="color:#ffa759;">if </span><span>item </span><span style="color:#f29e74;">in </span><span>seen:
-</span><span>            </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">True
-</span><span>        seen</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">add</span><span>(item)
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">False
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># This looks like one loop, but it&#39;s actually O(n²)!</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> has_duplicates_slow</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> item</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">count</span><span>(item)</span><span style="color: #F29668;"> &gt;</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">  # count() is O(n)!</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span style="color: #D2A6FF;"> True</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #D2A6FF;"> False</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Better: O(n) using a set</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> has_duplicates_fast</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span>    seen</span><span style="color: #F29668;"> =</span><span style="color: #39BAE6;"> set</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> item</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> item</span><span style="color: #F29668;"> in</span><span> seen</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span style="color: #D2A6FF;"> True</span></span>
+<span class="giallo-l"><span>        seen</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">add</span><span>(item)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #D2A6FF;"> False</span></span></code></pre>
 <hr />
 <h2 id="o-n-log-n-linearithmic-time">O(n log n) - Linearithmic Time</h2>
 <p>The sweet spot for general-purpose sorting algorithms. Not as fast as O(n), but significantly better than O(n²).</p>
 <h3 id="merge-sort-example">Merge Sort Example</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">def </span><span style="color:#ffd580;">merge_sort</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="color:#ffa759;">if </span><span style="color:#f28779;">len</span><span>(arr) </span><span style="color:#f29e74;">&lt;= </span><span style="color:#ffcc66;">1</span><span>:
-</span><span>        </span><span style="color:#ffa759;">return </span><span>arr
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Divide
-</span><span>    mid </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">len</span><span>(arr) </span><span style="color:#f29e74;">// </span><span style="color:#ffcc66;">2
-</span><span>    left </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">merge_sort</span><span>(arr[</span><span style="color:#ccc9c2cc;">:</span><span>mid])    </span><span style="font-style:italic;color:#5c6773;"># O(log n) divisions
-</span><span>    right </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">merge_sort</span><span>(arr[mid</span><span style="color:#ccc9c2cc;">:</span><span>])
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Conquer (merge)
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#ffd580;">merge</span><span>(left</span><span style="color:#ccc9c2cc;">, </span><span>right)       </span><span style="font-style:italic;color:#5c6773;"># O(n) per level
-</span><span>
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">merge</span><span>(</span><span style="color:#ffcc66;">left</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">right</span><span>):
-</span><span>    result </span><span style="color:#f29e74;">= </span><span>[]
-</span><span>    i </span><span style="color:#f29e74;">= </span><span>j </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">0
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">while </span><span>i </span><span style="color:#f29e74;">&lt; </span><span style="color:#f28779;">len</span><span>(left) </span><span style="color:#f29e74;">and </span><span>j </span><span style="color:#f29e74;">&lt; </span><span style="color:#f28779;">len</span><span>(right):
-</span><span>        </span><span style="color:#ffa759;">if </span><span>left[i] </span><span style="color:#f29e74;">&lt;= </span><span>right[j]:
-</span><span>            result</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(left[i])
-</span><span>            i </span><span style="color:#f29e74;">+= </span><span style="color:#ffcc66;">1
-</span><span>        </span><span style="color:#ffa759;">else</span><span>:
-</span><span>            result</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(right[j])
-</span><span>            j </span><span style="color:#f29e74;">+= </span><span style="color:#ffcc66;">1
-</span><span>    
-</span><span>    result</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">extend</span><span>(left[i</span><span style="color:#ccc9c2cc;">:</span><span>])
-</span><span>    result</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">extend</span><span>(right[j</span><span style="color:#ccc9c2cc;">:</span><span>])
-</span><span>    </span><span style="color:#ffa759;">return </span><span>result
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Time Complexity: O(n log n)
-</span><span style="font-style:italic;color:#5c6773;"># log n levels of recursion, each doing O(n) work
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> merge_sort</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span style="color: #F07178;"> len</span><span>(arr)</span><span style="color: #F29668;"> &lt;=</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> arr</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Divide</span></span>
+<span class="giallo-l"><span>    mid</span><span style="color: #F29668;"> =</span><span style="color: #F07178;"> len</span><span>(arr)</span><span style="color: #F29668;"> //</span><span style="color: #D2A6FF;"> 2</span></span>
+<span class="giallo-l"><span>    left</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> merge_sort</span><span>(arr[</span><span style="color: #BFBDB6B3;">:</span><span>mid])</span><span style="color: #5A6673;font-style: italic;">    # O(log n) divisions</span></span>
+<span class="giallo-l"><span>    right</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> merge_sort</span><span>(arr[mid</span><span style="color: #BFBDB6B3;">:</span><span>])</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Conquer (merge)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #FFB454;"> merge</span><span>(left</span><span style="color: #BFBDB6B3;">,</span><span> right)</span><span style="color: #5A6673;font-style: italic;">       # O(n) per level</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> merge</span><span>(</span><span style="color: #D2A6FF;">left</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> right</span><span>):</span></span>
+<span class="giallo-l"><span>    result</span><span style="color: #F29668;"> =</span><span> []</span></span>
+<span class="giallo-l"><span>    i</span><span style="color: #F29668;"> =</span><span> j</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    while</span><span> i</span><span style="color: #F29668;"> &lt;</span><span style="color: #F07178;"> len</span><span>(left)</span><span style="color: #F29668;"> and</span><span> j</span><span style="color: #F29668;"> &lt;</span><span style="color: #F07178;"> len</span><span>(right)</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> left[i]</span><span style="color: #F29668;"> &lt;=</span><span> right[j]</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>            result</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(left[i])</span></span>
+<span class="giallo-l"><span>            i</span><span style="color: #F29668;"> +=</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        else</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>            result</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(right[j])</span></span>
+<span class="giallo-l"><span>            j</span><span style="color: #F29668;"> +=</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span>    result</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">extend</span><span>(left[i</span><span style="color: #BFBDB6B3;">:</span><span>])</span></span>
+<span class="giallo-l"><span>    result</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">extend</span><span>(right[j</span><span style="color: #BFBDB6B3;">:</span><span>])</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> result</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Time Complexity: O(n log n)</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># log n levels of recursion, each doing O(n) work</span></span></code></pre>
 <p><div class="badge badge-soft badge-success">Industry Standard</div> Most efficient comparison-based sorting algorithms (merge sort, quicksort, heapsort) are O(n log n).</p>
 <hr />
 <h2 id="o-n2-quadratic-time">O(n²) - Quadratic Time</h2>
 <p>Common with nested loops over the same dataset. Performance degrades rapidly with larger inputs.</p>
 <h3 id="examples-2">Examples</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Bubble Sort - Classic O(n²)
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">bubble_sort</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    n </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">len</span><span>(arr)
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(n):           </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>        </span><span style="color:#ffa759;">for </span><span>j </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(n </span><span style="color:#f29e74;">- </span><span>i </span><span style="color:#f29e74;">- </span><span style="color:#ffcc66;">1</span><span>):  </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>            </span><span style="color:#ffa759;">if </span><span>arr[j] </span><span style="color:#f29e74;">&gt; </span><span>arr[j </span><span style="color:#f29e74;">+ </span><span style="color:#ffcc66;">1</span><span>]:
-</span><span>                arr[j], arr[j </span><span style="color:#f29e74;">+ </span><span style="color:#ffcc66;">1</span><span>] </span><span style="color:#f29e74;">= </span><span>arr[j </span><span style="color:#f29e74;">+ </span><span style="color:#ffcc66;">1</span><span>], arr[j]
-</span><span>    </span><span style="color:#ffa759;">return </span><span>arr
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Finding all pairs
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">find_all_pairs</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    pairs </span><span style="color:#f29e74;">= </span><span>[]
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(</span><span style="color:#f28779;">len</span><span>(arr)):         </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>        </span><span style="color:#ffa759;">for </span><span>j </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(i </span><span style="color:#f29e74;">+ </span><span style="color:#ffcc66;">1</span><span style="color:#ccc9c2cc;">, </span><span style="color:#f28779;">len</span><span>(arr)):  </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>            pairs</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>((arr[i]</span><span style="color:#ccc9c2cc;">, </span><span>arr[j]))
-</span><span>    </span><span style="color:#ffa759;">return </span><span>pairs
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Checking for duplicates (naive approach)
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">has_duplicates_naive</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(</span><span style="color:#f28779;">len</span><span>(arr)):
-</span><span>        </span><span style="color:#ffa759;">for </span><span>j </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(i </span><span style="color:#f29e74;">+ </span><span style="color:#ffcc66;">1</span><span style="color:#ccc9c2cc;">, </span><span style="color:#f28779;">len</span><span>(arr)):
-</span><span>            </span><span style="color:#ffa759;">if </span><span>arr[i] </span><span style="color:#f29e74;">== </span><span>arr[j]:
-</span><span>                </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">True
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">False
-</span></code></pre>
-<div role="alert" class="alert alert-warning alert- soft">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Bubble Sort - Classic O(n²)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> bubble_sort</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span>    n</span><span style="color: #F29668;"> =</span><span style="color: #F07178;"> len</span><span>(arr)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(n)</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">           # O(n)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> j</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(n</span><span style="color: #F29668;"> -</span><span> i</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 1</span><span>)</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">  # O(n)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            if</span><span> arr[j]</span><span style="color: #F29668;"> &gt;</span><span> arr[j</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span><span>]</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>                arr[j]</span><span style="color: #BFBDB6B3;">,</span><span> arr[j</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span><span>]</span><span style="color: #F29668;"> =</span><span> arr[j</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span><span>]</span><span style="color: #BFBDB6B3;">,</span><span> arr[j]</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> arr</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Finding all pairs</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_all_pairs</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span>    pairs</span><span style="color: #F29668;"> =</span><span> []</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(</span><span style="color: #F07178;">len</span><span>(arr))</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">         # O(n)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> j</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(i</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F07178;"> len</span><span>(arr))</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">  # O(n)</span></span>
+<span class="giallo-l"><span>            pairs</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>((arr[i]</span><span style="color: #BFBDB6B3;">,</span><span> arr[j]))</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> pairs</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Checking for duplicates (naive approach)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> has_duplicates_naive</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(</span><span style="color: #F07178;">len</span><span>(arr))</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> j</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(i</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F07178;"> len</span><span>(arr))</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            if</span><span> arr[i]</span><span style="color: #F29668;"> ==</span><span> arr[j]</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">                return</span><span style="color: #D2A6FF;"> True</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #D2A6FF;"> False</span></span></code></pre><div role="alert" class="alert alert-warning alert- soft">
   <div><p><strong>Performance Impact:</strong> For 10,000 items, O(n²) means 100,000,000 operations. At 1 microsecond per operation, that's 100 seconds!</p>
 </div>
 </div><h3 id="when-o-n2-is-acceptable">When O(n²) is Acceptable</h3>
@@ -795,34 +784,32 @@
 <h2 id="o-2n-exponential-time">O(2ⁿ) - Exponential Time</h2>
 <p>Each additional input doubles the runtime. Usually indicates an inefficient recursive solution that recalculates the same values repeatedly.</p>
 <h3 id="the-classic-example-fibonacci">The Classic Example: Fibonacci</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Bad: O(2ⁿ) - Exponential
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">fibonacci_recursive</span><span>(</span><span style="color:#ffcc66;">n</span><span>):
-</span><span>    </span><span style="color:#ffa759;">if </span><span>n </span><span style="color:#f29e74;">&lt;= </span><span style="color:#ffcc66;">1</span><span>:
-</span><span>        </span><span style="color:#ffa759;">return </span><span>n
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#ffd580;">fibonacci_recursive</span><span>(n </span><span style="color:#f29e74;">- </span><span style="color:#ffcc66;">1</span><span>) </span><span style="color:#f29e74;">+ </span><span style="color:#ffd580;">fibonacci_recursive</span><span>(n </span><span style="color:#f29e74;">- </span><span style="color:#ffcc66;">2</span><span>)
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># This recalculates the same values many times!
-</span><span style="font-style:italic;color:#5c6773;"># fibonacci(5) calls fibonacci(3) twice, fibonacci(2) three times, etc.
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Good: O(n) - Linear with memoization
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">fibonacci_memoized</span><span>(</span><span style="color:#ffcc66;">n</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">memo</span><span style="color:#f29e74;">=</span><span>{}):
-</span><span>    </span><span style="color:#ffa759;">if </span><span>n </span><span style="color:#f29e74;">in </span><span>memo:
-</span><span>        </span><span style="color:#ffa759;">return </span><span>memo[n]
-</span><span>    </span><span style="color:#ffa759;">if </span><span>n </span><span style="color:#f29e74;">&lt;= </span><span style="color:#ffcc66;">1</span><span>:
-</span><span>        </span><span style="color:#ffa759;">return </span><span>n
-</span><span>    memo[n] </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">fibonacci_memoized</span><span>(n </span><span style="color:#f29e74;">- </span><span style="color:#ffcc66;">1</span><span style="color:#ccc9c2cc;">, </span><span>memo) </span><span style="color:#f29e74;">+ </span><span style="color:#ffd580;">fibonacci_memoized</span><span>(n </span><span style="color:#f29e74;">- </span><span style="color:#ffcc66;">2</span><span style="color:#ccc9c2cc;">, </span><span>memo)
-</span><span>    </span><span style="color:#ffa759;">return </span><span>memo[n]
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Better: O(n) - Iterative
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">fibonacci_iterative</span><span>(</span><span style="color:#ffcc66;">n</span><span>):
-</span><span>    </span><span style="color:#ffa759;">if </span><span>n </span><span style="color:#f29e74;">&lt;= </span><span style="color:#ffcc66;">1</span><span>:
-</span><span>        </span><span style="color:#ffa759;">return </span><span>n
-</span><span>    a, b </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">0</span><span>, </span><span style="color:#ffcc66;">1
-</span><span>    </span><span style="color:#ffa759;">for </span><span style="font-style:italic;color:#5ccfe6;">_ </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(</span><span style="color:#ffcc66;">2</span><span style="color:#ccc9c2cc;">, </span><span>n </span><span style="color:#f29e74;">+ </span><span style="color:#ffcc66;">1</span><span>):
-</span><span>        a, b </span><span style="color:#f29e74;">= </span><span>b, a </span><span style="color:#f29e74;">+ </span><span>b
-</span><span>    </span><span style="color:#ffa759;">return </span><span>b
-</span></code></pre>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Bad: O(2ⁿ) - Exponential</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> fibonacci_recursive</span><span>(</span><span style="color: #D2A6FF;">n</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span> n</span><span style="color: #F29668;"> &lt;=</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> n</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #FFB454;"> fibonacci_recursive</span><span>(n</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 1</span><span>)</span><span style="color: #F29668;"> +</span><span style="color: #FFB454;"> fibonacci_recursive</span><span>(n</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 2</span><span>)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># This recalculates the same values many times!</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># fibonacci(5) calls fibonacci(3) twice, fibonacci(2) three times, etc.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Good: O(n) - Linear with memoization</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> fibonacci_memoized</span><span>(</span><span style="color: #D2A6FF;">n</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> memo</span><span style="color: #F29668;">=</span><span>{}):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span> n</span><span style="color: #F29668;"> in</span><span> memo</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> memo[n]</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span> n</span><span style="color: #F29668;"> &lt;=</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> n</span></span>
+<span class="giallo-l"><span>    memo[n]</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> fibonacci_memoized</span><span>(n</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">,</span><span> memo)</span><span style="color: #F29668;"> +</span><span style="color: #FFB454;"> fibonacci_memoized</span><span>(n</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 2</span><span style="color: #BFBDB6B3;">,</span><span> memo)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> memo[n]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Better: O(n) - Iterative</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> fibonacci_iterative</span><span>(</span><span style="color: #D2A6FF;">n</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span> n</span><span style="color: #F29668;"> &lt;=</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> n</span></span>
+<span class="giallo-l"><span>    a</span><span style="color: #BFBDB6B3;">,</span><span> b</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> _</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(</span><span style="color: #D2A6FF;">2</span><span style="color: #BFBDB6B3;">,</span><span> n</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span><span>)</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>        a</span><span style="color: #BFBDB6B3;">,</span><span> b</span><span style="color: #F29668;"> =</span><span> b</span><span style="color: #BFBDB6B3;">,</span><span> a</span><span style="color: #F29668;"> +</span><span> b</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> b</span></span></code></pre><div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
   <div class="collapse-title font-semibold">
     See the dramatic difference in performance
   </div>
@@ -834,337 +821,310 @@
 <hr />
 <h2 id="analyzing-complex-code">Analyzing Complex Code</h2>
 <h3 id="rule-1-sequential-operations">Rule 1: Sequential Operations</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">def </span><span style="color:#ffd580;">process_data</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Step 1: O(n)
-</span><span>    </span><span style="color:#ffa759;">for </span><span>item </span><span style="color:#ffa759;">in </span><span>arr:
-</span><span>        </span><span style="color:#f28779;">print</span><span>(item)
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Step 2: O(n log n)
-</span><span>    arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">sort</span><span>()
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Step 3: O(n)
-</span><span>    </span><span style="color:#ffa759;">for </span><span>item </span><span style="color:#ffa759;">in </span><span>arr:
-</span><span>        </span><span style="color:#ffd580;">process</span><span>(item)
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Total: O(n) + O(n log n) + O(n)
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Result: O(n log n) - we keep the dominant term
-</span></code></pre>
-<div role="alert" class="alert alert-info alert- soft">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> process_data</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Step 1: O(n)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> item</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #F07178;">        print</span><span>(item)</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Step 2: O(n log n)</span></span>
+<span class="giallo-l"><span>    arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">sort</span><span>()</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Step 3: O(n)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> item</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">        process</span><span>(item)</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Total: O(n) + O(n log n) + O(n)</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Result: O(n log n) - we keep the dominant term</span></span></code></pre><div role="alert" class="alert alert-info alert- soft">
   <div><p><strong>Rule of Thumb:</strong> When adding complexities, keep only the largest (dominant) term.</p>
 </div>
 </div><h3 id="rule-2-nested-operations">Rule 2: Nested Operations</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">def </span><span style="color:#ffd580;">nested_example</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span>arr:                    </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>        </span><span style="color:#ffa759;">for </span><span>j </span><span style="color:#ffa759;">in </span><span>arr:                </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>            </span><span style="color:#ffa759;">for </span><span>k </span><span style="color:#ffa759;">in </span><span>arr:            </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>                </span><span style="color:#f28779;">print</span><span>(i</span><span style="color:#ccc9c2cc;">, </span><span>j</span><span style="color:#ccc9c2cc;">, </span><span>k)
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Total: O(n × n × n) = O(n³)
-</span></code></pre>
-<h3 id="rule-3-recursive-analysis">Rule 3: Recursive Analysis</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> nested_example</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">                    # O(n)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> j</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">                # O(n)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            for</span><span> k</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">            # O(n)</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                print</span><span>(i</span><span style="color: #BFBDB6B3;">,</span><span> j</span><span style="color: #BFBDB6B3;">,</span><span> k)</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Total: O(n × n × n) = O(n³)</span></span></code></pre><h3 id="rule-3-recursive-analysis">Rule 3: Recursive Analysis</h3>
 <p>Use the recurrence relation:</p>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">def </span><span style="color:#ffd580;">recursive_example</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="color:#ffa759;">if </span><span style="color:#f28779;">len</span><span>(arr) </span><span style="color:#f29e74;">&lt;= </span><span style="color:#ffcc66;">1</span><span>:
-</span><span>        </span><span style="color:#ffa759;">return </span><span>arr
-</span><span>    
-</span><span>    mid </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">len</span><span>(arr) </span><span style="color:#f29e74;">// </span><span style="color:#ffcc66;">2
-</span><span>    left </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">recursive_example</span><span>(arr[</span><span style="color:#ccc9c2cc;">:</span><span>mid])      </span><span style="font-style:italic;color:#5c6773;"># T(n/2)
-</span><span>    right </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">recursive_example</span><span>(arr[mid</span><span style="color:#ccc9c2cc;">:</span><span>])     </span><span style="font-style:italic;color:#5c6773;"># T(n/2)
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#ffd580;">merge</span><span>(left</span><span style="color:#ccc9c2cc;">, </span><span>right)                </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Recurrence: T(n) = 2T(n/2) + O(n)
-</span><span style="font-style:italic;color:#5c6773;"># Solution: O(n log n) - Master Theorem
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> recursive_example</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span style="color: #F07178;"> len</span><span>(arr)</span><span style="color: #F29668;"> &lt;=</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> arr</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span>    mid</span><span style="color: #F29668;"> =</span><span style="color: #F07178;"> len</span><span>(arr)</span><span style="color: #F29668;"> //</span><span style="color: #D2A6FF;"> 2</span></span>
+<span class="giallo-l"><span>    left</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> recursive_example</span><span>(arr[</span><span style="color: #BFBDB6B3;">:</span><span>mid])</span><span style="color: #5A6673;font-style: italic;">      # T(n/2)</span></span>
+<span class="giallo-l"><span>    right</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> recursive_example</span><span>(arr[mid</span><span style="color: #BFBDB6B3;">:</span><span>])</span><span style="color: #5A6673;font-style: italic;">     # T(n/2)</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #FFB454;"> merge</span><span>(left</span><span style="color: #BFBDB6B3;">,</span><span> right)</span><span style="color: #5A6673;font-style: italic;">                # O(n)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Recurrence: T(n) = 2T(n/2) + O(n)</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Solution: O(n log n) - Master Theorem</span></span></code></pre>
 <hr />
 <h2 id="space-complexity-the-other-half">Space Complexity: The Other Half</h2>
 <p>While we focus on time, <strong>space complexity</strong> measures memory usage.</p>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Space: O(1) - Constant extra space
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">sum_iterative</span><span>(</span><span style="color:#ffcc66;">n</span><span>):
-</span><span>    total </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">0
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(</span><span style="color:#ffcc66;">1</span><span style="color:#ccc9c2cc;">, </span><span>n </span><span style="color:#f29e74;">+ </span><span style="color:#ffcc66;">1</span><span>):
-</span><span>        total </span><span style="color:#f29e74;">+= </span><span>i
-</span><span>    </span><span style="color:#ffa759;">return </span><span>total
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Space: O(n) - Recursive call stack
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">sum_recursive</span><span>(</span><span style="color:#ffcc66;">n</span><span>):
-</span><span>    </span><span style="color:#ffa759;">if </span><span>n </span><span style="color:#f29e74;">&lt;= </span><span style="color:#ffcc66;">0</span><span>:
-</span><span>        </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">0
-</span><span>    </span><span style="color:#ffa759;">return </span><span>n </span><span style="color:#f29e74;">+ </span><span style="color:#ffd580;">sum_recursive</span><span>(n </span><span style="color:#f29e74;">- </span><span style="color:#ffcc66;">1</span><span>)
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Space: O(n) - New array created
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">double_values</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="color:#ffa759;">return </span><span>[x </span><span style="color:#f29e74;">* </span><span style="color:#ffcc66;">2 </span><span style="color:#ffa759;">for </span><span>x </span><span style="color:#ffa759;">in </span><span>arr]
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Space: O(1) - In-place modification
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">double_values_inplace</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(</span><span style="color:#f28779;">len</span><span>(arr)):
-</span><span>        arr[i] </span><span style="color:#f29e74;">*= </span><span style="color:#ffcc66;">2
-</span><span>    </span><span style="color:#ffa759;">return </span><span>arr
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Space: O(1) - Constant extra space</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> sum_iterative</span><span>(</span><span style="color: #D2A6FF;">n</span><span>):</span></span>
+<span class="giallo-l"><span>    total</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(</span><span style="color: #D2A6FF;">1</span><span style="color: #BFBDB6B3;">,</span><span> n</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span><span>)</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>        total</span><span style="color: #F29668;"> +=</span><span> i</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> total</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Space: O(n) - Recursive call stack</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> sum_recursive</span><span>(</span><span style="color: #D2A6FF;">n</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span> n</span><span style="color: #F29668;"> &lt;=</span><span style="color: #D2A6FF;"> 0</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span style="color: #D2A6FF;"> 0</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> n</span><span style="color: #F29668;"> +</span><span style="color: #FFB454;"> sum_recursive</span><span>(n</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 1</span><span>)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Space: O(n) - New array created</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> double_values</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> [x</span><span style="color: #F29668;"> *</span><span style="color: #D2A6FF;"> 2</span><span style="color: #FF8F40;"> for</span><span> x</span><span style="color: #FF8F40;"> in</span><span> arr]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Space: O(1) - In-place modification</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> double_values_inplace</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(</span><span style="color: #F07178;">len</span><span>(arr))</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>        arr[i]</span><span style="color: #F29668;"> *=</span><span style="color: #D2A6FF;"> 2</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> arr</span></span></code></pre>
 <p><div class="badge badge-soft badge-warning">Trade-off Alert</div> Often there's a trade-off: faster time complexity may require more space (and vice versa).</p>
 <hr />
 <h2 id="practical-optimization-strategies">Practical Optimization Strategies</h2>
 <h3 id="1-use-the-right-data-structure">1. Use the Right Data Structure</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Problem: Check if item exists in collection
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Slow: O(n) lookup
-</span><span>items_list </span><span style="color:#f29e74;">= </span><span>[</span><span style="color:#ffcc66;">1</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">2</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">3</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">4</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">5</span><span>]
-</span><span>exists </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">3 </span><span style="color:#f29e74;">in </span><span>items_list  </span><span style="font-style:italic;color:#5c6773;"># Linear search
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Fast: O(1) average lookup
-</span><span>items_set </span><span style="color:#f29e74;">= </span><span>{</span><span style="color:#ffcc66;">1</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">2</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">3</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">4</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">5</span><span>}
-</span><span>exists </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">3 </span><span style="color:#f29e74;">in </span><span>items_set  </span><span style="font-style:italic;color:#5c6773;"># Hash lookup
-</span></code></pre>
-<h3 id="2-avoid-nested-loops-when-possible">2. Avoid Nested Loops When Possible</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Problem: Find common elements in two arrays
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Bad: O(n × m)
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">find_common_slow</span><span>(</span><span style="color:#ffcc66;">arr1</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">arr2</span><span>):
-</span><span>    common </span><span style="color:#f29e74;">= </span><span>[]
-</span><span>    </span><span style="color:#ffa759;">for </span><span>item </span><span style="color:#ffa759;">in </span><span>arr1:
-</span><span>        </span><span style="color:#ffa759;">if </span><span>item </span><span style="color:#f29e74;">in </span><span>arr2:  </span><span style="font-style:italic;color:#5c6773;"># O(m) for each iteration
-</span><span>            common</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(item)
-</span><span>    </span><span style="color:#ffa759;">return </span><span>common
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Good: O(n + m)
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">find_common_fast</span><span>(</span><span style="color:#ffcc66;">arr1</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">arr2</span><span>):
-</span><span>    set2 </span><span style="color:#f29e74;">= </span><span style="font-style:italic;color:#5ccfe6;">set</span><span>(arr2)  </span><span style="font-style:italic;color:#5c6773;"># O(m)
-</span><span>    common </span><span style="color:#f29e74;">= </span><span>[]
-</span><span>    </span><span style="color:#ffa759;">for </span><span>item </span><span style="color:#ffa759;">in </span><span>arr1:  </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>        </span><span style="color:#ffa759;">if </span><span>item </span><span style="color:#f29e74;">in </span><span>set2:  </span><span style="font-style:italic;color:#5c6773;"># O(1)
-</span><span>            common</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(item)
-</span><span>    </span><span style="color:#ffa759;">return </span><span>common
-</span></code></pre>
-<h3 id="3-cache-expensive-calculations">3. Cache Expensive Calculations</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Problem: Expensive repeated calculations
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Bad: Recalculates every time
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">expensive_operation</span><span>(</span><span style="color:#ffcc66;">n</span><span>):
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Simulate expensive computation
-</span><span>    result </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">0
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(n):
-</span><span>        result </span><span style="color:#f29e74;">+= </span><span>i </span><span style="color:#f29e74;">** </span><span style="color:#ffcc66;">2
-</span><span>    </span><span style="color:#ffa759;">return </span><span>result
-</span><span>
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">process_multiple</span><span>(</span><span style="color:#ffcc66;">values</span><span>):
-</span><span>    results </span><span style="color:#f29e74;">= </span><span>[]
-</span><span>    </span><span style="color:#ffa759;">for </span><span>val </span><span style="color:#ffa759;">in </span><span>values:
-</span><span>        </span><span style="font-style:italic;color:#5c6773;"># If values repeat, we recalculate unnecessarily
-</span><span>        results</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(</span><span style="color:#ffd580;">expensive_operation</span><span>(val))
-</span><span>    </span><span style="color:#ffa759;">return </span><span>results
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Good: Use memoization
-</span><span style="color:#ffa759;">from </span><span>functools </span><span style="color:#ffa759;">import </span><span>lru_cache
-</span><span>
-</span><span style="color:#ccc9c2cc;">@</span><span style="color:#ffd580;">lru_cache</span><span>(</span><span style="color:#ffcc66;">maxsize</span><span style="color:#f29e74;">=</span><span style="color:#ffcc66;">None</span><span>)
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">expensive_operation_cached</span><span>(</span><span style="color:#ffcc66;">n</span><span>):
-</span><span>    result </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">0
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(n):
-</span><span>        result </span><span style="color:#f29e74;">+= </span><span>i </span><span style="color:#f29e74;">** </span><span style="color:#ffcc66;">2
-</span><span>    </span><span style="color:#ffa759;">return </span><span>result
-</span><span>
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">process_multiple_cached</span><span>(</span><span style="color:#ffcc66;">values</span><span>):
-</span><span>    results </span><span style="color:#f29e74;">= </span><span>[]
-</span><span>    </span><span style="color:#ffa759;">for </span><span>val </span><span style="color:#ffa759;">in </span><span>values:
-</span><span>        results</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(</span><span style="color:#ffd580;">expensive_operation_cached</span><span>(val))
-</span><span>    </span><span style="color:#ffa759;">return </span><span>results
-</span></code></pre>
-<h3 id="4-break-early-when-possible">4. Break Early When Possible</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Problem: Find if any element satisfies condition
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Less efficient: Always checks all elements
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">any_negative_complete</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    found </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">False
-</span><span>    </span><span style="color:#ffa759;">for </span><span>num </span><span style="color:#ffa759;">in </span><span>arr:
-</span><span>        </span><span style="color:#ffa759;">if </span><span>num </span><span style="color:#f29e74;">&lt; </span><span style="color:#ffcc66;">0</span><span>:
-</span><span>            found </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">True
-</span><span>    </span><span style="color:#ffa759;">return </span><span>found
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># More efficient: Stops as soon as found
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">any_negative_early</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="color:#ffa759;">for </span><span>num </span><span style="color:#ffa759;">in </span><span>arr:
-</span><span>        </span><span style="color:#ffa759;">if </span><span>num </span><span style="color:#f29e74;">&lt; </span><span style="color:#ffcc66;">0</span><span>:
-</span><span>            </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">True
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">False
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Check if item exists in collection</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Slow: O(n) lookup</span></span>
+<span class="giallo-l"><span>items_list</span><span style="color: #F29668;"> =</span><span> [</span><span style="color: #D2A6FF;">1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 2</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 3</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 4</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 5</span><span>]</span></span>
+<span class="giallo-l"><span>exists</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 3</span><span style="color: #F29668;"> in</span><span> items_list</span><span style="color: #5A6673;font-style: italic;">  # Linear search</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Fast: O(1) average lookup</span></span>
+<span class="giallo-l"><span>items_set</span><span style="color: #F29668;"> =</span><span> {</span><span style="color: #D2A6FF;">1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 2</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 3</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 4</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 5</span><span>}</span></span>
+<span class="giallo-l"><span>exists</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 3</span><span style="color: #F29668;"> in</span><span> items_set</span><span style="color: #5A6673;font-style: italic;">  # Hash lookup</span></span></code></pre><h3 id="2-avoid-nested-loops-when-possible">2. Avoid Nested Loops When Possible</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Find common elements in two arrays</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Bad: O(n × m)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_common_slow</span><span>(</span><span style="color: #D2A6FF;">arr1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> arr2</span><span>):</span></span>
+<span class="giallo-l"><span>    common</span><span style="color: #F29668;"> =</span><span> []</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> item</span><span style="color: #FF8F40;"> in</span><span> arr1</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> item</span><span style="color: #F29668;"> in</span><span> arr2</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">  # O(m) for each iteration</span></span>
+<span class="giallo-l"><span>            common</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(item)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> common</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Good: O(n + m)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_common_fast</span><span>(</span><span style="color: #D2A6FF;">arr1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> arr2</span><span>):</span></span>
+<span class="giallo-l"><span>    set2</span><span style="color: #F29668;"> =</span><span style="color: #39BAE6;"> set</span><span>(arr2)</span><span style="color: #5A6673;font-style: italic;">  # O(m)</span></span>
+<span class="giallo-l"><span>    common</span><span style="color: #F29668;"> =</span><span> []</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> item</span><span style="color: #FF8F40;"> in</span><span> arr1</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">  # O(n)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> item</span><span style="color: #F29668;"> in</span><span> set2</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">  # O(1)</span></span>
+<span class="giallo-l"><span>            common</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(item)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> common</span></span></code></pre><h3 id="3-cache-expensive-calculations">3. Cache Expensive Calculations</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Expensive repeated calculations</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Bad: Recalculates every time</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> expensive_operation</span><span>(</span><span style="color: #D2A6FF;">n</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Simulate expensive computation</span></span>
+<span class="giallo-l"><span>    result</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(n)</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>        result</span><span style="color: #F29668;"> +=</span><span> i</span><span style="color: #F29668;"> **</span><span style="color: #D2A6FF;"> 2</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> result</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> process_multiple</span><span>(</span><span style="color: #D2A6FF;">values</span><span>):</span></span>
+<span class="giallo-l"><span>    results</span><span style="color: #F29668;"> =</span><span> []</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> val</span><span style="color: #FF8F40;"> in</span><span> values</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">        # If values repeat, we recalculate unnecessarily</span></span>
+<span class="giallo-l"><span>        results</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(</span><span style="color: #FFB454;">expensive_operation</span><span>(val))</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> results</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Good: Use memoization</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">from</span><span> functools</span><span style="color: #FF8F40;"> import</span><span> lru_cache</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #E6C08A;">@lru_cache</span><span>(maxsize</span><span style="color: #F29668;">=</span><span style="color: #D2A6FF;">None</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> expensive_operation_cached</span><span>(</span><span style="color: #D2A6FF;">n</span><span>):</span></span>
+<span class="giallo-l"><span>    result</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(n)</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>        result</span><span style="color: #F29668;"> +=</span><span> i</span><span style="color: #F29668;"> **</span><span style="color: #D2A6FF;"> 2</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> result</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> process_multiple_cached</span><span>(</span><span style="color: #D2A6FF;">values</span><span>):</span></span>
+<span class="giallo-l"><span>    results</span><span style="color: #F29668;"> =</span><span> []</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> val</span><span style="color: #FF8F40;"> in</span><span> values</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>        results</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(</span><span style="color: #FFB454;">expensive_operation_cached</span><span>(val))</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> results</span></span></code></pre><h3 id="4-break-early-when-possible">4. Break Early When Possible</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Find if any element satisfies condition</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Less efficient: Always checks all elements</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> any_negative_complete</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span>    found</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> False</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> num</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> num</span><span style="color: #F29668;"> &lt;</span><span style="color: #D2A6FF;"> 0</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>            found</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> True</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> found</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># More efficient: Stops as soon as found</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> any_negative_early</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> num</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> num</span><span style="color: #F29668;"> &lt;</span><span style="color: #D2A6FF;"> 0</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span style="color: #D2A6FF;"> True</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #D2A6FF;"> False</span></span></code></pre>
 <hr />
 <h2 id="common-interview-patterns">Common Interview Patterns</h2>
 <h3 id="pattern-1-two-pointers">Pattern 1: Two Pointers</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Problem: Check if string is a palindrome
-</span><span style="font-style:italic;color:#5c6773;"># Time: O(n), Space: O(1)
-</span><span>
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">is_palindrome</span><span>(</span><span style="color:#ffcc66;">s</span><span>):
-</span><span>    left, right </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">0</span><span>, </span><span style="color:#f28779;">len</span><span>(s) </span><span style="color:#f29e74;">- </span><span style="color:#ffcc66;">1
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">while </span><span>left </span><span style="color:#f29e74;">&lt; </span><span>right:
-</span><span>        </span><span style="color:#ffa759;">if </span><span>s[left] </span><span style="color:#f29e74;">!= </span><span>s[right]:
-</span><span>            </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">False
-</span><span>        left </span><span style="color:#f29e74;">+= </span><span style="color:#ffcc66;">1
-</span><span>        right </span><span style="color:#f29e74;">-= </span><span style="color:#ffcc66;">1
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">True
-</span></code></pre>
-<h3 id="pattern-2-sliding-window">Pattern 2: Sliding Window</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Problem: Maximum sum of k consecutive elements
-</span><span style="font-style:italic;color:#5c6773;"># Time: O(n), Space: O(1)
-</span><span>
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">max_sum_subarray</span><span>(</span><span style="color:#ffcc66;">arr</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">k</span><span>):
-</span><span>    </span><span style="color:#ffa759;">if </span><span style="color:#f28779;">len</span><span>(arr) </span><span style="color:#f29e74;">&lt; </span><span>k:
-</span><span>        </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">None
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Calculate sum of first window
-</span><span>    window_sum </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">sum</span><span>(arr[</span><span style="color:#ccc9c2cc;">:</span><span>k])
-</span><span>    max_sum </span><span style="color:#f29e74;">= </span><span>window_sum
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Slide the window
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(k</span><span style="color:#ccc9c2cc;">, </span><span style="color:#f28779;">len</span><span>(arr)):
-</span><span>        window_sum </span><span style="color:#f29e74;">= </span><span>window_sum </span><span style="color:#f29e74;">- </span><span>arr[i </span><span style="color:#f29e74;">- </span><span>k] </span><span style="color:#f29e74;">+ </span><span>arr[i]
-</span><span>        max_sum </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">max</span><span>(max_sum</span><span style="color:#ccc9c2cc;">, </span><span>window_sum)
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">return </span><span>max_sum
-</span></code></pre>
-<h3 id="pattern-3-hash-map-for-o-1-lookup">Pattern 3: Hash Map for O(1) Lookup</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Problem: Two Sum - find indices of two numbers that add to target
-</span><span style="font-style:italic;color:#5c6773;"># Time: O(n), Space: O(n)
-</span><span>
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">two_sum</span><span>(</span><span style="color:#ffcc66;">nums</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">target</span><span>):
-</span><span>    seen </span><span style="color:#f29e74;">= </span><span>{}  </span><span style="font-style:italic;color:#5c6773;"># num -&gt; index
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i</span><span style="color:#ccc9c2cc;">, </span><span>num </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">enumerate</span><span>(nums):
-</span><span>        complement </span><span style="color:#f29e74;">= </span><span>target </span><span style="color:#f29e74;">- </span><span>num
-</span><span>        </span><span style="color:#ffa759;">if </span><span>complement </span><span style="color:#f29e74;">in </span><span>seen:
-</span><span>            </span><span style="color:#ffa759;">return </span><span>[seen[complement]</span><span style="color:#ccc9c2cc;">, </span><span>i]
-</span><span>        seen[num] </span><span style="color:#f29e74;">= </span><span>i
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#ffcc66;">None
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Check if string is a palindrome</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Time: O(n), Space: O(1)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> is_palindrome</span><span>(</span><span style="color: #D2A6FF;">s</span><span>):</span></span>
+<span class="giallo-l"><span>    left</span><span style="color: #BFBDB6B3;">,</span><span> right</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F07178;"> len</span><span>(s)</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    while</span><span> left</span><span style="color: #F29668;"> &lt;</span><span> right</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> s[left]</span><span style="color: #F29668;"> !=</span><span> s[right]</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span style="color: #D2A6FF;"> False</span></span>
+<span class="giallo-l"><span>        left</span><span style="color: #F29668;"> +=</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span>        right</span><span style="color: #F29668;"> -=</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #D2A6FF;"> True</span></span></code></pre><h3 id="pattern-2-sliding-window">Pattern 2: Sliding Window</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Maximum sum of k consecutive elements</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Time: O(n), Space: O(1)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> max_sum_subarray</span><span>(</span><span style="color: #D2A6FF;">arr</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> k</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span style="color: #F07178;"> len</span><span>(arr)</span><span style="color: #F29668;"> &lt;</span><span> k</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span style="color: #D2A6FF;"> None</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Calculate sum of first window</span></span>
+<span class="giallo-l"><span>    window_sum</span><span style="color: #F29668;"> =</span><span style="color: #F07178;"> sum</span><span>(arr[</span><span style="color: #BFBDB6B3;">:</span><span>k])</span></span>
+<span class="giallo-l"><span>    max_sum</span><span style="color: #F29668;"> =</span><span> window_sum</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Slide the window</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(k</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F07178;"> len</span><span>(arr))</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>        window_sum</span><span style="color: #F29668;"> =</span><span> window_sum</span><span style="color: #F29668;"> -</span><span> arr[i</span><span style="color: #F29668;"> -</span><span> k]</span><span style="color: #F29668;"> +</span><span> arr[i]</span></span>
+<span class="giallo-l"><span>        max_sum</span><span style="color: #F29668;"> =</span><span style="color: #F07178;"> max</span><span>(max_sum</span><span style="color: #BFBDB6B3;">,</span><span> window_sum)</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> max_sum</span></span></code></pre><h3 id="pattern-3-hash-map-for-o-1-lookup">Pattern 3: Hash Map for O(1) Lookup</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Two Sum - find indices of two numbers that add to target</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Time: O(n), Space: O(n)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> two_sum</span><span>(</span><span style="color: #D2A6FF;">nums</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> target</span><span>):</span></span>
+<span class="giallo-l"><span>    seen</span><span style="color: #F29668;"> =</span><span> {}</span><span style="color: #5A6673;font-style: italic;">  # num -&gt; index</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #BFBDB6B3;">,</span><span> num</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> enumerate</span><span>(nums)</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>        complement</span><span style="color: #F29668;"> =</span><span> target</span><span style="color: #F29668;"> -</span><span> num</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> complement</span><span style="color: #F29668;"> in</span><span> seen</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span> [seen[complement]</span><span style="color: #BFBDB6B3;">,</span><span> i]</span></span>
+<span class="giallo-l"><span>        seen[num]</span><span style="color: #F29668;"> =</span><span> i</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #D2A6FF;"> None</span></span></code></pre>
 <hr />
 <h2 id="advanced-concepts">Advanced Concepts</h2>
 <h3 id="amortized-analysis">Amortized Analysis</h3>
 <p>Some operations are expensive occasionally but cheap on average.</p>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Dynamic Array (like Python&#39;s list)
-</span><span style="font-style:italic;color:#5c6773;"># - append() is usually O(1)
-</span><span style="font-style:italic;color:#5c6773;"># - When array is full, it resizes (O(n))
-</span><span style="font-style:italic;color:#5c6773;"># - Amortized time: O(1) because resizing is rare
-</span><span>
-</span><span style="color:#ffa759;">class </span><span style="color:#73d0ff;">DynamicArray</span><span>:
-</span><span>    </span><span style="color:#ffa759;">def </span><span style="color:#f28779;">__init__</span><span>(</span><span style="color:#ffcc66;">self</span><span>):
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>capacity </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">1
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>size </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">0
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>array </span><span style="color:#f29e74;">= </span><span>[</span><span style="color:#ffcc66;">None</span><span>] </span><span style="color:#f29e74;">* </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>capacity
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">append</span><span>(</span><span style="color:#ffcc66;">self</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">item</span><span>):
-</span><span>        </span><span style="color:#ffa759;">if </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>size </span><span style="color:#f29e74;">== </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>capacity:
-</span><span>            </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">_resize</span><span>()  </span><span style="font-style:italic;color:#5c6773;"># O(n) occasionally
-</span><span>        
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>array[</span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>size] </span><span style="color:#f29e74;">= </span><span>item
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>size </span><span style="color:#f29e74;">+= </span><span style="color:#ffcc66;">1
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">_resize</span><span>(</span><span style="color:#ffcc66;">self</span><span>):
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>capacity </span><span style="color:#f29e74;">*= </span><span style="color:#ffcc66;">2
-</span><span>        new_array </span><span style="color:#f29e74;">= </span><span>[</span><span style="color:#ffcc66;">None</span><span>] </span><span style="color:#f29e74;">* </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>capacity
-</span><span>        </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(</span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>size):
-</span><span>            new_array[i] </span><span style="color:#f29e74;">= </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>array[i]
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>array </span><span style="color:#f29e74;">= </span><span>new_array
-</span></code></pre>
-<div role="alert" class="alert alert-info alert- soft">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Dynamic Array (like Python&#39;s list)</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># - append() is usually O(1)</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># - When array is full, it resizes (O(n))</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># - Amortized time: O(1) because resizing is rare</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #59C2FF;"> DynamicArray</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #F07178;"> __init__</span><span>(</span><span style="color: #D2A6FF;">self</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>capacity</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>size</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>array</span><span style="color: #F29668;"> =</span><span> [</span><span style="color: #D2A6FF;">None</span><span>]</span><span style="color: #F29668;"> *</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>capacity</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #FFB454;"> append</span><span>(</span><span style="color: #D2A6FF;">self</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> item</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>size</span><span style="color: #F29668;"> ==</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>capacity</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">            self</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">_resize</span><span>()</span><span style="color: #5A6673;font-style: italic;">  # O(n) occasionally</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>array[</span><span style="color: #39BAE6;font-style: italic;">self</span><span style="color: #BFBDB6B3;">.</span><span>size]</span><span style="color: #F29668;"> =</span><span> item</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>size</span><span style="color: #F29668;"> +=</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #FFB454;"> _resize</span><span>(</span><span style="color: #D2A6FF;">self</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>capacity</span><span style="color: #F29668;"> *=</span><span style="color: #D2A6FF;"> 2</span></span>
+<span class="giallo-l"><span>        new_array</span><span style="color: #F29668;"> =</span><span> [</span><span style="color: #D2A6FF;">None</span><span>]</span><span style="color: #F29668;"> *</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>capacity</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(</span><span style="color: #39BAE6;font-style: italic;">self</span><span style="color: #BFBDB6B3;">.</span><span>size)</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>            new_array[i]</span><span style="color: #F29668;"> =</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>array[i]</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>array</span><span style="color: #F29668;"> =</span><span> new_array</span></span></code></pre><div role="alert" class="alert alert-info alert- soft">
   <div><p><strong>Amortized O(1):</strong> Over n operations, the total cost is O(n), making each operation O(1) on average.</p>
 </div>
 </div><h3 id="best-average-and-worst-case">Best, Average, and Worst Case</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Quicksort Complexity:
-</span><span style="font-style:italic;color:#5c6773;"># - Best case: O(n log n) - perfect pivots
-</span><span style="font-style:italic;color:#5c6773;"># - Average case: O(n log n) - random pivots
-</span><span style="font-style:italic;color:#5c6773;"># - Worst case: O(n²) - already sorted with bad pivot choice
-</span><span>
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">quicksort</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="color:#ffa759;">if </span><span style="color:#f28779;">len</span><span>(arr) </span><span style="color:#f29e74;">&lt;= </span><span style="color:#ffcc66;">1</span><span>:
-</span><span>        </span><span style="color:#ffa759;">return </span><span>arr
-</span><span>    
-</span><span>    pivot </span><span style="color:#f29e74;">= </span><span>arr[</span><span style="color:#f28779;">len</span><span>(arr) </span><span style="color:#f29e74;">// </span><span style="color:#ffcc66;">2</span><span>]
-</span><span>    left </span><span style="color:#f29e74;">= </span><span>[x </span><span style="color:#ffa759;">for </span><span>x </span><span style="color:#ffa759;">in </span><span>arr </span><span style="color:#ffa759;">if </span><span>x </span><span style="color:#f29e74;">&lt; </span><span>pivot]
-</span><span>    middle </span><span style="color:#f29e74;">= </span><span>[x </span><span style="color:#ffa759;">for </span><span>x </span><span style="color:#ffa759;">in </span><span>arr </span><span style="color:#ffa759;">if </span><span>x </span><span style="color:#f29e74;">== </span><span>pivot]
-</span><span>    right </span><span style="color:#f29e74;">= </span><span>[x </span><span style="color:#ffa759;">for </span><span>x </span><span style="color:#ffa759;">in </span><span>arr </span><span style="color:#ffa759;">if </span><span>x </span><span style="color:#f29e74;">&gt; </span><span>pivot]
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="color:#ffd580;">quicksort</span><span>(left) </span><span style="color:#f29e74;">+ </span><span>middle </span><span style="color:#f29e74;">+ </span><span style="color:#ffd580;">quicksort</span><span>(right)
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Quicksort Complexity:</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># - Best case: O(n log n) - perfect pivots</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># - Average case: O(n log n) - random pivots</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># - Worst case: O(n²) - already sorted with bad pivot choice</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> quicksort</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span style="color: #F07178;"> len</span><span>(arr)</span><span style="color: #F29668;"> &lt;=</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> arr</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span>    pivot</span><span style="color: #F29668;"> =</span><span> arr[</span><span style="color: #F07178;">len</span><span>(arr)</span><span style="color: #F29668;"> //</span><span style="color: #D2A6FF;"> 2</span><span>]</span></span>
+<span class="giallo-l"><span>    left</span><span style="color: #F29668;"> =</span><span> [x</span><span style="color: #FF8F40;"> for</span><span> x</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #FF8F40;"> if</span><span> x</span><span style="color: #F29668;"> &lt;</span><span> pivot]</span></span>
+<span class="giallo-l"><span>    middle</span><span style="color: #F29668;"> =</span><span> [x</span><span style="color: #FF8F40;"> for</span><span> x</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #FF8F40;"> if</span><span> x</span><span style="color: #F29668;"> ==</span><span> pivot]</span></span>
+<span class="giallo-l"><span>    right</span><span style="color: #F29668;"> =</span><span> [x</span><span style="color: #FF8F40;"> for</span><span> x</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #FF8F40;"> if</span><span> x</span><span style="color: #F29668;"> &gt;</span><span> pivot]</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #FFB454;"> quicksort</span><span>(left)</span><span style="color: #F29668;"> +</span><span> middle</span><span style="color: #F29668;"> +</span><span style="color: #FFB454;"> quicksort</span><span>(right)</span></span></code></pre>
 <hr />
 <h2 id="real-world-case-study-optimizing-a-search-feature">Real-World Case Study: Optimizing a Search Feature</h2>
 <p>Let's optimize a real-world scenario: searching through user data.</p>
 <h3 id="scenario">Scenario</h3>
 <p>You have a web app with 100,000 users. Users can search by name, email, or username.</p>
 <h3 id="version-1-naive-linear-search-o-n">Version 1: Naive Linear Search - O(n)</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">class </span><span style="color:#73d0ff;">UserDatabase_v1</span><span>:
-</span><span>    </span><span style="color:#ffa759;">def </span><span style="color:#f28779;">__init__</span><span>(</span><span style="color:#ffcc66;">self</span><span>):
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>users </span><span style="color:#f29e74;">= </span><span>[]  </span><span style="font-style:italic;color:#5c6773;"># List of user dictionaries
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">search</span><span>(</span><span style="color:#ffcc66;">self</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">query</span><span>):
-</span><span>        results </span><span style="color:#f29e74;">= </span><span>[]
-</span><span>        </span><span style="color:#ffa759;">for </span><span>user </span><span style="color:#ffa759;">in </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>users:  </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>            </span><span style="color:#ffa759;">if </span><span>(query </span><span style="color:#f29e74;">in </span><span>user[</span><span style="color:#bae67e;">&#39;name&#39;</span><span>] </span><span style="color:#f29e74;">or 
-</span><span>                query </span><span style="color:#f29e74;">in </span><span>user[</span><span style="color:#bae67e;">&#39;email&#39;</span><span>] </span><span style="color:#f29e74;">or 
-</span><span>                query </span><span style="color:#f29e74;">in </span><span>user[</span><span style="color:#bae67e;">&#39;username&#39;</span><span>]):
-</span><span>                results</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(user)
-</span><span>        </span><span style="color:#ffa759;">return </span><span>results
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Performance: For 100,000 users, ~100,000 comparisons per search
-</span></code></pre>
-<div role="alert" class="alert alert-error alert- soft">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #59C2FF;"> UserDatabase_v1</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #F07178;"> __init__</span><span>(</span><span style="color: #D2A6FF;">self</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>users</span><span style="color: #F29668;"> =</span><span> []</span><span style="color: #5A6673;font-style: italic;">  # List of user dictionaries</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #FFB454;"> search</span><span>(</span><span style="color: #D2A6FF;">self</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> query</span><span>):</span></span>
+<span class="giallo-l"><span>        results</span><span style="color: #F29668;"> =</span><span> []</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> user</span><span style="color: #FF8F40;"> in</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>users</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">  # O(n)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            if</span><span> (query</span><span style="color: #F29668;"> in</span><span> user[</span><span style="color: #AAD94C;">&#39;name&#39;</span><span>]</span><span style="color: #F29668;"> or</span><span> </span></span>
+<span class="giallo-l"><span>                query</span><span style="color: #F29668;"> in</span><span> user[</span><span style="color: #AAD94C;">&#39;email&#39;</span><span>]</span><span style="color: #F29668;"> or</span><span> </span></span>
+<span class="giallo-l"><span>                query</span><span style="color: #F29668;"> in</span><span> user[</span><span style="color: #AAD94C;">&#39;username&#39;</span><span>])</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>                results</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(user)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> results</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Performance: For 100,000 users, ~100,000 comparisons per search</span></span></code></pre><div role="alert" class="alert alert-error alert- soft">
   <div><p><strong>Problem:</strong> Searching 100,000 users takes too long. Users experience lag.</p>
 </div>
 </div><h3 id="version-2-hash-table-index-o-1-exact-match">Version 2: Hash Table Index - O(1) Exact Match</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">class </span><span style="color:#73d0ff;">UserDatabase_v2</span><span>:
-</span><span>    </span><span style="color:#ffa759;">def </span><span style="color:#f28779;">__init__</span><span>(</span><span style="color:#ffcc66;">self</span><span>):
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>users </span><span style="color:#f29e74;">= </span><span>[]
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>email_index </span><span style="color:#f29e74;">= </span><span>{}  </span><span style="font-style:italic;color:#5c6773;"># email -&gt; user
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>username_index </span><span style="color:#f29e74;">= </span><span>{}  </span><span style="font-style:italic;color:#5c6773;"># username -&gt; user
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">add_user</span><span>(</span><span style="color:#ffcc66;">self</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">user</span><span>):
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>users</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(user)
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>email_index[user[</span><span style="color:#bae67e;">&#39;email&#39;</span><span>]] </span><span style="color:#f29e74;">= </span><span>user
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>username_index[user[</span><span style="color:#bae67e;">&#39;username&#39;</span><span>]] </span><span style="color:#f29e74;">= </span><span>user
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">search_exact</span><span>(</span><span style="color:#ffcc66;">self</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">field</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">value</span><span>):
-</span><span>        </span><span style="color:#ffa759;">if </span><span>field </span><span style="color:#f29e74;">== </span><span style="color:#bae67e;">&#39;email&#39;</span><span>:
-</span><span>            </span><span style="color:#ffa759;">return </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>email_index</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">get</span><span>(value)  </span><span style="font-style:italic;color:#5c6773;"># O(1)
-</span><span>        </span><span style="color:#ffa759;">elif </span><span>field </span><span style="color:#f29e74;">== </span><span style="color:#bae67e;">&#39;username&#39;</span><span>:
-</span><span>            </span><span style="color:#ffa759;">return </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>username_index</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">get</span><span>(value)  </span><span style="font-style:italic;color:#5c6773;"># O(1)
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Performance: Instant lookup, but only for exact matches
-</span></code></pre>
-<h3 id="version-3-hybrid-approach-o-1-o-log-n">Version 3: Hybrid Approach - O(1) + O(log n)</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">from </span><span>bisect </span><span style="color:#ffa759;">import </span><span>bisect_left
-</span><span>
-</span><span style="color:#ffa759;">class </span><span style="color:#73d0ff;">UserDatabase_v3</span><span>:
-</span><span>    </span><span style="color:#ffa759;">def </span><span style="color:#f28779;">__init__</span><span>(</span><span style="color:#ffcc66;">self</span><span>):
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>users </span><span style="color:#f29e74;">= </span><span>[]
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>email_index </span><span style="color:#f29e74;">= </span><span>{}
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>username_index </span><span style="color:#f29e74;">= </span><span>{}
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>sorted_names </span><span style="color:#f29e74;">= </span><span>[]  </span><span style="font-style:italic;color:#5c6773;"># For prefix search
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">add_user</span><span>(</span><span style="color:#ffcc66;">self</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">user</span><span>):
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>users</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(user)
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>email_index[user[</span><span style="color:#bae67e;">&#39;email&#39;</span><span>]] </span><span style="color:#f29e74;">= </span><span>user
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>username_index[user[</span><span style="color:#bae67e;">&#39;username&#39;</span><span>]] </span><span style="color:#f29e74;">= </span><span>user
-</span><span>        
-</span><span>        </span><span style="font-style:italic;color:#5c6773;"># Insert name in sorted order
-</span><span>        idx </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">bisect_left</span><span>(</span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>sorted_names</span><span style="color:#ccc9c2cc;">, </span><span>user[</span><span style="color:#bae67e;">&#39;name&#39;</span><span>])
-</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>sorted_names</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">insert</span><span>(idx</span><span style="color:#ccc9c2cc;">, </span><span>user[</span><span style="color:#bae67e;">&#39;name&#39;</span><span>])
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">search</span><span>(</span><span style="color:#ffcc66;">self</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">query</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">field</span><span>):
-</span><span>        </span><span style="color:#ffa759;">if </span><span>field </span><span style="color:#f29e74;">in </span><span>[</span><span style="color:#bae67e;">&#39;email&#39;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#bae67e;">&#39;username&#39;</span><span>]:
-</span><span>            </span><span style="font-style:italic;color:#5c6773;"># Exact match: O(1)
-</span><span>            </span><span style="color:#ffa759;">return </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>email_index</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">get</span><span>(query) </span><span style="color:#f29e74;">or </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>username_index</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">get</span><span>(query)
-</span><span>        </span><span style="color:#ffa759;">else</span><span>:
-</span><span>            </span><span style="font-style:italic;color:#5c6773;"># Prefix search on names: O(log n) to find start + O(k) for results
-</span><span>            idx </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">bisect_left</span><span>(</span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>sorted_names</span><span style="color:#ccc9c2cc;">, </span><span>query)
-</span><span>            results </span><span style="color:#f29e74;">= </span><span>[]
-</span><span>            </span><span style="color:#ffa759;">while </span><span>idx </span><span style="color:#f29e74;">&lt; </span><span style="color:#f28779;">len</span><span>(</span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>sorted_names) </span><span style="color:#f29e74;">and </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>sorted_names[idx]</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">startswith</span><span>(query):
-</span><span>                results</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(</span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span>sorted_names[idx])
-</span><span>                idx </span><span style="color:#f29e74;">+= </span><span style="color:#ffcc66;">1
-</span><span>            </span><span style="color:#ffa759;">return </span><span>results
-</span></code></pre>
-<div role="alert" class="alert alert-success alert- soft">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #59C2FF;"> UserDatabase_v2</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #F07178;"> __init__</span><span>(</span><span style="color: #D2A6FF;">self</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>users</span><span style="color: #F29668;"> =</span><span> []</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>email_index</span><span style="color: #F29668;"> =</span><span> {}</span><span style="color: #5A6673;font-style: italic;">  # email -&gt; user</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>username_index</span><span style="color: #F29668;"> =</span><span> {}</span><span style="color: #5A6673;font-style: italic;">  # username -&gt; user</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #FFB454;"> add_user</span><span>(</span><span style="color: #D2A6FF;">self</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> user</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>users</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(user)</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>email_index[user[</span><span style="color: #AAD94C;">&#39;email&#39;</span><span>]]</span><span style="color: #F29668;"> =</span><span> user</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>username_index[user[</span><span style="color: #AAD94C;">&#39;username&#39;</span><span>]]</span><span style="color: #F29668;"> =</span><span> user</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #FFB454;"> search_exact</span><span>(</span><span style="color: #D2A6FF;">self</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> field</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> value</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> field</span><span style="color: #F29668;"> ==</span><span style="color: #AAD94C;"> &#39;email&#39;</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>email_index</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">get</span><span>(value)</span><span style="color: #5A6673;font-style: italic;">  # O(1)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        elif</span><span> field</span><span style="color: #F29668;"> ==</span><span style="color: #AAD94C;"> &#39;username&#39;</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>username_index</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">get</span><span>(value)</span><span style="color: #5A6673;font-style: italic;">  # O(1)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Performance: Instant lookup, but only for exact matches</span></span></code></pre><h3 id="version-3-hybrid-approach-o-1-o-log-n">Version 3: Hybrid Approach - O(1) + O(log n)</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">from</span><span> bisect</span><span style="color: #FF8F40;"> import</span><span> bisect_left</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #59C2FF;"> UserDatabase_v3</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #F07178;"> __init__</span><span>(</span><span style="color: #D2A6FF;">self</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>users</span><span style="color: #F29668;"> =</span><span> []</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>email_index</span><span style="color: #F29668;"> =</span><span> {}</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>username_index</span><span style="color: #F29668;"> =</span><span> {}</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>sorted_names</span><span style="color: #F29668;"> =</span><span> []</span><span style="color: #5A6673;font-style: italic;">  # For prefix search</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #FFB454;"> add_user</span><span>(</span><span style="color: #D2A6FF;">self</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> user</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>users</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(user)</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>email_index[user[</span><span style="color: #AAD94C;">&#39;email&#39;</span><span>]]</span><span style="color: #F29668;"> =</span><span> user</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>username_index[user[</span><span style="color: #AAD94C;">&#39;username&#39;</span><span>]]</span><span style="color: #F29668;"> =</span><span> user</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">        # Insert name in sorted order</span></span>
+<span class="giallo-l"><span>        idx</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> bisect_left</span><span>(</span><span style="color: #39BAE6;font-style: italic;">self</span><span style="color: #BFBDB6B3;">.</span><span>sorted_names</span><span style="color: #BFBDB6B3;">,</span><span> user[</span><span style="color: #AAD94C;">&#39;name&#39;</span><span>])</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>sorted_names</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">insert</span><span>(idx</span><span style="color: #BFBDB6B3;">,</span><span> user[</span><span style="color: #AAD94C;">&#39;name&#39;</span><span>])</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #FFB454;"> search</span><span>(</span><span style="color: #D2A6FF;">self</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> query</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> field</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> field</span><span style="color: #F29668;"> in</span><span> [</span><span style="color: #AAD94C;">&#39;email&#39;</span><span style="color: #BFBDB6B3;">,</span><span style="color: #AAD94C;"> &#39;username&#39;</span><span>]</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">            # Exact match: O(1)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>email_index</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">get</span><span>(query)</span><span style="color: #F29668;"> or</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>username_index</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">get</span><span>(query)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        else</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">            # Prefix search on names: O(log n) to find start + O(k) for results</span></span>
+<span class="giallo-l"><span>            idx</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> bisect_left</span><span>(</span><span style="color: #39BAE6;font-style: italic;">self</span><span style="color: #BFBDB6B3;">.</span><span>sorted_names</span><span style="color: #BFBDB6B3;">,</span><span> query)</span></span>
+<span class="giallo-l"><span>            results</span><span style="color: #F29668;"> =</span><span> []</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            while</span><span> idx</span><span style="color: #F29668;"> &lt;</span><span style="color: #F07178;"> len</span><span>(</span><span style="color: #39BAE6;font-style: italic;">self</span><span style="color: #BFBDB6B3;">.</span><span>sorted_names)</span><span style="color: #F29668;"> and</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>sorted_names[idx]</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">startswith</span><span>(query)</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>                results</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(</span><span style="color: #39BAE6;font-style: italic;">self</span><span style="color: #BFBDB6B3;">.</span><span>sorted_names[idx])</span></span>
+<span class="giallo-l"><span>                idx</span><span style="color: #F29668;"> +=</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span> results</span></span></code></pre><div role="alert" class="alert alert-success alert- soft">
   <div><p><strong>Result:</strong> Email/username lookups are instant. Name prefix searches are logarithmic. User experience improved dramatically!</p>
 </div>
 </div>
@@ -1208,12 +1168,11 @@
     Problem 1: What&#x27;s the time complexity?
   </div>
   <div class="collapse-content text-sm">
-    <pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">def </span><span style="color:#ffd580;">mystery</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    n </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">len</span><span>(arr)
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(n):
-</span><span>        </span><span style="color:#ffa759;">for </span><span>j </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(i</span><span style="color:#ccc9c2cc;">, </span><span>n):
-</span><span>            </span><span style="color:#f28779;">print</span><span>(arr[i]</span><span style="color:#ccc9c2cc;">, </span><span>arr[j])
-</span></code></pre>
+    <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> mystery</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span>    n</span><span style="color: #F29668;"> =</span><span style="color: #F07178;"> len</span><span>(arr)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(n)</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> j</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(i</span><span style="color: #BFBDB6B3;">,</span><span> n)</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #F07178;">            print</span><span>(arr[i]</span><span style="color: #BFBDB6B3;">,</span><span> arr[j])</span></span></code></pre>
 <p><strong>Answer:</strong> O(n²). The outer loop runs n times, inner loop runs (n-i) times on average, which is still O(n).</p>
 
   </div>
@@ -1223,27 +1182,24 @@
     Problem 2: Optimize this code
   </div>
   <div class="collapse-content text-sm">
-    <pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">def </span><span style="color:#ffd580;">find_duplicates</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    duplicates </span><span style="color:#f29e74;">= </span><span>[]
-</span><span>    </span><span style="color:#ffa759;">for </span><span>i </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(</span><span style="color:#f28779;">len</span><span>(arr)):
-</span><span>        </span><span style="color:#ffa759;">for </span><span>j </span><span style="color:#ffa759;">in </span><span style="color:#f28779;">range</span><span>(i </span><span style="color:#f29e74;">+ </span><span style="color:#ffcc66;">1</span><span style="color:#ccc9c2cc;">, </span><span style="color:#f28779;">len</span><span>(arr)):
-</span><span>            </span><span style="color:#ffa759;">if </span><span>arr[i] </span><span style="color:#f29e74;">== </span><span>arr[j] </span><span style="color:#f29e74;">and </span><span>arr[i] </span><span style="color:#f29e74;">not in </span><span>duplicates:
-</span><span>                duplicates</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(arr[i])
-</span><span>    </span><span style="color:#ffa759;">return </span><span>duplicates
-</span></code></pre>
+    <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_duplicates</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span>    duplicates</span><span style="color: #F29668;"> =</span><span> []</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(</span><span style="color: #F07178;">len</span><span>(arr))</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> j</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(i</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F07178;"> len</span><span>(arr))</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            if</span><span> arr[i]</span><span style="color: #F29668;"> ==</span><span> arr[j]</span><span style="color: #F29668;"> and</span><span> arr[i]</span><span style="color: #F29668;"> not in</span><span> duplicates</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>                duplicates</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(arr[i])</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> duplicates</span></span></code></pre>
 <p><strong>Current:</strong> O(n²) - Nested loops + strict check</p>
 <p><strong>Optimized:</strong></p>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">def </span><span style="color:#ffd580;">find_duplicates_fast</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    seen </span><span style="color:#f29e74;">= </span><span style="font-style:italic;color:#5ccfe6;">set</span><span>()
-</span><span>    duplicates </span><span style="color:#f29e74;">= </span><span style="font-style:italic;color:#5ccfe6;">set</span><span>()
-</span><span>    </span><span style="color:#ffa759;">for </span><span>num </span><span style="color:#ffa759;">in </span><span>arr:
-</span><span>        </span><span style="color:#ffa759;">if </span><span>num </span><span style="color:#f29e74;">in </span><span>seen:
-</span><span>            duplicates</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">add</span><span>(num)
-</span><span>        seen</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">add</span><span>(num)
-</span><span>    </span><span style="color:#ffa759;">return </span><span style="font-style:italic;color:#5ccfe6;">list</span><span>(duplicates)
-</span><span style="font-style:italic;color:#5c6773;"># O(n) time, O(n) space
-</span></code></pre>
-
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_duplicates_fast</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span>    seen</span><span style="color: #F29668;"> =</span><span style="color: #39BAE6;"> set</span><span>()</span></span>
+<span class="giallo-l"><span>    duplicates</span><span style="color: #F29668;"> =</span><span style="color: #39BAE6;"> set</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> num</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> num</span><span style="color: #F29668;"> in</span><span> seen</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>            duplicates</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">add</span><span>(num)</span></span>
+<span class="giallo-l"><span>        seen</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">add</span><span>(num)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #39BAE6;"> list</span><span>(duplicates)</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># O(n) time, O(n) space</span></span></code></pre>
   </div>
 </div>
 <div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
@@ -1251,20 +1207,19 @@
     Problem 3: Binary search variation
   </div>
   <div class="collapse-content text-sm">
-    <pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">def </span><span style="color:#ffd580;">find_rotation_point</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># Find where a rotated sorted array was rotated
-</span><span>    </span><span style="font-style:italic;color:#5c6773;"># [4, 5, 6, 7, 0, 1, 2] -&gt; return 4 (index of 0)
-</span><span>    left, right </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">0</span><span>, </span><span style="color:#f28779;">len</span><span>(arr) </span><span style="color:#f29e74;">- </span><span style="color:#ffcc66;">1
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">while </span><span>left </span><span style="color:#f29e74;">&lt; </span><span>right:
-</span><span>        mid </span><span style="color:#f29e74;">= </span><span>(left </span><span style="color:#f29e74;">+ </span><span>right) </span><span style="color:#f29e74;">// </span><span style="color:#ffcc66;">2
-</span><span>        </span><span style="color:#ffa759;">if </span><span>arr[mid] </span><span style="color:#f29e74;">&gt; </span><span>arr[right]:
-</span><span>            left </span><span style="color:#f29e74;">= </span><span>mid </span><span style="color:#f29e74;">+ </span><span style="color:#ffcc66;">1
-</span><span>        </span><span style="color:#ffa759;">else</span><span>:
-</span><span>            right </span><span style="color:#f29e74;">= </span><span>mid
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">return </span><span>left
-</span></code></pre>
+    <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_rotation_point</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Find where a rotated sorted array was rotated</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # [4, 5, 6, 7, 0, 1, 2] -&gt; return 4 (index of 0)</span></span>
+<span class="giallo-l"><span>    left</span><span style="color: #BFBDB6B3;">,</span><span> right</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F07178;"> len</span><span>(arr)</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    while</span><span> left</span><span style="color: #F29668;"> &lt;</span><span> right</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>        mid</span><span style="color: #F29668;"> =</span><span> (left</span><span style="color: #F29668;"> +</span><span> right)</span><span style="color: #F29668;"> //</span><span style="color: #D2A6FF;"> 2</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> arr[mid]</span><span style="color: #F29668;"> &gt;</span><span> arr[right]</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>            left</span><span style="color: #F29668;"> =</span><span> mid</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        else</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>            right</span><span style="color: #F29668;"> =</span><span> mid</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> left</span></span></code></pre>
 <p><strong>Complexity:</strong> O(log n) - Modified binary search</p>
 
   </div>
@@ -1274,24 +1229,20 @@
 <div role="alert" class="alert alert-error alert- soft">
   <div><p><strong>Mistake 1:</strong> Assuming all single loops are O(n). Some loops might do O(n) work inside each iteration!</p>
 </div>
-</div><pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># This is O(n²), not O(n)!
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">mistake_example</span><span>(</span><span style="color:#ffcc66;">arr</span><span>):
-</span><span>    </span><span style="color:#ffa759;">for </span><span>item </span><span style="color:#ffa759;">in </span><span>arr:  </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>        arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">remove</span><span>(item)  </span><span style="font-style:italic;color:#5c6773;"># remove() is O(n)!
-</span></code></pre>
-<div role="alert" class="alert alert-error alert- soft">
+</div><pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># This is O(n²), not O(n)!</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> mistake_example</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> item</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">  # O(n)</span></span>
+<span class="giallo-l"><span>        arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">remove</span><span>(item)</span><span style="color: #5A6673;font-style: italic;">  # remove() is O(n)!</span></span></code></pre><div role="alert" class="alert alert-error alert- soft">
   <div><p><strong>Mistake 2:</strong> Ignoring hidden complexity in library functions.</p>
 </div>
-</div><pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#5c6773;"># Python list operations and their complexities:
-</span><span>arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">append</span><span>(x)      </span><span style="font-style:italic;color:#5c6773;"># O(1) amortized
-</span><span>arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">insert</span><span>(</span><span style="color:#ffcc66;">0</span><span style="color:#ccc9c2cc;">, </span><span>x)   </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">pop</span><span>()          </span><span style="font-style:italic;color:#5c6773;"># O(1)
-</span><span>arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">pop</span><span>(</span><span style="color:#ffcc66;">0</span><span>)         </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">remove</span><span>(x)      </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>x </span><span style="color:#f29e74;">in </span><span>arr           </span><span style="font-style:italic;color:#5c6773;"># O(n)
-</span><span>arr</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">sort</span><span>()         </span><span style="font-style:italic;color:#5c6773;"># O(n log n)
-</span></code></pre>
-<div role="alert" class="alert alert-error alert- soft">
+</div><pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Python list operations and their complexities:</span></span>
+<span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(x)</span><span style="color: #5A6673;font-style: italic;">      # O(1) amortized</span></span>
+<span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">insert</span><span>(</span><span style="color: #D2A6FF;">0</span><span style="color: #BFBDB6B3;">,</span><span> x)</span><span style="color: #5A6673;font-style: italic;">   # O(n)</span></span>
+<span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">pop</span><span>()</span><span style="color: #5A6673;font-style: italic;">          # O(1)</span></span>
+<span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">pop</span><span>(</span><span style="color: #D2A6FF;">0</span><span>)</span><span style="color: #5A6673;font-style: italic;">         # O(n)</span></span>
+<span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">remove</span><span>(x)</span><span style="color: #5A6673;font-style: italic;">      # O(n)</span></span>
+<span class="giallo-l"><span>x</span><span style="color: #F29668;"> in</span><span> arr</span><span style="color: #5A6673;font-style: italic;">           # O(n)</span></span>
+<span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">sort</span><span>()</span><span style="color: #5A6673;font-style: italic;">         # O(n log n)</span></span></code></pre><div role="alert" class="alert alert-error alert- soft">
   <div><p><strong>Mistake 3:</strong> Premature optimization. Profile first, optimize bottlenecks second.</p>
 </div>
 </div>
@@ -1375,24 +1326,23 @@
 <li><strong>Project Euler</strong>: Mathematical programming challenges</li>
 </ul>
 <h3 id="profiling-your-code">Profiling Your Code</h3>
-<pre data-lang="python" style="background-color:#212733;color:#ccc9c2;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ffa759;">import </span><span>time
-</span><span style="color:#ffa759;">import </span><span>cProfile
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Method 1: Simple timing
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">time_function</span><span>(</span><span style="color:#ffcc66;">func</span><span style="color:#ccc9c2cc;">, </span><span style="color:#f29e74;">*</span><span style="color:#ffcc66;">args</span><span>):
-</span><span>    start </span><span style="color:#f29e74;">= </span><span>time</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">time</span><span>()
-</span><span>    result </span><span style="color:#f29e74;">= </span><span style="color:#ffd580;">func</span><span>(</span><span style="color:#f29e74;">*</span><span>args)
-</span><span>    end </span><span style="color:#f29e74;">= </span><span>time</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">time</span><span>()
-</span><span>    </span><span style="color:#f28779;">print</span><span>(</span><span style="color:#ffa759;">f</span><span style="color:#bae67e;">&quot;Time: </span><span>{end </span><span style="color:#f29e74;">- </span><span>start</span><span style="color:#ffcc66;">:.6f</span><span>}</span><span style="color:#bae67e;"> seconds&quot;</span><span>)
-</span><span>    </span><span style="color:#ffa759;">return </span><span>result
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Method 2: Detailed profiling
-</span><span style="color:#ffa759;">def </span><span style="color:#ffd580;">profile_function</span><span>(</span><span style="color:#ffcc66;">func</span><span style="color:#ccc9c2cc;">, </span><span style="color:#f29e74;">*</span><span style="color:#ffcc66;">args</span><span>):
-</span><span>    cProfile</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">run</span><span>(</span><span style="color:#bae67e;">&#39;func(*args)&#39;</span><span>)
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Usage
-</span><span style="color:#ffd580;">time_function</span><span>(my_algorithm</span><span style="color:#ccc9c2cc;">, </span><span>large_dataset)
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span> time</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> cProfile</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Method 1: Simple timing</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> time_function</span><span>(</span><span style="color: #D2A6FF;">func</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F29668;"> *</span><span style="color: #D2A6FF;">args</span><span>):</span></span>
+<span class="giallo-l"><span>    start</span><span style="color: #F29668;"> =</span><span> time</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">time</span><span>()</span></span>
+<span class="giallo-l"><span>    result</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> func</span><span>(</span><span style="color: #F29668;">*</span><span>args)</span></span>
+<span class="giallo-l"><span>    end</span><span style="color: #F29668;"> =</span><span> time</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">time</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #F07178;">    print</span><span>(</span><span style="color: #FF8F40;">f</span><span style="color: #AAD94C;">&quot;Time: </span><span style="color: #95E6CB;">{</span><span>end</span><span style="color: #F29668;"> -</span><span> start</span><span style="color: #FF8F40;">:.6f</span><span style="color: #95E6CB;">}</span><span style="color: #AAD94C;"> seconds&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> result</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Method 2: Detailed profiling</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> profile_function</span><span>(</span><span style="color: #D2A6FF;">func</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F29668;"> *</span><span style="color: #D2A6FF;">args</span><span>):</span></span>
+<span class="giallo-l"><span>    cProfile</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">run</span><span>(</span><span style="color: #AAD94C;">&#39;func(*args)&#39;</span><span>)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Usage</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">time_function</span><span>(my_algorithm</span><span style="color: #BFBDB6B3;">,</span><span> large_dataset)</span></span></code></pre>
 <hr />
 <h2 id="conclusion">Conclusion</h2>
 <p>Understanding time complexity is like learning to read a map before embarking on a journey. It helps you:</p>

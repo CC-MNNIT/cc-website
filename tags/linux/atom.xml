@@ -89,32 +89,28 @@
   &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 &lt;h3 id=&quot;managing-printers&quot;&gt;Managing Printers&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Add a driverless printer (IPP Everywhere)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; lpadmin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span&gt; OfficePrinter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -E -v&lt;&#x2F;span&gt;&lt;span&gt; ipp:&#x2F;&#x2F;printer.local&#x2F;ipp&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -m&lt;&#x2F;span&gt;&lt;span&gt; everywhere
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Set as default
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; lpoptions&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -d&lt;&#x2F;span&gt;&lt;span&gt; OfficePrinter
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Check status of all printers
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;lpstat&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -p -d
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;job-management&quot;&gt;Job Management&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Print a PDF file
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;lp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -d&lt;&#x2F;span&gt;&lt;span&gt; OfficePrinter document.pdf
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Cancel a specific job
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;cancel &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;job-id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Nuke the queue (cancel all jobs)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;cancel&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -a&lt;&#x2F;span&gt;&lt;span&gt; OfficePrinter
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Add a driverless printer (IPP Everywhere)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; lpadmin&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -E -v&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; ipp:&#x2F;&#x2F;printer.local&#x2F;ipp&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -m&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; everywhere&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Set as default&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; lpoptions&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -d&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Check status of all printers&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;lpstat&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -p -d&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;job-management&quot;&gt;Job Management&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Print a PDF file&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;lp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -d&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter document.pdf&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Cancel a specific job&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;cancel&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F29668;&quot;&gt; &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt;job-i&lt;&#x2F;span&gt;&lt;span&gt;d&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F29668;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Nuke the queue (cancel all jobs)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;cancel&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -a&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;hr &#x2F;&gt;
 &lt;h2 id=&quot;troubleshooting-guide&quot;&gt;Troubleshooting Guide&lt;&#x2F;h2&gt;
 &lt;p&gt;When printing fails, it usually fails silently. Here is how to make it talk.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;1-the-printer-is-not-discovered&quot;&gt;1. The Printer is Not Discovered&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;strong&gt;Check mDNS:&lt;&#x2F;strong&gt; Driverless printing relies on Bonjour&#x2F;Avahi.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;avahi-browse&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -a
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;avahi-browse&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -a&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;&lt;strong&gt;Firewall:&lt;&#x2F;strong&gt; Ensure TCP port 631 (IPP) and UDP port 5353 (mDNS) are open.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;2-filter-failed-errors&quot;&gt;2. &quot;Filter Failed&quot; Errors&lt;&#x2F;h3&gt;
 &lt;p&gt;This usually means CUPS couldn&#x27;t convert the file.&lt;&#x2F;p&gt;
@@ -124,9 +120,7 @@
 &lt;li&gt;Restart CUPS: &lt;code&gt;sudo systemctl restart cups&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
 &lt;li&gt;Watch the logs live:&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;journalctl&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -u&lt;&#x2F;span&gt;&lt;span&gt; cups&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -f
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;3-legacy-usb-issues&quot;&gt;3. Legacy USB Issues&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;journalctl&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -u&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; cups&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -f&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;3-legacy-usb-issues&quot;&gt;3. Legacy USB Issues&lt;&#x2F;h3&gt;
 &lt;div role=&quot;alert&quot; class=&quot;alert alert-warning alert- soft&quot;&gt;
   &lt;div&gt;&lt;p&gt;Warning: Legacy USB printers often require specific permissions. Check lsusb to see if the kernel detects the device, and ensure your user is in the lp group.&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
@@ -136,7 +130,7 @@
 &lt;p&gt;OpenPrinting is a community-driven project. We need help from developers (C&#x2F;C++), documentation writers, and testers.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;where-to-start&quot;&gt;Where to start?&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;GitHub Organization:&lt;&#x2F;strong&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;OpenPrinting&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;OpenPrinting&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Organization:&lt;&#x2F;strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;OpenPrinting&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;OpenPrinting&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Key Repos:&lt;&#x2F;strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;cups&lt;&#x2F;code&gt;: The core printing system.&lt;&#x2F;li&gt;

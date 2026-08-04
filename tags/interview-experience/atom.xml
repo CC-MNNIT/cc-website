@@ -118,7 +118,7 @@
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
 &lt;p&gt;The &lt;strong&gt;Difference Array technique&lt;&#x2F;strong&gt; was the key optimization here — instead of updating every element in a range, we mark only the start and end of each range, then take a single prefix sum pass at the end.&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Reference:&lt;&#x2F;strong&gt; &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@nishant_salhotra&#x2F;programming-techniques-the-difference-array-5cb22aeedf84&quot;&gt;Programming Techniques — The Difference Array&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;&#x2F;strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@nishant_salhotra&#x2F;programming-techniques-the-difference-array-5cb22aeedf84&quot;&gt;Programming Techniques — The Difference Array&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500&#x2F;15 border&quot;&gt;
   &lt;div class=&quot;collapse-title font-semibold&quot;&gt;

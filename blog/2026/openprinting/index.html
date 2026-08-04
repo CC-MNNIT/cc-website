@@ -622,32 +622,28 @@
   </div>
 </div>
 <h3 id="managing-printers">Managing Printers</h3>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="font-style:italic;color:#5c6773;"># Add a driverless printer (IPP Everywhere)
-</span><span style="color:#ffd580;">sudo</span><span> lpadmin</span><span style="color:#ffcc66;"> -p</span><span> OfficePrinter</span><span style="color:#ffcc66;"> -E -v</span><span> ipp://printer.local/ipp/</span><span style="color:#ffcc66;"> -m</span><span> everywhere
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Set as default
-</span><span style="color:#ffd580;">sudo</span><span> lpoptions</span><span style="color:#ffcc66;"> -d</span><span> OfficePrinter
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Check status of all printers
-</span><span style="color:#ffd580;">lpstat</span><span style="color:#ffcc66;"> -p -d
-</span></code></pre>
-<h3 id="job-management">Job Management</h3>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="font-style:italic;color:#5c6773;"># Print a PDF file
-</span><span style="color:#ffd580;">lp</span><span style="color:#ffcc66;"> -d</span><span> OfficePrinter document.pdf
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Cancel a specific job
-</span><span style="color:#ffd580;">cancel </span><span style="color:#f29e74;">&lt;</span><span>job-id</span><span style="color:#f29e74;">&gt;
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Nuke the queue (cancel all jobs)
-</span><span style="color:#ffd580;">cancel</span><span style="color:#ffcc66;"> -a</span><span> OfficePrinter
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Add a driverless printer (IPP Everywhere)</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">sudo</span><span style="color: #AAD94C;"> lpadmin</span><span style="color: #95E6CB;"> -p</span><span style="color: #AAD94C;"> OfficePrinter</span><span style="color: #95E6CB;"> -E -v</span><span style="color: #AAD94C;"> ipp://printer.local/ipp/</span><span style="color: #95E6CB;"> -m</span><span style="color: #AAD94C;"> everywhere</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Set as default</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">sudo</span><span style="color: #AAD94C;"> lpoptions</span><span style="color: #95E6CB;"> -d</span><span style="color: #AAD94C;"> OfficePrinter</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Check status of all printers</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">lpstat</span><span style="color: #95E6CB;"> -p -d</span></span></code></pre><h3 id="job-management">Job Management</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Print a PDF file</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">lp</span><span style="color: #95E6CB;"> -d</span><span style="color: #AAD94C;"> OfficePrinter document.pdf</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Cancel a specific job</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">cancel</span><span style="color: #F29668;"> &lt;</span><span style="color: #AAD94C;">job-i</span><span>d</span><span style="color: #F29668;">&gt;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Nuke the queue (cancel all jobs)</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">cancel</span><span style="color: #95E6CB;"> -a</span><span style="color: #AAD94C;"> OfficePrinter</span></span></code></pre>
 <hr />
 <h2 id="troubleshooting-guide">Troubleshooting Guide</h2>
 <p>When printing fails, it usually fails silently. Here is how to make it talk.</p>
 <h3 id="1-the-printer-is-not-discovered">1. The Printer is Not Discovered</h3>
 <p><strong>Check mDNS:</strong> Driverless printing relies on Bonjour/Avahi.</p>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">avahi-browse</span><span style="color:#ffcc66;"> -a
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">avahi-browse</span><span style="color: #95E6CB;"> -a</span></span></code></pre>
 <p><strong>Firewall:</strong> Ensure TCP port 631 (IPP) and UDP port 5353 (mDNS) are open.</p>
 <h3 id="2-filter-failed-errors">2. "Filter Failed" Errors</h3>
 <p>This usually means CUPS couldn't convert the file.</p>
@@ -657,9 +653,7 @@
 <li>Restart CUPS: <code>sudo systemctl restart cups</code>.</li>
 <li>Watch the logs live:</li>
 </ol>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">journalctl</span><span style="color:#ffcc66;"> -u</span><span> cups</span><span style="color:#ffcc66;"> -f
-</span></code></pre>
-<h3 id="3-legacy-usb-issues">3. Legacy USB Issues</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">journalctl</span><span style="color: #95E6CB;"> -u</span><span style="color: #AAD94C;"> cups</span><span style="color: #95E6CB;"> -f</span></span></code></pre><h3 id="3-legacy-usb-issues">3. Legacy USB Issues</h3>
 <div role="alert" class="alert alert-warning alert- soft">
   <div><p>Warning: Legacy USB printers often require specific permissions. Check lsusb to see if the kernel detects the device, and ensure your user is in the lp group.</p>
 </div>
@@ -669,7 +663,7 @@
 <p>OpenPrinting is a community-driven project. We need help from developers (C/C++), documentation writers, and testers.</p>
 <h3 id="where-to-start">Where to start?</h3>
 <ul>
-<li><strong>GitHub Organization:</strong> <a href="https://github.com/OpenPrinting">https://github.com/OpenPrinting</a></li>
+<li><strong>GitHub Organization:</strong> <a rel="external" href="https://github.com/OpenPrinting">https://github.com/OpenPrinting</a></li>
 <li><strong>Key Repos:</strong>
 <ul>
 <li><code>cups</code>: The core printing system.</li>
@@ -852,10 +846,6 @@
             
             
             
-        
-            
-            
-            
                 
             
                 
@@ -883,7 +873,7 @@
         
             
             
-                <a class="nav-button nav-button-next group" href="https://cc-club.in/about/">
+                <a class="nav-button nav-button-next group" href="https://cc-club.in/projects/">
                     <div class="nav-button-content">
                         <div class="nav-button-direction">
                             <span class="nav-button-label">Next</span>
@@ -891,10 +881,14 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                             </svg>
                         </div>
-                        <div class="nav-button-title">About Us</div>
+                        <div class="nav-button-title">Projects</div>
                     </div>
                 </a>
                 
+            
+            
+        
+            
             
             
         

@@ -633,59 +633,58 @@
 <h2 id="phase-4-the-first-strike-your-contribution">Phase 4: The First Strike (Your Contribution)</h2>
 <p><em>Execution matters more than intent.</em></p>
 <h3 id="4-1-the-golden-workflow">4.1 The Golden Workflow</h3>
-<pre style="background-color:#212733;color:#ccc9c2;"><code><span>┌─────────────────────────────────────────────────────────────────────────────┐
-</span><span>│                       GIT BRANCH WORKFLOW &amp; PR PROCESS                      │
-</span><span>├─────────────────────────────────────────────────────────────────────────────┤
-</span><span>│                                                                             │
-</span><span>│   [Fork &amp; Clone]                                                            │
-</span><span>│         │                                                                   │
-</span><span>│         │ Create local copy of repository                                   │
-</span><span>│         ▼                                                                   │
-</span><span>│   ┌─────────────────┐                                                       │
-</span><span>│   │ Create Branch   │                                                       │
-</span><span>│   │ (feature/fix)   │                                                       │
-</span><span>│   └────────┬────────┘                                                       │
-</span><span>│            │                                                                │
-</span><span>│            │ Branch off from main                                           │
-</span><span>│            ▼                                                                │
-</span><span>│   ┌─────────────────────┐                                                   │
-</span><span>│   │ Write Code &amp; Test   │ ◄──┐                                              │
-</span><span>│   │ (Development cycle) │    │                                              │
-</span><span>│   └──────────┬──────────┘    │                                              │
-</span><span>│              │                │                                             │
-</span><span>│              │ Code complete  │ Request Changes                             │
-</span><span>│              ▼                │                                             │
-</span><span>│   ┌─────────────────┐        │                                              │
-</span><span>│   │ Push to Origin  │        │                                              │
-</span><span>│   │ (Remote branch) │        │                                              │
-</span><span>│   └────────┬────────┘        │                                              │
-</span><span>│            │                  │                                             │
-</span><span>│            │ Push complete    │                                             │
-</span><span>│            ▼                  │                                             │
-</span><span>│   ┌──────────────────┐       │                                              │
-</span><span>│   │ Open Pull Request│       │                                              │
-</span><span>│   │ (PR to main)     │       │                                              │
-</span><span>│   └────────┬─────────┘       │                                              │
-</span><span>│            │                  │                                             │
-</span><span>│            │ PR opened        │                                             │
-</span><span>│            ▼                  │                                             │
-</span><span>│        ╔═══════════════════╗ │                                              │
-</span><span>│        ║ Review Decision   ║ │                                              │
-</span><span>│        ║ (Code review)     ║─┘                                              │
-</span><span>│        ╚════════┬══════════╝                                                │
-</span><span>│                 │                                                           │
-</span><span>│        ┌────────┴────────┐                                                  │
-</span><span>│        │                 │                                                  │
-</span><span>│   Approved          Closed/Rejected                                         │
-</span><span>│        │                 │                                                  │
-</span><span>│        ▼                 ▼                                                  │
-</span><span>│   ┌─────────┐      ┌─────────┐                                              │
-</span><span>│   │ Merged  │      │   End   │                                              │
-</span><span>│   │ (Success)│      │ (Close) │                                             │
-</span><span>│   └─────────┘      └─────────┘                                              │
-</span><span>│                                                                             │
-</span><span>└─────────────────────────────────────────────────────────────────────────────┘
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="plain"><span class="giallo-l"><span>┌─────────────────────────────────────────────────────────────────────────────┐</span></span>
+<span class="giallo-l"><span>│                       GIT BRANCH WORKFLOW &amp; PR PROCESS                      │</span></span>
+<span class="giallo-l"><span>├─────────────────────────────────────────────────────────────────────────────┤</span></span>
+<span class="giallo-l"><span>│                                                                             │</span></span>
+<span class="giallo-l"><span>│   [Fork &amp; Clone]                                                            │</span></span>
+<span class="giallo-l"><span>│         │                                                                   │</span></span>
+<span class="giallo-l"><span>│         │ Create local copy of repository                                   │</span></span>
+<span class="giallo-l"><span>│         ▼                                                                   │</span></span>
+<span class="giallo-l"><span>│   ┌─────────────────┐                                                       │</span></span>
+<span class="giallo-l"><span>│   │ Create Branch   │                                                       │</span></span>
+<span class="giallo-l"><span>│   │ (feature/fix)   │                                                       │</span></span>
+<span class="giallo-l"><span>│   └────────┬────────┘                                                       │</span></span>
+<span class="giallo-l"><span>│            │                                                                │</span></span>
+<span class="giallo-l"><span>│            │ Branch off from main                                           │</span></span>
+<span class="giallo-l"><span>│            ▼                                                                │</span></span>
+<span class="giallo-l"><span>│   ┌─────────────────────┐                                                   │</span></span>
+<span class="giallo-l"><span>│   │ Write Code &amp; Test   │ ◄──┐                                              │</span></span>
+<span class="giallo-l"><span>│   │ (Development cycle) │    │                                              │</span></span>
+<span class="giallo-l"><span>│   └──────────┬──────────┘    │                                              │</span></span>
+<span class="giallo-l"><span>│              │                │                                             │</span></span>
+<span class="giallo-l"><span>│              │ Code complete  │ Request Changes                             │</span></span>
+<span class="giallo-l"><span>│              ▼                │                                             │</span></span>
+<span class="giallo-l"><span>│   ┌─────────────────┐        │                                              │</span></span>
+<span class="giallo-l"><span>│   │ Push to Origin  │        │                                              │</span></span>
+<span class="giallo-l"><span>│   │ (Remote branch) │        │                                              │</span></span>
+<span class="giallo-l"><span>│   └────────┬────────┘        │                                              │</span></span>
+<span class="giallo-l"><span>│            │                  │                                             │</span></span>
+<span class="giallo-l"><span>│            │ Push complete    │                                             │</span></span>
+<span class="giallo-l"><span>│            ▼                  │                                             │</span></span>
+<span class="giallo-l"><span>│   ┌──────────────────┐       │                                              │</span></span>
+<span class="giallo-l"><span>│   │ Open Pull Request│       │                                              │</span></span>
+<span class="giallo-l"><span>│   │ (PR to main)     │       │                                              │</span></span>
+<span class="giallo-l"><span>│   └────────┬─────────┘       │                                              │</span></span>
+<span class="giallo-l"><span>│            │                  │                                             │</span></span>
+<span class="giallo-l"><span>│            │ PR opened        │                                             │</span></span>
+<span class="giallo-l"><span>│            ▼                  │                                             │</span></span>
+<span class="giallo-l"><span>│        ╔═══════════════════╗ │                                              │</span></span>
+<span class="giallo-l"><span>│        ║ Review Decision   ║ │                                              │</span></span>
+<span class="giallo-l"><span>│        ║ (Code review)     ║─┘                                              │</span></span>
+<span class="giallo-l"><span>│        ╚════════┬══════════╝                                                │</span></span>
+<span class="giallo-l"><span>│                 │                                                           │</span></span>
+<span class="giallo-l"><span>│        ┌────────┴────────┐                                                  │</span></span>
+<span class="giallo-l"><span>│        │                 │                                                  │</span></span>
+<span class="giallo-l"><span>│   Approved          Closed/Rejected                                         │</span></span>
+<span class="giallo-l"><span>│        │                 │                                                  │</span></span>
+<span class="giallo-l"><span>│        ▼                 ▼                                                  │</span></span>
+<span class="giallo-l"><span>│   ┌─────────┐      ┌─────────┐                                              │</span></span>
+<span class="giallo-l"><span>│   │ Merged  │      │   End   │                                              │</span></span>
+<span class="giallo-l"><span>│   │ (Success)│      │ (Close) │                                             │</span></span>
+<span class="giallo-l"><span>│   └─────────┘      └─────────┘                                              │</span></span>
+<span class="giallo-l"><span>│                                                                             │</span></span>
+<span class="giallo-l"><span>└─────────────────────────────────────────────────────────────────────────────┘</span></span></code></pre>
 <ol>
 <li><strong>Fork</strong> the repository to your account.</li>
 <li><strong>Clone</strong> your fork locally.</li>

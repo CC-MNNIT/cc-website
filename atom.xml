@@ -118,7 +118,7 @@
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
 &lt;p&gt;The &lt;strong&gt;Difference Array technique&lt;&#x2F;strong&gt; was the key optimization here — instead of updating every element in a range, we mark only the start and end of each range, then take a single prefix sum pass at the end.&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Reference:&lt;&#x2F;strong&gt; &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@nishant_salhotra&#x2F;programming-techniques-the-difference-array-5cb22aeedf84&quot;&gt;Programming Techniques — The Difference Array&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;&#x2F;strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@nishant_salhotra&#x2F;programming-techniques-the-difference-array-5cb22aeedf84&quot;&gt;Programming Techniques — The Difference Array&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500&#x2F;15 border&quot;&gt;
   &lt;div class=&quot;collapse-title font-semibold&quot;&gt;
@@ -190,6 +190,55 @@
 &lt;p&gt;&lt;em&gt;Thanks for reading! If you have any queries, feel free to connect with me on LinkedIn.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;LinkedIn:&lt;&#x2F;strong&gt;
 https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;ayushman-tiwari-a7807b243&#x2F;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Insomnia 2026</title>
+        <published>2026-04-11T00:00:00+00:00</published>
+        <updated>2026-04-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/events/2026/insomnia/"/>
+        <id>https://cc-club.in/events/2026/insomnia/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/events/2026/insomnia/">&lt;h2 id=&quot;about-insomnia-2026&quot;&gt;About Insomnia 2026&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Insomnia 2026&lt;&#x2F;strong&gt; — the flagship competitive programming contest of &lt;strong&gt;MNNIT Allahabad&lt;&#x2F;strong&gt; — was held on &lt;strong&gt;Saturday, April 11, 2026&lt;&#x2F;strong&gt; on &lt;strong&gt;Codeforces&lt;&#x2F;strong&gt;. Following the classic &lt;strong&gt;ACM-ICPC&lt;&#x2F;strong&gt; format, it challenged teams of up to three members to solve a curated set of algorithmic problems of increasing difficulty in an intense &lt;strong&gt;3.5-hour&lt;&#x2F;strong&gt; showdown of speed, logic, and teamwork.&lt;&#x2F;p&gt;
+&lt;p&gt;The contest was &lt;strong&gt;proctored&lt;&#x2F;strong&gt;, and teams had to follow the proctoring guidelines to stay eligible for prize money.&lt;&#x2F;p&gt;
+&lt;p&gt;With a total prize pool of &lt;strong&gt;₹26,400&lt;&#x2F;strong&gt;, the winnings were split across the &lt;strong&gt;Top 3 Global teams&lt;&#x2F;strong&gt;, the &lt;strong&gt;Top 3 MNNIT teams&lt;&#x2F;strong&gt;, and the &lt;strong&gt;Fastest Solver of each problem&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;winners-trophy&quot;&gt;Winners 🏆&lt;&#x2F;h2&gt;
+&lt;p&gt;Congratulations to all the winning teams! See the full podium above.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;🌍 &lt;strong&gt;Global Winners&lt;&#x2F;strong&gt; — Top 3 teams from across the world&lt;&#x2F;li&gt;
+&lt;li&gt;🏛️ &lt;strong&gt;MNNIT Winners&lt;&#x2F;strong&gt; — Top 3 teams from MNNIT&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Editorial:&lt;&#x2F;strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;codeforces.com&#x2F;blog&#x2F;entry&#x2F;153390&quot;&gt;Insomnia 2026 Editorial&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;what-to-expect&quot;&gt;What to Expect&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;🧠 &lt;strong&gt;Algorithmic Challenges:&lt;&#x2F;strong&gt; Problems ranging from brain-teasers to advanced graph theory.&lt;&#x2F;li&gt;
+&lt;li&gt;🕒 &lt;strong&gt;The Night Grind:&lt;&#x2F;strong&gt; High-intensity coding atmosphere that lasts into the night.&lt;&#x2F;li&gt;
+&lt;li&gt;🤝 &lt;strong&gt;Team Strategy:&lt;&#x2F;strong&gt; Work in teams of up to 3 to optimize your solutions.&lt;&#x2F;li&gt;
+&lt;li&gt;🏆 &lt;strong&gt;Grand Prizes:&lt;&#x2F;strong&gt; Rewards for the top-performing teams.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;format&quot;&gt;Format&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Platform:&lt;&#x2F;strong&gt; Codeforces (hosted as a gym&#x2F;contest)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Duration:&lt;&#x2F;strong&gt; 3.5 Hours&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Team Size:&lt;&#x2F;strong&gt; Up to 3 Members&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Eligibility:&lt;&#x2F;strong&gt; Open to all college students.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Moderation:&lt;&#x2F;strong&gt; Proctored round — proctoring guidelines are required to be eligible for prizes.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Prize Pool:&lt;&#x2F;strong&gt; ₹26,400, split between Top 3 Global teams, Top 3 MNNIT teams, and the Fastest Solver of each problem.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
 </content>
         
     </entry>
@@ -355,8 +404,8 @@ https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;shubhranshu-mishra-092311256&#x2
 &lt;p&gt;Firstly, the most important thing is, to apply!! Never shy away from off-campus opportunities because of low-confidence or just the belief that hardly anyone gets a response from off-campus opportunities. The responses are random in nature, but you never know when you get your chance.&lt;&#x2F;p&gt;
 &lt;p&gt;I applied to Google offcampus, 3 times (in 1st Year&#x27;s end for Step Internship, in 2nd Year&#x27;s end for Summer Internship, in 3rd Year&#x27;s end for Full time role)&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;Yes, the only thing to do is keep an eye on &lt;a href=&quot;https:&#x2F;&#x2F;www.google.com&#x2F;about&#x2F;careers&quot;&gt;&lt;strong&gt;Careers Page (turn on Alerts)&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Being an &lt;a href=&quot;https:&#x2F;&#x2F;icpc.global&#x2F;&quot;&gt;ICPC&lt;&#x2F;a&gt; Regionalist helps a lot, it can almost gurantee an interview call&lt;&#x2F;li&gt;
+&lt;li&gt;Yes, the only thing to do is keep an eye on &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.google.com&#x2F;about&#x2F;careers&quot;&gt;&lt;strong&gt;Careers Page (turn on Alerts)&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Being an &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;icpc.global&#x2F;&quot;&gt;ICPC&lt;&#x2F;a&gt; Regionalist helps a lot, it can almost gurantee an interview call&lt;&#x2F;li&gt;
 &lt;li&gt;Summer Internship at some MNC also increases your chances of a response&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;phase-1&quot;&gt;Phase 1&lt;&#x2F;h2&gt;
@@ -376,7 +425,7 @@ https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;shubhranshu-mishra-092311256&#x2
 &lt;li&gt;These are purely DSA rounds, and in each round they ask 1-2 DSA questions, the difficulty of these questions is generally leetcode medium&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert- soft&quot;&gt;
-  &lt;div&gt;&lt;p&gt;In my first round I was asked to implement a YouTube ADs class and the solution involved use of 2 heaps, and it was basically a highly modified version of this &lt;a href=&quot;https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;find-median-from-data-stream&quot;&gt;leetcode problem&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+  &lt;div&gt;&lt;p&gt;In my first round I was asked to implement a YouTube ADs class and the solution involved use of 2 heaps, and it was basically a highly modified version of this &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;find-median-from-data-stream&quot;&gt;leetcode problem&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 &lt;p&gt;The interviewers again look for 2 things&lt;&#x2F;p&gt;
@@ -402,7 +451,7 @@ https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;shubhranshu-mishra-092311256&#x2
 &lt;p&gt;This may or may not happen for you, if the Hiring team is satisfied they won&#x27;t schedule your 4th round, if they are not they may schedule a 4th round, and usually they do schedule a 4th round, this could be a DSA Round or an Googlyness Round depending on which aspect the Hiring Committee wants to test you&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;If its a DSA round, it will be just the same as round 3 with increased difficulty level of problem you get&lt;&#x2F;li&gt;
-&lt;li&gt;If its a Googlyness round, then you will get an HR-Manager type round where they wish to test whether you are a good cultural fit or not, and it is usually in form of &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@poojaauma&#x2F;the-behavioral-questions-that-helped-me-in-my-googlyness-round-6c41433ea5dd&quot;&gt;situation&#x2F;scenario based questions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;If its a Googlyness round, then you will get an HR-Manager type round where they wish to test whether you are a good cultural fit or not, and it is usually in form of &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@poojaauma&#x2F;the-behavioral-questions-that-helped-me-in-my-googlyness-round-6c41433ea5dd&quot;&gt;situation&#x2F;scenario based questions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;team-matching&quot;&gt;Team Matching&lt;&#x2F;h2&gt;
 &lt;p&gt;After you get great response and if hiring has not freezed, you should proceed to team matching where you may be reached out by different teams at Google for potential match of skills and cultural fit, enjoy this phase and wait for your offer&lt;&#x2F;p&gt;
@@ -438,7 +487,7 @@ https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;shubhranshu-mishra-092311256&#x2
 &lt;p&gt;&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;On-campus&lt;&#x2F;div&gt; Salesforce visits MNNIT Allahabad for summer internship. The process involves an online round (OA) followed by 2 rounds of interview for each shortlisted candidate.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Off-campus&lt;&#x2F;div&gt; Salesforce often organizes a hackathon (usually called Tech Accelerator). To be aware of when these happen you can check out the &lt;a href=&quot;https:&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;2026&#x2F;salesforce-interview-experience&#x2F;%22https:&#x2F;&#x2F;www.salesforce.com&#x2F;company&#x2F;careers&#x2F;university&#x2F;%22&quot;&gt;FutureForce Page&lt;&#x2F;a&gt; or follow &lt;a href=&quot;https:&#x2F;&#x2F;www.instagram.com&#x2F;salesforcefutureforce&#x2F;&quot;&gt;FutureForce on Instagram&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Off-campus&lt;&#x2F;div&gt; Salesforce often organizes a hackathon (usually called Tech Accelerator). To be aware of when these happen you can check out the &lt;a href=&quot;https:&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;2026&#x2F;salesforce-interview-experience&#x2F;%22https:&#x2F;&#x2F;www.salesforce.com&#x2F;company&#x2F;careers&#x2F;university&#x2F;%22&quot;&gt;FutureForce Page&lt;&#x2F;a&gt; or follow &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.instagram.com&#x2F;salesforcefutureforce&#x2F;&quot;&gt;FutureForce on Instagram&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Usually the process involves a resume based shortlisting for the hackathon after which the shortlisted candidates are invited to Salesforce Hyderabad Office for a hackathon. Interviews are conducted post hackathon and internships are awarded. If you get shortlisted for hackathon, there is a decent chance of qualifying for internships through this route.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -488,7 +537,7 @@ https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;shubhranshu-mishra-092311256&#x2
   &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 &lt;h3 id=&quot;interview-round-2&quot;&gt;Interview (Round 2)&lt;&#x2F;h3&gt;
-&lt;p&gt;Be ready to be asked the introduction you gave in Round 1. This is generally an &lt;strong&gt;HR-Manager round&lt;&#x2F;strong&gt;. managers try to test your culture fit&#x2F;critical thinking. Expect &lt;a href=&quot;https:&#x2F;&#x2F;www.geeksforgeeks.org&#x2F;aptitude&#x2F;top-100-puzzles-asked-in-interviews&#x2F;&quot;&gt;puzzles&lt;&#x2F;a&gt; and managerial questions.&lt;&#x2F;p&gt;
+&lt;p&gt;Be ready to be asked the introduction you gave in Round 1. This is generally an &lt;strong&gt;HR-Manager round&lt;&#x2F;strong&gt;. managers try to test your culture fit&#x2F;critical thinking. Expect &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.geeksforgeeks.org&#x2F;aptitude&#x2F;top-100-puzzles-asked-in-interviews&#x2F;&quot;&gt;puzzles&lt;&#x2F;a&gt; and managerial questions.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Common Non Puzzle Questions:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;Tell me about your weakness.&lt;&#x2F;li&gt;
@@ -545,45 +594,6 @@ During internship don&#x27;t stay stuck. Try things, but if they don&#x27;t work
 &lt;p&gt;PPO conversions are quite generous at Salesforce given you deliver the project on time. The manager 1 on 1s are amazing and you can share feedback with your team. If you make it Hyderabad office, always make sure to try Andhra-food cause its amazing!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;best-of-luck-dude&quot;&gt;Best of Luck Dude :)&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;media.licdn.com&#x2F;dms&#x2F;image&#x2F;v2&#x2F;D5622AQEU3TTRenGE1g&#x2F;feedshare-shrink_1280&#x2F;B56Zge3zEUH0Ao-&#x2F;0&#x2F;1752864607576?e=1774483200&amp;amp;v=beta&amp;amp;t=OflEajvSMwwRvPOZN3Uc1MW4BxvQONzRtQI-lvOP_OM&quot; alt=&quot;Internship at Salesforce&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Insomnia 2026</title>
-        <published>2026-02-15T00:00:00+00:00</published>
-        <updated>2026-02-15T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Unknown
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://cc-club.in/events/2026/insomnia/"/>
-        <id>https://cc-club.in/events/2026/insomnia/</id>
-        
-        <content type="html" xml:base="https://cc-club.in/events/2026/insomnia/">&lt;h2 id=&quot;about-insomnia-2026&quot;&gt;About Insomnia 2026&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;strong&gt;Insomnia&lt;&#x2F;strong&gt; returns in 2026 as the flagship competitive programming contest of &lt;strong&gt;MNNIT Allahabad&lt;&#x2F;strong&gt;. It&#x27;s not just a contest; it&#x27;s a test of endurance, logic, and coffee tolerance.&lt;&#x2F;p&gt;
-&lt;p&gt;Inspired by the &lt;strong&gt;ACM-ICPC&lt;&#x2F;strong&gt; format, Insomnia pushes teams to their limits.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;what-to-expect&quot;&gt;What to Expect&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;🧠 &lt;strong&gt;Algorithmic Challenges:&lt;&#x2F;strong&gt; Problems ranging from brain-teasers to advanced graph theory.&lt;&#x2F;li&gt;
-&lt;li&gt;🕒 &lt;strong&gt;The Night Grind:&lt;&#x2F;strong&gt; High-intensity coding atmosphere that lasts into the night.&lt;&#x2F;li&gt;
-&lt;li&gt;🤝 &lt;strong&gt;Team Strategy:&lt;&#x2F;strong&gt; Work in teams of up to 3 to optimize your solutions.&lt;&#x2F;li&gt;
-&lt;li&gt;🏆 &lt;strong&gt;Grand Prizes:&lt;&#x2F;strong&gt; Rewards for the top-performing teams.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;format&quot;&gt;Format&lt;&#x2F;h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Platform:&lt;&#x2F;strong&gt; Codeforces (hosted as a gym&#x2F;contest)&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Duration:&lt;&#x2F;strong&gt; 3 to 5 Hours&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Team Size:&lt;&#x2F;strong&gt; 1-3 Members&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Eligibility:&lt;&#x2F;strong&gt; Open to all college students.&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;p&gt;Get ready to code till you drop! 🌙💻&lt;&#x2F;p&gt;
 </content>
         
     </entry>
@@ -739,9 +749,8 @@ Similarly, Search Engines internally run some algorithm, and find desired web pa
 &lt;p&gt;So when I say &quot;Internet before Search Engines&quot;, does that look similar to finding &lt;code&gt;target&lt;&#x2F;code&gt; from an array &lt;code&gt;nums[]&lt;&#x2F;code&gt; without any technique?
 EXACTLY!&lt;&#x2F;p&gt;
 &lt;p&gt;In order to find data from an array without any technique, we have to do it manually using our human eyes. This was a similar situation with the internet.&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;Internet = [Website1, Website2, Website3, ... millions more]
-&lt;&#x2F;span&gt;&lt;span&gt;Target = &amp;quot;some information&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Internet = [Website1, Website2, Website3, ... millions more]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Target = &amp;quot;some information&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;and you had no idea which site has it, where that site is and even if that site exists or not. Seems quite tough right? Yes it was.&lt;&#x2F;p&gt;
 &lt;p&gt;Then what did people do?
 They did it manually.
@@ -754,19 +763,17 @@ and that&#x27;s worse than O(n)&lt;&#x2F;p&gt;
 &lt;p&gt;Before modern search engines like Google existed, the internet relied on web directories to help users find information. These directories were not powered by algorithms or AI, but by humans manually organizing websites into categories.
 Think of web directories as the table of contents of the early internet.&lt;&#x2F;p&gt;
 &lt;p&gt;Instead of typing a query and getting ranked results, users navigated like this:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;Computers
-&lt;&#x2F;span&gt;&lt;span&gt; └── Programming
-&lt;&#x2F;span&gt;&lt;span&gt;     └── Languages
-&lt;&#x2F;span&gt;&lt;span&gt;         └── C++
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Computers&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt; └── Programming&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;     └── Languages&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         └── C++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Each category contained links to websites that humans believed belonged there.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;conclusion-life-before-search-engines&quot;&gt;Conclusion: Life Before Search Engines&lt;&#x2F;h3&gt;
 &lt;p&gt;The internet before search engines was not broken — it was simply unorganized. Information existed, but discovering it required patience, memory, and human effort. Users didn’t search the web; they navigated it.&lt;&#x2F;p&gt;
 &lt;p&gt;Finding information felt like exploring an unknown space: browsing directories, following hyperlinks, relying on recommendations, and carefully bookmarking useful pages. This process resembled manually scanning an unindexed dataset — effective at small scale, but increasingly inefficient as the web grew.
 Understanding the internet before search engines reminds us that today’s instant access is not accidental. It is the result of decades of evolution, driven by the same core computer science principle:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#212733;color:#ccc9c2;&quot;&gt;&lt;code&gt;&lt;span&gt;At scale, organization must be algorithmic.
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;At scale, organization must be algorithmic.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;And that single shift reshaped the internet forever.&lt;&#x2F;p&gt;
 </content>
         
@@ -853,32 +860,28 @@ Understanding the internet before search engines reminds us that today’s insta
   &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 &lt;h3 id=&quot;managing-printers&quot;&gt;Managing Printers&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Add a driverless printer (IPP Everywhere)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; lpadmin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span&gt; OfficePrinter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -E -v&lt;&#x2F;span&gt;&lt;span&gt; ipp:&#x2F;&#x2F;printer.local&#x2F;ipp&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -m&lt;&#x2F;span&gt;&lt;span&gt; everywhere
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Set as default
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; lpoptions&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -d&lt;&#x2F;span&gt;&lt;span&gt; OfficePrinter
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Check status of all printers
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;lpstat&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -p -d
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;job-management&quot;&gt;Job Management&lt;&#x2F;h3&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Print a PDF file
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;lp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -d&lt;&#x2F;span&gt;&lt;span&gt; OfficePrinter document.pdf
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Cancel a specific job
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;cancel &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;job-id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29e74;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5c6773;&quot;&gt;# Nuke the queue (cancel all jobs)
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;cancel&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -a&lt;&#x2F;span&gt;&lt;span&gt; OfficePrinter
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Add a driverless printer (IPP Everywhere)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; lpadmin&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -E -v&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; ipp:&#x2F;&#x2F;printer.local&#x2F;ipp&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -m&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; everywhere&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Set as default&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; lpoptions&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -d&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Check status of all printers&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;lpstat&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -p -d&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;job-management&quot;&gt;Job Management&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Print a PDF file&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;lp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -d&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter document.pdf&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Cancel a specific job&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;cancel&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F29668;&quot;&gt; &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt;job-i&lt;&#x2F;span&gt;&lt;span&gt;d&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F29668;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Nuke the queue (cancel all jobs)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;cancel&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -a&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;hr &#x2F;&gt;
 &lt;h2 id=&quot;troubleshooting-guide&quot;&gt;Troubleshooting Guide&lt;&#x2F;h2&gt;
 &lt;p&gt;When printing fails, it usually fails silently. Here is how to make it talk.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;1-the-printer-is-not-discovered&quot;&gt;1. The Printer is Not Discovered&lt;&#x2F;h3&gt;
 &lt;p&gt;&lt;strong&gt;Check mDNS:&lt;&#x2F;strong&gt; Driverless printing relies on Bonjour&#x2F;Avahi.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;avahi-browse&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -a
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;avahi-browse&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -a&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;&lt;strong&gt;Firewall:&lt;&#x2F;strong&gt; Ensure TCP port 631 (IPP) and UDP port 5353 (mDNS) are open.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;2-filter-failed-errors&quot;&gt;2. &quot;Filter Failed&quot; Errors&lt;&#x2F;h3&gt;
 &lt;p&gt;This usually means CUPS couldn&#x27;t convert the file.&lt;&#x2F;p&gt;
@@ -888,9 +891,7 @@ Understanding the internet before search engines reminds us that today’s insta
 &lt;li&gt;Restart CUPS: &lt;code&gt;sudo systemctl restart cups&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
 &lt;li&gt;Watch the logs live:&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#212733;color:#ccc9c2;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffd580;&quot;&gt;journalctl&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -u&lt;&#x2F;span&gt;&lt;span&gt; cups&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffcc66;&quot;&gt; -f
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h3 id=&quot;3-legacy-usb-issues&quot;&gt;3. Legacy USB Issues&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;journalctl&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -u&lt;&#x2F;span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; cups&lt;&#x2F;span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -f&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;3-legacy-usb-issues&quot;&gt;3. Legacy USB Issues&lt;&#x2F;h3&gt;
 &lt;div role=&quot;alert&quot; class=&quot;alert alert-warning alert- soft&quot;&gt;
   &lt;div&gt;&lt;p&gt;Warning: Legacy USB printers often require specific permissions. Check lsusb to see if the kernel detects the device, and ensure your user is in the lp group.&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
@@ -900,7 +901,7 @@ Understanding the internet before search engines reminds us that today’s insta
 &lt;p&gt;OpenPrinting is a community-driven project. We need help from developers (C&#x2F;C++), documentation writers, and testers.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;where-to-start&quot;&gt;Where to start?&lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;GitHub Organization:&lt;&#x2F;strong&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;OpenPrinting&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;OpenPrinting&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Organization:&lt;&#x2F;strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;OpenPrinting&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;OpenPrinting&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Key Repos:&lt;&#x2F;strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;cups&lt;&#x2F;code&gt;: The core printing system.&lt;&#x2F;li&gt;
@@ -980,7 +981,7 @@ Understanding the internet before search engines reminds us that today’s insta
         <id>https://cc-club.in/events/2026/weekend-of-code/</id>
         
         <content type="html" xml:base="https://cc-club.in/events/2026/weekend-of-code/">&lt;h2 id=&quot;photo-gallery-camera-flash&quot;&gt;Photo Gallery 📸&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;photos.app.goo.gl&#x2F;pxgmKzMtwYFZZby66&quot;&gt;Event Gallery: Part 1&lt;&#x2F;a&gt; | &lt;a href=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;drive&#x2F;folders&#x2F;1jltFt3uJF-fZKXFYKA_-kJO1fVA9jh5d&quot;&gt;Event Gallery: Part 2&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;photos.app.goo.gl&#x2F;pxgmKzMtwYFZZby66&quot;&gt;Event Gallery: Part 1&lt;&#x2F;a&gt; | &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;drive.google.com&#x2F;drive&#x2F;folders&#x2F;1jltFt3uJF-fZKXFYKA_-kJO1fVA9jh5d&quot;&gt;Event Gallery: Part 2&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;about-weekend-of-code-2026&quot;&gt;About Weekend of Code 2026&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;strong&gt;Weekend of Code&lt;&#x2F;strong&gt; is the annual internal hackathon of MNNIT Allahabad, designed to kickstart the coding journey for freshers and provide a platform for seniors to showcase their development skills.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h3&gt;
@@ -1248,7 +1249,7 @@ Understanding the internet before search engines reminds us that today’s insta
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;ContriHUB-24&lt;&#x2F;strong&gt; – Core repository for ContriHUB 2024 edition&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;🔗 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;ContriHUB&#x2F;repositories&quot;&gt;Explore all repositories&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;🔗 &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;ContriHUB&#x2F;repositories&quot;&gt;Explore all repositories&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;✨ Grab your tickets, join the parade of contributors, and let your code shine on the open-source carnival stage!&lt;&#x2F;p&gt;
 </content>

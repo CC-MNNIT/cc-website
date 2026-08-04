@@ -579,15 +579,13 @@
 <li><strong>Token balances</strong>: Accounts</li>
 <li><strong>NFT metadata</strong>: Accounts</li>
 </ul>
-<pre data-lang="rust" style="background-color:#212733;color:#ccc9c2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#5c6773;">// A simplified view of how accounts work
-</span><span style="color:#ffa759;">pub struct </span><span style="color:#73d0ff;">Account </span><span>{
-</span><span>    </span><span style="color:#ffa759;">pub </span><span>lamports</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffa759;">u64</span><span>,        </span><span style="font-style:italic;color:#5c6773;">// Balance in lamports (1 SOL = 1,000,000,000 lamports)
-</span><span>    </span><span style="color:#ffa759;">pub </span><span>data</span><span style="color:#ccc9c2cc;">: </span><span style="font-style:italic;color:#5ccfe6;">Vec</span><span>&lt;</span><span style="color:#ffa759;">u8</span><span>&gt;,        </span><span style="font-style:italic;color:#5c6773;">// Raw data stored in the account
-</span><span>    </span><span style="color:#ffa759;">pub </span><span>owner</span><span style="color:#ccc9c2cc;">:</span><span> Pubkey,        </span><span style="font-style:italic;color:#5c6773;">// Program that owns this account
-</span><span>    </span><span style="color:#ffa759;">pub </span><span>executable</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffa759;">bool</span><span>,     </span><span style="font-style:italic;color:#5c6773;">// Whether this account is a program
-</span><span>}
-</span></code></pre>
-<div role="alert" class="alert alert-info alert- soft">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="rust"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// A simplified view of how accounts work</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">pub struct</span><span style="color: #59C2FF;"> Account</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    pub</span><span> lamports</span><span style="color: #F29668;">:</span><span style="color: #59C2FF;"> u64</span><span>,</span><span style="color: #5A6673;font-style: italic;">        // Balance in lamports (1 SOL = 1,000,000,000 lamports)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    pub</span><span> data</span><span style="color: #F29668;">:</span><span style="color: #59C2FF;"> Vec</span><span>&lt;</span><span style="color: #59C2FF;">u8</span><span>&gt;,</span><span style="color: #5A6673;font-style: italic;">        // Raw data stored in the account</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    pub</span><span> owner</span><span style="color: #F29668;">:</span><span style="color: #59C2FF;"> Pubkey</span><span>,</span><span style="color: #5A6673;font-style: italic;">        // Program that owns this account</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    pub</span><span> executable</span><span style="color: #F29668;">:</span><span style="color: #59C2FF;"> bool</span><span>,</span><span style="color: #5A6673;font-style: italic;">     // Whether this account is a program</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><div role="alert" class="alert alert-info alert- soft">
   <div><p><strong>Think of it like this:</strong> If traditional databases have tables and rows, Solana has accounts and data. Every piece of information lives in an account!</p>
 </div>
 </div>
@@ -621,26 +619,20 @@
 </div>
 </div>
 <p><strong>For macOS/Linux:</strong></p>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">sh</span><span style="color:#ffcc66;"> -c </span><span style="color:#bae67e;">&quot;$</span><span>(</span><span style="color:#ffd580;">curl</span><span style="color:#ffcc66;"> -sSfL</span><span style="color:#bae67e;"> https://release.solana.com/stable/install</span><span>)</span><span style="color:#bae67e;">&quot;
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">sh</span><span style="color: #95E6CB;"> -c</span><span style="color: #AAD94C;"> &quot;$(</span><span style="color: #59C2FF;">curl</span><span style="color: #95E6CB;"> -sSfL</span><span style="color: #AAD94C;"> https://release.solana.com/stable/install)&quot;</span></span></code></pre>
 <p><strong>For Windows:</strong></p>
 <p>Solana CLI works best on Windows through <strong>WSL (Windows Subsystem for Linux)</strong>. Open a WSL terminal and run the same Linux command:</p>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="font-style:italic;color:#5c6773;"># Inside WSL (Ubuntu recommended)
-</span><span style="color:#ffd580;">sh</span><span style="color:#ffcc66;"> -c </span><span style="color:#bae67e;">&quot;$</span><span>(</span><span style="color:#ffd580;">curl</span><span style="color:#ffcc66;"> -sSfL</span><span style="color:#bae67e;"> https://release.solana.com/stable/install</span><span>)</span><span style="color:#bae67e;">&quot;
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Inside WSL (Ubuntu recommended)</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">sh</span><span style="color: #95E6CB;"> -c</span><span style="color: #AAD94C;"> &quot;$(</span><span style="color: #59C2FF;">curl</span><span style="color: #95E6CB;"> -sSfL</span><span style="color: #AAD94C;"> https://release.solana.com/stable/install)&quot;</span></span></code></pre>
 <p>After installation, <strong>restart your terminal</strong> (or run <code>source ~/.profile</code>) so the <code>solana</code> command is available on your PATH.</p>
 <p><strong>Verify your installation:</strong></p>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">solana</span><span style="color:#ffcc66;"> --version
-</span></code></pre>
-<h3 id="step-2-configure-your-solana-cli">Step 2: Configure Your Solana CLI</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">solana</span><span style="color: #95E6CB;"> --version</span></span></code></pre><h3 id="step-2-configure-your-solana-cli">Step 2: Configure Your Solana CLI</h3>
 <p>Set up your CLI to work with different Solana clusters:</p>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="font-style:italic;color:#5c6773;"># Connect to devnet (perfect for testing)
-</span><span style="color:#ffd580;">solana</span><span> config set</span><span style="color:#ffcc66;"> --url</span><span> https://api.devnet.solana.com
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Check your current configuration
-</span><span style="color:#ffd580;">solana</span><span> config get
-</span></code></pre>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Connect to devnet (perfect for testing)</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">solana</span><span style="color: #AAD94C;"> config set</span><span style="color: #95E6CB;"> --url</span><span style="color: #AAD94C;"> https://api.devnet.solana.com</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Check your current configuration</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">solana</span><span style="color: #AAD94C;"> config get</span></span></code></pre><div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
   <div class="collapse-title font-semibold">
     What are Solana clusters?
   </div>
@@ -655,35 +647,29 @@
   </div>
 </div>
 <h3 id="step-3-create-your-first-wallet">Step 3: Create Your First Wallet</h3>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="font-style:italic;color:#5c6773;"># Generate a new keypair
-</span><span style="color:#ffd580;">solana-keygen</span><span> new</span><span style="color:#ffcc66;"> --outfile </span><span style="font-style:italic;color:#5ccfe6;">~</span><span>/my-solana-wallet.json
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Set this as your default wallet
-</span><span style="color:#ffd580;">solana</span><span> config set</span><span style="color:#ffcc66;"> --keypair </span><span style="font-style:italic;color:#5ccfe6;">~</span><span>/my-solana-wallet.json
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Check your wallet address
-</span><span style="color:#ffd580;">solana</span><span> address
-</span></code></pre>
-<div role="alert" class="alert alert-info alert- soft">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Generate a new keypair</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">solana-keygen</span><span style="color: #AAD94C;"> new</span><span style="color: #95E6CB;"> --outfile</span><span style="color: #AAD94C;"> ~/my-solana-wallet.json</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Set this as your default wallet</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">solana</span><span style="color: #AAD94C;"> config set</span><span style="color: #95E6CB;"> --keypair</span><span style="color: #AAD94C;"> ~/my-solana-wallet.json</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Check your wallet address</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">solana</span><span style="color: #AAD94C;"> address</span></span></code></pre><div role="alert" class="alert alert-info alert- soft">
   <div><p><strong>Security Note:</strong> Your keypair file contains your private key. Keep it safe and never share it!</p>
 </div>
 </div><h3 id="step-4-get-some-devnet-sol">Step 4: Get Some Devnet SOL</h3>
 <p>You'll need SOL to pay for transactions (even tiny amounts). Get free devnet SOL:</p>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="font-style:italic;color:#5c6773;"># Airdrop 2 SOL to your wallet on devnet
-</span><span style="color:#ffd580;">solana</span><span> airdrop 2
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># Check your balance
-</span><span style="color:#ffd580;">solana</span><span> balance
-</span></code></pre>
-<h3 id="step-5-set-up-local-development-environment">Step 5: Set Up Local Development Environment</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Airdrop 2 SOL to your wallet on devnet</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">solana</span><span style="color: #AAD94C;"> airdrop</span><span style="color: #D2A6FF;"> 2</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Check your balance</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">solana</span><span style="color: #AAD94C;"> balance</span></span></code></pre><h3 id="step-5-set-up-local-development-environment">Step 5: Set Up Local Development Environment</h3>
 <p>For faster development, you can run a local Solana validator:</p>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="font-style:italic;color:#5c6773;"># Start a local test validator (in a separate terminal)
-</span><span style="color:#ffd580;">solana-test-validator
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;"># In another terminal, configure CLI to use localhost
-</span><span style="color:#ffd580;">solana</span><span> config set</span><span style="color:#ffcc66;"> --url</span><span> localhost
-</span></code></pre>
-<div role="alert" class="alert alert-success alert- soft">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Start a local test validator (in a separate terminal)</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">solana-test-validator</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># In another terminal, configure CLI to use localhost</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">solana</span><span style="color: #AAD94C;"> config set</span><span style="color: #95E6CB;"> --url</span><span style="color: #AAD94C;"> localhost</span></span></code></pre><div role="alert" class="alert alert-success alert- soft">
   <div><p><strong>Pro Tip:</strong> Local validator resets every time you restart it, giving you a clean testing environment!</p>
 </div>
 </div><h2 id="let-s-build-something-fun-your-first-token">Let's Build Something Fun: Your First Token!</h2>
@@ -696,14 +682,11 @@
 </ol>
 <h3 id="project-setup">Project Setup</h3>
 <p>Create a new project directory:</p>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">mkdir</span><span> my-first-solana-token
-</span><span style="color:#f28779;">cd</span><span> my-first-solana-token
-</span><span style="color:#ffd580;">npm</span><span> init</span><span style="color:#ffcc66;"> -y
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">mkdir</span><span style="color: #AAD94C;"> my-first-solana-token</span></span>
+<span class="giallo-l"><span style="color: #F07178;">cd</span><span style="color: #AAD94C;"> my-first-solana-token</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">npm</span><span style="color: #AAD94C;"> init</span><span style="color: #95E6CB;"> -y</span></span></code></pre>
 <p>Install the required dependencies:</p>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">npm</span><span> install @solana/web3.js @solana/spl-token
-</span></code></pre>
-<h3 id="understanding-the-code-structure">Understanding the Code Structure</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">npm</span><span style="color: #AAD94C;"> install @solana/web3.js @solana/spl-token</span></span></code></pre><h3 id="understanding-the-code-structure">Understanding the Code Structure</h3>
 <p>Before we start coding, let's understand what each library does:</p>
 <ul>
 <li><strong>@solana/web3.js</strong>: Core Solana functionality (connections, keypairs, transactions)</li>
@@ -711,195 +694,186 @@
 </ul>
 <h3 id="creating-your-token">Creating Your Token</h3>
 <p>Create a file called <code>create-token.js</code>:</p>
-<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">const </span><span>{
-</span><span>    Connection</span><span style="color:#ccc9c2cc;">,
-</span><span>    Keypair</span><span style="color:#ccc9c2cc;">,
-</span><span>    clusterApiUrl</span><span style="color:#ccc9c2cc;">,
-</span><span>} </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">require</span><span>(</span><span style="color:#bae67e;">&#39;@solana/web3.js&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>
-</span><span style="color:#ffa759;">const </span><span>{
-</span><span>    createMint</span><span style="color:#ccc9c2cc;">,
-</span><span>    getOrCreateAssociatedTokenAccount</span><span style="color:#ccc9c2cc;">,
-</span><span>    mintTo</span><span style="color:#ccc9c2cc;">,
-</span><span>    transfer</span><span style="color:#ccc9c2cc;">,
-</span><span>} </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">require</span><span>(</span><span style="color:#bae67e;">&#39;@solana/spl-token&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>
-</span><span style="color:#ffa759;">const </span><span>os </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">require</span><span>(</span><span style="color:#bae67e;">&#39;os&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span style="color:#ffa759;">const </span><span>path </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">require</span><span>(</span><span style="color:#bae67e;">&#39;path&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span style="color:#ffa759;">const </span><span>fs </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">require</span><span>(</span><span style="color:#bae67e;">&#39;fs&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>
-</span><span style="color:#ffa759;">async function </span><span style="color:#ffd580;">main</span><span>() {
-</span><span>    </span><span style="font-style:italic;color:#5c6773;">// Connect to Solana devnet
-</span><span>    </span><span style="color:#ffa759;">const </span><span>connection </span><span style="color:#f29e74;">= new </span><span style="color:#73d0ff;">Connection</span><span>(</span><span style="color:#ffd580;">clusterApiUrl</span><span>(</span><span style="color:#bae67e;">&#39;devnet&#39;</span><span>)</span><span style="color:#ccc9c2cc;">, </span><span style="color:#bae67e;">&#39;confirmed&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;">// Load your wallet (the one we created in Step 3)
-</span><span>    </span><span style="color:#ffa759;">const </span><span>walletPath </span><span style="color:#f29e74;">= </span><span>path</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">join</span><span>(os</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">homedir</span><span>()</span><span style="color:#ccc9c2cc;">, </span><span style="color:#bae67e;">&#39;my-solana-wallet.json&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>    </span><span style="color:#ffa759;">const </span><span>secretKey </span><span style="color:#f29e74;">= </span><span style="font-style:italic;color:#f29e74;">JSON</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">parse</span><span>(fs</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">readFileSync</span><span>(walletPath</span><span style="color:#ccc9c2cc;">, </span><span style="color:#bae67e;">&#39;utf8&#39;</span><span>))</span><span style="color:#ccc9c2cc;">;
-</span><span>    </span><span style="color:#ffa759;">const </span><span>payer </span><span style="color:#f29e74;">= </span><span>Keypair</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">fromSecretKey</span><span>(</span><span style="color:#f29e74;">new </span><span style="color:#73d0ff;">Uint8Array</span><span>(secretKey))</span><span style="color:#ccc9c2cc;">;
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>(</span><span style="color:#bae67e;">&#39;🚀 Creating a new token...&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;">// Create a new token mint
-</span><span>    </span><span style="color:#ffa759;">const </span><span>mint </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">await </span><span style="color:#ffd580;">createMint</span><span>(
-</span><span>        connection</span><span style="color:#ccc9c2cc;">,
-</span><span>        payer</span><span style="color:#ccc9c2cc;">,           </span><span style="font-style:italic;color:#5c6773;">// Account that will pay for the transaction
-</span><span>        payer</span><span style="color:#f29e74;">.</span><span>publicKey</span><span style="color:#ccc9c2cc;">, </span><span style="font-style:italic;color:#5c6773;">// Account that will control the minting
-</span><span>        </span><span style="color:#ffcc66;">null</span><span style="color:#ccc9c2cc;">,            </span><span style="font-style:italic;color:#5c6773;">// Account that will control the freezing of the token (optional)
-</span><span>        </span><span style="color:#ffcc66;">9                </span><span style="font-style:italic;color:#5c6773;">// Number of decimal places
-</span><span>    )</span><span style="color:#ccc9c2cc;">;
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>(</span><span style="color:#bae67e;">&#39;✅ Token mint created:&#39;</span><span style="color:#ccc9c2cc;">, </span><span>mint</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">toBase58</span><span>())</span><span style="color:#ccc9c2cc;">;
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;">// Create a token account for your wallet
-</span><span>    </span><span style="color:#ffa759;">const </span><span>tokenAccount </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">await </span><span style="color:#ffd580;">getOrCreateAssociatedTokenAccount</span><span>(
-</span><span>        connection</span><span style="color:#ccc9c2cc;">,
-</span><span>        payer</span><span style="color:#ccc9c2cc;">,
-</span><span>        mint</span><span style="color:#ccc9c2cc;">,
-</span><span>        payer</span><span style="color:#f29e74;">.</span><span>publicKey
-</span><span>    )</span><span style="color:#ccc9c2cc;">;
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>(</span><span style="color:#bae67e;">&#39;✅ Token account created:&#39;</span><span style="color:#ccc9c2cc;">, </span><span>tokenAccount</span><span style="color:#f29e74;">.</span><span>address</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">toBase58</span><span>())</span><span style="color:#ccc9c2cc;">;
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;">// Mint 1000 tokens to your account
-</span><span>    </span><span style="color:#ffa759;">await </span><span style="color:#ffd580;">mintTo</span><span>(
-</span><span>        connection</span><span style="color:#ccc9c2cc;">,
-</span><span>        payer</span><span style="color:#ccc9c2cc;">,
-</span><span>        mint</span><span style="color:#ccc9c2cc;">,
-</span><span>        tokenAccount</span><span style="color:#f29e74;">.</span><span>address</span><span style="color:#ccc9c2cc;">,
-</span><span>        payer</span><span style="color:#f29e74;">.</span><span>publicKey</span><span style="color:#ccc9c2cc;">,
-</span><span>        </span><span style="color:#ffcc66;">1000 </span><span style="color:#f29e74;">* </span><span style="font-style:italic;color:#f29e74;">Math</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">pow</span><span>(</span><span style="color:#ffcc66;">10</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">9</span><span>) </span><span style="font-style:italic;color:#5c6773;">// 1000 tokens with 9 decimal places
-</span><span>    )</span><span style="color:#ccc9c2cc;">;
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>(</span><span style="color:#bae67e;">&#39;🎉 Minted 1000 tokens to your account!&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>}
-</span><span>
-</span><span style="color:#ffd580;">main</span><span>()</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">catch</span><span>(</span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">error</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span></code></pre>
-<div role="alert" class="alert alert-info alert- soft">
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="javascript"><span class="giallo-l"><span style="color: #FF8F40;">const</span><span> {</span></span>
+<span class="giallo-l"><span>    Connection</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    Keypair</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    clusterApiUrl</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>}</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> require</span><span>(</span><span style="color: #AAD94C;">&#39;@solana/web3.js&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">const</span><span> {</span></span>
+<span class="giallo-l"><span>    createMint</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    getOrCreateAssociatedTokenAccount</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    mintTo</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    transfer</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>}</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> require</span><span>(</span><span style="color: #AAD94C;">&#39;@solana/spl-token&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">const</span><span> os</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> require</span><span>(</span><span style="color: #AAD94C;">&#39;os&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">const</span><span> path</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> require</span><span>(</span><span style="color: #AAD94C;">&#39;path&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">const</span><span> fs</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> require</span><span>(</span><span style="color: #AAD94C;">&#39;fs&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">async function</span><span style="color: #FFB454;"> main</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // Connect to Solana devnet</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    const</span><span> connection</span><span style="color: #F29668;"> = new</span><span style="color: #FFB454;"> Connection</span><span>(</span><span style="color: #FFB454;">clusterApiUrl</span><span>(</span><span style="color: #AAD94C;">&#39;devnet&#39;</span><span>)</span><span style="color: #BFBDB6B3;">,</span><span style="color: #AAD94C;"> &#39;confirmed&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // Load your wallet (the one we created in Step 3)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    const</span><span> walletPath</span><span style="color: #F29668;"> =</span><span> path</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">join</span><span>(os</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">homedir</span><span>()</span><span style="color: #BFBDB6B3;">,</span><span style="color: #AAD94C;"> &#39;my-solana-wallet.json&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    const</span><span> secretKey</span><span style="color: #F29668;"> =</span><span> JSON</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">parse</span><span>(fs</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">readFileSync</span><span>(walletPath</span><span style="color: #BFBDB6B3;">,</span><span style="color: #AAD94C;"> &#39;utf8&#39;</span><span>))</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    const</span><span> payer</span><span style="color: #F29668;"> =</span><span> Keypair</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">fromSecretKey</span><span>(</span><span style="color: #F29668;">new</span><span style="color: #FFB454;"> Uint8Array</span><span>(secretKey))</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span>    console</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">log</span><span>(</span><span style="color: #AAD94C;">&#39;🚀 Creating a new token...&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // Create a new token mint</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    const</span><span> mint</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span style="color: #FFB454;"> createMint</span><span>(</span></span>
+<span class="giallo-l"><span>        connection</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        payer</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;">           // Account that will pay for the transaction</span></span>
+<span class="giallo-l"><span>        payer</span><span style="color: #F29668;">.</span><span>publicKey</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Account that will control the minting</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">        null</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;">            // Account that will control the freezing of the token (optional)</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">        9</span><span style="color: #5A6673;font-style: italic;">                // Number of decimal places</span></span>
+<span class="giallo-l"><span>    )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span>    console</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">log</span><span>(</span><span style="color: #AAD94C;">&#39;✅ Token mint created:&#39;</span><span style="color: #BFBDB6B3;">,</span><span> mint</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">toBase58</span><span>())</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // Create a token account for your wallet</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    const</span><span> tokenAccount</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span style="color: #FFB454;"> getOrCreateAssociatedTokenAccount</span><span>(</span></span>
+<span class="giallo-l"><span>        connection</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        payer</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        mint</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        payer</span><span style="color: #F29668;">.</span><span>publicKey</span></span>
+<span class="giallo-l"><span>    )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span>    console</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">log</span><span>(</span><span style="color: #AAD94C;">&#39;✅ Token account created:&#39;</span><span style="color: #BFBDB6B3;">,</span><span> tokenAccount</span><span style="color: #F29668;">.</span><span>address</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">toBase58</span><span>())</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // Mint 1000 tokens to your account</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    await</span><span style="color: #FFB454;"> mintTo</span><span>(</span></span>
+<span class="giallo-l"><span>        connection</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        payer</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        mint</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        tokenAccount</span><span style="color: #F29668;">.</span><span>address</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        payer</span><span style="color: #F29668;">.</span><span>publicKey</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">        1000</span><span style="color: #F29668;"> *</span><span> Math</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">pow</span><span>(</span><span style="color: #D2A6FF;">10</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 9</span><span>)</span><span style="color: #5A6673;font-style: italic;"> // 1000 tokens with 9 decimal places</span></span>
+<span class="giallo-l"><span>    )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span>    console</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">log</span><span>(</span><span style="color: #AAD94C;">&#39;🎉 Minted 1000 tokens to your account!&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FFB454;">main</span><span>()</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">catch</span><span>(console</span><span style="color: #F29668;">.</span><span>error)</span><span style="color: #BFBDB6B3;">;</span></span></code></pre><div role="alert" class="alert alert-info alert- soft">
   <div><p><strong>Note:</strong> The code above automatically reads the wallet file we created in Step 3 (<code>~/my-solana-wallet.json</code>). If you saved it elsewhere, update the <code>walletPath</code> variable.</p>
 </div>
 </div><h3 id="running-your-token-creation">Running Your Token Creation</h3>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">node</span><span> create-token.js
-</span></code></pre>
-<h3 id="adding-token-transfer-functionality">Adding Token Transfer Functionality</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">node</span><span style="color: #AAD94C;"> create-token.js</span></span></code></pre><h3 id="adding-token-transfer-functionality">Adding Token Transfer Functionality</h3>
 <p>Let's extend our script to transfer tokens between accounts. Add this function to your <code>create-token.js</code>:</p>
-<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffa759;">async function </span><span style="color:#ffd580;">transferTokens</span><span>(</span><span style="color:#ffcc66;">mint</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">fromWallet</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">toWallet</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">amount</span><span>) {
-</span><span>    </span><span style="color:#ffa759;">const </span><span>connection </span><span style="color:#f29e74;">= new </span><span style="color:#73d0ff;">Connection</span><span>(</span><span style="color:#ffd580;">clusterApiUrl</span><span>(</span><span style="color:#bae67e;">&#39;devnet&#39;</span><span>)</span><span style="color:#ccc9c2cc;">, </span><span style="color:#bae67e;">&#39;confirmed&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;">// Get or create token accounts for both wallets
-</span><span>    </span><span style="color:#ffa759;">const </span><span>fromTokenAccount </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">await </span><span style="color:#ffd580;">getOrCreateAssociatedTokenAccount</span><span>(
-</span><span>        connection</span><span style="color:#ccc9c2cc;">,
-</span><span>        fromWallet</span><span style="color:#ccc9c2cc;">,
-</span><span>        mint</span><span style="color:#ccc9c2cc;">,
-</span><span>        fromWallet</span><span style="color:#f29e74;">.</span><span>publicKey
-</span><span>    )</span><span style="color:#ccc9c2cc;">;
-</span><span>    
-</span><span>    </span><span style="color:#ffa759;">const </span><span>toTokenAccount </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">await </span><span style="color:#ffd580;">getOrCreateAssociatedTokenAccount</span><span>(
-</span><span>        connection</span><span style="color:#ccc9c2cc;">,
-</span><span>        fromWallet</span><span style="color:#ccc9c2cc;">, </span><span style="font-style:italic;color:#5c6773;">// Payer for account creation
-</span><span>        mint</span><span style="color:#ccc9c2cc;">,
-</span><span>        toWallet</span><span style="color:#f29e74;">.</span><span>publicKey
-</span><span>    )</span><span style="color:#ccc9c2cc;">;
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5c6773;">// Transfer tokens
-</span><span>    </span><span style="color:#ffa759;">const </span><span>signature </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">await </span><span style="color:#ffd580;">transfer</span><span>(
-</span><span>        connection</span><span style="color:#ccc9c2cc;">,
-</span><span>        fromWallet</span><span style="color:#ccc9c2cc;">,
-</span><span>        fromTokenAccount</span><span style="color:#f29e74;">.</span><span>address</span><span style="color:#ccc9c2cc;">,
-</span><span>        toTokenAccount</span><span style="color:#f29e74;">.</span><span>address</span><span style="color:#ccc9c2cc;">,
-</span><span>        fromWallet</span><span style="color:#f29e74;">.</span><span>publicKey</span><span style="color:#ccc9c2cc;">,
-</span><span>        amount </span><span style="color:#f29e74;">* </span><span style="font-style:italic;color:#f29e74;">Math</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">pow</span><span>(</span><span style="color:#ffcc66;">10</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">9</span><span>) </span><span style="font-style:italic;color:#5c6773;">// Convert to smallest unit
-</span><span>    )</span><span style="color:#ccc9c2cc;">;
-</span><span>    
-</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">console</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">log</span><span>(</span><span style="color:#bae67e;">&#39;🎯 Transfer signature:&#39;</span><span style="color:#ccc9c2cc;">, </span><span>signature)</span><span style="color:#ccc9c2cc;">;
-</span><span>}
-</span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="javascript"><span class="giallo-l"><span style="color: #FF8F40;">async function</span><span style="color: #FFB454;"> transferTokens</span><span>(</span><span style="color: #D2A6FF;">mint</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> fromWallet</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> toWallet</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> amount</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    const</span><span> connection</span><span style="color: #F29668;"> = new</span><span style="color: #FFB454;"> Connection</span><span>(</span><span style="color: #FFB454;">clusterApiUrl</span><span>(</span><span style="color: #AAD94C;">&#39;devnet&#39;</span><span>)</span><span style="color: #BFBDB6B3;">,</span><span style="color: #AAD94C;"> &#39;confirmed&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // Get or create token accounts for both wallets</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    const</span><span> fromTokenAccount</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span style="color: #FFB454;"> getOrCreateAssociatedTokenAccount</span><span>(</span></span>
+<span class="giallo-l"><span>        connection</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        fromWallet</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        mint</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        fromWallet</span><span style="color: #F29668;">.</span><span>publicKey</span></span>
+<span class="giallo-l"><span>    )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    const</span><span> toTokenAccount</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span style="color: #FFB454;"> getOrCreateAssociatedTokenAccount</span><span>(</span></span>
+<span class="giallo-l"><span>        connection</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        fromWallet</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Payer for account creation</span></span>
+<span class="giallo-l"><span>        mint</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        toWallet</span><span style="color: #F29668;">.</span><span>publicKey</span></span>
+<span class="giallo-l"><span>    )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // Transfer tokens</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    const</span><span> signature</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span style="color: #FFB454;"> transfer</span><span>(</span></span>
+<span class="giallo-l"><span>        connection</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        fromWallet</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        fromTokenAccount</span><span style="color: #F29668;">.</span><span>address</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        toTokenAccount</span><span style="color: #F29668;">.</span><span>address</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        fromWallet</span><span style="color: #F29668;">.</span><span>publicKey</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        amount</span><span style="color: #F29668;"> *</span><span> Math</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">pow</span><span>(</span><span style="color: #D2A6FF;">10</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 9</span><span>)</span><span style="color: #5A6673;font-style: italic;"> // Convert to smallest unit</span></span>
+<span class="giallo-l"><span>    )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span>    console</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">log</span><span>(</span><span style="color: #AAD94C;">&#39;🎯 Transfer signature:&#39;</span><span style="color: #BFBDB6B3;">,</span><span> signature)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
 <p>To use this function, you'd call it after minting. For example, to send 50 tokens to another wallet:</p>
-<pre data-lang="javascript" style="background-color:#212733;color:#ccc9c2;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="font-style:italic;color:#5c6773;">// Generate a second wallet for testing
-</span><span style="color:#ffa759;">const </span><span>recipient </span><span style="color:#f29e74;">= </span><span>Keypair</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">generate</span><span>()</span><span style="color:#ccc9c2cc;">;
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;">// Fund the recipient so they can hold a token account
-</span><span style="color:#ffa759;">await </span><span>connection</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">requestAirdrop</span><span>(recipient</span><span style="color:#f29e74;">.</span><span>publicKey</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">1000000000</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>
-</span><span style="font-style:italic;color:#5c6773;">// Transfer 50 tokens
-</span><span style="color:#ffa759;">await </span><span style="color:#ffd580;">transferTokens</span><span>(mint</span><span style="color:#ccc9c2cc;">, </span><span>payer</span><span style="color:#ccc9c2cc;">, </span><span>recipient</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">50</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span></code></pre>
-<h3 id="creating-a-simple-web-interface">Creating a Simple Web Interface</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="javascript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Generate a second wallet for testing</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">const</span><span> recipient</span><span style="color: #F29668;"> =</span><span> Keypair</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">generate</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Fund the recipient so they can hold a token account</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">await</span><span> connection</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">requestAirdrop</span><span>(recipient</span><span style="color: #F29668;">.</span><span>publicKey</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 1000000000</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Transfer 50 tokens</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">await</span><span style="color: #FFB454;"> transferTokens</span><span>(mint</span><span style="color: #BFBDB6B3;">,</span><span> payer</span><span style="color: #BFBDB6B3;">,</span><span> recipient</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 50</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span></code></pre><h3 id="creating-a-simple-web-interface">Creating a Simple Web Interface</h3>
 <p>Let's create a basic HTML interface to interact with our token. Create <code>index.html</code>:</p>
-<pre data-lang="html" style="background-color:#212733;color:#ccc9c2;" class="language-html "><code class="language-html" data-lang="html"><span style="color:#5ccfe690;">&lt;!</span><span style="color:#ffa759;">DOCTYPE </span><span style="color:#ffcc66;">html</span><span style="color:#5ccfe690;">&gt;
-</span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">html</span><span style="color:#5ccfe690;">&gt;
-</span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">head</span><span style="color:#5ccfe690;">&gt;
-</span><span>    </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">title</span><span style="color:#5ccfe690;">&gt;</span><span>My Solana Token</span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">title</span><span style="color:#5ccfe690;">&gt;
-</span><span>    </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">script </span><span style="color:#ffd580;">src</span><span style="color:#ccc9c2cc;">=</span><span style="color:#bae67e;">&quot;https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js&quot;</span><span style="color:#5ccfe690;">&gt;&lt;/</span><span style="color:#73d0ff;">script</span><span style="color:#5ccfe690;">&gt;
-</span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">head</span><span style="color:#5ccfe690;">&gt;
-</span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">body</span><span style="color:#5ccfe690;">&gt;
-</span><span>    </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">div </span><span style="color:#ffd580;">style</span><span style="color:#ccc9c2cc;">=</span><span style="color:#bae67e;">&quot;</span><span style="color:#5ccfe6;">max-width</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffcc66;">600</span><span style="color:#ffa759;">px</span><span style="color:#ccc9c2cc;">; </span><span style="color:#5ccfe6;">margin</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffcc66;">50</span><span style="color:#ffa759;">px </span><span style="font-style:italic;color:#f29e74;">auto</span><span style="color:#ccc9c2cc;">; </span><span style="color:#5ccfe6;">padding</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffcc66;">20</span><span style="color:#ffa759;">px</span><span style="color:#ccc9c2cc;">;</span><span style="color:#bae67e;">&quot;</span><span style="color:#5ccfe690;">&gt;
-</span><span>        </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">h1</span><span style="color:#5ccfe690;">&gt;</span><span>🪙 My First Solana Token</span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">h1</span><span style="color:#5ccfe690;">&gt;
-</span><span>        
-</span><span>        </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">div </span><span style="color:#ffd580;">style</span><span style="color:#ccc9c2cc;">=</span><span style="color:#bae67e;">&quot;</span><span style="color:#5ccfe6;">margin</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffcc66;">20</span><span style="color:#ffa759;">px </span><span style="color:#ffcc66;">0</span><span style="color:#ccc9c2cc;">;</span><span style="color:#bae67e;">&quot;</span><span style="color:#5ccfe690;">&gt;
-</span><span>            </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">button </span><span style="color:#ffd580;">onclick</span><span style="color:#ccc9c2cc;">=</span><span style="color:#bae67e;">&quot;</span><span style="color:#ffd580;">connectWallet</span><span>()</span><span style="color:#bae67e;">&quot;</span><span style="color:#5ccfe690;">&gt;</span><span>Connect Wallet</span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">button</span><span style="color:#5ccfe690;">&gt;
-</span><span>            </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">div </span><span style="color:#ffd580;">id</span><span style="color:#ccc9c2cc;">=</span><span style="color:#bae67e;">&quot;walletInfo&quot;</span><span style="color:#5ccfe690;">&gt;&lt;/</span><span style="color:#73d0ff;">div</span><span style="color:#5ccfe690;">&gt;
-</span><span>        </span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">div</span><span style="color:#5ccfe690;">&gt;
-</span><span>        
-</span><span>        </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">div </span><span style="color:#ffd580;">style</span><span style="color:#ccc9c2cc;">=</span><span style="color:#bae67e;">&quot;</span><span style="color:#5ccfe6;">margin</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffcc66;">20</span><span style="color:#ffa759;">px </span><span style="color:#ffcc66;">0</span><span style="color:#ccc9c2cc;">;</span><span style="color:#bae67e;">&quot;</span><span style="color:#5ccfe690;">&gt;
-</span><span>            </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">h3</span><span style="color:#5ccfe690;">&gt;</span><span>Token Operations</span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">h3</span><span style="color:#5ccfe690;">&gt;
-</span><span>            </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">button </span><span style="color:#ffd580;">onclick</span><span style="color:#ccc9c2cc;">=</span><span style="color:#bae67e;">&quot;</span><span style="color:#ffd580;">checkBalance</span><span>()</span><span style="color:#bae67e;">&quot;</span><span style="color:#5ccfe690;">&gt;</span><span>Check SOL Balance</span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">button</span><span style="color:#5ccfe690;">&gt;
-</span><span>            </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">button </span><span style="color:#ffd580;">onclick</span><span style="color:#ccc9c2cc;">=</span><span style="color:#bae67e;">&quot;</span><span style="color:#ffd580;">requestAirdrop</span><span>()</span><span style="color:#bae67e;">&quot;</span><span style="color:#5ccfe690;">&gt;</span><span>Request SOL Airdrop</span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">button</span><span style="color:#5ccfe690;">&gt;
-</span><span>            </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">div </span><span style="color:#ffd580;">id</span><span style="color:#ccc9c2cc;">=</span><span style="color:#bae67e;">&quot;status&quot;</span><span style="color:#5ccfe690;">&gt;&lt;/</span><span style="color:#73d0ff;">div</span><span style="color:#5ccfe690;">&gt;
-</span><span>        </span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">div</span><span style="color:#5ccfe690;">&gt;
-</span><span>    </span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">div</span><span style="color:#5ccfe690;">&gt;
-</span><span>
-</span><span>    </span><span style="color:#5ccfe690;">&lt;</span><span style="color:#73d0ff;">script</span><span style="color:#5ccfe690;">&gt;
-</span><span>        </span><span style="color:#ffa759;">let </span><span>wallet </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">null</span><span style="color:#ccc9c2cc;">;
-</span><span>        </span><span style="color:#ffa759;">let </span><span>connection </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">new </span><span>solanaWeb3</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">Connection</span><span>(</span><span style="color:#bae67e;">&#39;https://api.devnet.solana.com&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>        
-</span><span>        </span><span style="color:#ffa759;">async function </span><span style="color:#ffd580;">connectWallet</span><span>() {
-</span><span>            </span><span style="color:#ffa759;">if </span><span>(</span><span style="font-style:italic;color:#5ccfe6;">window</span><span style="color:#f29e74;">.</span><span>solana) {
-</span><span>                wallet </span><span style="color:#f29e74;">= </span><span style="font-style:italic;color:#5ccfe6;">window</span><span style="color:#f29e74;">.</span><span>solana</span><span style="color:#ccc9c2cc;">;
-</span><span>                </span><span style="color:#ffa759;">await </span><span>wallet</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">connect</span><span>()</span><span style="color:#ccc9c2cc;">;
-</span><span>                </span><span style="font-style:italic;color:#5ccfe6;">document</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">getElementById</span><span>(</span><span style="color:#bae67e;">&#39;walletInfo&#39;</span><span>)</span><span style="color:#f29e74;">.</span><span>innerHTML </span><span style="color:#f29e74;">= 
-</span><span>                    </span><span style="color:#bae67e;">`Connected: </span><span>${wallet</span><span style="color:#f29e74;">.</span><span>publicKey</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">toString</span><span>()</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">slice</span><span>(</span><span style="color:#ffcc66;">0</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">8</span><span>)}</span><span style="color:#bae67e;">...`</span><span style="color:#ccc9c2cc;">;
-</span><span>            } </span><span style="color:#ffa759;">else </span><span>{
-</span><span>                </span><span style="color:#ffd580;">alert</span><span>(</span><span style="color:#bae67e;">&#39;Please install Phantom wallet!&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>            }
-</span><span>        }
-</span><span>        
-</span><span>        </span><span style="color:#ffa759;">async function </span><span style="color:#ffd580;">checkBalance</span><span>() {
-</span><span>            </span><span style="color:#ffa759;">if </span><span>(</span><span style="color:#f29e74;">!</span><span>wallet) {
-</span><span>                </span><span style="color:#ffd580;">alert</span><span>(</span><span style="color:#bae67e;">&#39;Please connect your wallet first!&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>                </span><span style="color:#ffa759;">return</span><span style="color:#ccc9c2cc;">;
-</span><span>            }
-</span><span>            
-</span><span>            </span><span style="color:#ffa759;">const </span><span>balance </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">await </span><span>connection</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">getBalance</span><span>(wallet</span><span style="color:#f29e74;">.</span><span>publicKey)</span><span style="color:#ccc9c2cc;">;
-</span><span>            </span><span style="font-style:italic;color:#5ccfe6;">document</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">getElementById</span><span>(</span><span style="color:#bae67e;">&#39;status&#39;</span><span>)</span><span style="color:#f29e74;">.</span><span>innerHTML </span><span style="color:#f29e74;">= 
-</span><span>                </span><span style="color:#bae67e;">`SOL Balance: </span><span>${balance </span><span style="color:#f29e74;">/ </span><span style="color:#ffcc66;">1000000000</span><span>}</span><span style="color:#bae67e;"> SOL`</span><span style="color:#ccc9c2cc;">;
-</span><span>        }
-</span><span>        
-</span><span>        </span><span style="color:#ffa759;">async function </span><span style="color:#ffd580;">requestAirdrop</span><span>() {
-</span><span>            </span><span style="color:#ffa759;">if </span><span>(</span><span style="color:#f29e74;">!</span><span>wallet) {
-</span><span>                </span><span style="color:#ffd580;">alert</span><span>(</span><span style="color:#bae67e;">&#39;Please connect your wallet first!&#39;</span><span>)</span><span style="color:#ccc9c2cc;">;
-</span><span>                </span><span style="color:#ffa759;">return</span><span style="color:#ccc9c2cc;">;
-</span><span>            }
-</span><span>            
-</span><span>            </span><span style="color:#ffa759;">try </span><span>{
-</span><span>                </span><span style="color:#ffa759;">const </span><span>signature </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">await </span><span>connection</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">requestAirdrop</span><span>(
-</span><span>                    wallet</span><span style="color:#f29e74;">.</span><span>publicKey</span><span style="color:#ccc9c2cc;">,
-</span><span>                    </span><span style="color:#ffcc66;">1000000000 </span><span style="font-style:italic;color:#5c6773;">// 1 SOL
-</span><span>                )</span><span style="color:#ccc9c2cc;">;
-</span><span>                </span><span style="font-style:italic;color:#5ccfe6;">document</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">getElementById</span><span>(</span><span style="color:#bae67e;">&#39;status&#39;</span><span>)</span><span style="color:#f29e74;">.</span><span>innerHTML </span><span style="color:#f29e74;">= 
-</span><span>                    </span><span style="color:#bae67e;">`Airdrop requested! Signature: </span><span>${signature</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">slice</span><span>(</span><span style="color:#ffcc66;">0</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">8</span><span>)}</span><span style="color:#bae67e;">...`</span><span style="color:#ccc9c2cc;">;
-</span><span>            } </span><span style="color:#ffa759;">catch </span><span>(error) {
-</span><span>                </span><span style="font-style:italic;color:#5ccfe6;">document</span><span style="color:#f29e74;">.</span><span style="color:#ffd580;">getElementById</span><span>(</span><span style="color:#bae67e;">&#39;status&#39;</span><span>)</span><span style="color:#f29e74;">.</span><span>innerHTML </span><span style="color:#f29e74;">= 
-</span><span>                    </span><span style="color:#bae67e;">`Error: </span><span>${error</span><span style="color:#f29e74;">.</span><span>message}</span><span style="color:#bae67e;">`</span><span style="color:#ccc9c2cc;">;
-</span><span>            }
-</span><span>        }
-</span><span>    </span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">script</span><span style="color:#5ccfe690;">&gt;
-</span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">body</span><span style="color:#5ccfe690;">&gt;
-</span><span style="color:#5ccfe690;">&lt;/</span><span style="color:#73d0ff;">html</span><span style="color:#5ccfe690;">&gt;
-</span></code></pre>
-<h3 id="testing-your-token">Testing Your Token</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="html"><span class="giallo-l"><span style="color: #39BAE680;">&lt;!</span><span style="color: #39BAE6;">DOCTYPE</span><span style="color: #FFB454;"> html</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">&lt;</span><span style="color: #39BAE6;">html</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">&lt;</span><span style="color: #39BAE6;">head</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;</span><span style="color: #39BAE6;">title</span><span style="color: #39BAE680;">&gt;</span><span>My Solana Token</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #39BAE6;">title</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;</span><span style="color: #39BAE6;">script</span><span style="color: #FFB454;"> src</span><span style="color: #BFBDB6B3;">=</span><span style="color: #AAD94C;">&quot;https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js&quot;</span><span style="color: #39BAE680;">&gt;&lt;/</span><span style="color: #39BAE6;">script</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">&lt;/</span><span style="color: #39BAE6;">head</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">&lt;</span><span style="color: #39BAE6;">body</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;</span><span style="color: #39BAE6;">div</span><span style="color: #FFB454;"> style</span><span style="color: #BFBDB6B3;">=</span><span style="color: #AAD94C;">&quot;max-width: 600px; margin: 50px auto; padding: 20px;&quot;</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">        &lt;</span><span style="color: #39BAE6;">h1</span><span style="color: #39BAE680;">&gt;</span><span>🪙 My First Solana Token</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #39BAE6;">h1</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">        &lt;</span><span style="color: #39BAE6;">div</span><span style="color: #FFB454;"> style</span><span style="color: #BFBDB6B3;">=</span><span style="color: #AAD94C;">&quot;margin: 20px 0;&quot;</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">            &lt;</span><span style="color: #39BAE6;">button</span><span style="color: #FFB454;"> onclick</span><span style="color: #BFBDB6B3;">=</span><span style="color: #AAD94C;">&quot;</span><span style="color: #FFB454;">connectWallet</span><span style="color: #AAD94C;">()&quot;</span><span style="color: #39BAE680;">&gt;</span><span>Connect Wallet</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #39BAE6;">button</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">            &lt;</span><span style="color: #39BAE6;">div</span><span style="color: #FFB454;"> id</span><span style="color: #BFBDB6B3;">=</span><span style="color: #AAD94C;">&quot;walletInfo&quot;</span><span style="color: #39BAE680;">&gt;&lt;/</span><span style="color: #39BAE6;">div</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">        &lt;/</span><span style="color: #39BAE6;">div</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">        &lt;</span><span style="color: #39BAE6;">div</span><span style="color: #FFB454;"> style</span><span style="color: #BFBDB6B3;">=</span><span style="color: #AAD94C;">&quot;margin: 20px 0;&quot;</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">            &lt;</span><span style="color: #39BAE6;">h3</span><span style="color: #39BAE680;">&gt;</span><span>Token Operations</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #39BAE6;">h3</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">            &lt;</span><span style="color: #39BAE6;">button</span><span style="color: #FFB454;"> onclick</span><span style="color: #BFBDB6B3;">=</span><span style="color: #AAD94C;">&quot;</span><span style="color: #FFB454;">checkBalance</span><span style="color: #AAD94C;">()&quot;</span><span style="color: #39BAE680;">&gt;</span><span>Check SOL Balance</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #39BAE6;">button</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">            &lt;</span><span style="color: #39BAE6;">button</span><span style="color: #FFB454;"> onclick</span><span style="color: #BFBDB6B3;">=</span><span style="color: #AAD94C;">&quot;</span><span style="color: #FFB454;">requestAirdrop</span><span style="color: #AAD94C;">()&quot;</span><span style="color: #39BAE680;">&gt;</span><span>Request SOL Airdrop</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #39BAE6;">button</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">            &lt;</span><span style="color: #39BAE6;">div</span><span style="color: #FFB454;"> id</span><span style="color: #BFBDB6B3;">=</span><span style="color: #AAD94C;">&quot;status&quot;</span><span style="color: #39BAE680;">&gt;&lt;/</span><span style="color: #39BAE6;">div</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">        &lt;/</span><span style="color: #39BAE6;">div</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;/</span><span style="color: #39BAE6;">div</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;</span><span style="color: #39BAE6;">script</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        let</span><span> wallet</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> null</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        let</span><span> connection</span><span style="color: #F29668;"> = new</span><span> solanaWeb3</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">Connection</span><span>(</span><span style="color: #AAD94C;">&#39;https://api.devnet.solana.com&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        async function</span><span style="color: #FFB454;"> connectWallet</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            if</span><span> (window</span><span style="color: #F29668;">.</span><span>solana) {</span></span>
+<span class="giallo-l"><span>                wallet</span><span style="color: #F29668;"> =</span><span> window</span><span style="color: #F29668;">.</span><span>solana</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">                await</span><span> wallet</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">connect</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>                document</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">getElementById</span><span>(</span><span style="color: #AAD94C;">&#39;walletInfo&#39;</span><span>)</span><span style="color: #F29668;">.</span><span>innerHTML</span><span style="color: #F29668;"> =</span><span> </span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">                    `Connected: </span><span style="color: #FF8F40;">${</span><span>wallet</span><span style="color: #F29668;">.</span><span>publicKey</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">toString</span><span>()</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">slice</span><span>(</span><span style="color: #D2A6FF;">0</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 8</span><span>)</span><span style="color: #FF8F40;">}</span><span style="color: #AAD94C;">...`</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>            }</span><span style="color: #FF8F40;"> else</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">                alert</span><span>(</span><span style="color: #AAD94C;">&#39;Please install Phantom wallet!&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        async function</span><span style="color: #FFB454;"> checkBalance</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            if</span><span> (</span><span style="color: #F29668;">!</span><span>wallet) {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">                alert</span><span>(</span><span style="color: #AAD94C;">&#39;Please connect your wallet first!&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">                return</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>            </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            const</span><span> balance</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span> connection</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">getBalance</span><span>(wallet</span><span style="color: #F29668;">.</span><span>publicKey)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>            document</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">getElementById</span><span>(</span><span style="color: #AAD94C;">&#39;status&#39;</span><span>)</span><span style="color: #F29668;">.</span><span>innerHTML</span><span style="color: #F29668;"> =</span><span> </span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">                `SOL Balance: </span><span style="color: #FF8F40;">${</span><span>balance</span><span style="color: #F29668;"> /</span><span style="color: #D2A6FF;"> 1000000000</span><span style="color: #FF8F40;">}</span><span style="color: #AAD94C;"> SOL`</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        async function</span><span style="color: #FFB454;"> requestAirdrop</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            if</span><span> (</span><span style="color: #F29668;">!</span><span>wallet) {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">                alert</span><span>(</span><span style="color: #AAD94C;">&#39;Please connect your wallet first!&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">                return</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>            </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            try</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">                const</span><span> signature</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span> connection</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">requestAirdrop</span><span>(</span></span>
+<span class="giallo-l"><span>                    wallet</span><span style="color: #F29668;">.</span><span>publicKey</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">                    1000000000</span><span style="color: #5A6673;font-style: italic;"> // 1 SOL</span></span>
+<span class="giallo-l"><span>                )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>                document</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">getElementById</span><span>(</span><span style="color: #AAD94C;">&#39;status&#39;</span><span>)</span><span style="color: #F29668;">.</span><span>innerHTML</span><span style="color: #F29668;"> =</span><span> </span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">                    `Airdrop requested! Signature: </span><span style="color: #FF8F40;">${</span><span>signature</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">slice</span><span>(</span><span style="color: #D2A6FF;">0</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 8</span><span>)</span><span style="color: #FF8F40;">}</span><span style="color: #AAD94C;">...`</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>            }</span><span style="color: #FF8F40;"> catch</span><span> (error) {</span></span>
+<span class="giallo-l"><span>                document</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">getElementById</span><span>(</span><span style="color: #AAD94C;">&#39;status&#39;</span><span>)</span><span style="color: #F29668;">.</span><span>innerHTML</span><span style="color: #F29668;"> =</span><span> </span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">                    `Error: </span><span style="color: #FF8F40;">${</span><span>error</span><span style="color: #F29668;">.</span><span>message</span><span style="color: #FF8F40;">}</span><span style="color: #AAD94C;">`</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;/</span><span style="color: #39BAE6;">script</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">&lt;/</span><span style="color: #39BAE6;">body</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">&lt;/</span><span style="color: #39BAE6;">html</span><span style="color: #39BAE680;">&gt;</span></span></code></pre><h3 id="testing-your-token">Testing Your Token</h3>
 <ol>
-<li><strong>Install a Solana wallet</strong>: Download <a href="https://phantom.app/">Phantom</a> or <a href="https://solflare.com/">Solflare</a></li>
+<li><strong>Install a Solana wallet</strong>: Download <a rel="external" href="https://phantom.app/">Phantom</a> or <a rel="external" href="https://solflare.com/">Solflare</a></li>
 <li><strong>Set wallet to Devnet</strong>: In wallet settings, switch to Devnet</li>
 <li><strong>Open your HTML file</strong>: Open <code>index.html</code> in your browser</li>
 <li><strong>Connect and test</strong>: Connect your wallet and try the operations</li>
@@ -1071,7 +1045,7 @@
 <p>The skills you've learned today form the foundation for building sophisticated decentralized applications. Whether you want to create the next big DeFi protocol, build innovative NFT experiences, or develop tools for the Solana ecosystem, you now have the knowledge to get started.</p>
 <p>Keep experimenting, keep building, and most importantly - have fun exploring the world of decentralized applications!</p>
 <hr />
-<p><strong>Want to dive deeper?</strong> Join the <a href="https://discord.gg/solana">Solana developer community</a> and start building the future of the internet, one transaction at a time.</p>
+<p><strong>Want to dive deeper?</strong> Join the <a rel="external" href="https://discord.gg/solana">Solana developer community</a> and start building the future of the internet, one transaction at a time.</p>
 
 
     
