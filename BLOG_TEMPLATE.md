@@ -157,7 +157,7 @@ Or use absolute URLs for external images:
 Wrap up your post with key takeaways and next steps for readers.
 
 {% alert_success() %}
-**Ready to contribute?** Follow the steps in [CONTRIBUTING_BLOG.md](/CONTRIBUTING_BLOG/) to submit your post!
+**Ready to contribute?** Follow the steps in [CONTRIBUTING_BLOG.md](https://github.com/CC-MNNIT/cc-website/blob/main/CONTRIBUTING_BLOG.md) to submit your post!
 {% end %}
 
 ---
@@ -170,4 +170,5 @@ Use `pretty_link` for external resources:
 
 ---
 
+<!-- Replace with your own LinkedIn/contact link, or delete this line. -->
 *Questions or feedback? Connect with me on [LinkedIn](https://www.linkedin.com/in/your-linkedin-username/)!*
