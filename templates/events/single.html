@@ -30,7 +30,7 @@ Features:
     <div class="event-hero-content">
         {# Breadcrumb #}
         <nav class="event-breadcrumb">
-            <a href="/events/">Events</a>
+            <a href="{{ get_url(path='@/events/_index.md') }}">Events</a>
             <span class="breadcrumb-sep">/</span>
             <span>{{ page.title }}</span>
         </nav>
@@ -622,7 +622,7 @@ Features:
 
 {# ========== BACK LINK ========== #}
 <div class="event-back-link">
-    <a href="/events/">
+    <a href="{{ get_url(path='@/events/_index.md') }}">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="19" y1="12" x2="5" y2="12" />
             <polyline points="12 19 5 12 12 5" />
