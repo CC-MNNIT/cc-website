@@ -23,8 +23,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive  # Fetches the 'goyo' theme
 
       - name: Determine Base URL
         id: check_cname
@@ -74,8 +72,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive  # Fetches the 'goyo' theme
 
       - name: Determine Preview Base URL
         id: check_cname_preview
