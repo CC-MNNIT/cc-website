@@ -27,7 +27,7 @@
     display: inline-block;
 }
 
-[data-theme="night"] .about-title {
+[data-theme="cc-dark"] .about-title {
     background: linear-gradient(135deg, #FFC758 0%, #FFD700 50%, #FFA500 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -36,7 +36,7 @@
 }
 
 [data-theme="light"] .about-title,
-[data-theme="lofi"] .about-title {
+[data-theme="cc-light"] .about-title {
     background: linear-gradient(135deg, #000C40 0%, #1565C0 50%, #42A5F5 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;

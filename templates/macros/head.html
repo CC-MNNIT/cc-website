@@ -51,8 +51,15 @@
     <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
     <script>
         (function() {
-            // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-            var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
             
             {# Theme configuration with backward compatibility #}
             {# Priority: theme.dark_brightness/light_brightness (new per-theme) > theme.brightness (common) > brightness (legacy) #}
@@ -71,10 +78,10 @@
             var defaultColorset = "{{ theme_colorset }}";
             var darkBrightness = "{{ dark_brightness }}";
             var lightBrightness = "{{ light_brightness }}";
-            var themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-            var fallbackTheme = themeMap[defaultColorset] || "goyo-dark";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
             
-            // Expose brightness config for global use (e.g., goyo.js)
+            // Expose brightness config for global use (e.g., js/theme.js)
             window.darkBrightness = darkBrightness;
             window.lightBrightness = lightBrightness;
             
@@ -83,7 +90,7 @@
             var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
             
             // Determine brightness based on current theme
-            var currentBrightness = (currentUserTheme === "goyo-dark") ? darkBrightness : lightBrightness;
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
             
             // Set theme and brightness attributes immediately
             document.documentElement.setAttribute("data-theme", actualTheme);
@@ -148,13 +155,13 @@
 
     <title>
       {%- if page and page.title -%}
-        {{ page.title }} | {{ config.title | default(value="Goyo") }}
+        {{ page.title }} | {{ config.title | default(value="CC Club") }}
       {%- elif section and section.title -%}
-        {{ section.title }} | {{ config.title | default(value="Goyo") }}
+        {{ section.title }} | {{ config.title | default(value="CC Club") }}
       {%- elif config.title -%}
         {{ config.title }}
       {%- else -%}
-        Goyo
+        CC Club
       {%- endif -%}
     </title>
 
@@ -174,13 +181,13 @@
       <!-- SEO: Open Graph / Twitter Card -->
       <meta property="og:title" content="
         {%- if page and page.title -%}
-          {{ page.title }} | {{ config.title | default(value='Goyo') }}
+          {{ page.title }} | {{ config.title | default(value='CC Club') }}
         {%- elif section and section.title -%}
-          {{ section.title }} | {{ config.title | default(value='Goyo') }}
+          {{ section.title }} | {{ config.title | default(value='CC Club') }}
         {%- elif config.title -%}
           {{ config.title }}
         {%- else -%}
-          Goyo
+          CC Club
         {%- endif -%}
       " />
       <meta property="og:description" content="

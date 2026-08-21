@@ -109,8 +109,8 @@
             {% endif %}
 
             <script>
-              // Determine theme: localStorage > extra.default_colorset > goyo-dark
-              // Expose theme config for global use (e.g., goyo.js)
+              // Determine theme: localStorage > extra.default_colorset > cc-dark
+              // Expose theme config for global use (e.g., js/theme.js)
               {# Theme configuration with backward compatibility #}
               {# Priority: theme.dark_brightness/light_brightness (new per-theme) > theme.brightness (common) > brightness (legacy) #}
               {% if config.extra.theme is defined %}
@@ -127,18 +127,18 @@
               window.defaultColorset = "{{ js_theme_colorset }}";
               window.darkBrightness = "{{ js_dark_brightness }}";
               window.lightBrightness = "{{ js_light_brightness }}";
-              window.themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-              window.fallbackTheme = window.themeMap[window.defaultColorset] || "goyo-dark";
+              window.themeMap = { "dark": "cc-dark", "light": "cc-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "cc-dark";
 
-              // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-              var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+              // Theme mapping - user-facing names are the theme identifiers
+              var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
               var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
               var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
 
               // Initialize and run Mermaid only when loaded
               window.initMermaid = function() {
                 var mermaidTheme = "dark";
-                if(currentUserTheme == "goyo-light") {
+                if(currentUserTheme == "cc-light") {
                   mermaidTheme = "light";
                 }
                 
@@ -201,7 +201,7 @@
     </div>
 
     {% block js_body %}
-        <script type="text/javascript" src="{{ get_url(path='goyo.js') | safe }}"></script>
+        <script type="text/javascript" src="{{ get_url(path='js/theme.js') | safe }}"></script>
         {% if config.build_search_index %}
         <!-- Lazy load search functionality -->
         <script>

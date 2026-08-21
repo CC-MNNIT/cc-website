@@ -24,7 +24,7 @@
 }
 
 /* Gradient Background */
-[data-theme="night"] body {
+[data-theme="cc-dark"] body {
     background: radial-gradient(ellipse at top, oklch(0.15 0.04 15) 0%, oklch(0.08 0.02 20) 100%) !important;
     background-attachment: fixed;
 }
