@@ -1,36 +1,13 @@
 @charset "UTF-8";
 
 /* ============================================
-   CUSTOM CSS ENTRY POINT
+   SHORTCODE & PROSE COMPONENT STYLES
    ============================================
-   This file imports all modular CSS files.
-   Do not add new styles here directly.
-   Add them to the appropriate file in core/, components/, or pages/.
+   Former custom.css body (utility helpers, code-block themes,
+   alerts, badges, embeds). Kept as the last-loaded layer until
+   each rule is merged into its final home.
 */
 
-/* 1. Core Styles (Variables, Reset, Typography, Animations) */
-@import url('core/variables.css');
-@import url('core/reset.css');
-@import url('core/typography.css');
-@import url('core/animations.css');
-
-/* 2. Components (Navbar, Footer, Buttons, Cards) */
-@import url('components/navbar.css');
-@import url('components/footer.css');
-@import url('components/buttons.css');
-@import url('components/cards.css');
-
-/* 3. Page-Specific Styles */
-@import url('pages/landing.css');
-@import url('pages/projects.css');
-@import url('pages/events.css');
-@import url('pages/blog.css');
-@import url('pages/about.css');
-@import url('pages/team.css');
-@import url('pages/roadmaps.css');
-@import url('pages/events.css');
-
-/* End of Imports */
 /* Utility Classes */
 .font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
