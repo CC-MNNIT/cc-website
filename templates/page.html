@@ -1,0 +1,164 @@
+{% extends "index.html" %}
+
+{% block header %}
+    {{ macros_header::header(config=config, lang=lang, page=page) }}
+{% endblock header %}
+
+{% block content %}
+    <div class="mb-12 pb-4 border-b border-gray-500/15">
+        <h1 class="flex items-center gap-3">
+            {{ page.title }}
+            {% if page.extra.badge %}
+                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">{{ page.extra.badge }}</span>
+            {% endif %}
+        </h1>
+        <p class="text-gray-500">{{ page.description }}</p>
+    </div>
+    {{ page.content | safe }}
+
+    {# Taxonomies (tags / categories) #}
+    {% if page.taxonomies and (page.taxonomies.tags or page.taxonomies.categories) %}
+    <div class="mt-8 pt-6 border-t border-gray-500/15 space-y-2 text-sm">
+        {% if page.taxonomies.categories %}
+        <div class="flex flex-wrap items-center gap-2">
+            <div class="tooltip" data-tip="Categories">
+                <svg class="w-4 h-4 text-base-content/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5a2 2 0 012-2h4a2 2 0 012 2v2H8V5z"></path>
+                </svg>
+            </div>
+            {% for cat in page.taxonomies.categories %}
+            <a href="{{ get_taxonomy_url(kind="categories", name=cat) }}"
+               class="inline-flex items-center badge badge-dash border-gray-500/30 text-xs hover:border-gray-500/70 transition-colors">
+                {{ cat }}
+            </a>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if page.taxonomies.tags %}
+        <div class="flex flex-wrap items-center gap-2 mt-2">
+            <div class="tooltip" data-tip="Tags">
+                <svg class="w-4 h-4 text-base-content/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                </svg>
+            </div>
+            {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}"
+               class="inline-flex items-center badge badge-dash text-xs border-gray-500/30 hover:border-gray-500/70 transition-colors">
+                {{ tag }}
+            </a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if config.extra.edit_url %}
+    <div class="mt-8 pt-6 border-t border-gray-500/15">
+        <div class="flex flex-wrap items-center gap-4">
+            <a href="{{ config.extra.edit_url }}/content/{{ page.relative_path }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                </svg>
+                <span>Edit this page</span>
+            </a>
+            {# Share configuration with backward compatibility #}
+            {# Priority: share.* (new) > enable_copy_url/enable_share_x (legacy) #}
+            {% if config.extra.share is defined %}
+                {% set enable_copy_url = config.extra.share.copy_url | default(value=config.extra.enable_copy_url | default(value=false)) %}
+                {% set enable_share_x = config.extra.share.x | default(value=config.extra.enable_share_x | default(value=false)) %}
+            {% else %}
+                {% set enable_copy_url = config.extra.enable_copy_url | default(value=false) %}
+                {% set enable_share_x = config.extra.enable_share_x | default(value=false) %}
+            {% endif %}
+            {% if enable_copy_url %}
+            <button onclick="navigator.clipboard.writeText(window.location.href).then(() => { this.innerHTML = this.innerHTML.replace('Copy URL', 'Copied!'); setTimeout(() => { this.innerHTML = this.innerHTML.replace('Copied!', 'Copy URL'); }, 2000); }).catch(() => { console.error('Failed to copy URL'); })" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+                <span>Copy URL</span>
+            </button>
+            {% endif %}
+            {% if enable_share_x and page.permalink and page.title %}
+            <a href="https://twitter.com/intent/tweet?url={{ page.permalink | urlencode }}&text={{ page.title | urlencode }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </svg>
+                <span>Share on X</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+{% endblock content %}
+
+{% block prev_link %}
+    {% if page.smaller %}
+        <a class="nav-button nav-button-prev group" href="{{ page.smaller.permalink | safe }}">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="nav-button-label">Previous</span>
+                </div>
+                <div class="nav-button-title">{{ page.smaller.title }}</div>
+            </div>
+        </a>
+    {% else %}
+        {% set parent = get_section(path=page.ancestors | reverse | first) %}
+        <a class="nav-button nav-button-prev group" href="{{ parent.permalink | safe }}">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="nav-button-label">Back to</span>
+                </div>
+                <div class="nav-button-title">{{ parent.title }}</div>
+            </div>
+        </a>
+    {% endif %}
+{% endblock prev_link %}
+
+{% block next_link %}
+    {% if page.higher %}
+        <a class="nav-button nav-button-next group" href="{{ page.higher.permalink | safe }}">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <span class="nav-button-label">Next</span>
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                <div class="nav-button-title">{{ page.higher.title }}</div>
+            </div>
+        </a>
+    {% else %}
+        {% set index = get_section(path="_index.md") %}
+        {% set found_current = false %}
+        {% for s in index.subsections %}
+            {% set subsection = get_section(path=s) %}
+            {% if found_current %}
+                <a class="nav-button nav-button-next group" href="{{ subsection.permalink | safe }}">
+                    <div class="nav-button-content">
+                        <div class="nav-button-direction">
+                            <span class="nav-button-label">Next</span>
+                            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                        <div class="nav-button-title">{{ subsection.title }}</div>
+                    </div>
+                </a>
+                {% set_global found_current = false %}
+            {% endif %}
+            {% for p in subsection.pages %}
+                {% if p.permalink == page.permalink %}
+                    {% set_global found_current = true %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+{% endblock next_link %}

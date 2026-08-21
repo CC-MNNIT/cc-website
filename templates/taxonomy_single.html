@@ -1,0 +1,79 @@
+{% extends "index.html" %}
+
+{#
+  Template: taxonomy_single.html
+  Purpose: Render all pages that belong to a specific taxonomy term
+  Context: Zola provides `taxonomy` and `term` objects here.
+#}
+
+{% block content %}
+    <div class="mb-12 pb-6 border-b border-gray-500/15">
+        <div class="flex items-center gap-3 mb-3">
+            <h1 class="flex items-center gap-3">
+                {{ term.name }}
+                <span class="text-xs font-medium px-2.5 py-1 border border-gray-500/30 rounded uppercase tracking-wide">
+                    {{ taxonomy.name | capitalize }}
+                </span>
+            </h1>
+        </div>
+
+        {% if term.pages | length > 0 %}
+            <p class="text-base text-base-content/70 mt-2">
+                {{ term.pages | length }}
+                {% if term.pages | length == 1 %}
+                    document
+                {% else %}
+                    documents
+                {% endif %}
+                tagged with "{{ term.name }}"
+            </p>
+        {% else %}
+            <p class="text-base text-base-content/70 mt-2">
+                No documents found for this term.
+            </p>
+        {% endif %}
+    </div>
+
+    {% if term.pages | length > 0 %}
+        <div class="space-y-5">
+            {% for page in term.pages %}
+                <article class="border border-gray-500/15 rounded-lg">
+                    <a href="{{ page.permalink | safe }}" class="group block p-5">
+                        <div class="nav-button-content">
+                            <div class="nav-button-direction">
+                                <span class="nav-button-label">Read</span>
+                                <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
+                            <div class="nav-button-title">{{ page.title }}</div>
+                        </div>
+                    </a>
+                    {% if page.description %}
+                        <p class="text-sm text-base-content/70 mb-3 px-5">
+                            {{ page.description }}
+                        </p>
+                    {% endif %}
+                    <div class="flex flex-wrap items-center gap-3 text-xs text-base-content/60 px-5 pb-5">
+                        {% if page.date %}
+                            <div class="flex items-center gap-1.5">
+                                <span>{{ page.date | date(format="%Y-%m-%d") }}</span>
+                            </div>
+                        {% endif %}
+                        {% if page.taxonomies and page.taxonomies.tags %}
+                            <span class="h-4 w-px bg-gray-400/40"></span>
+                            <div class="flex flex-wrap items-center gap-1.5">
+                                {% for tag in page.taxonomies.tags %}
+                                    <a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}"
+                                       class="inline-flex items-center badge badge-dash text-xs border-gray-500/30 hover:border-gray-500/70 transition-colors">
+                                        {{ tag }}
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock content %}

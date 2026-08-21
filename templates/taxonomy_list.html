@@ -1,0 +1,70 @@
+{% extends "index.html" %}
+
+{#
+  taxonomy_list.html
+  - Renders the list of terms for a single taxonomy (e.g., /tags/)
+  - Context provided by Zola:
+    - taxonomy: information about the taxonomy (name, slug, config, etc.)
+    - terms: list of all terms for this taxonomy
+#}
+
+{% block title %}
+    {{ taxonomy.name | capitalize }} - {{ config.title }}
+{% endblock title %}
+
+{% block content %}
+    <div class="mb-12 pb-6 border-b border-gray-500/15">
+        <h1 class="flex items-center gap-3 mb-3">
+            {{ taxonomy.config.title | default(value=taxonomy.name | capitalize) }}
+            <span class="text-xs font-medium px-2.5 py-1 border border-gray-500/30 rounded uppercase tracking-wide">
+                Taxonomy
+            </span>
+        </h1>
+
+        {% if taxonomy.config.description %}
+            <p class="text-base text-base-content/70">
+                {{ taxonomy.config.description }}
+            </p>
+        {% else %}
+            <p class="text-base text-base-content/70">
+                Browse all {{ taxonomy.name }} used in this documentation.
+            </p>
+        {% endif %}
+
+        <div class="mt-4 flex items-center gap-2 text-sm text-base-content/60">
+            <span>{{ terms | length }} {{ taxonomy.name }} available</span>
+        </div>
+    </div>
+
+    {% if terms | length == 0 %}
+        <div class="flex flex-col items-center justify-center py-12 text-center">
+            <svg class="w-16 h-16 mb-4 text-base-content/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+            </svg>
+            <p class="text-base-content/60">
+                No terms defined for this taxonomy yet.
+            </p>
+        </div>
+    {% else %}
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {% for term in terms %}
+                <article class="border border-gray-500/15 rounded-lg">
+                    <a href="{{ term.permalink | safe }}" class="nav-button nav-button-next group block p-5">
+                        <div class="nav-button-content">
+                            <div class="nav-button-direction">
+                                <span class="nav-button-label">View</span>
+                                <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
+                            <div class="nav-button-title">{{ term.name }}</div>
+                            <div class="text-xs text-base-content/60">
+                                {{ term.pages | length }} {% if term.pages | length == 1 %}document{% else %}documents{% endif %}
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock content %}
