@@ -9,7 +9,9 @@
      1. core/    - variables, reset, typography, animations
      2. components/ - navbar, footer, buttons, cards
      3. pages/   - page-specific styles
-     4. shortcodes - must stay last (former custom.css layer)
+     4. shortcodes - must stay last: dark-theme styling for shortcode components
+      (alerts, badges, mermaid, embeds); higher-specificity soft variants
+      intentionally win over legacy brand rules in cards.css by cascade order
    Do not add styles here; put them in the matching module file.
 */
 
