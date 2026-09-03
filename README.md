@@ -1,6 +1,6 @@
 # CC Club Website
 
-Official website of the Computer Coding Club, MNNIT Allahabad — built with [Zola](https://www.getzola.org/), a static site generator, and the [Goyo](https://github.com/hahwul/goyo) theme.
+Official website of the Computer Coding Club, MNNIT Allahabad — built with [Zola](https://www.getzola.org/), a static site generator. All templates, styles and scripts live in this repo — there is no external theme.
 
 > **Never used Zola before?** It's like the "static export" step of a React/Next.js build, except there is no React and no npm build at all. You write **Markdown** files, Zola renders them into plain HTML/CSS/JS using templates, and that's the whole website. If you can write a GitHub README, you can contribute content to this site.
 
@@ -11,8 +11,8 @@ Official website of the Computer Coding Club, MNNIT Allahabad — built with [Zo
 #    https://github.com/getzola/zola/releases/tag/v0.22.1
 #    (avoid apt/brew — they may install a different version)
 
-# 2. Clone (--recursive fetches the Goyo theme submodule)
-git clone --depth=1 --recursive https://github.com/CC-MNNIT/cc-website.git
+# 2. Clone
+git clone --depth=1 https://github.com/CC-MNNIT/cc-website.git
 cd cc-website
 
 # 3. Run the dev server
@@ -48,7 +48,7 @@ We welcome contributions of every kind — fixing a typo, adding a blog post, im
 
 ## 📄 License
 
-MIT — see [LICENSE](LICENSE). The Goyo theme is MIT licensed by [hahwul](https://github.com/hahwul/goyo).
+MIT — see [LICENSE](LICENSE).
 
 ## 🙋 Getting Help
 

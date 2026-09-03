@@ -124,7 +124,7 @@ Then on GitHub, open a pull request against `CC-MNNIT/cc-website` → `main` wit
 
 ## Shortcode reference
 
-These Goyo shortcodes are the ones blog posts use most. They all follow the paired-tag pattern `{% name() %}...{% end %}`.
+These shortcodes are the ones blog posts use most (defined in `templates/shortcodes/`). They all follow the paired-tag pattern `{% name() %}...{% end %}`.
 
 **Alerts** (styled boxes):
 
@@ -171,7 +171,7 @@ graph LR
 ) }}
 ```
 
-Full list: [Goyo shortcodes](https://github.com/hahwul/goyo#shortcodes).
+Full list: see the `templates/shortcodes/` directory in this repo.
 
 ---
 

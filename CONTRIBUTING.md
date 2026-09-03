@@ -53,17 +53,11 @@ The only things you need on your machine are **Git** and **Zola** (one binary, n
 
 ### 2. Clone the repository
 
-The site theme (Goyo) is a git submodule, so always clone recursively. `--depth=1` fetches only the latest commit — the repo has a long history, and you don't need it to contribute:
+Everything (templates, styles, scripts) lives in this repo — no submodules. `--depth=1` fetches only the latest commit, which is all you need to contribute:
 
 ```bash
-git clone --depth=1 --recursive https://github.com/CC-MNNIT/cc-website.git
+git clone --depth=1 https://github.com/CC-MNNIT/cc-website.git
 cd cc-website
-```
-
-If you already cloned without `--recursive`, run:
-
-```bash
-git submodule update --init --recursive --depth=1
 ```
 
 ### 3. Run the dev server
@@ -218,21 +212,21 @@ cc-website/
 │   ├── roadmaps.html      # Roadmaps page
 │   └── team.html          # Team page (reads data/team.toml)
 ├── static/                # Assets served as-is
-│   ├── css/               # custom.css + compiled styles
+│   ├── css/               # site.css imports everything (see its header)
 │   └── images/            # All images (teams, events, roadmaps, ...)
 ├── data/                  # TOML data files
 │   ├── team.toml          # Team members
 │   └── projects.toml      # Projects
-└── themes/goyo/           # Base theme (git submodule)
+└── config.toml            # Site configuration
 ```
 
 ### How pages, templates, and data fit together
 
 - A **content file** (`content/team/_index.md`) picks a **template** (`template = "team.html"`) and the template can pull **data** (`load_data(path="data/team.toml")`).
-- Templates **extend Goyo's** templates rather than replacing them, so theme updates still apply:
+- Templates extend each other in-tree: `about.html` extends `index.html`, which defines the shared layout (header, sidebar, footer). To build a new page, extend `index.html`:
 
 ```html
-{% extends "goyo/templates/page.html" %}
+{% extends "index.html" %}
 
 {% block content %}
   <div class="my-section">{{ page.content | safe }}</div>
@@ -273,7 +267,9 @@ Common variables:
 
 ### Adding styles
 
-Put custom CSS in `static/css/custom.css` (it's loaded on every page and includes examples). Goyo ships Tailwind CSS and DaisyUI, so prefer their utility classes/components over writing raw CSS.
+All CSS is imported by `static/css/site.css` — read its header first: it documents the layer order (vendor → core → components → pages → shortcodes) and where new styles belong. Prefer DaisyUI components and Tailwind utility classes over writing raw CSS.
+
+**Important:** the vendored Tailwind/DaisyUI bundle (`static/css/vendor/tailwind-daisyui.min.css`) is prebuilt and content-scanned — it only contains the utility classes that existed when it was compiled. A brand-new utility class in a template will silently do nothing. If a class has no effect, write the rule in the matching `components/*.css` or `pages/*.css` file instead.
 
 ### Adding a new page type
 
@@ -291,7 +287,7 @@ template = "resources.html"
 2. **Create the template** — `templates/resources.html`:
 
 ```html
-{% extends "goyo/templates/page.html" %}
+{% extends "index.html" %}
 {% block content %}
   {{ page.content | safe }}
 {% endblock %}
@@ -385,7 +381,7 @@ Frontmatter is **TOML**, not YAML — no tabs for indentation, values in quotes,
 - Filenames are case-sensitive
 
 **Shortcodes render as raw text**
-Use paired tags, not inline: `{% alert_info() %}text{% end %}` ✅ vs `{{ alert_info(...) }}` ❌. Also check the shortcode name exists (Goyo's list: alerts, badges, collapse, mermaid, pretty_link, youtube, gist, ...).
+Use paired tags, not inline: `{% alert_info() %}text{% end %}` ✅ vs `{{ alert_info(...) }}` ❌. Also check the shortcode name exists — see `templates/shortcodes/` for the full list (alerts, badges, collapse, mermaid, pretty_link, image, youtube, ...).
 
 **Template errors**
 Check Tera syntax — every `{% if %}` needs `{% endif %}`, every `{% for %}` needs `{% endfor %}`. `zola build` reports the exact file and line.
@@ -399,7 +395,6 @@ Another instance is running — stop it, or use `zola serve --port 1112`.
 
 - [Zola docs](https://www.getzola.org/documentation/) — configuration, templates, content, deployment
 - [Tera template reference](https://tera.netlify.app/docs/) — variables, filters, tests
-- [Goyo theme](https://github.com/hahwul/goyo) — templates, shortcodes, theme options
 - [Markdown guide](https://www.markdownguide.org/) — Markdown syntax
 - [Git docs](https://git-scm.com/doc) & [GitHub guides](https://docs.github.com/en/get-started) — Git basics
 - [DaisyUI components](https://daisyui.com/components/) & [Tailwind docs](https://tailwindcss.com/docs) — styling
