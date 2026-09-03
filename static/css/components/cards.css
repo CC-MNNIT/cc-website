@@ -117,26 +117,29 @@
     background: oklch(0.15 0.02 20) !important;
 }
 
+/* Inputs, alerts and badges below deliberately carry no !important:
+   shortcodes.css dark-theme soft-variant rules are more specific and must
+   win over these; being unlayered these still beat DaisyUI's layers. */
 /* Inputs and forms */
 [data-theme="cc-dark"] .input,
 [data-theme="cc-dark"] .select,
 [data-theme="cc-dark"] .textarea {
-    background: oklch(0.12 0.02 20) !important;
-    border-color: oklch(0.25 0.04 20) !important;
-    color: oklch(0.92 0.01 30) !important;
+    background: oklch(0.12 0.02 20);
+    border-color: oklch(0.25 0.04 20);
+    color: oklch(0.92 0.01 30);
 }
 
 [data-theme="cc-dark"] .input:focus,
 [data-theme="cc-dark"] .select:focus,
 [data-theme="cc-dark"] .textarea:focus {
-    border-color: oklch(0.80 0.15 75) !important;
+    border-color: oklch(0.80 0.15 75);
     outline: none;
 }
 
 /* Alert boxes */
 [data-theme="cc-dark"] .alert {
-    background: oklch(0.15 0.02 20) !important;
-    border-color: oklch(0.25 0.04 20) !important;
+    background: oklch(0.15 0.02 20);
+    border-color: oklch(0.25 0.04 20);
 }
 
 /* Borders - Subtle burgundy tint */
@@ -147,13 +150,13 @@
 
 /* Badges */
 [data-theme="cc-dark"] .badge-primary {
-    background: oklch(0.80 0.15 75) !important;
-    color: oklch(0.15 0.02 30) !important;
+    background: oklch(0.80 0.15 75);
+    color: oklch(0.15 0.02 30);
 }
 
 [data-theme="cc-dark"] .badge-secondary {
-    background: oklch(0.35 0.12 15) !important;
-    color: oklch(0.95 0.01 15) !important;
+    background: oklch(0.35 0.12 15);
+    color: oklch(0.95 0.01 15);
 }
 
 /* Icons - Gold color (except navbar which is white) */

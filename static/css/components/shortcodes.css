@@ -3,136 +3,41 @@
 /* ============================================
    SHORTCODE & PROSE COMPONENT STYLES
    ============================================
-   Former custom.css body (utility helpers, code-block themes,
-   alerts, badges, embeds). Kept as the last-loaded layer until
-   each rule is merged into its final home.
+   Code-block colors live in the vendor layer (merged in place);
+   this file holds dark-theme styling for shortcode components.
 */
 
-/* Utility Classes */
+/* Utility helper (Tailwind does not emit font-mono; used by events) */
 .font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.text-sm {
-    font-size: 0.875rem;
-}
-
-/* ============================================
-   CODE BLOCK THEME OVERRIDES - DARK THEME ONLY
-   ============================================
-   Replace bluish slate colors with neutral grays
-   for better dark theme aesthetics
-*/
-
-/* Override default code block background with neutral gray gradient - DARK THEME ONLY */
-[data-theme="cc-dark"] pre:not(.mermaid) {
-    background: linear-gradient(135deg, #18181b 0%, #27272a 100%) !important;
-    border: 1px solid rgba(63, 63, 70, 0.3) !important;
-}
-
-/* Darker variant - pure black to dark gray */
-[data-theme="cc-dark"][data-brightness="darker"] pre:not(.mermaid) {
-    background: linear-gradient(135deg, #0a0a0a 0%, #171717 100%) !important;
-    border: 1px solid rgba(39, 39, 42, 0.4) !important;
-}
-
-/* Lighter variant - medium gray gradient */
-[data-theme="cc-dark"][data-brightness="lighter"] pre:not(.mermaid) {
-    background: linear-gradient(135deg, #27272a 0%, #3f3f46 100%) !important;
-    border: 1px solid rgba(82, 82, 91, 0.3) !important;
-}
-
-/* Update the top border accent to match neutral theme - DARK THEME ONLY */
-[data-theme="cc-dark"] pre:not(.mermaid)::before {
-    background: linear-gradient(90deg, #71717a, #52525b) !important;
-}
-
-[data-theme="cc-dark"][data-brightness="darker"] pre:not(.mermaid)::before {
-    background: linear-gradient(90deg, #52525b, #3f3f46) !important;
-}
-
-/* Mermaid diagram containers - neutral background with transparency - DARK THEME ONLY */
+/* Mermaid diagram containers - dark theme */
 [data-theme="cc-dark"] pre.mermaid {
-    background: rgba(24, 24, 27, 0.6) !important;
+    background: rgba(24, 24, 27, 0.6);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(63, 63, 70, 0.4) !important;
-    border-radius: 0.75rem !important;
-    padding: 2rem !important;
-    margin: 1.5rem 0 !important;
+    border: 1px solid rgba(63, 63, 70, 0.4);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    margin: 1.5rem 0;
 }
 
 [data-theme="cc-dark"][data-brightness="darker"] pre.mermaid {
-    background: rgba(10, 10, 10, 0.7) !important;
-    border: 1px solid rgba(39, 39, 42, 0.5) !important;
+    background: rgba(10, 10, 10, 0.7);
+    border-color: rgba(39, 39, 42, 0.5);
 }
 
 [data-theme="cc-dark"][data-brightness="lighter"] pre.mermaid {
-    background: rgba(39, 39, 42, 0.6) !important;
-    border: 1px solid rgba(82, 82, 91, 0.4) !important;
+    background: rgba(39, 39, 42, 0.6);
+    border-color: rgba(82, 82, 91, 0.4);
 }
 
-/* Mermaid SVG elements styling */
 [data-theme="cc-dark"] pre.mermaid svg {
     max-width: 100%;
     height: auto;
 }
 
-/* Inline code - neutral background - DARK THEME ONLY */
-[data-theme="cc-dark"] :not(pre) > code {
-    background: rgba(63, 63, 70, 0.3) !important;
-    border: 1px solid rgba(82, 82, 91, 0.4) !important;
-    color: #a1a1aa !important;
-}
-
-[data-theme="cc-dark"][data-brightness="darker"] :not(pre) > code {
-    background: rgba(39, 39, 42, 0.4) !important;
-    border: 1px solid rgba(63, 63, 70, 0.5) !important;
-    color: #a1a1aa !important;
-}
-
-/* ============================================
-   CODE BLOCK THEME OVERRIDES - LIGHT THEME
-   ============================================
-   Enhanced text contrast for light theme
-*/
-
-/* Light theme code blocks - better text visibility */
-[data-theme="cc-light"] pre code {
-    color: #1e293b !important;
-}
-
-[data-theme="cc-light"][data-brightness="darker"] pre code {
-    color: #0f172a !important;
-}
-
-[data-theme="cc-light"][data-brightness="lighter"] pre code {
-    color: #334155 !important;
-}
-
-/* Light theme inline code - better contrast */
-[data-theme="cc-light"] :not(pre) > code {
-    color: #1e293b !important;
-    background: rgba(100, 116, 139, 0.12) !important;
-    border: 1px solid rgba(100, 116, 139, 0.25) !important;
-}
-
-[data-theme="cc-light"][data-brightness="darker"] :not(pre) > code {
-    color: #0f172a !important;
-    background: rgba(71, 85, 105, 0.15) !important;
-}
-
-[data-theme="cc-light"][data-brightness="lighter"] :not(pre) > code {
-    color: #334155 !important;
-    background: rgba(148, 163, 184, 0.1) !important;
-}
-
-/* ============================================
-   SHORTCODE ELEMENT OVERRIDES - DARK THEME ONLY
-   ============================================
-   Enhanced colors for dark theme, keep defaults for light
-*/
-
-/* Alerts - Enhanced contrast for dark theme ONLY */
+/* Alerts - dark theme contrast */
 [data-theme="cc-dark"] .alert {
     border-width: 1px;
     border-style: solid;
@@ -142,59 +47,55 @@
     line-height: 1.6;
 }
 
-/* Alert Info - Neutral blue-gray */
 [data-theme="cc-dark"] .alert-info.alert-soft {
-    background: rgba(14, 165, 233, 0.12) !important;
-    border-color: rgba(14, 165, 233, 0.3) !important;
-    color: #bae6fd !important;
+    background: rgba(14, 165, 233, 0.12);
+    border-color: rgba(14, 165, 233, 0.3);
+    color: #bae6fd;
 }
 
 [data-theme="cc-dark"][data-brightness="darker"] .alert-info.alert-soft {
-    background: rgba(14, 165, 233, 0.08) !important;
-    border-color: rgba(14, 165, 233, 0.25) !important;
-    color: #7dd3fc !important;
+    background: rgba(14, 165, 233, 0.08);
+    border-color: rgba(14, 165, 233, 0.25);
+    color: #7dd3fc;
 }
 
-/* Alert Success - Subtle green */
 [data-theme="cc-dark"] .alert-success.alert-soft {
-    background: rgba(34, 197, 94, 0.12) !important;
-    border-color: rgba(34, 197, 94, 0.3) !important;
-    color: #bbf7d0 !important;
+    background: rgba(34, 197, 94, 0.12);
+    border-color: rgba(34, 197, 94, 0.3);
+    color: #bbf7d0;
 }
 
 [data-theme="cc-dark"][data-brightness="darker"] .alert-success.alert-soft {
-    background: rgba(34, 197, 94, 0.08) !important;
-    border-color: rgba(34, 197, 94, 0.25) !important;
-    color: #86efac !important;
+    background: rgba(34, 197, 94, 0.08);
+    border-color: rgba(34, 197, 94, 0.25);
+    color: #86efac;
 }
 
-/* Alert Warning - Amber */
 [data-theme="cc-dark"] .alert-warning.alert-soft {
-    background: rgba(245, 158, 11, 0.12) !important;
-    border-color: rgba(245, 158, 11, 0.3) !important;
-    color: #fde68a !important;
+    background: rgba(245, 158, 11, 0.12);
+    border-color: rgba(245, 158, 11, 0.3);
+    color: #fde68a;
 }
 
 [data-theme="cc-dark"][data-brightness="darker"] .alert-warning.alert-soft {
-    background: rgba(245, 158, 11, 0.08) !important;
-    border-color: rgba(245, 158, 11, 0.25) !important;
-    color: #fbbf24 !important;
+    background: rgba(245, 158, 11, 0.08);
+    border-color: rgba(245, 158, 11, 0.25);
+    color: #fbbf24;
 }
 
-/* Alert Error - Red */
 [data-theme="cc-dark"] .alert-error.alert-soft {
-    background: rgba(239, 68, 68, 0.12) !important;
-    border-color: rgba(239, 68, 68, 0.3) !important;
-    color: #fecaca !important;
+    background: rgba(239, 68, 68, 0.12);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #fecaca;
 }
 
 [data-theme="cc-dark"][data-brightness="darker"] .alert-error.alert-soft {
-    background: rgba(239, 68, 68, 0.08) !important;
-    border-color: rgba(239, 68, 68, 0.25) !important;
-    color: #fca5a5 !important;
+    background: rgba(239, 68, 68, 0.08);
+    border-color: rgba(239, 68, 68, 0.25);
+    color: #fca5a5;
 }
 
-/* Badges - Enhanced visibility for dark theme ONLY */
+/* Badges - dark theme visibility */
 [data-theme="cc-dark"] .badge {
     font-weight: 600;
     font-size: 0.8125rem;
@@ -203,136 +104,100 @@
 }
 
 [data-theme="cc-dark"] .badge-soft {
-    border: 1px solid;
+    border-width: 1px;
+    border-style: solid;
 }
 
-/* Badge Primary - Neutral gray */
 [data-theme="cc-dark"] .badge-primary.badge-soft {
-    background: rgba(156, 163, 175, 0.15) !important;
-    border-color: rgba(156, 163, 175, 0.4) !important;
-    color: #e5e7eb !important;
+    background: rgba(156, 163, 175, 0.15);
+    border-color: rgba(156, 163, 175, 0.4);
+    color: #e5e7eb;
 }
 
-/* Badge Secondary - Darker gray */
 [data-theme="cc-dark"] .badge-secondary.badge-soft {
-    background: rgba(107, 114, 128, 0.15) !important;
-    border-color: rgba(107, 114, 128, 0.4) !important;
-    color: #d1d5db !important;
+    background: rgba(107, 114, 128, 0.15);
+    border-color: rgba(107, 114, 128, 0.4);
+    color: #d1d5db;
 }
 
-/* Badge Accent - Light gray */
 [data-theme="cc-dark"] .badge-accent.badge-soft {
-    background: rgba(148, 163, 184, 0.15) !important;
-    border-color: rgba(148, 163, 184, 0.4) !important;
-    color: #f1f5f9 !important;
+    background: rgba(148, 163, 184, 0.15);
+    border-color: rgba(148, 163, 184, 0.4);
+    color: #f1f5f9;
 }
 
-/* Badge Info - Blue */
 [data-theme="cc-dark"] .badge-info.badge-soft {
-    background: rgba(14, 165, 233, 0.15) !important;
-    border-color: rgba(14, 165, 233, 0.4) !important;
-    color: #bae6fd !important;
+    background: rgba(14, 165, 233, 0.15);
+    border-color: rgba(14, 165, 233, 0.4);
+    color: #bae6fd;
 }
 
-/* Badge Success - Green */
 [data-theme="cc-dark"] .badge-success.badge-soft {
-    background: rgba(34, 197, 94, 0.15) !important;
-    border-color: rgba(34, 197, 94, 0.4) !important;
-    color: #bbf7d0 !important;
+    background: rgba(34, 197, 94, 0.15);
+    border-color: rgba(34, 197, 94, 0.4);
+    color: #bbf7d0;
 }
 
-/* Badge Warning - Amber */
 [data-theme="cc-dark"] .badge-warning.badge-soft {
-    background: rgba(245, 158, 11, 0.15) !important;
-    border-color: rgba(245, 158, 11, 0.4) !important;
-    color: #fde68a !important;
+    background: rgba(245, 158, 11, 0.15);
+    border-color: rgba(245, 158, 11, 0.4);
+    color: #fde68a;
 }
 
-/* Badge Error - Red */
 [data-theme="cc-dark"] .badge-error.badge-soft {
-    background: rgba(239, 68, 68, 0.15) !important;
-    border-color: rgba(239, 68, 68, 0.4) !important;
-    color: #fecaca !important;
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.4);
+    color: #fecaca;
 }
 
-/* Navigation buttons - dark theme only */
-[data-theme="cc-dark"] .nav-button {
-    background: linear-gradient(135deg, rgba(63, 63, 70, 0.08) 0%, rgba(82, 82, 91, 0.08) 100%) !important;
-    border: 1px solid rgba(63, 63, 70, 0.2) !important;
+/* Browser mockup & collapse - dark theme */
+[data-theme="cc-dark"] :is(.mockup-browser, .collapse) {
+    border-color: rgba(63, 63, 70, 0.2);
+    background: rgba(24, 24, 27, 0.3);
 }
 
-[data-theme="cc-dark"] .nav-button:focus {
-    outline: none !important;
-    box-shadow: 0 0 0 2px rgba(82, 82, 91, 0.3) !important;
-    border-color: rgba(82, 82, 91, 0.5) !important;
-}
-
-/* Browser mockup and collapse - dark theme only */
-[data-theme="cc-dark"] .mockup-browser,
-[data-theme="cc-dark"] .collapse {
-    border-color: rgba(63, 63, 70, 0.2) !important;
-    background: rgba(24, 24, 27, 0.3) !important;
-}
-
-[data-theme="cc-dark"][data-brightness="darker"] .mockup-browser,
-[data-theme="cc-dark"][data-brightness="darker"] .collapse {
-    border-color: rgba(39, 39, 42, 0.3) !important;
-    background: rgba(10, 10, 10, 0.5) !important;
+[data-theme="cc-dark"][data-brightness="darker"] :is(.mockup-browser, .collapse) {
+    border-color: rgba(39, 39, 42, 0.3);
+    background: rgba(10, 10, 10, 0.5);
 }
 
 [data-theme="cc-dark"] .collapse-title {
     font-weight: 600;
-    color: #e5e7eb !important;
+    color: #e5e7eb;
 }
 
-/* Browser toolbar - dark theme only */
 [data-theme="cc-dark"] .mockup-browser-toolbar {
-    background: rgba(39, 39, 42, 0.5) !important;
-    border-bottom: 1px solid rgba(63, 63, 70, 0.3) !important;
+    background: rgba(39, 39, 42, 0.5);
+    border-bottom: 1px solid rgba(63, 63, 70, 0.3);
 }
 
 [data-theme="cc-dark"] .mockup-browser-toolbar .input {
-    background: rgba(24, 24, 27, 0.6) !important;
-    border-color: rgba(63, 63, 70, 0.3) !important;
-    color: #d1d5db !important;
+    background: rgba(24, 24, 27, 0.6);
+    border-color: rgba(63, 63, 70, 0.3);
+    color: #d1d5db;
 }
 
-/* Gallery and image containers - dark theme only */
+/* Gallery and image containers - dark theme */
 [data-theme="cc-dark"] .gallery-item a {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
-    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
 [data-theme="cc-dark"] .gallery-item a:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Carousel controls - dark theme only */
-[data-theme="cc-dark"] .carousel-controls {
-    background: rgba(24, 24, 27, 0.8) !important;
-    backdrop-filter: blur(4px);
-}
-
-/* YouTube and external embeds - dark theme only */
-[data-theme="cc-dark"] .youtube-embed,
-[data-theme="cc-dark"] .codepen-embed,
-[data-theme="cc-dark"] .gist-embed {
-    border: 1px solid rgba(63, 63, 70, 0.2) !important;
-    border-radius: 0.75rem;
-    overflow: hidden;
-}
-
-/* Pretty links - dark theme only */
+/* Pretty links - dark theme */
 [data-theme="cc-dark"] .pretty-link {
-    background: rgba(63, 63, 70, 0.2) !important;
-    border: 1px solid rgba(82, 82, 91, 0.3) !important;
+    background: rgba(63, 63, 70, 0.2);
+    border: 1px solid rgba(82, 82, 91, 0.3);
     border-radius: 0.5rem;
     padding: 1rem;
     transition: all 0.2s ease;
 }
 
 [data-theme="cc-dark"] .pretty-link:hover {
-    background: rgba(63, 63, 70, 0.35) !important;
-    border-color: rgba(82, 82, 91, 0.5) !important;
+    background: rgba(63, 63, 70, 0.35);
+    border-color: rgba(82, 82, 91, 0.5);
     transform: translateY(-2px);
 }
