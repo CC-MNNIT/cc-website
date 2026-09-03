@@ -8,7 +8,7 @@
 {% extends "index.html" %}
 
 {% block header %}
-    {{ macros_header::header(config=config, lang=lang, section=section) }}
+    {{<header config={config} lang={lang} is_root_page={false} section={section} page={false} />}}
 {% endblock header %}
 
 {% block content %}
@@ -25,13 +25,13 @@
 
     {% for event in all_events %}
         {% if event.extra.event_type == "hackathon" %}
-            {% set_global hackathons = hackathons | concat(with=[event]) %}
+            {% set_global hackathons = [...hackathons, event] %}
         {% elif event.extra.event_type == "challenge" %}
-            {% set_global challenges = challenges | concat(with=[event]) %}
+            {% set_global challenges = [...challenges, event] %}
         {% elif event.extra.event_type == "workshop" %}
-            {% set_global workshops = workshops | concat(with=[event]) %}
+            {% set_global workshops = [...workshops, event] %}
         {% elif event.extra.event_type == "program" %}
-            {% set_global programs = programs | concat(with=[event]) %}
+            {% set_global programs = [...programs, event] %}
         {% endif %}
     {% endfor %}
 

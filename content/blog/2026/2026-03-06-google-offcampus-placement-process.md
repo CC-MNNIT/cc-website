@@ -13,9 +13,9 @@ author_linkedin = "aviral-mishra-india"
 ## Overview
 ![Google India](https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ananta_0.width-1300.jpg)
 
-{% alert_info() %}
+{% <alert_info > %}
 **Google** is the technology giant, probably one of the best companies to work for in the world at this moment, they have a very diverse business which spans entire AI Stack (right from chips to the models and the data), their most revenue comes from ADs, they run youtube, they run google cloud and the list goes endless, Deepmind is another powerhouse within Google responsible for all AI Stuff!!
-{% end %}
+{% </alert_info> %}
 
 ## Pathway
 Firstly, the most important thing is, to apply!! Never shy away from off-campus opportunities because of low-confidence or just the belief that hardly anyone gets a response from off-campus opportunities. The responses are random in nature, but you never know when you get your chance.
@@ -37,9 +37,9 @@ I applied to Google offcampus, 3 times (in 1st Year's end for Step Internship, i
 ## Round 1 & 2
 - These are purely DSA rounds, and in each round they ask 1-2 DSA questions, the difficulty of these questions is generally leetcode medium 
 
-{% alert_info() %}
+{% <alert_info > %}
 In my first round I was asked to implement a YouTube ADs class and the solution involved use of 2 heaps, and it was basically a highly modified version of this [leetcode problem](https://leetcode.com/problems/find-median-from-data-stream)
-{%end%}
+{% </alert_info> %}
 
 The interviewers again look for 2 things
 
@@ -47,9 +47,9 @@ The interviewers again look for 2 things
 
 - Your code clarity, they call is neat code, and interviewers often remark positively to you if your write good code, which basically means making sure you maintain good indentation, use meaningful names for variables etc.
 
-{% alert_info() %}
+{% <alert_info > %}
 Google, shares a doc link, and you code on the google doc, without use of any IDE, but don't be too cautious of missing a ; or an indentation issue, if you notice it, the interviewers are usuallly chill about it, also at the end of interview which usually has a time limit of 45 minutes, you do a dry run with the interviewer to verify correctness.
-{%end%}
+{% </alert_info> %}
 
 ## Round 3
 If your round 1 and round 2 went well, you will receive the link for 3rd Round of interview, this is again a DSA round, and usually takes months to come to you

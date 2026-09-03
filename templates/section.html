@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {% block header %}
-    {{ macros_header::header(config=config, lang=lang, section=section) }}
+    {{<header config={config} lang={lang} is_root_page={false} section={section} page={false} />}}
 {% endblock header %}
 
 {% block content %}

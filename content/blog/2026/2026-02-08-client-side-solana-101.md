@@ -41,9 +41,9 @@ Solana is a high-performance blockchain platform designed to handle thousands of
 
 ### Why Solana Stands Out
 
-{% alert_success() %}
+{% <alert_success > %}
 **Speed & Cost:** Solana handles ~4,000 TPS in practice (theoretically up to 65,000) with fees under $0.01!
-{% end %}
+{% </alert_success> %}
 
 ![Solana vs Ethereum — Transaction speed and cost comparison](/images/blog/2026/solana-101/solana-vs-ethereum.webp)
 
@@ -70,9 +70,9 @@ pub struct Account {
 }
 ```
 
-{% alert_info() %}
+{% <alert_info > %}
 **Think of it like this:** If traditional databases have tables and rows, Solana has accounts and data. Every piece of information lives in an account!
-{% end %}
+{% </alert_info> %}
 
 > **A note on Rent:** Solana used to charge "rent" to keep accounts alive. Today, all new accounts must be **rent-exempt** — meaning you deposit a small, one-time amount of SOL (based on data size) that you get back when you close the account. Think of it as a refundable deposit, not an ongoing fee.
 
@@ -100,7 +100,7 @@ Tokens on Solana are incredibly versatile. They're not just currencies - they re
 - **Utility Tokens**: Access passes, memberships, governance rights
 - **Real-world Assets**: Tokenized stocks, real estate, or commodities
 
-{% badge_primary() %}SPL Token{% end %} is Solana's standard for all tokens, similar to how ERC-20 works on Ethereum, but more flexible and efficient.
+{% <badge_primary > %}SPL Token{% </badge_primary> %} is Solana's standard for all tokens, similar to how ERC-20 works on Ethereum, but more flexible and efficient.
 
 ## Setting Up Your Solana Development Environment
 
@@ -108,9 +108,9 @@ Let's get your machine ready for Solana development! We'll install the Solana CL
 
 ### Step 1: Install Solana CLI
 
-{% alert_warning() %}
+{% <alert_warning > %}
 **Prerequisites:** Make sure you have Node.js (v18+) and npm installed on your machine.
-{% end %}
+{% </alert_warning> %}
 
 **For macOS/Linux:**
 ```bash
@@ -144,12 +144,12 @@ solana config set --url https://api.devnet.solana.com
 solana config get
 ```
 
-{% collapse(title="What are Solana clusters?") %}
+{% <collapse title="What are Solana clusters?"> %}
 - **Mainnet Beta**: The live network where real SOL is used
 - **Devnet**: Testing network with free 'play' SOL for developers  
 - **Testnet**: Stress testing network for new features
 - **Localnet**: Your personal Solana network running locally
-{% end %}
+{% </collapse> %}
 
 ### Step 3: Create Your First Wallet
 
@@ -164,9 +164,9 @@ solana config set --keypair ~/my-solana-wallet.json
 solana address
 ```
 
-{% alert_info() %}
+{% <alert_info > %}
 **Security Note:** Your keypair file contains your private key. Keep it safe and never share it!
-{% end %}
+{% </alert_info> %}
 
 ### Step 4: Get Some Devnet SOL
 
@@ -192,9 +192,9 @@ solana-test-validator
 solana config set --url localhost
 ```
 
-{% alert_success() %}
+{% <alert_success > %}
 **Pro Tip:** Local validator resets every time you restart it, giving you a clean testing environment!
-{% end %}
+{% </alert_success> %}
 
 ## Let's Build Something Fun: Your First Token!
 
@@ -298,9 +298,9 @@ async function main() {
 main().catch(console.error);
 ```
 
-{% alert_info() %}
+{% <alert_info > %}
 **Note:** The code above automatically reads the wallet file we created in Step 3 (`~/my-solana-wallet.json`). If you saved it elsewhere, update the `walletPath` variable.
-{% end %}
+{% </alert_info> %}
 
 ### Running Your Token Creation
 
@@ -442,9 +442,9 @@ Let's create a basic HTML interface to interact with our token. Create `index.ht
 3. **Open your HTML file**: Open `index.html` in your browser
 4. **Connect and test**: Connect your wallet and try the operations
 
-{% alert_success() %}
+{% <alert_success > %}
 **Congratulations!** 🎉 You've just created your first Solana token and built a web interface to interact with it!
-{% end %}
+{% </alert_success> %}
 
 ## What's Next? Your Solana Journey Continues
 
@@ -464,17 +464,17 @@ You've taken your first steps into Solana development! Here's what you can explo
 
 ### Learning Resources
 
-{{ pretty_link(url="https://docs.solana.com/", title="Official Solana Documentation", description="Comprehensive guides and API references") }}
+{{<pretty_link url="https://docs.solana.com/" title="Official Solana Documentation" description="Comprehensive guides and API references" />}}
 
-{{ pretty_link(url="https://github.com/solana-labs/example-programs", title="Solana Example Programs", description="Real-world code examples for various use cases") }}
+{{<pretty_link url="https://github.com/solana-labs/example-programs" title="Solana Example Programs" description="Real-world code examples for various use cases" />}}
 
-{{ pretty_link(url="https://www.anchor-lang.com/", title="Anchor Framework", description="The de facto standard for Solana program development") }}
+{{<pretty_link url="https://www.anchor-lang.com/" title="Anchor Framework" description="The de facto standard for Solana program development" />}}
 
 ![Solana learning roadmap — From basics to building dApps](/images/blog/2026/solana-101/solana-roadmap.webp)
 
 ## Troubleshooting Common Issues
 
-{% collapse(title="My transaction failed - what went wrong?") %}
+{% <collapse title="My transaction failed - what went wrong?"> %}
 **Common causes:**
 - Insufficient SOL balance for transaction fees
 - Network congestion (try again in a moment)  
@@ -485,32 +485,32 @@ You've taken your first steps into Solana development! Here's what you can explo
 - Request more devnet SOL: `solana airdrop 1`
 - Check network status: `solana cluster-version`
 - Verify your connection: `solana config get`
-{% end %}
+{% </collapse> %}
 
-{% collapse(title="Wallet connection issues in browser") %}
+{% <collapse title="Wallet connection issues in browser"> %}
 **Steps to fix:**
 1. Make sure you have a Solana wallet installed (Phantom, Solflare)
 2. Set your wallet to Devnet in settings
 3. Refresh the webpage and try connecting again
 4. Check browser console for error messages
 5. Ensure you're serving the HTML file over HTTP (not file://)
-{% end %}
+{% </collapse> %}
 
-{% collapse(title="Local validator won't start") %}
+{% <collapse title="Local validator won't start"> %}
 **Common solutions:**
 - Kill existing validator processes: `pkill solana-test-validator`
 - Clear ledger data: `rm -rf test-ledger/`
 - Check port availability: `lsof -i :8899`
 - Restart with clean state: `solana-test-validator --reset`
-{% end %}
+{% </collapse> %}
 
 ## Conclusion
 
 You've successfully completed your first Solana development journey! From understanding the fundamentals of blockchain and Web3 to setting up your development environment and creating your own token, you've gained hands-on experience with one of the fastest-growing blockchain ecosystems.
 
-{% alert_info() %}
+{% <alert_info > %}
 **Remember:** Solana development is rapidly evolving. Stay updated with the latest documentation and community resources!
-{% end %}
+{% </alert_info> %}
 
 The skills you've learned today form the foundation for building sophisticated decentralized applications. Whether you want to create the next big DeFi protocol, build innovative NFT experiences, or develop tools for the Solana ecosystem, you now have the knowledge to get started.
 

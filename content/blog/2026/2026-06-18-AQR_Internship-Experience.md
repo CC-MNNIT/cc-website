@@ -35,20 +35,20 @@ The first stage was an **Online Assessment** consisting of both coding problems 
 
 Two problems were asked:
 
-1. **Dynamic Programming Problem** — {% badge_secondary() %}Medium{% end %}
-2. **Binary Search on Answer** — {% badge_warning() %}Medium-Hard{% end %}
+1. **Dynamic Programming Problem** — {% <badge_secondary > %}Medium{% </badge_secondary> %}
+2. **Binary Search on Answer** — {% <badge_warning > %}Medium-Hard{% </badge_warning> %}
 
 ### MCQs
 
 15–20 questions covering **CS fundamentals** including Operating Systems, Computer Networks, and DBMS.
 
-{% collapse(title="How to Prepare for OA") %}
+{% <collapse title="How to Prepare for OA"> %}
 
 - Practice **Dynamic Programming** problems on LeetCode (Medium to Hard)
 - Focus on **Binary Search on Answer** pattern problems
 - Revise **CS fundamentals** — OS, CN, DBMS
 - Solve previous AQR OA questions if available
-  {% end %}
+  {% </collapse> %}
 
 ---
 
@@ -58,15 +58,15 @@ Two problems were asked:
 - **Maximum rounds:** 4
 - **My experience:** 3 rounds
 
-{% alert_info() %}
+{% <alert_info > %}
 The interview process at AQR focuses heavily on **CS fundamentals, problem-solving approach, and project understanding**. Be prepared to explain not just _how_ you built something, but _why_ you made certain design decisions.
-{% end %}
+{% </alert_info> %}
 
 ---
 
 ## Round 1 — CS Fundamentals
 
-{% badge_primary() %}Duration: ~45 minutes{% end %}
+{% <badge_primary > %}Duration: ~45 minutes{% </badge_primary> %}
 
 Topics were picked from my resume: **Operating Systems**, **OOPs**, and **Computer Networks**. DBMS was intentionally left out as I hadn't prepared it.
 
@@ -89,16 +89,16 @@ Topics were picked from my resume: **Operating Systems**, **OOPs**, and **Comput
 - Virtual Functions and Pure Virtual Functions
 - Base and Derived class concepts
 
-{% alert_warning() %}
+{% <alert_warning > %}
 **Be honest about what you haven't studied.** I hadn't prepared DBMS and intentionally left it off my resume. Don't list subjects you can't discuss in depth — interviewers will probe deeper.
-{% end %}
+{% </alert_warning> %}
 
 ---
 
 ## Round 2 — Data Structures & Algorithms
 
-{% badge_primary() %}Duration: ~1 hour{% end %}
-{% badge_warning() %}Difficulty: Medium-Hard{% end %}
+{% <badge_primary > %}Duration: ~1 hour{% </badge_primary> %}
+{% <badge_warning > %}Difficulty: Medium-Hard{% </badge_warning> %}
 
 ### Problem Overview
 
@@ -123,14 +123,14 @@ The **Difference Array technique** was the key optimization here — instead of 
 
 > **Reference:** [Programming Techniques — The Difference Array](https://medium.com/@nishant_salhotra/programming-techniques-the-difference-array-5cb22aeedf84)
 
-{% collapse(title="Tips for DSA Rounds") %}
+{% <collapse title="Tips for DSA Rounds"> %}
 
 - **Think out loud** — interviewers want to hear your thought process
 - Don't jump to the optimal solution immediately — **build gradually**
 - Start with a brute force approach, then optimize
 - Don't hesitate to **take hints** from the interviewer
 - The thought process matters as much as the answer
-  {% end %}
+  {% </collapse> %}
 
 ---
 
@@ -169,13 +169,13 @@ Asked to write **actual working code** (not pseudo-code) for a Complex Numbers c
 
 ## Key Takeaways
 
-{% alert_success() %}
+{% <alert_success > %}
 **Key Lessons from AQR Interview Process:**
 
 - **Round 3** values _why_ you built something over _how_. Be ready to defend the idea behind your projects.
 - Be honest about what you haven't studied (e.g., DBMS) — don't list it on your resume if you haven't prepared it.
 - **For DSA rounds**, don't try to jump to the optimal solution in one go — think out loud, build gradually, and don't hesitate to take hints from the interviewer. The thought process matters as much as the answer.
-  {% end %}
+  {% </alert_success> %}
 
 ---
 

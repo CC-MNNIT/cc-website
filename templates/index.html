@@ -1,20 +1,13 @@
-{% import "macros/head.html" as macros_head %}
-{% import "macros/search.html" as macros_search %}
-{% import "macros/header.html" as macros_header %}
-{% import "macros/comments.html" as macros_comments %}
-{% import "macros/toc.html" as macros_toc %}
-{% import "macros/footer.html" as macros_footer %}
-{% import "macros/sidebar.html" as macros_sidebar %}
 
 <!DOCTYPE html>
-{{ macros_head::html_tag(config=config, lang=lang) }}
+{{<html_tag config={config} lang={lang} />}}
 <head>
     {% if page is defined %}
-        {{ macros_head::head(config=config, page=page, section=false, current_url=config.base_url) }}
+        {{<head config={config} page={page} section={false} current_url={config.base_url} />}}
     {% elif section is defined %}
-        {{ macros_head::head(config=config, page=false, section=section, current_url=config.base_url) }}
+        {{<head config={config} page={false} section={section} current_url={config.base_url} />}}
     {% else %}
-        {{ macros_head::head(config=config, page=false, section=false, current_url=config.base_url) }}
+        {{<head config={config} page={false} section={false} current_url={config.base_url} />}}
     {% endif %}
     {% block extra_head %}{% endblock extra_head %}
 
@@ -41,7 +34,7 @@
     </style>
 </head>
 <body>
-    {{ macros_search::search(config=config) }}
+    {{<search config={config} />}}
 
     {# Conditionally add lg:drawer-open - only for non-root pages #}
     {% set lang_root_path = "/" ~ lang ~ "/" %}
@@ -49,7 +42,7 @@
     <div class="drawer {% if not is_root_page %}lg:drawer-open{% endif %}">
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col pt-16">
-            {{ macros_header::header(config=config, lang=lang, is_root_page=is_root_page) }}
+            {% block header %}{{<header config={config} lang={lang} is_root_page={is_root_page} section={section} page={page} />}}{% endblock header %}
 
             {% set lang_root_path = "/" ~ lang ~ "/" %}
             {# Sidebar configuration with backward compatibility #}
@@ -59,34 +52,20 @@
             {% else %}
                 {% set disable_root_sidebar_hide = config.extra.disable_root_sidebar_hide | default(value=false) %}
             {% endif %}
-            {% if section is defined and (section.path == "/" or section.path == lang_root_path) and not disable_root_sidebar_hide %}
+{% set wide_layout = section is defined and (section.path == "/" or section.path == lang_root_path) and not disable_root_sidebar_hide %}
+            {% if wide_layout %}
             <div class="w-full">
                 <main class="prose w-full mx-auto">
-                    {% block content %}{% endblock content %}
-
-                    {{ macros_comments::comments(config=config) }}
-
-                    <nav class="pt-8 border-t border-gray-500/15">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="prev-nav-item">
-                                {% block prev_link %}{% endblock prev_link %}
-                            </div>
-                            <div class="next-nav-item">
-                                {% block next_link %}{% endblock next_link %}
-                            </div>
-                        </div>
-                    </nav>
-                </main>
-            </div>
             {% else %}
             <div class="p-8 w-full flex justify-center">
                 <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
                     <main class="prose w-full">
+            {% endif %}
                         {% block content %}{% endblock content %}
 
-                        {{ macros_comments::comments(config=config) }}
+                        {{<comments config={config} />}}
 
-                        <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                        <nav class="{% if wide_layout %}pt-8{% else %}mt-12{% endif %} pt-8 border-t border-gray-500/15">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="prev-nav-item">
                                     {% block prev_link %}{% endblock prev_link %}
@@ -97,16 +76,17 @@
                             </div>
                         </nav>
                     </main>
+            {% if not wide_layout %}
 
                     {% if page is defined %}
-                        {{ macros_toc::toc(page=page) }}
+                        {{<toc page={page} />}}
                     {% endif %}
                     {% if section is defined %}
-                        {{ macros_toc::toc(page=section) }}
+                        {{<toc page={section} />}}
                     {% endif %}
                 </div>
-            </div>
             {% endif %}
+            </div>
 
             <script>
               // Determine theme: localStorage > extra.default_colorset > cc-dark
@@ -171,18 +151,18 @@
               }
             </script>
 
-            {{ macros_footer::footer(config=config) }}
+            {{<footer config={config} />}}
         </div>
 
         {% set lang_root_path = "/" ~ lang ~ "/" %}
         {# Always render drawer-side for hamburger menu functionality #}
         <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
             {% if section is defined %}
-                {{ macros_sidebar::sidebar(config=config, lang=lang, current_path=current_path, section=section) }}
+                {{<sidebar config={config} lang={lang} current_path={current_path} section={section} page={page} />}}
             {% elif page is defined %}
-                {{ macros_sidebar::sidebar(config=config, lang=lang, current_path=current_path, page=page) }}
+                {{<sidebar config={config} lang={lang} current_path={current_path} section={false} page={page} />}}
             {% else %}
-                {{ macros_sidebar::sidebar(config=config, lang=lang, current_path=current_path, section=false) }}
+                {{<sidebar config={config} lang={lang} current_path={current_path} section={false} page={page} />}}
             {% endif %}
         </div>
         

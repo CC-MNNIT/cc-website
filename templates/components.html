@@ -1,0 +1,1132 @@
+@charset "UTF-8";  {# dummy: keeps zola from treating this as sass #}
+{# ============================================================
+   COMPONENTS (Tera v2) - global, hygienic replacements for the
+   former macros/ and shortcodes/. Defined once, called anywhere:
+     {{<name arg={var} str="lit" />}}          self-closing
+     {% <name args> %} body {% </name> %}      with body
+   ============================================================ #}
+
+{% component html_tag(config, lang="en") %}
+{%- set theme_color | trim %}
+{# Theme configuration with backward compatibility #}
+{# Priority: theme.dark_brightness/light_brightness (new per-theme) > theme.brightness (common) > brightness (legacy) #}
+{% if config.extra.theme is defined %}
+    {%- set colorset = config.extra.theme.colorset | default(value=config.extra.default_colorset | default(value='dark')) -%}
+    {%- set common_brightness = config.extra.theme.brightness | default(value=config.extra.brightness | default(value='normal')) -%}
+    {%- set dark_brightness = config.extra.theme.dark_brightness | default(value=common_brightness) -%}
+    {%- set light_brightness = config.extra.theme.light_brightness | default(value=common_brightness) -%}
+{% else %}
+    {%- set colorset = config.extra.default_colorset | default(value='dark') -%}
+    {%- set dark_brightness = config.extra.brightness | default(value='normal') -%}
+    {%- set light_brightness = config.extra.brightness | default(value='normal') -%}
+{% endif %}
+{%- if colorset == "dark" and dark_brightness == "darker" -%}
+#000000
+{%- elif colorset == "dark" and dark_brightness == "lighter" -%}
+#1e293b
+{%- elif colorset == "dark" -%}
+#0f172a
+{%- elif colorset == "light" and light_brightness == "darker" -%}
+#e2e8f0
+{%- elif colorset == "light" and light_brightness == "lighter" -%}
+#ffffff
+{%- elif colorset == "light" -%}
+#ffffff
+{%- else -%}
+#0f172a
+{%- endif -%}
+{%- endset %}
+<html lang="{{ lang }}" style="background-color: {{ theme_color }};">
+{% endcomponent html_tag %}
+
+{% component head(config, page, section, current_url="") %}
+{%- set theme_color | trim %}
+{# Theme configuration with backward compatibility #}
+{# Priority: theme.dark_brightness/light_brightness (new per-theme) > theme.brightness (common) > brightness (legacy) #}
+{% if config.extra.theme is defined %}
+    {%- set colorset = config.extra.theme.colorset | default(value=config.extra.default_colorset | default(value='dark')) -%}
+    {%- set common_brightness = config.extra.theme.brightness | default(value=config.extra.brightness | default(value='normal')) -%}
+    {%- set dark_brightness = config.extra.theme.dark_brightness | default(value=common_brightness) -%}
+    {%- set light_brightness = config.extra.theme.light_brightness | default(value=common_brightness) -%}
+{% else %}
+    {%- set colorset = config.extra.default_colorset | default(value='dark') -%}
+    {%- set dark_brightness = config.extra.brightness | default(value='normal') -%}
+    {%- set light_brightness = config.extra.brightness | default(value='normal') -%}
+{% endif %}
+{%- if colorset == "dark" and dark_brightness == "darker" -%}
+#000000
+{%- elif colorset == "dark" and dark_brightness == "lighter" -%}
+#1e293b
+{%- elif colorset == "dark" -%}
+#0f172a
+{%- elif colorset == "light" and light_brightness == "darker" -%}
+#e2e8f0
+{%- elif colorset == "light" and light_brightness == "lighter" -%}
+#ffffff
+{%- elif colorset == "light" -%}
+#ffffff
+{%- else -%}
+#0f172a
+{%- endif -%}
+{%- endset %}
+    {# current_url이 정의되어 있지 않으면 기본값으로 설정 #}
+    {% if current_url is not defined or current_url == "" %}
+        {% set current_url = config.base_url %}
+    {% endif %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Resource Hints for better performance -->
+    {% if config.extra.gtag and config.extra.gtag != "" %}
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    {% endif %}
+
+    <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
+    <script>
+        (function() {
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
+            
+            {# Theme configuration with backward compatibility #}
+            {# Priority: theme.dark_brightness/light_brightness (new per-theme) > theme.brightness (common) > brightness (legacy) #}
+            {% if config.extra.theme is defined %}
+                {% set theme_colorset = config.extra.theme.colorset | default(value=config.extra.default_colorset | default(value='dark')) %}
+                {% set common_brightness = config.extra.theme.brightness | default(value=config.extra.brightness | default(value='normal')) %}
+                {% set dark_brightness = config.extra.theme.dark_brightness | default(value=common_brightness) %}
+                {% set light_brightness = config.extra.theme.light_brightness | default(value=common_brightness) %}
+            {% else %}
+                {% set theme_colorset = config.extra.default_colorset | default(value='dark') %}
+                {% set common_brightness = config.extra.brightness | default(value='normal') %}
+                {% set dark_brightness = common_brightness %}
+                {% set light_brightness = common_brightness %}
+            {% endif %}
+            // Get default values from config
+            var defaultColorset = "{{ theme_colorset }}";
+            var darkBrightness = "{{ dark_brightness }}";
+            var lightBrightness = "{{ light_brightness }}";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
+            
+            // Expose brightness config for global use (e.g., js/theme.js)
+            window.darkBrightness = darkBrightness;
+            window.lightBrightness = lightBrightness;
+            
+            // Get theme from localStorage or use fallback
+            var currentUserTheme = localStorage.getItem('theme') || fallbackTheme;
+            var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+            
+            // Determine brightness based on current theme
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
+            
+            // Set theme and brightness attributes immediately
+            document.documentElement.setAttribute("data-theme", actualTheme);
+            document.documentElement.setAttribute("data-brightness", currentBrightness);
+        })();
+    </script>
+
+    <style>
+        {# Font configuration with backward compatibility #}
+        {# Priority: font.* (new) > custom_font_* (legacy) #}
+        {% if config.extra.font is defined %}
+            {% set font_enabled = config.extra.font.enabled | default(value=config.extra.custom_font_enabled | default(value=false)) %}
+            {% set font_name = config.extra.font.name | default(value=config.extra.custom_font_name | default(value='CustomFont')) %}
+            {% set font_path = config.extra.font.path | default(value=config.extra.custom_font_path | default(value='')) %}
+        {% else %}
+            {% set font_enabled = config.extra.custom_font_enabled | default(value=false) %}
+            {% set font_name = config.extra.custom_font_name | default(value='CustomFont') %}
+            {% set font_path = config.extra.custom_font_path | default(value='') %}
+        {% endif %}
+        {% if font_enabled and font_path != '' %}
+            {# Custom font configuration #}
+            {% if font_path is starting_with(pat="http://") or font_path is starting_with(pat="https://") %}
+                {# Remote font URL - use @import #}
+                @import url('{{ font_path | safe }}');
+            {% else %}
+                {# Local font file - use @font-face #}
+                @font-face {
+                    font-family: "{{ font_name }}";
+                    src: url('{{ get_url(path=font_path) | safe }}') format("woff");
+                    font-weight: 400;
+                    font-style: normal;
+                    font-display: swap;
+                }
+            {% endif %}
+            body {
+                font-family: "{{ font_name }}", sans-serif;
+            }
+        {% else %}
+            {# Default Pretendard font with font-display swap for better performance #}
+            @font-face {
+                font-family: "Pretendard-Regular";
+                src: url('{{ get_url(path="fonts/Pretendard-Regular.woff") | safe }}') format("woff");
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+            body {
+                font-family: "Pretendard-Regular", sans-serif;
+            }
+        {% endif %}
+    </style>
+
+    {% if page %}
+        {% if page.description %}
+            <meta name="description" content="{{ page.description }}" />
+        {% elif config.description %}
+            <meta name="description" content="{{ config.description }}" />
+        {% endif %}
+    {% elif config.description %}
+        <meta name="description" content="{{ config.description }}" />
+    {% endif %}
+
+    <title>
+      {%- if page and page.title -%}
+        {{ page.title }} | {{ config.title | default(value="CC Club") }}
+      {%- elif section and section.title -%}
+        {{ section.title }} | {{ config.title | default(value="CC Club") }}
+      {%- elif config.title -%}
+        {{ config.title }}
+      {%- else -%}
+        CC Club
+      {%- endif -%}
+    </title>
+
+    {# Google Analytics gtag.js integration #}
+    {% if config.extra.gtag and config.extra.gtag != "" %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.gtag }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ config.extra.gtag }}');
+    </script>
+    {% endif %}
+
+      <!-- SEO: Open Graph / Twitter Card -->
+      <meta property="og:title" content="
+        {%- if page and page.title -%}
+          {{ page.title }} | {{ config.title | default(value='CC Club') }}
+        {%- elif section and section.title -%}
+          {{ section.title }} | {{ config.title | default(value='CC Club') }}
+        {%- elif config.title -%}
+          {{ config.title }}
+        {%- else -%}
+          CC Club
+        {%- endif -%}
+      " />
+      <meta property="og:description" content="
+        {%- if page and page.description -%}
+          {{ page.description }}
+        {%- elif section and section.description -%}
+          {{ section.description }}
+        {%- elif config.description -%}
+          {{ config.description }}
+        {%- endif -%}
+      " />
+      <meta property="og:url" content="{{ current_url | safe }}" />
+      <meta property="og:type" content="website" />
+      {% if page and page.extra.thumbnail %}
+      <meta property="og:image" content="{{ get_url(path=page.extra.thumbnail) | safe }}" />
+      {% elif config.extra.default_thumbnail %}
+      <meta property="og:image" content="{{ get_url(path=config.extra.default_thumbnail) | safe }}" />
+      {% endif %}
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="{% if page %}{{ page.title }}{% else %}{{ config.title }}{% endif %}" />
+      <meta name="twitter:description" content="
+        {%- if page and page.description -%}
+          {{ page.description }}
+        {%- elif section and section.description -%}
+          {{ section.description }}
+        {%- elif config.description -%}
+          {{ config.description }}
+        {%- endif -%}
+      " />
+      {# Twitter configuration with backward compatibility #}
+      {# Priority: twitter.* (new) > twitter_* (legacy) #}
+      {% if config.extra.twitter is defined %}
+          {% set twitter_site = config.extra.twitter.site | default(value=config.extra.twitter_site | default(value="")) %}
+          {% set twitter_creator = config.extra.twitter.creator | default(value=config.extra.twitter_creator | default(value="")) %}
+      {% else %}
+          {% set twitter_site = config.extra.twitter_site | default(value="") %}
+          {% set twitter_creator = config.extra.twitter_creator | default(value="") %}
+      {% endif %}
+      {% if twitter_site != "" %}
+      <meta name="twitter:site" content="{{ twitter_site }}" />
+      {% endif %}
+      {% if twitter_creator != "" %}
+      <meta name="twitter:creator" content="{{ twitter_creator }}" />
+      {% endif %}
+      {% if page and page.extra.thumbnail %}
+      <meta name="twitter:image" content="{{ get_url(path=page.extra.thumbnail) | safe }}" />
+      {% elif config.extra.default_thumbnail %}
+      <meta name="twitter:image" content="{{ get_url(path=config.extra.default_thumbnail) | safe }}" />
+      {% endif %}
+
+      <!-- Browser address bar color -->
+      <meta name="theme-color" content="{{ theme_color }}">
+
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="{{ get_url(path='icons/favicon-96x96.png') | safe }}" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="{{ get_url(path='icons/favicon.svg') | safe }}" />
+      <link rel="shortcut icon" href="{{ get_url(path='icons/favicon.ico') | safe }}" />
+      <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='icons/apple-touch-icon.png') | safe }}" />
+      <link rel="manifest" href="{{ get_url(path='icons/site.webmanifest') | safe }}" />
+
+      <!-- CSS -->
+    <link rel="stylesheet" href="{{ get_url(path="css/site.css") | safe }}">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="{{ get_url(path="fonts/Pretendard-Regular.woff") | safe }}" as="font" type="font/woff" crossorigin>
+
+    <!-- Defer non-critical scripts -->
+    <script defer src="{{ get_url(path="js/copy_code.js") | safe }}"></script>
+    <script defer src="{{ get_url(path="js/copy_heading_link.js") | safe }}"></script>
+    
+    <!-- Lazy load Mermaid and KaTeX - only when needed -->
+    <script>
+        // Lazy load KaTeX and Mermaid when needed
+        window.addEventListener('DOMContentLoaded', function() {
+            // Check for both KaTeX inline and block elements in one pass
+            var katexInlineElements = document.querySelectorAll('.katex-inline');
+            var katexBlockElements = document.querySelectorAll('.katex-block');
+            var hasKatex = katexInlineElements.length > 0 || katexBlockElements.length > 0;
+            var hasMermaid = document.querySelector('.mermaid');
+            
+            // Load KaTeX if math elements are present
+            if (hasKatex) {
+                // Load KaTeX CSS first
+                var katexCSS = document.createElement('link');
+                katexCSS.rel = 'stylesheet';
+                katexCSS.href = '{{ get_url(path="css/katex.min.css") | safe }}';
+                document.head.appendChild(katexCSS);
+                
+                // Load KaTeX JS
+                var katexScript = document.createElement('script');
+                katexScript.src = '{{ get_url(path="js/katex.min.js") | safe }}';
+                katexScript.onload = function() {
+                    // Render inline elements
+                    katexInlineElements.forEach(function(elem) {
+                        var texContent = elem.textContent || elem.innerText;
+                        try {
+                            katex.render(texContent, elem, { 
+                                throwOnError: false,
+                                displayMode: false
+                            });
+                        } catch(e) {
+                            console.error('KaTeX render error:', e);
+                        }
+                    });
+                    
+                    // Render block elements
+                    katexBlockElements.forEach(function(elem) {
+                        var texContent = elem.textContent || elem.innerText;
+                        try {
+                            katex.render(texContent, elem, { 
+                                throwOnError: false,
+                                displayMode: true
+                            });
+                        } catch(e) {
+                            console.error('KaTeX render error:', e);
+                        }
+                    });
+                };
+                document.head.appendChild(katexScript);
+            }
+            
+            // Load Mermaid if diagram elements are present
+            if (hasMermaid) {
+                var mermaidScript = document.createElement('script');
+                mermaidScript.src = '{{ get_url(path="js/mermaid.min.js") | safe }}';
+                mermaidScript.onload = function() {
+                    // Initialize Mermaid after loading
+                    if (typeof window.initMermaid === 'function') {
+                        window.initMermaid();
+                    }
+                };
+                document.head.appendChild(mermaidScript);
+            }
+        });
+    </script>
+{% endcomponent head %}
+
+{% component search(config) %}
+{% if config.build_search_index %}
+<!-- Search Modal -->
+<input type="checkbox" id="search-modal" class="modal-toggle" />
+<div class="modal modal-middle">
+    <div class="modal-box relative max-w-2xl p-0 bg-base-100 shadow-2xl">
+        <label for="search-modal" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 z-10">✕</label>
+        <div class="search-container">
+            <!-- Search Input Container -->
+            <div class="search-input-container px-6 pt-6 pb-4 border-b border-base-300/30">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="search-icon absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-base-content/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input id="search" type="search" placeholder="Search documentation..." class="search-input w-full pl-12 pr-4 py-3 text-base bg-transparent border-0 focus:outline-none focus:ring-0 text-base-content placeholder:text-base-content/40">
+                </div>
+            </div>
+            <!-- Search Results Container -->
+            <div class="search-results-container px-2 py-2 h-96 overflow-y-auto">
+                <div class="search-results__header px-4 py-2 text-xs text-base-content/60"></div>
+                <ul class="search-results__items space-y-1"></ul>
+            </div>
+            <!-- Search Footer -->
+            <div class="search-footer px-6 py-3 border-t border-base-300/30 flex items-center justify-end gap-4 text-xs text-base-content/50">
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↑</kbd>
+                    <kbd class="kbd kbd-xs">↓</kbd>
+                    <span>to navigate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↵</kbd>
+                    <span>to select</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">esc</kbd>
+                    <span>to close</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endcomponent search %}
+
+{% component header(config, lang, is_root_page, section, page) %}
+{% set lang = lang | default(value="en") %}
+{% set is_root_page = is_root_page | default(value=false) %}
+{% set section = section | default(value=false) %}
+{% set page = page | default(value=false) %}
+{# Re-use the theme's header macro content but fix the navigation URLs #}
+{# Resolve logo configuration with backward compatibility #}
+{% if config.extra.logo is defined %}
+{% set logo_text = config.extra.logo.text | default(value=config.extra.logo_text | default(value=config.title)) %}
+{% set logo_image_path = config.extra.logo.image_path | default(value=config.extra.logo_image_path | default(value=""))
+%}
+{% set logo_image_padding = config.extra.logo.image_padding | default(value=config.extra.logo_image_padding |
+default(value="")) %}
+{% set logo_dark_image_path = config.extra.logo.dark_image_path | default(value="") %}
+{% set logo_light_image_path = config.extra.logo.light_image_path | default(value="") %}
+{% else %}
+{% set logo_text = config.extra.logo_text | default(value=config.title) %}
+{% set logo_image_path = config.extra.logo_image_path | default(value="") %}
+{% set logo_image_padding = config.extra.logo_image_padding | default(value="") %}
+{% set logo_dark_image_path = "" %}
+{% set logo_light_image_path = "" %}
+{% endif %}
+
+{% set has_theme_specific_logos = logo_dark_image_path != "" or logo_light_image_path != "" %}
+
+{# Get current path for active link detection #}
+{% if section %}
+{% set current_path = section.path %}
+{% elif page %}
+{% set current_path = page.path %}
+{% else %}
+{% set current_path = "/" %}
+{% endif %}
+
+<div class="navbar opacity-95 fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-500/15 backdrop-blur-3xl">
+    <!-- Mobile hamburger (and Desktop on Root Page) -->
+    <div class="flex-none {% if not is_root_page %}lg:hidden{% endif %}">
+        <label for="my-drawer-2" class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </label>
+    </div>
+    <!-- Desktop sidebar toggle -->
+    {% if not is_root_page %}
+    <div class="flex-none hidden lg:block">
+        <button id="desktop-sidebar-toggle" class="btn btn-square btn-ghost" aria-label="Toggle sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+    {% endif %}
+    <!-- Logo -->
+    <div class="flex-1">
+        <a href="{{ get_url(path='/') | safe }}"
+            class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link"
+            style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+            {% if has_theme_specific_logos %}
+            {% set dark_logo_src = logo_dark_image_path %}
+            {% if dark_logo_src == "" %}{% set dark_logo_src = logo_image_path %}{% endif %}
+            {% set light_logo_src = logo_light_image_path %}
+            {% if light_logo_src == "" %}{% set light_logo_src = logo_image_path %}{% endif %}
+            <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ dark_logo_src) }}" alt="{{ logo_text }}"
+                class="h-18 w-auto logo-dark" data-logo-type="dark" {% if logo_image_padding !=""
+                %}style="padding: {{ logo_image_padding }};" {% endif %} />
+            <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ light_logo_src) }}" alt="{{ logo_text }}"
+                class="h-18 w-auto logo-light hidden" data-logo-type="light" {% if logo_image_padding !=""
+                %}style="padding: {{ logo_image_padding }};" {% endif %} />
+            {% elif logo_image_path != "" %}
+            <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ logo_image_path) }}" alt="{{ logo_text }}"
+                class="h-18 w-auto" {% if logo_image_padding !="" %}style="padding: {{ logo_image_padding }};" {% endif
+                %} />
+            {% else %}
+            {{ logo_text }}
+            {% endif %}
+        </a>
+    </div>
+    <!-- Desktop AND Mobile Menu - Theme toggle always visible -->
+    <div class="flex-none flex lg:flex">
+        <ul class="menu menu-horizontal px-1 items-center">
+            <!-- Desktop navigation items (hidden on mobile) -->
+            <div class="hidden lg:flex lg:contents">
+                {% set current_nav = config.extra.nav %}
+                {% if lang and lang != config.default_language %}
+                {% set nav_key = "nav_" ~ lang %}
+                {% if config.extra[nav_key] %}
+                {% set current_nav = config.extra[nav_key] %}
+                {% endif %}
+                {% endif %}
+                {% if current_nav %}
+                {% for item in current_nav %}
+                {% if item.type == "dropdown" %}
+                <li class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        {% if item.icon %}<i class="{{ item.icon }}"></i>{% endif %}
+                        {{ item.name }}
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
+                        {% for member in item.members %}
+                        {% set is_member_active = current_path is starting_with(pat=member.url) %}
+                        <li>
+                            {% if member.url is starting_with(pat="http") %}
+                            <a class="btn btn-ghost hover:no-underline {% if is_member_active %}active-nav{% endif %}"
+                                href="{{ member.url | safe }}" target="_blank" rel="noopener noreferrer">
+                                {% else %}
+                                <a class="btn btn-ghost hover:no-underline {% if is_member_active %}active-nav{% endif %}"
+                                    href="{{ get_url(path=member.url) | safe }}">
+                                    {% endif %}
+                                    {% if member.icon %}<i class="{{ member.icon }}"></i>{% endif %}
+                                    {{ member.name }}
+                                </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% else %}
+                {% set is_active = false %}
+                {% if item.url == "/" %}
+                {% set is_active = current_path == "/" %}
+                {% else %}
+                {% set is_active = current_path is starting_with(pat=item.url) %}
+                {% endif %}
+                <li>
+                    {% if item.url is starting_with(pat="http") %}
+                    <a class="btn btn-ghost hover:no-underline {% if is_active %}active-nav{% endif %}"
+                        href="{{ item.url | safe }}" target="_blank" rel="noopener noreferrer">
+                        {% else %}
+                        <a class="btn btn-ghost hover:no-underline {% if is_active %}active-nav{% endif %}"
+                            href="{{ get_url(path=item.url) | safe }}">
+                            {% endif %}
+                            {% if item.icon %}<i class="{{ item.icon }}"></i>{% endif %}
+                            {{ item.name }}
+                        </a>
+                </li>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+
+                {% if config.languages | length > 0 %}
+                <li>
+                    <div class="dropdown dropdown-end p-0">
+                        <div tabindex="0" role="button" class="btn btn-ghost px-2" aria-label="Languages">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" width="20" height="20"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M4 5h7"></path>
+                                <path d="M7 4c0 4.846 0 7 .5 8"></path>
+                                <path
+                                    d="M10 8.5c0 2.286 -2 4.5 -3.5 4.5s-2.5 -1.135 -2.5 -2c0 -2 1 -3 3 -3s5 .57 5 2.857c0 1.524 -.667 2.571 -2 3.143">
+                                </path>
+                                <path d="M12 20l4 -9l4 9"></path>
+                                <path d="M19.1 18h-6.2"></path>
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-lg min-w-max whitespace-nowrap">
+                            {% for lang_code, lang_config in config.languages %}
+                            {% if lang_code != lang %}
+                            {% if page and page.translations %}
+                            {% set translation = [t for t in page.translations if t.lang == lang_code] | first %}
+                            {% if translation %}
+                            <li><a href="{{ translation.permalink | safe }}">{% if config.extra.lang_aliases and
+                                    config.extra.lang_aliases[lang_code] %}{{ config.extra.lang_aliases[lang_code] }}{%
+                                    else %}{{ lang_config.name | default(value=lang_code) }}{% endif %}</a></li>
+                            {% else %}
+                            <li><a href="{{ get_url(path=" /", lang=lang_code) | safe }}">{% if
+                                    config.extra.lang_aliases and config.extra.lang_aliases[lang_code] %}{{
+                                    config.extra.lang_aliases[lang_code] }}{% else %}{{ lang_config.name |
+                                    default(value=lang_code) }}{% endif %}</a></li>
+                            {% endif %}
+                            {% elif section and section.translations %}
+                            {% set translation = [t for t in section.translations if t.lang == lang_code] | first %}
+                            {% if translation %}
+                            <li><a href="{{ translation.permalink | safe }}">{% if config.extra.lang_aliases and
+                                    config.extra.lang_aliases[lang_code] %}{{ config.extra.lang_aliases[lang_code] }}{%
+                                    else %}{{ lang_config.name | default(value=lang_code) }}{% endif %}</a></li>
+                            {% else %}
+                            <li><a href="{{ get_url(path=" /", lang=lang_code) | safe }}">{% if
+                                    config.extra.lang_aliases and config.extra.lang_aliases[lang_code] %}{{
+                                    config.extra.lang_aliases[lang_code] }}{% else %}{{ lang_config.name |
+                                    default(value=lang_code) }}{% endif %}</a></li>
+                            {% endif %}
+                            {% else %}
+                            <li><a href="{{ get_url(path=" /", lang=lang_code) | safe }}">{% if
+                                    config.extra.lang_aliases and config.extra.lang_aliases[lang_code] %}{{
+                                    config.extra.lang_aliases[lang_code] }}{% else %}{{ lang_config.name |
+                                    default(value=lang_code) }}{% endif %}</a></li>
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+                {% endif %}
+            </div>
+
+            {% if config.extra.theme is defined %}
+            {% set disable_theme_toggle = config.extra.theme.disable_toggle |
+            default(value=config.extra.disable_theme_toggle | default(value=false)) %}
+            {% else %}
+            {% set disable_theme_toggle = config.extra.disable_theme_toggle | default(value=false) %}
+            {% endif %}
+            {% if not disable_theme_toggle %}
+            <li class="flex items-center">
+                <label class="swap swap-rotate btn btn-ghost btn-circle">
+                    <input type="checkbox" class="theme-controller" value="cc-dark" aria-labelledby="swap color" />
+                    <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+                    <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                </label>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+
+{# Active link enhancement script - runs after page load #}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const currentPath = window.location.pathname;
+
+        const navLinks = document.querySelectorAll('.navbar a[href]:not(.logo-link)');
+
+        navLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
+            if (link.classList.contains('active-nav')) {
+                return;
+            }
+
+            let isActive = false;
+
+            if (linkPath === '/') {
+                isActive = (currentPath === '/' || currentPath === '');
+            } else {
+                isActive = currentPath.startsWith(linkPath);
+            }
+
+            if (isActive) {
+                link.classList.add('active-nav');
+            } else {
+                link.classList.remove('active-nav');
+            }
+        });
+    });
+</script>
+{% endcomponent header %}
+
+{% component comments(config) %}
+{% if config.extra.comments and config.extra.comments.enabled %}
+    <div id="comments" class="mt-12">
+        {% if config.extra.comments.system == "giscus" %}
+            <script src="https://giscus.app/client.js"
+                data-repo="{{ config.extra.comments.repo }}"
+                data-repo-id="{{ config.extra.comments.repo_id }}"
+                data-category="{{ config.extra.comments.category }}"
+                data-category-id="{{ config.extra.comments.category_id }}"
+                data-mapping="{{ config.extra.comments.mapping | default(value='pathname') }}"
+                data-strict="{{ config.extra.comments.strict | default(value='0') }}"
+                data-reactions-enabled="{{ config.extra.comments.reactions_enabled | default(value='1') }}"
+                data-emit-metadata="{{ config.extra.comments.emit_metadata | default(value='0') }}"
+                data-input-position="{{ config.extra.comments.input_position | default(value='bottom') }}"
+                data-theme="{{ config.extra.comments.theme | default(value='preferred_color_scheme') }}"
+                data-lang="{{ config.extra.comments.lang | default(value='en') }}"
+                crossorigin="anonymous"
+                async>
+            </script>
+        {% elif config.extra.comments.system == "utterances" %}
+            <script src="https://utteranc.es/client.js"
+                repo="{{ config.extra.comments.repo }}"
+                issue-term="{{ config.extra.comments.issue_term | default(value='pathname') }}"
+                theme="{{ config.extra.comments.theme | default(value='github-light') }}"
+                crossorigin="anonymous"
+                async>
+            </script>
+        {% endif %}
+    </div>
+{% endif %}
+{% endcomponent comments %}
+
+{% component toc(page) %}
+{% if page.toc %}
+<div class="hidden lg:block" {% if page.extra.toc_expand %}data-toc-expand="true"{% endif %}>
+    <div class="sticky top-20 px-4 py-2 border-l border-gray-500/15">
+        <h4 class="text-lg font-bold mb-1">ON THIS PAGE</h4>
+            <ul class="menu menu-sm toc-menu">
+            {% for h1 in page.toc %}
+                <li>
+                    {% if h1.children %}
+                    <details class="toc-details" {% if page.extra.toc_expand %}open{% endif %}>
+                        <summary>
+                            <a href="{{ h1.permalink | safe }}" class="toc-link">{{ h1.title }}</a>
+                        </summary>
+                        <ul>
+                            {% for h2 in h1.children %}
+                                <li>
+                                    <a href="{{ h2.permalink | safe }}" class="toc-link">{{ h2.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </details>
+                    {% else %}
+                    <a href="{{ h1.permalink | safe }}" class="toc-link">{{ h1.title }}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+    </div>
+</div>
+{% endif %}
+{% endcomponent toc %}
+
+{% component footer(config) %}
+<footer class="site-footer">
+    <!-- Main footer content -->
+    <div class="w-full py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer grid -->
+            <div class="footer-content">
+                
+                <!-- Column 1: About/Logo -->
+                <div class="footer-col space-y-4">
+                    <div class="footer-logo-container">
+                        {% if config.extra.footer_logo %}
+                        <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ config.extra.footer_logo) }}" alt="Logo" class="footer-logo">
+                        {% endif %}
+                        <h3>
+                            {{ config.extra.footer_title | default(value=config.title) }}
+                        </h3>
+                    </div>
+                    <p>
+                        {{ config.extra.footer_description | default(value="Building amazing things with code since 2010. Join our community of developers and innovators.") }}
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        {% if config.extra.footer_links %}
+                            {% for link in config.extra.footer_links %}
+                            <li>
+                                <a href="{{ link.url }}">
+                                    {{ link.name }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        {% else %}
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Projects</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col space-y-4">
+                    <h4>Contact</h4>
+                    <div class="space-y-3">
+                        {% if config.extra.footer_email %}
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            {{ config.extra.footer_email }}
+                        </p>
+                        {% endif %}
+                        {% if config.extra.footer_address %}
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            {{ config.extra.footer_address }}
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        {% if config.extra.social_links %}
+                            {% if config.extra.social_links.youtube %}
+                            <a href="{{ config.extra.social_links.youtube }}" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            {% endif %}
+                            {% if config.extra.social_links.instagram %}
+                            <a href="{{ config.extra.social_links.instagram }}" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            {% endif %}
+                            {% if config.extra.social_links.twitter %}
+                            <a href="{{ config.extra.social_links.twitter }}" aria-label="Twitter/X">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            {% endif %}
+                            {% if config.extra.social_links.linkedin %}
+                            <a href="{{ config.extra.social_links.linkedin }}" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            {% endif %}
+                            {% if config.extra.social_links.github %}
+                            <a href="{{ config.extra.social_links.github }}" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            {% endif %}
+                            {% if config.extra.social_links.discord %}
+                            <a href="{{ config.extra.social_links.discord }}" aria-label="Discord">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    <p>
+                        {{ config.extra.footer_social_text | default(value="Connect to stay updated about our events, projects and blogs!") }}
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+        <p>&copy; {{ now() | date(format="%Y") }} {{ config.title }}. All rights reserved.</p>
+        <div class="footer-made-with">
+            <p>Made with</p>
+            <i class="fas fa-heart"></i>
+            <p>by {{ config.extra.footer_made_by | default(value="Team CC") }}</p>
+        </div>
+    </div>
+</footer>
+{% endcomponent footer %}
+
+{% component sidebar(config, lang, current_path, section, page) %}
+{% set section = section | default(value=false) %}
+{% set page = page | default(value=false) %}
+{# Sidebar configuration with backward compatibility #}
+{# Priority: sidebar.* (new) > sidebar_expand_depth (legacy) #}
+{% if config.extra.sidebar is defined %}
+    {% set sidebar_expand_depth = config.extra.sidebar.expand_depth | default(value=config.extra.sidebar_expand_depth | default(value=0)) | int %}
+{% else %}
+    {% if config.extra.sidebar_expand_depth is defined %}{% set sidebar_expand_depth = config.extra.sidebar_expand_depth | int %}{% else %}{% set sidebar_expand_depth = 0 %}{% endif %}
+{% endif %}
+{# Normalize current_path for comparison by removing language prefix #}
+{% if lang != config.default_language and current_path is starting_with(pat="/" ~ lang ~ "/") %}
+    {% set normalized_current_path = current_path | replace(from="/" ~ lang, to="", count=1) %}
+{% else %}
+    {% set normalized_current_path = current_path %}
+{% endif %}
+
+{# Determine the root section for the sidebar #}
+{% set root_section = false %}
+{% if section %}
+    {# If we are in a section, find the top-level parent #}
+    {% if section.components | length > 0 %}
+        {% set root_path = section.components | first %}
+        {% set root_section = get_section(path=root_path ~ "/_index.md") %}
+    {% else %}
+        {# We are at root, but we shouldn't be showing sidebar here usually #}
+        {% set root_section = section %}
+    {% endif %}
+{% elif page %}
+    {# If we are in a page, find the top-level parent #}
+    {% if page.components | length > 0 %}
+        {% set root_path = page.components | first %}
+        {% set root_section = get_section(path=root_path ~ "/_index.md") %}
+    {% endif %}
+{% endif %}
+
+{# Fallback to global index if something goes wrong (shouldn't happen with new logic) #}
+{% if not root_section %}
+    {% set root_section = get_section(path="_index.md") %}
+{% endif %}
+
+<label for="my-drawer-2" class="drawer-overlay"></label>
+<div class="mt-16 w-68 h-[calc(100vh-4rem)] bg-base-100 text-base-content flex flex-col overflow-auto thin-scrollbar">
+    {% if config.build_search_index %}
+    <div class="px-2 pt-4 pb-0 flex flex-col items-center gap-2">
+        <div class="w-full flex items-center gap-2">
+            <label for="search-modal" class="input w-full flex items-center justify-between text-left bg-base-100 cursor-pointer border-gray-500/15 hover:border-gray-500/55 hover:border-1 transition" aria-label="검색">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="text-gray-400"><kbd class="kbd">⌘</kbd><kbd class="kbd">K</kbd></span>
+            </label>
+        </div>
+    </div>
+    {% endif %}
+    
+    {# Mobile-only quick navigation - shows main nav items #}
+    <div class="lg:hidden px-4 py-2 border-b border-gray-500/10">
+        <div class="text-xs font-semibold text-gray-400 mb-2">QUICK NAV</div>
+        <ul class="menu menu-compact">
+            {% if config.extra.nav is defined %}
+                {% for item in config.extra.nav %}
+                    {% if item.type == "url" %}
+                        <li>
+                            {% if item.url is starting_with(pat="http") %}
+                                <a href="{{ item.url | safe }}" class="text-sm" target="_blank" rel="noopener noreferrer">
+                            {% else %}
+                                <a href="{{ get_url(path=item.url) | safe }}" class="text-sm">
+                            {% endif %}
+                            {% if item.icon %}<i class="{{ item.icon }} mr-2"></i>{% endif %}
+                            {{ item.name }}
+                        </a></li>
+                    {% elif item.type == "dropdown" and item.members %}
+                        {% for member in item.members %}
+                            <li>
+                                {% if member.url is starting_with(pat="http") %}
+                                    <a href="{{ member.url | safe }}" class="text-sm" target="_blank" rel="noopener noreferrer">
+                                {% else %}
+                                    <a href="{{ get_url(path=member.url) | safe }}" class="text-sm">
+                                {% endif %}
+                                {% if member.icon %}<i class="{{ member.icon }} mr-2"></i>{% endif %}
+                                {{ member.name }}
+                            </a></li>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+    
+    {# Check if section has content #}
+    {% set has_content = root_section.pages | length > 0 or root_section.subsections | length > 0 %}
+    
+    {# Sidebar Header - Link back to section root #}
+    <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
+        <a href="{{ root_section.permalink }}" class="hover:text-primary transition-colors">{{ root_section.title }}</a>
+    </div>
+
+    {% if not has_content %}
+    {# Fallback: Show all top-level sections when current section is empty #}
+    <ul class="hidden lg:block menu w-full flex-grow">
+        <li class="menu-title">
+            <span class="text-xs text-gray-400">ALL SECTIONS</span>
+        </li>
+        {% set site_root = get_section(path="_index.md") %}
+        {% for section_path in site_root.subsections %}
+            {% set s = get_section(path=section_path) %}
+            {% if not s.transparent %}
+                <li><a href="{{ get_url(path=s.path, lang=lang) | safe }}" class="hover:no-underline">
+                    {{ s.title }}
+                </a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% else %}
+    {# Regular sidebar content #}
+    <ul class="hidden lg:block menu w-full flex-grow">
+        {# Level 1 - Pages in Root Section #}
+        {% for p in root_section.pages %}
+            <li {% if normalized_current_path == p.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=p.path, lang=lang) | safe }}">{{ p.title }}</a></li>
+        {% endfor %}
+        
+        {# Level 1 - Subsections #}
+        {% for s1_path in root_section.subsections %}
+            {% set s1 = get_section(path=s1_path) %}
+            {# Skip transparent sections (e.g., blog year folders) #}
+            {% if s1.transparent %}{% continue %}{% endif %}
+            {% set is_active1 = normalized_current_path is starting_with(pat=s1.path) %}
+            <li>
+                {% if s1.subsections or s1.pages %}
+                    <details {% if is_active1 or sidebar_expand_depth >= 1 %}open{% endif %}>
+                        <summary {% if normalized_current_path == s1.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=s1.path, lang=lang) | safe }}">{{ s1.title }}</a></summary>
+                        <ul>
+                            {# Level 2 #}
+                            {% for p in s1.pages %}
+                                <li {% if normalized_current_path == p.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=p.path, lang=lang) | safe }}">{{ p.title }}</a></li>
+                            {% endfor %}
+                            {% for s2_path in s1.subsections %}
+                                {% set s2 = get_section(path=s2_path) %}
+                                {# Skip transparent sections #}
+                                {% if s2.transparent %}{% continue %}{% endif %}
+                                {% set is_active2 = normalized_current_path is starting_with(pat=s2.path) %}
+                                <li>
+                                    {% if s2.subsections or s2.pages %}
+                                        <details {% if is_active2 or sidebar_expand_depth >= 2 %}open{% endif %}>
+                                            <summary {% if normalized_current_path == s2.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=s2.path, lang=lang) | safe }}">{{ s2.title }}</a></summary>
+                                            <ul>
+                                                {# Level 3 #}
+                                                {% for p in s2.pages %}
+                                                    <li {% if normalized_current_path == p.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=p.path, lang=lang) | safe }}">{{ p.title }}</a></li>
+                                                {% endfor %}
+                                                {% for s3_path in s2.subsections %}
+                                                    {% set s3 = get_section(path=s3_path) %}
+                                                    {# Skip transparent sections #}
+                                                    {% if s3.transparent %}{% continue %}{% endif %}
+                                                    {% set is_active3 = normalized_current_path is starting_with(pat=s3.path) %}
+                                                    <li>
+                                                        {% if s3.subsections or s3.pages %}
+                                                            <details {% if is_active3 or sidebar_expand_depth >= 3 %}open{% endif %}>
+                                                                <summary {% if normalized_current_path == s3.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=s3.path, lang=lang) | safe }}">{{ s3.title }}</a></summary>
+                                                                <ul>
+                                                                    {# Level 4 #}
+                                                                    {% for p in s3.pages %}
+                                                                        <li {% if normalized_current_path == p.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=p.path, lang=lang) | safe }}">{{ p.title }}</a></li>
+                                                                    {% endfor %}
+                                                                    {% for s4_path in s3.subsections %}
+                                                                        {% set s4 = get_section(path=s4_path) %}
+                                                                        {# Skip transparent sections #}
+                                                                        {% if s4.transparent %}{% continue %}{% endif %}
+                                                                        {% set is_active4 = normalized_current_path is starting_with(pat=s4.path) %}
+                                                                        <li>
+                                                                            {% if s4.subsections or s4.pages %}
+                                                                                <details {% if is_active4 or sidebar_expand_depth >= 4 %}open{% endif %}>
+                                                                                    <summary {% if normalized_current_path == s4.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=s4.path, lang=lang) | safe }}">{{ s4.title }}</a></summary>
+                                                                                    <ul>
+                                                                                        {# Level 5 #}
+                                                                                        {% for p in s4.pages %}
+                                                                                            <li {% if normalized_current_path == p.path %}class="rounded bg-gray-500/15"{% endif %}><a class="hover:no-underline" href="{{ get_url(path=p.path, lang=lang) | safe }}">{{ p.title }}</a></li>
+                                                                                        {% endfor %}
+                                                                                        {% for s5_path in s4.subsections %}
+                                                                                            {% set s5 = get_section(path=s5_path) %}
+                                                                                            <li><a {% if normalized_current_path == s5.path %}class="rounded bg-gray-500/15"{% endif %} href="{{ get_url(path=s5.path, lang=lang) | safe }}">{{ s5.title }}</a></li>
+                                                                                        {% endfor %}
+                                                                                    </ul>
+                                                                                </details>
+                                                                            {% else %}<a {% if normalized_current_path == s4.path %}class="rounded bg-gray-500/15"{% endif %} href="{{ get_url(path=s4.path, lang=lang) | safe }}">{{ s4.title }}</a>{% endif %}
+                                                                        </li>
+                                                                    {% endfor %}
+                                                                </ul>
+                                                            </details>
+                                                        {% else %}<a {% if normalized_current_path == s3.path %}class="rounded bg-gray-500/15"{% endif %} href="{{ get_url(path=s3.path, lang=lang) | safe }}">{{ s3.title }}</a>{% endif %}
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </details>
+                                    {% else %}<a {% if normalized_current_path == s2.path %}class="rounded bg-gray-500/15"{% endif %} href="{{ get_url(path=s2.path, lang=lang) | safe }}">{{ s2.title }}</a>{% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </details>
+                {% else %}<a {% if normalized_current_path == s1.path %}class="rounded bg-gray-500/15"{% endif %} href="{{ get_url(path=s1.path, lang=lang) | safe }}">{{ s1.title }}</a>{% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+{% endcomponent sidebar %}
+
+
+{# ---- shortcodes as components ---- #}
+
+{% component alert_info(style="soft") %}
+<div role="alert" class="alert alert-info alert-{{ style }}"><div>{{ body | markdown | safe }}</div></div>{% endcomponent alert_info %}
+
+{% component alert_success(style="soft") %}
+<div role="alert" class="alert alert-success alert-{{ style }}"><div>{{ body | markdown | safe }}</div></div>{% endcomponent alert_success %}
+
+{% component alert_warning(style="soft") %}
+<div role="alert" class="alert alert-warning alert-{{ style }}"><div>{{ body | markdown | safe }}</div></div>{% endcomponent alert_warning %}
+
+{% component alert_error(style="soft") %}
+<div role="alert" class="alert alert-error alert-{{ style }}"><div>{{ body | markdown | safe }}</div></div>{% endcomponent alert_error %}
+
+{% component badge_primary() %}<div class="badge badge-soft badge-primary">{{ body | markdown(inline=true) | safe }}</div>{% endcomponent badge_primary %}
+
+{% component badge_secondary() %}<div class="badge badge-soft badge-secondary">{{ body | markdown(inline=true) | safe }}</div>{% endcomponent badge_secondary %}
+
+{% component badge_accent() %}<div class="badge badge-soft badge-accent">{{ body | markdown(inline=true) | safe }}</div>{% endcomponent badge_accent %}
+
+{% component badge_error() %}<div class="badge badge-soft badge-error">{{ body | markdown(inline=true) | safe }}</div>{% endcomponent badge_error %}
+
+{% component badge_info() %}<div class="badge badge-soft badge-info">{{ body | markdown(inline=true) | safe }}</div>{% endcomponent badge_info %}
+
+{% component badge_success() %}<div class="badge badge-soft badge-success">{{ body | markdown(inline=true) | safe }}</div>{% endcomponent badge_success %}
+
+{% component badge_warning() %}<div class="badge badge-soft badge-warning">{{ body | markdown(inline=true) | safe }}</div>{% endcomponent badge_warning %}
+
+{% component collapse(title="Collapse Title") %}
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">{{ title | default(value="Collapse Title") }}</div><div class="collapse-content text-sm">{{ body | markdown | safe }}</div></div>{% endcomponent collapse %}
+
+{% component mermaid() %}
+<pre class="mermaid border border-gray-500/15">{{ body }}</pre>{% endcomponent mermaid %}
+
+{% component pretty_link(url, title="", description="", image="") %}
+<div class="pretty-link-card group"><a href="{{ url }}" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5">{% if image %}<div class="flex-shrink-0 pretty-link-image-wrapper"><img src="{{ image }}" alt="{{ title | default(value=url) }}" class="pretty-link-image" /></div>{% endif %}<div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">{% if title %}{{ title }}{% else %}{{ url | safe }}{% endif %}</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div>{% if description %}<p class="pretty-link-description">{{ description }}</p>{% endif %}<div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>{{ url | replace(from="https://", to="") | replace(from="http://", to="") | truncate(length=60) }}</div></div></div></a></div>{% endcomponent pretty_link %}
+
+{% component image(src, alt="", class="", base="") %}
+<img src="{% if src is starting_with(pat="http") %}{{ src | safe }}{% else %}{{ get_url(path=base ~ '/' ~ src) | safe }}{% endif %}" alt="{{ alt }}" {% if class %}class="{{ class }}"{% endif %} />{% endcomponent image %}
+
+{% component youtube(video_id) %}
+<div class="youtube-container border border-gray-500/15"><iframe class="w-full h-96" src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>{% endcomponent youtube %}
+
+{% component browser(url="https://daisyui.com", content="Hello!") %}
+<div class="mockup-browser border border-gray-500/15 w-full"><div class="mockup-browser-toolbar"><div class="input">{{ url | default(value="https://daisyui.com") }}</div></div><div class="grid place-content-center h-80">{{ content | default(value="Hello!") }}</div></div>{% endcomponent browser %}
+
+{% component math(content="") %}
+<span class="katex-inline">{{ content | safe }}</span>{% endcomponent math %}
+
+{% component openstreetmap(bbox, layer="", marker="") %}
+<div class="openstreetmap-container border border-gray-500/15"><iframe class="w-full h-96 border-0" src="https://www.openstreetmap.org/export/embed.html?bbox={{ bbox }}{% if layer %}&amp;layer={{ layer }}{% endif %}{% if marker %}&amp;marker={{ marker }}{% endif %}" title="OpenStreetMap" allowfullscreen></iframe></div>{% endcomponent openstreetmap %}
+
+{% component asciinema(id, cols="") %}
+<script type="text/javascript" async="true" src="https://asciinema.org/a/{{ id }}.js" id="asciicast-{{ id }}" {% if cols %}data-cols="{{ cols }}"{% endif %} async></script>{% endcomponent asciinema %}
+
+{% component carousel(images) %}
+<div class="carousel w-full">{% for image in images %}<div id="slide{{ loop.index }}" class="carousel-item relative w-full"><img src="{{ image }}" class="w-full" /><div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"><a href="#slide{% if loop.index == 1 %}{{ images | length }}{% else %}{{ loop.index - 1 }}{% endif %}" class="btn btn-circle">❮</a><a href="#slide{% if loop.index == images | length %}1{% else %}{{ loop.index + 1 }}{% endif %}" class="btn btn-circle">❯</a></div></div>{% endfor %}</div>{% endcomponent carousel %}
+
+{% component codepen(user, pen_id, default_tab="result") %}
+<div class="codepen-container border border-gray-500/15"><iframe class="w-full h-96" src="https://codepen.io/{{ user }}/embed/{{ pen_id }}?default-tab={% if default_tab %}{{ default_tab }}{% else %}result{% endif %}" title="CodePen embed by {{ user }}" frameborder="0" loading="lazy" allowtransparency="true" allowfullscreen></iframe></div>{% endcomponent codepen %}
+
+{% component gist(id) %}
+<script src="https://gist.github.com/{{ id }}.js"></script>{% endcomponent gist %}
+
+{% component image_diff(src1, src2, alt="Image diff") %}
+<figure class="diff aspect-16/9" tabindex="0"><div class="diff-item-1" role="img" tabindex="0"><img alt="{{ alt | default(value="Image diff original") }}" src="{{ src1 }}" /></div><div class="diff-item-2" role="img"><img alt="{{ alt | default(value="Image diff changed") }}" src="{{ src2 }}" /></div><div class="diff-resizer"></div></figure>{% endcomponent image_diff %}
+
+{% component team_grid(config, group="faculty") %}
+{% set team_data = load_data(path="data/team.yaml") %}{% set group_name = group | default(value="faculty") %}{% if group_name == "faculty" and team_data.faculty %}<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 not-prose my-8">{% for member in team_data.faculty %}<div class="card bg-base-200 shadow-xl border border-gray-500/15"><figure class="px-6 pt-6"><div class="avatar"><div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"><img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ member.image | default(value='default-avatar.webp')) }}"alt="{{ member.name }}" /></div></div></figure><div class="card-body items-center text-center"><h3 class="card-title">{{ member.name }}</h3><p class="text-sm text-gray-500">{{ member.designation }}</p><div class="card-actions mt-2">{% if member.linkedin %}<a href="{{ member.linkedin }}" target="_blank" class="btn btn-ghost btn-circle btn-sm"><i class="fa-brands fa-linkedin text-xl"></i></a>{% endif %}{% if member.email %}<a href="mailto:{{ member.email }}" class="btn btn-ghost btn-circle btn-sm"><i class="fa-solid fa-envelope text-xl"></i></a>{% endif %}</div></div></div>{% endfor %}</div>{% elif group_name == "coordinators" and team_data.coordinators %}<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 not-prose my-8">{% for member in team_data.coordinators %}<div class="card bg-base-200 shadow-xl border border-gray-500/15"><figure class="px-6 pt-6"><div class="avatar"><div class="w-24 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2"><img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ member.image | default(value='default-avatar.webp')) }}"alt="{{ member.name }}" /></div></div></figure><div class="card-body items-center text-center"><h3 class="card-title">{{ member.name }}</h3><p class="text-sm text-gray-500">{{ member.role }}</p><div class="card-actions mt-2">{% if member.github %}<a href="{{ member.github }}" target="_blank" class="btn btn-ghost btn-circle btn-sm"><i class="fa-brands fa-github text-xl"></i></a>{% endif %}{% if member.linkedin %}<a href="{{ member.linkedin }}" target="_blank" class="btn btn-ghost btn-circle btn-sm"><i class="fa-brands fa-linkedin text-xl"></i></a>{% endif %}</div></div></div>{% endfor %}</div>{% elif group_name == "executives" and team_data.executives %}<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 not-prose my-8">{% for member in team_data.executives %}<div class="card bg-base-200 shadow-xl border border-gray-500/15"><figure class="px-6 pt-6"><div class="avatar"><div class="w-24 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2"><img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ member.image | default(value='default-avatar.webp')) }}"alt="{{ member.name }}" /></div></div></figure><div class="card-body items-center text-center"><h3 class="card-title">{{ member.name }}</h3><p class="text-sm text-gray-500">{{ member.role }}</p><div class="card-actions mt-2">{% if member.github %}<a href="{{ member.github }}" target="_blank" class="btn btn-ghost btn-circle btn-sm"><i class="fa-brands fa-github text-xl"></i></a>{% endif %}{% if member.linkedin %}<a href="{{ member.linkedin }}" target="_blank" class="btn btn-ghost btn-circle btn-sm"><i class="fa-brands fa-linkedin text-xl"></i></a>{% endif %}</div></div></div>{% endfor %}</div>{% endif %}{% endcomponent team_grid %}

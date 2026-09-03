@@ -37,9 +37,9 @@ In this comprehensive guide, we'll journey from the fundamentals of Big O notati
 
 Time complexity is a computational concept that describes the amount of time an algorithm takes to complete as a function of the input size. Rather than measuring exact execution time (which varies by hardware), we analyze how the **number of operations** grows relative to input size.
 
-{% alert_info() %}
+{% <alert_info > %}
 **Key Insight:** Time complexity answers the question: *If I double my input size, how does my runtime change?*
-{% end %}
+{% </alert_info> %}
 
 ### Why Time Complexity Matters
 
@@ -67,13 +67,13 @@ Big O notation provides an upper bound on the growth rate of an algorithm. It de
 | O(2ⁿ) | Exponential | Recursive fibonacci (naive) |
 | O(n!) | Factorial | Generating all permutations |
 
-{% alert_warning() %}
+{% <alert_warning > %}
 **Critical:** The difference between O(n) and O(n²) can mean the difference between milliseconds and hours for large datasets!
-{% end %}
+{% </alert_warning> %}
 
 ### Visualizing Growth Rates
 
-{% mermaid() %}
+{% <mermaid > %}
 graph LR
     A["Input Size: n"] --> B["O(1): Stays flat"]
     A --> C["O(log n): Grows slowly"]
@@ -81,7 +81,7 @@ graph LR
     A --> E["O(n log n): Grows faster"]
     A --> F["O(n²): Grows rapidly"]
     A --> G["O(2ⁿ): Explodes exponentially"]
-{% end %}
+{% </mermaid> %}
 
 For n = 1,000:
 - O(1) = 1 operation
@@ -110,9 +110,9 @@ def arithmetic_operation(a, b):
     return a + b * 2 - 5  # O(1) - fixed operations
 ```
 
-{% alert_success() %}
+{% <alert_success > %}
 **Pro Tip:** Hash tables (dictionaries in Python, objects in JavaScript) provide O(1) average-case lookup, making them invaluable for optimization!
-{% end %}
+{% </alert_success> %}
 
 ### Real-World Application
 
@@ -155,9 +155,9 @@ def binary_search(sorted_arr, target):
 # Each iteration cuts the search space in half
 ```
 
-{% collapse(title="Why is this O(log n)? Click to understand the math") %}
+{% <collapse title="Why is this O(log n)? Click to understand the math"> %}
 In each iteration, we eliminate half the remaining elements. For n elements, we can halve the array at most log₂(n) times before reaching a single element. For 1,000 items, that's only ~10 comparisons!
-{% end %}
+{% </collapse> %}
 
 ### Other O(log n) Operations
 
@@ -196,9 +196,9 @@ def find_max(arr):
     return max_val  # O(n) - single pass through array
 ```
 
-{% alert_info() %}
+{% <alert_info > %}
 **Note:** Multiple O(n) operations in sequence is still O(n): O(n) + O(n) + O(n) = O(3n) = O(n)
-{% end %}
+{% </alert_info> %}
 
 ### Common Pitfall
 
@@ -261,7 +261,7 @@ def merge(left, right):
 # log n levels of recursion, each doing O(n) work
 ```
 
-{% badge_success() %}Industry Standard{% end %} Most efficient comparison-based sorting algorithms (merge sort, quicksort, heapsort) are O(n log n).
+{% <badge_success > %}Industry Standard{% </badge_success> %} Most efficient comparison-based sorting algorithms (merge sort, quicksort, heapsort) are O(n log n).
 
 ---
 
@@ -298,9 +298,9 @@ def has_duplicates_naive(arr):
     return False
 ```
 
-{% alert_warning() %}
+{% <alert_warning > %}
 **Performance Impact:** For 10,000 items, O(n²) means 100,000,000 operations. At 1 microsecond per operation, that's 100 seconds!
-{% end %}
+{% </alert_warning> %}
 
 ### When O(n²) is Acceptable
 
@@ -345,9 +345,9 @@ def fibonacci_iterative(n):
     return b
 ```
 
-{% collapse(title="See the dramatic difference in performance") %}
+{% <collapse title="See the dramatic difference in performance"> %}
 fibonacci_recursive(40) might take several seconds. fibonacci_iterative(40) completes in microseconds. fibonacci_recursive(100) would take longer than the age of the universe!
-{% end %}
+{% </collapse> %}
 
 ---
 
@@ -372,9 +372,9 @@ def process_data(arr):
     # Result: O(n log n) - we keep the dominant term
 ```
 
-{% alert_info() %}
+{% <alert_info > %}
 **Rule of Thumb:** When adding complexities, keep only the largest (dominant) term.
-{% end %}
+{% </alert_info> %}
 
 ### Rule 2: Nested Operations
 
@@ -438,7 +438,7 @@ def double_values_inplace(arr):
     return arr
 ```
 
-{% badge_warning() %}Trade-off Alert{% end %} Often there's a trade-off: faster time complexity may require more space (and vice versa).
+{% <badge_warning > %}Trade-off Alert{% </badge_warning> %} Often there's a trade-off: faster time complexity may require more space (and vice versa).
 
 ---
 
@@ -636,9 +636,9 @@ class DynamicArray:
         self.array = new_array
 ```
 
-{% alert_info() %}
+{% <alert_info > %}
 **Amortized O(1):** Over n operations, the total cost is O(n), making each operation O(1) on average.
-{% end %}
+{% </alert_info> %}
 
 ### Best, Average, and Worst Case
 
@@ -688,9 +688,9 @@ class UserDatabase_v1:
 # Performance: For 100,000 users, ~100,000 comparisons per search
 ```
 
-{% alert_error() %}
+{% <alert_error > %}
 **Problem:** Searching 100,000 users takes too long. Users experience lag.
-{% end %}
+{% </alert_error> %}
 
 ### Version 2: Hash Table Index - O(1) Exact Match
 
@@ -750,9 +750,9 @@ class UserDatabase_v3:
             return results
 ```
 
-{% alert_success() %}
+{% <alert_success > %}
 **Result:** Email/username lookups are instant. Name prefix searches are logarithmic. User experience improved dramatically!
-{% end %}
+{% </alert_success> %}
 
 ---
 
@@ -797,7 +797,7 @@ class UserDatabase_v3:
 
 Ready to test your understanding? Try analyzing these:
 
-{% collapse(title="Problem 1: What's the time complexity?") %}
+{% <collapse title="Problem 1: What's the time complexity?"> %}
 ```python
 def mystery(arr):
     n = len(arr)
@@ -806,9 +806,9 @@ def mystery(arr):
             print(arr[i], arr[j])
 ```
 **Answer:** O(n²). The outer loop runs n times, inner loop runs (n-i) times on average, which is still O(n).
-{% end %}
+{% </collapse> %}
 
-{% collapse(title="Problem 2: Optimize this code") %}
+{% <collapse title="Problem 2: Optimize this code"> %}
 ```python
 def find_duplicates(arr):
     duplicates = []
@@ -832,9 +832,9 @@ def find_duplicates_fast(arr):
     return list(duplicates)
 # O(n) time, O(n) space
 ```
-{% end %}
+{% </collapse> %}
 
-{% collapse(title="Problem 3: Binary search variation") %}
+{% <collapse title="Problem 3: Binary search variation"> %}
 ```python
 def find_rotation_point(arr):
     # Find where a rotated sorted array was rotated
@@ -851,15 +851,15 @@ def find_rotation_point(arr):
     return left
 ```
 **Complexity:** O(log n) - Modified binary search
-{% end %}
+{% </collapse> %}
 
 ---
 
 ## Common Mistakes to Avoid
 
-{% alert_error() %}
+{% <alert_error > %}
 **Mistake 1:** Assuming all single loops are O(n). Some loops might do O(n) work inside each iteration!
-{% end %}
+{% </alert_error> %}
 
 ```python
 # This is O(n²), not O(n)!
@@ -868,9 +868,9 @@ def mistake_example(arr):
         arr.remove(item)  # remove() is O(n)!
 ```
 
-{% alert_error() %}
+{% <alert_error > %}
 **Mistake 2:** Ignoring hidden complexity in library functions.
-{% end %}
+{% </alert_error> %}
 
 ```python
 # Python list operations and their complexities:
@@ -883,9 +883,9 @@ x in arr           # O(n)
 arr.sort()         # O(n log n)
 ```
 
-{% alert_error() %}
+{% <alert_error > %}
 **Mistake 3:** Premature optimization. Profile first, optimize bottlenecks second.
-{% end %}
+{% </alert_error> %}
 
 ---
 
@@ -893,10 +893,10 @@ arr.sort()         # O(n log n)
 
 ### Visualization Tools
 - **Python Tutor**: Visualize code execution step-by-step
-  - {{ pretty_link(url="https://pythontutor.com", title="Python Tutor", description="See your code execute line by line with variable states") }}
+  - {{<pretty_link url="https://pythontutor.com" title="Python Tutor" description="See your code execute line by line with variable states" />}}
 
 - **Big-O Cheat Sheet**: Quick reference for common algorithms
-  - {{ pretty_link(url="https://www.bigocheatsheet.com", title="Big-O Cheat Sheet", description="Visual guide to algorithm complexities") }}
+  - {{<pretty_link url="https://www.bigocheatsheet.com" title="Big-O Cheat Sheet" description="Visual guide to algorithm complexities" />}}
 
 ### Practice Platforms
 - **LeetCode**: Filter by time complexity to practice analysis
@@ -942,7 +942,7 @@ Remember: The best algorithm isn't always the one with the best time complexity.
 - **Space constraints**: Sometimes you trade time for space
 - **Real-world constants**: O(n log n) with large constant factors might be slower than O(n²) for small n
 
-{% badge_primary() %}Key Takeaway{% end %} Master the fundamentals (O(1), O(n), O(n²)), practice recognizing patterns, and always measure before optimizing. The best optimization is often choosing the right algorithm from the start.
+{% <badge_primary > %}Key Takeaway{% </badge_primary> %} Master the fundamentals (O(1), O(n), O(n²)), practice recognizing patterns, and always measure before optimizing. The best optimization is often choosing the right algorithm from the start.
 
 ---
 
@@ -953,9 +953,9 @@ Remember: The best algorithm isn't always the one with the best time complexity.
 - **Grokking Algorithms** - Beginner-friendly with illustrations
 - **MIT OpenCourseWare** - Free algorithm courses
 
-{% alert_success() %}
+{% <alert_success > %}
 **Challenge:** Take one of your recent projects and analyze the time complexity of its core functions. Can you identify any optimization opportunities?
-{% end %}
+{% </alert_success> %}
 
 ---
 

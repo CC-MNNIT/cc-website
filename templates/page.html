@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {% block header %}
-    {{ macros_header::header(config=config, lang=lang, page=page) }}
+    {{<header config={config} lang={lang} is_root_page={false} section={false} page={page} />}}
 {% endblock header %}
 
 {% block content %}
@@ -28,7 +28,7 @@
                 </svg>
             </div>
             {% for cat in page.taxonomies.categories %}
-            <a href="{{ get_taxonomy_url(kind="categories", name=cat) }}"
+            <a href="{{ get_taxonomy_url(kind="categories", term=cat) }}"
                class="inline-flex items-center badge badge-dash border-gray-500/30 text-xs hover:border-gray-500/70 transition-colors">
                 {{ cat }}
             </a>
@@ -44,7 +44,7 @@
                 </svg>
             </div>
             {% for tag in page.taxonomies.tags %}
-            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}"
+            <a href="{{ get_taxonomy_url(kind="tags", term=tag) }}"
                class="inline-flex items-center badge badge-dash text-xs border-gray-500/30 hover:border-gray-500/70 transition-colors">
                 {{ tag }}
             </a>
