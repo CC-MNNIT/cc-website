@@ -45,9 +45,9 @@ The only things you need on your machine are **Git** and **Zola** (one binary, n
 ### 1. Prerequisites
 
 - **Git** — [install](https://git-scm.com/downloads)
-- **Zola v0.22.1** — [download the binary for your OS](https://github.com/getzola/zola/releases/tag/v0.22.1)
-  - ⚠️ **Use exactly v0.22.1** — the config and CI expect this version. Don't use `apt`/`brew`/`pacman`; they often install a different version.
-  - Verify with `zola --version` → should print `zola 0.22.1`.
+- **Zola v0.23.4** — [download the binary for your OS](https://github.com/getzola/zola/releases/tag/v0.23.4)
+  - ⚠️ **Use exactly v0.23.4** — the config and CI expect this version. Don't use `apt`/`brew`/`pacman`; they often install a different version.
+  - Verify with `zola --version` → should print `zola 0.23.4`.
 - A **GitHub account** (to open a pull request)
 - A text editor (VS Code recommended)
 
@@ -370,7 +370,7 @@ Then click through the site at http://127.0.0.1:1111 — check the pages you tou
 ### Common problems
 
 **"Zola version mismatch" / weird build errors**
-Run `zola --version` — must be `0.22.1`. The config and CI target exactly this version.
+Run `zola --version` — must be `0.23.4`. The config and CI target exactly this version.
 
 **Frontmatter errors (`TOML parse error`)**
 Frontmatter is **TOML**, not YAML — no tabs for indentation, values in quotes, `true`/`false` lowercase. Validate at [toml-lint.com](https://www.toml-lint.com/).
@@ -381,7 +381,7 @@ Frontmatter is **TOML**, not YAML — no tabs for indentation, values in quotes,
 - Filenames are case-sensitive
 
 **Shortcodes render as raw text**
-Use paired tags, not inline: `{% alert_info() %}text{% end %}` ✅ vs `{{ alert_info(...) }}` ❌. Also check the shortcode name exists — see `templates/shortcodes/` for the full list (alerts, badges, collapse, mermaid, pretty_link, image, youtube, ...).
+Components (the successor to shortcodes) are defined in `templates/components.html`. With a body: `{% <alert_info> %}text{% </alert_info> %}` ✅. Self-closing: `{{<pretty_link url="https://example.com" title="Example" />}}` ✅. See the top of that file for the full list and syntax.
 
 **Template errors**
 Check Tera syntax — every `{% if %}` needs `{% endif %}`, every `{% for %}` needs `{% endfor %}`. `zola build` reports the exact file and line.

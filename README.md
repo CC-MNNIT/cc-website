@@ -7,8 +7,8 @@ Official website of the Computer Coding Club, MNNIT Allahabad — built with [Zo
 ## 🚀 Quick Start
 
 ```bash
-# 1. Install Zola v0.22.1 (any OS):
-#    https://github.com/getzola/zola/releases/tag/v0.22.1
+# 1. Install Zola v0.23.4 (any OS):
+#    https://github.com/getzola/zola/releases/tag/v0.23.4
 #    (avoid apt/brew — they may install a different version)
 
 # 2. Clone

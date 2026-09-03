@@ -7,7 +7,7 @@ This guide walks you through writing and submitting a blog post for the CC Club 
 ## What you need
 
 - **Git** installed
-- **Zola v0.22.1** — install instructions: [CONTRIBUTING.md → Setup](CONTRIBUTING.md#setup)
+- **Zola v0.23.4** — install instructions: [CONTRIBUTING.md → Setup](CONTRIBUTING.md#setup)
 - A **GitHub account**
 - Basic knowledge of **Markdown**
 
@@ -56,7 +56,7 @@ Use the template as a guide — it contains working examples of alerts, badges, 
 
 **Common mistakes to avoid:**
 
-1. ❌ Inline shortcodes: `{{ alert_info(content="...") }}` → ✅ paired tags: `{% alert_info() %}text{% end %}`
+1. ❌ Inline call: `{{ alert_info(content="...") }}` → ✅ block component: `{% <alert_info> %}text{% </alert_info> %}`
 2. ❌ Unquoted mermaid labels with special characters: `A[Label (text)]` → ✅ `A["Label (text)"]`
 3. ❌ Code fences without a language: `` ``` `` → ✅ always specify: `` ```python `` or `` ```bash ``
 4. ❌ Leaving the template's instructional comments in → ✅ remove them before submitting
@@ -88,7 +88,7 @@ zola serve
 Check your post in the blog list and verify: formatting renders, code blocks are highlighted, mermaid diagrams display, images load, no raw `{% %}` syntax is visible.
 
 **Build failed?** The error message points at the problem. Common causes:
-- A shortcode opened with `{% alert_info() %}` but no closing `{% end %}`
+- A component opened with `{% <alert_info> %}` but no closing `{% </alert_info> %}`
 - Mermaid labels with unquoted `()`, `[]`, or `:`
 - Invalid frontmatter (TOML — validate at [toml-lint.com](https://www.toml-lint.com/))
 - Wrong shortcode name
@@ -124,12 +124,12 @@ Then on GitHub, open a pull request against `CC-MNNIT/cc-website` → `main` wit
 
 ## Shortcode reference
 
-These shortcodes are the ones blog posts use most (defined in `templates/shortcodes/`). They all follow the paired-tag pattern `{% name() %}...{% end %}`.
+These components are the ones blog posts use most (defined in `templates/components.html`). Body components follow the paired-tag pattern `{% <name> %}...{% </name> %}`; attribute-only ones are self-closing `{{<name attr="v" />}}`.
 
 **Alerts** (styled boxes):
 
 ```markdown
-{% alert_info() %}Informational message.{% end %}
+{% <alert_info> %}Informational message.{% </alert_info> %}
 {% alert_success() %}Positive message or achievement.{% end %}
 {% alert_warning() %}Caution or important notice.{% end %}
 {% alert_error() %}Critical information or common mistakes.{% end %}
@@ -171,7 +171,7 @@ graph LR
 ) }}
 ```
 
-Full list: see the `templates/shortcodes/` directory in this repo.
+Full list: see `templates/components.html` in this repo.
 
 ---
 

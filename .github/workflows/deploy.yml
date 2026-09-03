@@ -34,7 +34,7 @@ jobs:
           fi
 
       - name: Build production
-        uses: shalzz/zola-deploy-action@v0.22.1
+        uses: shalzz/zola-deploy-action@v0.23.1
         env:
           PAGES_BRANCH: gh-pages
           BUILD_ONLY: true
@@ -83,7 +83,7 @@ jobs:
           fi
 
       - name: Build preview
-        uses: shalzz/zola-deploy-action@v0.22.1
+        uses: shalzz/zola-deploy-action@v0.23.1
         env:
           PAGES_BRANCH: gh-pages
           BUILD_ONLY: true
