@@ -17,6 +17,10 @@
 @import url('vendor/tailwind-daisyui.min.css');
 @import url('font-awesome.min.css');
 
+/* 0b. Site component rules extracted from the vendor bundle
+   (must stay immediately after the vendor import to preserve cascade order) */
+@import url('components/prose-extras.css');
+
 /* 1. Core Styles (Variables, Reset, Typography, Animations) */
 @import url('core/variables.css');
 @import url('core/reset.css');
