@@ -10,7 +10,7 @@ Features:
 {% extends "index.html" %}
 
 {% block header %}
-{{ macros_header::header(config=config, lang=lang, section=section) }}
+{{<header config={config} lang={lang} is_root_page={false} section={section} page={false} />}}
 {% endblock header %}
 
 {% block content %}
@@ -30,30 +30,30 @@ Features:
 {% set subsection = get_section(path=subsection_path) %}
 {% if subsection.pages %}
 {% for event in subsection.pages %}
-{% set_global all_events = all_events | concat(with=[event]) %}
+{% set_global all_events = [...all_events, event] %}
 {% set event_year = event.date | date(format="%Y") %}
 {% if event.extra.event_type != "program" %}
 {% if event_year == "2026" %}
-{% set_global events_2026 = events_2026 | concat(with=[event]) %}
+{% set_global events_2026 = [...events_2026, event] %}
 {% elif event_year == "2025" %}
-{% set_global events_2025 = events_2025 | concat(with=[event]) %}
+{% set_global events_2025 = [...events_2025, event] %}
 {% endif %}
 {% endif %}
 {# Group by event type #}
 {% if event.extra.event_type == "hackathon" %}
-{% set_global hackathons = hackathons | concat(with=[event]) %}
+{% set_global hackathons = [...hackathons, event] %}
 {% elif event.extra.event_type == "challenge" %}
-{% set_global challenges = challenges | concat(with=[event]) %}
+{% set_global challenges = [...challenges, event] %}
 {% elif event.extra.event_type == "workshop" %}
-{% set_global workshops = workshops | concat(with=[event]) %}
+{% set_global workshops = [...workshops, event] %}
 {% elif event.extra.event_type == "program" %}
-{% set_global programs = programs | concat(with=[event]) %}
+{% set_global programs = [...programs, event] %}
 {% elif event.extra.event_type == "buildfest" %}
-{% set_global buildfests = buildfests | concat(with=[event]) %}
+{% set_global buildfests = [...buildfests, event] %}
 {% elif event.extra.event_type == "contest" %}
-{% set_global contests = contests | concat(with=[event]) %}
+{% set_global contests = [...contests, event] %}
 {% elif event.extra.event_type == "open-source" %}
-{% set_global open_source = open_source | concat(with=[event]) %}
+{% set_global open_source = [...open_source, event] %}
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -67,18 +67,18 @@ Features:
 {% for event in all_events %}
 {% set status = event.extra.status | default(value="") | lower %}
 {% if status == "ongoing" or status == "live" %}
-{% set_global priority_events = priority_events | concat(with=[event]) %}
+{% set_global priority_events = [...priority_events, event] %}
 {% else %}
-{% set_global other_events = other_events | concat(with=[event]) %}
+{% set_global other_events = [...other_events, event] %}
 {% endif %}
 {% endfor %}
-{% set_global all_events = priority_events | concat(with=other_events) %}
+{% set_global all_events = [...priority_events, ...other_events] %}
 
 {# Filter events for banner carousel (show_banner = true) #}
 {% set banner_events = [] %}
 {% for event in all_events %}
 {% if event.extra.show_banner is defined and event.extra.show_banner == true %}
-{% set_global banner_events = banner_events | concat(with=[event]) %}
+{% set_global banner_events = [...banner_events, event] %}
 {% endif %}
 {% endfor %}
 

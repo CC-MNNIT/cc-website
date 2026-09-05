@@ -57,7 +57,7 @@
 }
 
 [data-theme="light"] .roadmaps-scroll-wrapper,
-[data-theme="lofi"] .roadmaps-scroll-wrapper {
+[data-theme="cc-light"] .roadmaps-scroll-wrapper {
     background: radial-gradient(ellipse 900px 700px at 15% 20%, rgba(25, 118, 210, 0.08) 0%, transparent 40%),
         radial-gradient(ellipse 800px 600px at 85% 80%, rgba(13, 71, 161, 0.06) 0%, transparent 45%),
         radial-gradient(ellipse 700px 500px at 50% 50%, rgba(25, 118, 210, 0.04) 0%, transparent 50%);
@@ -86,7 +86,7 @@
 }
 
 [data-theme="light"] .roadmaps-sticky-container,
-[data-theme="lofi"] .roadmaps-sticky-container {
+[data-theme="cc-light"] .roadmaps-sticky-container {
     background: linear-gradient(135deg, rgba(232, 241, 247, 0.6) 0%, rgba(240, 245, 250, 0.5) 100%);
 }
 
@@ -114,7 +114,7 @@
 }
 
 [data-theme="light"] .roadmaps-title,
-[data-theme="lofi"] .roadmaps-title {
+[data-theme="cc-light"] .roadmaps-title {
     background: linear-gradient(135deg, #000C40 0%, #1565C0 50%, #42A5F5 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
@@ -131,7 +131,7 @@
 }
 
 [data-theme="light"] .roadmaps-subtitle,
-[data-theme="lofi"] .roadmaps-subtitle {
+[data-theme="cc-light"] .roadmaps-subtitle {
     color: var(--color-base-content) !important;
 }
 
@@ -157,7 +157,7 @@
 }
 
 [data-theme="light"] .roadmaps-viewport::before,
-[data-theme="lofi"] .roadmaps-viewport::before {
+[data-theme="cc-light"] .roadmaps-viewport::before {
     background: rgba(25, 118, 210, 0.2);
 }
 
@@ -196,7 +196,7 @@
 }
 
 [data-theme="light"] .roadmap-card,
-[data-theme="lofi"] .roadmap-card {
+[data-theme="cc-light"] .roadmap-card {
     background: rgba(245, 250, 255, 0.98);
     border: 1.5px solid rgba(25, 118, 210, 0.4);
     box-shadow: 0 10px 30px rgba(25, 118, 210, 0.15);
@@ -209,7 +209,7 @@
 }
 
 [data-theme="light"] .roadmap-card:hover,
-[data-theme="lofi"] .roadmap-card:hover {
+[data-theme="cc-light"] .roadmap-card:hover {
     border-color: rgba(25, 118, 210, 0.5);
     box-shadow: 0 25px 60px rgba(25, 118, 210, 0.18);
 }
@@ -230,7 +230,7 @@
 }
 
 [data-theme="light"] .roadmap-card::after,
-[data-theme="lofi"] .roadmap-card::after {
+[data-theme="cc-light"] .roadmap-card::after {
     background: #E8F1F7;
     border-color: #1976D2;
     box-shadow: 0 0 15px rgba(25, 118, 210, 0.3);
@@ -260,21 +260,21 @@
 }
 
 /* Light theme - Card border (blue) */
-[data-theme="night"] .roadmap-card-content {
+[data-theme="cc-dark"] .roadmap-card-content {
     border-color: #ad7f13 !important;
     border-width: 10px;
 }
 
 /* Light theme - Card border (blue) */
 [data-theme="light"] .roadmap-card-content,
-[data-theme="lofi"] .roadmap-card-content {
+[data-theme="cc-light"] .roadmap-card-content {
     border-color: #1976D2 !important;
     box-shadow: 0 10px 30px rgba(25, 118, 210, 0.15), 0 0 0 2px rgba(25, 118, 210, 0.2);
     border-width: 10px;
 }
 
 [data-theme="light"] .roadmap-card-link:hover .roadmap-card-content,
-[data-theme="lofi"] .roadmap-card-link:hover .roadmap-card-content {
+[data-theme="cc-light"] .roadmap-card-link:hover .roadmap-card-content {
     border-color: #1976D2 !important;
     box-shadow: 0 15px 40px rgba(25, 118, 210, 0.3),
         0 0 0 2px rgba(25, 118, 210, 0.4),
@@ -282,7 +282,7 @@
 }
 
 /* Dark theme - Card Border & Shadow */
-[data-theme="night"] .roadmap-card-content {
+[data-theme="cc-dark"] .roadmap-card-content {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(249, 177, 77, 0.3);
 }
 
@@ -296,7 +296,7 @@
 }
 
 [data-theme="light"] .roadmap-card-content h3,
-[data-theme="lofi"] .roadmap-card-content h3 {
+[data-theme="cc-light"] .roadmap-card-content h3 {
     background: linear-gradient(135deg, #000C40 0%, #1565C0 50%, #42A5F5 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
@@ -312,7 +312,7 @@
 }
 
 [data-theme="light"] .roadmap-card-content p,
-[data-theme="lofi"] .roadmap-card-content p {
+[data-theme="cc-light"] .roadmap-card-content p {
     color: #0E0604 !important;
 }
 
@@ -333,7 +333,7 @@
 }
 
 [data-theme="light"] .roadmap-btn-action,
-[data-theme="lofi"] .roadmap-btn-action {
+[data-theme="cc-light"] .roadmap-btn-action {
     background: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%);
     color: #FAECEC;
 }
@@ -346,7 +346,7 @@
 }
 
 [data-theme="light"] .roadmap-btn-action:hover,
-[data-theme="lofi"] .roadmap-btn-action:hover {
+[data-theme="cc-light"] .roadmap-btn-action:hover {
     background: linear-gradient(135deg, #0D47A1 0%, #1976D2 100%);
     box-shadow: 0 15px 40px rgba(25, 118, 210, 0.3);
 }
@@ -354,14 +354,14 @@
 /* Time Badge */
 /* Light Theme - Time badge */
 [data-theme="light"] .time-badge,
-[data-theme="lofi"] .time-badge {
+[data-theme="cc-light"] .time-badge {
     background: rgba(25, 118, 210, 0.1) !important;
     color: #1976D2 !important;
     border: 1px solid rgba(25, 118, 210, 0.3);
 }
 
 /* Dark Theme - Time badge */
-[data-theme="night"] .time-badge {
+[data-theme="cc-dark"] .time-badge {
     background: rgba(255, 199, 88, 0.1) !important;
     color: #FFC758 !important;
     border: 1px solid rgba(255, 199, 88, 0.2);
@@ -371,7 +371,7 @@
 /* Difficulty Badges */
 
 /* Dark Theme - Difficulty Badge (Red with Glow) */
-[data-theme="night"] .difficulty-badge {
+[data-theme="cc-dark"] .difficulty-badge {
     background: linear-gradient(135deg, #C2293D 0%, #8B0000 100%) !important;
     color: #FFFFFF !important;
     border: 2px solid #FF0000 !important;
@@ -386,7 +386,7 @@
     animation: pulse-glow-red 2s ease-in-out infinite;
 }
 
-[data-theme="night"] .difficulty-badge:hover {
+[data-theme="cc-dark"] .difficulty-badge:hover {
     box-shadow: 0 0 30px rgba(255, 0, 0, 0.7),
         0 0 50px rgba(194, 41, 61, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
@@ -395,7 +395,7 @@
 
 /* Light Theme - Difficulty Badge (Blue with Glow) */
 [data-theme="light"] .difficulty-badge,
-[data-theme="lofi"] .difficulty-badge {
+[data-theme="cc-light"] .difficulty-badge {
     background: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%) !important;
     color: #FFFFFF !important;
     border: 2px solid #0052CC !important;
@@ -411,7 +411,7 @@
 }
 
 [data-theme="light"] .difficulty-badge:hover,
-[data-theme="lofi"] .difficulty-badge:hover {
+[data-theme="cc-light"] .difficulty-badge:hover {
     box-shadow: 0 0 30px rgba(25, 118, 210, 0.7),
         0 0 50px rgba(13, 71, 161, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
@@ -422,7 +422,7 @@
 /* Start Learning Button */
 
 /* Dark Theme - Start Learning Button (Golden with thick glowing border) */
-[data-theme="night"] .start-btn {
+[data-theme="cc-dark"] .start-btn {
     background: linear-gradient(135deg, #b88a32 0%, #c99a3d 100%) !important;
     color: #0E0604 !important;
     border: 2px solid #a67c2d !important;
@@ -437,7 +437,7 @@
     overflow: hidden;
 }
 
-[data-theme="night"] .start-btn::before {
+[data-theme="cc-dark"] .start-btn::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -452,20 +452,20 @@
     animation: shimmer 3s infinite;
 }
 
-[data-theme="night"] .start-btn:hover {
+[data-theme="cc-dark"] .start-btn:hover {
     transform: translateY(-2px) !important;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5),
         0 0 15px rgba(255, 199, 88, 0.3) !important;
     background: linear-gradient(135deg, #dca73d 0%, #ebb343 100%) !important;
 }
 
-[data-theme="night"] .start-btn:active {
+[data-theme="cc-dark"] .start-btn:active {
     transform: translateY(-2px) scale(1.02) !important;
 }
 
 /* Light Theme - Start Learning Button (Blue with thick glowing border) */
 [data-theme="light"] .start-btn,
-[data-theme="lofi"] .start-btn {
+[data-theme="cc-light"] .start-btn {
     background: linear-gradient(135deg, #1565C0 0%, #1976D2 100%) !important;
     color: #FFFFFF !important;
     border: 2px solid #0D47A1 !important;
@@ -476,7 +476,7 @@
 }
 
 [data-theme="light"] .start-btn::before,
-[data-theme="lofi"] .start-btn::before {
+[data-theme="cc-light"] .start-btn::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -492,7 +492,7 @@
 }
 
 [data-theme="light"] .start-btn:hover,
-[data-theme="lofi"] .start-btn:hover {
+[data-theme="cc-light"] .start-btn:hover {
     /* Removed scale(1.05) to stop the aggressive pop-out effect */
     transform: translateY(-2px) !important;
 
@@ -506,7 +506,7 @@
 }
 
 [data-theme="light"] .start-btn:active,
-[data-theme="lofi"] .start-btn:active {
+[data-theme="cc-light"] .start-btn:active {
     transform: translateY(-2px) scale(1.02) !important;
 }
 
@@ -704,7 +704,7 @@
     }
 
     /* Reduce glow effects on smaller screens */
-    [data-theme="night"] .start-btn {
+    [data-theme="cc-dark"] .start-btn {
         box-shadow: 0 0 15px rgba(255, 199, 88, 0.5),
             0 0 30px rgba(255, 199, 88, 0.3),
             0 6px 15px rgba(255, 199, 88, 0.2),
@@ -712,7 +712,7 @@
     }
 
     [data-theme="light"] .start-btn,
-    [data-theme="lofi"] .start-btn {
+    [data-theme="cc-light"] .start-btn {
         box-shadow: 0 0 15px rgba(25, 118, 210, 0.5),
             0 0 30px rgba(25, 118, 210, 0.3),
             0 6px 15px rgba(25, 118, 210, 0.2),
@@ -720,7 +720,7 @@
     }
 
     /* Dark Theme - Muted Difficulty Badge */
-    [data-theme="night"] .difficulty-badge {
+    [data-theme="cc-dark"] .difficulty-badge {
         background: linear-gradient(135deg, #a62233 0%, #7a0000 100%) !important;
         color: #FFFFFF !important;
         border: 1.5px solid rgba(255, 0, 0, 0.3) !important;
@@ -738,7 +738,7 @@
 
     /* Light Theme - Muted Difficulty Badge */
     [data-theme="light"] .difficulty-badge,
-    [data-theme="lofi"] .difficulty-badge {
+    [data-theme="cc-light"] .difficulty-badge {
         background: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%) !important;
         color: #FFFFFF !important;
         border: 1.5px solid rgba(13, 71, 161, 0.2) !important;
@@ -865,9 +865,9 @@
         }
 
         /* Disable pulse animations on mobile to save battery */
-        [data-theme="night"] .difficulty-badge,
+        [data-theme="cc-dark"] .difficulty-badge,
         [data-theme="light"] .difficulty-badge,
-        [data-theme="lofi"] .difficulty-badge {
+        [data-theme="cc-light"] .difficulty-badge {
             animation: none !important;
         }
     }
@@ -916,24 +916,24 @@
         }
 
         /* Minimal shadows on very small screens */
-        [data-theme="night"] .start-btn {
+        [data-theme="cc-dark"] .start-btn {
             box-shadow: 0 0 10px rgba(255, 199, 88, 0.4),
                 0 4px 10px rgba(255, 199, 88, 0.2) !important;
         }
 
         [data-theme="light"] .start-btn,
-        [data-theme="lofi"] .start-btn {
+        [data-theme="cc-light"] .start-btn {
             box-shadow: 0 0 10px rgba(25, 118, 210, 0.4),
                 0 4px 10px rgba(25, 118, 210, 0.2) !important;
         }
 
-        [data-theme="night"] .difficulty-badge {
+        [data-theme="cc-dark"] .difficulty-badge {
             box-shadow: 0 0 10px rgba(255, 0, 0, 0.3),
                 inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
         }
 
         [data-theme="light"] .difficulty-badge,
-        [data-theme="lofi"] .difficulty-badge {
+        [data-theme="cc-light"] .difficulty-badge {
             box-shadow: 0 0 10px rgba(25, 118, 210, 0.3),
                 inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
         }
@@ -1064,7 +1064,7 @@
 }
 
 [data-theme="light"] .cyber-card,
-[data-theme="lofi"] .cyber-card {
+[data-theme="cc-light"] .cyber-card {
     background: rgba(255, 255, 255, 0.8);
     /* Glassy white */
     border: 1px solid rgba(25, 118, 210, 0.15);
@@ -1084,7 +1084,7 @@
 }
 
 [data-theme="light"] .roadmap-card-link:hover .cyber-card,
-[data-theme="lofi"] .roadmap-card-link:hover .cyber-card {
+[data-theme="cc-light"] .roadmap-card-link:hover .cyber-card {
     border-color: rgba(25, 118, 210, 0.5);
     /* Brighter blue border */
     box-shadow: 0 20px 50px rgba(25, 118, 210, 0.15);
@@ -1130,14 +1130,14 @@
 
 /* Light Theme Borders */
 [data-theme="light"] .cyber-border,
-[data-theme="lofi"] .cyber-border {
+[data-theme="cc-light"] .cyber-border {
     background: linear-gradient(135deg, rgba(25, 118, 210, 0.1) 0%, rgba(25, 118, 210, 0.05) 50%, rgba(25, 118, 210, 0.1) 100%);
 }
 
 [data-theme="light"] .cyber-border::before,
 [data-theme="light"] .cyber-border::after,
-[data-theme="lofi"] .cyber-border::before,
-[data-theme="lofi"] .cyber-border::after {
+[data-theme="cc-light"] .cyber-border::before,
+[data-theme="cc-light"] .cyber-border::after {
     background: #1976D2;
     box-shadow: 0 0 10px #1976D2;
 }
@@ -1162,7 +1162,7 @@
 }
 
 [data-theme="light"] .cyber-glow,
-[data-theme="lofi"] .cyber-glow {
+[data-theme="cc-light"] .cyber-glow {
     /* Stronger Blue/Cyan glow against the new dark gradient */
     background: radial-gradient(circle at 50% 100%, rgba(66, 165, 245, 0.4), transparent 70%);
 }
@@ -1215,13 +1215,13 @@
 }
 
 [data-theme="light"] .cyber-card-image,
-[data-theme="lofi"] .cyber-card-image {
+[data-theme="cc-light"] .cyber-card-image {
     filter: brightness(1.05) hue-rotate(170deg);
     /* Turn Gold to True Blue */
 }
 
 [data-theme="light"] .roadmap-card-link:hover .cyber-card-image,
-[data-theme="lofi"] .roadmap-card-link:hover .cyber-card-image {
+[data-theme="cc-light"] .roadmap-card-link:hover .cyber-card-image {
     filter: brightness(1.1) hue-rotate(170deg);
     /* Bright blue on hover */
 }
@@ -1250,7 +1250,7 @@
 }
 
 [data-theme="light"] .cyber-card-content,
-[data-theme="lofi"] .cyber-card-content {
+[data-theme="cc-light"] .cyber-card-content {
     /* User requested "Black" instead of "White" for better contrast/glow */
     background: linear-gradient(to top, rgba(5, 20, 40, 0.95) 15%, rgba(5, 20, 40, 0.7) 60%, transparent 100%);
 }
@@ -1274,7 +1274,7 @@
 }
 
 [data-theme="light"] .cyber-card-title,
-[data-theme="lofi"] .cyber-card-title {
+[data-theme="cc-light"] .cyber-card-title {
     /* White/Cyan text to pop against the dark navy gradient */
     background: linear-gradient(135deg, #FFFFFF 0%, #E3F2FD 50%, #90CAF9 100%);
     -webkit-background-clip: text;
@@ -1294,7 +1294,7 @@
 }
 
 [data-theme="light"] .tech-underline,
-[data-theme="lofi"] .tech-underline {
+[data-theme="cc-light"] .tech-underline {
     background: #1976D2;
     box-shadow: 0 0 10px #1976D2;
 }
@@ -1331,7 +1331,7 @@
 }
 
 [data-theme="light"] ::selection,
-[data-theme="lofi"] ::selection {
+[data-theme="cc-light"] ::selection {
     background: #1976D2;
     color: white;
 }

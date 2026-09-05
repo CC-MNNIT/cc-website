@@ -1,50 +1,38 @@
-# Roadmaps Images for Landing Page Horizontal Scroll
+# Roadmap Images (Home Page Carousel)
 
-This folder contains images for the roadmaps horizontal scroll section on the landing page.
+This folder holds the images used by the roadmap cards on the home page's horizontal scroll section.
 
-## Required Images:
+## How it works
 
-Add images that correspond to your roadmap markdown files in `content/roadmaps/`.
+The home page automatically shows every roadmap in `content/roadmaps/` that sets a `carousel_image` in its frontmatter — nothing else needs to be updated when adding a new roadmap.
 
-Currently configured roadmaps need these images:
+## Current roadmaps and their images
 
-1. **dsa-fundamentals.jpg** (600x400px recommended)
-   - Referenced in: `content/roadmaps/dsa.md`
-   - Theme: Data structures, algorithms, coding challenges
+| Roadmap file | Carousel image |
+|---|---|
+| `content/roadmaps/web-development.md` | `roadmaps/web-development-cyber.webp` |
+| `content/roadmaps/competitive-programming.md` | `roadmaps/dsa-cyber.webp` |
+| `content/roadmaps/machine-learning.md` | `roadmaps/machine-learning-cyber.webp` |
+| `content/roadmaps/devops.md` | `roadmaps/devops-cyber.webp` |
+| `content/roadmaps/open-source.md` | `roadmaps/open-source-cyber.webp` |
 
-2. **web-development.jpg** (600x400px recommended)
-   - Referenced in: `content/roadmaps/web-development.md`
-   - Theme: Web development, HTML/CSS/JS, full-stack
+## Adding a new roadmap image
 
-## Adding More Roadmaps:
+1. Create the roadmap page in `content/roadmaps/` (e.g. `content/roadmaps/rust.md`)
+2. Add the carousel fields to its frontmatter:
 
-To add new roadmaps to the landing page carousel:
+```toml
+[extra]
+carousel_image = "roadmaps/rust-cyber.webp"
+carousel_title = "Rust"
+carousel_description = "One-line pitch for the carousel card"
+```
 
-1. Create a new `.md` file in `content/roadmaps/` (e.g., `machine-learning.md`)
-2. Add these fields to the frontmatter:
-   ```toml
-   [extra]
-   carousel_image = "roadmaps/your-image.jpg"
-   carousel_title = "Your Roadmap Title"
-   carousel_description = "Brief description for the landing page"
-   ```
-3. Add the corresponding image to this folder
+3. Place the image in this folder (`static/images/roadmaps/`)
 
-## Image Guidelines:
+## Image guidelines
 
-- **Format**: JPG or PNG
-- **Size**: 600x400px (3:2 ratio) - displayed at 240px height
-- **Quality**: High quality, web-optimized (under 150KB per image)
-- **Theme**: Should match CC Club's dark burgundy & gold aesthetic
-- **Content**: Clear, relevant icons/graphics for each learning path
-
-## Placeholder Sources:
-
-If you don't have custom images yet, you can use:
-- Unsplash (https://unsplash.com/) - Search: "coding", "learning", "programming"
-- Undraw (https://undraw.co/) - Customizable illustrations
-- Create simple graphics with Canva or Figma
-
-## Dynamic Loading:
-
-The landing page automatically loads all roadmap pages from `content/roadmaps/` that have the `carousel_image` field set. No need to manually update `_index.md`!
+- **Format:** WebP preferred (JPG/PNG accepted — CI converts and optimizes automatically)
+- **Size:** ~600x400px (3:2), displayed at 240px height
+- **Quality:** web-optimized, aim for under 150KB
+- **Style:** should match the existing "cyber" cards used by the current roadmaps

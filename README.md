@@ -1,112 +1,58 @@
 # CC Club Website
 
-Welcome to the official website of the Computer Coding Club! This is a modern, fast, and maintainable static website built with [Zola](https://www.getzola.org/) static site generator and the [Goyo](https://github.com/hahwul/goyo) theme.
+Official website of the Computer Coding Club, MNNIT Allahabad - built with [Zola](https://www.getzola.org/), a static site generator. All templates, styles and scripts live in this repo - there is no external theme.
+
+> **Never used Zola before?** It's like the "static export" step of a React/Next.js build, except there is no React and no npm build at all. You write **Markdown** files, Zola renders them into plain HTML/CSS/JS using templates, and that's the whole website. If you can write a GitHub README, you can contribute content to this site.
 
 ## 🚀 Quick Start
 
-**For developers** wanting to work on the website code, see the comprehensive **[Developer Guide](CONTRIBUTING.md)**.
-
-**For blog contributors**, see **[Blog Contribution Guide](CONTRIBUTING_BLOG.md)**.
-
-### Quick View Locally
-
 ```bash
-# Install Zola v0.21 first: https://github.com/getzola/zola/releases/tag/v0.21.0
+# 1. Install Zola v0.23.4 (any OS):
+#    https://github.com/getzola/zola/releases/tag/v0.23.4
+#    (avoid apt/brew - they may install a different version)
 
-# Clone and run
-git clone --recursive https://github.com/CC-MNNIT/cc-website.git
+# 2. Clone
+git clone --depth=1 https://github.com/CC-MNNIT/cc-website.git
 cd cc-website
+
+# 3. Run the dev server
 zola serve
-# Visit http://127.0.0.1:1111
+# Visit http://127.0.0.1:1111 - it auto-reloads on file changes
 ```
 
-For detailed setup instructions, architecture, and development workflow, see **[CONTRIBUTING.md](CONTRIBUTING.md)**.
+## 🤝 Contributing
 
-## ✨ Features
+We welcome contributions of every kind - fixing a typo, adding a blog post, improving the design, or building new features.
 
-### Core Features
-- ⚡ Lightning-fast static site generation with Zola
-- 🏷️ **Tag System**: Filter blog posts by technology/topic
-- 📄 **Pagination**: Automatic pagination for blog (10 posts per page)
-- 🔍 **Search**: Full-text search across all content
-- 📱 **Responsive**: Mobile-first design with DaisyUI
-- 🎨 **Dark Mode**: Automatic theme switching
-- 👥 **Dynamic Data**: Team and projects from TOML files
-- 📊 **SSR Filtering**: Server-side rendering for better performance
+**Guides:**
 
-### Powered by Goyo Theme
-- ⚡ Minimalist documentation-focused design
-- 🌙 Dark/light mode with customizable themes
-- 📱 Fully responsive mobile-first design
-- 🔍 Built-in client-side search
-- 📊 Rich shortcodes (alerts, badges, collapse, gallery, etc.)
-- 💬 Comment system support (Giscus/Utterances)
-- 🎨 DaisyUI + TailwindCSS styling
-- 📝 Syntax highlighting for code blocks
-- 🔗 Social sharing buttons
-- ♿ Accessible markup
-
-### Custom CC Club Features
-- 📚 **Learning Roadmaps** - Structured paths for different domains
-- 📝 **Blog** - Tagged articles with search functionality
-- 📅 **Event Management** - Automatic upcoming/past categorization
-- 🚀 **Projects Showcase** - Highlight club projects and member work
-- 👥 **Team Pages** - Showcase current team members
-
-## 📝 Contributing
-
-We welcome contributions from everyone! Whether you're fixing a typo, adding a blog post, or building new features.
-
-**Quick Links:**
-- 📝 **[Blog Post Guide](CONTRIBUTING_BLOG.md)** - Write and submit blog posts
-- 📚 **[Content Guide](CONTENT_GUIDE.md)** - Add events, team members, projects, roadmaps
-- 🛠️ **[Developer Guide](CONTRIBUTING.md)** - Full contribution workflow and guidelines
-
-**What you can contribute:**
-- ✍️ Write blog posts about tech topics
-- 🐛 Fix bugs and issues
-- ✨ Add new features
-- 🎨 Improve website design and UX
-- ⚡ Enhance performance
-- 📖 Improve documentation
+| Guide | For | What you'll learn |
+|---|---|---|
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Everyone | What Zola is, setup, adding events/team/projects/roadmaps, working on the code |
+| [CONTRIBUTING_BLOG.md](CONTRIBUTING_BLOG.md) | Blog writers | Writing and submitting a blog post |
+| [BLOG_TEMPLATE.md](BLOG_TEMPLATE.md) | Blog writers | Copy-paste starting point with real examples |
 
 ## 👥 Maintainers
 
-**Lead Maintainer:** [Shanu Kumawat](https://github.com/Shanu-Kumawat)
+- [Shanu Kumawat](https://github.com/Shanu-Kumawat)
+- [Rishi Sulakhe](https://github.com/rishisulakhe)
 
 ## 🙏 Contributors
 
-Thanks to all the people who have contributed to this project!
-
 <a href="https://github.com/CC-MNNIT/cc-website/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=CC-MNNIT/cc-website" />
+  <img src="https://contrib.rocks/image?repo=CC-MNNIT/cc-website" alt="CC Club contributors" />
 </a>
 
 ## 📄 License
 
-MIT License - see [LICENSE](LICENSE)
+MIT - see [LICENSE](LICENSE).
 
-**Goyo Theme:** MIT License by [hahwul](https://github.com/hahwul/goyo)
+## 🙋 Getting Help
 
-## 🙋 Support & Help
-
-**Need help?**
-
-1. 📖 Read [CONTENT_GUIDE.md](CONTENT_GUIDE.md) for content questions
-2. 🔍 Search [GitHub Issues](https://github.com/CC-MNNIT/cc-website/issues)
-3. 💬 Ask on club Discord/Slack
-4. 🐛 Open a new issue for bugs
-5. ✉️ Contact web team
-
-
-## 🎉 Acknowledgments
-
-- **Goyo Theme** by Jeevan Gantait
-- **Zola** static site generator
-- **DaisyUI** component library
-- **Tailwind CSS** utility framework
-- **Font Awesome** icons
-- All CC Club contributors!
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md) - it covers setup and common problems
+2. Search [GitHub Issues](https://github.com/CC-MNNIT/cc-website/issues)
+3. Ask on the [CC Club Discord](https://discord.gg/EDv6fM5yUm)
+4. Open a new issue (bug reports, feature requests, and docs improvements all welcome)
 
 ---
 

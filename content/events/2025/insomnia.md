@@ -11,7 +11,7 @@ status = "completed"
 badge = "FLAGSHIP"
 external_link = "https://codeforces.com/blog/entry/136247"
 location = "MNNIT Allahabad"
-participants = 300
+participants = "300+"
 prize_pool = "Rs. 15,000"
 banner_image = "events/2025/insomnia/4.webp"
 

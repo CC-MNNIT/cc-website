@@ -1,406 +1,190 @@
-# Contributing a Blog Post to CC-MNNIT
+# Contributing a Blog Post
 
-Welcome! This guide will walk you through the entire process of writing and submitting a blog post for the Computer Coding Club website.
+This guide walks you through writing and submitting a blog post for the CC Club website - no web development experience needed.
 
-## Prerequisites
+> **Never used Zola?** You only need it to preview your post locally. Setup takes two minutes: follow [Setup in CONTRIBUTING.md](CONTRIBUTING.md#setup) and come back here.
 
-Before you start, make sure you have:
+## What you need
 
-- **Git** installed on your system
-- **Zola** static site generator  
-  **Version:** `0.21`
+- **Git** installed
+- **Zola v0.23.4** - install instructions: [CONTRIBUTING.md → Setup](CONTRIBUTING.md#setup)
 - A **GitHub account**
 - Basic knowledge of **Markdown**
 
-### Installing Zola
-
-### Installing Zola
-
-> **⚠️ CRITICAL: Use Zola v0.21 Only**
->
-> Zola v0.22+ introduces breaking changes. Our site requires **exactly v0.21**.
-> **Do NOT use package managers** (`pacman`, `apt`, `brew`) as they may install v0.22+.
-
-**Step 1: Download Zola v0.21**
-
-Visit the [Zola v0.21.0 releases page](https://github.com/getzola/zola/releases/tag/v0.21.0) and download the appropriate binary for your system:
-
-**Linux:**
-```bash
-# For x86_64 Linux
-wget https://github.com/getzola/zola/releases/download/v0.21.0/zola-v0.21.0-x86_64-unknown-linux-gnu.tar.gz
-tar -xzf zola-v0.21.0-x86_64-unknown-linux-gnu.tar.gz
-sudo mv zola /usr/local/bin/
-sudo chmod +x /usr/local/bin/zola
-```
-
-**macOS:**
-```bash
-# For macOS (Intel)
-wget https://github.com/getzola/zola/releases/download/v0.21.0/zola-v0.21.0-x86_64-apple-darwin.tar.gz
-tar -xzf zola-v0.21.0-x86_64-apple-darwin.tar.gz
-sudo mv zola /usr/local/bin/
-sudo chmod +x /usr/local/bin/zola
-
-# For macOS (Apple Silicon)
-wget https://github.com/getzola/zola/releases/download/v0.21.0/zola-v0.21.0-aarch64-apple-darwin.tar.gz
-tar -xzf zola-v0.21.0-aarch64-apple-darwin.tar.gz
-sudo mv zola /usr/local/bin/
-sudo chmod +x /usr/local/bin/zola
-```
-
-**Windows:**
-```powershell
-# Download from browser or use PowerShell
-Invoke-WebRequest -Uri "https://github.com/getzola/zola/releases/download/v0.21.0/zola-v0.21.0-x86_64-pc-windows-msvc.zip" -OutFile "zola.zip"
-Expand-Archive -Path zola.zip -DestinationPath C:\zola
-# Add C:\zola to your PATH environment variable
-```
-
-**Step 2: Verify Installation**
-```bash
-zola --version
-# Must output: zola 0.21.0
-```
-
-**If you see v0.22 or higher:**
-```bash
-# Remove the wrong version first
-sudo rm /usr/local/bin/zola  # or wherever it's installed
-# Then reinstall v0.21 using the instructions above
-```
-
----
-
-## Step 1: Clone the Repository
-
-Clone the CC-MNNIT website repository to your local machine.
-
-**For most contributors (recommended):**
+## Step 1: Clone the repository
 
 ```bash
 git clone --depth=1 --recursive https://github.com/CC-MNNIT/cc-website.git
 cd cc-website
 ```
 
-**If you need full git history:**
+(If you already cloned without `--recursive`: `git submodule update --init --recursive --depth=1`)
+
+## Step 2: Create your post
 
 ```bash
-git clone --recursive https://github.com/CC-MNNIT/cc-website.git
-cd cc-website
-```
-
-**Optional fallback** (if you already cloned without submodules):
-
-```bash
-git submodule update --init --recursive --depth=1
-```
-
-> **Note:** The `--recursive` and `--depth=1` flags ensure faster cloning by getting only the latest commit and theme submodule.
-
----
-
-## Step 2: Create Your Blog Post
-
-### 2.1 Copy the Template
-
-Copy the blog template to start writing:
-
-```bash
-# Create a new blog post file with today's date
+# Copy the template with today's date
 cp BLOG_TEMPLATE.md content/blog/2026/2026-02-09-your-post-slug.md
 ```
 
-**File naming convention:** `YYYY-MM-DD-your-post-slug.md`
-- Use the current date
-- Use lowercase and hyphens for the slug
-- Make the slug descriptive (e.g., `machine-learning-basics`, `react-hooks-guide`)
+**File naming:** `YYYY-MM-DD-your-post-slug.md` - today's date, lowercase with hyphens (e.g. `2026-02-09-react-hooks-guide.md`). It goes in the folder of the current year: `content/blog/YYYY/`.
 
-### 2.2 Fill in the Frontmatter
+### Fill in the frontmatter
 
-Edit the frontmatter (the section between `+++` markers) at the top of your file:
+The frontmatter is the block between `+++` markers at the top of the file:
 
 ```toml
 +++
 title = "Your Actual Blog Title"
-date = 2026-02-09  # Use today's date
+date = 2026-02-09          # today's date
 description = "A clear, concise description (max 160 chars)"
 
 [taxonomies]
-tags = ["python", "tutorial", "beginners"]
-categories = ["tech"]
+tags = ["python", "tutorial", "beginners"]   # 3-5 tags, lowercase
+categories = ["tech"]                        # "tech", "tutorials", "insights", "stories"
 
 [extra]
 author = "Your Full Name"
-author_linkedin = "your-username"  # Just username, not full URL
+author_linkedin = "your-username"            # just the username, not the full URL
+# reading_time = 5                           # optional, minutes
 +++
 ```
 
-### 2.3 Write Your Content
+### Write the content
 
-Use the template as a guide. Remember:
+Use the template as a guide - it contains working examples of alerts, badges, mermaid diagrams, and code blocks.
 
-**Common Mistakes to Avoid:**
+**Common mistakes to avoid:**
 
-1. ❌ Don't use inline shortcodes: `{{ alert_info(content="text") }}`
-2. ✅ Use paired tags: `{% alert_info() %}text{% end %}`
-3. ❌ Don't leave mermaid labels unquoted: `A[Label (text)]`
-4. ✅ Quote special chars: `A["Label (text)"]`
-5. ❌ Don't forget code fence language: ` ```  `
-6. ✅ Always specify: ` ```python ` or ` ```bash `
-{% end %}
+1. ❌ Inline call: `{{ alert_info(content="...") }}` → ✅ block component: `{% <alert_info> %}text{% </alert_info> %}`
+2. ❌ Unquoted mermaid labels with special characters: `A[Label (text)]` → ✅ `A["Label (text)"]`
+3. ❌ Code fences without a language: `` ``` `` → ✅ always specify: `` ```python `` or `` ```bash ``
+4. ❌ Leaving the template's instructional comments in → ✅ remove them before submitting
 
----
-
-## Step 3: Add Images (Optional)
-
-If your post includes images:
-
-1. Create a directory for your images:
-   ```bash
-   mkdir -p static/images/blog/2026/your-post-slug
-   ```
-
-2. Place your images in that directory
-
-3. Reference them in your markdown:
-   ```markdown
-   ![Description](/images/blog/2026/your-post-slug/image.png)
-   ```
-
-> **🎨 Automatic Image Optimization**  
-> Any images you add to `static/images/` are automatically converted to WebP format and compressed by our GitHub workflow when your PR is merged. This means:
-> - You can upload PNG, JPG, or other formats - they'll be optimized automatically
-> - No manual compression needed
-> - Faster website performance with smaller file sizes
-> - Original files are preserved alongside WebP versions
-
----
-
-## Step 4: Test Locally
-
-This is **crucial** - always test before submitting!
+## Step 3: Add images (optional)
 
 ```bash
-# Start the local development server
+mkdir -p static/images/blog/2026/your-post-slug
+# put your images in that folder
+```
+
+Reference them in your post as:
+
+```markdown
+![Description](/images/blog/2026/your-post-slug/image.png)
+```
+
+> Images in `static/images/` are automatically optimized (WebP conversion + compression) by CI after your PR merges - upload whatever you have, no manual compression needed.
+
+## Step 4: Test locally
+
+**Always do this before submitting:**
+
+```bash
 zola serve
+# → http://127.0.0.1:1111
 ```
 
-The site will be available at `http://127.0.0.1:1111`
+Check your post in the blog list and verify: formatting renders, code blocks are highlighted, mermaid diagrams display, images load, no raw `{% %}` syntax is visible.
 
-### What to Check:
+**Build failed?** The error message points at the problem. Common causes:
+- A component opened with `{% <alert_info> %}` but no closing `{% </alert_info> %}`
+- Mermaid labels with unquoted `()`, `[]`, or `:`
+- Invalid frontmatter (TOML - validate at [toml-lint.com](https://www.toml-lint.com/))
+- Wrong shortcode name
 
-- ✅ Your blog post appears in the blog list
-- ✅ All formatting renders correctly
-- ✅ Code blocks have syntax highlighting
-- ✅ Mermaid diagrams display properly
-- ✅ Images load correctly
-- ✅ Shortcodes (alerts, badges, collapse) work
-- ✅ No markdown syntax is showing as raw text
+Run `zola build` for detailed error messages.
 
-**Build Failed?** Common issues:
-
-- Missing closing tags: `{% alert_info() %}` needs `{% end %}`
-- Unquoted mermaid labels with special characters
-- Invalid frontmatter (check TOML syntax)
-- Shortcode typos (check the template for correct names)
-
-Run `zola build` to see specific error messages.
-
----
-
-## Step 5: Submit Your Pull Request
-
-### 5.1 Create a Branch
+## Step 5: Submit your pull request
 
 ```bash
+# 1. Create a branch
 git checkout -b blog/your-post-slug
-```
 
-### 5.2 Commit Your Changes
-
-```bash
-# Add your blog post
+# 2. Stage your post (and images)
 git add content/blog/2026/2026-02-09-your-post-slug.md
-
-# Add images if you have any
 git add static/images/blog/2026/your-post-slug/
 
-# Commit with a clear message
+# 3. Commit with a clear message
 git commit -m "Add blog post: Your Post Title"
-```
 
-### 5.3 Push to GitHub
-
-```bash
+# 4. Push to your fork
 git push origin blog/your-post-slug
 ```
 
-### 5.4 Create Pull Request
+Then on GitHub, open a pull request against `CC-MNNIT/cc-website` → `main` with title `[Blog] Your Post Title` and a one-line summary of the post.
 
-1. Go to [https://github.com/CC-MNNIT/cc-website](https://github.com/CC-MNNIT/cc-website)
-2. Click **"Compare & pull request"**
-3. Fill in the PR template:
-   - **Title:** `[Blog] Your Post Title`
-   - **Description:** Brief summary of your post
-   - Mention if this is your first contribution
-4. Click **"Create pull request"**
+## Step 6: Review
+
+- **Automated checks** verify the site still builds
+- **Maintainers** review for technical accuracy, formatting, and clarity - feedback is normal, just push new commits
+- Once approved, your post is **merged and published** 🎉
 
 ---
 
-## Step 6: Review Process
+## Component reference
 
-After submitting your PR:
+These components are the ones blog posts use most (defined in `templates/components.html`). Body components follow the paired-tag pattern `{% <name> %}...{% </name> %}`; attribute-only ones are self-closing `{{<name attr="v" />}}`.
 
-1. **Automated checks** will run (build verification)
-2. **Maintainers** will review your post for:
-   - Technical accuracy
-   - Formatting issues
-   - Grammar and clarity
-   - Appropriate content
-3. You may receive **feedback** - don't worry, it's normal!
-4. Make any **requested changes** by pushing new commits
-5. Once approved, your post will be **merged and published** 🎉
+**Alerts** (styled boxes):
 
----
-
-## Shortcode Reference
-
-Quick reference for available shortcodes:
-
-{% collapse(title="Alert Shortcodes") %}
-
-**Info Alert (Blue):**
 ```markdown
-{% alert_info() %}
-Your informational content here.
-{% end %}
+{% <alert_info> %}Informational message.{% </alert_info> %}
+{% <alert_success> %}Positive message or achievement.{% </alert_success> %}
+{% <alert_warning> %}Caution or important notice.{% </alert_warning> %}
+{% <alert_error> %}Critical information or common mistakes.{% </alert_error> %}
 ```
 
-**Success Alert (Green):**
+**Badges** (inline):
+
 ```markdown
-{% alert_success() %}
-Positive message or achievement.
-{% end %}
+{% <badge_primary> %}Important{% </badge_primary> %}
+{% <badge_success> %}New{% </badge_success> %}
+{% <badge_warning> %}Beta{% </badge_warning> %}
 ```
 
-**Warning Alert (Yellow):**
-```markdown
-{% alert_warning() %}
-Caution or important notice.
-{% end %}
-```
-
-**Error Alert (Red):**
-```markdown
-{% alert_error() %}
-Critical information or common mistakes.
-{% end %}
-```
-
-{% end %}
-
-{% collapse(title="Badge Shortcodes") %}
+**Collapsible sections** (hides optional/advanced content):
 
 ```markdown
-{% badge_primary() %}Primary{% end %}
-{% badge_secondary() %}Secondary{% end %}
-{% badge_success() %}Success{% end %}
-{% badge_warning() %}Warning{% end %}
-```
-
-Result: {% badge_primary() %}Primary{% end %} {% badge_secondary() %}Secondary{% end %}
-
-{% end %}
-
-{% collapse(title="Collapse Shortcode") %}
-
-Great for hiding optional or advanced content:
-
-```markdown
-{% collapse(title="Click to expand") %}
+{% <collapse title="Click to expand"> %}
 Hidden content goes here. Supports all markdown!
-
-- Lists
-- Code blocks
-- Everything!
-{% end %}
+{% </collapse> %}
 ```
 
-{% end %}
+**Mermaid diagrams** (flowcharts, sequence diagrams, ...):
 
-{% collapse(title="Pretty Link Shortcode") %}
+````markdown
+{% <mermaid> %}
+graph LR
+    A["User"] -->|Request| B["Server"]
+    B -->|Response| A
+{% </mermaid> %}
+````
 
-Creates beautiful link previews:
+**Pretty links** (styled external link cards - self-closing, no body):
 
 ```markdown
-{{ pretty_link(
-    url="https://example.com",
-    title="Link Title",
-    description="A brief description"
-) }}
+{{<pretty_link url="https://example.com" title="Link Title" description="A brief description" />}}
 ```
 
-**Note:** This is an inline shortcode (uses `{{ }}`), not a paired one.
-
-{% end %}
+Full list: see `templates/components.html` in this repo.
 
 ---
 
-## Tips for Great Blog Posts
+## Tips for great posts
 
-1. **Start with an outline** - Plan your structure before writing
-2. **Use examples** - Code snippets and diagrams make concepts clear
-3. **Keep paragraphs short** - 2-4 sentences max for readability
-4. **Use headings** - Break content into scannable sections
-5. **Add value** - Teach something new or solve a problem
-6. **Proofread** - Grammar and typos matter
-7. **Test thoroughly** - Check everything works locally
+1. **Start with an outline** - plan the sections before writing
+2. **Use examples** - code snippets and diagrams make concepts click
+3. **Keep paragraphs short** - 2-4 sentences
+4. **Use headings** - make it scannable
+5. **Proofread** - grammar and typos matter
+6. **Test thoroughly** - verify everything renders before submitting
 
----
+## Need help?
 
-## Need Help?
+- Check [BLOG_TEMPLATE.md](BLOG_TEMPLATE.md) for a working example
+- Look at existing posts in `content/blog/2026/`
+- Open a GitHub issue
+- Ask on the [CC Club Discord](https://discord.gg/EDv6fM5yUm)
 
-**Stuck or have questions?**
-
-- Check the [BLOG_TEMPLATE.md](file:///home/shanu/Projects/Web/cc-website/BLOG_TEMPLATE.md) for examples
-- Review existing blog posts in `content/blog/2026/`
-- Open an issue on GitHub
-- Ask in the CC Club Discord
-
-We're here to help! 🚀
-
----
-
-## Example Workflow
-
-Here's the complete workflow in one view:
-
-```bash
-# 1. Clone and setup
-git clone --depth=1 --recursive https://github.com/CC-MNNIT/cc-website.git
-cd cc-website
-
-# 2. Create your post
-cp BLOG_TEMPLATE.md content/blog/2026/2026-02-09-my-awesome-post.md
-
-# 3. Edit and write (use your favorite editor)
-nano content/blog/2026/2026-02-09-my-awesome-post.md
-
-# 4. Test locally
-zola serve
-# Visit http://127.0.0.1:1111 and check your post
-
-# 5. Create branch and commit
-git checkout -b blog/my-awesome-post
-git add content/blog/2026/2026-02-09-my-awesome-post.md
-git commit -m "Add blog post: My Awesome Post"
-
-# 6. Push and create PR
-git push origin blog/my-awesome-post
-# Then create PR on GitHub
-```
-
----
-
-**Happy writing!** We look forward to reading your contribution. 📝✨
+**Happy writing!** 📝

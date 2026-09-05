@@ -6,162 +6,165 @@
 */
 
 /* Feature cards */
-[data-theme="night"] .feature-card {
+[data-theme="cc-dark"] .feature-card {
     background: oklch(0.15 0.02 20);
     border: 1px solid oklch(0.22 0.03 20);
 }
 
-[data-theme="night"] .feature-card:hover {
+[data-theme="cc-dark"] .feature-card:hover {
     border-color: #FFC758;
 }
 
-[data-theme="night"] .feature-icon-bg {
+[data-theme="cc-dark"] .feature-icon-bg {
     background: oklch(0.20 0.03 20);
 }
 
-[data-theme="night"] .feature-icon {
+[data-theme="cc-dark"] .feature-icon {
     color: #FFC758;
 }
 
-[data-theme="night"] .feature-title {
+[data-theme="cc-dark"] .feature-title {
     color: #FFC758;
 }
 
-[data-theme="night"] .feature-description {
+[data-theme="cc-dark"] .feature-description {
     color: #FAECEC;
 }
 
 /* Trust section */
-[data-theme="night"] .trust-section-title {
+[data-theme="cc-dark"] .trust-section-title {
     color: #FFC758;
 }
 
-[data-theme="night"] .trust-section-logo {
+[data-theme="cc-dark"] .trust-section-logo {
     opacity: 0.6;
     filter: grayscale(100%) brightness(1.5);
 }
 
-[data-theme="night"] .trust-section-logo:hover {
+[data-theme="cc-dark"] .trust-section-logo:hover {
     opacity: 1;
     filter: grayscale(0%) brightness(1);
 }
 
 /* Showcase tabs */
-[data-theme="night"] .tabs-lifted .tab {
+[data-theme="cc-dark"] .tabs-lifted .tab {
     background: transparent;
     border-color: oklch(0.25 0.04 20);
     color: #FAECEC;
 }
 
-[data-theme="night"] .tabs-lifted .tab-active,
-[data-theme="night"] .tabs-lifted .tab:checked {
+[data-theme="cc-dark"] .tabs-lifted .tab-active,
+[data-theme="cc-dark"] .tabs-lifted .tab:checked {
     background: oklch(0.15 0.02 20);
     border-color: #FFC758;
     color: #FFC758;
 }
 
-[data-theme="night"] .tab-content {
+[data-theme="cc-dark"] .tab-content {
     background: oklch(0.15 0.02 20);
     border: 1px solid oklch(0.25 0.04 20);
 }
 
 /* Testimonial cards */
-[data-theme="night"] .testimonial-card {
+[data-theme="cc-dark"] .testimonial-card {
     background: oklch(0.15 0.02 20);
     border: 1px solid oklch(0.22 0.03 20);
 }
 
-[data-theme="night"] .testimonial-card:hover {
+[data-theme="cc-dark"] .testimonial-card:hover {
     border-color: #FFC758;
 }
 
-[data-theme="night"] .testimonial-stars {
+[data-theme="cc-dark"] .testimonial-stars {
     color: #FFC758;
 }
 
-[data-theme="night"] .testimonial-quote {
+[data-theme="cc-dark"] .testimonial-quote {
     color: #FAECEC;
 }
 
-[data-theme="night"] .testimonial-author {
+[data-theme="cc-dark"] .testimonial-author {
     color: #FFC758;
 }
 
-[data-theme="night"] .testimonial-role {
+[data-theme="cc-dark"] .testimonial-role {
     color: #FAECEC;
     opacity: 0.8;
 }
 
-[data-theme="night"] .testimonial-avatar-border {
+[data-theme="cc-dark"] .testimonial-avatar-border {
     background: linear-gradient(135deg, #FFC758, #C2293D);
 }
 
 /* Cards with warm dark background */
-[data-theme="night"] .card {
+[data-theme="cc-dark"] .card {
     background: oklch(0.15 0.02 20) !important;
     border-color: oklch(0.25 0.04 20) !important;
 }
 
-[data-theme="night"] .card:hover {
+[data-theme="cc-dark"] .card:hover {
     border-color: oklch(0.80 0.15 75) !important;
     /* Gold border on hover */
 }
 
 /* Stat icons/figures - Gold */
-[data-theme="night"] .stat-figure {
+[data-theme="cc-dark"] .stat-figure {
     color: #FFC758 !important;
 }
 
 /* Stats cards */
-[data-theme="night"] .stat {
+[data-theme="cc-dark"] .stat {
     background: oklch(0.15 0.02 20) !important;
 }
 
+/* Inputs, alerts and badges below deliberately carry no !important:
+   shortcodes.css dark-theme soft-variant rules are more specific and must
+   win over these; being unlayered these still beat DaisyUI's layers. */
 /* Inputs and forms */
-[data-theme="night"] .input,
-[data-theme="night"] .select,
-[data-theme="night"] .textarea {
-    background: oklch(0.12 0.02 20) !important;
-    border-color: oklch(0.25 0.04 20) !important;
-    color: oklch(0.92 0.01 30) !important;
+[data-theme="cc-dark"] .input,
+[data-theme="cc-dark"] .select,
+[data-theme="cc-dark"] .textarea {
+    background: oklch(0.12 0.02 20);
+    border-color: oklch(0.25 0.04 20);
+    color: oklch(0.92 0.01 30);
 }
 
-[data-theme="night"] .input:focus,
-[data-theme="night"] .select:focus,
-[data-theme="night"] .textarea:focus {
-    border-color: oklch(0.80 0.15 75) !important;
+[data-theme="cc-dark"] .input:focus,
+[data-theme="cc-dark"] .select:focus,
+[data-theme="cc-dark"] .textarea:focus {
+    border-color: oklch(0.80 0.15 75);
     outline: none;
 }
 
 /* Alert boxes */
-[data-theme="night"] .alert {
-    background: oklch(0.15 0.02 20) !important;
-    border-color: oklch(0.25 0.04 20) !important;
+[data-theme="cc-dark"] .alert {
+    background: oklch(0.15 0.02 20);
+    border-color: oklch(0.25 0.04 20);
 }
 
 /* Borders - Subtle burgundy tint */
-[data-theme="night"] .border-gray-500\/15,
-[data-theme="night"] .border-gray-500\/10 {
+[data-theme="cc-dark"] .border-gray-500\/15,
+[data-theme="cc-dark"] .border-gray-500\/10 {
     border-color: oklch(0.20 0.03 20) !important;
 }
 
 /* Badges */
-[data-theme="night"] .badge-primary {
-    background: oklch(0.80 0.15 75) !important;
-    color: oklch(0.15 0.02 30) !important;
+[data-theme="cc-dark"] .badge-primary {
+    background: oklch(0.80 0.15 75);
+    color: oklch(0.15 0.02 30);
 }
 
-[data-theme="night"] .badge-secondary {
-    background: oklch(0.35 0.12 15) !important;
-    color: oklch(0.95 0.01 15) !important;
+[data-theme="cc-dark"] .badge-secondary {
+    background: oklch(0.35 0.12 15);
+    color: oklch(0.95 0.01 15);
 }
 
 /* Icons - Gold color (except navbar which is white) */
-[data-theme="night"] i:not(.navbar i),
-[data-theme="night"] .fa:not(.navbar .fa),
-[data-theme="night"] .fab:not(.navbar .fab),
-[data-theme="night"] .fas:not(.navbar .fas),
-[data-theme="night"] .far:not(.navbar .far),
-[data-theme="night"] svg:not(.navbar svg) {
+[data-theme="cc-dark"] i:not(.navbar i),
+[data-theme="cc-dark"] .fa:not(.navbar .fa),
+[data-theme="cc-dark"] .fab:not(.navbar .fab),
+[data-theme="cc-dark"] .fas:not(.navbar .fas),
+[data-theme="cc-dark"] .far:not(.navbar .far),
+[data-theme="cc-dark"] svg:not(.navbar svg) {
     color: #FFC758 !important;
 }

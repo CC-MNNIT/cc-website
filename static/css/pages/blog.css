@@ -28,14 +28,14 @@
 
 /* Premium Gradient Override */
 [data-theme="light"] .blog-title,
-[data-theme="lofi"] .blog-title {
+[data-theme="cc-light"] .blog-title {
     background: linear-gradient(135deg, #000C40 0%, #1565C0 50%, #42A5F5 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
 }
 
-[data-theme="night"] .blog-title {
+[data-theme="cc-dark"] .blog-title {
     background: linear-gradient(135deg, #FFC758 0%, #FFD700 50%, #FFA500 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -452,7 +452,7 @@
     border-color: #E0E0E0;
 }
 
-[data-theme="night"] .blog-card {
+[data-theme="cc-dark"] .blog-card {
         border: 0.5px solid rgba(255, 255, 255, 0.189);
     }
 

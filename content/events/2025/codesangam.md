@@ -12,7 +12,7 @@ status = "completed"
 badge = "FLAGSHIP"
 external_link = "https://codesangam2k25.devfolio.co/overview"
 location = "MNNIT Allahabad"
-participants = 500
+participants = "500+"
 banner_image = "events/2025/codesangam/1.webp"
 show_banner = true
 

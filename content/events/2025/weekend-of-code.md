@@ -11,7 +11,7 @@ event_type = "buildfest"
 status = "completed"
 external_link = "https://woc.cc-club.in/"
 location = "MNNIT Allahabad"
-participants = 500
+participants = "500+"
 banner_image = "events/2025/weekend-of-code/7.webp"
 
 # --- Event Images ---

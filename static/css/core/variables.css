@@ -10,7 +10,7 @@
     --font-main: 'Inter', sans-serif;
 }
 
-[data-theme="night"] {
+[data-theme="cc-dark"] {
     /* PRIMARY COLOR - Gold/Amber for buttons, links, highlights */
     --color-primary: oklch(0.80 0.15 75);
     /* Gold (#FFC758 equivalent) */
@@ -59,7 +59,7 @@
 
 /* Light Theme Variables */
 [data-theme="light"],
-[data-theme="lofi"] {
+[data-theme="cc-light"] {
     /* PRIMARY COLOR - Blue (#1976D2) */
     --color-primary: oklch(0.55 0.25 260);
     --color-primary-content: oklch(1 0 0);

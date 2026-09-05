@@ -1,0 +1,68 @@
+name: 📚 Documentation Issue
+description: Report an issue with documentation or suggest improvements
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve our documentation! Report errors, suggest clarifications, or propose new documentation.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Issue Type
+      options:
+        - Error/Typo in existing docs
+        - Unclear or confusing documentation
+        - Missing documentation
+        - Documentation improvement suggestion
+        - New documentation needed
+    validations:
+      required: true
+
+  - type: dropdown
+    id: doc_file
+    attributes:
+      label: Which documentation file?
+      options:
+        - README.md
+        - CONTRIBUTING.md
+        - CONTRIBUTING_BLOG.md
+        - BLOG_TEMPLATE.md
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What's the issue?
+      description: Describe the documentation problem or improvement
+      placeholder: The documentation says... but it should say...
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Fix or Improvement
+      description: If you have a specific suggestion, describe it here
+      placeholder: I suggest changing/adding...
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location in Document
+      description: If applicable, specify the section, heading, or line number
+      placeholder: "Section: 'Quick Start', line 42"
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have checked that this documentation issue doesn't already exist
+          required: true
+        - label: I am willing to submit a PR to fix this if needed
+          required: false

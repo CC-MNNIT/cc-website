@@ -11,9 +11,6 @@ Features:
 
 {% extends "index.html" %}
 
-{% block header %}
-{% endblock header %}
-
 {% block content %}
 {# ========== EVENT HERO ========== #}
 <section class="event-hero">
@@ -30,7 +27,7 @@ Features:
     <div class="event-hero-content">
         {# Breadcrumb #}
         <nav class="event-breadcrumb">
-            <a href="/events/">Events</a>
+            <a href="{{ get_url(path='@/events/_index.md') }}">Events</a>
             <span class="breadcrumb-sep">/</span>
             <span>{{ page.title }}</span>
         </nav>
@@ -97,7 +94,7 @@ Features:
                 </svg>
                 <div>
                     <span class="meta-label">Participants</span>
-                    <span class="meta-value">{{ page.extra.participants }}+</span>
+                    <span class="meta-value">{{ page.extra.participants }}</span>
                 </div>
             </div>
             {% endif %}
@@ -249,12 +246,59 @@ Features:
         {% endfor %}
     </div>
 
-    {# Honorable Mentions #}
+    {# Special Mentions (Highlighted Winners outside Top 3) #}
+    {% set_global has_special_winners = false %}
+    {% for winner in winners %}
+    {% if loop.index > 3 and winner.highlight | default(value=false) %}
+    {% set_global has_special_winners = true %}
+    {% endif %}
+    {% endfor %}
+
+    {% if has_special_winners %}
+    <div class="special-winners-section">
+        <h4 class="special-winners-title">Special Mentions</h4>
+        <div class="special-winners-grid">
+            {% for winner in winners %}
+            {% if loop.index > 3 and winner.highlight | default(value=false) %}
+            <div class="special-winner-card">
+                <div class="special-winner-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                </div>
+                {% if winner.avatar %}
+                <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ winner.avatar) }}" alt="{{ winner.name }}"
+                    class="special-winner-avatar">
+                {% else %}
+                <div class="special-winner-avatar-placeholder">{{ winner.name | truncate(length=2, end="") | upper }}
+                </div>
+                {% endif %}
+
+                <h3 class="special-winner-name">{{ winner.name }}</h3>
+
+                {% if winner.Codeforces_Id %}
+                <p class="special-winner-project font-mono">@{{ winner.Codeforces_Id }}</p>
+                {% elif winner.project %}
+                <p class="special-winner-project">{{ winner.project }}</p>
+                {% endif %}
+
+                {% if winner.prize %}
+                <span class="special-winner-prize">{{ winner.prize }}</span>
+                {% endif %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    {# Honorable Mentions (Remaining winners) #}
     {% if winners | length > 3 %}
     <div class="winners-list">
         <div class="winners-list-grid">
             {% for winner in winners %}
-            {% if loop.index > 3 %}
+            {% if loop.index > 3 and not winner.highlight | default(value=false) %}
             <div class="winner-list-item">
                 <span class="winner-rank">#{{ loop.index }}</span>
                 {% if winner.avatar %}
@@ -303,7 +347,7 @@ Features:
                     {% endif %}
                 </div>
                 {% if winner.avatar %}
-                {% if winner.avatar is starting_with("http") %}
+                {% if winner.avatar is starting_with(pat="http") %}
                 <img src="{{ winner.avatar }}" alt="{{ winner.name }}" class="podium-avatar">
                 {% else %}
                 <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ winner.avatar) }}" alt="{{ winner.name }}"
@@ -344,7 +388,7 @@ Features:
             <div class="winner-list-item">
                 <span class="winner-rank">#{{ loop.index }}</span>
                 {% if winner.avatar %}
-                {% if winner.avatar is starting_with("http") %}
+                {% if winner.avatar is starting_with(pat="http") %}
                 <img src="{{ winner.avatar }}" alt="{{ winner.name }}" class="winner-avatar">
                 {% else %}
                 <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ winner.avatar) }}" alt="{{ winner.name }}"
@@ -485,7 +529,7 @@ Features:
             {# Project Image #}
             {% if project.image %}
             <div class="project-card-image">
-                {% if project.image is starting_with("http") %}
+                {% if project.image is starting_with(pat="http") %}
                 <img src="{{ project.image }}" alt="{{ project.name }}" loading="lazy">
                 {% else %}
                 <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ project.image) }}"
@@ -575,7 +619,7 @@ Features:
 
 {# ========== BACK LINK ========== #}
 <div class="event-back-link">
-    <a href="/events/">
+    <a href="{{ get_url(path='@/events/_index.md') }}">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="19" y1="12" x2="5" y2="12" />
             <polyline points="12 19 5 12 12 5" />
@@ -612,77 +656,77 @@ Features:
 </div>
 
 <script>
-(function() {
-    const lightbox = document.getElementById('gallery-lightbox');
-    if (!lightbox) return;
+    (function () {
+        const lightbox = document.getElementById('gallery-lightbox');
+        if (!lightbox) return;
 
-    const lightboxImg = document.getElementById('lightbox-image');
-    const lightboxCurrent = document.getElementById('lightbox-current');
-    const closeBtn = lightbox.querySelector('.lightbox-close');
-    const prevBtn = lightbox.querySelector('.lightbox-prev');
-    const nextBtn = lightbox.querySelector('.lightbox-next');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightboxImg = document.getElementById('lightbox-image');
+        const lightboxCurrent = document.getElementById('lightbox-current');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+        const prevBtn = lightbox.querySelector('.lightbox-prev');
+        const nextBtn = lightbox.querySelector('.lightbox-next');
+        const galleryItems = document.querySelectorAll('.gallery-item');
 
-    let currentIndex = 0;
-    const images = [];
+        let currentIndex = 0;
+        const images = [];
 
-    // Collect all image sources
-    galleryItems.forEach((item, index) => {
-        const img = item.querySelector('img');
-        if (img) {
-            images.push(img.src);
-            item.addEventListener('click', () => openLightbox(index));
+        // Collect all image sources
+        galleryItems.forEach((item, index) => {
+            const img = item.querySelector('img');
+            if (img) {
+                images.push(img.src);
+                item.addEventListener('click', () => openLightbox(index));
+            }
+        });
+
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightboxImage();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
-    });
 
-    function openLightbox(index) {
-        currentIndex = index;
-        updateLightboxImage();
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    function updateLightboxImage() {
-        lightboxImg.src = images[currentIndex];
-        lightboxCurrent.textContent = currentIndex + 1;
-    }
-
-    function showNext() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateLightboxImage();
-    }
-
-    function showPrev() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateLightboxImage();
-    }
-
-    // Event listeners
-    closeBtn.addEventListener('click', closeLightbox);
-    nextBtn.addEventListener('click', showNext);
-    prevBtn.addEventListener('click', showPrev);
-
-    // Close on background click
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox || e.target.classList.contains('lightbox-content')) {
-            closeLightbox();
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
         }
-    });
 
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (!lightbox.classList.contains('active')) return;
+        function updateLightboxImage() {
+            lightboxImg.src = images[currentIndex];
+            lightboxCurrent.textContent = currentIndex + 1;
+        }
 
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowRight') showNext();
-        if (e.key === 'ArrowLeft') showPrev();
-    });
-})();
+        function showNext() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateLightboxImage();
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateLightboxImage();
+        }
+
+        // Event listeners
+        closeBtn.addEventListener('click', closeLightbox);
+        nextBtn.addEventListener('click', showNext);
+        prevBtn.addEventListener('click', showPrev);
+
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.classList.contains('lightbox-content')) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') showNext();
+            if (e.key === 'ArrowLeft') showPrev();
+        });
+    })();
 </script>
 {% endif %}
 {% endblock content %}

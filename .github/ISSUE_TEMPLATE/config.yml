@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 General Questions
+    url: https://discord.gg/EDv6fM5yUm
+    about: Ask questions or get help on our Discord server
+  - name: 📧 Email Contact
+    url: mailto:computer.club@mnnit.ac.in
+    about: Contact us directly via email for private matters
+  - name: 📖 Contributing Guide
+    url: https://github.com/CC-MNNIT/cc-website/blob/main/CONTRIBUTING.md
+    about: Read our comprehensive contributing guide for developers
+  - name: ✍️ Blog Contributing Guide
+    url: https://github.com/CC-MNNIT/cc-website/blob/main/CONTRIBUTING_BLOG.md
+    about: Learn how to submit a blog post

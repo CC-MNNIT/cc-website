@@ -19,7 +19,7 @@ author_linkedin = "your-linkedin-username"  # Just the username, not the full UR
 ===========================================
 
 1. ❌ REMOVE ALL COMMENTS (like this one) before submitting
-2. ✅ Use PAIRED TAGS for shortcodes: {% shortcode() %}...{% end %}
+2. ✅ Use block components: `{% <alert_info> %}...{% </alert_info> %}`
 3. ✅ QUOTE mermaid labels with special characters: ["Label (with parens)"]
 4. ✅ Always specify language for code fences: ```bash or ```python
 5. ✅ Test locally with `zola serve` before submitting PR
@@ -31,9 +31,9 @@ author_linkedin = "your-linkedin-username"  # Just the username, not the full UR
 
 Start with a compelling introduction that hooks the reader. Explain what problem you're solving or what you'll teach them.
 
-{% alert_info() %}
+{% <alert_info> %}
 Use this alert for important summary information or TL;DR sections.
-{% end %}
+{% </alert_info> %}
 
 ## Main Content Section
 
@@ -58,17 +58,17 @@ def example_function():
 echo "Always use the language identifier"
 ```
 
-### Using Shortcodes Correctly
+### Using Components Correctly
 
-{% alert_warning() %}
-**Common Mistake:** Don't use inline shortcodes like `{{ alert_info(content="...") }}`
+{% <alert_warning> %}
+**Common Mistake:** Don't use inline calls like `{{ alert_info(content="...") }}`
 
-**Correct Way:** Use paired tags as shown in this example!
-{% end %}
+**Correct Way:** Use block components as shown in this example!
+{% </alert_warning> %}
 
-**Available shortcodes:**
+**Available components:**
 
-{% collapse(title="Click to see available shortcodes") %}
+{% <collapse title="Click to see available components"> %}
 
 **Alerts:**
 - `alert_info` - Blue info boxes
@@ -79,35 +79,41 @@ echo "Always use the language identifier"
 **Badges:**
 - `badge_primary` - Primary badges
 - `badge_secondary` - Secondary badges
+- `badge_accent` - Accent badges
 - `badge_success` - Success badges
 - `badge_warning` - Warning badges
+- `badge_error` - Error badges
+- `badge_info` - Info badges
 
 **Other:**
 - `collapse` - Collapsible sections (like this one!)
-- `pretty_link` - Beautiful link previews
+- `pretty_link` - Beautiful link previews (self-closing: `{{<pretty_link url="..." title="..." />}}`)
+- `mermaid` - Diagrams
+- `image` - Images from the site's image base URL
+- `youtube` - Embedded videos
 
-{% end %}
+{% </collapse> %}
 
 ### Example: Using Badges
 
-{% badge_primary() %}Important{% end %} {% badge_secondary() %}Beta Feature{% end %}
+{% <badge_primary> %}Important{% </badge_primary> %} {% <badge_secondary> %}Beta Feature{% </badge_secondary> %}
 
 ### Example: Success Alert
 
-{% alert_success() %}
-Your content rendered successfully! You can use markdown inside shortcodes.
-{% end %}
+{% <alert_success > %}
+Your content rendered successfully! You can use markdown inside components.
+{% </alert_success> %}
 
 ### Mermaid Diagrams
 
 When using mermaid diagrams, **always quote labels** that contain special characters like `:`, `()`, `[]`:
 
-{% mermaid() %}
+{% <mermaid > %}
 graph LR
     A["User (Client)"] -->|Request| B["Server"]
     B -->|Response| A
     C["Database: PostgreSQL"] -.->|Query| B
-{% end %}
+{% </mermaid> %}
 
 ❌ **Wrong:** `A[User (Client)]` - Will cause syntax errors  
 ✅ **Correct:** `A["User (Client)"]` - Quoted labels work perfectly
@@ -116,7 +122,7 @@ graph LR
 
 Use collapse for optional, detailed information:
 
-{% collapse(title="Advanced: Deep Dive into Topic") %}
+{% <collapse title="Advanced: Deep Dive into Topic"> %}
 
 This content is hidden by default. Great for:
 - Advanced topics
@@ -128,7 +134,7 @@ This content is hidden by default. Great for:
 const example = "Hidden until clicked";
 ```
 
-{% end %}
+{% </collapse> %}
 
 ## Images
 
@@ -156,9 +162,9 @@ Or use absolute URLs for external images:
 
 Wrap up your post with key takeaways and next steps for readers.
 
-{% alert_success() %}
-**Ready to contribute?** Follow the steps in [CONTRIBUTING_BLOG.md](/CONTRIBUTING_BLOG/) to submit your post!
-{% end %}
+{% <alert_success > %}
+**Ready to contribute?** Follow the steps in [CONTRIBUTING_BLOG.md](https://github.com/CC-MNNIT/cc-website/blob/main/CONTRIBUTING_BLOG.md) to submit your post!
+{% </alert_success> %}
 
 ---
 
@@ -170,4 +176,5 @@ Use `pretty_link` for external resources:
 
 ---
 
+<!-- Replace with your own LinkedIn/contact link, or delete this line. -->
 *Questions or feedback? Connect with me on [LinkedIn](https://www.linkedin.com/in/your-linkedin-username/)!*

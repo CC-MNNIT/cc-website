@@ -10,7 +10,7 @@ event_type = "open-source"
 status = "completed"
 external_link = "https://computercodingclub.in/contrihub"
 location = "MNNIT Allahabad"
-participants = 100
+participants = "100+"
 banner_image = "events/2025/contrihub/3.webp"
 
 # --- Event Images ---

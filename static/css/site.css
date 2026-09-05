@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* ============================================
+   SITE CSS - SINGLE ENTRY POINT
+   ============================================
+   The one stylesheet loaded on every page.
+   Load order (cascade is significant):
+     0.  vendor/  - third-party bundles (Tailwind/DaisyUI, Font Awesome)
+     0b. components/prose-extras.css - site component rules extracted
+         verbatim from the vendor bundle (must stay right after vendor)
+     1.  core/    - variables, reset, typography, animations
+     2.  components/ - navbar, footer, buttons, cards
+     3.  pages/   - page-specific styles
+     4.  shortcodes - must stay last: dark-theme styling for shortcode components
+       (alerts, badges, mermaid, embeds); higher-specificity soft variants
+       intentionally win over legacy brand rules in cards.css by cascade order
+   Do not add styles here; put them in the matching module file.
+*/
+
+/* 0. Vendor bundles */
+@import url('vendor/tailwind-daisyui.min.css');
+@import url('font-awesome.min.css');
+
+/* 0b. Site component rules extracted from the vendor bundle
+   (must stay immediately after the vendor import to preserve cascade order) */
+@import url('components/prose-extras.css');
+
+/* 1. Core Styles (Variables, Reset, Typography, Animations) */
+@import url('core/variables.css');
+@import url('core/reset.css');
+@import url('core/typography.css');
+@import url('core/animations.css');
+
+/* 2. Components (Navbar, Footer, Buttons, Cards) */
+@import url('components/navbar.css');
+@import url('components/footer.css');
+@import url('components/buttons.css');
+@import url('components/cards.css');
+
+/* 3. Page-Specific Styles */
+@import url('pages/landing.css');
+@import url('pages/projects.css');
+@import url('pages/events.css');
+@import url('pages/blog.css');
+@import url('pages/about.css');
+@import url('pages/team.css');
+@import url('pages/roadmaps.css');
+
+/* 4. Shortcode & prose component styles.
+   Loads after everything else to preserve the cascade of the
+   former custom.css layer; will be dissolved per-section. */
+@import url('components/shortcodes.css');
+
+/* End of Imports */

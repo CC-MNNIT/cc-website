@@ -8,7 +8,7 @@
 {% extends "index.html" %}
 
 {% block header %}
-    {{ macros_header::header(config=config, lang=lang, section=section) }}
+    {{<header config={config} lang={lang} is_root_page={false} section={section} page={false} />}}
 {% endblock header %}
 
 {% block content %}
@@ -25,20 +25,20 @@
 
     {% for event in all_events %}
         {% if event.extra.event_type == "hackathon" %}
-            {% set_global hackathons = hackathons | concat(with=[event]) %}
+            {% set_global hackathons = [...hackathons, event] %}
         {% elif event.extra.event_type == "challenge" %}
-            {% set_global challenges = challenges | concat(with=[event]) %}
+            {% set_global challenges = [...challenges, event] %}
         {% elif event.extra.event_type == "workshop" %}
-            {% set_global workshops = workshops | concat(with=[event]) %}
+            {% set_global workshops = [...workshops, event] %}
         {% elif event.extra.event_type == "program" %}
-            {% set_global programs = programs | concat(with=[event]) %}
+            {% set_global programs = [...programs, event] %}
         {% endif %}
     {% endfor %}
 
     {# ========== YEAR HERO HEADER ========== #}
     <section class="year-hero">
         <div class="year-hero-content">
-            <a href="/events/" class="year-back-link">
+            <a href="{{ get_url(path='@/events/_index.md') }}" class="year-back-link">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
                 <span>All Events</span>
             </a>
@@ -198,7 +198,7 @@
         <div class="events-empty-state visible">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             <p>No events scheduled for {{ year_value }} yet</p>
-            <a href="/events/" class="events-back-btn">View All Events</a>
+            <a href="{{ get_url(path='@/events/_index.md') }}" class="events-back-btn">View All Events</a>
         </div>
         {% endif %}
 
