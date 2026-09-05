@@ -13,18 +13,14 @@
         <updated>2026-02-08T00:00:00+00:00</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://cc-club.in/blog/2026/time-complexity/"/>
         <id>https://cc-club.in/blog/2026/time-complexity/</id>
         
-        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
-&lt;p&gt;Ever wondered why some programs run blazingly fast while others crawl? The secret lies in understanding &lt;strong&gt;time complexity&lt;&#x2F;strong&gt; – the language we use to describe how an algorithm&#x27;s performance scales with input size. Whether you&#x27;re preparing for technical interviews, optimizing production code, or simply curious about what makes algorithms tick, mastering time complexity is your key to writing efficient, scalable software.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Ever wondered why some programs run blazingly fast while others crawl? The secret lies in understanding &lt;strong&gt;time complexity&lt;/strong&gt; – the language we use to describe how an algorithm&#39;s performance scales with input size. Whether you&#39;re preparing for technical interviews, optimizing production code, or simply curious about what makes algorithms tick, mastering time complexity is your key to writing efficient, scalable software.&lt;/p&gt;</summary>
         
     </entry>
 </feed>

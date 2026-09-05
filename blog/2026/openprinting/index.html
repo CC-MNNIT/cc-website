@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="en" style="background-color: #0f172a;">
 
 <head>
@@ -16,8 +18,15 @@
     <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
     <script>
         (function() {
-            // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-            var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
             
             
             
@@ -31,10 +40,10 @@
             var defaultColorset = "dark";
             var darkBrightness = "normal";
             var lightBrightness = "normal";
-            var themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-            var fallbackTheme = themeMap[defaultColorset] || "goyo-dark";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
             
-            // Expose brightness config for global use (e.g., goyo.js)
+            // Expose brightness config for global use (e.g., js/theme.js)
             window.darkBrightness = darkBrightness;
             window.lightBrightness = lightBrightness;
             
@@ -43,7 +52,7 @@
             var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
             
             // Determine brightness based on current theme
-            var currentBrightness = (currentUserTheme === "goyo-dark") ? darkBrightness : lightBrightness;
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
             
             // Set theme and brightness attributes immediately
             document.documentElement.setAttribute("data-theme", actualTheme);
@@ -124,8 +133,7 @@
       <link rel="manifest" href="https://cc-club.in/icons/site.webmanifest" />
 
       <!-- CSS -->
-    <link rel="stylesheet" href="https://cc-club.in/css/main.css">
-    <link rel="stylesheet" href="https://cc-club.in/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cc-club.in/css/site.css">
     
     <!-- Preload critical fonts -->
     <link rel="preload" href="https://cc-club.in/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
@@ -203,9 +211,6 @@
     
     
 
-    
-    <link rel="stylesheet" href="https://cc-club.in/css/custom.css">
-
     <style>
         /* Desktop Sidebar Animation */
         @media (min-width: 1024px) {
@@ -280,6 +285,11 @@
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col pt-16">
             
+    
+
+
+
+
 
 
 
@@ -491,7 +501,7 @@
             
             <li class="flex items-center">
                 <label class="swap swap-rotate btn btn-ghost btn-circle">
-                    <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color" />
+                    <input type="checkbox" class="theme-controller" value="cc-dark" aria-labelledby="swap color" />
                     <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
@@ -538,16 +548,19 @@
 </script>
 
 
+
             
             
             
             
                 
             
+
             
             <div class="p-8 w-full flex justify-center">
                 <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
                     <main class="prose w-full">
+            
                         
     <div class="mb-12 pb-4 border-b border-gray-500/15">
         <h1 class="flex items-center gap-3">
@@ -559,11 +572,10 @@
     <h2 id="introduction">Introduction</h2>
 <p>Printing is one of those “boring but essential” capabilities that most users expect to just <em>work</em>. On Linux, that smooth experience is largely thanks to the <strong>OpenPrinting</strong> community and the software stack it maintains.</p>
 <p>Whether you are a sysadmin managing a fleet of printers or a developer looking to contribute to open source, understanding how Linux talks to paper is crucial. This post explains the architecture of OpenPrinting, how its major components (especially CUPS and IPP) fit together, and provides a cheat sheet for daily operations.</p>
-<div role="alert" class="alert alert-info alert- soft">
-  <div><p><strong>Quick Summary (TL;DR):</strong> OpenPrinting enables standardized, driverless printing on Linux using <strong>CUPS</strong> (the spooler) and <strong>IPP</strong> (the protocol). This guide covers architecture, CLI commands, troubleshooting, and contribution paths.</p>
-</div>
-</div><h2 id="what-is-openprinting">What is OpenPrinting?</h2>
-<p><div class="badge badge-soft badge-primary">Community</div> <div class="badge badge-soft badge-secondary">Standards</div></p>
+<div role="alert" class="alert alert-info alert-soft"><div><p><strong>Quick Summary (TL;DR):</strong> OpenPrinting enables standardized, driverless printing on Linux using <strong>CUPS</strong> (the spooler) and <strong>IPP</strong> (the protocol). This guide covers architecture, CLI commands, troubleshooting, and contribution paths.</p>
+</div></div>
+<h2 id="what-is-openprinting">What is OpenPrinting?</h2>
+<div class="badge badge-soft badge-primary">Community</div> <div class="badge badge-soft badge-secondary">Standards</div>
 <p>OpenPrinting is an open-source initiative focused on improving printing support on Linux and Unix-like systems. Historically, printing relied on fragile, vendor-specific drivers. OpenPrinting aims to eliminate those pain points by collaborating with printer vendors and Linux distributions to promote <strong>standardized protocols</strong> and <strong>user-space solutions</strong>.</p>
 <h2 id="core-components">Core Components</h2>
 <p>The Linux printing stack is modular. Here are the key players:</p>
@@ -588,14 +600,14 @@
 <hr />
 <h2 id="how-it-works-the-architecture">How It Works: The Architecture</h2>
 <p>Understanding the flow of a print job helps immensely when things go wrong.</p>
-<img src="https://cc-club.in/images/https://www.novell.com/documentation/nnls/iprinthealth/graphics/print_psm001_a.gif" alt="Linux Printing Architecture Diagram" class="rounded-lg shadow-md" />
+<img src="https://www.novell.com/documentation/nnls/iprinthealth/graphics/print_psm001_a.gif" alt="Linux Printing Architecture Diagram" class="rounded-lg shadow-md" />
 <pre class="mermaid border border-gray-500/15">
- graph LR
-    User[User Application] --&gt;|Submit Job| CUPS[CUPS Scheduler]
-    CUPS --&gt;|Process| Filters[Filters&#x2F;Ghostscript]
-    Filters --&gt;|Convert| Backend[&quot;Backend (USB&#x2F;Net)&quot;]
-    Backend --&gt;|IPP&#x2F;Data| Printer[Physical Printer]
-    Printer -.-&gt;|Status| CUPS
+graph LR
+    User[User Application] -->|Submit Job| CUPS[CUPS Scheduler]
+    CUPS -->|Process| Filters[Filters/Ghostscript]
+    Filters -->|Convert| Backend["Backend (USB/Net)"]
+    Backend -->|IPP/Data| Printer[Physical Printer]
+    Printer -.->|Status| CUPS
 </pre>
 <ol>
 <li><strong>Application:</strong> (e.g., LibreOffice) sends a PDF/PostScript to CUPS.</li>
@@ -607,22 +619,15 @@
 <h2 id="sysadmin-cheat-sheet-practical-commands">Sysadmin Cheat Sheet: Practical Commands</h2>
 <p>These commands assume CUPS is installed. They are essential for headless server management.</p>
 <h3 id="setup-discovery">Setup &amp; Discovery</h3>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
-  <div class="collapse-title font-semibold">
-    Click to view Device Discovery Commands
-  </div>
-  <div class="collapse-content text-sm">
-    <ul>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">Click to view Device Discovery Commands</div><div class="collapse-content text-sm"><ul>
 <li><code>lpinfo -v</code>: List available devices/backends</li>
 <li><code>ippfind</code>: Scan network for IPP printers</li>
 <li><code>avahi-browse -rt _ipp._tcp</code>: Detailed mDNS discovery</li>
 <li><code>driverless</code>: List driverless-capable devices</li>
 </ul>
-
-  </div>
-</div>
+</div></div>
 <h3 id="managing-printers">Managing Printers</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Add a driverless printer (IPP Everywhere)</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Add a driverless printer (IPP Everywhere)</span></span>
 <span class="giallo-l"><span style="color: #59C2FF;">sudo</span><span style="color: #AAD94C;"> lpadmin</span><span style="color: #95E6CB;"> -p</span><span style="color: #AAD94C;"> OfficePrinter</span><span style="color: #95E6CB;"> -E -v</span><span style="color: #AAD94C;"> ipp://printer.local/ipp/</span><span style="color: #95E6CB;"> -m</span><span style="color: #AAD94C;"> everywhere</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Set as default</span></span>
@@ -630,7 +635,7 @@
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Check status of all printers</span></span>
 <span class="giallo-l"><span style="color: #59C2FF;">lpstat</span><span style="color: #95E6CB;"> -p -d</span></span></code></pre><h3 id="job-management">Job Management</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Print a PDF file</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Print a PDF file</span></span>
 <span class="giallo-l"><span style="color: #59C2FF;">lp</span><span style="color: #95E6CB;"> -d</span><span style="color: #AAD94C;"> OfficePrinter document.pdf</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Cancel a specific job</span></span>
@@ -643,7 +648,7 @@
 <p>When printing fails, it usually fails silently. Here is how to make it talk.</p>
 <h3 id="1-the-printer-is-not-discovered">1. The Printer is Not Discovered</h3>
 <p><strong>Check mDNS:</strong> Driverless printing relies on Bonjour/Avahi.</p>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">avahi-browse</span><span style="color: #95E6CB;"> -a</span></span></code></pre>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">avahi-browse</span><span style="color: #95E6CB;"> -a</span></span></code></pre>
 <p><strong>Firewall:</strong> Ensure TCP port 631 (IPP) and UDP port 5353 (mDNS) are open.</p>
 <h3 id="2-filter-failed-errors">2. "Filter Failed" Errors</h3>
 <p>This usually means CUPS couldn't convert the file.</p>
@@ -653,11 +658,9 @@
 <li>Restart CUPS: <code>sudo systemctl restart cups</code>.</li>
 <li>Watch the logs live:</li>
 </ol>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">journalctl</span><span style="color: #95E6CB;"> -u</span><span style="color: #AAD94C;"> cups</span><span style="color: #95E6CB;"> -f</span></span></code></pre><h3 id="3-legacy-usb-issues">3. Legacy USB Issues</h3>
-<div role="alert" class="alert alert-warning alert- soft">
-  <div><p>Warning: Legacy USB printers often require specific permissions. Check lsusb to see if the kernel detects the device, and ensure your user is in the lp group.</p>
-</div>
-</div>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">journalctl</span><span style="color: #95E6CB;"> -u</span><span style="color: #AAD94C;"> cups</span><span style="color: #95E6CB;"> -f</span></span></code></pre><h3 id="3-legacy-usb-issues">3. Legacy USB Issues</h3>
+<div role="alert" class="alert alert-warning alert-soft"><div><p>Warning: Legacy USB printers often require specific permissions. Check lsusb to see if the kernel detects the device, and ensure your user is in the lp group.</p>
+</div></div>
 <hr />
 <h2 id="contributing-to-openprinting">Contributing to OpenPrinting</h2>
 <p>OpenPrinting is a community-driven project. We need help from developers (C/C++), documentation writers, and testers.</p>
@@ -692,38 +695,9 @@
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>OpenPrinting quietly powers one of the most important subsystems on Linux. Its focus on standards, driverless workflows, and community collaboration ensures printing remains reliable and future-proof.</p>
 <p>Whether you're a sysadmin debugging a queue or a student looking for your first open-source commit, the ecosystem is welcoming and vital.</p>
-<div role="alert" class="alert alert-success alert- soft">
-  <div><p>Ready to experiment? Try setting up a local print queue on your machine today using the command line examples above!</p>
-</div>
-</div><div class="pretty-link-card group">
-  <a href="https:&#x2F;&#x2F;github.com&#x2F;OpenPrinting" target="_blank" rel="noopener noreferrer" class="block">
-    <div class="flex items-start gap-4 p-5">
-      
-      <div class="flex-1 min-w-0">
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <h3 class="pretty-link-title">
-            OpenPrinting on GitHub
-          </h3>
-          <div class="pretty-link-icon-wrapper">
-            <svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-            </svg>
-          </div>
-        </div>
-        
-        <p class="pretty-link-description">Source code and issues for the OpenPrinting project</p>
-        
-        <div class="pretty-link-url">
-          <svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
-          </svg>
-          github.com&#x2F;OpenPrinting
-        </div>
-      </div>
-    </div>
-  </a>
-</div>
-
+<div role="alert" class="alert alert-success alert-soft"><div><p>Ready to experiment? Try setting up a local print queue on your machine today using the command line examples above!</p>
+</div></div>
+<div class="pretty-link-card group"><a href="https://github.com/OpenPrinting" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">OpenPrinting on GitHub</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description">Source code and issues for the OpenPrinting project</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>github.com/OpenPrinting</div></div></div></a></div>
 
     
     
@@ -776,7 +750,7 @@
     
     <div class="mt-8 pt-6 border-t border-gray-500/15">
         <div class="flex flex-wrap items-center gap-4">
-            <a href="https:&#x2F;&#x2F;github.com&#x2F;CC-MNNIT&#x2F;cc-website&#x2F;edit&#x2F;main&#x2F;/content/blog&#x2F;2026&#x2F;2026-02-05-openprinting.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+            <a href="https://github.com/CC-MNNIT/cc-website/edit/main//content/blog/2026/2026-02-05-openprinting.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                 </svg>
@@ -797,7 +771,7 @@
             </button>
             
             
-            <a href="https://twitter.com/intent/tweet?url=https%3A&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;2026&#x2F;openprinting&#x2F;&text=OpenPrinting%3A%20The%20Open-Source%20Backbone%20of%20Linux%20Printing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+            <a href="https://twitter.com/intent/tweet?url=https%3A//cc-club.in/blog/2026/openprinting/&text=OpenPrinting%3A%20The%20Open-Source%20Backbone%20of%20Linux%20Printing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                 </svg>
@@ -838,10 +812,6 @@
     
         
         
-        
-            
-            
-            
         
             
             
@@ -899,6 +869,10 @@
             
             
             
+        
+            
+            
+            
                 
             
                 
@@ -920,6 +894,7 @@
                             </div>
                         </nav>
                     </main>
+            
 
                     
                         
@@ -1063,12 +1038,12 @@
                     
                     
                 </div>
-            </div>
             
+            </div>
 
             <script>
-              // Determine theme: localStorage > extra.default_colorset > goyo-dark
-              // Expose theme config for global use (e.g., goyo.js)
+              // Determine theme: localStorage > extra.default_colorset > cc-dark
+              // Expose theme config for global use (e.g., js/theme.js)
               
               
               
@@ -1080,18 +1055,18 @@
               window.defaultColorset = "dark";
               window.darkBrightness = "normal";
               window.lightBrightness = "normal";
-              window.themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-              window.fallbackTheme = window.themeMap[window.defaultColorset] || "goyo-dark";
+              window.themeMap = { "dark": "cc-dark", "light": "cc-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "cc-dark";
 
-              // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-              var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+              // Theme mapping - user-facing names are the theme identifiers
+              var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
               var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
               var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
 
               // Initialize and run Mermaid only when loaded
               window.initMermaid = function() {
                 var mermaidTheme = "dark";
-                if(currentUserTheme == "goyo-light") {
+                if(currentUserTheme == "cc-light") {
                   mermaidTheme = "light";
                 }
                 
@@ -1201,23 +1176,23 @@
                         
                             
                             
-                            <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;cc.club.mnnit&#x2F;" aria-label="Instagram">
+                            <a href="https://www.instagram.com/cc.club.mnnit/" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
                             
                             
                             
-                            <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;company&#x2F;computer-coding-club-mnnit&#x2F;" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/company/computer-coding-club-mnnit/" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                             
                             
-                            <a href="https:&#x2F;&#x2F;github.com&#x2F;CC-MNNIT" aria-label="GitHub">
+                            <a href="https://github.com/CC-MNNIT" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                             
                             
-                            <a href="https:&#x2F;&#x2F;discord.gg&#x2F;EDv6fM5yUm" aria-label="Discord">
+                            <a href="https://discord.gg/EDv6fM5yUm" aria-label="Discord">
                                 <i class="fab fa-discord"></i>
                             </a>
                             
@@ -1250,6 +1225,8 @@
         <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
             
                 
+
+
 
 
 
@@ -1385,7 +1362,7 @@
     
     
     <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
-        <a href="https:&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;" class="hover:text-primary transition-colors">Blog</a>
+        <a href="https://cc-club.in/blog/" class="hover:text-primary transition-colors">Blog</a>
     </div>
 
     
@@ -1443,7 +1420,7 @@
     </div>
 
     
-        <script type="text/javascript" src="https://cc-club.in/goyo.js"></script>
+        <script type="text/javascript" src="https://cc-club.in/js/theme.js"></script>
         
         <!-- Lazy load search functionality -->
         <script>

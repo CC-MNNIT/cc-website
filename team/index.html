@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="en" style="background-color: #0f172a;">
 
 <head>
@@ -16,8 +18,15 @@
     <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
     <script>
         (function() {
-            // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-            var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
             
             
             
@@ -31,10 +40,10 @@
             var defaultColorset = "dark";
             var darkBrightness = "normal";
             var lightBrightness = "normal";
-            var themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-            var fallbackTheme = themeMap[defaultColorset] || "goyo-dark";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
             
-            // Expose brightness config for global use (e.g., goyo.js)
+            // Expose brightness config for global use (e.g., js/theme.js)
             window.darkBrightness = darkBrightness;
             window.lightBrightness = lightBrightness;
             
@@ -43,7 +52,7 @@
             var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
             
             // Determine brightness based on current theme
-            var currentBrightness = (currentUserTheme === "goyo-dark") ? darkBrightness : lightBrightness;
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
             
             // Set theme and brightness attributes immediately
             document.documentElement.setAttribute("data-theme", actualTheme);
@@ -122,8 +131,7 @@
       <link rel="manifest" href="https://cc-club.in/icons/site.webmanifest" />
 
       <!-- CSS -->
-    <link rel="stylesheet" href="https://cc-club.in/css/main.css">
-    <link rel="stylesheet" href="https://cc-club.in/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cc-club.in/css/site.css">
     
     <!-- Preload critical fonts -->
     <link rel="preload" href="https://cc-club.in/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
@@ -201,9 +209,6 @@
     
     
 
-    
-    <link rel="stylesheet" href="https://cc-club.in/css/custom.css">
-
     <style>
         /* Desktop Sidebar Animation */
         @media (min-width: 1024px) {
@@ -278,6 +283,10 @@
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col pt-16">
             
+
+
+
+
 
 
 
@@ -489,7 +498,7 @@
             
             <li class="flex items-center">
                 <label class="swap swap-rotate btn btn-ghost btn-circle">
-                    <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color" />
+                    <input type="checkbox" class="theme-controller" value="cc-dark" aria-labelledby="swap color" />
                     <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
@@ -542,10 +551,12 @@
             
                 
             
+
             
             <div class="p-8 w-full flex justify-center">
                 <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
                     <main class="prose w-full">
+            
                         
 <div class="team-container">
     <div class="team-header">
@@ -578,7 +589,7 @@
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.mnnit.ac.in&#x2F;profile&#x2F;previewr.php?id=1785" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.mnnit.ac.in/profile/previewr.php?id=1785" target="_blank" rel="noopener noreferrer"
                             class="social-link">
                             <i class="fa-solid fa-user-tie"></i>
                         </a>
@@ -608,17 +619,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;ayushman-tiwari-a7807b243&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/ayushman-tiwari-a7807b243/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;Ayushman444" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/Ayushman444" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;instagram.com&#x2F;ayush__mn" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://instagram.com/ayush__mn" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -638,17 +649,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;aviral-mishra-india" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://linkedin.com/in/aviral-mishra-india" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;aviral-mishra-1008" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/aviral-mishra-1008" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;instagram.com&#x2F;avi.m_pyg" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://instagram.com/avi.m_pyg" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -668,17 +679,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;uday-nauhbar-0b2b7124b&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/uday-nauhbar-0b2b7124b/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;Uday061" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/Uday061" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;uday.661&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/uday.661/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -698,17 +709,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;aryan-lem" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/aryan-lem" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;aryan-lem" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/aryan-lem" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;lemnis_kate1.23" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/lemnis_kate1.23" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -728,17 +739,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;sumit-verma-smt" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/sumit-verma-smt" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;smt96700" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/smt96700" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;sumit96_verma" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/sumit96_verma" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -758,17 +769,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;nihal2908" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/nihal2908" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;nihal2908" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/nihal2908" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;nihal.yadav.000" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/nihal.yadav.000" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -788,17 +799,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;sushmit-patel-181063258&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/sushmit-patel-181063258/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;Sushmitpatel" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/Sushmitpatel" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;sushmit3460" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/sushmit3460" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -818,17 +829,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;in.linkedin.com&#x2F;in&#x2F;aditya-raj-07a295256" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://in.linkedin.com/in/aditya-raj-07a295256" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;adityatny" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/adityatny" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;instagram.com&#x2F;adityaraj.0177" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://instagram.com/adityaraj.0177" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -848,17 +859,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;lokesh-wagh12" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/lokesh-wagh12" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;lokesh-wagh" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/lokesh-wagh" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;_lokesh_wagh" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/_lokesh_wagh" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -878,17 +889,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;mrinal-varshney-971a27250&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/mrinal-varshney-971a27250/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;MrinalVarshney" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/MrinalVarshney" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;instagram.com&#x2F;mrinal_varshney" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://instagram.com/mrinal_varshney" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -908,17 +919,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;sahaj96&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/sahaj96/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;sahaj-96" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/sahaj-96" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;_sahaj96&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/_sahaj96/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -938,17 +949,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;tanishka-thakur-915893250" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/tanishka-thakur-915893250" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.github.com&#x2F;tan-inv" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.github.com/tan-inv" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;tanishka_0304" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/tanishka_0304" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -968,17 +979,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;rajnandinipatel31&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/rajnandinipatel31/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;Rajnandinii" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/Rajnandinii" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;instagram.com&#x2F;_nandini.patel81" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://instagram.com/_nandini.patel81" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -998,7 +1009,7 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;gantavyarohatgi" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/gantavyarohatgi" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
@@ -1020,17 +1031,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;utsav-kasvala-239786280" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/utsav-kasvala-239786280" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;utsav-kasvala" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/utsav-kasvala" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;utsav___kasvala" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/utsav___kasvala" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -1050,17 +1061,17 @@
                     <p class="member-role">CCR</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;shubham-garg-167983260&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/shubham-garg-167983260/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;Shubham-garg1234" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://github.com/Shubham-garg1234" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;real__shubh&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/real__shubh/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -1090,13 +1101,13 @@
                     <p class="member-role">Design Team</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;shikhargupta812" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/shikhargupta812" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;shikhargupta_0812&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/shikhargupta_0812/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -1134,13 +1145,13 @@
                     <p class="member-role">Design Lead</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;vaishnavi704" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/vaishnavi704" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;vaishnavitiwari_104" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/vaishnavitiwari_104" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -1170,13 +1181,13 @@
                     <p class="member-role">Marketing Lead</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;sarthak-porwal-8a9b40256&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/sarthak-porwal-8a9b40256/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;sarthak.porwal&#x2F;" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/sarthak.porwal/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -1196,13 +1207,13 @@
                     <p class="member-role">Marketing Lead</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;siddharth-chaubal-473aaa257" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/siddharth-chaubal-473aaa257" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;sidu_2401" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/sidu_2401" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -1222,13 +1233,13 @@
                     <p class="member-role">Marketing Lead</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;divyanshu-yadav-506506274" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/divyanshu-yadav-506506274" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;divyanshuyadav000" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/divyanshuyadav000" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -1248,13 +1259,13 @@
                     <p class="member-role">Marketing Lead</p>
                     <div class="social-bar">
                         
-                        <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;ritik-chaudhry" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.linkedin.com/in/ritik-chaudhry" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         
                         
                         
-                        <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;ritik._.chaudhry" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="https://www.instagram.com/ritik._.chaudhry" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
@@ -1284,6 +1295,7 @@
                             </div>
                         </nav>
                     </main>
+            
 
                     
                     
@@ -1307,12 +1319,12 @@
 
                     
                 </div>
-            </div>
             
+            </div>
 
             <script>
-              // Determine theme: localStorage > extra.default_colorset > goyo-dark
-              // Expose theme config for global use (e.g., goyo.js)
+              // Determine theme: localStorage > extra.default_colorset > cc-dark
+              // Expose theme config for global use (e.g., js/theme.js)
               
               
               
@@ -1324,18 +1336,18 @@
               window.defaultColorset = "dark";
               window.darkBrightness = "normal";
               window.lightBrightness = "normal";
-              window.themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-              window.fallbackTheme = window.themeMap[window.defaultColorset] || "goyo-dark";
+              window.themeMap = { "dark": "cc-dark", "light": "cc-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "cc-dark";
 
-              // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-              var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+              // Theme mapping - user-facing names are the theme identifiers
+              var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
               var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
               var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
 
               // Initialize and run Mermaid only when loaded
               window.initMermaid = function() {
                 var mermaidTheme = "dark";
-                if(currentUserTheme == "goyo-light") {
+                if(currentUserTheme == "cc-light") {
                   mermaidTheme = "light";
                 }
                 
@@ -1445,23 +1457,23 @@
                         
                             
                             
-                            <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;cc.club.mnnit&#x2F;" aria-label="Instagram">
+                            <a href="https://www.instagram.com/cc.club.mnnit/" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
                             
                             
                             
-                            <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;company&#x2F;computer-coding-club-mnnit&#x2F;" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/company/computer-coding-club-mnnit/" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                             
                             
-                            <a href="https:&#x2F;&#x2F;github.com&#x2F;CC-MNNIT" aria-label="GitHub">
+                            <a href="https://github.com/CC-MNNIT" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                             
                             
-                            <a href="https:&#x2F;&#x2F;discord.gg&#x2F;EDv6fM5yUm" aria-label="Discord">
+                            <a href="https://discord.gg/EDv6fM5yUm" aria-label="Discord">
                                 <i class="fab fa-discord"></i>
                             </a>
                             
@@ -1494,6 +1506,8 @@
         <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
             
                 
+
+
 
 
 
@@ -1629,7 +1643,7 @@
     
     
     <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
-        <a href="https:&#x2F;&#x2F;cc-club.in&#x2F;team&#x2F;" class="hover:text-primary transition-colors">Our Team</a>
+        <a href="https://cc-club.in/team/" class="hover:text-primary transition-colors">Our Team</a>
     </div>
 
     
@@ -1642,13 +1656,6 @@
         
             
             
-                <li><a href="https://cc-club.in/team" class="hover:no-underline">
-                    Our Team
-                </a></li>
-            
-        
-            
-            
                 <li><a href="https://cc-club.in/blog" class="hover:no-underline">
                     Blog
                 </a></li>
@@ -1658,6 +1665,13 @@
             
                 <li><a href="https://cc-club.in/projects" class="hover:no-underline">
                     Projects
+                </a></li>
+            
+        
+            
+            
+                <li><a href="https://cc-club.in/team" class="hover:no-underline">
+                    Our Team
                 </a></li>
             
         
@@ -1711,7 +1725,7 @@
     </div>
 
     
-        <script type="text/javascript" src="https://cc-club.in/goyo.js"></script>
+        <script type="text/javascript" src="https://cc-club.in/js/theme.js"></script>
         
         <!-- Lazy load search functionality -->
         <script>

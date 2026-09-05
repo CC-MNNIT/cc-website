@@ -13,22 +13,18 @@
         <updated>2026-02-07T00:00:00+00:00</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://cc-club.in/blog/2026/ml-models-fail/"/>
         <id>https://cc-club.in/blog/2026/ml-models-fail/</id>
         
-        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
-&lt;p&gt;Training a machine learning model that shows &lt;strong&gt;95% accuracy&lt;&#x2F;strong&gt; feels like success.&lt;br &#x2F;&gt;
-But deploying that same model into production often turns that success into silence — wrong predictions, confused users, and no clear errors.&lt;&#x2F;p&gt;
-&lt;p&gt;This is not a rare problem.&lt;&#x2F;p&gt;
-&lt;p&gt;In fact, &lt;strong&gt;most ML models fail not because the algorithm is bad, but because the real world is messy&lt;&#x2F;strong&gt;.&lt;br &#x2F;&gt;
-This blog explains &lt;strong&gt;what goes wrong&lt;&#x2F;strong&gt;, &lt;strong&gt;why it happens&lt;&#x2F;strong&gt;, and &lt;strong&gt;how real systems deal with it&lt;&#x2F;strong&gt;, using simple language and real examples.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Training a machine learning model that shows &lt;strong&gt;95% accuracy&lt;/strong&gt; feels like success.&lt;br /&gt;
+But deploying that same model into production often turns that success into silence — wrong predictions, confused users, and no clear errors.&lt;/p&gt;
+&lt;p&gt;This is not a rare problem.&lt;/p&gt;
+&lt;p&gt;In fact, &lt;strong&gt;most ML models fail not because the algorithm is bad, but because the real world is messy&lt;/strong&gt;.&lt;br /&gt;
+This blog explains &lt;strong&gt;what goes wrong&lt;/strong&gt;, &lt;strong&gt;why it happens&lt;/strong&gt;, and &lt;strong&gt;how real systems deal with it&lt;/strong&gt;, using simple language and real examples.&lt;/p&gt;</summary>
         
     </entry>
 </feed>

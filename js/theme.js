@@ -303,18 +303,18 @@ function initTheme() {
 
   // Theme mapping - maps user-friendly names to actual DaisyUI theme names
   var themeMapping = {
-    "goyo-dark": "night",
-    "goyo-light": "lofi",
+    "cc-dark": "cc-dark",
+    "cc-light": "cc-light",
   };
 
   // Reverse mapping for checking current theme
   var reverseThemeMapping = {
-    night: "goyo-dark",
-    lofi: "goyo-light",
+    "cc-dark": "cc-dark",
+    "cc-light": "cc-light",
   };
 
   var fallbackTheme =
-    window && window.fallbackTheme ? window.fallbackTheme : "goyo-dark";
+    window && window.fallbackTheme ? window.fallbackTheme : "cc-dark";
   var currentUserTheme = localStorage.getItem("theme") || fallbackTheme;
 
   // Map user theme to actual DaisyUI theme
@@ -324,24 +324,24 @@ function initTheme() {
   // Set brightness based on current theme (per-theme brightness support)
   var darkBrightness = window.darkBrightness || "normal";
   var lightBrightness = window.lightBrightness || "normal";
-  var currentBrightness = (currentUserTheme === "goyo-dark") ? darkBrightness : lightBrightness;
+  var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
   document.documentElement.setAttribute("data-brightness", currentBrightness);
 
   // Set checkbox state based on current theme
-  themeController.checked = currentUserTheme === "goyo-dark";
+  themeController.checked = currentUserTheme === "cc-dark";
 
   // Update logo visibility based on current theme
   updateLogoForTheme(currentUserTheme);
 
   themeController.addEventListener("change", function (e) {
-    var userTheme = e.target.checked ? "goyo-dark" : "goyo-light";
+    var userTheme = e.target.checked ? "cc-dark" : "cc-light";
     var actualTheme = themeMapping[userTheme];
 
     document.documentElement.setAttribute("data-theme", actualTheme);
     localStorage.setItem("theme", userTheme); // Store user-friendly name
     
     // Update brightness based on the new theme (per-theme brightness support)
-    var newBrightness = (userTheme === "goyo-dark") ? darkBrightness : lightBrightness;
+    var newBrightness = (userTheme === "cc-dark") ? darkBrightness : lightBrightness;
     document.documentElement.setAttribute("data-brightness", newBrightness);
 
     // Update logo when theme changes
@@ -351,7 +351,7 @@ function initTheme() {
 
 // Function to update logo visibility based on current theme
 function updateLogoForTheme(userTheme) {
-  var isDarkTheme = userTheme === "goyo-dark";
+  var isDarkTheme = userTheme === "cc-dark";
 
   // Only query for logo elements once and cache the reference
   var logoDark = updateLogoForTheme._logoDark;

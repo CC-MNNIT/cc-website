@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="en" style="background-color: #0f172a;">
 
 <head>
@@ -16,8 +18,15 @@
     <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
     <script>
         (function() {
-            // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-            var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
             
             
             
@@ -31,10 +40,10 @@
             var defaultColorset = "dark";
             var darkBrightness = "normal";
             var lightBrightness = "normal";
-            var themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-            var fallbackTheme = themeMap[defaultColorset] || "goyo-dark";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
             
-            // Expose brightness config for global use (e.g., goyo.js)
+            // Expose brightness config for global use (e.g., js/theme.js)
             window.darkBrightness = darkBrightness;
             window.lightBrightness = lightBrightness;
             
@@ -43,7 +52,7 @@
             var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
             
             // Determine brightness based on current theme
-            var currentBrightness = (currentUserTheme === "goyo-dark") ? darkBrightness : lightBrightness;
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
             
             // Set theme and brightness attributes immediately
             document.documentElement.setAttribute("data-theme", actualTheme);
@@ -124,8 +133,7 @@
       <link rel="manifest" href="https://cc-club.in/icons/site.webmanifest" />
 
       <!-- CSS -->
-    <link rel="stylesheet" href="https://cc-club.in/css/main.css">
-    <link rel="stylesheet" href="https://cc-club.in/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cc-club.in/css/site.css">
     
     <!-- Preload critical fonts -->
     <link rel="preload" href="https://cc-club.in/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
@@ -203,9 +211,6 @@
     
     
 
-    
-    <link rel="stylesheet" href="https://cc-club.in/css/custom.css">
-
     <style>
         /* Desktop Sidebar Animation */
         @media (min-width: 1024px) {
@@ -280,6 +285,11 @@
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col pt-16">
             
+    
+
+
+
+
 
 
 
@@ -491,7 +501,7 @@
             
             <li class="flex items-center">
                 <label class="swap swap-rotate btn btn-ghost btn-circle">
-                    <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color" />
+                    <input type="checkbox" class="theme-controller" value="cc-dark" aria-labelledby="swap color" />
                     <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
@@ -538,16 +548,19 @@
 </script>
 
 
+
             
             
             
             
                 
             
+
             
             <div class="p-8 w-full flex justify-center">
                 <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
                     <main class="prose w-full">
+            
                         
     <div class="mb-12 pb-4 border-b border-gray-500/15">
         <h1 class="flex items-center gap-3">
@@ -563,10 +576,9 @@
 <hr />
 <h2 id="what-is-time-complexity">What is Time Complexity?</h2>
 <p>Time complexity is a computational concept that describes the amount of time an algorithm takes to complete as a function of the input size. Rather than measuring exact execution time (which varies by hardware), we analyze how the <strong>number of operations</strong> grows relative to input size.</p>
-<div role="alert" class="alert alert-info alert- soft">
-  <div><p><strong>Key Insight:</strong> Time complexity answers the question: <em>If I double my input size, how does my runtime change?</em></p>
-</div>
-</div><h3 id="why-time-complexity-matters">Why Time Complexity Matters</h3>
+<div role="alert" class="alert alert-info alert-soft"><div><p><strong>Key Insight:</strong> Time complexity answers the question: <em>If I double my input size, how does my runtime change?</em></p>
+</div></div>
+<h3 id="why-time-complexity-matters">Why Time Complexity Matters</h3>
 <ol>
 <li><strong>Scalability</strong>: An O(n²) algorithm might work fine for 100 items but become unusable at 10,000</li>
 <li><strong>Resource Efficiency</strong>: Better complexity means lower cloud costs and faster user experiences</li>
@@ -587,18 +599,17 @@
 <tr><td>O(2ⁿ)</td><td>Exponential</td><td>Recursive fibonacci (naive)</td></tr>
 <tr><td>O(n!)</td><td>Factorial</td><td>Generating all permutations</td></tr>
 </tbody></table>
-<div role="alert" class="alert alert-warning alert- soft">
-  <div><p><strong>Critical:</strong> The difference between O(n) and O(n²) can mean the difference between milliseconds and hours for large datasets!</p>
-</div>
-</div><h3 id="visualizing-growth-rates">Visualizing Growth Rates</h3>
+<div role="alert" class="alert alert-warning alert-soft"><div><p><strong>Critical:</strong> The difference between O(n) and O(n²) can mean the difference between milliseconds and hours for large datasets!</p>
+</div></div>
+<h3 id="visualizing-growth-rates">Visualizing Growth Rates</h3>
 <pre class="mermaid border border-gray-500/15">
- graph LR
-    A[&quot;Input Size: n&quot;] --&gt; B[&quot;O(1): Stays flat&quot;]
-    A --&gt; C[&quot;O(log n): Grows slowly&quot;]
-    A --&gt; D[&quot;O(n): Grows linearly&quot;]
-    A --&gt; E[&quot;O(n log n): Grows faster&quot;]
-    A --&gt; F[&quot;O(n²): Grows rapidly&quot;]
-    A --&gt; G[&quot;O(2ⁿ): Explodes exponentially&quot;]
+graph LR
+    A["Input Size: n"] --> B["O(1): Stays flat"]
+    A --> C["O(log n): Grows slowly"]
+    A --> D["O(n): Grows linearly"]
+    A --> E["O(n log n): Grows faster"]
+    A --> F["O(n²): Grows rapidly"]
+    A --> G["O(2ⁿ): Explodes exponentially"]
 </pre>
 <p>For n = 1,000:</p>
 <ul>
@@ -613,18 +624,17 @@
 <h2 id="o-1-constant-time">O(1) - Constant Time</h2>
 <p>Operations that take the same time regardless of input size.</p>
 <h3 id="examples">Examples</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> get_first_element</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> get_first_element</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> arr[</span><span style="color: #D2A6FF;">0</span><span>]</span><span style="color: #5A6673;font-style: italic;">  # O(1) - direct access</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> hash_lookup</span><span>(</span><span style="color: #D2A6FF;">dictionary</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> key</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> dictionary[key]</span><span style="color: #5A6673;font-style: italic;">  # O(1) - hash table lookup</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> arithmetic_operation</span><span>(</span><span style="color: #D2A6FF;">a</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> b</span><span>):</span></span>
-<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> a</span><span style="color: #F29668;"> +</span><span> b</span><span style="color: #F29668;"> *</span><span style="color: #D2A6FF;"> 2</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 5</span><span style="color: #5A6673;font-style: italic;">  # O(1) - fixed operations</span></span></code></pre><div role="alert" class="alert alert-success alert- soft">
-  <div><p><strong>Pro Tip:</strong> Hash tables (dictionaries in Python, objects in JavaScript) provide O(1) average-case lookup, making them invaluable for optimization!</p>
-</div>
-</div><h3 id="real-world-application">Real-World Application</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Finding if a value exists in a list</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> a</span><span style="color: #F29668;"> +</span><span> b</span><span style="color: #F29668;"> *</span><span style="color: #D2A6FF;"> 2</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 5</span><span style="color: #5A6673;font-style: italic;">  # O(1) - fixed operations</span></span></code></pre><div role="alert" class="alert alert-success alert-soft"><div><p><strong>Pro Tip:</strong> Hash tables (dictionaries in Python, objects in JavaScript) provide O(1) average-case lookup, making them invaluable for optimization!</p>
+</div></div>
+<h3 id="real-world-application">Real-World Application</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Finding if a value exists in a list</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Bad: O(n)</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> exists_slow</span><span>(</span><span style="color: #D2A6FF;">items</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> target</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> target</span><span style="color: #F29668;"> in</span><span> items</span><span style="color: #5A6673;font-style: italic;">  # Linear search</span></span>
@@ -636,7 +646,7 @@
 <h2 id="o-log-n-logarithmic-time">O(log n) - Logarithmic Time</h2>
 <p>The time grows logarithmically – doubling the input only adds one more step. Common in <strong>divide-and-conquer</strong> algorithms.</p>
 <h3 id="binary-search-example">Binary Search Example</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> binary_search</span><span>(</span><span style="color: #D2A6FF;">sorted_arr</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> target</span><span>):</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> binary_search</span><span>(</span><span style="color: #D2A6FF;">sorted_arr</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> target</span><span>):</span></span>
 <span class="giallo-l"><span>    left</span><span style="color: #BFBDB6B3;">,</span><span> right</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F07178;"> len</span><span>(sorted_arr)</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 1</span></span>
 <span class="giallo-l"><span>    </span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    while</span><span> left</span><span style="color: #F29668;"> &lt;=</span><span> right</span><span style="color: #BFBDB6B3;">:</span></span>
@@ -652,15 +662,8 @@
 <span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;">1</span><span style="color: #5A6673;font-style: italic;">  # Not found</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Time Complexity: O(log n)</span></span>
-<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Each iteration cuts the search space in half</span></span></code></pre><div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
-  <div class="collapse-title font-semibold">
-    Why is this O(log n)? Click to understand the math
-  </div>
-  <div class="collapse-content text-sm">
-    <p>In each iteration, we eliminate half the remaining elements. For n elements, we can halve the array at most log₂(n) times before reaching a single element. For 1,000 items, that's only ~10 comparisons!</p>
-
-  </div>
-</div>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Each iteration cuts the search space in half</span></span></code></pre><div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">Why is this O(log n)? Click to understand the math</div><div class="collapse-content text-sm"><p>In each iteration, we eliminate half the remaining elements. For n elements, we can halve the array at most log₂(n) times before reaching a single element. For 1,000 items, that's only ~10 comparisons!</p>
+</div></div>
 <h3 id="other-o-log-n-operations">Other O(log n) Operations</h3>
 <ul>
 <li>Finding an element in a balanced binary search tree</li>
@@ -671,7 +674,7 @@
 <h2 id="o-n-linear-time">O(n) - Linear Time</h2>
 <p>Time grows proportionally with input size. If you double the input, you double the time.</p>
 <h3 id="examples-1">Examples</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> linear_search</span><span>(</span><span style="color: #D2A6FF;">arr</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> target</span><span>):</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> linear_search</span><span>(</span><span style="color: #D2A6FF;">arr</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> target</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #BFBDB6B3;">,</span><span> item</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> enumerate</span><span>(arr)</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> item</span><span style="color: #F29668;"> ==</span><span> target</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">            return</span><span> i</span></span>
@@ -690,11 +693,10 @@
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> num</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> num</span><span style="color: #F29668;"> &gt;</span><span> max_val</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span>            max_val</span><span style="color: #F29668;"> =</span><span> num</span></span>
-<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> max_val</span><span style="color: #5A6673;font-style: italic;">  # O(n) - single pass through array</span></span></code></pre><div role="alert" class="alert alert-info alert- soft">
-  <div><p><strong>Note:</strong> Multiple O(n) operations in sequence is still O(n): O(n) + O(n) + O(n) = O(3n) = O(n)</p>
-</div>
-</div><h3 id="common-pitfall">Common Pitfall</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># This looks like one loop, but it&#39;s actually O(n²)!</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> max_val</span><span style="color: #5A6673;font-style: italic;">  # O(n) - single pass through array</span></span></code></pre><div role="alert" class="alert alert-info alert-soft"><div><p><strong>Note:</strong> Multiple O(n) operations in sequence is still O(n): O(n) + O(n) + O(n) = O(3n) = O(n)</p>
+</div></div>
+<h3 id="common-pitfall">Common Pitfall</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># This looks like one loop, but it&#39;s actually O(n²)!</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> has_duplicates_slow</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> item</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">count</span><span>(item)</span><span style="color: #F29668;"> &gt;</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">  # count() is O(n)!</span></span>
@@ -713,7 +715,7 @@
 <h2 id="o-n-log-n-linearithmic-time">O(n log n) - Linearithmic Time</h2>
 <p>The sweet spot for general-purpose sorting algorithms. Not as fast as O(n), but significantly better than O(n²).</p>
 <h3 id="merge-sort-example">Merge Sort Example</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> merge_sort</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> merge_sort</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    if</span><span style="color: #F07178;"> len</span><span>(arr)</span><span style="color: #F29668;"> &lt;=</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> arr</span></span>
 <span class="giallo-l"><span>    </span></span>
@@ -742,13 +744,12 @@
 <span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> result</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Time Complexity: O(n log n)</span></span>
-<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># log n levels of recursion, each doing O(n) work</span></span></code></pre>
-<p><div class="badge badge-soft badge-success">Industry Standard</div> Most efficient comparison-based sorting algorithms (merge sort, quicksort, heapsort) are O(n log n).</p>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># log n levels of recursion, each doing O(n) work</span></span></code></pre><div class="badge badge-soft badge-success">Industry Standard</div> Most efficient comparison-based sorting algorithms (merge sort, quicksort, heapsort) are O(n log n).
 <hr />
 <h2 id="o-n2-quadratic-time">O(n²) - Quadratic Time</h2>
 <p>Common with nested loops over the same dataset. Performance degrades rapidly with larger inputs.</p>
 <h3 id="examples-2">Examples</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Bubble Sort - Classic O(n²)</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Bubble Sort - Classic O(n²)</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> bubble_sort</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span>    n</span><span style="color: #F29668;"> =</span><span style="color: #F07178;"> len</span><span>(arr)</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(n)</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">           # O(n)</span></span>
@@ -771,10 +772,9 @@
 <span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> j</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(i</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F07178;"> len</span><span>(arr))</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">            if</span><span> arr[i]</span><span style="color: #F29668;"> ==</span><span> arr[j]</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">                return</span><span style="color: #D2A6FF;"> True</span></span>
-<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #D2A6FF;"> False</span></span></code></pre><div role="alert" class="alert alert-warning alert- soft">
-  <div><p><strong>Performance Impact:</strong> For 10,000 items, O(n²) means 100,000,000 operations. At 1 microsecond per operation, that's 100 seconds!</p>
-</div>
-</div><h3 id="when-o-n2-is-acceptable">When O(n²) is Acceptable</h3>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #D2A6FF;"> False</span></span></code></pre><div role="alert" class="alert alert-warning alert-soft"><div><p><strong>Performance Impact:</strong> For 10,000 items, O(n²) means 100,000,000 operations. At 1 microsecond per operation, that's 100 seconds!</p>
+</div></div>
+<h3 id="when-o-n2-is-acceptable">When O(n²) is Acceptable</h3>
 <ul>
 <li>Small, fixed-size datasets (n &lt; 100)</li>
 <li>When code simplicity matters more than performance</li>
@@ -784,7 +784,7 @@
 <h2 id="o-2n-exponential-time">O(2ⁿ) - Exponential Time</h2>
 <p>Each additional input doubles the runtime. Usually indicates an inefficient recursive solution that recalculates the same values repeatedly.</p>
 <h3 id="the-classic-example-fibonacci">The Classic Example: Fibonacci</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Bad: O(2ⁿ) - Exponential</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Bad: O(2ⁿ) - Exponential</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> fibonacci_recursive</span><span>(</span><span style="color: #D2A6FF;">n</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    if</span><span> n</span><span style="color: #F29668;"> &lt;=</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> n</span></span>
@@ -809,19 +809,12 @@
 <span class="giallo-l"><span>    a</span><span style="color: #BFBDB6B3;">,</span><span> b</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 1</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> _</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(</span><span style="color: #D2A6FF;">2</span><span style="color: #BFBDB6B3;">,</span><span> n</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span><span>)</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span>        a</span><span style="color: #BFBDB6B3;">,</span><span> b</span><span style="color: #F29668;"> =</span><span> b</span><span style="color: #BFBDB6B3;">,</span><span> a</span><span style="color: #F29668;"> +</span><span> b</span></span>
-<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> b</span></span></code></pre><div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
-  <div class="collapse-title font-semibold">
-    See the dramatic difference in performance
-  </div>
-  <div class="collapse-content text-sm">
-    <p>fibonacci_recursive(40) might take several seconds. fibonacci_iterative(40) completes in microseconds. fibonacci_recursive(100) would take longer than the age of the universe!</p>
-
-  </div>
-</div>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> b</span></span></code></pre><div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">See the dramatic difference in performance</div><div class="collapse-content text-sm"><p>fibonacci_recursive(40) might take several seconds. fibonacci_iterative(40) completes in microseconds. fibonacci_recursive(100) would take longer than the age of the universe!</p>
+</div></div>
 <hr />
 <h2 id="analyzing-complex-code">Analyzing Complex Code</h2>
 <h3 id="rule-1-sequential-operations">Rule 1: Sequential Operations</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> process_data</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> process_data</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Step 1: O(n)</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> item</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #F07178;">        print</span><span>(item)</span></span>
@@ -834,11 +827,10 @@
 <span class="giallo-l"><span style="color: #FFB454;">        process</span><span>(item)</span></span>
 <span class="giallo-l"><span>    </span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Total: O(n) + O(n log n) + O(n)</span></span>
-<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Result: O(n log n) - we keep the dominant term</span></span></code></pre><div role="alert" class="alert alert-info alert- soft">
-  <div><p><strong>Rule of Thumb:</strong> When adding complexities, keep only the largest (dominant) term.</p>
-</div>
-</div><h3 id="rule-2-nested-operations">Rule 2: Nested Operations</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> nested_example</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Result: O(n log n) - we keep the dominant term</span></span></code></pre><div role="alert" class="alert alert-info alert-soft"><div><p><strong>Rule of Thumb:</strong> When adding complexities, keep only the largest (dominant) term.</p>
+</div></div>
+<h3 id="rule-2-nested-operations">Rule 2: Nested Operations</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> nested_example</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">                    # O(n)</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> j</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">                # O(n)</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">            for</span><span> k</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">            # O(n)</span></span>
@@ -846,7 +838,7 @@
 <span class="giallo-l"><span>    </span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Total: O(n × n × n) = O(n³)</span></span></code></pre><h3 id="rule-3-recursive-analysis">Rule 3: Recursive Analysis</h3>
 <p>Use the recurrence relation:</p>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> recursive_example</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> recursive_example</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    if</span><span style="color: #F07178;"> len</span><span>(arr)</span><span style="color: #F29668;"> &lt;=</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> arr</span></span>
 <span class="giallo-l"><span>    </span></span>
@@ -861,7 +853,7 @@
 <hr />
 <h2 id="space-complexity-the-other-half">Space Complexity: The Other Half</h2>
 <p>While we focus on time, <strong>space complexity</strong> measures memory usage.</p>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Space: O(1) - Constant extra space</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Space: O(1) - Constant extra space</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> sum_iterative</span><span>(</span><span style="color: #D2A6FF;">n</span><span>):</span></span>
 <span class="giallo-l"><span>    total</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(</span><span style="color: #D2A6FF;">1</span><span style="color: #BFBDB6B3;">,</span><span> n</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span><span>)</span><span style="color: #BFBDB6B3;">:</span></span>
@@ -882,12 +874,11 @@
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> double_values_inplace</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(</span><span style="color: #F07178;">len</span><span>(arr))</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span>        arr[i]</span><span style="color: #F29668;"> *=</span><span style="color: #D2A6FF;"> 2</span></span>
-<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> arr</span></span></code></pre>
-<p><div class="badge badge-soft badge-warning">Trade-off Alert</div> Often there's a trade-off: faster time complexity may require more space (and vice versa).</p>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> arr</span></span></code></pre><div class="badge badge-soft badge-warning">Trade-off Alert</div> Often there's a trade-off: faster time complexity may require more space (and vice versa).
 <hr />
 <h2 id="practical-optimization-strategies">Practical Optimization Strategies</h2>
 <h3 id="1-use-the-right-data-structure">1. Use the Right Data Structure</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Check if item exists in collection</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Check if item exists in collection</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Slow: O(n) lookup</span></span>
 <span class="giallo-l"><span>items_list</span><span style="color: #F29668;"> =</span><span> [</span><span style="color: #D2A6FF;">1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 2</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 3</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 4</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 5</span><span>]</span></span>
@@ -896,7 +887,7 @@
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Fast: O(1) average lookup</span></span>
 <span class="giallo-l"><span>items_set</span><span style="color: #F29668;"> =</span><span> {</span><span style="color: #D2A6FF;">1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 2</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 3</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 4</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 5</span><span>}</span></span>
 <span class="giallo-l"><span>exists</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 3</span><span style="color: #F29668;"> in</span><span> items_set</span><span style="color: #5A6673;font-style: italic;">  # Hash lookup</span></span></code></pre><h3 id="2-avoid-nested-loops-when-possible">2. Avoid Nested Loops When Possible</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Find common elements in two arrays</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Find common elements in two arrays</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Bad: O(n × m)</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_common_slow</span><span>(</span><span style="color: #D2A6FF;">arr1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> arr2</span><span>):</span></span>
@@ -914,7 +905,7 @@
 <span class="giallo-l"><span style="color: #FF8F40;">        if</span><span> item</span><span style="color: #F29668;"> in</span><span> set2</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">  # O(1)</span></span>
 <span class="giallo-l"><span>            common</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(item)</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> common</span></span></code></pre><h3 id="3-cache-expensive-calculations">3. Cache Expensive Calculations</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Expensive repeated calculations</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Expensive repeated calculations</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Bad: Recalculates every time</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> expensive_operation</span><span>(</span><span style="color: #D2A6FF;">n</span><span>):</span></span>
@@ -946,7 +937,7 @@
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> val</span><span style="color: #FF8F40;"> in</span><span> values</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span>        results</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(</span><span style="color: #FFB454;">expensive_operation_cached</span><span>(val))</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> results</span></span></code></pre><h3 id="4-break-early-when-possible">4. Break Early When Possible</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Find if any element satisfies condition</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Find if any element satisfies condition</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Less efficient: Always checks all elements</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> any_negative_complete</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
@@ -965,7 +956,7 @@
 <hr />
 <h2 id="common-interview-patterns">Common Interview Patterns</h2>
 <h3 id="pattern-1-two-pointers">Pattern 1: Two Pointers</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Check if string is a palindrome</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Check if string is a palindrome</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Time: O(n), Space: O(1)</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> is_palindrome</span><span>(</span><span style="color: #D2A6FF;">s</span><span>):</span></span>
@@ -978,7 +969,7 @@
 <span class="giallo-l"><span>        right</span><span style="color: #F29668;"> -=</span><span style="color: #D2A6FF;"> 1</span></span>
 <span class="giallo-l"><span>    </span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #D2A6FF;"> True</span></span></code></pre><h3 id="pattern-2-sliding-window">Pattern 2: Sliding Window</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Maximum sum of k consecutive elements</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Maximum sum of k consecutive elements</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Time: O(n), Space: O(1)</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> max_sum_subarray</span><span>(</span><span style="color: #D2A6FF;">arr</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> k</span><span>):</span></span>
@@ -995,7 +986,7 @@
 <span class="giallo-l"><span>        max_sum</span><span style="color: #F29668;"> =</span><span style="color: #F07178;"> max</span><span>(max_sum</span><span style="color: #BFBDB6B3;">,</span><span> window_sum)</span></span>
 <span class="giallo-l"><span>    </span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> max_sum</span></span></code></pre><h3 id="pattern-3-hash-map-for-o-1-lookup">Pattern 3: Hash Map for O(1) Lookup</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Two Sum - find indices of two numbers that add to target</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Problem: Two Sum - find indices of two numbers that add to target</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Time: O(n), Space: O(n)</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> two_sum</span><span>(</span><span style="color: #D2A6FF;">nums</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> target</span><span>):</span></span>
@@ -1012,7 +1003,7 @@
 <h2 id="advanced-concepts">Advanced Concepts</h2>
 <h3 id="amortized-analysis">Amortized Analysis</h3>
 <p>Some operations are expensive occasionally but cheap on average.</p>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Dynamic Array (like Python&#39;s list)</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Dynamic Array (like Python&#39;s list)</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># - append() is usually O(1)</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># - When array is full, it resizes (O(n))</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># - Amortized time: O(1) because resizing is rare</span></span>
@@ -1035,11 +1026,10 @@
 <span class="giallo-l"><span>        new_array</span><span style="color: #F29668;"> =</span><span> [</span><span style="color: #D2A6FF;">None</span><span>]</span><span style="color: #F29668;"> *</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>capacity</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(</span><span style="color: #39BAE6;font-style: italic;">self</span><span style="color: #BFBDB6B3;">.</span><span>size)</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span>            new_array[i]</span><span style="color: #F29668;"> =</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>array[i]</span></span>
-<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>array</span><span style="color: #F29668;"> =</span><span> new_array</span></span></code></pre><div role="alert" class="alert alert-info alert- soft">
-  <div><p><strong>Amortized O(1):</strong> Over n operations, the total cost is O(n), making each operation O(1) on average.</p>
-</div>
-</div><h3 id="best-average-and-worst-case">Best, Average, and Worst Case</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Quicksort Complexity:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>array</span><span style="color: #F29668;"> =</span><span> new_array</span></span></code></pre><div role="alert" class="alert alert-info alert-soft"><div><p><strong>Amortized O(1):</strong> Over n operations, the total cost is O(n), making each operation O(1) on average.</p>
+</div></div>
+<h3 id="best-average-and-worst-case">Best, Average, and Worst Case</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Quicksort Complexity:</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># - Best case: O(n log n) - perfect pivots</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># - Average case: O(n log n) - random pivots</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># - Worst case: O(n²) - already sorted with bad pivot choice</span></span>
@@ -1060,7 +1050,7 @@
 <h3 id="scenario">Scenario</h3>
 <p>You have a web app with 100,000 users. Users can search by name, email, or username.</p>
 <h3 id="version-1-naive-linear-search-o-n">Version 1: Naive Linear Search - O(n)</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #59C2FF;"> UserDatabase_v1</span><span>:</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #59C2FF;"> UserDatabase_v1</span><span>:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #F07178;"> __init__</span><span>(</span><span style="color: #D2A6FF;">self</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>users</span><span style="color: #F29668;"> =</span><span> []</span><span style="color: #5A6673;font-style: italic;">  # List of user dictionaries</span></span>
 <span class="giallo-l"><span>    </span></span>
@@ -1073,11 +1063,10 @@
 <span class="giallo-l"><span>                results</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(user)</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> results</span></span>
 <span class="giallo-l"></span>
-<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Performance: For 100,000 users, ~100,000 comparisons per search</span></span></code></pre><div role="alert" class="alert alert-error alert- soft">
-  <div><p><strong>Problem:</strong> Searching 100,000 users takes too long. Users experience lag.</p>
-</div>
-</div><h3 id="version-2-hash-table-index-o-1-exact-match">Version 2: Hash Table Index - O(1) Exact Match</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #59C2FF;"> UserDatabase_v2</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Performance: For 100,000 users, ~100,000 comparisons per search</span></span></code></pre><div role="alert" class="alert alert-error alert-soft"><div><p><strong>Problem:</strong> Searching 100,000 users takes too long. Users experience lag.</p>
+</div></div>
+<h3 id="version-2-hash-table-index-o-1-exact-match">Version 2: Hash Table Index - O(1) Exact Match</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #59C2FF;"> UserDatabase_v2</span><span>:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #F07178;"> __init__</span><span>(</span><span style="color: #D2A6FF;">self</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>users</span><span style="color: #F29668;"> =</span><span> []</span></span>
 <span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span style="color: #BFBDB6B3;">.</span><span>email_index</span><span style="color: #F29668;"> =</span><span> {}</span><span style="color: #5A6673;font-style: italic;">  # email -&gt; user</span></span>
@@ -1095,7 +1084,7 @@
 <span class="giallo-l"><span style="color: #FF8F40;">            return</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>username_index</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">get</span><span>(value)</span><span style="color: #5A6673;font-style: italic;">  # O(1)</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Performance: Instant lookup, but only for exact matches</span></span></code></pre><h3 id="version-3-hybrid-approach-o-1-o-log-n">Version 3: Hybrid Approach - O(1) + O(log n)</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">from</span><span> bisect</span><span style="color: #FF8F40;"> import</span><span> bisect_left</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">from</span><span> bisect</span><span style="color: #FF8F40;"> import</span><span> bisect_left</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #59C2FF;"> UserDatabase_v3</span><span>:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    def</span><span style="color: #F07178;"> __init__</span><span>(</span><span style="color: #D2A6FF;">self</span><span>):</span></span>
@@ -1124,10 +1113,8 @@
 <span class="giallo-l"><span style="color: #FF8F40;">            while</span><span> idx</span><span style="color: #F29668;"> &lt;</span><span style="color: #F07178;"> len</span><span>(</span><span style="color: #39BAE6;font-style: italic;">self</span><span style="color: #BFBDB6B3;">.</span><span>sorted_names)</span><span style="color: #F29668;"> and</span><span style="color: #39BAE6;font-style: italic;"> self</span><span style="color: #BFBDB6B3;">.</span><span>sorted_names[idx]</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">startswith</span><span>(query)</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span>                results</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(</span><span style="color: #39BAE6;font-style: italic;">self</span><span style="color: #BFBDB6B3;">.</span><span>sorted_names[idx])</span></span>
 <span class="giallo-l"><span>                idx</span><span style="color: #F29668;"> +=</span><span style="color: #D2A6FF;"> 1</span></span>
-<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span> results</span></span></code></pre><div role="alert" class="alert alert-success alert- soft">
-  <div><p><strong>Result:</strong> Email/username lookups are instant. Name prefix searches are logarithmic. User experience improved dramatically!</p>
-</div>
-</div>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span> results</span></span></code></pre><div role="alert" class="alert alert-success alert-soft"><div><p><strong>Result:</strong> Email/username lookups are instant. Name prefix searches are logarithmic. User experience improved dramatically!</p>
+</div></div>
 <hr />
 <h2 id="cheat-sheet-quick-reference">Cheat Sheet: Quick Reference</h2>
 <h3 id="analysis-rules">Analysis Rules</h3>
@@ -1163,26 +1150,14 @@
 <hr />
 <h2 id="practice-problems">Practice Problems</h2>
 <p>Ready to test your understanding? Try analyzing these:</p>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
-  <div class="collapse-title font-semibold">
-    Problem 1: What&#x27;s the time complexity?
-  </div>
-  <div class="collapse-content text-sm">
-    <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> mystery</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">Problem 1: What's the time complexity?</div><div class="collapse-content text-sm"><pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> mystery</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span>    n</span><span style="color: #F29668;"> =</span><span style="color: #F07178;"> len</span><span>(arr)</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(n)</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> j</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(i</span><span style="color: #BFBDB6B3;">,</span><span> n)</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #F07178;">            print</span><span>(arr[i]</span><span style="color: #BFBDB6B3;">,</span><span> arr[j])</span></span></code></pre>
 <p><strong>Answer:</strong> O(n²). The outer loop runs n times, inner loop runs (n-i) times on average, which is still O(n).</p>
-
-  </div>
-</div>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
-  <div class="collapse-title font-semibold">
-    Problem 2: Optimize this code
-  </div>
-  <div class="collapse-content text-sm">
-    <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_duplicates</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+</div></div>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">Problem 2: Optimize this code</div><div class="collapse-content text-sm"><pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_duplicates</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span>    duplicates</span><span style="color: #F29668;"> =</span><span> []</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> i</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(</span><span style="color: #F07178;">len</span><span>(arr))</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> j</span><span style="color: #FF8F40;"> in</span><span style="color: #F07178;"> range</span><span>(i</span><span style="color: #F29668;"> +</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F07178;"> len</span><span>(arr))</span><span style="color: #BFBDB6B3;">:</span></span>
@@ -1191,7 +1166,7 @@
 <span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> duplicates</span></span></code></pre>
 <p><strong>Current:</strong> O(n²) - Nested loops + strict check</p>
 <p><strong>Optimized:</strong></p>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_duplicates_fast</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_duplicates_fast</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span>    seen</span><span style="color: #F29668;"> =</span><span style="color: #39BAE6;"> set</span><span>()</span></span>
 <span class="giallo-l"><span>    duplicates</span><span style="color: #F29668;"> =</span><span style="color: #39BAE6;"> set</span><span>()</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> num</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span></span>
@@ -1199,15 +1174,8 @@
 <span class="giallo-l"><span>            duplicates</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">add</span><span>(num)</span></span>
 <span class="giallo-l"><span>        seen</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">add</span><span>(num)</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #39BAE6;"> list</span><span>(duplicates)</span></span>
-<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># O(n) time, O(n) space</span></span></code></pre>
-  </div>
-</div>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
-  <div class="collapse-title font-semibold">
-    Problem 3: Binary search variation
-  </div>
-  <div class="collapse-content text-sm">
-    <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_rotation_point</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># O(n) time, O(n) space</span></span></code></pre></div></div>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">Problem 3: Binary search variation</div><div class="collapse-content text-sm"><pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> find_rotation_point</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # Find where a rotated sorted array was rotated</span></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    # [4, 5, 6, 7, 0, 1, 2] -&gt; return 4 (index of 0)</span></span>
 <span class="giallo-l"><span>    left</span><span style="color: #BFBDB6B3;">,</span><span> right</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span><span style="color: #BFBDB6B3;">,</span><span style="color: #F07178;"> len</span><span>(arr)</span><span style="color: #F29668;"> -</span><span style="color: #D2A6FF;"> 1</span></span>
@@ -1221,104 +1189,38 @@
 <span class="giallo-l"><span>    </span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> left</span></span></code></pre>
 <p><strong>Complexity:</strong> O(log n) - Modified binary search</p>
-
-  </div>
-</div>
+</div></div>
 <hr />
 <h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
-<div role="alert" class="alert alert-error alert- soft">
-  <div><p><strong>Mistake 1:</strong> Assuming all single loops are O(n). Some loops might do O(n) work inside each iteration!</p>
-</div>
-</div><pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># This is O(n²), not O(n)!</span></span>
+<div role="alert" class="alert alert-error alert-soft"><div><p><strong>Mistake 1:</strong> Assuming all single loops are O(n). Some loops might do O(n) work inside each iteration!</p>
+</div></div>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># This is O(n²), not O(n)!</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">def</span><span style="color: #FFB454;"> mistake_example</span><span>(</span><span style="color: #D2A6FF;">arr</span><span>):</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">    for</span><span> item</span><span style="color: #FF8F40;"> in</span><span> arr</span><span style="color: #BFBDB6B3;">:</span><span style="color: #5A6673;font-style: italic;">  # O(n)</span></span>
-<span class="giallo-l"><span>        arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">remove</span><span>(item)</span><span style="color: #5A6673;font-style: italic;">  # remove() is O(n)!</span></span></code></pre><div role="alert" class="alert alert-error alert- soft">
-  <div><p><strong>Mistake 2:</strong> Ignoring hidden complexity in library functions.</p>
-</div>
-</div><pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Python list operations and their complexities:</span></span>
+<span class="giallo-l"><span>        arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">remove</span><span>(item)</span><span style="color: #5A6673;font-style: italic;">  # remove() is O(n)!</span></span></code></pre><div role="alert" class="alert alert-error alert-soft"><div><p><strong>Mistake 2:</strong> Ignoring hidden complexity in library functions.</p>
+</div></div>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Python list operations and their complexities:</span></span>
 <span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">append</span><span>(x)</span><span style="color: #5A6673;font-style: italic;">      # O(1) amortized</span></span>
 <span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">insert</span><span>(</span><span style="color: #D2A6FF;">0</span><span style="color: #BFBDB6B3;">,</span><span> x)</span><span style="color: #5A6673;font-style: italic;">   # O(n)</span></span>
 <span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">pop</span><span>()</span><span style="color: #5A6673;font-style: italic;">          # O(1)</span></span>
 <span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">pop</span><span>(</span><span style="color: #D2A6FF;">0</span><span>)</span><span style="color: #5A6673;font-style: italic;">         # O(n)</span></span>
 <span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">remove</span><span>(x)</span><span style="color: #5A6673;font-style: italic;">      # O(n)</span></span>
 <span class="giallo-l"><span>x</span><span style="color: #F29668;"> in</span><span> arr</span><span style="color: #5A6673;font-style: italic;">           # O(n)</span></span>
-<span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">sort</span><span>()</span><span style="color: #5A6673;font-style: italic;">         # O(n log n)</span></span></code></pre><div role="alert" class="alert alert-error alert- soft">
-  <div><p><strong>Mistake 3:</strong> Premature optimization. Profile first, optimize bottlenecks second.</p>
-</div>
-</div>
+<span class="giallo-l"><span>arr</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">sort</span><span>()</span><span style="color: #5A6673;font-style: italic;">         # O(n log n)</span></span></code></pre><div role="alert" class="alert alert-error alert-soft"><div><p><strong>Mistake 3:</strong> Premature optimization. Profile first, optimize bottlenecks second.</p>
+</div></div>
 <hr />
 <h2 id="tools-and-resources">Tools and Resources</h2>
 <h3 id="visualization-tools">Visualization Tools</h3>
 <ul>
-<li>
-<p><strong>Python Tutor</strong>: Visualize code execution step-by-step</p>
+<li><h2 id="python-tutor-visualize-code-execution-step-by-step"><strong>Python Tutor</strong>: Visualize code execution step-by-step</h2>
+</li>
+</ul>
+<div class="pretty-link-card group"><a href="https://pythontutor.com" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">Python Tutor</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description">See your code execute line by line with variable states</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>pythontutor.com</div></div></div></a></div>
 <ul>
-<li><div class="pretty-link-card group">
-  <a href="https:&#x2F;&#x2F;pythontutor.com" target="_blank" rel="noopener noreferrer" class="block">
-    <div class="flex items-start gap-4 p-5">
-      
-      <div class="flex-1 min-w-0">
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <h3 class="pretty-link-title">
-            Python Tutor
-          </h3>
-          <div class="pretty-link-icon-wrapper">
-            <svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-            </svg>
-          </div>
-        </div>
-        
-        <p class="pretty-link-description">See your code execute line by line with variable states</p>
-        
-        <div class="pretty-link-url">
-          <svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
-          </svg>
-          pythontutor.com
-        </div>
-      </div>
-    </div>
-  </a>
-</div>
+<li><h2 id="big-o-cheat-sheet-quick-reference-for-common-algorithms"><strong>Big-O Cheat Sheet</strong>: Quick reference for common algorithms</h2>
 </li>
 </ul>
-</li>
-<li>
-<p><strong>Big-O Cheat Sheet</strong>: Quick reference for common algorithms</p>
-<ul>
-<li><div class="pretty-link-card group">
-  <a href="https:&#x2F;&#x2F;www.bigocheatsheet.com" target="_blank" rel="noopener noreferrer" class="block">
-    <div class="flex items-start gap-4 p-5">
-      
-      <div class="flex-1 min-w-0">
-        <div class="flex items-start justify-between gap-2 mb-2">
-          <h3 class="pretty-link-title">
-            Big-O Cheat Sheet
-          </h3>
-          <div class="pretty-link-icon-wrapper">
-            <svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-            </svg>
-          </div>
-        </div>
-        
-        <p class="pretty-link-description">Visual guide to algorithm complexities</p>
-        
-        <div class="pretty-link-url">
-          <svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
-          </svg>
-          www.bigocheatsheet.com
-        </div>
-      </div>
-    </div>
-  </a>
-</div>
-</li>
-</ul>
-</li>
-</ul>
+<div class="pretty-link-card group"><a href="https://www.bigocheatsheet.com" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">Big-O Cheat Sheet</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description">Visual guide to algorithm complexities</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>www.bigocheatsheet.com</div></div></div></a></div>
 <h3 id="practice-platforms">Practice Platforms</h3>
 <ul>
 <li><strong>LeetCode</strong>: Filter by time complexity to practice analysis</li>
@@ -1326,7 +1228,7 @@
 <li><strong>Project Euler</strong>: Mathematical programming challenges</li>
 </ul>
 <h3 id="profiling-your-code">Profiling Your Code</h3>
-<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;"><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span> time</span></span>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="python"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span> time</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">import</span><span> cProfile</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Method 1: Simple timing</span></span>
@@ -1357,7 +1259,7 @@
 <li><strong>Space constraints</strong>: Sometimes you trade time for space</li>
 <li><strong>Real-world constants</strong>: O(n log n) with large constant factors might be slower than O(n²) for small n</li>
 </ul>
-<p><div class="badge badge-soft badge-primary">Key Takeaway</div> Master the fundamentals (O(1), O(n), O(n²)), practice recognizing patterns, and always measure before optimizing. The best optimization is often choosing the right algorithm from the start.</p>
+<div class="badge badge-soft badge-primary">Key Takeaway</div> Master the fundamentals (O(1), O(n), O(n²)), practice recognizing patterns, and always measure before optimizing. The best optimization is often choosing the right algorithm from the start.
 <hr />
 <h2 id="further-reading">Further Reading</h2>
 <ul>
@@ -1366,10 +1268,8 @@
 <li><strong>Grokking Algorithms</strong> - Beginner-friendly with illustrations</li>
 <li><strong>MIT OpenCourseWare</strong> - Free algorithm courses</li>
 </ul>
-<div role="alert" class="alert alert-success alert- soft">
-  <div><p><strong>Challenge:</strong> Take one of your recent projects and analyze the time complexity of its core functions. Can you identify any optimization opportunities?</p>
-</div>
-</div>
+<div role="alert" class="alert alert-success alert-soft"><div><p><strong>Challenge:</strong> Take one of your recent projects and analyze the time complexity of its core functions. Can you identify any optimization opportunities?</p>
+</div></div>
 <hr />
 <p><em>Have questions or found this helpful? Drop your thoughts in the comments below or connect with me on LinkedIn!</em></p>
 
@@ -1425,7 +1325,7 @@
     
     <div class="mt-8 pt-6 border-t border-gray-500/15">
         <div class="flex flex-wrap items-center gap-4">
-            <a href="https:&#x2F;&#x2F;github.com&#x2F;CC-MNNIT&#x2F;cc-website&#x2F;edit&#x2F;main&#x2F;/content/blog&#x2F;2026&#x2F;2026-02-08-time-complexity.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+            <a href="https://github.com/CC-MNNIT/cc-website/edit/main//content/blog/2026/2026-02-08-time-complexity.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                 </svg>
@@ -1446,7 +1346,7 @@
             </button>
             
             
-            <a href="https://twitter.com/intent/tweet?url=https%3A&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;2026&#x2F;time-complexity&#x2F;&text=Mastering%20Time%20Complexity%3A%20A%20Complete%20Guide%20to%20Algorithm%20Analysis" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+            <a href="https://twitter.com/intent/tweet?url=https%3A//cc-club.in/blog/2026/time-complexity/&text=Mastering%20Time%20Complexity%3A%20A%20Complete%20Guide%20to%20Algorithm%20Analysis" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                 </svg>
@@ -1502,6 +1402,7 @@
                             </div>
                         </nav>
                     </main>
+            
 
                     
                         
@@ -1857,6 +1758,25 @@
                                     <a href="https://cc-club.in/blog/2026/time-complexity/#visualization-tools" class="toc-link">Visualization Tools</a>
                                 </li>
                             
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/blog/2026/time-complexity/#python-tutor-visualize-code-execution-step-by-step" class="toc-link">Python Tutor: Visualize code execution step-by-step</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/blog/2026/time-complexity/#big-o-cheat-sheet-quick-reference-for-common-algorithms" class="toc-link">Big-O Cheat Sheet: Quick reference for common algorithms</a>
+                        </summary>
+                        <ul>
+                            
                                 <li>
                                     <a href="https://cc-club.in/blog/2026/time-complexity/#practice-platforms" class="toc-link">Practice Platforms</a>
                                 </li>
@@ -1890,12 +1810,12 @@
                     
                     
                 </div>
-            </div>
             
+            </div>
 
             <script>
-              // Determine theme: localStorage > extra.default_colorset > goyo-dark
-              // Expose theme config for global use (e.g., goyo.js)
+              // Determine theme: localStorage > extra.default_colorset > cc-dark
+              // Expose theme config for global use (e.g., js/theme.js)
               
               
               
@@ -1907,18 +1827,18 @@
               window.defaultColorset = "dark";
               window.darkBrightness = "normal";
               window.lightBrightness = "normal";
-              window.themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-              window.fallbackTheme = window.themeMap[window.defaultColorset] || "goyo-dark";
+              window.themeMap = { "dark": "cc-dark", "light": "cc-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "cc-dark";
 
-              // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-              var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+              // Theme mapping - user-facing names are the theme identifiers
+              var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
               var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
               var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
 
               // Initialize and run Mermaid only when loaded
               window.initMermaid = function() {
                 var mermaidTheme = "dark";
-                if(currentUserTheme == "goyo-light") {
+                if(currentUserTheme == "cc-light") {
                   mermaidTheme = "light";
                 }
                 
@@ -2028,23 +1948,23 @@
                         
                             
                             
-                            <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;cc.club.mnnit&#x2F;" aria-label="Instagram">
+                            <a href="https://www.instagram.com/cc.club.mnnit/" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
                             
                             
                             
-                            <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;company&#x2F;computer-coding-club-mnnit&#x2F;" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/company/computer-coding-club-mnnit/" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                             
                             
-                            <a href="https:&#x2F;&#x2F;github.com&#x2F;CC-MNNIT" aria-label="GitHub">
+                            <a href="https://github.com/CC-MNNIT" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                             
                             
-                            <a href="https:&#x2F;&#x2F;discord.gg&#x2F;EDv6fM5yUm" aria-label="Discord">
+                            <a href="https://discord.gg/EDv6fM5yUm" aria-label="Discord">
                                 <i class="fab fa-discord"></i>
                             </a>
                             
@@ -2077,6 +1997,8 @@
         <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
             
                 
+
+
 
 
 
@@ -2212,7 +2134,7 @@
     
     
     <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
-        <a href="https:&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;" class="hover:text-primary transition-colors">Blog</a>
+        <a href="https://cc-club.in/blog/" class="hover:text-primary transition-colors">Blog</a>
     </div>
 
     
@@ -2270,7 +2192,7 @@
     </div>
 
     
-        <script type="text/javascript" src="https://cc-club.in/goyo.js"></script>
+        <script type="text/javascript" src="https://cc-club.in/js/theme.js"></script>
         
         <!-- Lazy load search functionality -->
         <script>

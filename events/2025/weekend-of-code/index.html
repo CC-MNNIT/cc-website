@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="en" style="background-color: #0f172a;">
 
 <head>
@@ -16,8 +18,15 @@
     <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
     <script>
         (function() {
-            // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-            var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
             
             
             
@@ -31,10 +40,10 @@
             var defaultColorset = "dark";
             var darkBrightness = "normal";
             var lightBrightness = "normal";
-            var themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-            var fallbackTheme = themeMap[defaultColorset] || "goyo-dark";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
             
-            // Expose brightness config for global use (e.g., goyo.js)
+            // Expose brightness config for global use (e.g., js/theme.js)
             window.darkBrightness = darkBrightness;
             window.lightBrightness = lightBrightness;
             
@@ -43,7 +52,7 @@
             var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
             
             // Determine brightness based on current theme
-            var currentBrightness = (currentUserTheme === "goyo-dark") ? darkBrightness : lightBrightness;
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
             
             // Set theme and brightness attributes immediately
             document.documentElement.setAttribute("data-theme", actualTheme);
@@ -76,7 +85,7 @@
 
     
         
-            <meta name="description" content="A multi-track coding fest for 1st &amp; 2nd years. Compete in DevJam (Dev), Turing’s Playground (AI&#x2F;ML), and CodeStart (CP)." />
+            <meta name="description" content="A multi-track coding fest for 1st &amp; 2nd years. Compete in DevJam (Dev), Turing’s Playground (AI/ML), and CodeStart (CP)." />
         
     
 
@@ -87,7 +96,7 @@
 
       <!-- SEO: Open Graph / Twitter Card -->
       <meta property="og:title" content="Weekend of Code | Computer Coding Club" />
-      <meta property="og:description" content="A multi-track coding fest for 1st &amp; 2nd years. Compete in DevJam (Dev), Turing’s Playground (AI&#x2F;ML), and CodeStart (CP)." />
+      <meta property="og:description" content="A multi-track coding fest for 1st &amp; 2nd years. Compete in DevJam (Dev), Turing’s Playground (AI/ML), and CodeStart (CP)." />
       <meta property="og:url" content="https://cc-club.in/" />
       <meta property="og:type" content="website" />
       
@@ -96,7 +105,7 @@
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Weekend of Code" />
-      <meta name="twitter:description" content="A multi-track coding fest for 1st &amp; 2nd years. Compete in DevJam (Dev), Turing’s Playground (AI&#x2F;ML), and CodeStart (CP)." />
+      <meta name="twitter:description" content="A multi-track coding fest for 1st &amp; 2nd years. Compete in DevJam (Dev), Turing’s Playground (AI/ML), and CodeStart (CP)." />
       
       
       
@@ -124,8 +133,7 @@
       <link rel="manifest" href="https://cc-club.in/icons/site.webmanifest" />
 
       <!-- CSS -->
-    <link rel="stylesheet" href="https://cc-club.in/css/main.css">
-    <link rel="stylesheet" href="https://cc-club.in/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cc-club.in/css/site.css">
     
     <!-- Preload critical fonts -->
     <link rel="preload" href="https://cc-club.in/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
@@ -203,9 +211,6 @@
     
     
 
-    
-    <link rel="stylesheet" href="https://cc-club.in/css/custom.css">
-
     <style>
         /* Desktop Sidebar Animation */
         @media (min-width: 1024px) {
@@ -280,6 +285,10 @@
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col pt-16">
             
+
+
+
+
 
 
 
@@ -491,7 +500,7 @@
             
             <li class="flex items-center">
                 <label class="swap swap-rotate btn btn-ghost btn-circle">
-                    <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color" />
+                    <input type="checkbox" class="theme-controller" value="cc-dark" aria-labelledby="swap color" />
                     <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
@@ -544,10 +553,12 @@
             
                 
             
+
             
             <div class="p-8 w-full flex justify-center">
                 <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
                     <main class="prose w-full">
+            
                         
 
 <section class="event-hero">
@@ -584,7 +595,7 @@
         <h1 class="event-hero-title">Weekend of Code</h1>
 
         
-        <p class="event-hero-desc">A multi-track coding fest for 1st &amp; 2nd years. Compete in DevJam (Dev), Turing’s Playground (AI&#x2F;ML), and CodeStart (CP).</p>
+        <p class="event-hero-desc">A multi-track coding fest for 1st &amp; 2nd years. Compete in DevJam (Dev), Turing’s Playground (AI/ML), and CodeStart (CP).</p>
 
         
         <div class="event-hero-meta">
@@ -637,7 +648,7 @@
         
         <div class="event-hero-actions">
             
-            <a href="https:&#x2F;&#x2F;woc.cc-club.in&#x2F;" target="_blank" rel="noopener" class="event-btn event-btn-primary">
+            <a href="https://woc.cc-club.in/" target="_blank" rel="noopener" class="event-btn event-btn-primary">
                 <span>Visit Official Site</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2">
@@ -791,6 +802,111 @@
 
     
     <div class="category-section">
+        <h3 class="category-title">CodeStart</h3>
+
+        
+        <div class="winners-podium">
+            
+             <div class="podium-place place-1" data-place="1">
+                <div class="podium-card">
+                    <div class="podium-rank">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5z" />
+                            <path d="M19 19H5v2h14v-2z" />
+                        </svg>
+                        
+                    </div>
+                    
+                    <div class="podium-avatar-placeholder">
+                        CJ
+                    </div>
+                    
+                    <h3 class="podium-name">Cjython</h3>
+
+                    
+                    
+
+                    
+                    
+                    <span class="podium-prize">1st</span>
+                    
+                </div>
+                <div class="podium-stand"></div>
+        </div>
+        
+        
+             <div class="podium-place place-2" data-place="2">
+                <div class="podium-card">
+                    <div class="podium-rank">
+                        
+                        <span>2</span>
+                        
+                    </div>
+                    
+                    <div class="podium-avatar-placeholder">
+                        NE
+                    </div>
+                    
+                    <h3 class="podium-name">NewBees</h3>
+
+                    
+                    
+
+                    
+                    
+                    <span class="podium-prize">2nd</span>
+                    
+                </div>
+                <div class="podium-stand"></div>
+        </div>
+        
+        
+             <div class="podium-place place-3" data-place="3">
+                <div class="podium-card">
+                    <div class="podium-rank">
+                        
+                        <span>3</span>
+                        
+                    </div>
+                    
+                    <div class="podium-avatar-placeholder">
+                        VA
+                    </div>
+                    
+                    <h3 class="podium-name">Vaseline_Cocoa_Glow</h3>
+
+                    
+                    
+
+                    
+                    
+                    <span class="podium-prize">3rd</span>
+                    
+                </div>
+                <div class="podium-stand"></div>
+        </div>
+        
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    
+    
+    </div>
+    
+    <div class="category-section">
         <h3 class="category-title">DevJam</h3>
 
         
@@ -902,7 +1018,7 @@
     </div>
     
     <div class="category-section">
-        <h3 class="category-title">Turing&#x27;s Playground</h3>
+        <h3 class="category-title">Turing&#39;s Playground</h3>
 
         
         <div class="winners-podium">
@@ -1046,111 +1162,6 @@
     
     </div>
     
-    <div class="category-section">
-        <h3 class="category-title">CodeStart</h3>
-
-        
-        <div class="winners-podium">
-            
-             <div class="podium-place place-1" data-place="1">
-                <div class="podium-card">
-                    <div class="podium-rank">
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5z" />
-                            <path d="M19 19H5v2h14v-2z" />
-                        </svg>
-                        
-                    </div>
-                    
-                    <div class="podium-avatar-placeholder">
-                        CJ
-                    </div>
-                    
-                    <h3 class="podium-name">Cjython</h3>
-
-                    
-                    
-
-                    
-                    
-                    <span class="podium-prize">1st</span>
-                    
-                </div>
-                <div class="podium-stand"></div>
-        </div>
-        
-        
-             <div class="podium-place place-2" data-place="2">
-                <div class="podium-card">
-                    <div class="podium-rank">
-                        
-                        <span>2</span>
-                        
-                    </div>
-                    
-                    <div class="podium-avatar-placeholder">
-                        NE
-                    </div>
-                    
-                    <h3 class="podium-name">NewBees</h3>
-
-                    
-                    
-
-                    
-                    
-                    <span class="podium-prize">2nd</span>
-                    
-                </div>
-                <div class="podium-stand"></div>
-        </div>
-        
-        
-             <div class="podium-place place-3" data-place="3">
-                <div class="podium-card">
-                    <div class="podium-rank">
-                        
-                        <span>3</span>
-                        
-                    </div>
-                    
-                    <div class="podium-avatar-placeholder">
-                        VA
-                    </div>
-                    
-                    <h3 class="podium-name">Vaseline_Cocoa_Glow</h3>
-
-                    
-                    
-
-                    
-                    
-                    <span class="podium-prize">3rd</span>
-                    
-                </div>
-                <div class="podium-stand"></div>
-        </div>
-        
-        
-    </div>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-
-    
-    
-    </div>
-    
 
     
 </section>
@@ -1176,194 +1187,7 @@
 
     
     <div class="category-section">
-        <h3 class="category-title">DevJam</h3>
-        <div class="projects-grid">
-            
-            <article class="project-card">
-                
-                
-
-                
-                <div class="project-card-content">
-                    <h3 class="project-name">Sign It or Miss It</h3>
-                    
-                    <p class="project-team">by 4Sum</p>
-                    
-                    
-                    <p class="project-desc">Sign It or Miss It is an interactive Unity game that use computer vision and hand tracking to provide an immersive experience. The game uses OpenCV and MediaPipe to track hand movements and generate a corresponding 3D hand in Unity. Players must pass their virtual hand through walls with cutout shapes to progress through the game.</p>
-                    
-
-                    
-                    
-                    <div class="project-tech">
-                        
-                        <span class="tech-tag">OpenCV</span>
-                        
-                        <span class="tech-tag">MediaPipe</span>
-                        
-                        <span class="tech-tag">cvzone</span>
-                        
-                        <span class="tech-tag">C#</span>
-                        
-                    </div>
-                    
-
-                    
-                    <div class="project-links">
-                        
-                        <a href="https:&#x2F;&#x2F;drive.google.com&#x2F;file&#x2F;d&#x2F;1PPhX8XheqYP_d_cQTRSzR-8nKVoZujMC&#x2F;view?pli=1" target="_blank" rel="noopener" class="project-link demo">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10" />
-                                <polygon points="10 8 16 12 10 16 10 8" />
-                            </svg>
-                            Demo
-                        </a>
-                        
-                        
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;4SumMNNIT&#x2F;SIMI" target="_blank" rel="noopener" class="project-link github">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                        
-                        
-                    </div>
-                </div>
-
-                
-                
-                <div class="project-award">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                    </svg>
-                    1st Place
-                </div>
-                
-            </article>
-            
-            <article class="project-card">
-                
-                
-
-                
-                <div class="project-card-content">
-                    <h3 class="project-name">Lexica</h3>
-                    
-                    <p class="project-team">by MummyKeLaadle</p>
-                    
-                    
-                    <p class="project-desc">Lexica enhances the reading experience by allowing users to seamlessly look up unfamiliar words without interrupting their flow.</p>
-                    
-
-                    
-                    
-                    <div class="project-tech">
-                        
-                        <span class="tech-tag">React.js</span>
-                        
-                        <span class="tech-tag">Node.js</span>
-                        
-                        <span class="tech-tag">MongoDB</span>
-                        
-                        <span class="tech-tag">DataMuse API</span>
-                        
-                    </div>
-                    
-
-                    
-                    <div class="project-links">
-                        
-                        
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;mummykelaadle&#x2F;lexica" target="_blank" rel="noopener" class="project-link github">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                        
-                        
-                    </div>
-                </div>
-
-                
-                
-                <div class="project-award">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                    </svg>
-                    2nd Place
-                </div>
-                
-            </article>
-            
-            <article class="project-card">
-                
-                
-
-                
-                <div class="project-card-content">
-                    <h3 class="project-name">CampusBeacon</h3>
-                    
-                    <p class="project-team">by BrainWashingtonDc</p>
-                    
-                    
-                    <p class="project-desc">CampusBeacon is an exclusive MNNIT website which connects students and reduces the hassle of too many groups and false informations which is very prevelant in the college.</p>
-                    
-
-                    
-                    
-                    <div class="project-tech">
-                        
-                        <span class="tech-tag">React.js</span>
-                        
-                        <span class="tech-tag">Node.js</span>
-                        
-                        <span class="tech-tag">Express.js</span>
-                        
-                        <span class="tech-tag">Redux </span>
-                        
-                    </div>
-                    
-
-                    
-                    <div class="project-links">
-                        
-                        
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;ayush-jadaun&#x2F;CampusBeacon" target="_blank" rel="noopener" class="project-link github">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
-                        
-                        
-                    </div>
-                </div>
-
-                
-                
-                <div class="project-award">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                    </svg>
-                    3rd Place
-                </div>
-                
-            </article>
-            
-        </div>
-    </div>
-    
-    <div class="category-section">
-        <h3 class="category-title">Turing&#x27;s Playground</h3>
+        <h3 class="category-title">Turing&#39;s Playground</h3>
         <div class="projects-grid">
             
             <article class="project-card">
@@ -1395,7 +1219,7 @@
                     <div class="project-links">
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;WeXIST10&#x2F;WeXIST&#x2F;tree&#x2F;final" target="_blank" rel="noopener" class="project-link github">
+                        <a href="https://github.com/WeXIST10/WeXIST/tree/final" target="_blank" rel="noopener" class="project-link github">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -1450,7 +1274,7 @@
                     <div class="project-links">
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;vanshika-0305&#x2F;Am-I-Audible" target="_blank" rel="noopener" class="project-link github">
+                        <a href="https://github.com/vanshika-0305/Am-I-Audible" target="_blank" rel="noopener" class="project-link github">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -1507,7 +1331,194 @@
                     <div class="project-links">
                         
                         
-                        <a href="https:&#x2F;&#x2F;github.com&#x2F;UditanshSri&#x2F;RLTradingAgent" target="_blank" rel="noopener" class="project-link github">
+                        <a href="https://github.com/UditanshSri/RLTradingAgent" target="_blank" rel="noopener" class="project-link github">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                
+                <div class="project-award">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                    </svg>
+                    3rd Place
+                </div>
+                
+            </article>
+            
+        </div>
+    </div>
+    
+    <div class="category-section">
+        <h3 class="category-title">DevJam</h3>
+        <div class="projects-grid">
+            
+            <article class="project-card">
+                
+                
+
+                
+                <div class="project-card-content">
+                    <h3 class="project-name">Sign It or Miss It</h3>
+                    
+                    <p class="project-team">by 4Sum</p>
+                    
+                    
+                    <p class="project-desc">Sign It or Miss It is an interactive Unity game that use computer vision and hand tracking to provide an immersive experience. The game uses OpenCV and MediaPipe to track hand movements and generate a corresponding 3D hand in Unity. Players must pass their virtual hand through walls with cutout shapes to progress through the game.</p>
+                    
+
+                    
+                    
+                    <div class="project-tech">
+                        
+                        <span class="tech-tag">OpenCV</span>
+                        
+                        <span class="tech-tag">MediaPipe</span>
+                        
+                        <span class="tech-tag">cvzone</span>
+                        
+                        <span class="tech-tag">C#</span>
+                        
+                    </div>
+                    
+
+                    
+                    <div class="project-links">
+                        
+                        <a href="https://drive.google.com/file/d/1PPhX8XheqYP_d_cQTRSzR-8nKVoZujMC/view?pli=1" target="_blank" rel="noopener" class="project-link demo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polygon points="10 8 16 12 10 16 10 8" />
+                            </svg>
+                            Demo
+                        </a>
+                        
+                        
+                        <a href="https://github.com/4SumMNNIT/SIMI" target="_blank" rel="noopener" class="project-link github">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                
+                <div class="project-award">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                    </svg>
+                    1st Place
+                </div>
+                
+            </article>
+            
+            <article class="project-card">
+                
+                
+
+                
+                <div class="project-card-content">
+                    <h3 class="project-name">Lexica</h3>
+                    
+                    <p class="project-team">by MummyKeLaadle</p>
+                    
+                    
+                    <p class="project-desc">Lexica enhances the reading experience by allowing users to seamlessly look up unfamiliar words without interrupting their flow.</p>
+                    
+
+                    
+                    
+                    <div class="project-tech">
+                        
+                        <span class="tech-tag">React.js</span>
+                        
+                        <span class="tech-tag">Node.js</span>
+                        
+                        <span class="tech-tag">MongoDB</span>
+                        
+                        <span class="tech-tag">DataMuse API</span>
+                        
+                    </div>
+                    
+
+                    
+                    <div class="project-links">
+                        
+                        
+                        <a href="https://github.com/mummykelaadle/lexica" target="_blank" rel="noopener" class="project-link github">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                
+                <div class="project-award">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                    </svg>
+                    2nd Place
+                </div>
+                
+            </article>
+            
+            <article class="project-card">
+                
+                
+
+                
+                <div class="project-card-content">
+                    <h3 class="project-name">CampusBeacon</h3>
+                    
+                    <p class="project-team">by BrainWashingtonDc</p>
+                    
+                    
+                    <p class="project-desc">CampusBeacon is an exclusive MNNIT website which connects students and reduces the hassle of too many groups and false informations which is very prevelant in the college.</p>
+                    
+
+                    
+                    
+                    <div class="project-tech">
+                        
+                        <span class="tech-tag">React.js</span>
+                        
+                        <span class="tech-tag">Node.js</span>
+                        
+                        <span class="tech-tag">Express.js</span>
+                        
+                        <span class="tech-tag">Redux </span>
+                        
+                    </div>
+                    
+
+                    
+                    <div class="project-links">
+                        
+                        
+                        <a href="https://github.com/ayush-jadaun/CampusBeacon" target="_blank" rel="noopener" class="project-link github">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -1687,6 +1698,7 @@
                             </div>
                         </nav>
                     </main>
+            
 
                     
                         
@@ -1721,12 +1733,12 @@
                     
                     
                 </div>
-            </div>
             
+            </div>
 
             <script>
-              // Determine theme: localStorage > extra.default_colorset > goyo-dark
-              // Expose theme config for global use (e.g., goyo.js)
+              // Determine theme: localStorage > extra.default_colorset > cc-dark
+              // Expose theme config for global use (e.g., js/theme.js)
               
               
               
@@ -1738,18 +1750,18 @@
               window.defaultColorset = "dark";
               window.darkBrightness = "normal";
               window.lightBrightness = "normal";
-              window.themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-              window.fallbackTheme = window.themeMap[window.defaultColorset] || "goyo-dark";
+              window.themeMap = { "dark": "cc-dark", "light": "cc-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "cc-dark";
 
-              // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-              var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+              // Theme mapping - user-facing names are the theme identifiers
+              var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
               var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
               var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
 
               // Initialize and run Mermaid only when loaded
               window.initMermaid = function() {
                 var mermaidTheme = "dark";
-                if(currentUserTheme == "goyo-light") {
+                if(currentUserTheme == "cc-light") {
                   mermaidTheme = "light";
                 }
                 
@@ -1859,23 +1871,23 @@
                         
                             
                             
-                            <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;cc.club.mnnit&#x2F;" aria-label="Instagram">
+                            <a href="https://www.instagram.com/cc.club.mnnit/" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
                             
                             
                             
-                            <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;company&#x2F;computer-coding-club-mnnit&#x2F;" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/company/computer-coding-club-mnnit/" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                             
                             
-                            <a href="https:&#x2F;&#x2F;github.com&#x2F;CC-MNNIT" aria-label="GitHub">
+                            <a href="https://github.com/CC-MNNIT" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                             
                             
-                            <a href="https:&#x2F;&#x2F;discord.gg&#x2F;EDv6fM5yUm" aria-label="Discord">
+                            <a href="https://discord.gg/EDv6fM5yUm" aria-label="Discord">
                                 <i class="fab fa-discord"></i>
                             </a>
                             
@@ -1908,6 +1920,8 @@
         <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
             
                 
+
+
 
 
 
@@ -2043,7 +2057,7 @@
     
     
     <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
-        <a href="https:&#x2F;&#x2F;cc-club.in&#x2F;events&#x2F;" class="hover:text-primary transition-colors">Events</a>
+        <a href="https://cc-club.in/events/" class="hover:text-primary transition-colors">Events</a>
     </div>
 
     
@@ -2061,13 +2075,17 @@
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://cc-club.in/events/programs">Programs</a></summary>
+                        <summary ><a class="hover:no-underline" href="https://cc-club.in/events/2026">Events 2026</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/programs/cc-classes">CC Classes</a></li>
+                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/2026/icpc-2026">ICPC 2026</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/programs/alumni-connect">Alumni Industry Connect</a></li>
+                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/2026/sih-2026">Smart India Hackathon 2026</a></li>
+                            
+                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/2026/insomnia">Insomnia 2026</a></li>
+                            
+                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/2026/weekend-of-code">Weekend of Code 2026</a></li>
                             
                             
                         </ul>
@@ -2082,13 +2100,13 @@
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://cc-club.in/events/2026">Events 2026</a></summary>
+                        <summary ><a class="hover:no-underline" href="https://cc-club.in/events/programs">Programs</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/2026/insomnia">Insomnia 2026</a></li>
+                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/programs/cc-classes">CC Classes</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/2026/weekend-of-code">Weekend of Code 2026</a></li>
+                                <li ><a class="hover:no-underline" href="https://cc-club.in/events/programs/alumni-connect">Alumni Industry Connect</a></li>
                             
                             
                         </ul>
@@ -2149,7 +2167,7 @@
     </div>
 
     
-        <script type="text/javascript" src="https://cc-club.in/goyo.js"></script>
+        <script type="text/javascript" src="https://cc-club.in/js/theme.js"></script>
         
         <!-- Lazy load search functionality -->
         <script>

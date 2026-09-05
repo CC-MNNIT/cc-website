@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="en" style="background-color: #0f172a;">
 
 <head>
@@ -16,8 +18,15 @@
     <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
     <script>
         (function() {
-            // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-            var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
             
             
             
@@ -31,10 +40,10 @@
             var defaultColorset = "dark";
             var darkBrightness = "normal";
             var lightBrightness = "normal";
-            var themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-            var fallbackTheme = themeMap[defaultColorset] || "goyo-dark";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
             
-            // Expose brightness config for global use (e.g., goyo.js)
+            // Expose brightness config for global use (e.g., js/theme.js)
             window.darkBrightness = darkBrightness;
             window.lightBrightness = lightBrightness;
             
@@ -43,7 +52,7 @@
             var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
             
             // Determine brightness based on current theme
-            var currentBrightness = (currentUserTheme === "goyo-dark") ? darkBrightness : lightBrightness;
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
             
             // Set theme and brightness attributes immediately
             document.documentElement.setAttribute("data-theme", actualTheme);
@@ -124,8 +133,7 @@
       <link rel="manifest" href="https://cc-club.in/icons/site.webmanifest" />
 
       <!-- CSS -->
-    <link rel="stylesheet" href="https://cc-club.in/css/main.css">
-    <link rel="stylesheet" href="https://cc-club.in/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cc-club.in/css/site.css">
     
     <!-- Preload critical fonts -->
     <link rel="preload" href="https://cc-club.in/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
@@ -203,9 +211,6 @@
     
     
 
-    
-    <link rel="stylesheet" href="https://cc-club.in/css/custom.css">
-
     <style>
         /* Desktop Sidebar Animation */
         @media (min-width: 1024px) {
@@ -280,6 +285,11 @@
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col pt-16">
             
+    
+
+
+
+
 
 
 
@@ -491,7 +501,7 @@
             
             <li class="flex items-center">
                 <label class="swap swap-rotate btn btn-ghost btn-circle">
-                    <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color" />
+                    <input type="checkbox" class="theme-controller" value="cc-dark" aria-labelledby="swap color" />
                     <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
@@ -538,16 +548,19 @@
 </script>
 
 
+
             
             
             
             
                 
             
+
             
             <div class="p-8 w-full flex justify-center">
                 <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
                     <main class="prose w-full">
+            
                         
     <div class="mb-12 pb-4 border-b border-gray-500/15">
         <h1 class="flex items-center gap-3">
@@ -557,17 +570,14 @@
         <p class="text-gray-500">Gain an insight into the on-campus interview process at Salesforce and the internship experience</p>
     </div>
     <h2 id="overview">Overview</h2>
-<div role="alert" class="alert alert-info alert- soft">
-  <div><p><strong>Salesforce</strong> is a San-Francisco based Multi-national company which is often regarded as world's best AI-CRM firm. Overall, the internship experience at Salesforce is amazing, and so is the compensation offered.</p>
-</div>
-</div><h2 id="internship-pathways">Internship Pathways</h2>
+<div role="alert" class="alert alert-info alert-soft"><div><p><strong>Salesforce</strong> is a San-Francisco based Multi-national company which is often regarded as world's best AI-CRM firm. Overall, the internship experience at Salesforce is amazing, and so is the compensation offered.</p>
+</div></div>
+<h2 id="internship-pathways">Internship Pathways</h2>
 <p>A big chunk of the hiring at Salesforce at entry level happens through PPO conversions post summer internship. There are two ways to land an internship at Salesforce:</p>
 <ol>
-<li>
-<p><div class="badge badge-soft badge-primary">On-campus</div> Salesforce visits MNNIT Allahabad for summer internship. The process involves an online round (OA) followed by 2 rounds of interview for each shortlisted candidate.</p>
+<li><div class="badge badge-soft badge-primary">On-campus</div> Salesforce visits MNNIT Allahabad for summer internship. The process involves an online round (OA) followed by 2 rounds of interview for each shortlisted candidate.
 </li>
-<li>
-<p><div class="badge badge-soft badge-secondary">Off-campus</div> Salesforce often organizes a hackathon (usually called Tech Accelerator). To be aware of when these happen you can check out the <a href="https://cc-club.in/blog/2026/salesforce-interview-experience/%22https://www.salesforce.com/company/careers/university/%22">FutureForce Page</a> or follow <a rel="external" href="https://www.instagram.com/salesforcefutureforce/">FutureForce on Instagram</a>.</p>
+<li><div class="badge badge-soft badge-secondary">Off-campus</div> Salesforce often organizes a hackathon (usually called Tech Accelerator). To be aware of when these happen you can check out the [FutureForce Page]("https://www.salesforce.com/company/careers/university/") or follow [FutureForce on Instagram](https://www.instagram.com/salesforcefutureforce/).
 <blockquote>
 <p>Usually the process involves a resume based shortlisting for the hackathon after which the shortlisted candidates are invited to Salesforce Hyderabad Office for a hackathon. Interviews are conducted post hackathon and internships are awarded. If you get shortlisted for hackathon, there is a decent chance of qualifying for internships through this route.</p>
 </blockquote>
@@ -580,11 +590,10 @@
 <li><strong>Format:</strong> 2-3 DSA questions only (No MCQs)</li>
 <li><strong>Difficulty:</strong> Generally Leetcode Medium</li>
 </ul>
-<div role="alert" class="alert alert-warning alert- soft">
-  <div><p><strong>Topics:</strong> Greedy, Arrays, 2 Pointer, Binary Search.</p>
+<div role="alert" class="alert alert-warning alert-soft"><div><p><strong>Topics:</strong> Greedy, Arrays, 2 Pointer, Binary Search.</p>
 <p><em>Note: The topics may differ and are very hard to predict.</em></p>
-</div>
-</div><h3 id="interviews-round-1">Interviews (Round 1)</h3>
+</div></div>
+<h3 id="interviews-round-1">Interviews (Round 1)</h3>
 <p>The candidates shortlisted for interview go through the first round which is a technical round.</p>
 <ul>
 <li><strong>Content:</strong> DSA questions followed by development stack/projects questions.</li>
@@ -593,10 +602,8 @@
 <blockquote>
 <p>The development stack questions are fundamental in nature and can be answered easily if you made the project yourself.</p>
 </blockquote>
-<div role="alert" class="alert alert-info alert- soft">
-  <div><p><strong>Pro Tip:</strong> During problem solving, its very important to speak out your thought process and communicate with the interviewer, they are not there to be impressed by you solving it in 5 minutes rather they are mostly way more interested in your approach and ability to build a solution and also explain why you came up with it, so don't be a robot, speak.</p>
-</div>
-</div>
+<div role="alert" class="alert alert-info alert-soft"><div><p><strong>Pro Tip:</strong> During problem solving, its very important to speak out your thought process and communicate with the interviewer, they are not there to be impressed by you solving it in 5 minutes rather they are mostly way more interested in your approach and ability to build a solution and also explain why you came up with it, so don't be a robot, speak.</p>
+</div></div>
 <p>One of the prime focus of the interviewers is on your ability to develop a solution and explain your reasoning.</p>
 <ul>
 <li>Speak while you code.</li>
@@ -606,16 +613,9 @@
 <li>Confidence is the key to get the job</li>
 </ul>
 <h4 id="introduction">Introduction</h4>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
-  <div class="collapse-title font-semibold">
-    How to Introduce Yourself
-  </div>
-  <div class="collapse-content text-sm">
-    <p>Prepare a good introduction, usually interviewers ask for your introduction at the start and just saying, "Hi! I am xyz from MNNIT pursuing B.Tech in x branch and I am good in coding" will not be very impactful, so yes that works, but ideally your introduction should be a 1-2 minute quick summary of the highlights of your resume.</p>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">How to Introduce Yourself</div><div class="collapse-content text-sm"><p>Prepare a good introduction, usually interviewers ask for your introduction at the start and just saying, "Hi! I am xyz from MNNIT pursuing B.Tech in x branch and I am good in coding" will not be very impactful, so yes that works, but ideally your introduction should be a 1-2 minute quick summary of the highlights of your resume.</p>
 <p>it should be <strong>90%</strong> about your skills, projects, CGPA, achievements and interests and <strong>10%</strong> about your non-academic, non-coding skills and passion which could be any small mention like "In my free time I love to play basketball/I love to sing/I am a travel freak and I love to explore nature etc."</p>
-
-  </div>
-</div>
+</div></div>
 <h3 id="interview-round-2">Interview (Round 2)</h3>
 <p>Be ready to be asked the introduction you gave in Round 1. This is generally an <strong>HR-Manager round</strong>. managers try to test your culture fit/critical thinking. Expect <a rel="external" href="https://www.geeksforgeeks.org/aptitude/top-100-puzzles-asked-in-interviews/">puzzles</a> and managerial questions.</p>
 <p><strong>Common Non Puzzle Questions:</strong></p>
@@ -624,30 +624,19 @@
 <li>What is your favorite subject?</li>
 <li>What are your greatest achievements?</li>
 </ol>
-<div role="alert" class="alert alert-error alert- soft">
-  <div><p><strong>Never say a true weakness!</strong>
+<div role="alert" class="alert alert-error alert-soft"><div><p><strong>Never say a true weakness!</strong>
 You can say anything that initially sounds negative but adds more value to you.</p>
 <p><em>Example:</em> "My weakness is that when I delve into a project I get so involved in it that I forget about food..."</p>
-</div>
-</div>
+</div></div>
 <p>A lot of times Managers would ask you: <strong>"Are there any questions?"</strong></p>
-<div role="alert" class="alert alert-success alert- soft">
-  <div><p><strong>This is the bingo moment!</strong> You should always ask a question.</p>
-</div>
-</div>
+<div role="alert" class="alert alert-success alert-soft"><div><p><strong>This is the bingo moment!</strong> You should always ask a question.</p>
+</div></div>
 <p>Generally its good to read about the company before HR round, what are their latest products and what they are investing on.</p>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
-  <div class="collapse-title font-semibold">
-    Example Questions to Ask
-  </div>
-  <div class="collapse-content text-sm">
-    <ol>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">Example Questions to Ask</div><div class="collapse-content text-sm"><ol>
 <li>"So sir, what is Agentforce all about and how is this revolutionizing the CRM Landscape?"</li>
 <li>"So, I heard trust is the number 1 value at Salesforce, how do developers transform into their daily work?"</li>
 </ol>
-
-  </div>
-</div>
+</div></div>
 <blockquote>
 <p><strong>Note:</strong> Do not ask about work life balance or compensation. It puts you in a favorable position to ask company-oriented questions. WLB and Compensation for Salesforce is already good.</p>
 </blockquote>
@@ -666,11 +655,9 @@ You can say anything that initially sounds negative but adds more value to you.<
 <li>A distributed multi-threaded priority based <strong>Gateway Service</strong> to deliver webhooks.</li>
 </ol>
 <h3 id="final-advice">Final Advice</h3>
-<div role="alert" class="alert alert-success alert- soft">
-  <div><p><strong>Seek Help!</strong>
+<div role="alert" class="alert alert-success alert-soft"><div><p><strong>Seek Help!</strong>
 During internship don't stay stuck. Try things, but if they don't work out, don't waste days fixing it. You will learn a lot from your team's principal engineer and architects, because their perspective will teach you about developing a product from the lenses of the end-user.</p>
-</div>
-</div>
+</div></div>
 <p>PPO conversions are quite generous at Salesforce given you deliver the project on time. The manager 1 on 1s are amazing and you can share feedback with your team. If you make it Hyderabad office, always make sure to try Andhra-food cause its amazing!</p>
 <h2 id="best-of-luck-dude">Best of Luck Dude :)</h2>
 <p><img src="https://media.licdn.com/dms/image/v2/D5622AQEU3TTRenGE1g/feedshare-shrink_1280/B56Zge3zEUH0Ao-/0/1752864607576?e=1774483200&amp;v=beta&amp;t=OflEajvSMwwRvPOZN3Uc1MW4BxvQONzRtQI-lvOP_OM" alt="Internship at Salesforce" /></p>
@@ -727,7 +714,7 @@ During internship don't stay stuck. Try things, but if they don't work out, don'
     
     <div class="mt-8 pt-6 border-t border-gray-500/15">
         <div class="flex flex-wrap items-center gap-4">
-            <a href="https:&#x2F;&#x2F;github.com&#x2F;CC-MNNIT&#x2F;cc-website&#x2F;edit&#x2F;main&#x2F;/content/blog&#x2F;2026&#x2F;2026-02-15-salesforce-interview-experience.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+            <a href="https://github.com/CC-MNNIT/cc-website/edit/main//content/blog/2026/2026-02-15-salesforce-interview-experience.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                 </svg>
@@ -748,7 +735,7 @@ During internship don't stay stuck. Try things, but if they don't work out, don'
             </button>
             
             
-            <a href="https://twitter.com/intent/tweet?url=https%3A&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;2026&#x2F;salesforce-interview-experience&#x2F;&text=Salesforce%20Internship%20Interview%20Process" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+            <a href="https://twitter.com/intent/tweet?url=https%3A//cc-club.in/blog/2026/salesforce-interview-experience/&text=Salesforce%20Internship%20Interview%20Process" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                 </svg>
@@ -804,6 +791,7 @@ During internship don't stay stuck. Try things, but if they don't work out, don'
                             </div>
                         </nav>
                     </main>
+            
 
                     
                         
@@ -885,12 +873,12 @@ During internship don't stay stuck. Try things, but if they don't work out, don'
                     
                     
                 </div>
-            </div>
             
+            </div>
 
             <script>
-              // Determine theme: localStorage > extra.default_colorset > goyo-dark
-              // Expose theme config for global use (e.g., goyo.js)
+              // Determine theme: localStorage > extra.default_colorset > cc-dark
+              // Expose theme config for global use (e.g., js/theme.js)
               
               
               
@@ -902,18 +890,18 @@ During internship don't stay stuck. Try things, but if they don't work out, don'
               window.defaultColorset = "dark";
               window.darkBrightness = "normal";
               window.lightBrightness = "normal";
-              window.themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-              window.fallbackTheme = window.themeMap[window.defaultColorset] || "goyo-dark";
+              window.themeMap = { "dark": "cc-dark", "light": "cc-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "cc-dark";
 
-              // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-              var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+              // Theme mapping - user-facing names are the theme identifiers
+              var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
               var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
               var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
 
               // Initialize and run Mermaid only when loaded
               window.initMermaid = function() {
                 var mermaidTheme = "dark";
-                if(currentUserTheme == "goyo-light") {
+                if(currentUserTheme == "cc-light") {
                   mermaidTheme = "light";
                 }
                 
@@ -1023,23 +1011,23 @@ During internship don't stay stuck. Try things, but if they don't work out, don'
                         
                             
                             
-                            <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;cc.club.mnnit&#x2F;" aria-label="Instagram">
+                            <a href="https://www.instagram.com/cc.club.mnnit/" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
                             
                             
                             
-                            <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;company&#x2F;computer-coding-club-mnnit&#x2F;" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/company/computer-coding-club-mnnit/" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                             
                             
-                            <a href="https:&#x2F;&#x2F;github.com&#x2F;CC-MNNIT" aria-label="GitHub">
+                            <a href="https://github.com/CC-MNNIT" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                             
                             
-                            <a href="https:&#x2F;&#x2F;discord.gg&#x2F;EDv6fM5yUm" aria-label="Discord">
+                            <a href="https://discord.gg/EDv6fM5yUm" aria-label="Discord">
                                 <i class="fab fa-discord"></i>
                             </a>
                             
@@ -1072,6 +1060,8 @@ During internship don't stay stuck. Try things, but if they don't work out, don'
         <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
             
                 
+
+
 
 
 
@@ -1207,7 +1197,7 @@ During internship don't stay stuck. Try things, but if they don't work out, don'
     
     
     <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
-        <a href="https:&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;" class="hover:text-primary transition-colors">Blog</a>
+        <a href="https://cc-club.in/blog/" class="hover:text-primary transition-colors">Blog</a>
     </div>
 
     
@@ -1265,7 +1255,7 @@ During internship don't stay stuck. Try things, but if they don't work out, don'
     </div>
 
     
-        <script type="text/javascript" src="https://cc-club.in/goyo.js"></script>
+        <script type="text/javascript" src="https://cc-club.in/js/theme.js"></script>
         
         <!-- Lazy load search functionality -->
         <script>

@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="en" style="background-color: #0f172a;">
 
 <head>
@@ -16,8 +18,15 @@
     <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
     <script>
         (function() {
-            // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-            var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
             
             
             
@@ -31,10 +40,10 @@
             var defaultColorset = "dark";
             var darkBrightness = "normal";
             var lightBrightness = "normal";
-            var themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-            var fallbackTheme = themeMap[defaultColorset] || "goyo-dark";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
             
-            // Expose brightness config for global use (e.g., goyo.js)
+            // Expose brightness config for global use (e.g., js/theme.js)
             window.darkBrightness = darkBrightness;
             window.lightBrightness = lightBrightness;
             
@@ -43,7 +52,7 @@
             var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
             
             // Determine brightness based on current theme
-            var currentBrightness = (currentUserTheme === "goyo-dark") ? darkBrightness : lightBrightness;
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
             
             // Set theme and brightness attributes immediately
             document.documentElement.setAttribute("data-theme", actualTheme);
@@ -124,8 +133,7 @@
       <link rel="manifest" href="https://cc-club.in/icons/site.webmanifest" />
 
       <!-- CSS -->
-    <link rel="stylesheet" href="https://cc-club.in/css/main.css">
-    <link rel="stylesheet" href="https://cc-club.in/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cc-club.in/css/site.css">
     
     <!-- Preload critical fonts -->
     <link rel="preload" href="https://cc-club.in/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
@@ -203,9 +211,6 @@
     
     
 
-    
-    <link rel="stylesheet" href="https://cc-club.in/css/custom.css">
-
     <style>
         /* Desktop Sidebar Animation */
         @media (min-width: 1024px) {
@@ -280,6 +285,11 @@
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col pt-16">
             
+    
+
+
+
+
 
 
 
@@ -491,7 +501,7 @@
             
             <li class="flex items-center">
                 <label class="swap swap-rotate btn btn-ghost btn-circle">
-                    <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color" />
+                    <input type="checkbox" class="theme-controller" value="cc-dark" aria-labelledby="swap color" />
                     <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
@@ -538,16 +548,19 @@
 </script>
 
 
+
             
             
             
             
                 
             
+
             
             <div class="p-8 w-full flex justify-center">
                 <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
                     <main class="prose w-full">
+            
                         
     <div class="mb-12 pb-4 border-b border-gray-500/15">
         <h1 class="flex items-center gap-3">
@@ -578,20 +591,13 @@
 </ol>
 <h3 id="mcqs">MCQs</h3>
 <p>15–20 questions covering <strong>CS fundamentals</strong> including Operating Systems, Computer Networks, and DBMS.</p>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
-  <div class="collapse-title font-semibold">
-    How to Prepare for OA
-  </div>
-  <div class="collapse-content text-sm">
-    <ul>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">How to Prepare for OA</div><div class="collapse-content text-sm"><ul>
 <li>Practice <strong>Dynamic Programming</strong> problems on LeetCode (Medium to Hard)</li>
 <li>Focus on <strong>Binary Search on Answer</strong> pattern problems</li>
 <li>Revise <strong>CS fundamentals</strong> — OS, CN, DBMS</li>
 <li>Solve previous AQR OA questions if available</li>
 </ul>
-
-  </div>
-</div>
+</div></div>
 <hr />
 <h2 id="interview-process-overview">Interview Process Overview</h2>
 <ul>
@@ -599,10 +605,8 @@
 <li><strong>Maximum rounds:</strong> 4</li>
 <li><strong>My experience:</strong> 3 rounds</li>
 </ul>
-<div role="alert" class="alert alert-info alert- soft">
-  <div><p>The interview process at AQR focuses heavily on <strong>CS fundamentals, problem-solving approach, and project understanding</strong>. Be prepared to explain not just <em>how</em> you built something, but <em>why</em> you made certain design decisions.</p>
-</div>
-</div>
+<div role="alert" class="alert alert-info alert-soft"><div><p>The interview process at AQR focuses heavily on <strong>CS fundamentals, problem-solving approach, and project understanding</strong>. Be prepared to explain not just <em>how</em> you built something, but <em>why</em> you made certain design decisions.</p>
+</div></div>
 <hr />
 <h2 id="round-1-cs-fundamentals">Round 1 — CS Fundamentals</h2>
 <div class="badge badge-soft badge-primary">Duration: ~45 minutes</div>
@@ -627,14 +631,12 @@
 <li>Virtual Functions and Pure Virtual Functions</li>
 <li>Base and Derived class concepts</li>
 </ul>
-<div role="alert" class="alert alert-warning alert- soft">
-  <div><p><strong>Be honest about what you haven't studied.</strong> I hadn't prepared DBMS and intentionally left it off my resume. Don't list subjects you can't discuss in depth — interviewers will probe deeper.</p>
-</div>
-</div>
+<div role="alert" class="alert alert-warning alert-soft"><div><p><strong>Be honest about what you haven't studied.</strong> I hadn't prepared DBMS and intentionally left it off my resume. Don't list subjects you can't discuss in depth — interviewers will probe deeper.</p>
+</div></div>
 <hr />
 <h2 id="round-2-data-structures-algorithms">Round 2 — Data Structures &amp; Algorithms</h2>
-<p><div class="badge badge-soft badge-primary">Duration: ~1 hour</div>
-<div class="badge badge-soft badge-warning">Difficulty: Medium-Hard</div></p>
+<div class="badge badge-soft badge-primary">Duration: ~1 hour</div>
+<div class="badge badge-soft badge-warning">Difficulty: Medium-Hard</div>
 <h3 id="problem-overview">Problem Overview</h3>
 <p>The problem involved two key techniques applied in sequence:</p>
 <h4 id="step-1-bfs-on-a-graph">Step 1 — BFS on a Graph</h4>
@@ -653,21 +655,14 @@
 <blockquote>
 <p><strong>Reference:</strong> <a rel="external" href="https://medium.com/@nishant_salhotra/programming-techniques-the-difference-array-5cb22aeedf84">Programming Techniques — The Difference Array</a></p>
 </blockquote>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border">
-  <div class="collapse-title font-semibold">
-    Tips for DSA Rounds
-  </div>
-  <div class="collapse-content text-sm">
-    <ul>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">Tips for DSA Rounds</div><div class="collapse-content text-sm"><ul>
 <li><strong>Think out loud</strong> — interviewers want to hear your thought process</li>
 <li>Don't jump to the optimal solution immediately — <strong>build gradually</strong></li>
 <li>Start with a brute force approach, then optimize</li>
 <li>Don't hesitate to <strong>take hints</strong> from the interviewer</li>
 <li>The thought process matters as much as the answer</li>
 </ul>
-
-  </div>
-</div>
+</div></div>
 <hr />
 <h2 id="round-3-ed-md-level-interview">Round 3 — ED/MD Level Interview</h2>
 <p>This round is typically conducted by a <strong>senior person (ED/MD level)</strong> at AQR. It was a mix of project discussion, a math puzzle, coding, and behavioral questions.</p>
@@ -699,15 +694,13 @@
 </ul>
 <hr />
 <h2 id="key-takeaways">Key Takeaways</h2>
-<div role="alert" class="alert alert-success alert- soft">
-  <div><p><strong>Key Lessons from AQR Interview Process:</strong></p>
+<div role="alert" class="alert alert-success alert-soft"><div><p><strong>Key Lessons from AQR Interview Process:</strong></p>
 <ul>
 <li><strong>Round 3</strong> values <em>why</em> you built something over <em>how</em>. Be ready to defend the idea behind your projects.</li>
 <li>Be honest about what you haven't studied (e.g., DBMS) — don't list it on your resume if you haven't prepared it.</li>
 <li><strong>For DSA rounds</strong>, don't try to jump to the optimal solution in one go — think out loud, build gradually, and don't hesitate to take hints from the interviewer. The thought process matters as much as the answer.</li>
 </ul>
-</div>
-</div>
+</div></div>
 <hr />
 <h2 id="internship-experience">Internship Experience</h2>
 <p>The work environment at AQR is really chill — you can reach out to seniors at any level to discuss ideas and problems without hesitation. People are highly skilled, so there's a lot to learn just by being around them.</p>
@@ -786,7 +779,7 @@ https://www.linkedin.com/in/ayushman-tiwari-a7807b243/</p>
     
     <div class="mt-8 pt-6 border-t border-gray-500/15">
         <div class="flex flex-wrap items-center gap-4">
-            <a href="https:&#x2F;&#x2F;github.com&#x2F;CC-MNNIT&#x2F;cc-website&#x2F;edit&#x2F;main&#x2F;/content/blog&#x2F;2026&#x2F;2026-06-18-AQR_Internship-Experience.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+            <a href="https://github.com/CC-MNNIT/cc-website/edit/main//content/blog/2026/2026-06-18-AQR_Internship-Experience.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                 </svg>
@@ -807,7 +800,7 @@ https://www.linkedin.com/in/ayushman-tiwari-a7807b243/</p>
             </button>
             
             
-            <a href="https://twitter.com/intent/tweet?url=https%3A&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;2026&#x2F;aqr-internship-experience&#x2F;&text=AQR%20Capital%20Management%20%E2%80%94%20Software%20Engineering%20Interview%20Experience" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+            <a href="https://twitter.com/intent/tweet?url=https%3A//cc-club.in/blog/2026/aqr-internship-experience/&text=AQR%20Capital%20Management%20%E2%80%94%20Software%20Engineering%20Interview%20Experience" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                 </svg>
@@ -863,6 +856,7 @@ https://www.linkedin.com/in/ayushman-tiwari-a7807b243/</p>
                             </div>
                         </nav>
                     </main>
+            
 
                     
                         
@@ -953,7 +947,7 @@ https://www.linkedin.com/in/ayushman-tiwari-a7807b243/</p>
                     
                     <details class="toc-details" >
                         <summary>
-                            <a href="https://cc-club.in/blog/2026/aqr-internship-experience/#round-3-ed-md-level-interview" class="toc-link">Round 3 — ED&#x2F;MD Level Interview</a>
+                            <a href="https://cc-club.in/blog/2026/aqr-internship-experience/#round-3-ed-md-level-interview" class="toc-link">Round 3 — ED/MD Level Interview</a>
                         </summary>
                         <ul>
                             
@@ -970,7 +964,7 @@ https://www.linkedin.com/in/ayushman-tiwari-a7807b243/</p>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/blog/2026/aqr-internship-experience/#hr-behavioural" class="toc-link">HR &#x2F; Behavioural</a>
+                                    <a href="https://cc-club.in/blog/2026/aqr-internship-experience/#hr-behavioural" class="toc-link">HR / Behavioural</a>
                                 </li>
                             
                         </ul>
@@ -1004,12 +998,12 @@ https://www.linkedin.com/in/ayushman-tiwari-a7807b243/</p>
                     
                     
                 </div>
-            </div>
             
+            </div>
 
             <script>
-              // Determine theme: localStorage > extra.default_colorset > goyo-dark
-              // Expose theme config for global use (e.g., goyo.js)
+              // Determine theme: localStorage > extra.default_colorset > cc-dark
+              // Expose theme config for global use (e.g., js/theme.js)
               
               
               
@@ -1021,18 +1015,18 @@ https://www.linkedin.com/in/ayushman-tiwari-a7807b243/</p>
               window.defaultColorset = "dark";
               window.darkBrightness = "normal";
               window.lightBrightness = "normal";
-              window.themeMap = { "dark": "goyo-dark", "light": "goyo-light" };
-              window.fallbackTheme = window.themeMap[window.defaultColorset] || "goyo-dark";
+              window.themeMap = { "dark": "cc-dark", "light": "cc-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "cc-dark";
 
-              // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-              var themeMapping = { "goyo-dark": "night", "goyo-light": "lofi" };
+              // Theme mapping - user-facing names are the theme identifiers
+              var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
               var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
               var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
 
               // Initialize and run Mermaid only when loaded
               window.initMermaid = function() {
                 var mermaidTheme = "dark";
-                if(currentUserTheme == "goyo-light") {
+                if(currentUserTheme == "cc-light") {
                   mermaidTheme = "light";
                 }
                 
@@ -1142,23 +1136,23 @@ https://www.linkedin.com/in/ayushman-tiwari-a7807b243/</p>
                         
                             
                             
-                            <a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;cc.club.mnnit&#x2F;" aria-label="Instagram">
+                            <a href="https://www.instagram.com/cc.club.mnnit/" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
                             
                             
                             
-                            <a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;company&#x2F;computer-coding-club-mnnit&#x2F;" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/company/computer-coding-club-mnnit/" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                             
                             
-                            <a href="https:&#x2F;&#x2F;github.com&#x2F;CC-MNNIT" aria-label="GitHub">
+                            <a href="https://github.com/CC-MNNIT" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                             
                             
-                            <a href="https:&#x2F;&#x2F;discord.gg&#x2F;EDv6fM5yUm" aria-label="Discord">
+                            <a href="https://discord.gg/EDv6fM5yUm" aria-label="Discord">
                                 <i class="fab fa-discord"></i>
                             </a>
                             
@@ -1191,6 +1185,8 @@ https://www.linkedin.com/in/ayushman-tiwari-a7807b243/</p>
         <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
             
                 
+
+
 
 
 
@@ -1326,7 +1322,7 @@ https://www.linkedin.com/in/ayushman-tiwari-a7807b243/</p>
     
     
     <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
-        <a href="https:&#x2F;&#x2F;cc-club.in&#x2F;blog&#x2F;" class="hover:text-primary transition-colors">Blog</a>
+        <a href="https://cc-club.in/blog/" class="hover:text-primary transition-colors">Blog</a>
     </div>
 
     
@@ -1384,7 +1380,7 @@ https://www.linkedin.com/in/ayushman-tiwari-a7807b243/</p>
     </div>
 
     
-        <script type="text/javascript" src="https://cc-club.in/goyo.js"></script>
+        <script type="text/javascript" src="https://cc-club.in/js/theme.js"></script>
         
         <!-- Lazy load search functionality -->
         <script>

@@ -13,18 +13,14 @@
         <updated>2026-02-08T00:00:00+00:00</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://cc-club.in/blog/2026/client-side-solana-101/"/>
         <id>https://cc-club.in/blog/2026/client-side-solana-101/</id>
         
-        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
-&lt;p&gt;Are you a web developer curious about diving into the world of Web3? Welcome to your gateway into Solana development! This comprehensive guide will take you from absolute beginner to building your first Solana application, all from your local machine.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Are you a web developer curious about diving into the world of Web3? Welcome to your gateway into Solana development! This comprehensive guide will take you from absolute beginner to building your first Solana application, all from your local machine.&lt;/p&gt;</summary>
         
     </entry>
 </feed>

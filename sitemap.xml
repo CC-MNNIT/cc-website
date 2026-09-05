@@ -130,8 +130,16 @@
         <loc>https://cc-club.in/events/2026/</loc>
     </url>
     <url>
+        <loc>https://cc-club.in/events/2026/icpc-2026/</loc>
+        <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
         <loc>https://cc-club.in/events/2026/insomnia/</loc>
         <lastmod>2026-04-11</lastmod>
+    </url>
+    <url>
+        <loc>https://cc-club.in/events/2026/sih-2026/</loc>
+        <lastmod>2026-08-17</lastmod>
     </url>
     <url>
         <loc>https://cc-club.in/events/2026/weekend-of-code/</loc>
