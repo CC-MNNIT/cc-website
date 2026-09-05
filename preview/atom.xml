@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Computer Coding Club</title>
+    <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/preview/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/preview/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-09-07T00:00:00+00:00</updated>
+    <id>https://cc-club.in/preview/atom.xml</id>
+    <entry xml:lang="en">
+        <title>ICPC 2026</title>
+        <published>2026-09-07T00:00:00+00:00</published>
+        <updated>2026-09-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2026/icpc-2026/"/>
+        <id>https://cc-club.in/preview/events/2026/icpc-2026/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/2026/icpc-2026/">&lt;h2 id=&quot;about-icpc-2026&quot;&gt;About ICPC 2026&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;ICPC 2026&lt;/strong&gt; is here! Registrations for the &lt;strong&gt;Online Qualifier Round&lt;/strong&gt; and the &lt;strong&gt;Amritapuri, Kanpur, Chennai, and Mathura Regionals&lt;/strong&gt; have begun. This is your chance to represent &lt;strong&gt;MNNIT Allahabad&lt;/strong&gt; on the biggest competitive programming stage in the world.&lt;/p&gt;
+&lt;p&gt;For more details about the online and onsite rounds:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🔹 &lt;strong&gt;Amritapuri Regionals:&lt;/strong&gt; &lt;a rel=&quot;external&quot; href=&quot;http://amritaicpc.in/&quot;&gt;amritaicpc.in&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🔹 &lt;strong&gt;Kanpur Regionals:&lt;/strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https://kanpur.indiaicpc.in/&quot;&gt;kanpur.indiaicpc.in&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🔹 &lt;strong&gt;Chennai Regionals:&lt;/strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https://icpc-iiitdm.vercel.app/&quot;&gt;icpc-iiitdm.vercel.app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🔹 &lt;strong&gt;Mathura Regionals:&lt;/strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https://mathuraicpc.in/&quot;&gt;mathuraicpc.in&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;online-round-registration-steps&quot;&gt;Online Round Registration Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Form a team&lt;/strong&gt; of exactly 3 people.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sign up each team member individually&lt;/strong&gt; (if not done already) on the &lt;a rel=&quot;external&quot; href=&quot;https://icpc.global/&quot;&gt;ICPC Global Registration&lt;/a&gt; portal. After registration, ensure that each team member completes their profile on the same site.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The team coach, Dr. Shashank Srivastava&lt;/strong&gt;, will create your team and register your team for one or a maximum of two regional sites. To do this, one team member needs to fill out this form: &lt;a rel=&quot;external&quot; href=&quot;https://forms.gle/dZ4sPsYXvvaoDEzNA&quot;&gt;Registration Form&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-warning alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;⏰ Deadline for filling the form: 11:59 PM on September 7, 2026.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;important&quot;&gt;Important&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Please &lt;strong&gt;do not create a team&lt;/strong&gt; on the ICPC site; your coach will handle this for you.&lt;/li&gt;
+&lt;li&gt;The team should be the &lt;strong&gt;same&lt;/strong&gt; for all selected regionals.&lt;/li&gt;
+&lt;li&gt;All members of the team should be &lt;strong&gt;students of MNNIT Allahabad&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;A team can register for a &lt;strong&gt;maximum of two&lt;/strong&gt; regional sites.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;mandatory-group-joining&quot;&gt;Mandatory Group Joining&lt;/h2&gt;
+&lt;p&gt;Please join the following group for all further information, updates, and announcements related to ICPC 2026:&lt;/p&gt;
+&lt;p&gt;🔗 &lt;a rel=&quot;external&quot; href=&quot;https://chat.whatsapp.com/GdafbrrXpRqChRVGvP4mnx&quot;&gt;ICPC 2026 WhatsApp Group&lt;/a&gt;&lt;/p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-error alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Joining this group is mandatory to participate in ICPC.&lt;/strong&gt; All important announcements and further instructions will be shared in this group.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Stay tuned for further updates!&lt;/p&gt;
+&lt;p&gt;Regards,
+&lt;strong&gt;Team CC&lt;/strong&gt;&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Smart India Hackathon 2026</title>
+        <published>2026-08-17T00:00:00+00:00</published>
+        <updated>2026-08-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2026/sih-2026/"/>
+        <id>https://cc-club.in/preview/events/2026/sih-2026/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/2026/sih-2026/">&lt;h2 id=&quot;about-sih-internal-hackathon&quot;&gt;About SIH Internal Hackathon&lt;/h2&gt;
+&lt;p&gt;Here is the tentative timeline for the &lt;strong&gt;Smart India Hackathon (SIH) Internal Hackathon&lt;/strong&gt; at &lt;strong&gt;MNNIT Allahabad&lt;/strong&gt;, organized by &lt;strong&gt;Team CC&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;phase-1-internal-hackathon&quot;&gt;Phase 1: Internal Hackathon&lt;/h2&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;17 - 20 August: Team Formation &amp; Registration&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;li&gt;Form a team of &lt;strong&gt;6 members&lt;/strong&gt;, including &lt;strong&gt;at least 1 female member&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Teams are encouraged to have members from &lt;strong&gt;diverse branches/categories&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Registration Form: &lt;a rel=&quot;external&quot; href=&quot;https://forms.gle/TZjyodyCgM3H29cWA&quot;&gt;SIH Internal Registration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Form submission deadline: &lt;strong&gt;20 August, 11:59 PM&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Select any problem statement (PS) related to the themes mentioned in the registration form.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;21 - 31 August: Prototype Development&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;li&gt;Build a &lt;strong&gt;working prototype&lt;/strong&gt; for the selected PS.&lt;/li&gt;
+&lt;li&gt;Prepare the &lt;strong&gt;PPT in the prescribed format&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;1 - 3 September: Evaluation&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;li&gt;Top-performing teams will be &lt;strong&gt;nominated for Phase 2&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;phase-2-submission-by-nominated-teams&quot;&gt;Phase 2: Submission by Nominated Teams&lt;/h2&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;4 - 10 September: Final Submission&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;li&gt;Nominated teams will select any PS from the &lt;a rel=&quot;external&quot; href=&quot;https://www.sih.gov.in/&quot;&gt;SIH website&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Submit a &lt;strong&gt;prototype + PPT&lt;/strong&gt; for the solution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;p&gt;Regards,
+&lt;strong&gt;Team CC&lt;/strong&gt;&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>AQR Capital Management — Software Engineering Interview Experience</title>
+        <published>2026-06-18T00:00:00+00:00</published>
+        <updated>2026-06-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/aqr-internship-experience/"/>
+        <id>https://cc-club.in/preview/blog/2026/aqr-internship-experience/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2026/aqr-internship-experience/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this blog, I will share my &lt;strong&gt;AQR Capital Management software engineering interview experience&lt;/strong&gt;, including details about the &lt;strong&gt;Online Assessment, interview rounds, and preparation tips&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;quick-summary&quot;&gt;Quick Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Company: &lt;strong&gt;AQR Capital Management&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Role: &lt;strong&gt;Software Engineering Intern&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Recruitment Mode: &lt;strong&gt;Off-Campus&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Rounds: &lt;strong&gt;OA + 3 Interview Rounds&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Difficulty: &lt;strong&gt;Medium-Hard&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;online-assessment-oa&quot;&gt;Online Assessment (OA)&lt;/h2&gt;
+&lt;p&gt;The first stage was an &lt;strong&gt;Online Assessment&lt;/strong&gt; consisting of both coding problems and multiple-choice questions.&lt;/p&gt;
+&lt;h3 id=&quot;dsa-problems&quot;&gt;DSA Problems&lt;/h3&gt;
+&lt;p&gt;Two problems were asked:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic Programming Problem&lt;/strong&gt; — &lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Medium&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Binary Search on Answer&lt;/strong&gt; — &lt;div class=&quot;badge badge-soft badge-warning&quot;&gt;Medium-Hard&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;mcqs&quot;&gt;MCQs&lt;/h3&gt;
+&lt;p&gt;15–20 questions covering &lt;strong&gt;CS fundamentals&lt;/strong&gt; including Operating Systems, Computer Networks, and DBMS.&lt;/p&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;How to Prepare for OA&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;li&gt;Practice &lt;strong&gt;Dynamic Programming&lt;/strong&gt; problems on LeetCode (Medium to Hard)&lt;/li&gt;
+&lt;li&gt;Focus on &lt;strong&gt;Binary Search on Answer&lt;/strong&gt; pattern problems&lt;/li&gt;
+&lt;li&gt;Revise &lt;strong&gt;CS fundamentals&lt;/strong&gt; — OS, CN, DBMS&lt;/li&gt;
+&lt;li&gt;Solve previous AQR OA questions if available&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;interview-process-overview&quot;&gt;Interview Process Overview&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Minimum rounds:&lt;/strong&gt; 3&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Maximum rounds:&lt;/strong&gt; 4&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;My experience:&lt;/strong&gt; 3 rounds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;The interview process at AQR focuses heavily on &lt;strong&gt;CS fundamentals, problem-solving approach, and project understanding&lt;/strong&gt;. Be prepared to explain not just &lt;em&gt;how&lt;/em&gt; you built something, but &lt;em&gt;why&lt;/em&gt; you made certain design decisions.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;round-1-cs-fundamentals&quot;&gt;Round 1 — CS Fundamentals&lt;/h2&gt;
+&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;Duration: ~45 minutes&lt;/div&gt;
+&lt;p&gt;Topics were picked from my resume: &lt;strong&gt;Operating Systems&lt;/strong&gt;, &lt;strong&gt;OOPs&lt;/strong&gt;, and &lt;strong&gt;Computer Networks&lt;/strong&gt;. DBMS was intentionally left out as I hadn&#39;t prepared it.&lt;/p&gt;
+&lt;h3 id=&quot;operating-systems&quot;&gt;Operating Systems&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Types of scheduling (preemptive &amp;amp; non-preemptive)&lt;/li&gt;
+&lt;li&gt;Context switching&lt;/li&gt;
+&lt;li&gt;Semaphores&lt;/li&gt;
+&lt;li&gt;Deadlocks (conditions, prevention, avoidance)&lt;/li&gt;
+&lt;li&gt;Virtual memory — asked in depth&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; Luv Babbar&#39;s OS notes are sufficient to answer all these questions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;object-oriented-programming&quot;&gt;Object-Oriented Programming&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;4 Pillars of OOPs&lt;/li&gt;
+&lt;li&gt;Constructors and Destructors&lt;/li&gt;
+&lt;li&gt;Abstract Classes&lt;/li&gt;
+&lt;li&gt;Method Overloading and Overriding &lt;em&gt;(asked to write code and explain)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Virtual Functions and Pure Virtual Functions&lt;/li&gt;
+&lt;li&gt;Base and Derived class concepts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-warning alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Be honest about what you haven&#39;t studied.&lt;/strong&gt; I hadn&#39;t prepared DBMS and intentionally left it off my resume. Don&#39;t list subjects you can&#39;t discuss in depth — interviewers will probe deeper.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;round-2-data-structures-algorithms&quot;&gt;Round 2 — Data Structures &amp;amp; Algorithms&lt;/h2&gt;
+&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;Duration: ~1 hour&lt;/div&gt;
+&lt;div class=&quot;badge badge-soft badge-warning&quot;&gt;Difficulty: Medium-Hard&lt;/div&gt;
+&lt;h3 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h3&gt;
+&lt;p&gt;The problem involved two key techniques applied in sequence:&lt;/p&gt;
+&lt;h4 id=&quot;step-1-bfs-on-a-graph&quot;&gt;Step 1 — BFS on a Graph&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Used BFS to produce an intermediate output array&lt;/li&gt;
+&lt;li&gt;Time Complexity: &lt;strong&gt;O(N)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Interviewer asked for pseudo-code first, then implementation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;step-2-range-update-optimization&quot;&gt;Step 2 — Range Update Optimization&lt;/h4&gt;
+&lt;p&gt;After getting the array from BFS, the task required multiple range update operations of the form &lt;code&gt;+x&lt;/code&gt; on &lt;code&gt;[l1, r1]&lt;/code&gt;, &lt;code&gt;-y&lt;/code&gt; on &lt;code&gt;[l2, r2]&lt;/code&gt;, etc., followed by computing a final prefix sum array.&lt;/p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Approach&lt;/th&gt;&lt;th&gt;Time Complexity&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Brute Force&lt;/td&gt;&lt;td&gt;O(N²)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Difference Array&lt;/td&gt;&lt;td&gt;&lt;strong&gt;O(N)&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;The &lt;strong&gt;Difference Array technique&lt;/strong&gt; was the key optimization here — instead of updating every element in a range, we mark only the start and end of each range, then take a single prefix sum pass at the end.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https://medium.com/@nishant_salhotra/programming-techniques-the-difference-array-5cb22aeedf84&quot;&gt;Programming Techniques — The Difference Array&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;Tips for DSA Rounds&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Think out loud&lt;/strong&gt; — interviewers want to hear your thought process&lt;/li&gt;
+&lt;li&gt;Don&#39;t jump to the optimal solution immediately — &lt;strong&gt;build gradually&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Start with a brute force approach, then optimize&lt;/li&gt;
+&lt;li&gt;Don&#39;t hesitate to &lt;strong&gt;take hints&lt;/strong&gt; from the interviewer&lt;/li&gt;
+&lt;li&gt;The thought process matters as much as the answer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;round-3-ed-md-level-interview&quot;&gt;Round 3 — ED/MD Level Interview&lt;/h2&gt;
+&lt;p&gt;This round is typically conducted by a &lt;strong&gt;senior person (ED/MD level)&lt;/strong&gt; at AQR. It was a mix of project discussion, a math puzzle, coding, and behavioral questions.&lt;/p&gt;
+&lt;h3 id=&quot;project-discussion&quot;&gt;Project Discussion&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Asked about projects in depth&lt;/li&gt;
+&lt;li&gt;Focus was on the &lt;strong&gt;idea and motivation&lt;/strong&gt; behind the project, not the technical implementation details&lt;/li&gt;
+&lt;li&gt;Questions tested the &lt;em&gt;uniqueness&lt;/em&gt; and &lt;em&gt;thought process&lt;/em&gt; behind the work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;math-puzzle&quot;&gt;Math Puzzle&lt;/h3&gt;
+&lt;p&gt;A tricky math puzzle was asked after the project discussion. Quantitative firms often include puzzles to assess &lt;strong&gt;analytical thinking&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;coding-problem-design-complex-numbers&quot;&gt;Coding Problem — Design Complex Numbers&lt;/h3&gt;
+&lt;p&gt;Asked to write &lt;strong&gt;actual working code&lt;/strong&gt; (not pseudo-code) for a Complex Numbers class.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What I implemented:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;code&gt;ComplexNumber&lt;/code&gt; class&lt;/li&gt;
+&lt;li&gt;3–4 core functions (addition, multiplication, etc.)&lt;/li&gt;
+&lt;li&gt;Ensured &lt;strong&gt;abstraction&lt;/strong&gt; principles were followed (interviewer hinted at flaws; I fixed them)&lt;/li&gt;
+&lt;li&gt;Used the class functions to compute given complex number expressions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;hr-behavioural&quot;&gt;HR / Behavioural&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&quot;Why Software when your major is Electrical Engineering?&quot;&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;Answered honestly — explored both domains in first year, got involved in software events, interest grew gradually.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Casual conversation about hostel life and professors (interviewer was an alumnus from the same department).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;key-takeaways&quot;&gt;Key Takeaways&lt;/h2&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Key Lessons from AQR Interview Process:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Round 3&lt;/strong&gt; values &lt;em&gt;why&lt;/em&gt; you built something over &lt;em&gt;how&lt;/em&gt;. Be ready to defend the idea behind your projects.&lt;/li&gt;
+&lt;li&gt;Be honest about what you haven&#39;t studied (e.g., DBMS) — don&#39;t list it on your resume if you haven&#39;t prepared it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;For DSA rounds&lt;/strong&gt;, don&#39;t try to jump to the optimal solution in one go — think out loud, build gradually, and don&#39;t hesitate to take hints from the interviewer. The thought process matters as much as the answer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;internship-experience&quot;&gt;Internship Experience&lt;/h2&gt;
+&lt;p&gt;The work environment at AQR is really chill — you can reach out to seniors at any level to discuss ideas and problems without hesitation. People are highly skilled, so there&#39;s a lot to learn just by being around them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Perks:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Excellent food with a lot of variety&lt;/li&gt;
+&lt;li&gt;Free protein bars and drinks&lt;/li&gt;
+&lt;li&gt;And of course — a really good stipend&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I hope this experience helps future candidates better prepare for similar recruitment processes at quantitative finance firms. If you have any questions regarding the process or preparation, feel free to reach out!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Thanks for reading! If you have any queries, feel free to connect with me on LinkedIn.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt;
+https://www.linkedin.com/in/ayushman-tiwari-a7807b243/&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Insomnia 2026</title>
+        <published>2026-04-11T00:00:00+00:00</published>
+        <updated>2026-04-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2026/insomnia/"/>
+        <id>https://cc-club.in/preview/events/2026/insomnia/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/2026/insomnia/">&lt;h2 id=&quot;about-insomnia-2026&quot;&gt;About Insomnia 2026&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Insomnia 2026&lt;/strong&gt; — the flagship competitive programming contest of &lt;strong&gt;MNNIT Allahabad&lt;/strong&gt; — was held on &lt;strong&gt;Saturday, April 11, 2026&lt;/strong&gt; on &lt;strong&gt;Codeforces&lt;/strong&gt;. Following the classic &lt;strong&gt;ACM-ICPC&lt;/strong&gt; format, it challenged teams of up to three members to solve a curated set of algorithmic problems of increasing difficulty in an intense &lt;strong&gt;3.5-hour&lt;/strong&gt; showdown of speed, logic, and teamwork.&lt;/p&gt;
+&lt;p&gt;The contest was &lt;strong&gt;proctored&lt;/strong&gt;, and teams had to follow the proctoring guidelines to stay eligible for prize money.&lt;/p&gt;
+&lt;p&gt;With a total prize pool of &lt;strong&gt;₹26,400&lt;/strong&gt;, the winnings were split across the &lt;strong&gt;Top 3 Global teams&lt;/strong&gt;, the &lt;strong&gt;Top 3 MNNIT teams&lt;/strong&gt;, and the &lt;strong&gt;Fastest Solver of each problem&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;winners-trophy&quot;&gt;Winners 🏆&lt;/h2&gt;
+&lt;p&gt;Congratulations to all the winning teams! See the full podium above.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🌍 &lt;strong&gt;Global Winners&lt;/strong&gt; — Top 3 teams from across the world&lt;/li&gt;
+&lt;li&gt;🏛️ &lt;strong&gt;MNNIT Winners&lt;/strong&gt; — Top 3 teams from MNNIT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Editorial:&lt;/strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https://codeforces.com/blog/entry/153390&quot;&gt;Insomnia 2026 Editorial&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;what-to-expect&quot;&gt;What to Expect&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;🧠 &lt;strong&gt;Algorithmic Challenges:&lt;/strong&gt; Problems ranging from brain-teasers to advanced graph theory.&lt;/li&gt;
+&lt;li&gt;🕒 &lt;strong&gt;The Night Grind:&lt;/strong&gt; High-intensity coding atmosphere that lasts into the night.&lt;/li&gt;
+&lt;li&gt;🤝 &lt;strong&gt;Team Strategy:&lt;/strong&gt; Work in teams of up to 3 to optimize your solutions.&lt;/li&gt;
+&lt;li&gt;🏆 &lt;strong&gt;Grand Prizes:&lt;/strong&gt; Rewards for the top-performing teams.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;format&quot;&gt;Format&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Platform:&lt;/strong&gt; Codeforces (hosted as a gym/contest)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Duration:&lt;/strong&gt; 3.5 Hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Team Size:&lt;/strong&gt; Up to 3 Members&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Eligibility:&lt;/strong&gt; Open to all college students.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Moderation:&lt;/strong&gt; Proctored round — proctoring guidelines are required to be eligible for prizes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prize Pool:&lt;/strong&gt; ₹26,400, split between Top 3 Global teams, Top 3 MNNIT teams, and the Fastest Solver of each problem.&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Visa On-Campus Internship Recruitment Experience</title>
+        <published>2026-03-11T00:00:00+00:00</published>
+        <updated>2026-03-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/visa-internship-experience/"/>
+        <id>https://cc-club.in/preview/blog/2026/visa-internship-experience/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2026/visa-internship-experience/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this blog, I will share my &lt;strong&gt;on-campus Visa internship recruitment experience&lt;/strong&gt;, including details about the &lt;strong&gt;Online Assessment (OA), interview process, questions asked, and preparation tips&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If you are preparing for upcoming internship placements, I hope this experience gives you a clearer idea of what to expect.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Quick Summary&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Company: &lt;strong&gt;Visa&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Role: &lt;strong&gt;Internship&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Recruitment Mode: &lt;strong&gt;On-Campus Placement&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Stages: &lt;strong&gt;Online Assessment → Technical + HR Interview&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;online-assessment-oa&quot;&gt;Online Assessment (OA)&lt;/h2&gt;
+&lt;p&gt;The first stage of the recruitment process was an &lt;strong&gt;Online Assessment consisting of 4 coding questions&lt;/strong&gt;, with a total time limit of &lt;strong&gt;70 minutes&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Fortunately, I was able to solve &lt;strong&gt;all four questions within about 40 minutes&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Here is a brief overview of the problems.&lt;/p&gt;
+&lt;h3 id=&quot;question-1&quot;&gt;Question 1&lt;/h3&gt;
+&lt;p&gt;The first problem was relatively simple, similar to a &lt;strong&gt;LeetCode Easy&lt;/strong&gt; level question.&lt;br /&gt;
+It required a &lt;strong&gt;very small implementation with basic logic&lt;/strong&gt;, roughly around &lt;strong&gt;5 lines of code&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;question-2&quot;&gt;Question 2&lt;/h3&gt;
+&lt;p&gt;The second problem was a &lt;strong&gt;simulation-based greedy problem&lt;/strong&gt; with difficulty comparable to &lt;strong&gt;LeetCode Medium&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The challenge was not the concept itself but implementing the logic correctly and efficiently.&lt;/p&gt;
+&lt;h3 id=&quot;question-3&quot;&gt;Question 3&lt;/h3&gt;
+&lt;p&gt;The third problem was again &lt;strong&gt;simulation-based&lt;/strong&gt;, but it required a &lt;strong&gt;small optimization observation&lt;/strong&gt; to make the solution efficient enough to pass all test cases.&lt;/p&gt;
+&lt;h3 id=&quot;question-4&quot;&gt;Question 4&lt;/h3&gt;
+&lt;p&gt;The final problem was related to &lt;strong&gt;Topological Sort&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You were given a set of &lt;strong&gt;directed edges&lt;/strong&gt;, and the goal was to determine the &lt;strong&gt;topological ordering of the vertices&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Anyone familiar with &lt;strong&gt;graph algorithms&lt;/strong&gt; and standard topological sorting techniques would find this manageable.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;how-to-prepare-for-the-online-assessment&quot;&gt;How to Prepare for the Online Assessment&lt;/h2&gt;
+&lt;p&gt;From my experience, most of the OA problems were &lt;strong&gt;implementation-heavy rather than conceptually difficult&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;These problems often don&#39;t require extremely advanced algorithms.&lt;br /&gt;
+What matters more is &lt;strong&gt;strong implementation skills and the ability to write correct code quickly under time pressure&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Here are some tips that may help:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Practice implementation-based problems&lt;/strong&gt; on platforms like LeetCode.&lt;/li&gt;
+&lt;li&gt;Improve your &lt;strong&gt;speed in writing bug-free code&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Review &lt;strong&gt;commonly asked OA questions&lt;/strong&gt; from previous Visa recruitment processes in other colleges.&lt;/li&gt;
+&lt;li&gt;Carefully read the &lt;strong&gt;required time complexity mentioned in the problem statement&lt;/strong&gt; before deciding your approach.&lt;/li&gt;
+&lt;li&gt;Focus on &lt;strong&gt;simulation, greedy logic, and basic graph algorithms&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Interestingly, the &lt;strong&gt;topological sort problem had appeared in OAs conducted in other colleges&lt;/strong&gt;, so reviewing previous OA questions can be quite useful.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;interview-round&quot;&gt;Interview Round&lt;/h2&gt;
+&lt;p&gt;After the OA, shortlisted candidates were invited for an &lt;strong&gt;interview round&lt;/strong&gt;.&lt;br /&gt;
+Fortunately, I was among the selected students.&lt;/p&gt;
+&lt;p&gt;The interview consisted of &lt;strong&gt;a single round&lt;/strong&gt;, and it lasted &lt;strong&gt;around 40 minutes&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;introduction-and-background&quot;&gt;Introduction and Background&lt;/h3&gt;
+&lt;p&gt;The interviewer started with a simple introduction:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tell me about yourself&lt;/li&gt;
+&lt;li&gt;What skills are you most comfortable with?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This part was mostly about understanding my &lt;strong&gt;background, interests, and technical strengths&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;coding-discussion&quot;&gt;Coding Discussion&lt;/h3&gt;
+&lt;p&gt;After the introduction, we moved to a &lt;strong&gt;coding problem&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The question was more &lt;strong&gt;practical in nature&lt;/strong&gt; rather than a pure algorithmic challenge.&lt;/p&gt;
+&lt;p&gt;The interviewer described a scenario where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You are given a &lt;strong&gt;table of data&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You need to &lt;strong&gt;retrieve specific information from it&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Then perform certain &lt;strong&gt;operations on the retrieved data&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I don&#39;t remember the exact problem now, but it involved &lt;strong&gt;logical thinking and practical data manipulation&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;There were also a few &lt;strong&gt;follow-up questions&lt;/strong&gt; based on the same problem.&lt;/p&gt;
+&lt;h3 id=&quot;discussion-on-ai-and-machine-learning&quot;&gt;Discussion on AI and Machine Learning&lt;/h3&gt;
+&lt;p&gt;We briefly discussed &lt;strong&gt;Artificial Intelligence and Machine Learning&lt;/strong&gt;, mainly at a conceptual level.&lt;/p&gt;
+&lt;p&gt;The conversation focused on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;General understanding of AI&lt;/li&gt;
+&lt;li&gt;Practical applications&lt;/li&gt;
+&lt;li&gt;Industry relevance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;project-discussion&quot;&gt;Project Discussion&lt;/h3&gt;
+&lt;p&gt;Next, I was asked to explain &lt;strong&gt;two of my projects&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The interviewer asked several follow-up questions, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Why did you choose &lt;strong&gt;NoSQL databases instead of SQL databases&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;What challenges did you face while building the project?&lt;/li&gt;
+&lt;li&gt;How would you scale your system?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This part mainly tested my &lt;strong&gt;understanding of my own projects and design decisions&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;hr-type-questions&quot;&gt;HR-Type Questions&lt;/h3&gt;
+&lt;p&gt;Towards the end of the interview, a few behavioral questions were asked, such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How do you stay updated with new technologies?&lt;/li&gt;
+&lt;li&gt;Do you prefer &lt;strong&gt;team projects or individual projects&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;What do you do when you struggle with a difficult topic?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These questions were meant to evaluate &lt;strong&gt;communication skills, mindset, and learning attitude&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;questions-i-asked-the-interviewer&quot;&gt;Questions I Asked the Interviewer&lt;/h2&gt;
+&lt;p&gt;At the end of the interview, the interviewer asked if I had any questions.&lt;/p&gt;
+&lt;p&gt;I asked about &lt;strong&gt;how Visa uses Artificial Intelligence in their products and services&lt;/strong&gt;, as I was curious about the practical applications of AI in their organization.&lt;/p&gt;
+&lt;p&gt;The interviewer explained the use cases in detail, which was very insightful.&lt;/p&gt;
+&lt;p&gt;Soon after that, the interview concluded.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;final-result&quot;&gt;Final Result&lt;/h2&gt;
+&lt;p&gt;Later in the evening, we received the official email containing the list of &lt;strong&gt;selected students for the Visa internship role&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I was very happy to see my name on the list.&lt;br /&gt;
+After the entire process, it felt incredibly rewarding to be selected.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;key-takeaways&quot;&gt;Key Takeaways&lt;/h2&gt;
+&lt;p&gt;Here are some important lessons from my experience:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Strong &lt;strong&gt;implementation skills&lt;/strong&gt; are extremely important for Online Assessments.&lt;/li&gt;
+&lt;li&gt;Practice &lt;strong&gt;simulation-based problems&lt;/strong&gt; and &lt;strong&gt;graph algorithms&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Be prepared to &lt;strong&gt;explain your projects in depth&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Stay &lt;strong&gt;calm and confident during interviews&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Always prepare &lt;strong&gt;a thoughtful question to ask the interviewer&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I hope this experience helps future candidates better prepare for similar recruitment processes.
+If you still have any questions regarding the recruitment process or preparation, feel free to reach out!&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;Thanks for reading! If you have any queries, feel free to connect with me on LinkedIn.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt;&lt;br /&gt;
+https://www.linkedin.com/in/shubhranshu-mishra-092311256/&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Google Offcampus Placement Process</title>
+        <published>2026-03-06T00:00:00+00:00</published>
+        <updated>2026-03-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/google-offcampus-placement-process/"/>
+        <id>https://cc-club.in/preview/blog/2026/google-offcampus-placement-process/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2026/google-offcampus-placement-process/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ananta_0.width-1300.jpg&quot; alt=&quot;Google India&quot; /&gt;&lt;/p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Google&lt;/strong&gt; is the technology giant, probably one of the best companies to work for in the world at this moment, they have a very diverse business which spans entire AI Stack (right from chips to the models and the data), their most revenue comes from ADs, they run youtube, they run google cloud and the list goes endless, Deepmind is another powerhouse within Google responsible for all AI Stuff!!&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;pathway&quot;&gt;Pathway&lt;/h2&gt;
+&lt;p&gt;Firstly, the most important thing is, to apply!! Never shy away from off-campus opportunities because of low-confidence or just the belief that hardly anyone gets a response from off-campus opportunities. The responses are random in nature, but you never know when you get your chance.&lt;/p&gt;
+&lt;p&gt;I applied to Google offcampus, 3 times (in 1st Year&#39;s end for Step Internship, in 2nd Year&#39;s end for Summer Internship, in 3rd Year&#39;s end for Full time role)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yes, the only thing to do is keep an eye on &lt;a rel=&quot;external&quot; href=&quot;https://www.google.com/about/careers&quot;&gt;&lt;strong&gt;Careers Page (turn on Alerts)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Being an &lt;a rel=&quot;external&quot; href=&quot;https://icpc.global/&quot;&gt;ICPC&lt;/a&gt; Regionalist helps a lot, it can almost gurantee an interview call&lt;/li&gt;
+&lt;li&gt;Summer Internship at some MNC also increases your chances of a response&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;phase-1&quot;&gt;Phase 1&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;There are no online assessment rounds at Google for Full-time opportunities, someone from the HR team at Google (generally having an xwf in name), will reach out to you if you are a match&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;They will seek you to fill an interest form, fill that at earliest&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You will receive an interview mail from Google Team soon, usually they schedule 2 interviews together (round 1 and round 2)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;round-1-2&quot;&gt;Round 1 &amp;amp; 2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;These are purely DSA rounds, and in each round they ask 1-2 DSA questions, the difficulty of these questions is generally leetcode medium&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;In my first round I was asked to implement a YouTube ADs class and the solution involved use of 2 heaps, and it was basically a highly modified version of this &lt;a rel=&quot;external&quot; href=&quot;https://leetcode.com/problems/find-median-from-data-stream&quot;&gt;leetcode problem&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The interviewers again look for 2 things&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Your ability to weigh the trade-offs, and build a good solution and communicate the entire thought process nicely to them&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Your code clarity, they call is neat code, and interviewers often remark positively to you if your write good code, which basically means making sure you maintain good indentation, use meaningful names for variables etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;Google, shares a doc link, and you code on the google doc, without use of any IDE, but don&#39;t be too cautious of missing a ; or an indentation issue, if you notice it, the interviewers are usuallly chill about it, also at the end of interview which usually has a time limit of 45 minutes, you do a dry run with the interviewer to verify correctness.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;round-3&quot;&gt;Round 3&lt;/h2&gt;
+&lt;p&gt;If your round 1 and round 2 went well, you will receive the link for 3rd Round of interview, this is again a DSA round, and usually takes months to come to you&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Expect leetcode hard questions&lt;/li&gt;
+&lt;li&gt;The process is same as round 1 &amp;amp; 2&lt;/li&gt;
+&lt;li&gt;After this round, the HR asks for a transcript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;additional-rounds&quot;&gt;Additional Rounds&lt;/h2&gt;
+&lt;p&gt;This may or may not happen for you, if the Hiring team is satisfied they won&#39;t schedule your 4th round, if they are not they may schedule a 4th round, and usually they do schedule a 4th round, this could be a DSA Round or an Googlyness Round depending on which aspect the Hiring Committee wants to test you&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If its a DSA round, it will be just the same as round 3 with increased difficulty level of problem you get&lt;/li&gt;
+&lt;li&gt;If its a Googlyness round, then you will get an HR-Manager type round where they wish to test whether you are a good cultural fit or not, and it is usually in form of &lt;a rel=&quot;external&quot; href=&quot;https://medium.com/@poojaauma/the-behavioral-questions-that-helped-me-in-my-googlyness-round-6c41433ea5dd&quot;&gt;situation/scenario based questions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;team-matching&quot;&gt;Team Matching&lt;/h2&gt;
+&lt;p&gt;After you get great response and if hiring has not freezed, you should proceed to team matching where you may be reached out by different teams at Google for potential match of skills and cultural fit, enjoy this phase and wait for your offer&lt;/p&gt;
+&lt;p&gt;Reaching this phase mostly means that there is a very high probability you will make it to the company!&lt;/p&gt;
+&lt;p&gt;Good Luck!&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Salesforce Internship Interview Process</title>
+        <published>2026-02-15T00:00:00+00:00</published>
+        <updated>2026-02-15T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/salesforce-interview-experience/"/>
+        <id>https://cc-club.in/preview/blog/2026/salesforce-interview-experience/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2026/salesforce-interview-experience/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Salesforce&lt;/strong&gt; is a San-Francisco based Multi-national company which is often regarded as world&#39;s best AI-CRM firm. Overall, the internship experience at Salesforce is amazing, and so is the compensation offered.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;internship-pathways&quot;&gt;Internship Pathways&lt;/h2&gt;
+&lt;p&gt;A big chunk of the hiring at Salesforce at entry level happens through PPO conversions post summer internship. There are two ways to land an internship at Salesforce:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;On-campus&lt;/div&gt; Salesforce visits MNNIT Allahabad for summer internship. The process involves an online round (OA) followed by 2 rounds of interview for each shortlisted candidate.
+&lt;/li&gt;
+&lt;li&gt;&lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Off-campus&lt;/div&gt; Salesforce often organizes a hackathon (usually called Tech Accelerator). To be aware of when these happen you can check out the [FutureForce Page](&quot;https://www.salesforce.com/company/careers/university/&quot;) or follow [FutureForce on Instagram](https://www.instagram.com/salesforcefutureforce/).
+&lt;blockquote&gt;
+&lt;p&gt;Usually the process involves a resume based shortlisting for the hackathon after which the shortlisted candidates are invited to Salesforce Hyderabad Office for a hackathon. Interviews are conducted post hackathon and internships are awarded. If you get shortlisted for hackathon, there is a decent chance of qualifying for internships through this route.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;on-campus-process&quot;&gt;On-campus Process&lt;/h2&gt;
+&lt;h3 id=&quot;online-assessment&quot;&gt;Online Assessment&lt;/h3&gt;
+&lt;p&gt;The Salesforce online assessment is a timed challenge which is usually organized on HackerRank.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Format:&lt;/strong&gt; 2-3 DSA questions only (No MCQs)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Difficulty:&lt;/strong&gt; Generally Leetcode Medium&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-warning alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Topics:&lt;/strong&gt; Greedy, Arrays, 2 Pointer, Binary Search.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: The topics may differ and are very hard to predict.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;interviews-round-1&quot;&gt;Interviews (Round 1)&lt;/h3&gt;
+&lt;p&gt;The candidates shortlisted for interview go through the first round which is a technical round.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Content:&lt;/strong&gt; DSA questions followed by development stack/projects questions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ratio:&lt;/strong&gt; 70-80% DSA (Leetcode Medium), 20-30% Dev/Projects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The development stack questions are fundamental in nature and can be answered easily if you made the project yourself.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Pro Tip:&lt;/strong&gt; During problem solving, its very important to speak out your thought process and communicate with the interviewer, they are not there to be impressed by you solving it in 5 minutes rather they are mostly way more interested in your approach and ability to build a solution and also explain why you came up with it, so don&#39;t be a robot, speak.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;One of the prime focus of the interviewers is on your ability to develop a solution and explain your reasoning.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Speak while you code.&lt;/li&gt;
+&lt;li&gt;Explain choices for data structures and trade-offs&lt;/li&gt;
+&lt;li&gt;Discuss expected time complexity while coding and also if you know more than one language you can touch upon how you would do things differently in this language&lt;/li&gt;
+&lt;li&gt;If you make a mistake, its okay!! point it out yourself and correct it&lt;/li&gt;
+&lt;li&gt;Confidence is the key to get the job&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;How to Introduce Yourself&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;p&gt;Prepare a good introduction, usually interviewers ask for your introduction at the start and just saying, &quot;Hi! I am xyz from MNNIT pursuing B.Tech in x branch and I am good in coding&quot; will not be very impactful, so yes that works, but ideally your introduction should be a 1-2 minute quick summary of the highlights of your resume.&lt;/p&gt;
+&lt;p&gt;it should be &lt;strong&gt;90%&lt;/strong&gt; about your skills, projects, CGPA, achievements and interests and &lt;strong&gt;10%&lt;/strong&gt; about your non-academic, non-coding skills and passion which could be any small mention like &quot;In my free time I love to play basketball/I love to sing/I am a travel freak and I love to explore nature etc.&quot;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;interview-round-2&quot;&gt;Interview (Round 2)&lt;/h3&gt;
+&lt;p&gt;Be ready to be asked the introduction you gave in Round 1. This is generally an &lt;strong&gt;HR-Manager round&lt;/strong&gt;. managers try to test your culture fit/critical thinking. Expect &lt;a rel=&quot;external&quot; href=&quot;https://www.geeksforgeeks.org/aptitude/top-100-puzzles-asked-in-interviews/&quot;&gt;puzzles&lt;/a&gt; and managerial questions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Common Non Puzzle Questions:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Tell me about your weakness.&lt;/li&gt;
+&lt;li&gt;What is your favorite subject?&lt;/li&gt;
+&lt;li&gt;What are your greatest achievements?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-error alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Never say a true weakness!&lt;/strong&gt;
+You can say anything that initially sounds negative but adds more value to you.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Example:&lt;/em&gt; &quot;My weakness is that when I delve into a project I get so involved in it that I forget about food...&quot;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;A lot of times Managers would ask you: &lt;strong&gt;&quot;Are there any questions?&quot;&lt;/strong&gt;&lt;/p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;This is the bingo moment!&lt;/strong&gt; You should always ask a question.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Generally its good to read about the company before HR round, what are their latest products and what they are investing on.&lt;/p&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;Example Questions to Ask&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ol&gt;
+&lt;li&gt;&quot;So sir, what is Agentforce all about and how is this revolutionizing the CRM Landscape?&quot;&lt;/li&gt;
+&lt;li&gt;&quot;So, I heard trust is the number 1 value at Salesforce, how do developers transform into their daily work?&quot;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Do not ask about work life balance or compensation. It puts you in a favorable position to ask company-oriented questions. WLB and Compensation for Salesforce is already good.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;my-internship-experience&quot;&gt;My Internship Experience&lt;/h2&gt;
+&lt;p&gt;I joined Salesforce as a summer intern in 2025. The experience was amazing!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Stipend:&lt;/strong&gt; Great&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Location:&lt;/strong&gt; Hyderabad Office&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Culture:&lt;/strong&gt; Warm and welcoming&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The office food is great, and the employee perks as well. My team was particularly very warm and welcoming, and I personally learnt a lot.&lt;/p&gt;
+&lt;h3 id=&quot;projects-delivered&quot;&gt;Projects Delivered&lt;/h3&gt;
+&lt;p&gt;I delivered two projects during my internship:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;An &lt;strong&gt;MCP Server&lt;/strong&gt; for realtime Jenkins Build Monitoring and Bug-Fixes&lt;/li&gt;
+&lt;li&gt;A distributed multi-threaded priority based &lt;strong&gt;Gateway Service&lt;/strong&gt; to deliver webhooks.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;final-advice&quot;&gt;Final Advice&lt;/h3&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Seek Help!&lt;/strong&gt;
+During internship don&#39;t stay stuck. Try things, but if they don&#39;t work out, don&#39;t waste days fixing it. You will learn a lot from your team&#39;s principal engineer and architects, because their perspective will teach you about developing a product from the lenses of the end-user.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;PPO conversions are quite generous at Salesforce given you deliver the project on time. The manager 1 on 1s are amazing and you can share feedback with your team. If you make it Hyderabad office, always make sure to try Andhra-food cause its amazing!&lt;/p&gt;
+&lt;h2 id=&quot;best-of-luck-dude&quot;&gt;Best of Luck Dude :)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://media.licdn.com/dms/image/v2/D5622AQEU3TTRenGE1g/feedshare-shrink_1280/B56Zge3zEUH0Ao-/0/1752864607576?e=1774483200&amp;amp;v=beta&amp;amp;t=OflEajvSMwwRvPOZN3Uc1MW4BxvQONzRtQI-lvOP_OM&quot; alt=&quot;Internship at Salesforce&quot; /&gt;&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Client Side Solana 101: From Web2 Dev to Web3 Builder</title>
+        <published>2026-02-08T00:00:00+00:00</published>
+        <updated>2026-02-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/client-side-solana-101/"/>
+        <id>https://cc-club.in/preview/blog/2026/client-side-solana-101/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Are you a web developer curious about diving into the world of Web3? Welcome to your gateway into Solana development! This comprehensive guide will take you from absolute beginner to building your first Solana application, all from your local machine.&lt;/p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>From Theory to Practice: Data Structures</title>
+        <published>2026-02-08T00:00:00+00:00</published>
+        <updated>2026-02-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/from-theory-to-practice/"/>
+        <id>https://cc-club.in/preview/blog/2026/from-theory-to-practice/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;We’ve all been there: staring at a whiteboard covered in nodes and edges, memorizing time complexities for an exam, and wondering, &lt;em&gt;&quot;When am I actually going to use this?&quot;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In the academic world, Data Structures are often taught as abstract mathematical concepts. We learn how to balance an AVL tree or reverse a Linked List, but the context is frequently limited to passing test cases.&lt;/p&gt;
+&lt;p&gt;However, in the realm of software engineering, these structures are the invisible scaffolding holding up the digital world. From the database indexing your search queries to the graph algorithms routing your Uber, data structures are everywhere.&lt;/p&gt;
+&lt;p&gt;This post aims to bridge that gap—taking you &lt;strong&gt;from theory to practice&lt;/strong&gt;.&lt;/p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Looking at Reinforcement Learning Through the Lens of Video Games</title>
+        <published>2026-02-08T00:00:00+00:00</published>
+        <updated>2026-02-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/rl-video-game/"/>
+        <id>https://cc-club.in/preview/blog/2026/rl-video-game/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Learning a video game for the first time is rarely smooth. You press random buttons, lose repeatedly, make mistakes, and slowly begin to understand what works and what does not. Over time, without reading any manual, you get better. This natural learning process closely mirrors how Reinforcement Learning works.&lt;/p&gt;
+&lt;p&gt;Reinforcement Learning is a branch of machine learning where an agent learns by interacting with an environment and receiving feedback in the form of rewards or penalties. Video games provide a simple and intuitive way to understand this concept because they naturally involve decision-making, consequences, and improvement over time.&lt;/p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Mastering Time Complexity: A Complete Guide to Algorithm Analysis</title>
+        <published>2026-02-08T00:00:00+00:00</published>
+        <updated>2026-02-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/time-complexity/"/>
+        <id>https://cc-club.in/preview/blog/2026/time-complexity/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Ever wondered why some programs run blazingly fast while others crawl? The secret lies in understanding &lt;strong&gt;time complexity&lt;/strong&gt; – the language we use to describe how an algorithm&#39;s performance scales with input size. Whether you&#39;re preparing for technical interviews, optimizing production code, or simply curious about what makes algorithms tick, mastering time complexity is your key to writing efficient, scalable software.&lt;/p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Why Most Machine Learning Models Fail in Production</title>
+        <published>2026-02-07T00:00:00+00:00</published>
+        <updated>2026-02-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/ml-models-fail/"/>
+        <id>https://cc-club.in/preview/blog/2026/ml-models-fail/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Training a machine learning model that shows &lt;strong&gt;95% accuracy&lt;/strong&gt; feels like success.&lt;br /&gt;
+But deploying that same model into production often turns that success into silence — wrong predictions, confused users, and no clear errors.&lt;/p&gt;
+&lt;p&gt;This is not a rare problem.&lt;/p&gt;
+&lt;p&gt;In fact, &lt;strong&gt;most ML models fail not because the algorithm is bad, but because the real world is messy&lt;/strong&gt;.&lt;br /&gt;
+This blog explains &lt;strong&gt;what goes wrong&lt;/strong&gt;, &lt;strong&gt;why it happens&lt;/strong&gt;, and &lt;strong&gt;how real systems deal with it&lt;/strong&gt;, using simple language and real examples.&lt;/p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Internet Before Search Engines</title>
+        <published>2026-02-05T00:00:00+00:00</published>
+        <updated>2026-02-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/internet-history/"/>
+        <id>https://cc-club.in/preview/blog/2026/internet-history/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2026/internet-history/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Hello everyone!
+This is Devansh, and today through this blogpost, I am going to take you back in time. A time when most of us students were not even born. What was about to be born, was a technology so powerful, that it was about to change everything.&lt;/p&gt;
+&lt;h3 id=&quot;the-birth-of-internet&quot;&gt;The Birth of Internet&lt;/h3&gt;
+&lt;p&gt;Before talking about how it appeared, let&#39;s talk about why it appeared.
+It started because The US was scared. Scared that it&#39;s communication system might be destroyed by a nuclear attack. They wanted to build a network that would still work even if a part of it was destroyed. This was in the early 1960s.&lt;/p&gt;
+&lt;p&gt;In 1969, It happened.
+ARPANET appeared. It was basically a computer network that connected 4 universities of the United States.
+The first message they sent was &quot;LOGIN&quot;, but the system crashed right after &quot;LO&quot;.&lt;/p&gt;
+&lt;p&gt;The data was sent by the concept of packet switching, which is basically sending data in form of packets via multiple paths instead of a single wire.
+For a long time, the internet was used only by universities, researchers and military labs.&lt;/p&gt;
+&lt;h3 id=&quot;1-january-1983&quot;&gt;1 January, 1983&lt;/h3&gt;
+&lt;p&gt;Every machine on ARPANET switched to TCP/IP. To keep it simple, let&#39;s just say different networks could now connect to each other, making a network of networks: &lt;strong&gt;inter-net&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;tim-berners-lee-invents-world-wide-web&quot;&gt;Tim Berners Lee invents World Wide Web&lt;/h3&gt;
+&lt;p&gt;Back in those days, scientists had data on different computers. There was no easy way to link information, and then he invented HTML, HTTP, URLs and Web Server.
+He helped them solve the scientists&#39; problem, but he ended up taking an important decision.
+He kept it FREE. He did not patent the World Wide Web. This meant that the normal humans could use it.&lt;/p&gt;
+&lt;h3 id=&quot;internet-goes-public&quot;&gt;Internet Goes Public&lt;/h3&gt;
+&lt;p&gt;Yes, we had the internet Live and accessible for the people. ISPs appeared, people created websites, chat rooms and some early e-commerce also started.&lt;/p&gt;
+&lt;h2 id=&quot;the-real-question&quot;&gt;The Real Question&lt;/h2&gt;
+&lt;p&gt;Till now, we have discussed briefly how it originated and became accessible to the public.
+Now we will focus on the time period before the search engines came.&lt;/p&gt;
+&lt;h3 id=&quot;what-are-search-engines&quot;&gt;What are Search Engines?&lt;/h3&gt;
+&lt;p&gt;Search engines basically help us find things on the internet. We are familiar with Linear Search Algorithm, which finds data in a container in linear time, or Binary Search, which finds data inside an ordered container in logarithmic time.
+Similarly, Search Engines internally run some algorithm, and find desired web page for us across millions of web pages.&lt;/p&gt;
+&lt;p&gt;So when I say &quot;Internet before Search Engines&quot;, does that look similar to finding &lt;code&gt;target&lt;/code&gt; from an array &lt;code&gt;nums[]&lt;/code&gt; without any technique?
+EXACTLY!&lt;/p&gt;
+&lt;p&gt;In order to find data from an array without any technique, we have to do it manually using our human eyes. This was a similar situation with the internet.&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Internet = [Website1, Website2, Website3, ... millions more]&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Target = &amp;quot;some information&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and you had no idea which site has it, where that site is and even if that site exists or not. Seems quite tough right? Yes it was.&lt;/p&gt;
+&lt;p&gt;Then what did people do?
+They did it manually.
+They clicked links, they browsed directories (We will talk what directories were in a while),
+they found new website URLs in newspapers, television and bookmarked them.&lt;/p&gt;
+&lt;p&gt;The linear search analogy I gave was just an example. It&#39;s actually more closer to:
+Searching an unindexed, unsorted, partially invisible array where you don’t even know the bounds.
+and that&#39;s worse than O(n)&lt;/p&gt;
+&lt;h3 id=&quot;what-were-web-directories&quot;&gt;What were web directories?&lt;/h3&gt;
+&lt;p&gt;Before modern search engines like Google existed, the internet relied on web directories to help users find information. These directories were not powered by algorithms or AI, but by humans manually organizing websites into categories.
+Think of web directories as the table of contents of the early internet.&lt;/p&gt;
+&lt;p&gt;Instead of typing a query and getting ranked results, users navigated like this:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Computers&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt; └── Programming&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;     └── Languages&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;         └── C++&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Each category contained links to websites that humans believed belonged there.&lt;/p&gt;
+&lt;h3 id=&quot;conclusion-life-before-search-engines&quot;&gt;Conclusion: Life Before Search Engines&lt;/h3&gt;
+&lt;p&gt;The internet before search engines was not broken — it was simply unorganized. Information existed, but discovering it required patience, memory, and human effort. Users didn’t search the web; they navigated it.&lt;/p&gt;
+&lt;p&gt;Finding information felt like exploring an unknown space: browsing directories, following hyperlinks, relying on recommendations, and carefully bookmarking useful pages. This process resembled manually scanning an unindexed dataset — effective at small scale, but increasingly inefficient as the web grew.
+Understanding the internet before search engines reminds us that today’s instant access is not accidental. It is the result of decades of evolution, driven by the same core computer science principle:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;At scale, organization must be algorithmic.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And that single shift reshaped the internet forever.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OpenPrinting: The Open-Source Backbone of Linux Printing</title>
+        <published>2026-02-05T00:00:00+00:00</published>
+        <updated>2026-02-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/openprinting/"/>
+        <id>https://cc-club.in/preview/blog/2026/openprinting/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2026/openprinting/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Printing is one of those “boring but essential” capabilities that most users expect to just &lt;em&gt;work&lt;/em&gt;. On Linux, that smooth experience is largely thanks to the &lt;strong&gt;OpenPrinting&lt;/strong&gt; community and the software stack it maintains.&lt;/p&gt;
+&lt;p&gt;Whether you are a sysadmin managing a fleet of printers or a developer looking to contribute to open source, understanding how Linux talks to paper is crucial. This post explains the architecture of OpenPrinting, how its major components (especially CUPS and IPP) fit together, and provides a cheat sheet for daily operations.&lt;/p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Quick Summary (TL;DR):&lt;/strong&gt; OpenPrinting enables standardized, driverless printing on Linux using &lt;strong&gt;CUPS&lt;/strong&gt; (the spooler) and &lt;strong&gt;IPP&lt;/strong&gt; (the protocol). This guide covers architecture, CLI commands, troubleshooting, and contribution paths.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;what-is-openprinting&quot;&gt;What is OpenPrinting?&lt;/h2&gt;
+&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;Community&lt;/div&gt; &lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Standards&lt;/div&gt;
+&lt;p&gt;OpenPrinting is an open-source initiative focused on improving printing support on Linux and Unix-like systems. Historically, printing relied on fragile, vendor-specific drivers. OpenPrinting aims to eliminate those pain points by collaborating with printer vendors and Linux distributions to promote &lt;strong&gt;standardized protocols&lt;/strong&gt; and &lt;strong&gt;user-space solutions&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;core-components&quot;&gt;Core Components&lt;/h2&gt;
+&lt;p&gt;The Linux printing stack is modular. Here are the key players:&lt;/p&gt;
+&lt;h3 id=&quot;1-cups-common-unix-printing-system&quot;&gt;1. CUPS (Common UNIX Printing System)&lt;/h3&gt;
+&lt;p&gt;CUPS is the heart of Linux printing. It runs entirely in user space, acting as the print server that manages jobs and queues.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Role:&lt;/strong&gt; Spooler, Scheduler, Filter Manager.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Key Config:&lt;/strong&gt; &lt;code&gt;/etc/cups/cupsd.conf&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Logs:&lt;/strong&gt; &lt;code&gt;/var/log/cups/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/d/dc/Cups12-web-interface.png&quot; alt=&quot;CUPS Web Interface&quot; style=&quot;width: 100%;&quot; /&gt;
+&lt;h3 id=&quot;2-ipp-internet-printing-protocol&quot;&gt;2. IPP (Internet Printing Protocol)&lt;/h3&gt;
+&lt;p&gt;If CUPS is the heart, IPP is the language it speaks. IPP is a modern network protocol that handles discovery, job submission, and status reporting. It is the foundation of &lt;strong&gt;Driverless Printing&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;3-driverless-printing-ipp-everywhere&quot;&gt;3. Driverless Printing (IPP Everywhere)&lt;/h3&gt;
+&lt;div class=&quot;badge badge-soft badge-success&quot;&gt;Modern Standard&lt;/div&gt;
+&lt;p&gt;Gone are the days of hunting for specific PPD (PostScript Printer Description) files.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;How it works:&lt;/strong&gt; Printers advertise their capabilities (paper size, color, resolution) via IPP.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Benefit:&lt;/strong&gt; CUPS auto-configures compatible printers without downloading external drivers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Printer Applications:&lt;/strong&gt; For legacy devices that don&#39;t speak IPP natively, &quot;Printer Applications&quot; act as software emulators to make them compliant.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;how-it-works-the-architecture&quot;&gt;How It Works: The Architecture&lt;/h2&gt;
+&lt;p&gt;Understanding the flow of a print job helps immensely when things go wrong.&lt;/p&gt;
+&lt;img src=&quot;https://www.novell.com/documentation/nnls/iprinthealth/graphics/print_psm001_a.gif&quot; alt=&quot;Linux Printing Architecture Diagram&quot; class=&quot;rounded-lg shadow-md&quot; /&gt;
+&lt;pre class=&quot;mermaid border border-gray-500/15&quot;&gt;
+graph LR
+    User[User Application] --&gt;|Submit Job| CUPS[CUPS Scheduler]
+    CUPS --&gt;|Process| Filters[Filters/Ghostscript]
+    Filters --&gt;|Convert| Backend[&quot;Backend (USB/Net)&quot;]
+    Backend --&gt;|IPP/Data| Printer[Physical Printer]
+    Printer -.-&gt;|Status| CUPS
+&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Application:&lt;/strong&gt; (e.g., LibreOffice) sends a PDF/PostScript to CUPS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CUPS:&lt;/strong&gt; Queues the job and determines which filters are needed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Filters:&lt;/strong&gt; Convert the input format into the specific raster or command language the printer understands.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Backend:&lt;/strong&gt; Transmits the data over USB or Network (via IPP) to the device.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;sysadmin-cheat-sheet-practical-commands&quot;&gt;Sysadmin Cheat Sheet: Practical Commands&lt;/h2&gt;
+&lt;p&gt;These commands assume CUPS is installed. They are essential for headless server management.&lt;/p&gt;
+&lt;h3 id=&quot;setup-discovery&quot;&gt;Setup &amp;amp; Discovery&lt;/h3&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;Click to view Device Discovery Commands&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lpinfo -v&lt;/code&gt;: List available devices/backends&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ippfind&lt;/code&gt;: Scan network for IPP printers&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;avahi-browse -rt _ipp._tcp&lt;/code&gt;: Detailed mDNS discovery&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;driverless&lt;/code&gt;: List driverless-capable devices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;managing-printers&quot;&gt;Managing Printers&lt;/h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Add a driverless printer (IPP Everywhere)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;sudo&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; lpadmin&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -p&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -E -v&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; ipp://printer.local/ipp/&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -m&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; everywhere&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Set as default&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;sudo&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; lpoptions&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -d&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Check status of all printers&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;lpstat&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -p -d&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;job-management&quot;&gt;Job Management&lt;/h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Print a PDF file&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;lp&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -d&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter document.pdf&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Cancel a specific job&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;cancel&lt;/span&gt;&lt;span style=&quot;color: #F29668;&quot;&gt; &amp;lt;&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt;job-i&lt;/span&gt;&lt;span&gt;d&lt;/span&gt;&lt;span style=&quot;color: #F29668;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Nuke the queue (cancel all jobs)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;cancel&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -a&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;troubleshooting-guide&quot;&gt;Troubleshooting Guide&lt;/h2&gt;
+&lt;p&gt;When printing fails, it usually fails silently. Here is how to make it talk.&lt;/p&gt;
+&lt;h3 id=&quot;1-the-printer-is-not-discovered&quot;&gt;1. The Printer is Not Discovered&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Check mDNS:&lt;/strong&gt; Driverless printing relies on Bonjour/Avahi.&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;avahi-browse&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -a&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Firewall:&lt;/strong&gt; Ensure TCP port 631 (IPP) and UDP port 5353 (mDNS) are open.&lt;/p&gt;
+&lt;h3 id=&quot;2-filter-failed-errors&quot;&gt;2. &quot;Filter Failed&quot; Errors&lt;/h3&gt;
+&lt;p&gt;This usually means CUPS couldn&#39;t convert the file.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Debug Mode:&lt;/strong&gt; This is your best friend.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Edit &lt;code&gt;/etc/cups/cupsd.conf&lt;/code&gt; and change &lt;code&gt;LogLevel warn&lt;/code&gt; to &lt;code&gt;LogLevel debug&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Restart CUPS: &lt;code&gt;sudo systemctl restart cups&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Watch the logs live:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;journalctl&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -u&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; cups&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -f&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;3-legacy-usb-issues&quot;&gt;3. Legacy USB Issues&lt;/h3&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-warning alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;Warning: Legacy USB printers often require specific permissions. Check lsusb to see if the kernel detects the device, and ensure your user is in the lp group.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;contributing-to-openprinting&quot;&gt;Contributing to OpenPrinting&lt;/h2&gt;
+&lt;p&gt;OpenPrinting is a community-driven project. We need help from developers (C/C++), documentation writers, and testers.&lt;/p&gt;
+&lt;h3 id=&quot;where-to-start&quot;&gt;Where to start?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Organization:&lt;/strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https://github.com/OpenPrinting&quot;&gt;https://github.com/OpenPrinting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Key Repos:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cups&lt;/code&gt;: The core printing system.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ipp-usb&lt;/code&gt;: Daemon for treating USB devices as network devices.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cups-filters&lt;/code&gt;: The backend filters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;for-gsoc-applicants&quot;&gt;For GSoC Applicants&lt;/h3&gt;
+&lt;p&gt;If you are looking to join via Google Summer of Code:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Don&#39;t just ask &quot;How can I help?&quot;.&lt;/li&gt;
+&lt;li&gt;Pick a &quot;Good First Issue&quot;.&lt;/li&gt;
+&lt;li&gt;Reproduce a bug and post your logs.&lt;/li&gt;
+&lt;li&gt;Write a small documentation fix to learn the PR workflow.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;faq&quot;&gt;FAQ&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Q: Is OpenPrinting part of the Linux kernel?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;No. Printing happens in user space. The kernel only handles the raw communication (USB/Network packets). This architecture improves system stability—a bad printer driver cannot crash your kernel.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: Will my 15-year-old printer work?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Likely, yes. While modern workflows prefer IPP, OpenPrinting maintains legacy databases (Foomatic) and Printer Applications to keep older hardware running.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: Is IPP secure?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;IPP supports TLS (IPPS) and access control. In an enterprise environment, always use &lt;code&gt;ipps://&lt;/code&gt; and enforce authentication in &lt;code&gt;cupsd.conf&lt;/code&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
+&lt;p&gt;OpenPrinting quietly powers one of the most important subsystems on Linux. Its focus on standards, driverless workflows, and community collaboration ensures printing remains reliable and future-proof.&lt;/p&gt;
+&lt;p&gt;Whether you&#39;re a sysadmin debugging a queue or a student looking for your first open-source commit, the ecosystem is welcoming and vital.&lt;/p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;Ready to experiment? Try setting up a local print queue on your machine today using the command line examples above!&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;pretty-link-card group&quot;&gt;&lt;a href=&quot;https://github.com/OpenPrinting&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;block&quot;&gt;&lt;div class=&quot;flex items-start gap-4 p-5&quot;&gt;&lt;div class=&quot;flex-1 min-w-0&quot;&gt;&lt;div class=&quot;flex items-start justify-between gap-2 mb-2&quot;&gt;&lt;h3 class=&quot;pretty-link-title&quot;&gt;OpenPrinting on GitHub&lt;/h3&gt;&lt;div class=&quot;pretty-link-icon-wrapper&quot;&gt;&lt;svg class=&quot;pretty-link-icon&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;&lt;/div&gt;&lt;p class=&quot;pretty-link-description&quot;&gt;Source code and issues for the OpenPrinting project&lt;/p&gt;&lt;div class=&quot;pretty-link-url&quot;&gt;&lt;svg class=&quot;w-3.5 h-3.5 mr-1.5 opacity-60&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1&quot;&gt;&lt;/path&gt;&lt;/svg&gt;github.com/OpenPrinting&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Weekend of Code 2026</title>
+        <published>2026-01-07T00:00:00+00:00</published>
+        <updated>2026-01-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2026/weekend-of-code/"/>
+        <id>https://cc-club.in/preview/events/2026/weekend-of-code/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/2026/weekend-of-code/">&lt;h2 id=&quot;photo-gallery-camera-flash&quot;&gt;Photo Gallery 📸&lt;/h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://photos.app.goo.gl/pxgmKzMtwYFZZby66&quot;&gt;Event Gallery: Part 1&lt;/a&gt; | &lt;a rel=&quot;external&quot; href=&quot;https://drive.google.com/drive/folders/1jltFt3uJF-fZKXFYKA_-kJO1fVA9jh5d&quot;&gt;Event Gallery: Part 2&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;about-weekend-of-code-2026&quot;&gt;About Weekend of Code 2026&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Weekend of Code&lt;/strong&gt; is the annual internal hackathon of MNNIT Allahabad, designed to kickstart the coding journey for freshers and provide a platform for seniors to showcase their development skills.&lt;/p&gt;
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
+&lt;p&gt;This year, we are expecting over &lt;strong&gt;500+ participants&lt;/strong&gt; to join us for a weekend of intense coding, learning, and fun.&lt;/p&gt;
+&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DevJam&lt;/strong&gt; - Development Hackathon: Build innovative web, app, or system-level solutions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Turing&#39;s Playground&lt;/strong&gt; - AI/ML Hackathon: Solve real-world problems using machine learning and AI.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CodeStart&lt;/strong&gt; - Competitive Programming: Test your algorithmic skills in an ICPC-style contest.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>OPC</title>
+        <published>2025-12-30T00:00:00+00:00</published>
+        <updated>2025-12-30T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/opc/"/>
+        <id>https://cc-club.in/preview/events/2025/opc/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/opc/">&lt;h2 id=&quot;about-opc&quot;&gt;About OPC&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;OPC (Online Programming Contest)&lt;/strong&gt; is a competitive coding event organized by the Computer Coding Club to challenge problem-solving skills, logical thinking, and coding speed. It brings together programmers of all levels to compete, learn, and push their limits in a high-energy contest environment.&lt;/p&gt;
+&lt;h3 id=&quot;what-makes-opc-special&quot;&gt;What Makes OPC Special&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Real Competitive Experience&lt;/strong&gt; – Problems inspired by real CP platforms&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;High-Intensity Environment&lt;/strong&gt; – Time-bound challenges that test accuracy &amp;amp; speed&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Open for All Skill Levels&lt;/strong&gt; – Beginners to advanced coders&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Recognition &amp;amp; Rankings&lt;/strong&gt; – Performance-based leaderboard&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Community Driven&lt;/strong&gt; – Connect with fellow coders through CC Club&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One Last Battle of the Year&lt;/strong&gt; – End 2025 on a high note&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Competitive Programming&lt;/strong&gt; - Algorithms and problem solving.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Logic &amp;amp; Analytical Thinking&lt;/strong&gt; - Logical and analytical reasoning&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Skill Building &amp;amp; Consistency&lt;/strong&gt; - Daily practice and consistency&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Time Management&lt;/strong&gt; – Solving problems accurately under strict time constraints.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Coding Speed &amp;amp; Accuracy&lt;/strong&gt; - Writing correct and optimized code quickly.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Real Contest Experience&lt;/strong&gt; - Exposure to competitive programming environments&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learning Through Challenges&lt;/strong&gt; - Improving by tackling diverse and tricky problems.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;stats-from-2025-edition&quot;&gt;Stats from 2025 Edition&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;240+&lt;/strong&gt; Participants&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2.5&lt;/strong&gt; hours of coding&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Code Of The Day</title>
+        <published>2025-12-03T00:00:00+00:00</published>
+        <updated>2025-12-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/code-of-the-day/"/>
+        <id>https://cc-club.in/preview/events/2025/code-of-the-day/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/code-of-the-day/">&lt;h2 id=&quot;about-code-of-the-day&quot;&gt;About Code of the Day&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Code of the Day 2025&lt;/strong&gt; was a 7-day competitive programming challenge organized by the Computer Coding Club, MNNIT Allahabad as part of CyberQuest under Avishkar 2025, the institute’s annual technical fest. The event was designed to build consistency and strengthen problem-solving skills by releasing one thoughtfully crafted problem every day.&lt;/p&gt;
+&lt;h3 id=&quot;what-makes-code-of-the-day-special&quot;&gt;What Makes Code of the Day Special&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Consistency over speed&lt;/strong&gt; Consistency focused competitive coding&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Daily excitement&lt;/strong&gt; New challenges released every day&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sneak peek teasers&lt;/strong&gt; Pre-release teasers build excitement&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learning support&lt;/strong&gt; Timed hints for guided learning&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fair play focused&lt;/strong&gt; Strict rules ensure fair competition&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Community-driven&lt;/strong&gt; Student-driven problem creation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Competitive Programming&lt;/strong&gt; - Algorithms and problem solving.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Logic &amp;amp; Analytical Thinking&lt;/strong&gt; - Logical and analytical reasoning&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Skill Building &amp;amp; Consistency&lt;/strong&gt; - Daily practice and consistency&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;stats-from-2025-edition&quot;&gt;Stats from 2025 Edition&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;270+&lt;/strong&gt; Participants&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;7&lt;/strong&gt; Days of coding&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Hack36 9.0</title>
+        <published>2025-11-09T00:00:00+00:00</published>
+        <updated>2025-11-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/hack36/"/>
+        <id>https://cc-club.in/preview/events/2025/hack36/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/hack36/">&lt;h2 id=&quot;about-hack36&quot;&gt;About Hack36&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Hack36 9.0&lt;/strong&gt; is the annual national-level hackathon organized by the Computer Coding Club (CC), MNNIT Allahabad. It is a 36-hour-long coding marathon where developers, designers, and innovators from across the country come together to solve real-world problems using technology.&lt;/p&gt;
+&lt;p&gt;This year’s edition, Hack36 9.0 Secure, is part of the Network Security Bootcamp at MNNIT, supported by ISEA Phase III under the Ministry of Electronics and IT (MeitY).&lt;/p&gt;
+&lt;h3 id=&quot;what-makes-hack36-9-0-special&quot;&gt;What Makes Hack36 9.0 Special&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;36 Hours&lt;/strong&gt; of non-stop building, coding, and innovation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cybersecurity&lt;/strong&gt;-Focused Theme (Hack36 9.0 Secure)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mentorship &amp;amp; Guidance&lt;/strong&gt; from industry professionals and academicians&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Internship &amp;amp; Job Opportunities&lt;/strong&gt; through recruiters and sponsors&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Networking&lt;/strong&gt; with top developers, designers, and innovators nationwide&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hands-on Exposure&lt;/strong&gt; to latest tools, cloud platforms, and APIs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prizes, Recognition &amp;amp; Swags&lt;/strong&gt; for top-performing teams&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Post-Hackathon Support&lt;/strong&gt; like incubation/funding guidance for strong projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;tracks&quot;&gt;Tracks&lt;/h3&gt;
+&lt;p&gt;This year we had 5 exciting tracks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Network Security&lt;/strong&gt; - Securing communication systems and networks&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Secure Information Retrieval&lt;/strong&gt; - Safe and reliable data search &amp;amp; access&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Security in Artificial Intelligence&lt;/strong&gt; - Protecting AI models and systems&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web2 Security&lt;/strong&gt; - Securing web apps, APIs, and online services&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web3 Security&lt;/strong&gt; - Blockchain, smart contract, and decentralized security&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;stats-from-2026-edition&quot;&gt;Stats from 2026 Edition&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;600+&lt;/strong&gt; Participants&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;120+&lt;/strong&gt; Teams&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;36&lt;/strong&gt; Hours of coding&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;25+&lt;/strong&gt; Mentors from industry&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rs. 1,00,000&lt;/strong&gt; Prize Pool&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>CodeSangam</title>
+        <published>2025-10-11T00:00:00+00:00</published>
+        <updated>2025-10-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/codesangam/"/>
+        <id>https://cc-club.in/preview/events/2025/codesangam/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/codesangam/">&lt;h2 id=&quot;about-codesangam-2025&quot;&gt;About CodeSangam 2025&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CodeSangam 2025&lt;/strong&gt; is a month-long development fest organized by the &lt;strong&gt;Computer Coding Club (CCC), MNNIT Allahabad&lt;/strong&gt;, where innovation meets execution. It brings together developers, designers, and tech enthusiasts to build real-world projects, learn modern technologies, and compete across multiple development domains.&lt;/p&gt;
+&lt;p&gt;The fest is designed to promote hands-on building culture, teamwork, and skill development through a series of exciting events conducted over multiple weeks.&lt;/p&gt;
+&lt;h3 id=&quot;what-makes-codesangam-special&quot;&gt;What Makes CodeSangam Special&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Multiple events&lt;/strong&gt; covering diverse development fields&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hands-on project building&lt;/strong&gt; with real-world use cases&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competitive environment&lt;/strong&gt; with exciting prizes and recognition&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learning-focused challenges&lt;/strong&gt; to improve development skills&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Collaboration and networking&lt;/strong&gt; with talented peers at MNNIT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;events-tracks&quot;&gt;Events / Tracks&lt;/h3&gt;
+&lt;p&gt;This year, CodeSangam featured &lt;strong&gt;5 major development events&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Webster&lt;/strong&gt; - Web development event&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Droidrush&lt;/strong&gt; - Android app development event&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Logical Rhythm&lt;/strong&gt; - ML-based development event&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Softablitz&lt;/strong&gt; - Java-based desktop app development event&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ContriHub&lt;/strong&gt; - Open-source contribution challenge&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;stats-from-2025-edition&quot;&gt;Stats from 2025 Edition&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;500+&lt;/strong&gt; Participants&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;100+&lt;/strong&gt; Teams&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Contrihub</title>
+        <published>2025-09-20T00:00:00+00:00</published>
+        <updated>2025-09-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/contrihub/"/>
+        <id>https://cc-club.in/preview/events/2025/contrihub/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/contrihub/">&lt;h2 id=&quot;about-contrihub&quot;&gt;About ContriHUB&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;ContriHUB&lt;/strong&gt; is a month-long open-source celebration where collaboration meets contribution. Organized every October alongside &lt;strong&gt;Hacktoberfest&lt;/strong&gt;, ContriHUB aims to bring more &lt;strong&gt;MNNITians&lt;/strong&gt; into the open-source ecosystem by encouraging meaningful contributions to real-world projects.&lt;/p&gt;
+&lt;p&gt;From fixing bugs to building new features, every pull request counts—and every contributor becomes part of a growing community of open-source enthusiasts.&lt;/p&gt;
+&lt;h2 id=&quot;what-is-contrihub&quot;&gt;What is ContriHUB?&lt;/h2&gt;
+&lt;p&gt;ContriHUB is a &lt;strong&gt;month-long open-source contest&lt;/strong&gt;, designed to help students get hands-on experience with GitHub and open-source workflows.&lt;/p&gt;
+&lt;h2 id=&quot;what-makes-contrihub-special&quot;&gt;What Makes ContriHUB Special&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;🗓 &lt;strong&gt;Month-long Open Source Sprint&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🌍 &lt;strong&gt;Aligned with Hacktoberfest&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🧑‍💻 &lt;strong&gt;Beginner-friendly &amp;amp; Advanced Projects&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🏆 &lt;strong&gt;Points-based Contribution System&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🎁 &lt;strong&gt;Goodies &amp;amp; Swag for Top Contributors&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🤝 &lt;strong&gt;Community-driven Learning Experience&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;how-it-works&quot;&gt;How It Works&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Browse projects under the ContriHUB GitHub organization&lt;/li&gt;
+&lt;li&gt;Pick a project that interests you&lt;/li&gt;
+&lt;li&gt;Choose an issue and start working on it&lt;/li&gt;
+&lt;li&gt;Submit a pull request following the contribution guidelines&lt;/li&gt;
+&lt;li&gt;Earn points based on issue difficulty&lt;/li&gt;
+&lt;li&gt;Climb the leaderboard and win exciting goodies 🎉&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;project-tracks-repositories&quot;&gt;Project Tracks &amp;amp; Repositories&lt;/h2&gt;
+&lt;p&gt;ContriHUB hosts a diverse range of open-source projects across multiple domains:&lt;/p&gt;
+&lt;h3 id=&quot;web-development&quot;&gt;Web Development&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CodeSangam&lt;/strong&gt; – Event website built with HTML, Go, and React&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Robotics_Club_Website&lt;/strong&gt; – Official website for MNNIT Robotics Club&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NoteSphere&lt;/strong&gt; – Student feedback portal (React)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chamber_of_Secrets&lt;/strong&gt; – Real-time social interaction app (MERN)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;mobile-applications&quot;&gt;Mobile Applications&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Easy2Do&lt;/strong&gt; – Android productivity app&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Just-Share&lt;/strong&gt; – Kotlin app for file sharing via Wi-Fi/Bluetooth&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Music-Player&lt;/strong&gt; – Java-based music player application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;machine-learning-python-tools&quot;&gt;Machine Learning &amp;amp; Python Tools&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Graph-Analyzer&lt;/strong&gt; – Web app for analyzing graph images&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SecureFace&lt;/strong&gt; – Face recognition-based access control system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;systems-simulations&quot;&gt;Systems &amp;amp; Simulations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Congestion-Control-Simulator&lt;/strong&gt; – TCP congestion control algorithm simulator&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;utilities-campus-solutions&quot;&gt;Utilities &amp;amp; Campus Solutions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;EAT_EASY&lt;/strong&gt; – Mess management web application&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CREDLOCKS&lt;/strong&gt; – Community platform for student growth and resources&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MovieScreen&lt;/strong&gt; – Django-based movie project&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EyeProtection&lt;/strong&gt; – Browser extension for screen-time health&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;event-core-repositories&quot;&gt;Event &amp;amp; Core Repositories&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ContriHUB-24&lt;/strong&gt; – Core repository for ContriHUB 2024 edition&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🔗 &lt;a rel=&quot;external&quot; href=&quot;https://github.com/orgs/ContriHUB/repositories&quot;&gt;Explore all repositories&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;✨ Grab your tickets, join the parade of contributors, and let your code shine on the open-source carnival stage!&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Weekend of Code</title>
+        <published>2025-01-07T00:00:00+00:00</published>
+        <updated>2025-01-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/weekend-of-code/"/>
+        <id>https://cc-club.in/preview/events/2025/weekend-of-code/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/weekend-of-code/">&lt;h2 id=&quot;about-weekend-of-code&quot;&gt;About Weekend of Code&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Weekend of Code&lt;/strong&gt; is a multi-event coding fest exclusively for first- and second-year students, bringing together three core competitions—DevJam (development hackathon), Turing’s Playground (AI/ML hackathon), and CodeStart (ICPC-style coding contest). It’s a focused platform to learn, build, compete, and push your problem-solving skills.&lt;/p&gt;
+&lt;h3 id=&quot;what-makes-weekend-of-code-special&quot;&gt;What Makes Weekend of Code Special&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Three Competitive Events&lt;/strong&gt; across development, AI/ML, and competitive programming&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Industry Mentorship&lt;/strong&gt; from leading tech companies&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Exclusively for 1st &amp;amp; 2nd Years&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mentorship &amp;amp; Guidance&lt;/strong&gt; from peers&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Workshops&lt;/strong&gt; and learning sessions&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Alumni Industry Connect</title>
+        <published>2025-01-01T00:00:00+00:00</published>
+        <updated>2025-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/programs/alumni-connect/"/>
+        <id>https://cc-club.in/preview/events/programs/alumni-connect/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/programs/alumni-connect/">&lt;h2 id=&quot;about-alumni-connect&quot;&gt;About Alumni Connect&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;Alumni Industry Connect&lt;/strong&gt; series brings back our most successful alumni to share their industry experiences, career advice, and technical insights.&lt;/p&gt;
+&lt;h3 id=&quot;why-attend&quot;&gt;Why Attend?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Real-world Insights&lt;/strong&gt;: Learn what it takes to crack interviews at FAANG and startups.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Networking&lt;/strong&gt;: Connect with seniors working in your dream companies.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Technical Deep Dives&lt;/strong&gt;: Sessions on System Design, Cloud Computing, and AI/ML trends.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;past-speakers&quot;&gt;Past Speakers&lt;/h3&gt;
+&lt;p&gt;We have hosted alumni from &lt;strong&gt;Google, Microsoft, Amazon, Uber, PhonePe&lt;/strong&gt;, and high-growth startups.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>CC Classes</title>
+        <published>2025-01-01T00:00:00+00:00</published>
+        <updated>2025-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/programs/cc-classes/"/>
+        <id>https://cc-club.in/preview/events/programs/cc-classes/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/programs/cc-classes/">&lt;h2 id=&quot;about-cc-classes&quot;&gt;About CC Classes&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CC Classes&lt;/strong&gt; are student-led mentorship sessions designed to help freshers and sophomores master the art of programming. From the basics of C++ to advanced Competitive Programming and Development, we cover it all.&lt;/p&gt;
+&lt;h3 id=&quot;what-we-cover&quot;&gt;What We Cover&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Introduction to Programming&lt;/strong&gt;: C, C++, and Python basics.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Structures &amp;amp; Algorithms&lt;/strong&gt;: Arrays, Linked Lists, Trees, Graphs, and DP.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web Development&lt;/strong&gt;: HTML, CSS, JS, React, and Node.js.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;App Development&lt;/strong&gt;: Flutter and Kotlin.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;System Design&lt;/strong&gt;: Basics of scalable architecture.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;schedule&quot;&gt;Schedule&lt;/h3&gt;
+&lt;p&gt;Classes are typically held &lt;strong&gt;every week&lt;/strong&gt; in the CC Club Room or Lecture Halls. Follow our socials for specific timings!&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Insomnia</title>
+        <published>2024-11-17T00:00:00+00:00</published>
+        <updated>2024-11-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/events/2025/insomnia/"/>
+        <id>https://cc-club.in/preview/events/2025/insomnia/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/events/2025/insomnia/">&lt;h2 id=&quot;about-insomnia&quot;&gt;About Insomnia&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Insomnia&lt;/strong&gt; is the flagship competitive programming contest of &lt;strong&gt;MNNIT Allahabad&lt;/strong&gt;, where logic meets endurance and teamwork meets strategy. Conducted as part of &lt;strong&gt;Avishkar&lt;/strong&gt;, our annual tech fest, Insomnia brings together programmers from across the country to compete in a high-pressure, high-energy coding marathon.&lt;/p&gt;
+&lt;p&gt;Inspired by the &lt;strong&gt;ACM-ICPC style&lt;/strong&gt;, the contest challenges teams to think fast, code smart, and stay sharp till the very last minute.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;what-is-insomnia&quot;&gt;What is Insomnia?&lt;/h2&gt;
+&lt;p&gt;Insomnia is a &lt;strong&gt;3-hour ICPC-style team programming contest&lt;/strong&gt; hosted on &lt;strong&gt;Codeforces&lt;/strong&gt;, where teams of up to three members solve a curated set of algorithmic problems under strict time and penalty constraints.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;what-makes-insomnia-special&quot;&gt;What Makes Insomnia Special&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;⏱ &lt;strong&gt;3 Hours of Intense Competitive Coding&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;👥 &lt;strong&gt;Team-based ICPC Format (Up to 3 Members)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🧠 &lt;strong&gt;Carefully Curated Problem Set&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🏆 &lt;strong&gt;Attractive Cash Prizes &amp;amp; Recognition&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🌐 &lt;strong&gt;Hosted on Codeforces Platform&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🎯 &lt;strong&gt;Open to Students Across the Country&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🎉 &lt;strong&gt;Part of Avishkar – MNNIT’s Tech Fest&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;how-it-works&quot;&gt;How It Works&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Form a team of up to 3 members&lt;/li&gt;
+&lt;li&gt;Register for the contest on Codeforces&lt;/li&gt;
+&lt;li&gt;Log in at the contest time and start solving problems&lt;/li&gt;
+&lt;li&gt;Submit solutions within the time limit&lt;/li&gt;
+&lt;li&gt;Rank higher by solving more problems with fewer penalties&lt;/li&gt;
+&lt;li&gt;Top teams win cash prizes and bragging rights 🚀&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;p&gt;✨ Gear up for a sleepless night of logic, strategy, and code. Gather your team, push your limits, and prove your mettle at &lt;strong&gt;Insomnia&lt;/strong&gt; — where only the sharpest minds stay awake till the end. 🌙🔥&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>

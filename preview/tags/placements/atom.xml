@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Computer Coding Club - placements</title>
+    <subtitle>Official website of Computer Coding Club - Learn, Build, and Grow Together</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://cc-club.in/preview/tags/placements/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://cc-club.in/preview/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-06-18T00:00:00+00:00</updated>
+    <id>https://cc-club.in/preview/tags/placements/atom.xml</id>
+    <entry xml:lang="en">
+        <title>AQR Capital Management — Software Engineering Interview Experience</title>
+        <published>2026-06-18T00:00:00+00:00</published>
+        <updated>2026-06-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/aqr-internship-experience/"/>
+        <id>https://cc-club.in/preview/blog/2026/aqr-internship-experience/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2026/aqr-internship-experience/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this blog, I will share my &lt;strong&gt;AQR Capital Management software engineering interview experience&lt;/strong&gt;, including details about the &lt;strong&gt;Online Assessment, interview rounds, and preparation tips&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;quick-summary&quot;&gt;Quick Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Company: &lt;strong&gt;AQR Capital Management&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Role: &lt;strong&gt;Software Engineering Intern&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Recruitment Mode: &lt;strong&gt;Off-Campus&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Rounds: &lt;strong&gt;OA + 3 Interview Rounds&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Difficulty: &lt;strong&gt;Medium-Hard&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;online-assessment-oa&quot;&gt;Online Assessment (OA)&lt;/h2&gt;
+&lt;p&gt;The first stage was an &lt;strong&gt;Online Assessment&lt;/strong&gt; consisting of both coding problems and multiple-choice questions.&lt;/p&gt;
+&lt;h3 id=&quot;dsa-problems&quot;&gt;DSA Problems&lt;/h3&gt;
+&lt;p&gt;Two problems were asked:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic Programming Problem&lt;/strong&gt; — &lt;div class=&quot;badge badge-soft badge-secondary&quot;&gt;Medium&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Binary Search on Answer&lt;/strong&gt; — &lt;div class=&quot;badge badge-soft badge-warning&quot;&gt;Medium-Hard&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;mcqs&quot;&gt;MCQs&lt;/h3&gt;
+&lt;p&gt;15–20 questions covering &lt;strong&gt;CS fundamentals&lt;/strong&gt; including Operating Systems, Computer Networks, and DBMS.&lt;/p&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;How to Prepare for OA&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;li&gt;Practice &lt;strong&gt;Dynamic Programming&lt;/strong&gt; problems on LeetCode (Medium to Hard)&lt;/li&gt;
+&lt;li&gt;Focus on &lt;strong&gt;Binary Search on Answer&lt;/strong&gt; pattern problems&lt;/li&gt;
+&lt;li&gt;Revise &lt;strong&gt;CS fundamentals&lt;/strong&gt; — OS, CN, DBMS&lt;/li&gt;
+&lt;li&gt;Solve previous AQR OA questions if available&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;interview-process-overview&quot;&gt;Interview Process Overview&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Minimum rounds:&lt;/strong&gt; 3&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Maximum rounds:&lt;/strong&gt; 4&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;My experience:&lt;/strong&gt; 3 rounds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;The interview process at AQR focuses heavily on &lt;strong&gt;CS fundamentals, problem-solving approach, and project understanding&lt;/strong&gt;. Be prepared to explain not just &lt;em&gt;how&lt;/em&gt; you built something, but &lt;em&gt;why&lt;/em&gt; you made certain design decisions.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;round-1-cs-fundamentals&quot;&gt;Round 1 — CS Fundamentals&lt;/h2&gt;
+&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;Duration: ~45 minutes&lt;/div&gt;
+&lt;p&gt;Topics were picked from my resume: &lt;strong&gt;Operating Systems&lt;/strong&gt;, &lt;strong&gt;OOPs&lt;/strong&gt;, and &lt;strong&gt;Computer Networks&lt;/strong&gt;. DBMS was intentionally left out as I hadn&#39;t prepared it.&lt;/p&gt;
+&lt;h3 id=&quot;operating-systems&quot;&gt;Operating Systems&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Types of scheduling (preemptive &amp;amp; non-preemptive)&lt;/li&gt;
+&lt;li&gt;Context switching&lt;/li&gt;
+&lt;li&gt;Semaphores&lt;/li&gt;
+&lt;li&gt;Deadlocks (conditions, prevention, avoidance)&lt;/li&gt;
+&lt;li&gt;Virtual memory — asked in depth&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; Luv Babbar&#39;s OS notes are sufficient to answer all these questions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;object-oriented-programming&quot;&gt;Object-Oriented Programming&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;4 Pillars of OOPs&lt;/li&gt;
+&lt;li&gt;Constructors and Destructors&lt;/li&gt;
+&lt;li&gt;Abstract Classes&lt;/li&gt;
+&lt;li&gt;Method Overloading and Overriding &lt;em&gt;(asked to write code and explain)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Virtual Functions and Pure Virtual Functions&lt;/li&gt;
+&lt;li&gt;Base and Derived class concepts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-warning alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Be honest about what you haven&#39;t studied.&lt;/strong&gt; I hadn&#39;t prepared DBMS and intentionally left it off my resume. Don&#39;t list subjects you can&#39;t discuss in depth — interviewers will probe deeper.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;round-2-data-structures-algorithms&quot;&gt;Round 2 — Data Structures &amp;amp; Algorithms&lt;/h2&gt;
+&lt;div class=&quot;badge badge-soft badge-primary&quot;&gt;Duration: ~1 hour&lt;/div&gt;
+&lt;div class=&quot;badge badge-soft badge-warning&quot;&gt;Difficulty: Medium-Hard&lt;/div&gt;
+&lt;h3 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h3&gt;
+&lt;p&gt;The problem involved two key techniques applied in sequence:&lt;/p&gt;
+&lt;h4 id=&quot;step-1-bfs-on-a-graph&quot;&gt;Step 1 — BFS on a Graph&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Used BFS to produce an intermediate output array&lt;/li&gt;
+&lt;li&gt;Time Complexity: &lt;strong&gt;O(N)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Interviewer asked for pseudo-code first, then implementation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;step-2-range-update-optimization&quot;&gt;Step 2 — Range Update Optimization&lt;/h4&gt;
+&lt;p&gt;After getting the array from BFS, the task required multiple range update operations of the form &lt;code&gt;+x&lt;/code&gt; on &lt;code&gt;[l1, r1]&lt;/code&gt;, &lt;code&gt;-y&lt;/code&gt; on &lt;code&gt;[l2, r2]&lt;/code&gt;, etc., followed by computing a final prefix sum array.&lt;/p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Approach&lt;/th&gt;&lt;th&gt;Time Complexity&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Brute Force&lt;/td&gt;&lt;td&gt;O(N²)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Difference Array&lt;/td&gt;&lt;td&gt;&lt;strong&gt;O(N)&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;The &lt;strong&gt;Difference Array technique&lt;/strong&gt; was the key optimization here — instead of updating every element in a range, we mark only the start and end of each range, then take a single prefix sum pass at the end.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https://medium.com/@nishant_salhotra/programming-techniques-the-difference-array-5cb22aeedf84&quot;&gt;Programming Techniques — The Difference Array&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;Tips for DSA Rounds&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Think out loud&lt;/strong&gt; — interviewers want to hear your thought process&lt;/li&gt;
+&lt;li&gt;Don&#39;t jump to the optimal solution immediately — &lt;strong&gt;build gradually&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Start with a brute force approach, then optimize&lt;/li&gt;
+&lt;li&gt;Don&#39;t hesitate to &lt;strong&gt;take hints&lt;/strong&gt; from the interviewer&lt;/li&gt;
+&lt;li&gt;The thought process matters as much as the answer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;round-3-ed-md-level-interview&quot;&gt;Round 3 — ED/MD Level Interview&lt;/h2&gt;
+&lt;p&gt;This round is typically conducted by a &lt;strong&gt;senior person (ED/MD level)&lt;/strong&gt; at AQR. It was a mix of project discussion, a math puzzle, coding, and behavioral questions.&lt;/p&gt;
+&lt;h3 id=&quot;project-discussion&quot;&gt;Project Discussion&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Asked about projects in depth&lt;/li&gt;
+&lt;li&gt;Focus was on the &lt;strong&gt;idea and motivation&lt;/strong&gt; behind the project, not the technical implementation details&lt;/li&gt;
+&lt;li&gt;Questions tested the &lt;em&gt;uniqueness&lt;/em&gt; and &lt;em&gt;thought process&lt;/em&gt; behind the work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;math-puzzle&quot;&gt;Math Puzzle&lt;/h3&gt;
+&lt;p&gt;A tricky math puzzle was asked after the project discussion. Quantitative firms often include puzzles to assess &lt;strong&gt;analytical thinking&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;coding-problem-design-complex-numbers&quot;&gt;Coding Problem — Design Complex Numbers&lt;/h3&gt;
+&lt;p&gt;Asked to write &lt;strong&gt;actual working code&lt;/strong&gt; (not pseudo-code) for a Complex Numbers class.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What I implemented:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;code&gt;ComplexNumber&lt;/code&gt; class&lt;/li&gt;
+&lt;li&gt;3–4 core functions (addition, multiplication, etc.)&lt;/li&gt;
+&lt;li&gt;Ensured &lt;strong&gt;abstraction&lt;/strong&gt; principles were followed (interviewer hinted at flaws; I fixed them)&lt;/li&gt;
+&lt;li&gt;Used the class functions to compute given complex number expressions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;hr-behavioural&quot;&gt;HR / Behavioural&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&quot;Why Software when your major is Electrical Engineering?&quot;&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;Answered honestly — explored both domains in first year, got involved in software events, interest grew gradually.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Casual conversation about hostel life and professors (interviewer was an alumnus from the same department).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;key-takeaways&quot;&gt;Key Takeaways&lt;/h2&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Key Lessons from AQR Interview Process:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Round 3&lt;/strong&gt; values &lt;em&gt;why&lt;/em&gt; you built something over &lt;em&gt;how&lt;/em&gt;. Be ready to defend the idea behind your projects.&lt;/li&gt;
+&lt;li&gt;Be honest about what you haven&#39;t studied (e.g., DBMS) — don&#39;t list it on your resume if you haven&#39;t prepared it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;For DSA rounds&lt;/strong&gt;, don&#39;t try to jump to the optimal solution in one go — think out loud, build gradually, and don&#39;t hesitate to take hints from the interviewer. The thought process matters as much as the answer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;internship-experience&quot;&gt;Internship Experience&lt;/h2&gt;
+&lt;p&gt;The work environment at AQR is really chill — you can reach out to seniors at any level to discuss ideas and problems without hesitation. People are highly skilled, so there&#39;s a lot to learn just by being around them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Perks:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Excellent food with a lot of variety&lt;/li&gt;
+&lt;li&gt;Free protein bars and drinks&lt;/li&gt;
+&lt;li&gt;And of course — a really good stipend&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I hope this experience helps future candidates better prepare for similar recruitment processes at quantitative finance firms. If you have any questions regarding the process or preparation, feel free to reach out!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Thanks for reading! If you have any queries, feel free to connect with me on LinkedIn.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt;
+https://www.linkedin.com/in/ayushman-tiwari-a7807b243/&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Visa On-Campus Internship Recruitment Experience</title>
+        <published>2026-03-11T00:00:00+00:00</published>
+        <updated>2026-03-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/visa-internship-experience/"/>
+        <id>https://cc-club.in/preview/blog/2026/visa-internship-experience/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2026/visa-internship-experience/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this blog, I will share my &lt;strong&gt;on-campus Visa internship recruitment experience&lt;/strong&gt;, including details about the &lt;strong&gt;Online Assessment (OA), interview process, questions asked, and preparation tips&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If you are preparing for upcoming internship placements, I hope this experience gives you a clearer idea of what to expect.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Quick Summary&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Company: &lt;strong&gt;Visa&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Role: &lt;strong&gt;Internship&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Recruitment Mode: &lt;strong&gt;On-Campus Placement&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Stages: &lt;strong&gt;Online Assessment → Technical + HR Interview&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;online-assessment-oa&quot;&gt;Online Assessment (OA)&lt;/h2&gt;
+&lt;p&gt;The first stage of the recruitment process was an &lt;strong&gt;Online Assessment consisting of 4 coding questions&lt;/strong&gt;, with a total time limit of &lt;strong&gt;70 minutes&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Fortunately, I was able to solve &lt;strong&gt;all four questions within about 40 minutes&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Here is a brief overview of the problems.&lt;/p&gt;
+&lt;h3 id=&quot;question-1&quot;&gt;Question 1&lt;/h3&gt;
+&lt;p&gt;The first problem was relatively simple, similar to a &lt;strong&gt;LeetCode Easy&lt;/strong&gt; level question.&lt;br /&gt;
+It required a &lt;strong&gt;very small implementation with basic logic&lt;/strong&gt;, roughly around &lt;strong&gt;5 lines of code&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;question-2&quot;&gt;Question 2&lt;/h3&gt;
+&lt;p&gt;The second problem was a &lt;strong&gt;simulation-based greedy problem&lt;/strong&gt; with difficulty comparable to &lt;strong&gt;LeetCode Medium&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The challenge was not the concept itself but implementing the logic correctly and efficiently.&lt;/p&gt;
+&lt;h3 id=&quot;question-3&quot;&gt;Question 3&lt;/h3&gt;
+&lt;p&gt;The third problem was again &lt;strong&gt;simulation-based&lt;/strong&gt;, but it required a &lt;strong&gt;small optimization observation&lt;/strong&gt; to make the solution efficient enough to pass all test cases.&lt;/p&gt;
+&lt;h3 id=&quot;question-4&quot;&gt;Question 4&lt;/h3&gt;
+&lt;p&gt;The final problem was related to &lt;strong&gt;Topological Sort&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You were given a set of &lt;strong&gt;directed edges&lt;/strong&gt;, and the goal was to determine the &lt;strong&gt;topological ordering of the vertices&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Anyone familiar with &lt;strong&gt;graph algorithms&lt;/strong&gt; and standard topological sorting techniques would find this manageable.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;how-to-prepare-for-the-online-assessment&quot;&gt;How to Prepare for the Online Assessment&lt;/h2&gt;
+&lt;p&gt;From my experience, most of the OA problems were &lt;strong&gt;implementation-heavy rather than conceptually difficult&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;These problems often don&#39;t require extremely advanced algorithms.&lt;br /&gt;
+What matters more is &lt;strong&gt;strong implementation skills and the ability to write correct code quickly under time pressure&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Here are some tips that may help:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Practice implementation-based problems&lt;/strong&gt; on platforms like LeetCode.&lt;/li&gt;
+&lt;li&gt;Improve your &lt;strong&gt;speed in writing bug-free code&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Review &lt;strong&gt;commonly asked OA questions&lt;/strong&gt; from previous Visa recruitment processes in other colleges.&lt;/li&gt;
+&lt;li&gt;Carefully read the &lt;strong&gt;required time complexity mentioned in the problem statement&lt;/strong&gt; before deciding your approach.&lt;/li&gt;
+&lt;li&gt;Focus on &lt;strong&gt;simulation, greedy logic, and basic graph algorithms&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Interestingly, the &lt;strong&gt;topological sort problem had appeared in OAs conducted in other colleges&lt;/strong&gt;, so reviewing previous OA questions can be quite useful.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;interview-round&quot;&gt;Interview Round&lt;/h2&gt;
+&lt;p&gt;After the OA, shortlisted candidates were invited for an &lt;strong&gt;interview round&lt;/strong&gt;.&lt;br /&gt;
+Fortunately, I was among the selected students.&lt;/p&gt;
+&lt;p&gt;The interview consisted of &lt;strong&gt;a single round&lt;/strong&gt;, and it lasted &lt;strong&gt;around 40 minutes&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;introduction-and-background&quot;&gt;Introduction and Background&lt;/h3&gt;
+&lt;p&gt;The interviewer started with a simple introduction:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tell me about yourself&lt;/li&gt;
+&lt;li&gt;What skills are you most comfortable with?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This part was mostly about understanding my &lt;strong&gt;background, interests, and technical strengths&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;coding-discussion&quot;&gt;Coding Discussion&lt;/h3&gt;
+&lt;p&gt;After the introduction, we moved to a &lt;strong&gt;coding problem&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The question was more &lt;strong&gt;practical in nature&lt;/strong&gt; rather than a pure algorithmic challenge.&lt;/p&gt;
+&lt;p&gt;The interviewer described a scenario where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You are given a &lt;strong&gt;table of data&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You need to &lt;strong&gt;retrieve specific information from it&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Then perform certain &lt;strong&gt;operations on the retrieved data&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I don&#39;t remember the exact problem now, but it involved &lt;strong&gt;logical thinking and practical data manipulation&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;There were also a few &lt;strong&gt;follow-up questions&lt;/strong&gt; based on the same problem.&lt;/p&gt;
+&lt;h3 id=&quot;discussion-on-ai-and-machine-learning&quot;&gt;Discussion on AI and Machine Learning&lt;/h3&gt;
+&lt;p&gt;We briefly discussed &lt;strong&gt;Artificial Intelligence and Machine Learning&lt;/strong&gt;, mainly at a conceptual level.&lt;/p&gt;
+&lt;p&gt;The conversation focused on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;General understanding of AI&lt;/li&gt;
+&lt;li&gt;Practical applications&lt;/li&gt;
+&lt;li&gt;Industry relevance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;project-discussion&quot;&gt;Project Discussion&lt;/h3&gt;
+&lt;p&gt;Next, I was asked to explain &lt;strong&gt;two of my projects&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The interviewer asked several follow-up questions, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Why did you choose &lt;strong&gt;NoSQL databases instead of SQL databases&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;What challenges did you face while building the project?&lt;/li&gt;
+&lt;li&gt;How would you scale your system?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This part mainly tested my &lt;strong&gt;understanding of my own projects and design decisions&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;hr-type-questions&quot;&gt;HR-Type Questions&lt;/h3&gt;
+&lt;p&gt;Towards the end of the interview, a few behavioral questions were asked, such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How do you stay updated with new technologies?&lt;/li&gt;
+&lt;li&gt;Do you prefer &lt;strong&gt;team projects or individual projects&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;What do you do when you struggle with a difficult topic?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These questions were meant to evaluate &lt;strong&gt;communication skills, mindset, and learning attitude&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;questions-i-asked-the-interviewer&quot;&gt;Questions I Asked the Interviewer&lt;/h2&gt;
+&lt;p&gt;At the end of the interview, the interviewer asked if I had any questions.&lt;/p&gt;
+&lt;p&gt;I asked about &lt;strong&gt;how Visa uses Artificial Intelligence in their products and services&lt;/strong&gt;, as I was curious about the practical applications of AI in their organization.&lt;/p&gt;
+&lt;p&gt;The interviewer explained the use cases in detail, which was very insightful.&lt;/p&gt;
+&lt;p&gt;Soon after that, the interview concluded.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;final-result&quot;&gt;Final Result&lt;/h2&gt;
+&lt;p&gt;Later in the evening, we received the official email containing the list of &lt;strong&gt;selected students for the Visa internship role&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I was very happy to see my name on the list.&lt;br /&gt;
+After the entire process, it felt incredibly rewarding to be selected.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;key-takeaways&quot;&gt;Key Takeaways&lt;/h2&gt;
+&lt;p&gt;Here are some important lessons from my experience:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Strong &lt;strong&gt;implementation skills&lt;/strong&gt; are extremely important for Online Assessments.&lt;/li&gt;
+&lt;li&gt;Practice &lt;strong&gt;simulation-based problems&lt;/strong&gt; and &lt;strong&gt;graph algorithms&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Be prepared to &lt;strong&gt;explain your projects in depth&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Stay &lt;strong&gt;calm and confident during interviews&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Always prepare &lt;strong&gt;a thoughtful question to ask the interviewer&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I hope this experience helps future candidates better prepare for similar recruitment processes.
+If you still have any questions regarding the recruitment process or preparation, feel free to reach out!&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;Thanks for reading! If you have any queries, feel free to connect with me on LinkedIn.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt;&lt;br /&gt;
+https://www.linkedin.com/in/shubhranshu-mishra-092311256/&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Google Offcampus Placement Process</title>
+        <published>2026-03-06T00:00:00+00:00</published>
+        <updated>2026-03-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/preview/blog/2026/google-offcampus-placement-process/"/>
+        <id>https://cc-club.in/preview/blog/2026/google-offcampus-placement-process/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/preview/blog/2026/google-offcampus-placement-process/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ananta_0.width-1300.jpg&quot; alt=&quot;Google India&quot; /&gt;&lt;/p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;Google&lt;/strong&gt; is the technology giant, probably one of the best companies to work for in the world at this moment, they have a very diverse business which spans entire AI Stack (right from chips to the models and the data), their most revenue comes from ADs, they run youtube, they run google cloud and the list goes endless, Deepmind is another powerhouse within Google responsible for all AI Stuff!!&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;pathway&quot;&gt;Pathway&lt;/h2&gt;
+&lt;p&gt;Firstly, the most important thing is, to apply!! Never shy away from off-campus opportunities because of low-confidence or just the belief that hardly anyone gets a response from off-campus opportunities. The responses are random in nature, but you never know when you get your chance.&lt;/p&gt;
+&lt;p&gt;I applied to Google offcampus, 3 times (in 1st Year&#39;s end for Step Internship, in 2nd Year&#39;s end for Summer Internship, in 3rd Year&#39;s end for Full time role)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yes, the only thing to do is keep an eye on &lt;a rel=&quot;external&quot; href=&quot;https://www.google.com/about/careers&quot;&gt;&lt;strong&gt;Careers Page (turn on Alerts)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Being an &lt;a rel=&quot;external&quot; href=&quot;https://icpc.global/&quot;&gt;ICPC&lt;/a&gt; Regionalist helps a lot, it can almost gurantee an interview call&lt;/li&gt;
+&lt;li&gt;Summer Internship at some MNC also increases your chances of a response&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;phase-1&quot;&gt;Phase 1&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;There are no online assessment rounds at Google for Full-time opportunities, someone from the HR team at Google (generally having an xwf in name), will reach out to you if you are a match&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;They will seek you to fill an interest form, fill that at earliest&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You will receive an interview mail from Google Team soon, usually they schedule 2 interviews together (round 1 and round 2)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;round-1-2&quot;&gt;Round 1 &amp;amp; 2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;These are purely DSA rounds, and in each round they ask 1-2 DSA questions, the difficulty of these questions is generally leetcode medium&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;In my first round I was asked to implement a YouTube ADs class and the solution involved use of 2 heaps, and it was basically a highly modified version of this &lt;a rel=&quot;external&quot; href=&quot;https://leetcode.com/problems/find-median-from-data-stream&quot;&gt;leetcode problem&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The interviewers again look for 2 things&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Your ability to weigh the trade-offs, and build a good solution and communicate the entire thought process nicely to them&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Your code clarity, they call is neat code, and interviewers often remark positively to you if your write good code, which basically means making sure you maintain good indentation, use meaningful names for variables etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;Google, shares a doc link, and you code on the google doc, without use of any IDE, but don&#39;t be too cautious of missing a ; or an indentation issue, if you notice it, the interviewers are usuallly chill about it, also at the end of interview which usually has a time limit of 45 minutes, you do a dry run with the interviewer to verify correctness.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;round-3&quot;&gt;Round 3&lt;/h2&gt;
+&lt;p&gt;If your round 1 and round 2 went well, you will receive the link for 3rd Round of interview, this is again a DSA round, and usually takes months to come to you&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Expect leetcode hard questions&lt;/li&gt;
+&lt;li&gt;The process is same as round 1 &amp;amp; 2&lt;/li&gt;
+&lt;li&gt;After this round, the HR asks for a transcript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;additional-rounds&quot;&gt;Additional Rounds&lt;/h2&gt;
+&lt;p&gt;This may or may not happen for you, if the Hiring team is satisfied they won&#39;t schedule your 4th round, if they are not they may schedule a 4th round, and usually they do schedule a 4th round, this could be a DSA Round or an Googlyness Round depending on which aspect the Hiring Committee wants to test you&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If its a DSA round, it will be just the same as round 3 with increased difficulty level of problem you get&lt;/li&gt;
+&lt;li&gt;If its a Googlyness round, then you will get an HR-Manager type round where they wish to test whether you are a good cultural fit or not, and it is usually in form of &lt;a rel=&quot;external&quot; href=&quot;https://medium.com/@poojaauma/the-behavioral-questions-that-helped-me-in-my-googlyness-round-6c41433ea5dd&quot;&gt;situation/scenario based questions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;team-matching&quot;&gt;Team Matching&lt;/h2&gt;
+&lt;p&gt;After you get great response and if hiring has not freezed, you should proceed to team matching where you may be reached out by different teams at Google for potential match of skills and cultural fit, enjoy this phase and wait for your offer&lt;/p&gt;
+&lt;p&gt;Reaching this phase mostly means that there is a very high probability you will make it to the company!&lt;/p&gt;
+&lt;p&gt;Good Luck!&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>

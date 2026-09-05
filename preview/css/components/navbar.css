@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+/* ============================================
+   NAVBAR & MENU
+   ============================================
+   Dark-theme navbar link states. Selector groups mirror
+   the exact element sets they must style; cascade position
+   (unlayered, after the vendor layer) supplies precedence.
+*/
+
+/* Base: links, their icons, dropdown summaries and buttons */
+[data-theme="cc-dark"] .navbar :is(a, a i, a svg, li > details > summary, li > .btn) {
+    color: #ffffff;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Active page */
+[data-theme="cc-dark"] .navbar :is(a.active-nav, a.active-nav *) {
+    color: #ffc758;
+    background-color: rgba(255, 199, 88, 0.15);
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+
+/* Active indicator underline */
+[data-theme="cc-dark"] .navbar a.active-nav::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 2px;
+    background: #ffc758;
+    border-radius: 2px;
+}
+
+/* Hover (inactive links only) */
+[data-theme="cc-dark"] .navbar :is(a:not(.active-nav):hover, a:not(.active-nav):hover *, li > details > summary:not(.active-nav):hover) {
+    color: #ffc758;
+    background-color: rgba(255, 199, 88, 0.08);
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+/* Dropdown menu items */
+[data-theme="cc-dark"] .navbar .dropdown-content li a.active-nav {
+    background-color: rgba(255, 199, 88, 0.2);
+    color: #ffc758;
+}
+
+/* Logo/brand link never gets the pill or underline */
+[data-theme="cc-dark"] .navbar :is(.btn-ghost.text-xl.active-nav, .logo-link.active-nav) {
+    background-color: transparent;
+}
+
+[data-theme="cc-dark"] .navbar :is(.btn-ghost.text-xl.active-nav::after, .logo-link.active-nav::after) {
+    display: none;
+}
+
+/* Dropdown parent button never looks active */
+[data-theme="cc-dark"] .navbar .dropdown > div.btn.active-nav {
+    background-color: transparent;
+}
+
+[data-theme="cc-dark"] .navbar .dropdown > div.btn.active-nav::after {
+    display: none;
+}
+
+/* Navbar chrome: subtle burgundy tint */
+[data-theme="cc-dark"] .navbar {
+    background: oklch(0.12 0.03 20);
+    border-bottom-color: oklch(0.25 0.05 20);
+}
+
+/* Sidebar menu items (menus outside the navbar) */
+[data-theme="cc-dark"] .menu li > * {
+    color: oklch(0.85 0.01 30);
+}
+
+[data-theme="cc-dark"] .menu li > *:hover {
+    background: oklch(0.18 0.03 20);
+    color: oklch(0.80 0.15 75);
+}
+
+[data-theme="cc-dark"] .menu li > *.active,
+[data-theme="cc-dark"] .menu li > .rounded.bg-gray-500\/15 {
+    background: oklch(0.22 0.04 20);
+    color: oklch(0.80 0.15 75);
+}
+
+/* Sidebar rail */
+[data-theme="cc-dark"] .drawer-side {
+    border-right-color: oklch(0.22 0.04 20);
+}
+
+/* Theme toggle geometry (theme-independent) */
+.navbar .swap.swap-rotate {
+    display: inline-grid;
+    place-content: center;
+}
