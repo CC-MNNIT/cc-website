@@ -594,6 +594,9 @@ graph LR
 <li><strong>Route exclusion.</strong> The TUN takes over the default route, but three private ranges (<code>10/8</code>, <code>172.16/12</code>, <code>192.168/16</code>) are excluded from it. Your hostel LAN, the campus intranet and the proxy servers themselves stay outside the tunnel.</li>
 <li><strong>Failover.</strong> Three college proxies sit in a fallback group with health checks every five minutes. One dies, the next picks up, no config edit needed.</li>
 </ol>
+<h2 id="why-the-github-repo-says-honkai-star-rail">Why the GitHub repo says "Honkai: Star Rail"</h2>
+<p>One thing you will notice immediately: the <a rel="external" href="https://github.com/MetaCubeX/mihomo">mihomo repository</a> describes itself as "a simple Python Pydantic model for Honkai: Star Rail parsed data from the Mihomo API". That is not a mistake.</p>
+<p>mihomo used to be <strong>Clash.Meta</strong>, the community successor to the original Clash proxy core. In late 2023 the original Clash repository was taken down under legal pressure, and the project survived by renaming itself and toning down its public face. Today the default branch genuinely contains a working Star Rail API library (we checked), while the actual kernel lives on the <code>Meta</code> branch and in the release binaries - which is what the installer downloads. The real documentation is at <a rel="external" href="https://wiki.metacubex.one">wiki.metacubex.one</a>. An open secret, and we verified every bit of it.</p>
 <h2 id="what-the-installer-does">What the installer does</h2>
 <p>It is a single bash script, and it encodes everything specific about our network:</p>
 <ul>
@@ -783,6 +786,12 @@ graph LR
                 <li>
                     
                     <a href="https://cc-club.in/blog/2026/mnnit-proxy/#how-it-works" class="toc-link">How it works</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/blog/2026/mnnit-proxy/#why-the-github-repo-says-honkai-star-rail" class="toc-link">Why the GitHub repo says &quot;Honkai: Star Rail&quot;</a>
                     
                 </li>
             
