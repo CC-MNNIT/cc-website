@@ -79,23 +79,29 @@ echo "Always use the language identifier"
 **Badges:**
 - `badge_primary` - Primary badges
 - `badge_secondary` - Secondary badges
+- `badge_accent` - Accent badges
 - `badge_success` - Success badges
 - `badge_warning` - Warning badges
+- `badge_error` - Error badges
+- `badge_info` - Info badges
 
 **Other:**
 - `collapse` - Collapsible sections (like this one!)
-- `pretty_link` - Beautiful link previews
+- `pretty_link` - Beautiful link previews (self-closing: `{{<pretty_link url="..." title="..." />}}`)
+- `mermaid` - Diagrams
+- `image` - Images from the site's image base URL
+- `youtube` - Embedded videos
 
 {% </collapse> %}
 
 ### Example: Using Badges
 
-{% <badge_primary > %}Important{% </badge_secondary> %} {% <badge_secondary > %}Beta Feature{% </badge_primary> %}
+{% <badge_primary> %}Important{% </badge_primary> %} {% <badge_secondary> %}Beta Feature{% </badge_secondary> %}
 
 ### Example: Success Alert
 
 {% <alert_success > %}
-Your content rendered successfully! You can use markdown inside shortcodes.
+Your content rendered successfully! You can use markdown inside components.
 {% </alert_success> %}
 
 ### Mermaid Diagrams

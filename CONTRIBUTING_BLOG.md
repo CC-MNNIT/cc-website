@@ -1,13 +1,13 @@
 # Contributing a Blog Post
 
-This guide walks you through writing and submitting a blog post for the CC Club website — no web development experience needed.
+This guide walks you through writing and submitting a blog post for the CC Club website - no web development experience needed.
 
 > **Never used Zola?** You only need it to preview your post locally. Setup takes two minutes: follow [Setup in CONTRIBUTING.md](CONTRIBUTING.md#setup) and come back here.
 
 ## What you need
 
 - **Git** installed
-- **Zola v0.23.4** — install instructions: [CONTRIBUTING.md → Setup](CONTRIBUTING.md#setup)
+- **Zola v0.23.4** - install instructions: [CONTRIBUTING.md → Setup](CONTRIBUTING.md#setup)
 - A **GitHub account**
 - Basic knowledge of **Markdown**
 
@@ -27,7 +27,7 @@ cd cc-website
 cp BLOG_TEMPLATE.md content/blog/2026/2026-02-09-your-post-slug.md
 ```
 
-**File naming:** `YYYY-MM-DD-your-post-slug.md` — today's date, lowercase with hyphens (e.g. `2026-02-09-react-hooks-guide.md`). It goes in the folder of the current year: `content/blog/YYYY/`.
+**File naming:** `YYYY-MM-DD-your-post-slug.md` - today's date, lowercase with hyphens (e.g. `2026-02-09-react-hooks-guide.md`). It goes in the folder of the current year: `content/blog/YYYY/`.
 
 ### Fill in the frontmatter
 
@@ -52,7 +52,7 @@ author_linkedin = "your-username"            # just the username, not the full U
 
 ### Write the content
 
-Use the template as a guide — it contains working examples of alerts, badges, mermaid diagrams, and code blocks.
+Use the template as a guide - it contains working examples of alerts, badges, mermaid diagrams, and code blocks.
 
 **Common mistakes to avoid:**
 
@@ -74,7 +74,7 @@ Reference them in your post as:
 ![Description](/images/blog/2026/your-post-slug/image.png)
 ```
 
-> Images in `static/images/` are automatically optimized (WebP conversion + compression) by CI after your PR merges — upload whatever you have, no manual compression needed.
+> Images in `static/images/` are automatically optimized (WebP conversion + compression) by CI after your PR merges - upload whatever you have, no manual compression needed.
 
 ## Step 4: Test locally
 
@@ -90,7 +90,7 @@ Check your post in the blog list and verify: formatting renders, code blocks are
 **Build failed?** The error message points at the problem. Common causes:
 - A component opened with `{% <alert_info> %}` but no closing `{% </alert_info> %}`
 - Mermaid labels with unquoted `()`, `[]`, or `:`
-- Invalid frontmatter (TOML — validate at [toml-lint.com](https://www.toml-lint.com/))
+- Invalid frontmatter (TOML - validate at [toml-lint.com](https://www.toml-lint.com/))
 - Wrong shortcode name
 
 Run `zola build` for detailed error messages.
@@ -117,12 +117,12 @@ Then on GitHub, open a pull request against `CC-MNNIT/cc-website` → `main` wit
 ## Step 6: Review
 
 - **Automated checks** verify the site still builds
-- **Maintainers** review for technical accuracy, formatting, and clarity — feedback is normal, just push new commits
+- **Maintainers** review for technical accuracy, formatting, and clarity - feedback is normal, just push new commits
 - Once approved, your post is **merged and published** 🎉
 
 ---
 
-## Shortcode reference
+## Component reference
 
 These components are the ones blog posts use most (defined in `templates/components.html`). Body components follow the paired-tag pattern `{% <name> %}...{% </name> %}`; attribute-only ones are self-closing `{{<name attr="v" />}}`.
 
@@ -130,45 +130,41 @@ These components are the ones blog posts use most (defined in `templates/compone
 
 ```markdown
 {% <alert_info> %}Informational message.{% </alert_info> %}
-{% alert_success() %}Positive message or achievement.{% end %}
-{% alert_warning() %}Caution or important notice.{% end %}
-{% alert_error() %}Critical information or common mistakes.{% end %}
+{% <alert_success> %}Positive message or achievement.{% </alert_success> %}
+{% <alert_warning> %}Caution or important notice.{% </alert_warning> %}
+{% <alert_error> %}Critical information or common mistakes.{% </alert_error> %}
 ```
 
 **Badges** (inline):
 
 ```markdown
-{% badge_primary() %}Important{% end %}
-{% badge_success() %}New{% end %}
-{% badge_warning() %}Beta{% end %}
+{% <badge_primary> %}Important{% </badge_primary> %}
+{% <badge_success> %}New{% </badge_success> %}
+{% <badge_warning> %}Beta{% </badge_warning> %}
 ```
 
 **Collapsible sections** (hides optional/advanced content):
 
 ```markdown
-{% collapse(title="Click to expand") %}
+{% <collapse title="Click to expand"> %}
 Hidden content goes here. Supports all markdown!
-{% end %}
+{% </collapse> %}
 ```
 
 **Mermaid diagrams** (flowcharts, sequence diagrams, ...):
 
 ````markdown
-{% mermaid() %}
+{% <mermaid> %}
 graph LR
     A["User"] -->|Request| B["Server"]
     B -->|Response| A
-{% end %}
+{% </mermaid> %}
 ````
 
-**Pretty links** (styled external link cards — note this one is inline, `{{ }}`):
+**Pretty links** (styled external link cards - self-closing, no body):
 
 ```markdown
-{{ pretty_link(
-    url="https://example.com",
-    title="Link Title",
-    description="A brief description"
-) }}
+{{<pretty_link url="https://example.com" title="Link Title" description="A brief description" />}}
 ```
 
 Full list: see `templates/components.html` in this repo.
@@ -177,12 +173,12 @@ Full list: see `templates/components.html` in this repo.
 
 ## Tips for great posts
 
-1. **Start with an outline** — plan the sections before writing
-2. **Use examples** — code snippets and diagrams make concepts click
-3. **Keep paragraphs short** — 2-4 sentences
-4. **Use headings** — make it scannable
-5. **Proofread** — grammar and typos matter
-6. **Test thoroughly** — verify everything renders before submitting
+1. **Start with an outline** - plan the sections before writing
+2. **Use examples** - code snippets and diagrams make concepts click
+3. **Keep paragraphs short** - 2-4 sentences
+4. **Use headings** - make it scannable
+5. **Proofread** - grammar and typos matter
+6. **Test thoroughly** - verify everything renders before submitting
 
 ## Need help?
 
