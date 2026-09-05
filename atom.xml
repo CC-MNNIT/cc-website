@@ -58,6 +58,28 @@
         
     </entry>
     <entry xml:lang="en">
+        <title>mnnit-proxy: Proxifier for Linux, built for MNNIT</title>
+        <published>2026-09-05T00:00:00+00:00</published>
+        <updated>2026-09-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/blog/2026/mnnit-proxy/"/>
+        <id>https://cc-club.in/blog/2026/mnnit-proxy/</id>
+        
+        <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;MNNIT&#39;s hostel internet runs through an authenticated HTTP proxy. On Windows that is a solved problem: Proxifier sits between your apps and the network, and everything works. On Linux, the official guidance has been environment variables plus per-app configs. Browsers respect them. Most software does not. Every year someone burns a weekend getting &lt;code&gt;git&lt;/code&gt;, &lt;code&gt;npm&lt;/code&gt; or Steam to talk through &lt;code&gt;edcguest&lt;/code&gt;, and the fix falls apart with the next app update.&lt;/p&gt;
+&lt;p&gt;So I wrote &lt;strong&gt;mnnit-proxy&lt;/strong&gt;: one installer that makes the whole system use the college proxy, every app, zero configuration. The source lives in the &lt;a rel=&quot;external&quot; href=&quot;https://github.com/CC-MNNIT&quot;&gt;CC-MNNIT&lt;/a&gt; organisation on GitHub, and changes go through a test suite before they ship.&lt;/p&gt;
+&lt;div role=&quot;alert&quot; class=&quot;alert alert-info alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; run this on campus (hotspot works too) and follow the prompts:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;curl&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -fsSL&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; https://raw.githubusercontent.com/CC-MNNIT/mnnit-proxy/main/install.sh&lt;/span&gt;&lt;span style=&quot;color: #F29668;&quot;&gt; |&lt;/span&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt; sudo&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; bash&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It detects your distro, sets your hostel&#39;s static IP from the official allotment PDF, and puts a transparent proxy in front of the entire system. Arch and Ubuntu, x86_64 and ARM.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/blog/2026/mnnit-proxy/hero.webp&quot; alt=&quot;mnnit-proxy hero - all application traffic flowing through one tunnel&quot; /&gt;&lt;/p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
         <title>Smart India Hackathon 2026</title>
         <published>2026-08-17T00:00:00+00:00</published>
         <updated>2026-08-17T00:00:00+00:00</updated>
