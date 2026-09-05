@@ -7,9 +7,6 @@ title = "Computer Coding Club"
 # Brief description for SEO
 description = "Official website of Computer Coding Club - Learn, Build, and Grow Together"
 
-# Theme name (must match folder name in themes/)
-theme = "goyo"
-
 # Automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -51,7 +48,7 @@ theme = "ayu-dark"
 image_base_url = "images"
 
 # Custom footer HTML (used in bottom bar)
-footer_html = "Powered by <a href='https://www.getzola.org' class='font-medium hover:text-primary transition-colors duration-200'>Zola</a> and <a href='https://github.com/hahwul/goyo' class='font-medium hover:text-primary transition-colors duration-200'>Goyo</a>"
+footer_html = "Powered by <a href='https://www.getzola.org' class='font-medium hover:text-primary transition-colors duration-200'>Zola</a> · Built by Team CC"
 
 # Default thumbnail for social media sharing (when page doesn't specify one)
 default_thumbnail = "cc-club-thumbnail.webp"

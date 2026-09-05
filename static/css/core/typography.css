@@ -71,16 +71,16 @@ h3,
 }
 
 /* 5. Theme specific colors for headings */
-[data-theme="night"] h1,
-[data-theme="night"] h2,
-[data-theme="night"] h3,
-[data-theme="night"] h4,
-[data-theme="night"] h5,
-[data-theme="night"] h6,
-[data-theme="night"] .hero-title,
-[data-theme="night"] .section-title,
-[data-theme="night"] .events-section-title,
-[data-theme="night"] .roadmaps-title {
+[data-theme="cc-dark"] h1,
+[data-theme="cc-dark"] h2,
+[data-theme="cc-dark"] h3,
+[data-theme="cc-dark"] h4,
+[data-theme="cc-dark"] h5,
+[data-theme="cc-dark"] h6,
+[data-theme="cc-dark"] .hero-title,
+[data-theme="cc-dark"] .section-title,
+[data-theme="cc-dark"] .events-section-title,
+[data-theme="cc-dark"] .roadmaps-title {
     background: linear-gradient(90deg, #DA7138 0%, #EC9E6E 33%, #ECB163 66%, #ECC475 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -88,7 +88,7 @@ h3,
     color: transparent;
 }
 
-[data-theme="night"] .card-title {
+[data-theme="cc-dark"] .card-title {
     background: none;
     -webkit-background-clip: unset;
     -webkit-text-fill-color: unset;
@@ -102,24 +102,24 @@ h3,
 
 
 /* 6. Body Text */
-[data-theme="night"] p,
-[data-theme="night"] span,
-[data-theme="night"] div,
-[data-theme="night"] .prose,
-[data-theme="night"] .text-gray-500,
-[data-theme="night"] .text-gray-400 {
+[data-theme="cc-dark"] p,
+[data-theme="cc-dark"] span,
+[data-theme="cc-dark"] div,
+[data-theme="cc-dark"] .prose,
+[data-theme="cc-dark"] .text-gray-500,
+[data-theme="cc-dark"] .text-gray-400 {
     color: #FAECEC;
 }
 
 /* Exclude badge icons and other specific icons from being overridden if they use spans */
-[data-theme="night"] .badge i,
-[data-theme="night"] .btn i,
-[data-theme="night"] .navbar i {
+[data-theme="cc-dark"] .badge i,
+[data-theme="cc-dark"] .btn i,
+[data-theme="cc-dark"] .navbar i {
     /* Inherit color unless specified otherwise in specific component css */
 }
 
 /* Text with primary color class */
-[data-theme="night"] .text-primary {
+[data-theme="cc-dark"] .text-primary {
     color: #FFC758 !important;
 }
 

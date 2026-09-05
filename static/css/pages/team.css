@@ -23,7 +23,7 @@
     display: inline-block;
 }
 
-[data-theme="night"] .team-title {
+[data-theme="cc-dark"] .team-title {
     background: linear-gradient(135deg, #FFC758 0%, #FFD700 50%, #FFA500 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -62,9 +62,9 @@
 }
 
 [data-theme="light"] .team-title,
-[data-theme="lofi"] .team-title,
+[data-theme="cc-light"] .team-title,
 [data-theme="light"] .section-title,
-[data-theme="lofi"] .section-title {
+[data-theme="cc-light"] .section-title {
     background: linear-gradient(135deg, #000C40 0%, #1565C0 50%, #42A5F5 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
@@ -416,7 +416,7 @@
 
 /* ===== LIGHT THEME CARD STYLING ===== */
 [data-theme="light"] .team-card,
-[data-theme="lofi"] .team-card {
+[data-theme="cc-light"] .team-card {
     background: linear-gradient(135deg,
             rgba(255, 255, 255, 0.95) 0%,
             rgba(245, 248, 255, 0.95) 50%,
@@ -428,7 +428,7 @@
 }
 
 [data-theme="light"] .team-card:hover,
-[data-theme="lofi"] .team-card:hover {
+[data-theme="cc-light"] .team-card:hover {
     border-color: rgba(21, 101, 192, 0.5);
     background: linear-gradient(135deg,
             rgba(255, 255, 255, 0.98) 0%,
@@ -443,7 +443,7 @@
 
 /* Light theme glowing border effect */
 [data-theme="light"] .team-card::before,
-[data-theme="lofi"] .team-card::before {
+[data-theme="cc-light"] .team-card::before {
     background: linear-gradient(45deg,
             transparent 0%,
             rgba(21, 101, 192, 0.1) 25%,
@@ -454,7 +454,7 @@
 
 /* Light theme scan line effect */
 [data-theme="light"] .team-card::after,
-[data-theme="lofi"] .team-card::after {
+[data-theme="cc-light"] .team-card::after {
     background: linear-gradient(180deg,
             rgba(21, 101, 192, 0) 0%,
             rgba(21, 101, 192, 0.03) 50%,
@@ -464,21 +464,21 @@
 /* Light theme corner accents */
 [data-theme="light"] .team-card .card-content::before,
 [data-theme="light"] .team-card .card-content::after,
-[data-theme="lofi"] .team-card .card-content::before,
-[data-theme="lofi"] .team-card .card-content::after {
+[data-theme="cc-light"] .team-card .card-content::before,
+[data-theme="cc-light"] .team-card .card-content::after {
     border-color: rgba(21, 101, 192, 0.3);
 }
 
 [data-theme="light"] .team-card:hover .card-content::before,
 [data-theme="light"] .team-card:hover .card-content::after,
-[data-theme="lofi"] .team-card:hover .card-content::before,
-[data-theme="lofi"] .team-card:hover .card-content::after {
+[data-theme="cc-light"] .team-card:hover .card-content::before,
+[data-theme="cc-light"] .team-card:hover .card-content::after {
     border-color: rgba(21, 101, 192, 0.6);
 }
 
 /* Light theme image wrapper */
 [data-theme="light"] .card-image-wrapper::before,
-[data-theme="lofi"] .card-image-wrapper::before {
+[data-theme="cc-light"] .card-image-wrapper::before {
     background: linear-gradient(135deg,
             rgba(0, 12, 64, 0.3) 0%,
             rgba(21, 101, 192, 0.4) 50%,
@@ -486,7 +486,7 @@
 }
 
 [data-theme="light"] .team-card:hover .card-image-wrapper::before,
-[data-theme="lofi"] .team-card:hover .card-image-wrapper::before {
+[data-theme="cc-light"] .team-card:hover .card-image-wrapper::before {
     background: linear-gradient(135deg,
             rgba(0, 12, 64, 0.5) 0%,
             rgba(21, 101, 192, 0.6) 50%,
@@ -495,14 +495,14 @@
 
 /* Light theme social links */
 [data-theme="light"] .social-link,
-[data-theme="lofi"] .social-link {
+[data-theme="cc-light"] .social-link {
     color: rgba(21, 101, 192, 0.8);
     background: rgba(21, 101, 192, 0.08);
     border: 1px solid rgba(21, 101, 192, 0.2);
 }
 
 [data-theme="light"] .social-link:hover,
-[data-theme="lofi"] .social-link:hover {
+[data-theme="cc-light"] .social-link:hover {
     color: #1565C0;
     background: rgba(21, 101, 192, 0.15);
     box-shadow: 0 0 15px rgba(21, 101, 192, 0.3);
@@ -510,7 +510,7 @@
 
 /* Light theme faculty card */
 [data-theme="light"] .faculty-card,
-[data-theme="lofi"] .faculty-card {
+[data-theme="cc-light"] .faculty-card {
     box-shadow:
         0 0 20px rgba(21, 101, 192, 0.1),
         0 20px 40px -10px rgba(0, 12, 64, 0.15);

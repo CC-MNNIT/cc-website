@@ -23,7 +23,7 @@
     <div class="relative z-10 p-8 max-w-6xl mx-auto">
         <h1 class="text-6xl md:text-8xl font-black tracking-tight mb-8">
             <span class="hero-title">
-                {% if section.extra.hero.title %}{{ section.extra.hero.title }}{% else %}Welcome to Goyo!{% endif %}
+                {{ section.extra.hero.title }}
             </span>
         </h1>
         <div class="max-w-3xl mx-auto mb-12"
@@ -383,7 +383,7 @@
                 </p>
                 {% if section.extra.final_cta_section.image %}
                     <div class="mb-12">
-                        {% if section.extra.final_cta_section.image is starting_with("http") %}
+                        {% if section.extra.final_cta_section.image is starting_with(pat="http") %}
                         <img src="{{ section.extra.final_cta_section.image | safe }}" alt="CTA Image"
                              class="mx-auto max-w-4xl rounded-xl shadow-2xl" />
                         {% else %}

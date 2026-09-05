@@ -11,9 +11,6 @@ Features:
 
 {% extends "index.html" %}
 
-{% block header %}
-{% endblock header %}
-
 {% block content %}
 {# ========== EVENT HERO ========== #}
 <section class="event-hero">
@@ -350,7 +347,7 @@ Features:
                     {% endif %}
                 </div>
                 {% if winner.avatar %}
-                {% if winner.avatar is starting_with("http") %}
+                {% if winner.avatar is starting_with(pat="http") %}
                 <img src="{{ winner.avatar }}" alt="{{ winner.name }}" class="podium-avatar">
                 {% else %}
                 <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ winner.avatar) }}" alt="{{ winner.name }}"
@@ -391,7 +388,7 @@ Features:
             <div class="winner-list-item">
                 <span class="winner-rank">#{{ loop.index }}</span>
                 {% if winner.avatar %}
-                {% if winner.avatar is starting_with("http") %}
+                {% if winner.avatar is starting_with(pat="http") %}
                 <img src="{{ winner.avatar }}" alt="{{ winner.name }}" class="winner-avatar">
                 {% else %}
                 <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ winner.avatar) }}" alt="{{ winner.name }}"
@@ -532,7 +529,7 @@ Features:
             {# Project Image #}
             {% if project.image %}
             <div class="project-card-image">
-                {% if project.image is starting_with("http") %}
+                {% if project.image is starting_with(pat="http") %}
                 <img src="{{ project.image }}" alt="{{ project.name }}" loading="lazy">
                 {% else %}
                 <img src="{{ get_url(path=config.extra.image_base_url ~ '/' ~ project.image) }}"

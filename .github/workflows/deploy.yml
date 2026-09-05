@@ -23,8 +23,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive  # Fetches the 'goyo' theme
 
       - name: Determine Base URL
         id: check_cname
@@ -36,7 +34,7 @@ jobs:
           fi
 
       - name: Build production
-        uses: shalzz/zola-deploy-action@v0.22.1
+        uses: shalzz/zola-deploy-action@v0.23.1
         env:
           PAGES_BRANCH: gh-pages
           BUILD_ONLY: true
@@ -74,8 +72,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive  # Fetches the 'goyo' theme
 
       - name: Determine Preview Base URL
         id: check_cname_preview
@@ -87,7 +83,7 @@ jobs:
           fi
 
       - name: Build preview
-        uses: shalzz/zola-deploy-action@v0.22.1
+        uses: shalzz/zola-deploy-action@v0.23.1
         env:
           PAGES_BRANCH: gh-pages
           BUILD_ONLY: true

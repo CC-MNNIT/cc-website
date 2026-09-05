@@ -24,9 +24,9 @@ This post aims to bridge that gap—taking you **from theory to practice**.
 
 <!-- more -->
 
-{% alert_info() %}
+{% <alert_info > %}
 **Key Takeaway:** Understanding the *why* and *when* is just as important as the *how*.
-{% end %}
+{% </alert_info> %}
 
 ## The Core: Beyond the Classroom
 
@@ -75,9 +75,9 @@ These manage the *flow* of data and execution.
 *   **Undo/Redo**: Editors visualize your changes as a stack of states.
 *   **Task Scheduling**: Message brokers like **RabbitMQ** or **Apache Kafka** rely heavily on queues to handle asynchronous tasks (e.g., sending emails, processing video uploads) without blocking the main application.
 
-{% collapse(title="See Real World Stack Visualization") %}
+{% <collapse title="See Real World Stack Visualization"> %}
 Think of your function calls in recursion. The 'Call Stack' literally pauses your current function to handle a new one, popping back when done. This is why infinite recursion causes a 'Stack Overflow'.
-{% end %}
+{% </collapse> %}
 
 ### 3. Graphs: Connecting the World
 
@@ -91,14 +91,14 @@ Graphs are arguably the most powerful structure for modeling relationships.
 *   **Social Networks**: On Facebook or LinkedIn, you are a node. Your friendship is an edge. "People you may know" algorithms often look for friends-of-friends (a traversal problem).
 *   **Navigation**: Google Maps doesn't store a flat map visuals; it stores a massive weighted graph where intersections are nodes and roads are edges with weights (distance, traffic). Dijkstra’s or A* algorithms find the shortest path.
 
-{% mermaid() %}
+{% <mermaid > %}
 graph LR;
     A[User] -->|Follows| B[Influencer];
     A -->|Friends| C[Friend];
     C -->|Friends| D[Friend of Friend];
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style D fill:#bbf,stroke:#333,stroke-width:2px
-{% end %}
+{% </mermaid> %}
 
 ### 4. Trees: Hierarchies and DOMs
 
@@ -128,4 +128,4 @@ Next time you use `Ctrl+Z`, load a map route, or check a cache, take a moment to
 
 ---
 
-{% badge_primary() %}Data Structures{% end %} {% badge_secondary() %}Engineering{% end %}
+{% <badge_primary > %}Data Structures{% </badge_primary> %} {% <badge_secondary > %}Engineering{% </badge_secondary> %}
