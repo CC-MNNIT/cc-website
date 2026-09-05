@@ -53,6 +53,12 @@ Three details do the heavy lifting:
 2. **Route exclusion.** The TUN takes over the default route, but three private ranges (`10/8`, `172.16/12`, `192.168/16`) are excluded from it. Your hostel LAN, the campus intranet and the proxy servers themselves stay outside the tunnel.
 3. **Failover.** Three college proxies sit in a fallback group with health checks every five minutes. One dies, the next picks up, no config edit needed.
 
+## Why the GitHub repo says "Honkai: Star Rail"
+
+One thing you will notice immediately: the [mihomo repository](https://github.com/MetaCubeX/mihomo) describes itself as "a simple Python Pydantic model for Honkai: Star Rail parsed data from the Mihomo API". That is not a mistake.
+
+mihomo used to be **Clash.Meta**, the community successor to the original Clash proxy core. In late 2023 the original Clash repository was taken down under legal pressure, and the project survived by renaming itself and toning down its public face. Today the default branch genuinely contains a working Star Rail API library (we checked), while the actual kernel lives on the `Meta` branch and in the release binaries - which is what the installer downloads. The real documentation is at [wiki.metacubex.one](https://wiki.metacubex.one). An open secret, and we verified every bit of it.
+
 ## What the installer does
 
 It is a single bash script, and it encodes everything specific about our network:
