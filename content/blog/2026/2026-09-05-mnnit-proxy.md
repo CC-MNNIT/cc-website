@@ -1,7 +1,7 @@
 +++
 title = "mnnit-proxy: Proxifier for Linux, built for MNNIT"
 date = 2026-09-05
-description = "One-command installer that routes all Linux apps through the MNNIT campus proxy: hostel-wise static IPs, proxy failover, LAN auto start/stop. Arch and Ubuntu."
+description = "One-command installer that routes all Linux apps through the MNNIT campus proxy: hostel-wise static IPs, proxy failover, LAN auto start/stop. Arch, Ubuntu and Fedora."
 
 [taxonomies]
 tags = ["linux", "proxy", "networking", "open-source"]
@@ -25,7 +25,7 @@ So I wrote **mnnit-proxy**: one installer that makes the whole system use the co
 curl -fsSL https://raw.githubusercontent.com/CC-MNNIT/mnnit-proxy/main/install.sh | sudo bash
 ```
 
-It detects your distro, sets your hostel's static IP from the official allotment PDF, and puts a transparent proxy in front of the entire system. Arch and Ubuntu, x86_64 and ARM.
+It detects your distro, sets your hostel's static IP from the official allotment PDF, and puts a transparent proxy in front of the entire system. Arch, Ubuntu and Fedora, x86_64 and ARM.
 {% </alert_info > %}
 
 ![mnnit-proxy hero - all application traffic flowing through one tunnel](/images/blog/2026/mnnit-proxy/hero.webp)
@@ -63,12 +63,12 @@ mihomo used to be **Clash.Meta**, the community successor to the original Clash 
 
 It is a single bash script, and it encodes everything specific about our network:
 
-- **Distro detection.** On Arch it sets up an AUR helper and installs mihomo. On Ubuntu it fetches the release binary from GitHub and writes a systemd unit with the capabilities the TUN device needs.
-- **Static IP.** The DHCP pool on hostel LANs does not route to the proxy servers, so the per-room static IP from the allotment PDFs is genuinely required. The installer shows your hostel's PDF, computes gateway and subnet for the IP you enter, validates it against the documented range, and applies it with `nmcli`.
-- **Proxifier behaviour.** A NetworkManager dispatcher script watches link events. Cable in and a `172.31.*` gateway appears: mihomo starts. Cable out: it stops, and your hotspot works normally. The decision log lives in `journalctl -t mihomo-lan`.
+- **Distro detection.** On Arch it sets up an AUR helper and installs mihomo. On Ubuntu, Fedora and the rest of the Debian/RHEL families it fetches the release binary from GitHub and writes a systemd unit with the capabilities the TUN device needs.
+- **Static IP.** The DHCP pool on hostel LANs does not route to the proxy servers, so the per-room static IP from the allotment PDFs is genuinely required. The installer shows your hostel's PDF, computes gateway and subnet for the IP you enter, validates it against the documented range, and applies it with `nmcli`. No NetworkManager on the machine (Ubuntu Server, minimal installs)? It writes a netplan config instead and verifies the IP actually landed.
+- **Proxifier behaviour.** A NetworkManager dispatcher script watches link events. Cable in and a `172.31.*` gateway appears: mihomo starts. Cable out: it stops, and your hotspot works normally. The watcher needs NetworkManager; on systems without it, mihomo starts at boot instead and the installer says so honestly. The decision log lives in `journalctl -t mihomo-lan`.
 - **Offline toolkit.** Everything is copied to `/opt/mnnit-proxy` with a `mnnit-proxy-update` command, so you can switch hostel or IP later without internet.
 
-When something breaks, `sudo bash install.sh --diagnose` runs six checks (service, TUN device, config, IP and gateway, proxy reachability, end-to-end) and says what each failure means instead of dumping a stack trace at you.
+When something breaks, `sudo bash install.sh --diagnose` runs seven checks (service, TUN device, config, ownership, IP and gateway, proxy reachability, end-to-end) and says what each failure means instead of dumping a stack trace at you.
 
 ## The LAN watcher in action
 
