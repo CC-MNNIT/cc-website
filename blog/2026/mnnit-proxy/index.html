@@ -85,7 +85,7 @@
 
     
         
-            <meta name="description" content="One-command installer that routes all Linux apps through the MNNIT campus proxy: hostel-wise static IPs, proxy failover, LAN auto start/stop. Arch and Ubuntu." />
+            <meta name="description" content="One-command installer that routes all Linux apps through the MNNIT campus proxy: hostel-wise static IPs, proxy failover, LAN auto start/stop. Arch, Ubuntu and Fedora." />
         
     
 
@@ -96,7 +96,7 @@
 
       <!-- SEO: Open Graph / Twitter Card -->
       <meta property="og:title" content="mnnit-proxy: Proxifier for Linux, built for MNNIT | Computer Coding Club" />
-      <meta property="og:description" content="One-command installer that routes all Linux apps through the MNNIT campus proxy: hostel-wise static IPs, proxy failover, LAN auto start/stop. Arch and Ubuntu." />
+      <meta property="og:description" content="One-command installer that routes all Linux apps through the MNNIT campus proxy: hostel-wise static IPs, proxy failover, LAN auto start/stop. Arch, Ubuntu and Fedora." />
       <meta property="og:url" content="https://cc-club.in/" />
       <meta property="og:type" content="website" />
       
@@ -105,7 +105,7 @@
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="mnnit-proxy: Proxifier for Linux, built for MNNIT" />
-      <meta name="twitter:description" content="One-command installer that routes all Linux apps through the MNNIT campus proxy: hostel-wise static IPs, proxy failover, LAN auto start/stop. Arch and Ubuntu." />
+      <meta name="twitter:description" content="One-command installer that routes all Linux apps through the MNNIT campus proxy: hostel-wise static IPs, proxy failover, LAN auto start/stop. Arch, Ubuntu and Fedora." />
       
       
       
@@ -567,14 +567,14 @@
             mnnit-proxy: Proxifier for Linux, built for MNNIT
             
         </h1>
-        <p class="text-gray-500">One-command installer that routes all Linux apps through the MNNIT campus proxy: hostel-wise static IPs, proxy failover, LAN auto start/stop. Arch and Ubuntu.</p>
+        <p class="text-gray-500">One-command installer that routes all Linux apps through the MNNIT campus proxy: hostel-wise static IPs, proxy failover, LAN auto start/stop. Arch, Ubuntu and Fedora.</p>
     </div>
     <h2 id="introduction">Introduction</h2>
 <p>MNNIT's hostel internet runs through an authenticated HTTP proxy. On Windows that is a solved problem: Proxifier sits between your apps and the network, and everything works. On Linux, the official guidance has been environment variables plus per-app configs. Browsers respect them. Most software does not. Every year someone burns a weekend getting <code>git</code>, <code>npm</code> or Steam to talk through <code>edcguest</code>, and the fix falls apart with the next app update.</p>
 <p>So I wrote <strong>mnnit-proxy</strong>: one installer that makes the whole system use the college proxy, every app, zero configuration. The source lives in the <a rel="external" href="https://github.com/CC-MNNIT">CC-MNNIT</a> organisation on GitHub, and changes go through a test suite before they ship.</p>
 <div role="alert" class="alert alert-info alert-soft"><div><p><strong>TL;DR:</strong> run this on campus (hotspot works too) and follow the prompts:</p>
 <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">curl</span><span style="color: #95E6CB;"> -fsSL</span><span style="color: #AAD94C;"> https://raw.githubusercontent.com/CC-MNNIT/mnnit-proxy/main/install.sh</span><span style="color: #F29668;"> |</span><span style="color: #59C2FF;"> sudo</span><span style="color: #AAD94C;"> bash</span></span></code></pre>
-<p>It detects your distro, sets your hostel's static IP from the official allotment PDF, and puts a transparent proxy in front of the entire system. Arch and Ubuntu, x86_64 and ARM.</p>
+<p>It detects your distro, sets your hostel's static IP from the official allotment PDF, and puts a transparent proxy in front of the entire system. Arch, Ubuntu and Fedora, x86_64 and ARM.</p>
 </div></div>
 <p><img src="/images/blog/2026/mnnit-proxy/hero.webp" alt="mnnit-proxy hero - all application traffic flowing through one tunnel" /></p>
 <span id="continue-reading"></span><h2 id="how-it-works">How it works</h2>
@@ -600,12 +600,12 @@ graph LR
 <h2 id="what-the-installer-does">What the installer does</h2>
 <p>It is a single bash script, and it encodes everything specific about our network:</p>
 <ul>
-<li><strong>Distro detection.</strong> On Arch it sets up an AUR helper and installs mihomo. On Ubuntu it fetches the release binary from GitHub and writes a systemd unit with the capabilities the TUN device needs.</li>
-<li><strong>Static IP.</strong> The DHCP pool on hostel LANs does not route to the proxy servers, so the per-room static IP from the allotment PDFs is genuinely required. The installer shows your hostel's PDF, computes gateway and subnet for the IP you enter, validates it against the documented range, and applies it with <code>nmcli</code>.</li>
-<li><strong>Proxifier behaviour.</strong> A NetworkManager dispatcher script watches link events. Cable in and a <code>172.31.*</code> gateway appears: mihomo starts. Cable out: it stops, and your hotspot works normally. The decision log lives in <code>journalctl -t mihomo-lan</code>.</li>
+<li><strong>Distro detection.</strong> On Arch it sets up an AUR helper and installs mihomo. On Ubuntu, Fedora and the rest of the Debian/RHEL families it fetches the release binary from GitHub and writes a systemd unit with the capabilities the TUN device needs.</li>
+<li><strong>Static IP.</strong> The DHCP pool on hostel LANs does not route to the proxy servers, so the per-room static IP from the allotment PDFs is genuinely required. The installer shows your hostel's PDF, computes gateway and subnet for the IP you enter, validates it against the documented range, and applies it with <code>nmcli</code>. No NetworkManager on the machine (Ubuntu Server, minimal installs)? It writes a netplan config instead and verifies the IP actually landed.</li>
+<li><strong>Proxifier behaviour.</strong> A NetworkManager dispatcher script watches link events. Cable in and a <code>172.31.*</code> gateway appears: mihomo starts. Cable out: it stops, and your hotspot works normally. The watcher needs NetworkManager; on systems without it, mihomo starts at boot instead and the installer says so honestly. The decision log lives in <code>journalctl -t mihomo-lan</code>.</li>
 <li><strong>Offline toolkit.</strong> Everything is copied to <code>/opt/mnnit-proxy</code> with a <code>mnnit-proxy-update</code> command, so you can switch hostel or IP later without internet.</li>
 </ul>
-<p>When something breaks, <code>sudo bash install.sh --diagnose</code> runs six checks (service, TUN device, config, IP and gateway, proxy reachability, end-to-end) and says what each failure means instead of dumping a stack trace at you.</p>
+<p>When something breaks, <code>sudo bash install.sh --diagnose</code> runs seven checks (service, TUN device, config, ownership, IP and gateway, proxy reachability, end-to-end) and says what each failure means instead of dumping a stack trace at you.</p>
 <h2 id="the-lan-watcher-in-action">The LAN watcher in action</h2>
 <p><img src="/images/blog/2026/mnnit-proxy/lan-watch.webp" alt="LAN watcher - cable plugged glows active, unplugged glows paused" /></p>
 <p>The dispatcher is my favourite part. It reacts to NetworkManager events:</p>
