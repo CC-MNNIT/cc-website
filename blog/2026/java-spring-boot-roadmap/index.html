@@ -1,0 +1,1712 @@
+
+<!DOCTYPE html>
+
+<html lang="en" style="background-color: #0f172a;">
+
+<head>
+    
+        
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Resource Hints for better performance -->
+    
+
+    <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
+    <script>
+        (function() {
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
+            
+            
+            
+            
+                
+                
+                
+                
+            
+            // Get default values from config
+            var defaultColorset = "dark";
+            var darkBrightness = "normal";
+            var lightBrightness = "normal";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
+            
+            // Expose brightness config for global use (e.g., js/theme.js)
+            window.darkBrightness = darkBrightness;
+            window.lightBrightness = lightBrightness;
+            
+            // Get theme from localStorage or use fallback
+            var currentUserTheme = localStorage.getItem('theme') || fallbackTheme;
+            var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+            
+            // Determine brightness based on current theme
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
+            
+            // Set theme and brightness attributes immediately
+            document.documentElement.setAttribute("data-theme", actualTheme);
+            document.documentElement.setAttribute("data-brightness", currentBrightness);
+        })();
+    </script>
+
+    <style>
+        
+        
+        
+            
+            
+            
+        
+        
+            
+            @font-face {
+                font-family: "Pretendard-Regular";
+                src: url('https://cc-club.in/fonts/Pretendard-Regular.woff') format("woff");
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+            body {
+                font-family: "Pretendard-Regular", sans-serif;
+            }
+        
+    </style>
+
+    
+        
+            <meta name="description" content="A practical, zero-fluff guide to mastering Java 21, Spring Boot 3, REST APIs, JPA, Spring Security 6, and building production-ready backends." />
+        
+    
+
+    <title>Java &amp; Spring Boot Roadmap: From Fundamentals to Production Backends | Computer Coding Club</title>
+
+    
+    
+
+      <!-- SEO: Open Graph / Twitter Card -->
+      <meta property="og:title" content="Java &amp; Spring Boot Roadmap: From Fundamentals to Production Backends | Computer Coding Club" />
+      <meta property="og:description" content="A practical, zero-fluff guide to mastering Java 21, Spring Boot 3, REST APIs, JPA, Spring Security 6, and building production-ready backends." />
+      <meta property="og:url" content="https://cc-club.in/" />
+      <meta property="og:type" content="website" />
+      
+      <meta property="og:image" content="https://cc-club.in/cc-club-thumbnail.webp" />
+      
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Java &amp; Spring Boot Roadmap: From Fundamentals to Production Backends" />
+      <meta name="twitter:description" content="A practical, zero-fluff guide to mastering Java 21, Spring Boot 3, REST APIs, JPA, Spring Security 6, and building production-ready backends." />
+      
+      
+      
+          
+          
+      
+      
+      <meta name="twitter:site" content="@ccclub_mnnit" />
+      
+      
+      <meta name="twitter:creator" content="@ccclub_mnnit" />
+      
+      
+      <meta name="twitter:image" content="https://cc-club.in/cc-club-thumbnail.webp" />
+      
+
+      <!-- Browser address bar color -->
+      <meta name="theme-color" content="#0f172a">
+
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="https://cc-club.in/icons/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="https://cc-club.in/icons/favicon.svg" />
+      <link rel="shortcut icon" href="https://cc-club.in/icons/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="https://cc-club.in/icons/apple-touch-icon.png" />
+      <link rel="manifest" href="https://cc-club.in/icons/site.webmanifest" />
+
+      <!-- CSS -->
+    <link rel="stylesheet" href="https://cc-club.in/css/site.css">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://cc-club.in/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
+
+    <!-- Defer non-critical scripts -->
+    <script defer src="https://cc-club.in/js/copy_code.js"></script>
+    <script defer src="https://cc-club.in/js/copy_heading_link.js"></script>
+    
+    <!-- Lazy load Mermaid and KaTeX - only when needed -->
+    <script>
+        // Lazy load KaTeX and Mermaid when needed
+        window.addEventListener('DOMContentLoaded', function() {
+            // Check for both KaTeX inline and block elements in one pass
+            var katexInlineElements = document.querySelectorAll('.katex-inline');
+            var katexBlockElements = document.querySelectorAll('.katex-block');
+            var hasKatex = katexInlineElements.length > 0 || katexBlockElements.length > 0;
+            var hasMermaid = document.querySelector('.mermaid');
+            
+            // Load KaTeX if math elements are present
+            if (hasKatex) {
+                // Load KaTeX CSS first
+                var katexCSS = document.createElement('link');
+                katexCSS.rel = 'stylesheet';
+                katexCSS.href = 'https://cc-club.in/css/katex.min.css';
+                document.head.appendChild(katexCSS);
+                
+                // Load KaTeX JS
+                var katexScript = document.createElement('script');
+                katexScript.src = 'https://cc-club.in/js/katex.min.js';
+                katexScript.onload = function() {
+                    // Render inline elements
+                    katexInlineElements.forEach(function(elem) {
+                        var texContent = elem.textContent || elem.innerText;
+                        try {
+                            katex.render(texContent, elem, { 
+                                throwOnError: false,
+                                displayMode: false
+                            });
+                        } catch(e) {
+                            console.error('KaTeX render error:', e);
+                        }
+                    });
+                    
+                    // Render block elements
+                    katexBlockElements.forEach(function(elem) {
+                        var texContent = elem.textContent || elem.innerText;
+                        try {
+                            katex.render(texContent, elem, { 
+                                throwOnError: false,
+                                displayMode: true
+                            });
+                        } catch(e) {
+                            console.error('KaTeX render error:', e);
+                        }
+                    });
+                };
+                document.head.appendChild(katexScript);
+            }
+            
+            // Load Mermaid if diagram elements are present
+            if (hasMermaid) {
+                var mermaidScript = document.createElement('script');
+                mermaidScript.src = 'https://cc-club.in/js/mermaid.min.js';
+                mermaidScript.onload = function() {
+                    // Initialize Mermaid after loading
+                    if (typeof window.initMermaid === 'function') {
+                        window.initMermaid();
+                    }
+                };
+                document.head.appendChild(mermaidScript);
+            }
+        });
+    </script>
+
+    
+    
+
+    <style>
+        /* Desktop Sidebar Animation */
+        @media (min-width: 1024px) {
+            /* Only apply fixed width when drawer is in open mode (sidebar visible) */
+            .lg\:drawer-open #sidebar {
+                width: 17rem; /* w-72 default */
+                transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1), border-width 300ms ease;
+                white-space: nowrap;
+            }
+            
+            .lg\:drawer-open #sidebar.sidebar-closed {
+                width: 0;
+                border-right-width: 0;
+            }
+            
+            /* For overlay mode on desktop (landing page), ensure full width for overlay */
+            .drawer:not(.lg\:drawer-open) #sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+<!-- Search Modal -->
+<input type="checkbox" id="search-modal" class="modal-toggle" />
+<div class="modal modal-middle">
+    <div class="modal-box relative max-w-2xl p-0 bg-base-100 shadow-2xl">
+        <label for="search-modal" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 z-10">✕</label>
+        <div class="search-container">
+            <!-- Search Input Container -->
+            <div class="search-input-container px-6 pt-6 pb-4 border-b border-base-300/30">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="search-icon absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-base-content/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input id="search" type="search" placeholder="Search documentation..." class="search-input w-full pl-12 pr-4 py-3 text-base bg-transparent border-0 focus:outline-none focus:ring-0 text-base-content placeholder:text-base-content/40">
+                </div>
+            </div>
+            <!-- Search Results Container -->
+            <div class="search-results-container px-2 py-2 h-96 overflow-y-auto">
+                <div class="search-results__header px-4 py-2 text-xs text-base-content/60"></div>
+                <ul class="search-results__items space-y-1"></ul>
+            </div>
+            <!-- Search Footer -->
+            <div class="search-footer px-6 py-3 border-t border-base-300/30 flex items-center justify-end gap-4 text-xs text-base-content/50">
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↑</kbd>
+                    <kbd class="kbd kbd-xs">↓</kbd>
+                    <span>to navigate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↵</kbd>
+                    <span>to select</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">esc</kbd>
+                    <span>to close</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+    
+    
+    <div class="drawer lg:drawer-open">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col pt-16">
+            
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="navbar opacity-95 fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-500/15 backdrop-blur-3xl">
+    <!-- Mobile hamburger (and Desktop on Root Page) -->
+    <div class="flex-none lg:hidden">
+        <label for="my-drawer-2" class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </label>
+    </div>
+    <!-- Desktop sidebar toggle -->
+    
+    <div class="flex-none hidden lg:block">
+        <button id="desktop-sidebar-toggle" class="btn btn-square btn-ghost" aria-label="Toggle sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+    
+    <!-- Logo -->
+    <div class="flex-1">
+        <a href="https://cc-club.in"
+            class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link"
+            style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+            
+            <img src="https://cc-club.in/images/logo/cclogo.webp" alt="CC Club"
+                class="h-18 w-auto" style="padding: 10px;"  />
+            
+        </a>
+    </div>
+    <!-- Desktop AND Mobile Menu - Theme toggle always visible -->
+    <div class="flex-none flex lg:flex">
+        <ul class="menu menu-horizontal px-1 items-center">
+            <!-- Desktop navigation items (hidden on mobile) -->
+            <div class="hidden lg:flex lg:contents">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/about">
+                            
+                            <i class="fa-solid fa-circle-info"></i>
+                            About
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/blog">
+                            
+                            <i class="fa-solid fa-blog"></i>
+                            Blog
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/events">
+                            
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Events
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                    <a class="btn btn-ghost hover:no-underline "
+                        href="https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view" target="_blank" rel="noopener noreferrer">
+                        
+                            <i class="fa-solid fa-calendar-check"></i>
+                            Calendar
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/projects">
+                            
+                            <i class="fa-solid fa-code-branch"></i>
+                            Projects
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/roadmaps">
+                            
+                            <i class="fa-solid fa-route"></i>
+                            Roadmaps
+                        </a>
+                </li>
+                
+                
+                
+                <li class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        <i class="fa-solid fa-users"></i>
+                        Community
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
+                        
+                        
+                        <li>
+                            
+                                <a class="btn btn-ghost hover:no-underline "
+                                    href="https://cc-club.in/team">
+                                    
+                                    <i class="fa-solid fa-user-group"></i>
+                                    Current Team
+                                </a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/contact">
+                            
+                            <i class="fa-solid fa-envelope"></i>
+                            Contact
+                        </a>
+                </li>
+                
+                
+                
+
+                
+            </div>
+
+            
+            
+            
+            
+            <li class="flex items-center">
+                <label class="swap swap-rotate btn btn-ghost btn-circle">
+                    <input type="checkbox" class="theme-controller" value="cc-dark" aria-labelledby="swap color" />
+                    <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+                    <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                </label>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const currentPath = window.location.pathname;
+
+        const navLinks = document.querySelectorAll('.navbar a[href]:not(.logo-link)');
+
+        navLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
+            if (link.classList.contains('active-nav')) {
+                return;
+            }
+
+            let isActive = false;
+
+            if (linkPath === '/') {
+                isActive = (currentPath === '/' || currentPath === '');
+            } else {
+                isActive = currentPath.startsWith(linkPath);
+            }
+
+            if (isActive) {
+                link.classList.add('active-nav');
+            } else {
+                link.classList.remove('active-nav');
+            }
+        });
+    });
+</script>
+
+
+
+            
+            
+            
+            
+                
+            
+
+            
+            <div class="p-8 w-full flex justify-center">
+                <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
+                    <main class="prose w-full">
+            
+                        
+    <div class="mb-12 pb-4 border-b border-gray-500/15">
+        <h1 class="flex items-center gap-3">
+            Java &amp; Spring Boot Roadmap: From Fundamentals to Production Backends
+            
+        </h1>
+        <p class="text-gray-500">A practical, zero-fluff guide to mastering Java 21, Spring Boot 3, REST APIs, JPA, Spring Security 6, and building production-ready backends.</p>
+    </div>
+    <h2 id="introduction">Introduction</h2>
+<p>Java remains the undisputed backbone of enterprise backend systems, financial institutions, and high-throughput cloud infrastructure. While languages and frameworks trend and fade, the Java ecosystem continues to power critical global workloads. Combined with <strong>Spring Boot</strong>, it provides an expressive, highly productive platform to build secure, cloud-ready REST APIs and microservices.</p>
+<p>If you have ever felt trapped in tutorial hell or overwhelmed by thousands of annotations, this roadmap is for you. We break down the path into three progressive stages—from core Java fundamentals to building and deploying a secure, production-grade backend.</p>
+<p><img src="/images/blog/2026/java-spring-boot-roadmap/hero.webp" alt="Java and Spring Boot Backend Roadmap" /></p>
+<span id="continue-reading"></span><div role="alert" class="alert alert-info alert-soft"><div><p><strong>Target Baseline for 2026:</strong> Build everything on <strong>Java 21 (LTS)</strong> and <strong>Spring Boot 3.x</strong>. Avoid outdated tutorials teaching Java 8, XML configurations, or deprecated Spring Security classes.</p>
+</div></div>
+<hr />
+<h2 id="the-zero-friction-setup-before-you-write-code">The Zero-Friction Setup (Before You Write Code)</h2>
+<p>One of the biggest hurdles students face is tooling confusion. Save yourself hours of setup pain by following this industry-standard setup:</p>
+<ul>
+<li><strong>IDE</strong>: Download <strong><a rel="external" href="https://www.jetbrains.com/idea/download/">IntelliJ IDEA Community Edition</a></strong> (100% free). While VS Code is great for web development, IntelliJ is the uncontested king for Java with superior code navigation, refactoring, and Spring integration.</li>
+<li><strong>JDK Distribution</strong>: Install <strong>Java 21 LTS</strong> from <strong><a rel="external" href="https://adoptium.net/">Adoptium (Eclipse Temurin)</a></strong> or Amazon Corretto. Avoid downloading from Oracle's commercial portal to prevent licensing confusion. On Linux/macOS, install it in one command using <a rel="external" href="https://sdkman.io/">SDKMAN!</a>: <code>sdk install java 21.0.2-tem</code>.</li>
+<li><strong>API Testing Client</strong>: Install <strong><a rel="external" href="https://www.postman.com/">Postman</a></strong> or <strong><a rel="external" href="https://www.usebruno.com/">Bruno</a></strong> (a lightweight open-source alternative) for sending requests to your endpoints.</li>
+</ul>
+<hr />
+<h2 id="why-java-spring-boot">Why Java &amp; Spring Boot?</h2>
+<ul>
+<li><strong>Massive Industry Relevance</strong>: The majority of Fortune 500 companies, financial institutions, and large-scale tech companies rely on Java for their core services.</li>
+<li><strong>Strong Engineering Foundations</strong>: Statically typed, object-oriented code forces you to understand design patterns, clean architecture, and memory models.</li>
+<li><strong>From DSA to Real Systems</strong>: If you have been grinding DSA on LeetCode or Codeforces in Java/C++, this roadmap is the bridge connecting algorithmic thinking to production system design.</li>
+<li><strong>Enterprise Microservices</strong>: Mastering Spring Boot opens doors to the wider Spring Cloud ecosystem (Spring Cloud Gateway, Eureka, Kafka, and distributed tracing).</li>
+</ul>
+<hr />
+<h2 id="stage-1-modern-core-java-2-3-weeks">Stage 1 — Modern Core Java (2–3 Weeks)</h2>
+<p>Before touching a single Spring annotation, you must build genuine muscle memory in Java. Spring uses reflection, annotations, generics, and functional interfaces heavily. If you don't understand how Java works underneath, Spring will feel like unpredictable magic.</p>
+<div class="badge badge-soft badge-primary">Stage 1 Goal</div> *Be comfortable designing clean Object-Oriented programs and manipulating in-memory data structures.*
+<h3 id="1-fundamentals-control-flow">1. Fundamentals &amp; Control Flow</h3>
+<ul>
+<li>Primitive data types vs reference types (Heap vs Stack allocation).</li>
+<li>Control statements: modern <code>switch</code> expressions, loops, and pattern matching.</li>
+<li>String immutability, <code>StringBuilder</code>, and memory behavior in the String Pool.</li>
+</ul>
+<h3 id="2-object-oriented-programming-oop">2. Object-Oriented Programming (OOP)</h3>
+<ul>
+<li>Classes, objects, and constructor chaining (<code>this()</code> and <code>super()</code>).</li>
+<li><strong>The 4 Pillars</strong>: Encapsulation, Inheritance, Polymorphism (method overriding vs overloading), and Abstraction.</li>
+<li>Abstract classes vs Interfaces (including default and static interface methods).</li>
+<li>Modern Java Records (<code>record UserDTO(String name, String email) {}</code>) as immutable data carriers.</li>
+</ul>
+<h3 id="3-essential-core-concepts">3. Essential Core Concepts</h3>
+<ul>
+<li><strong>Exception Handling</strong>: Checked vs unchecked exceptions, <code>try-catch-finally</code>, and clean resource cleanup using <code>try-with-resources</code>.</li>
+<li><strong>Collections Framework</strong>:
+<ul>
+<li><code>List</code> (<code>ArrayList</code> vs <code>LinkedList</code>)</li>
+<li><code>Set</code> (<code>HashSet</code> for unique lookups)</li>
+<li><code>Map</code> (<code>HashMap</code> internal hashing, buckets, and collision resolution)</li>
+</ul>
+</li>
+<li><strong>The <code>equals()</code> &amp; <code>hashCode()</code> contract</strong>: Overriding both consistently to prevent insidious bugs when using custom keys in <code>HashMap</code> or <code>HashSet</code>.</li>
+<li><strong>Generics</strong>: Generic classes and methods (<code>List&lt;T&gt;</code>).</li>
+<li><strong>Lambdas &amp; Streams API</strong>: Functional interfaces (<code>Predicate</code>, <code>Function</code>, <code>Consumer</code>), and streaming operations (<code>filter</code>, <code>map</code>, <code>collect</code>, <code>groupingBy</code>).</li>
+</ul>
+<h3 id="hands-on-projects-for-stage-1">Hands-On Projects for Stage 1</h3>
+<ol>
+<li><strong>Student Management CLI</strong>: Store and manipulate records using <code>HashMap</code> and <code>ArrayList</code>. Support search, addition, grade calculation, and removal.</li>
+<li><strong>Personal Expense Tracker</strong>: Parse expense entries, filter by category and date ranges, and calculate category totals using the Streams API.</li>
+</ol>
+<h3 id="recommended-stage-1-resources">Recommended Stage 1 Resources</h3>
+<ul>
+<li><a rel="external" href="https://java-programming.mooc.fi/">University of Helsinki — MOOC.fi Java Programming I &amp; II</a> <em>(Universally voted the #1 free interactive Java course on Reddit—includes automated test feedback)</em></li>
+<li><a rel="external" href="https://dev.java/learn/">Dev.java — Official Oracle Learning Portal</a></li>
+<li><a rel="external" href="https://www.youtube.com/KunalKushwaha">Kunal Kushwaha — Java &amp; DSA Fundamentals</a></li>
+<li><a rel="external" href="https://www.youtube.com/@Telusko">Telusko — Core Java Course</a></li>
+<li><a rel="external" href="https://www.youtube.com/playlist?list=PL6W8uoQQ2c63f469AyV78np0rbxRFppkx">Shrayansh Jain — Java Basics to Advanced Playlist</a></li>
+</ul>
+<hr />
+<h2 id="stage-2-backend-fundamentals-sql-http-maven-1-2-weeks">Stage 2 — Backend Fundamentals: SQL, HTTP &amp; Maven (1–2 Weeks)</h2>
+<p>Backend development sits at the intersection of network protocols, business logic, and databases. Understand these fundamentals before adding framework abstractions.</p>
+<h3 id="1-relational-databases-sql">1. Relational Databases &amp; SQL</h3>
+<ul>
+<li>Relational schema design: Tables, Primary Keys, Foreign Keys, Unique constraints.</li>
+<li>Writing raw SQL queries: <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.</li>
+<li>Joining data: <code>INNER JOIN</code>, <code>LEFT JOIN</code>, <code>RIGHT JOIN</code>, and aggregation (<code>GROUP BY</code>, <code>HAVING</code>, <code>COUNT</code>).</li>
+<li>Indexes: How B-Tree indexes speed up lookups and their impact on write performance.</li>
+<li>Choose <strong>PostgreSQL</strong> or <strong>MySQL</strong> as your relational engine.</li>
+</ul>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">Instant Local Database: docker-compose.yml for PostgreSQL</div><div class="collapse-content text-sm"><p>Instead of installing PostgreSQL directly on your host machine, create this <code>docker-compose.yml</code> file and run <code>docker compose up -d</code> in your terminal:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="yaml"><span class="giallo-l"><span style="color: #39BAE6;">version</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;3.8&#39;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #39BAE6;">services</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  postgres</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    image</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> postgres:16-alpine</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    container_name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> dev-postgres</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    environment</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      POSTGRES_DB</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> backend_db</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      POSTGRES_USER</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> dev_user</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      POSTGRES_PASSWORD</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> dev_password</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    ports</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>      -</span><span style="color: #AAD94C;"> &quot;5432:5432&quot;</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    volumes</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>      -</span><span style="color: #AAD94C;"> postgres_data:/var/lib/postgresql/data</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #39BAE6;">volumes</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  postgres_data</span><span style="color: #BFBDB6B3;">:</span></span></code></pre>
+<p>Your database will be up and running on <code>localhost:5432</code> with persistent storage.</p>
+</div></div>
+<h3 id="2-http-rest-principles">2. HTTP &amp; REST Principles</h3>
+<ul>
+<li>Client-Server architecture and stateless communication.</li>
+<li>HTTP Verbs: <code>GET</code> (fetch), <code>POST</code> (create), <code>PUT</code> (full update), <code>PATCH</code> (partial update), <code>DELETE</code> (remove).</li>
+<li>Status Codes: <code>200 OK</code>, <code>201 Created</code>, <code>400 Bad Request</code>, <code>401 Unauthorized</code>, <code>403 Forbidden</code>, <code>404 Not Found</code>, <code>500 Server Error</code>.</li>
+<li>Headers, URL Path Parameters (<code>/api/students/{id}</code>), Query Parameters (<code>/api/students?branch=cse</code>), and JSON payloads.</li>
+</ul>
+<h3 id="3-build-automation-with-maven">3. Build Automation with Maven</h3>
+<ul>
+<li>What Maven solves: standard directory structures, dependency management, and builds.</li>
+<li>Inspecting <code>pom.xml</code>: Coordinates (<code>groupId</code>, <code>artifactId</code>, <code>version</code>) and <code>&lt;dependencies&gt;</code>.</li>
+<li>Common lifecycle phases: <code>mvn clean compile</code>, <code>mvn test</code>, and <code>mvn package</code>.</li>
+</ul>
+<h3 id="recommended-stage-2-resources">Recommended Stage 2 Resources</h3>
+<ul>
+<li><a rel="external" href="https://sqlbolt.com/">SQLBolt — Interactive Browser-Based SQL Lessons</a></li>
+<li><a rel="external" href="https://www.postgresql.org/docs/">PostgreSQL Official Documentation</a></li>
+<li><a rel="external" href="https://maven.apache.org/guides/getting-started/index.html">Apache Maven — Getting Started Guide</a></li>
+</ul>
+<hr />
+<h2 id="stage-3-spring-boot-3-development-3-4-weeks">Stage 3 — Spring Boot 3 Development (3–4 Weeks)</h2>
+<p>Now you are ready to build enterprise-grade REST APIs.</p>
+<div role="alert" class="alert alert-warning alert-soft"><div><p><strong>Critical Gotcha for Spring Boot 3:</strong><br />
+Spring Boot 3 migrated from <strong>Java EE (<code>javax.*</code>)</strong> to <strong>Jakarta EE (<code>jakarta.*</code>)</strong>. Any older tutorial using <code>import javax.persistence.*</code> or <code>import javax.servlet.*</code> will fail to compile. Always use <code>import jakarta.persistence.*</code> and <code>import jakarta.validation.*</code>.</p>
+</div></div>
+<h3 id="1-spring-core-inversion-of-control-ioc">1. Spring Core &amp; Inversion of Control (IoC)</h3>
+<ul>
+<li><strong>Inversion of Control (IoC)</strong>: Letting the Spring container manage object instantiation and lifecycle.</li>
+<li><strong>Dependency Injection (DI)</strong>: Always prefer <strong>Constructor Injection</strong> over <code>@Autowired</code> field injection. It simplifies unit testing and enforces immutability.</li>
+<li>Essential Annotations: <code>@Component</code>, <code>@Service</code>, <code>@Repository</code>, <code>@Configuration</code>, <code>@Bean</code>.</li>
+<li>Bootstrap your starter project using the official generator: <a rel="external" href="https://start.spring.io">start.spring.io</a>.</li>
+</ul>
+<h3 id="2-restful-api-architecture-the-dto-pattern">2. RESTful API Architecture &amp; The DTO Pattern</h3>
+<p>A production Spring Boot application follows a strict 3-tier layered architecture:</p>
+<pre class="mermaid border border-gray-500/15">
+graph LR
+    Client["Client (Browser / Postman)"] -->|"HTTP Request (JSON)"| Controller["@RestController (API Layer)"]
+    Controller -->|"Request DTO"| Service["@Service (Business Logic)"]
+    Service -->|"Entity Model"| Repo["@Repository (Spring Data JPA)"]
+    Repo -->|"SQL Queries"| DB[("PostgreSQL")]
+    Repo -->|"Entity Result"| Service
+    Service -->|"Response DTO"| Controller
+    Controller -->|"HTTP Response (JSON)"| Client
+</pre>
+<div class="badge badge-soft badge-warning">Anti-Pattern Alert</div> **Never return `@Entity` classes directly from your `@RestController`**. Exposing entities causes:
+1. Security vulnerabilities (mass assignment).
+2. Infinite JSON recursion errors when serializing bidirectional `@OneToMany` relationships.
+3. Tight coupling between your database schema and public API contracts. Always map entities to **DTOs (Data Transfer Objects)**.
+<h3 id="3-database-persistence-with-spring-data-jpa">3. Database Persistence with Spring Data JPA</h3>
+<ul>
+<li>What is Hibernate? An Object-Relational Mapper (ORM) implementing the JPA specification.</li>
+<li>Entity mappings: <code>@Entity</code>, <code>@Table</code>, <code>@Id</code>, <code>@GeneratedValue(strategy = GenerationType.IDENTITY)</code>.</li>
+<li>Relationships: <code>@OneToMany</code>, <code>@ManyToOne</code>, <code>@JoinColumn</code>, and lazy loading strategies.</li>
+<li><code>JpaRepository&lt;T, ID&gt;</code>: Take advantage of automatic CRUD operations, derived query methods (e.g. <code>findByEmailAndStatus</code>), and custom JPQL queries using <code>@Query</code>.</li>
+<li>Connection pooling via HikariCP and database configuration in <code>application.yml</code>.</li>
+</ul>
+<h3 id="4-input-validation-global-error-handling">4. Input Validation &amp; Global Error Handling</h3>
+<ul>
+<li>Add <code>spring-boot-starter-validation</code> to validate incoming requests declaratively.</li>
+<li>Common annotations: <code>@NotNull</code>, <code>@NotBlank</code>, <code>@Size(min = 2, max = 50)</code>, <code>@Email</code>, <code>@Min</code>, <code>@Max</code>.</li>
+<li>Centralized exception handling with <code>@RestControllerAdvice</code> and <code>@ExceptionHandler</code>.</li>
+<li>Return uniform error response objects containing timestamps, HTTP status codes, and user-friendly error messages.</li>
+</ul>
+<h3 id="5-authentication-spring-security-6">5. Authentication &amp; Spring Security 6</h3>
+<div role="alert" class="alert alert-warning alert-soft"><div><p>In Spring Security 6 (Spring Boot 3), the legacy <code>WebSecurityConfigurerAdapter</code> has been completely deleted. Security is now configured using an explicit <code>@Bean SecurityFilterChain</code> with a modern lambda DSL.</p>
+</div></div>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    Req["Incoming HTTP Request"] --> Filter["JwtAuthenticationFilter"]
+    Filter -->|"Extract Bearer Token"| Valid{"Token Valid?"}
+    Valid -->|"Yes"| Context["Set Authentication in SecurityContextHolder"]
+    Valid -->|"No / Expired"| ContextAnon["Anonymous Request"]
+    Context --> AuthFilter["AuthorizationFilter (Role Verification)"]
+    ContextAnon --> AuthFilter
+    AuthFilter -->|"Authorized"| Controller["Target @RestController"]
+    AuthFilter -->|"Forbidden"| Denied["401 Unauthorized / 403 Forbidden"]
+</pre>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">Modern Spring Security 6: SecurityFilterChain Snippet</div><div class="collapse-content text-sm"><p>Here is the modern pattern for configuring stateless JWT security in Spring Boot 3:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="java"><span class="giallo-l"><span>@</span><span style="color: #E6C08A;">Configuration</span></span>
+<span class="giallo-l"><span>@</span><span style="color: #E6C08A;">EnableWebSecurity</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">public class</span><span style="color: #59C2FF;"> SecurityConfig</span><span> {</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    private final</span><span style="color: #59C2FF;"> JwtAuthenticationFilter</span><span> jwtAuthFilter</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    public</span><span style="color: #FFB454;"> SecurityConfig</span><span>(</span><span style="color: #59C2FF;">JwtAuthenticationFilter</span><span style="color: #D2A6FF;"> jwtAuthFilter</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        this</span><span style="color: #BFBDB6B3;">.</span><span>jwtAuthFilter</span><span style="color: #F29668;"> =</span><span> jwtAuthFilter</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>    @</span><span style="color: #E6C08A;">Bean</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    public</span><span style="color: #59C2FF;"> SecurityFilterChain</span><span style="color: #FFB454;"> securityFilterChain</span><span>(</span><span style="color: #59C2FF;">HttpSecurity</span><span style="color: #D2A6FF;"> http</span><span>)</span><span style="color: #FF8F40;"> throws</span><span style="color: #59C2FF;"> Exception</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> http</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">            .</span><span style="color: #FFB454;">csrf</span><span>(csrf </span><span style="color: #FF8F40;">-&gt;</span><span> csrf</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">disable</span><span>())</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">            .</span><span style="color: #FFB454;">sessionManagement</span><span>(session </span><span style="color: #FF8F40;">-&gt;</span><span> session</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">sessionCreationPolicy</span><span>(SessionCreationPolicy</span><span style="color: #BFBDB6B3;">.</span><span>STATELESS))</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">            .</span><span style="color: #FFB454;">authorizeHttpRequests</span><span>(auth </span><span style="color: #FF8F40;">-&gt;</span><span> auth</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">                .</span><span style="color: #FFB454;">requestMatchers</span><span>(</span><span style="color: #AAD94C;">&quot;/api/auth/**&quot;</span><span style="color: #BFBDB6B3;">,</span><span style="color: #AAD94C;"> &quot;/swagger-ui/**&quot;</span><span style="color: #BFBDB6B3;">,</span><span style="color: #AAD94C;"> &quot;/v3/api-docs/**&quot;</span><span>)</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">permitAll</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">                .</span><span style="color: #FFB454;">requestMatchers</span><span>(</span><span style="color: #AAD94C;">&quot;/api/admin/**&quot;</span><span>)</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">hasRole</span><span>(</span><span style="color: #AAD94C;">&quot;ADMIN&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">                .</span><span style="color: #FFB454;">anyRequest</span><span>()</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">authenticated</span><span>()</span></span>
+<span class="giallo-l"><span>            )</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">            .</span><span style="color: #FFB454;">addFilterBefore</span><span>(jwtAuthFilter</span><span style="color: #BFBDB6B3;">,</span><span> UsernamePasswordAuthenticationFilter</span><span style="color: #BFBDB6B3;">.</span><span>class)</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">            .</span><span style="color: #FFB454;">build</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>    @</span><span style="color: #E6C08A;">Bean</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    public</span><span style="color: #59C2FF;"> PasswordEncoder</span><span style="color: #FFB454;"> passwordEncoder</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return new</span><span style="color: #FFB454;"> BCryptPasswordEncoder</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre></div></div>
+<h3 id="6-automated-testing-api-documentation">6. Automated Testing &amp; API Documentation</h3>
+<ul>
+<li><strong>Unit Testing with Mockito</strong>: Test your <code>@Service</code> logic in isolation by mocking repository calls (<code>@ExtendWith(MockitoExtension.class)</code>, <code>@Mock</code>, <code>@InjectMocks</code>).</li>
+<li><strong>Integration Testing</strong>: Verify API slice behavior with <code>@SpringBootTest</code> and <code>MockMvc</code>.</li>
+<li><strong>API Documentation with Swagger UI</strong>: Add <code>springdoc-openapi-starter-webmvc-ui</code> to your <code>pom.xml</code> to automatically generate interactive API docs at <code>/swagger-ui.html</code>.</li>
+</ul>
+<h3 id="recommended-stage-3-resources">Recommended Stage 3 Resources</h3>
+<ul>
+<li><a rel="external" href="https://www.youtube.com/@danvega">Dan Vega — Modern Spring Boot 3 (YouTube)</a> <em>(Spring Developer Advocate—exceptional coverage of modern Spring 3.x)</em></li>
+<li><a rel="external" href="https://www.youtube.com/c/laurentiuspilca">Laurentiu Spilca — Spring Context &amp; Security Deep Dives (YouTube)</a> <em>(Author of 'Spring Start Here'—master Inversion of Control &amp; Beans)</em></li>
+<li><a rel="external" href="https://www.youtube.com/@amigoscode">Amigoscode — Spring Boot, Docker &amp; PostgreSQL (YouTube)</a></li>
+<li><a rel="external" href="https://www.youtube.com/watch?v=35EQXmHKZYs">Telusko — Spring Boot Full Course</a></li>
+<li><a rel="external" href="https://www.youtube.com/playlist?list=PL6W8uoQQ2c60g6_fcjDCLHSx1LBeVYqyZ">Shrayansh Jain — Spring Boot Playlist</a></li>
+<li><a rel="external" href="https://www.youtube.com/@EmbarkX">EmbarkX — Spring Boot Projects</a></li>
+<li><a rel="external" href="https://docs.spring.io/spring-boot/">Official Spring Boot Documentation</a></li>
+<li><a rel="external" href="https://docs.spring.io/spring-security/reference/">Official Spring Security Reference</a></li>
+</ul>
+<hr />
+<h2 id="capstone-project-campus-event-management-platform">Capstone Project: Campus Event &amp; Management Platform</h2>
+<p>Avoid building cookie-cutter Todo apps that recruiters ignore. Instead, build a <strong>production-ready backend</strong> with end-to-end polish.</p>
+<h3 id="suggested-tech-stack">Suggested Tech Stack</h3>
+<ul>
+<li><strong>Java 21 LTS</strong> + <strong>Spring Boot 3.x</strong></li>
+<li><strong>Spring Security 6</strong> with stateless <strong>JWT tokens</strong></li>
+<li><strong>Spring Data JPA</strong> + <strong>PostgreSQL</strong> (running locally via <strong>Docker Compose</strong>)</li>
+<li><strong>SpringDoc OpenAPI</strong> (Swagger UI)</li>
+<li><strong>JUnit 5</strong> + <strong>Mockito</strong></li>
+</ul>
+<h3 id="essential-resume-differentiators">Essential Resume Differentiators</h3>
+<ol>
+<li><strong>Role-Based Access Control</strong>:
+<ul>
+<li>Students can browse events, register, and update profiles.</li>
+<li>Admins can create events, manage capacity, and export attendee lists.</li>
+</ul>
+</li>
+<li><strong>Database Performance</strong>:
+<ul>
+<li>Implement <strong>Pagination and Sorting</strong> (<code>Pageable</code>, <code>Page&lt;EventDTO&gt;</code>) to prevent queries from loading thousands of records into memory.</li>
+<li>Avoid N+1 queries using JPA <code>JOIN FETCH</code> or <code>@EntityGraph</code>.</li>
+</ul>
+</li>
+<li><strong>Resilient Validation &amp; Error Responses</strong>:
+<ul>
+<li>Catch validation failures gracefully with <code>@RestControllerAdvice</code>.</li>
+<li>Return standardized JSON error payloads with field-level details.</li>
+</ul>
+</li>
+<li><strong>Interactive Documentation</strong>:
+<ul>
+<li>Annotate endpoints with <code>@Tag</code> and <code>@Operation</code> so reviewers can test your live API directly in Swagger UI.</li>
+</ul>
+</li>
+<li><strong>Automated Test Suite</strong>:
+<ul>
+<li>Include at least 15–20 unit tests verifying edge cases in service logic.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="the-recruiter-lens-what-makes-you-stand-out">The Recruiter Lens: What Makes You Stand Out</h2>
+<p>When technical interviewers and hiring managers review student resumes, they see hundreds of identical "Todo Apps" and "Library Systems". Here is how to distinguish yourself:</p>
+<table><thead><tr><th>❌ Red Flags (Tutorial Clone)</th><th>✅ Green Flags (Production Ready)</th></tr></thead><tbody>
+<tr><td>Single entity models returned directly from Controller</td><td>Strict DTO pattern with input validation (<code>@Valid</code>)</td></tr>
+<tr><td><code>findAll()</code> called on unbounded tables</td><td>Paginated endpoints using <code>Pageable</code> &amp; <code>Page&lt;T&gt;</code></td></tr>
+<tr><td>Storing plain-text or MD5 passwords</td><td>BCrypt hashing with stateless JWT SecurityFilterChain</td></tr>
+<tr><td>Zero automated tests</td><td>Unit tests with Mockito and <code>@SpringBootTest</code> slices</td></tr>
+<tr><td>"Works on my machine" manual DB setup</td><td>One-command <code>docker-compose.yml</code> for PostgreSQL</td></tr>
+<tr><td>No API documentation</td><td>Live Swagger UI documentation at <code>/swagger-ui.html</code></td></tr>
+</tbody></table>
+<hr />
+<h2 id="top-5-technical-interview-gotchas-campus-junior-roles">Top 5 Technical Interview Gotchas (Campus &amp; Junior Roles)</h2>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">1. Why Constructor Injection Beats @Autowired Field Injection</div><div class="collapse-content text-sm"><p><strong>Why interviewers ask this</strong>: To see if you understand testing, immutability, and Spring's container lifecycle.</p>
+<ul>
+<li><strong>Field Injection (<code>@Autowired private MyService myService;</code>)</strong>:
+<ul>
+<li>Impossible to create immutable fields (<code>final</code>).</li>
+<li>Tightly couples your class to the Spring container—you cannot instantiate the class in pure unit tests without reflection.</li>
+<li>Hides circular dependency smells.</li>
+</ul>
+</li>
+<li><strong>Constructor Injection</strong>:
+<ul>
+<li>Allows dependencies to be declared <code>final</code>.</li>
+<li>Makes unit testing simple—just pass mock objects via <code>new MyService(mockRepo)</code>.</li>
+<li>In modern Spring (4.3+), you don't even need the <code>@Autowired</code> annotation on single-constructor classes.</li>
+</ul>
+</li>
+</ul>
+</div></div>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">2. The JPA N+1 Select Problem and How to Fix It</div><div class="collapse-content text-sm"><p><strong>Why interviewers ask this</strong>: To test whether you understand what SQL queries Hibernate actually executes behind the scenes.</p>
+<p>If you have a <code>Student</code> entity with a <code>@OneToMany</code> list of <code>Course</code> enrollments, calling <code>studentRepository.findAll()</code> issues:</p>
+<ol>
+<li><code>1</code> query to fetch all $N$ students.</li>
+<li>Hibernate then issues $N$ individual queries to fetch the courses for each student when accessed.</li>
+</ol>
+<p><strong>The Fix</strong>: Use <code>JOIN FETCH</code> in a custom JPQL query or define <code>@EntityGraph(attributePaths = {"courses"})</code> to tell Hibernate to pull students and their associated courses in <strong>one single SQL JOIN query</strong>.</p>
+</div></div>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">3. Why @Transactional Fails on Internal Method Calls</div><div class="collapse-content text-sm"><p><strong>Why interviewers ask this</strong>: Tests your understanding of Spring AOP (Aspect-Oriented Programming) and CGLIB/JDK dynamic proxies.</p>
+<p>Spring manages transactions by creating a dynamic <strong>proxy</strong> around your <code>@Service</code> bean. When an external class calls a <code>@Transactional</code> method, the call goes through the proxy, which begins and commits the transaction.</p>
+<p>If method <code>A()</code> in <code>OrderService</code> calls method <code>B()</code> (which has <code>@Transactional</code>) inside the <strong>same</strong> class, it is a direct internal Java call (<code>this.B()</code>). The proxy is bypassed completely, and no transaction is started!</p>
+</div></div>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">4. How HashMap Works Internally & The equals/hashCode Contract</div><div class="collapse-content text-sm"><p><strong>Why interviewers ask this</strong>: A classic question in almost every Java technical round.</p>
+<ul>
+<li><code>HashMap</code> uses an array of buckets (<code>Node&lt;K, V&gt;[]</code>).</li>
+<li>When <code>put(key, value)</code> is called, Java computes <code>key.hashCode()</code>, applies a hash function, and finds the bucket index.</li>
+<li>If a collision occurs (multiple keys map to the same bucket), entries are stored in a linked list. If a bucket exceeds 8 nodes (TREEIFY_THRESHOLD), Java 8+ converts the list into a <strong>Red-Black Tree</strong> to keep worst-case lookup at $O(\log n)$ instead of $O(n)$.</li>
+<li><strong>Contract</strong>: If two objects are equal according to <code>equals()</code>, they <strong>must</strong> return the exact same <code>hashCode()</code>. If you override <code>equals()</code> without <code>hashCode()</code>, your object will fail to be retrieved from <code>HashMap</code> or <code>HashSet</code>.</li>
+</ul>
+</div></div>
+<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">5. Checked vs. Unchecked Exceptions in Enterprise APIs</div><div class="collapse-content text-sm"><p><strong>Why interviewers ask this</strong>: To check if you know how Java handles system failures vs business validation.</p>
+<ul>
+<li><strong>Checked Exceptions</strong> (inherit directly from <code>Exception</code>): The compiler forces you to handle them (<code>try-catch</code> or <code>throws</code>). Used for recoverable external failures (e.g. <code>IOException</code>, <code>SQLException</code>).</li>
+<li><strong>Unchecked Exceptions</strong> (inherit from <code>RuntimeException</code>): Compiler does not mandate catching. In modern Spring backend development, almost all business exceptions (<code>UserNotFoundException</code>, <code>InsufficientFundsException</code>) extend <code>RuntimeException</code>. By default, Spring's <code>@Transactional</code> only rolls back on unchecked exceptions!</li>
+</ul>
+</div></div>
+<hr />
+<h2 id="bookmarkable-developer-links">Bookmarkable Developer Links</h2>
+<div class="pretty-link-card group"><a href="https://start.spring.io" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">Spring Initializr</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description">Quickly bootstrap your modern Spring Boot application with dependencies.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>start.spring.io</div></div></div></a></div>
+<div class="pretty-link-card group"><a href="https://java-programming.mooc.fi" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">University of Helsinki MOOC.fi</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description">The gold standard free, test-driven course to master Core Java without tutorial hell.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>java-programming.mooc.fi</div></div></div></a></div>
+<div class="pretty-link-card group"><a href="https://spring.io/guides" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">Official Spring Guides</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description">Concise, task-oriented official tutorials from the Spring team.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>spring.io/guides</div></div></div></a></div>
+<div class="pretty-link-card group"><a href="https://www.baeldung.com" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">Baeldung</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description">Comprehensive developer guides for modern Java, Spring Boot 3, and Spring Security.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>www.baeldung.com</div></div></div></a></div>
+<div class="pretty-link-card group"><a href="https://roadmap.sh/spring-boot" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">Roadmap.sh — Spring Boot</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description">Visual, step-by-step community roadmap for Spring Boot developers.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>roadmap.sh/spring-boot</div></div></div></a></div>
+<hr />
+<p><em>Questions or feedback? Connect with me on <a rel="external" href="https://www.linkedin.com/in/revan-channa-889b57286/">LinkedIn</a>!</em></p>
+
+
+    
+    
+    <div class="mt-8 pt-6 border-t border-gray-500/15 space-y-2 text-sm">
+        
+        <div class="flex flex-wrap items-center gap-2">
+            <div class="tooltip" data-tip="Categories">
+                <svg class="w-4 h-4 text-base-content/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5a2 2 0 012-2h4a2 2 0 012 2v2H8V5z"></path>
+                </svg>
+            </div>
+            
+            <a href="https://cc-club.in/categories/tech/"
+               class="inline-flex items-center badge badge-dash border-gray-500/30 text-xs hover:border-gray-500/70 transition-colors">
+                tech
+            </a>
+            
+        </div>
+        
+
+        
+        <div class="flex flex-wrap items-center gap-2 mt-2">
+            <div class="tooltip" data-tip="Tags">
+                <svg class="w-4 h-4 text-base-content/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                </svg>
+            </div>
+            
+            <a href="https://cc-club.in/tags/java/"
+               class="inline-flex items-center badge badge-dash text-xs border-gray-500/30 hover:border-gray-500/70 transition-colors">
+                java
+            </a>
+            
+            <a href="https://cc-club.in/tags/spring-boot/"
+               class="inline-flex items-center badge badge-dash text-xs border-gray-500/30 hover:border-gray-500/70 transition-colors">
+                spring-boot
+            </a>
+            
+            <a href="https://cc-club.in/tags/backend/"
+               class="inline-flex items-center badge badge-dash text-xs border-gray-500/30 hover:border-gray-500/70 transition-colors">
+                backend
+            </a>
+            
+            <a href="https://cc-club.in/tags/web-development/"
+               class="inline-flex items-center badge badge-dash text-xs border-gray-500/30 hover:border-gray-500/70 transition-colors">
+                web-development
+            </a>
+            
+            <a href="https://cc-club.in/tags/roadmap/"
+               class="inline-flex items-center badge badge-dash text-xs border-gray-500/30 hover:border-gray-500/70 transition-colors">
+                roadmap
+            </a>
+            
+        </div>
+        
+    </div>
+    
+
+    
+    <div class="mt-8 pt-6 border-t border-gray-500/15">
+        <div class="flex flex-wrap items-center gap-4">
+            <a href="https://github.com/CC-MNNIT/cc-website/edit/main//content/blog/2026/2026-09-30-java-spring-boot-roadmap.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                </svg>
+                <span>Edit this page</span>
+            </a>
+            
+            
+            
+                
+                
+            
+            
+            <button onclick="navigator.clipboard.writeText(window.location.href).then(() => { this.innerHTML = this.innerHTML.replace('Copy URL', 'Copied!'); setTimeout(() => { this.innerHTML = this.innerHTML.replace('Copied!', 'Copy URL'); }, 2000); }).catch(() => { console.error('Failed to copy URL'); })" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+                <span>Copy URL</span>
+            </button>
+            
+            
+            <a href="https://twitter.com/intent/tweet?url=https%3A//cc-club.in/blog/2026/java-spring-boot-roadmap/&text=Java%20%26%20Spring%20Boot%20Roadmap%3A%20From%20Fundamentals%20to%20Production%20Backends" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </svg>
+                <span>Share on X</span>
+            </a>
+            
+        </div>
+    </div>
+    
+
+
+                        
+
+
+
+                        <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="prev-nav-item">
+                                    
+    
+        
+        <a class="nav-button nav-button-prev group" href="https://cc-club.in/blog/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="nav-button-label">Back to</span>
+                </div>
+                <div class="nav-button-title">Blog</div>
+            </div>
+        </a>
+    
+
+                                </div>
+                                <div class="next-nav-item">
+                                    
+    
+        <a class="nav-button nav-button-next group" href="https://cc-club.in/blog/2026/mnnit-proxy/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <span class="nav-button-label">Next</span>
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                <div class="nav-button-title">mnnit-proxy: Proxifier for Linux, built for MNNIT</div>
+            </div>
+        </a>
+    
+
+                                </div>
+                            </div>
+                        </nav>
+                    </main>
+            
+
+                    
+                        
+
+<div class="hidden lg:block" >
+    <div class="sticky top-20 px-4 py-2 border-l border-gray-500/15">
+        <h4 class="text-lg font-bold mb-1">ON THIS PAGE</h4>
+            <ul class="menu menu-sm toc-menu">
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#introduction" class="toc-link">Introduction</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#the-zero-friction-setup-before-you-write-code" class="toc-link">The Zero-Friction Setup (Before You Write Code)</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#why-java-spring-boot" class="toc-link">Why Java &amp; Spring Boot?</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#stage-1-modern-core-java-2-3-weeks" class="toc-link">Stage 1 — Modern Core Java (2–3 Weeks)</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#1-fundamentals-control-flow" class="toc-link">1. Fundamentals &amp; Control Flow</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#2-object-oriented-programming-oop" class="toc-link">2. Object-Oriented Programming (OOP)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#3-essential-core-concepts" class="toc-link">3. Essential Core Concepts</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#hands-on-projects-for-stage-1" class="toc-link">Hands-On Projects for Stage 1</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#recommended-stage-1-resources" class="toc-link">Recommended Stage 1 Resources</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#stage-2-backend-fundamentals-sql-http-maven-1-2-weeks" class="toc-link">Stage 2 — Backend Fundamentals: SQL, HTTP &amp; Maven (1–2 Weeks)</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#1-relational-databases-sql" class="toc-link">1. Relational Databases &amp; SQL</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#2-http-rest-principles" class="toc-link">2. HTTP &amp; REST Principles</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#3-build-automation-with-maven" class="toc-link">3. Build Automation with Maven</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#recommended-stage-2-resources" class="toc-link">Recommended Stage 2 Resources</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#stage-3-spring-boot-3-development-3-4-weeks" class="toc-link">Stage 3 — Spring Boot 3 Development (3–4 Weeks)</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#1-spring-core-inversion-of-control-ioc" class="toc-link">1. Spring Core &amp; Inversion of Control (IoC)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#2-restful-api-architecture-the-dto-pattern" class="toc-link">2. RESTful API Architecture &amp; The DTO Pattern</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#3-database-persistence-with-spring-data-jpa" class="toc-link">3. Database Persistence with Spring Data JPA</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#4-input-validation-global-error-handling" class="toc-link">4. Input Validation &amp; Global Error Handling</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#5-authentication-spring-security-6" class="toc-link">5. Authentication &amp; Spring Security 6</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#6-automated-testing-api-documentation" class="toc-link">6. Automated Testing &amp; API Documentation</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#recommended-stage-3-resources" class="toc-link">Recommended Stage 3 Resources</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#capstone-project-campus-event-management-platform" class="toc-link">Capstone Project: Campus Event &amp; Management Platform</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#suggested-tech-stack" class="toc-link">Suggested Tech Stack</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#essential-resume-differentiators" class="toc-link">Essential Resume Differentiators</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#the-recruiter-lens-what-makes-you-stand-out" class="toc-link">The Recruiter Lens: What Makes You Stand Out</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#top-5-technical-interview-gotchas-campus-junior-roles" class="toc-link">Top 5 Technical Interview Gotchas (Campus &amp; Junior Roles)</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/blog/2026/java-spring-boot-roadmap/#bookmarkable-developer-links" class="toc-link">Bookmarkable Developer Links</a>
+                    
+                </li>
+            
+            </ul>
+    </div>
+</div>
+
+
+                    
+                    
+                </div>
+            
+            </div>
+
+            <script>
+              // Determine theme: localStorage > extra.default_colorset > cc-dark
+              // Expose theme config for global use (e.g., js/theme.js)
+              
+              
+              
+                  
+                  
+                  
+                  
+              
+              window.defaultColorset = "dark";
+              window.darkBrightness = "normal";
+              window.lightBrightness = "normal";
+              window.themeMap = { "dark": "cc-dark", "light": "cc-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "cc-dark";
+
+              // Theme mapping - user-facing names are the theme identifiers
+              var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
+              var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
+              var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+
+              // Initialize and run Mermaid only when loaded
+              window.initMermaid = function() {
+                var mermaidTheme = "dark";
+                if(currentUserTheme == "cc-light") {
+                  mermaidTheme = "light";
+                }
+                
+                if (typeof mermaid !== 'undefined') {
+                  mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
+                  
+                  // Function to render mermaid diagrams
+                  var renderMermaid = async function() {
+                    const mermaidElements = document.querySelectorAll('.mermaid');
+                    if (mermaidElements.length > 0) {
+                        await mermaid.run({
+                            nodes: mermaidElements
+                        });
+                    }
+                  };
+                  
+                  // Check if DOMContentLoaded has already fired
+                  if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', renderMermaid);
+                  } else {
+                    // DOMContentLoaded already fired, run immediately
+                    renderMermaid();
+                  }
+                }
+              };
+              
+              // Auto-initialize if Mermaid is already loaded
+              if (typeof mermaid !== 'undefined') {
+                window.initMermaid();
+              }
+            </script>
+
+            
+<footer class="site-footer">
+    <!-- Main footer content -->
+    <div class="w-full py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer grid -->
+            <div class="footer-content">
+                
+                <!-- Column 1: About/Logo -->
+                <div class="footer-col space-y-4">
+                    <div class="footer-logo-container">
+                        
+                        <img src="https://cc-club.in/images/logo/cclogo.webp" alt="Logo" class="footer-logo">
+                        
+                        <h3>
+                            CC Club MNNIT
+                        </h3>
+                    </div>
+                    <p>
+                        Our mission since 2010 at MNNIT is to develop in you a passion for problem-solving, critical thinking, innovation and computer science. We strive to achieve this goal through means of events, classes and industry connects.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        
+                            
+                            <li>
+                                <a href="team">
+                                    Our Team
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="blog">
+                                    Blogs
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="projects">
+                                    Projects
+                                </a>
+                            </li>
+                            
+                        
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col space-y-4">
+                    <h4>Contact</h4>
+                    <div class="space-y-3">
+                        
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            computer.club@mnnit.ac.in
+                        </p>
+                        
+                        
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            MNNIT Allahabad, Prayagraj, UP - 211004
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        
+                            
+                            
+                            <a href="https://www.instagram.com/cc.club.mnnit/" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            
+                            
+                            
+                            <a href="https://www.linkedin.com/company/computer-coding-club-mnnit/" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            
+                            
+                            <a href="https://github.com/CC-MNNIT" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            
+                            
+                            <a href="https://discord.gg/EDv6fM5yUm" aria-label="Discord">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            
+                        
+                    </div>
+                    <p>
+                        Connect to stay updated about our events, projects and blogs!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Computer Coding Club. All rights reserved.</p>
+        <div class="footer-made-with">
+            <p>Made with</p>
+            <i class="fas fa-heart"></i>
+            <p>by Team CC</p>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
+            
+                
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+    
+    
+        
+        
+    
+
+
+
+
+
+<label for="my-drawer-2" class="drawer-overlay"></label>
+<div class="mt-16 w-68 h-[calc(100vh-4rem)] bg-base-100 text-base-content flex flex-col overflow-auto thin-scrollbar">
+    
+    <div class="px-2 pt-4 pb-0 flex flex-col items-center gap-2">
+        <div class="w-full flex items-center gap-2">
+            <label for="search-modal" class="input w-full flex items-center justify-between text-left bg-base-100 cursor-pointer border-gray-500/15 hover:border-gray-500/55 hover:border-1 transition" aria-label="검색">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="text-gray-400"><kbd class="kbd">⌘</kbd><kbd class="kbd">K</kbd></span>
+            </label>
+        </div>
+    </div>
+    
+    
+    
+    <div class="lg:hidden px-4 py-2 border-b border-gray-500/10">
+        <div class="text-xs font-semibold text-gray-400 mb-2">QUICK NAV</div>
+        <ul class="menu menu-compact">
+            
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/about" class="text-sm">
+                            
+                            <i class="fa-solid fa-circle-info mr-2"></i>
+                            About
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/blog" class="text-sm">
+                            
+                            <i class="fa-solid fa-blog mr-2"></i>
+                            Blog
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/events" class="text-sm">
+                            
+                            <i class="fa-solid fa-calendar-days mr-2"></i>
+                            Events
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view" class="text-sm" target="_blank" rel="noopener noreferrer">
+                            
+                            <i class="fa-solid fa-calendar-check mr-2"></i>
+                            Calendar
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/projects" class="text-sm">
+                            
+                            <i class="fa-solid fa-code-branch mr-2"></i>
+                            Projects
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/roadmaps" class="text-sm">
+                            
+                            <i class="fa-solid fa-route mr-2"></i>
+                            Roadmaps
+                        </a></li>
+                    
+                
+                    
+                        
+                            <li>
+                                
+                                    <a href="https://cc-club.in/team" class="text-sm">
+                                
+                                <i class="fa-solid fa-user-group mr-2"></i>
+                                Current Team
+                            </a></li>
+                        
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/contact" class="text-sm">
+                            
+                            <i class="fa-solid fa-envelope mr-2"></i>
+                            Contact
+                        </a></li>
+                    
+                
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+    <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
+        <a href="https://cc-club.in/blog/" class="hover:text-primary transition-colors">Blog</a>
+    </div>
+
+    
+    
+    <ul class="hidden lg:block menu w-full flex-grow">
+        
+        
+            <li class="rounded bg-gray-500/15"><a class="hover:no-underline" href="https://cc-club.in/blog/2026/java-spring-boot-roadmap">Java &amp; Spring Boot Roadmap: From Fundamentals to Production Backends</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/blog/2026/mnnit-proxy">mnnit-proxy: Proxifier for Linux, built for MNNIT</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/blog/2026/aqr-internship-experience">AQR Capital Management — Software Engineering Interview Experience</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/blog/2026/visa-internship-experience">Visa On-Campus Internship Recruitment Experience</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/blog/2026/google-offcampus-placement-process">Google Offcampus Placement Process</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/blog/2026/salesforce-interview-experience">Salesforce Internship Interview Process</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/blog/2026/client-side-solana-101">Client Side Solana 101: From Web2 Dev to Web3 Builder</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/blog/2026/from-theory-to-practice">From Theory to Practice: Data Structures</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/blog/2026/rl-video-game">Looking at Reinforcement Learning Through the Lens of Video Games</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/blog/2026/time-complexity">Mastering Time Complexity: A Complete Guide to Algorithm Analysis</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/blog/2026/ml-models-fail">Why Most Machine Learning Models Fail in Production</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/blog/2026/internet-history">Internet Before Search Engines</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/blog/2026/openprinting">OpenPrinting: The Open-Source Backbone of Linux Printing</a></li>
+        
+        
+        
+        
+            
+            
+            
+    </ul>
+    
+</div>
+
+            
+        </div>
+        
+        <script>
+            // Apply sidebar preference immediately to prevent FOUC
+            (function() {
+                try {
+                    var savedState = localStorage.getItem('sidebar-state');
+                    var sidebar = document.getElementById('sidebar');
+                    if (savedState === 'closed' && sidebar) {
+                        sidebar.classList.add('sidebar-closed');
+                    }
+                } catch (e) {}
+            })();
+        </script>
+    </div>
+
+    
+        <script type="text/javascript" src="https://cc-club.in/js/theme.js"></script>
+        
+        <!-- Lazy load search functionality -->
+        <script>
+            var searchLoaded = false;
+            var searchLoadCallbacks = [];
+            
+            function loadSearchLibraries(callback) {
+                // If already loaded, execute callback immediately
+                if (searchLoaded && typeof Fuse !== 'undefined' && window.searchIndex) {
+                    if (callback) callback();
+                    return;
+                }
+                
+                // Add callback to queue
+                if (callback) searchLoadCallbacks.push(callback);
+                
+                // If already loading, don't start again
+                if (searchLoaded) return;
+                searchLoaded = true;
+                
+                // Show loading indicator in search input
+                var searchInput = document.getElementById('search');
+                if (searchInput) {
+                    searchInput.placeholder = 'Loading search...';
+                    searchInput.disabled = true;
+                }
+                
+                // Load Fuse.js
+                var fuseScript = document.createElement('script');
+                fuseScript.src = 'https://cc-club.in/fuse.min.js';
+                
+                // Load search index after Fuse.js
+                fuseScript.onload = function() {
+                    var searchIndexScript = document.createElement('script');
+                    searchIndexScript.src = 'https://cc-club.in/search_index.en.js';
+                    searchIndexScript.onload = function() {
+                        // Re-enable search input
+                        if (searchInput) {
+                            searchInput.placeholder = 'Search documentation...';
+                            searchInput.disabled = false;
+                            searchInput.focus();
+                        }
+                        
+                        // Initialize search functionality
+                        if (typeof initSearch === 'function') {
+                            initSearch();
+                        }
+                        
+                        // Execute all queued callbacks
+                        searchLoadCallbacks.forEach(function(cb) { cb(); });
+                        searchLoadCallbacks = [];
+                    };
+                    document.body.appendChild(searchIndexScript);
+                };
+                
+                document.body.appendChild(fuseScript);
+            }
+            
+            // Load search on first interaction with search modal
+            document.addEventListener('DOMContentLoaded', function() {
+                var searchModal = document.getElementById('search-modal');
+                if (searchModal) {
+                    searchModal.addEventListener('change', function() {
+                        if (this.checked) {
+                            loadSearchLibraries();
+                        }
+                    });
+                }
+                
+                // Also load on Ctrl+K / Cmd+K
+                document.addEventListener('keydown', function(e) {
+                    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                        loadSearchLibraries();
+                    }
+                });
+            });
+        </script>
+        
+        
+        <script>
+            // Desktop Sidebar Toggle Logic
+            document.addEventListener('DOMContentLoaded', function() {
+                var toggleBtn = document.getElementById('desktop-sidebar-toggle');
+                var sidebar = document.getElementById('sidebar');
+                
+                if (toggleBtn && sidebar) {
+                    // Toggle handler
+                    toggleBtn.addEventListener('click', function() {
+                        // Check if closed by checking for class
+                        var isClosed = sidebar.classList.contains('sidebar-closed');
+                        
+                        if (isClosed) {
+                            // Opening
+                            sidebar.classList.remove('sidebar-closed');
+                            localStorage.setItem('sidebar-state', 'open');
+                        } else {
+                            // Closing
+                            sidebar.classList.add('sidebar-closed');
+                            localStorage.setItem('sidebar-state', 'closed');
+                        }
+                    });
+                }
+            });
+        </script>
+    
+</body>
+</html>

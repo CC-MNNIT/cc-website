@@ -1,0 +1,1418 @@
+
+<!DOCTYPE html>
+
+<html lang="en" style="background-color: #0f172a;">
+
+<head>
+    
+        
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Resource Hints for better performance -->
+    
+
+    <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
+    <script>
+        (function() {
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
+            
+            
+            
+            
+                
+                
+                
+                
+            
+            // Get default values from config
+            var defaultColorset = "dark";
+            var darkBrightness = "normal";
+            var lightBrightness = "normal";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
+            
+            // Expose brightness config for global use (e.g., js/theme.js)
+            window.darkBrightness = darkBrightness;
+            window.lightBrightness = lightBrightness;
+            
+            // Get theme from localStorage or use fallback
+            var currentUserTheme = localStorage.getItem('theme') || fallbackTheme;
+            var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+            
+            // Determine brightness based on current theme
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
+            
+            // Set theme and brightness attributes immediately
+            document.documentElement.setAttribute("data-theme", actualTheme);
+            document.documentElement.setAttribute("data-brightness", currentBrightness);
+        })();
+    </script>
+
+    <style>
+        
+        
+        
+            
+            
+            
+        
+        
+            
+            @font-face {
+                font-family: "Pretendard-Regular";
+                src: url('https://cc-club.in/fonts/Pretendard-Regular.woff') format("woff");
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+            body {
+                font-family: "Pretendard-Regular", sans-serif;
+            }
+        
+    </style>
+
+    
+        
+            <meta name="description" content="Comprehensive guide to mastering Java backend development with Spring Boot 3, REST APIs, JPA, and Spring Security." />
+        
+    
+
+    <title>Java &amp; Spring Boot Roadmap | Computer Coding Club</title>
+
+    
+    
+
+      <!-- SEO: Open Graph / Twitter Card -->
+      <meta property="og:title" content="Java &amp; Spring Boot Roadmap | Computer Coding Club" />
+      <meta property="og:description" content="Comprehensive guide to mastering Java backend development with Spring Boot 3, REST APIs, JPA, and Spring Security." />
+      <meta property="og:url" content="https://cc-club.in/" />
+      <meta property="og:type" content="website" />
+      
+      <meta property="og:image" content="https://cc-club.in/cc-club-thumbnail.webp" />
+      
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Java &amp; Spring Boot Roadmap" />
+      <meta name="twitter:description" content="Comprehensive guide to mastering Java backend development with Spring Boot 3, REST APIs, JPA, and Spring Security." />
+      
+      
+      
+          
+          
+      
+      
+      <meta name="twitter:site" content="@ccclub_mnnit" />
+      
+      
+      <meta name="twitter:creator" content="@ccclub_mnnit" />
+      
+      
+      <meta name="twitter:image" content="https://cc-club.in/cc-club-thumbnail.webp" />
+      
+
+      <!-- Browser address bar color -->
+      <meta name="theme-color" content="#0f172a">
+
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="https://cc-club.in/icons/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="https://cc-club.in/icons/favicon.svg" />
+      <link rel="shortcut icon" href="https://cc-club.in/icons/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="https://cc-club.in/icons/apple-touch-icon.png" />
+      <link rel="manifest" href="https://cc-club.in/icons/site.webmanifest" />
+
+      <!-- CSS -->
+    <link rel="stylesheet" href="https://cc-club.in/css/site.css">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://cc-club.in/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
+
+    <!-- Defer non-critical scripts -->
+    <script defer src="https://cc-club.in/js/copy_code.js"></script>
+    <script defer src="https://cc-club.in/js/copy_heading_link.js"></script>
+    
+    <!-- Lazy load Mermaid and KaTeX - only when needed -->
+    <script>
+        // Lazy load KaTeX and Mermaid when needed
+        window.addEventListener('DOMContentLoaded', function() {
+            // Check for both KaTeX inline and block elements in one pass
+            var katexInlineElements = document.querySelectorAll('.katex-inline');
+            var katexBlockElements = document.querySelectorAll('.katex-block');
+            var hasKatex = katexInlineElements.length > 0 || katexBlockElements.length > 0;
+            var hasMermaid = document.querySelector('.mermaid');
+            
+            // Load KaTeX if math elements are present
+            if (hasKatex) {
+                // Load KaTeX CSS first
+                var katexCSS = document.createElement('link');
+                katexCSS.rel = 'stylesheet';
+                katexCSS.href = 'https://cc-club.in/css/katex.min.css';
+                document.head.appendChild(katexCSS);
+                
+                // Load KaTeX JS
+                var katexScript = document.createElement('script');
+                katexScript.src = 'https://cc-club.in/js/katex.min.js';
+                katexScript.onload = function() {
+                    // Render inline elements
+                    katexInlineElements.forEach(function(elem) {
+                        var texContent = elem.textContent || elem.innerText;
+                        try {
+                            katex.render(texContent, elem, { 
+                                throwOnError: false,
+                                displayMode: false
+                            });
+                        } catch(e) {
+                            console.error('KaTeX render error:', e);
+                        }
+                    });
+                    
+                    // Render block elements
+                    katexBlockElements.forEach(function(elem) {
+                        var texContent = elem.textContent || elem.innerText;
+                        try {
+                            katex.render(texContent, elem, { 
+                                throwOnError: false,
+                                displayMode: true
+                            });
+                        } catch(e) {
+                            console.error('KaTeX render error:', e);
+                        }
+                    });
+                };
+                document.head.appendChild(katexScript);
+            }
+            
+            // Load Mermaid if diagram elements are present
+            if (hasMermaid) {
+                var mermaidScript = document.createElement('script');
+                mermaidScript.src = 'https://cc-club.in/js/mermaid.min.js';
+                mermaidScript.onload = function() {
+                    // Initialize Mermaid after loading
+                    if (typeof window.initMermaid === 'function') {
+                        window.initMermaid();
+                    }
+                };
+                document.head.appendChild(mermaidScript);
+            }
+        });
+    </script>
+
+    
+    
+
+    <style>
+        /* Desktop Sidebar Animation */
+        @media (min-width: 1024px) {
+            /* Only apply fixed width when drawer is in open mode (sidebar visible) */
+            .lg\:drawer-open #sidebar {
+                width: 17rem; /* w-72 default */
+                transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1), border-width 300ms ease;
+                white-space: nowrap;
+            }
+            
+            .lg\:drawer-open #sidebar.sidebar-closed {
+                width: 0;
+                border-right-width: 0;
+            }
+            
+            /* For overlay mode on desktop (landing page), ensure full width for overlay */
+            .drawer:not(.lg\:drawer-open) #sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+<!-- Search Modal -->
+<input type="checkbox" id="search-modal" class="modal-toggle" />
+<div class="modal modal-middle">
+    <div class="modal-box relative max-w-2xl p-0 bg-base-100 shadow-2xl">
+        <label for="search-modal" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 z-10">✕</label>
+        <div class="search-container">
+            <!-- Search Input Container -->
+            <div class="search-input-container px-6 pt-6 pb-4 border-b border-base-300/30">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="search-icon absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-base-content/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input id="search" type="search" placeholder="Search documentation..." class="search-input w-full pl-12 pr-4 py-3 text-base bg-transparent border-0 focus:outline-none focus:ring-0 text-base-content placeholder:text-base-content/40">
+                </div>
+            </div>
+            <!-- Search Results Container -->
+            <div class="search-results-container px-2 py-2 h-96 overflow-y-auto">
+                <div class="search-results__header px-4 py-2 text-xs text-base-content/60"></div>
+                <ul class="search-results__items space-y-1"></ul>
+            </div>
+            <!-- Search Footer -->
+            <div class="search-footer px-6 py-3 border-t border-base-300/30 flex items-center justify-end gap-4 text-xs text-base-content/50">
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↑</kbd>
+                    <kbd class="kbd kbd-xs">↓</kbd>
+                    <span>to navigate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↵</kbd>
+                    <span>to select</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">esc</kbd>
+                    <span>to close</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+    
+    
+    <div class="drawer lg:drawer-open">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col pt-16">
+            
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="navbar opacity-95 fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-500/15 backdrop-blur-3xl">
+    <!-- Mobile hamburger (and Desktop on Root Page) -->
+    <div class="flex-none lg:hidden">
+        <label for="my-drawer-2" class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </label>
+    </div>
+    <!-- Desktop sidebar toggle -->
+    
+    <div class="flex-none hidden lg:block">
+        <button id="desktop-sidebar-toggle" class="btn btn-square btn-ghost" aria-label="Toggle sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+    
+    <!-- Logo -->
+    <div class="flex-1">
+        <a href="https://cc-club.in"
+            class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link"
+            style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+            
+            <img src="https://cc-club.in/images/logo/cclogo.webp" alt="CC Club"
+                class="h-18 w-auto" style="padding: 10px;"  />
+            
+        </a>
+    </div>
+    <!-- Desktop AND Mobile Menu - Theme toggle always visible -->
+    <div class="flex-none flex lg:flex">
+        <ul class="menu menu-horizontal px-1 items-center">
+            <!-- Desktop navigation items (hidden on mobile) -->
+            <div class="hidden lg:flex lg:contents">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/about">
+                            
+                            <i class="fa-solid fa-circle-info"></i>
+                            About
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/blog">
+                            
+                            <i class="fa-solid fa-blog"></i>
+                            Blog
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/events">
+                            
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Events
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                    <a class="btn btn-ghost hover:no-underline "
+                        href="https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view" target="_blank" rel="noopener noreferrer">
+                        
+                            <i class="fa-solid fa-calendar-check"></i>
+                            Calendar
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/projects">
+                            
+                            <i class="fa-solid fa-code-branch"></i>
+                            Projects
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/roadmaps">
+                            
+                            <i class="fa-solid fa-route"></i>
+                            Roadmaps
+                        </a>
+                </li>
+                
+                
+                
+                <li class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        <i class="fa-solid fa-users"></i>
+                        Community
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
+                        
+                        
+                        <li>
+                            
+                                <a class="btn btn-ghost hover:no-underline "
+                                    href="https://cc-club.in/team">
+                                    
+                                    <i class="fa-solid fa-user-group"></i>
+                                    Current Team
+                                </a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/contact">
+                            
+                            <i class="fa-solid fa-envelope"></i>
+                            Contact
+                        </a>
+                </li>
+                
+                
+                
+
+                
+            </div>
+
+            
+            
+            
+            
+            <li class="flex items-center">
+                <label class="swap swap-rotate btn btn-ghost btn-circle">
+                    <input type="checkbox" class="theme-controller" value="cc-dark" aria-labelledby="swap color" />
+                    <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+                    <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                </label>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const currentPath = window.location.pathname;
+
+        const navLinks = document.querySelectorAll('.navbar a[href]:not(.logo-link)');
+
+        navLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
+            if (link.classList.contains('active-nav')) {
+                return;
+            }
+
+            let isActive = false;
+
+            if (linkPath === '/') {
+                isActive = (currentPath === '/' || currentPath === '');
+            } else {
+                isActive = currentPath.startsWith(linkPath);
+            }
+
+            if (isActive) {
+                link.classList.add('active-nav');
+            } else {
+                link.classList.remove('active-nav');
+            }
+        });
+    });
+</script>
+
+
+
+            
+            
+            
+            
+                
+            
+
+            
+            <div class="p-8 w-full flex justify-center">
+                <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
+                    <main class="prose w-full">
+            
+                        
+    <div class="mb-12 pb-4 border-b border-gray-500/15">
+        <h1 class="flex items-center gap-3">
+            Java &amp; Spring Boot Roadmap
+            
+                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">NEW</span>
+            
+        </h1>
+        <p class="text-gray-500">Comprehensive guide to mastering Java backend development with Spring Boot 3, REST APIs, JPA, and Spring Security.</p>
+    </div>
+    <h1 id="java-spring-boot-roadmap">Java &amp; Spring Boot Roadmap</h1>
+<h2 id="1-overview">1. Overview</h2>
+<h3 id="what-is-java-backend-development">What is Java Backend Development?</h3>
+<p>Java backend development powers the server-side infrastructure of modern applications. It orchestrates business logic, handles data persistence with relational and NoSQL databases, exposes robust RESTful APIs, enforces authentication and role-based authorization, and integrates external services.</p>
+<h3 id="why-java-spring-boot">Why Java + Spring Boot?</h3>
+<ul>
+<li><strong>Industry Dominance</strong>: Java remains the backbone of enterprise software, financial institutions, high-volume e-commerce platforms, and mission-critical cloud backends.</li>
+<li><strong>Strong Foundations</strong>: Java enforces object-oriented design, strong static typing, robust memory management, and mature concurrency models.</li>
+<li><strong>Spring Boot Ecosystem</strong>: Spring Boot strips away complex XML boilerplate, providing opinionated defaults, embedded servers (Tomcat/Jetty), auto-configuration, and production-grade monitoring right out of the box.</li>
+<li><strong>Long-Term Scalability</strong>: The exact same paradigms learned building a student project scale to distributed microservice architectures handling millions of requests per second.</li>
+</ul>
+<h3 id="real-life-applications">Real-Life Applications</h3>
+<ul>
+<li><strong>Banking &amp; Fintech</strong>: High-concurrency transaction processing, fraud detection, and regulatory ledger systems.</li>
+<li><strong>E-commerce</strong>: Product catalog caching, order processing, and payment gateway integrations (Amazon, Flipkart).</li>
+<li><strong>Enterprise SaaS</strong>: Multi-tenant cloud applications, CRM platforms, and workflow automation.</li>
+<li><strong>Streaming &amp; Media</strong>: Content metadata management, user session tracking, and notification microservices.</li>
+</ul>
+<h3 id="recommended-tooling-zero-friction-setup">Recommended Tooling (Zero-Friction Setup)</h3>
+<ul>
+<li><strong>IDE</strong>: <strong>IntelliJ IDEA Community Edition</strong> (100% free) — the undisputed industry standard for Java with out-of-the-box refactoring and debugging.</li>
+<li><strong>JDK</strong>: <strong>Java 21 LTS</strong> from <strong>Adoptium (Eclipse Temurin)</strong> or Amazon Corretto (manage via SDKMAN! on Linux/macOS).</li>
+<li><strong>API Testing</strong>: <strong>Postman</strong> or <strong>Bruno</strong> for testing endpoints and inspecting JSON responses.</li>
+<li><strong>Database</strong>: <strong>PostgreSQL</strong> (run via Docker Compose to avoid manual local service issues).</li>
+</ul>
+<hr />
+<h2 id="2-learning-path-breakdown">2. Learning Path Breakdown</h2>
+<h3 id="stage-1-modern-core-java">Stage 1 — Modern Core Java</h3>
+<p><strong>Duration</strong>: 2–3 weeks<br />
+<strong>Objective</strong>: Build solid programming muscle memory and master Object-Oriented Programming (OOP) using modern Java (Java 17 / 21 LTS).</p>
+<h4 id="you-learn">You Learn</h4>
+<ul>
+<li><strong>Java Basics</strong>:
+<ul>
+<li>Variables, primitive vs reference types, operators, and control flow (<code>switch</code> expressions, loops).</li>
+<li>Methods, method overloading, arrays, and string immutability (<code>String</code>, <code>StringBuilder</code>).</li>
+<li>Scanner and command-line I/O.</li>
+</ul>
+</li>
+<li><strong>Object-Oriented Programming (OOP)</strong>:
+<ul>
+<li>Classes, objects, memory layout (Stack vs Heap).</li>
+<li>Constructors, <code>this</code> and <code>super</code> keywords.</li>
+<li>The Four Pillars: <strong>Encapsulation</strong>, <strong>Inheritance</strong>, <strong>Polymorphism</strong>, and <strong>Abstraction</strong>.</li>
+<li>Abstract classes vs Interfaces (default and static methods in interfaces).</li>
+</ul>
+</li>
+<li><strong>Essential Java Concepts</strong>:
+<ul>
+<li>Exception Handling: Checked vs Unchecked exceptions, <code>try-catch-finally</code>, and <code>try-with-resources</code>.</li>
+<li>The Java Collections Framework: <code>List</code> (<code>ArrayList</code>), <code>Set</code> (<code>HashSet</code>), <code>Map</code> (<code>HashMap</code>), and iteration patterns.</li>
+<li>Overriding <code>equals()</code> and <code>hashCode()</code> contracts.</li>
+<li>Generics basics (<code>List&lt;T&gt;</code>).</li>
+<li>Functional interfaces, Lambda expressions, and the Streams API (<code>filter</code>, <code>map</code>, <code>collect</code>).</li>
+<li>Java Records (clean immutable data carriers).</li>
+</ul>
+</li>
+</ul>
+<h4 id="hands-on-tasks">Hands-On Tasks</h4>
+<ol>
+<li><strong>Student Record System</strong>: Build a CLI app allowing users to add, update, remove, and search students stored in an in-memory <code>HashMap</code> or <code>ArrayList</code>.</li>
+<li><strong>Personal Expense Tracker</strong>: Create a console application to log expenses, group them by category using Streams (<code>Collectors.groupingBy</code>), and compute weekly/monthly summaries.</li>
+</ol>
+<h4 id="curated-resources">Curated Resources</h4>
+<ul>
+<li><a rel="external" href="https://dev.java/learn/">Dev.java — Official Learn Java Portal</a></li>
+<li><a rel="external" href="https://java-programming.mooc.fi/">University of Helsinki — MOOC.fi Java Programming I &amp; II</a> <em>(Hands-on automated exercise tests)</em></li>
+<li><a rel="external" href="https://www.youtube.com/KunalKushwaha">Kunal Kushwaha — Java &amp; DSA Fundamentals</a></li>
+<li><a rel="external" href="https://www.youtube.com/@Telusko">Telusko — Core Java Course</a></li>
+<li><a rel="external" href="https://www.youtube.com/playlist?list=PL6W8uoQQ2c63f469AyV78np0rbxRFppkx">Shrayansh Jain — Java Core to Advanced Playlist</a></li>
+</ul>
+<hr />
+<h3 id="stage-2-backend-fundamentals-sql-http-maven">Stage 2 — Backend Fundamentals (SQL, HTTP &amp; Maven)</h3>
+<p><strong>Duration</strong>: 1–2 weeks<br />
+<strong>Objective</strong>: Understand the protocols and data stores bridging clients, servers, and databases before introducing framework abstractions.</p>
+<h4 id="you-learn-1">You Learn</h4>
+<ul>
+<li><strong>Relational Databases &amp; SQL</strong>:
+<ul>
+<li>Tables, columns, constraints, Primary Keys, and Foreign Keys.</li>
+<li>CRUD queries: <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.</li>
+<li>Joins: <code>INNER JOIN</code>, <code>LEFT JOIN</code>, <code>RIGHT JOIN</code>.</li>
+<li>Indexing fundamentals and database normalization (1NF, 2NF, 3NF).</li>
+<li>Choose <strong>PostgreSQL</strong> or <strong>MySQL</strong>.</li>
+</ul>
+</li>
+<li><strong>HTTP &amp; REST Principles</strong>:
+<ul>
+<li>Client-Server architecture and the request/response lifecycle.</li>
+<li>HTTP methods: <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code>.</li>
+<li>Status codes: <code>200 OK</code>, <code>201 Created</code>, <code>400 Bad Request</code>, <code>401 Unauthorized</code>, <code>403 Forbidden</code>, <code>404 Not Found</code>, <code>500 Internal Server Error</code>.</li>
+<li>Headers, query parameters, path variables, and JSON request/response bodies.</li>
+</ul>
+</li>
+<li><strong>Build Systems (Maven)</strong>:
+<ul>
+<li>Purpose of a build automation tool.</li>
+<li>Understanding <code>pom.xml</code>, project coordinates (<code>groupId</code>, <code>artifactId</code>, <code>version</code>).</li>
+<li>Managing dependencies and plugins.</li>
+<li>Maven lifecycle: <code>clean</code>, <code>compile</code>, <code>test</code>, <code>package</code>, <code>install</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="hands-on-tasks-1">Hands-On Tasks</h4>
+<ol>
+<li><strong>Database Schema Design</strong>: Model a normalized relational schema for a college management portal (Students, Courses, Enrollments, Grades) with Foreign Key constraints.</li>
+<li><strong>Raw SQL Scripting</strong>: Write queries to fetch student enrollments, average grades per course, and find unassigned courses using <code>LEFT JOIN</code>.</li>
+<li><strong>Maven Project Setup</strong>: Generate a clean Maven project from scratch and import third-party libraries (e.g., Jackson or Apache Commons) to practice dependency management.</li>
+</ol>
+<h4 id="curated-resources-1">Curated Resources</h4>
+<ul>
+<li><a rel="external" href="https://sqlbolt.com/">SQLBolt — Interactive SQL Practice</a></li>
+<li><a rel="external" href="https://www.postgresql.org/docs/">PostgreSQL Official Documentation</a></li>
+<li><a rel="external" href="https://dev.mysql.com/doc/">MySQL Official Documentation</a></li>
+<li><a rel="external" href="https://maven.apache.org/guides/getting-started/index.html">Apache Maven — Getting Started</a></li>
+</ul>
+<hr />
+<h3 id="stage-3-spring-boot-3-development">Stage 3 — Spring Boot 3 Development</h3>
+<p><strong>Duration</strong>: 3–4 weeks<br />
+<strong>Objective</strong>: Build production-grade, secure, and well-structured REST APIs using modern Spring Boot 3.x and Java 17+.</p>
+<h4 id="part-1-core-spring-inversion-of-control-ioc">Part 1: Core Spring &amp; Inversion of Control (IoC)</h4>
+<ul>
+<li>Spring ApplicationContext and Inversion of Control (IoC).</li>
+<li>Dependency Injection (DI) with constructor injection (avoid field injection).</li>
+<li>Key annotations: <code>@SpringBootApplication</code>, <code>@Component</code>, <code>@Service</code>, <code>@Repository</code>, <code>@Configuration</code>, <code>@Bean</code>.</li>
+<li>Bootstrapping projects cleanly via <a rel="external" href="https://start.spring.io">start.spring.io</a>.</li>
+</ul>
+<h4 id="part-2-rest-apis-layered-architecture">Part 2: REST APIs &amp; Layered Architecture</h4>
+<ul>
+<li>Building endpoints: <code>@RestController</code>, <code>@RequestMapping</code>, <code>@GetMapping</code>, <code>@PostMapping</code>, <code>@PutMapping</code>, <code>@DeleteMapping</code>.</li>
+<li>Reading data: <code>@PathVariable</code>, <code>@RequestParam</code>, <code>@RequestBody</code>, <code>@RequestHeader</code>.</li>
+<li>Response handling: <code>ResponseEntity&lt;T&gt;</code>, status codes, and HTTP headers.</li>
+<li><strong>Strict Layer Separation</strong>:
+$$\text{Controller (HTTP/DTO)} \longrightarrow \text{Service (Business Logic)} \longrightarrow \text{Repository (Data Access)} \longrightarrow \text{Database}$$</li>
+<li>The <strong>DTO Pattern</strong>: Decoupling database <code>@Entity</code> models from API request/response payloads to prevent mass assignment and circular JSON serialization bugs.</li>
+</ul>
+<h4 id="part-3-database-integration-with-spring-data-jpa">Part 3: Database Integration with Spring Data JPA</h4>
+<ul>
+<li>What is an ORM? Understanding JPA specifications vs Hibernate implementation.</li>
+<li>Entities and annotations: <code>@Entity</code>, <code>@Id</code>, <code>@GeneratedValue</code>, <code>@Column</code>, <code>@Table</code>.</li>
+<li>Relationships: <code>@OneToMany</code>, <code>@ManyToOne</code>, <code>@ManyToMany</code>, and cascade types.</li>
+<li><code>JpaRepository&lt;T, ID&gt;</code>: Out-of-the-box CRUD methods, custom query methods (<code>findByEmail</code>), and <code>@Query</code> (JPQL / native SQL).</li>
+<li>Connection pools (HikariCP) and configuring <code>application.properties</code> / <code>application.yml</code>.</li>
+</ul>
+<h4 id="part-4-validation-global-exception-handling">Part 4: Validation &amp; Global Exception Handling</h4>
+<ul>
+<li>Jakarta Bean Validation: <code>@Valid</code>, <code>@NotNull</code>, <code>@NotBlank</code>, <code>@Size</code>, <code>@Min</code>, <code>@Email</code>.</li>
+<li>Centralized error handling: <code>@RestControllerAdvice</code> and <code>@ExceptionHandler</code>.</li>
+<li>Crafting uniform error response payloads containing timestamps, HTTP status, and descriptive error messages.</li>
+</ul>
+<h4 id="part-5-security-jwt-authentication">Part 5: Security &amp; JWT Authentication</h4>
+<ul>
+<li>Authentication vs Authorization.</li>
+<li>Modern Spring Security 6 architecture using <code>@Bean SecurityFilterChain</code> and lambda DSL.</li>
+<li>Password hashing using <code>BCryptPasswordEncoder</code>.</li>
+<li>Stateless session management and JSON Web Tokens (JWT).</li>
+<li>Custom <code>OncePerRequestFilter</code> to validate Bearer tokens on incoming requests.</li>
+<li>Role-based access control (RBAC): <code>@PreAuthorize("hasRole('ADMIN')")</code>.</li>
+</ul>
+<h4 id="part-6-automated-testing-api-documentation">Part 6: Automated Testing &amp; API Documentation</h4>
+<ul>
+<li>Unit testing <code>@Service</code> classes with <strong>JUnit 5</strong> and <strong>Mockito</strong> (<code>@Mock</code>, <code>@InjectMocks</code>, <code>when().thenReturn()</code>).</li>
+<li>Interactive API documentation using <strong>SpringDoc OpenAPI</strong> (Swagger UI at <code>/swagger-ui.html</code>).</li>
+<li>Local database containerization with <strong>Docker Compose</strong>.</li>
+</ul>
+<h4 id="hands-on-tasks-2">Hands-On Tasks</h4>
+<ol>
+<li><strong>Student API</strong>: Build full CRUD endpoints with DTO validation, JPA persistence, and global exception handling.</li>
+<li><strong>College Event Portal API</strong>: Implement event creation, attendee registration, capacity checks, and enrollment status.</li>
+<li><strong>JWT Auth Microservice</strong>: Secure endpoints with user registration, login returning JWT tokens, and role-guarded routes (<code>ROLE_STUDENT</code> vs <code>ROLE_ORGANIZER</code>).</li>
+<li><strong>Interactive Swagger</strong>: Document all endpoints with SpringDoc OpenAPI.</li>
+</ol>
+<h4 id="curated-resources-2">Curated Resources</h4>
+<ul>
+<li><a rel="external" href="https://start.spring.io/">Spring Initializr — Bootstrap Generator</a></li>
+<li><a rel="external" href="https://docs.spring.io/spring-boot/">Official Spring Boot Documentation</a></li>
+<li><a rel="external" href="https://docs.spring.io/spring-security/reference/">Official Spring Security Reference</a></li>
+<li><a rel="external" href="https://spring.io/guides">Official Spring Guides</a></li>
+<li><a rel="external" href="https://www.youtube.com/@danvega">Dan Vega — Modern Spring Boot 3 (YouTube)</a></li>
+<li><a rel="external" href="https://www.youtube.com/c/laurentiuspilca">Laurentiu Spilca — Spring Context &amp; Security (YouTube)</a></li>
+<li><a rel="external" href="https://www.youtube.com/@amigoscode">Amigoscode — Spring Boot, Docker &amp; PostgreSQL (YouTube)</a></li>
+<li><a rel="external" href="https://www.youtube.com/watch?v=35EQXmHKZYs">Telusko — Spring Boot Full Course</a></li>
+<li><a rel="external" href="https://www.youtube.com/playlist?list=PL6W8uoQQ2c60g6_fcjDCLHSx1LBeVYqyZ">Shrayansh Jain — Spring Boot Playlist</a></li>
+<li><a rel="external" href="https://www.youtube.com/@EmbarkX">EmbarkX — Spring Boot Projects</a></li>
+<li><a rel="external" href="https://www.baeldung.com/">Baeldung — Spring &amp; Java Reference</a></li>
+</ul>
+<hr />
+<h2 id="3-capstone-project-campus-event-management-platform">3. Capstone Project: Campus Event &amp; Management Platform</h2>
+<p>Rather than building fragmented tutorial snippets, consolidate your skills into one comprehensive, portfolio-ready application.</p>
+<h3 id="recommended-tech-stack">Recommended Tech Stack</h3>
+<ul>
+<li><strong>Language &amp; Runtime</strong>: Java 21 LTS</li>
+<li><strong>Framework</strong>: Spring Boot 3.x</li>
+<li><strong>Security</strong>: Spring Security 6 + JWT</li>
+<li><strong>Database</strong>: PostgreSQL with Spring Data JPA &amp; Hibernate</li>
+<li><strong>Containerization</strong>: Docker Compose (for PostgreSQL)</li>
+<li><strong>Documentation</strong>: SpringDoc OpenAPI (Swagger UI)</li>
+<li><strong>Testing</strong>: JUnit 5 + Mockito</li>
+</ul>
+<h3 id="key-features-to-implement">Key Features to Implement</h3>
+<ul>
+<li><strong>Authentication &amp; Authorization</strong>: Registration and login endpoints returning signed JWTs, password encryption with BCrypt, and role-based permissions (<code>ROLE_STUDENT</code>, <code>ROLE_ADMIN</code>).</li>
+<li><strong>Entity Relationships</strong>: Normalized database models linking Users $\leftrightarrow$ Events $\leftrightarrow$ Registrations with proper cascading and indexing.</li>
+<li><strong>Pagination &amp; Sorting</strong>: Paginated event listings (<code>Pageable</code>, <code>Page&lt;EventDTO&gt;</code>) with multi-attribute filtering (category, date, venue).</li>
+<li><strong>Robust Validation</strong>: Jakarta validation on all incoming request payloads with meaningful field error mappings.</li>
+<li><strong>Global Error Handling</strong>: <code>@RestControllerAdvice</code> catching custom business exceptions (<code>ResourceNotFoundException</code>, <code>EventFullException</code>) and returning standard RFC 7807 problem details.</li>
+<li><strong>Automated Test Suite</strong>: Unit tests covering service business rules with at least 70% branch coverage.</li>
+<li><strong>Swagger API UI</strong>: Interactive documentation accessible at <code>/swagger-ui.html</code>.</li>
+</ul>
+<hr />
+<h2 id="4-skills-checklist-for-campus-placements-internships">4. Skills Checklist for Campus Placements &amp; Internships</h2>
+<p>Before applying for backend software engineering roles, ensure you can comfortably discuss and demonstrate:</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Modern Java features: Lambdas, Streams, Records, and modern <code>switch</code>.</li>
+<li><input disabled="" type="checkbox"/>
+The difference between checked and unchecked exceptions.</li>
+<li><input disabled="" type="checkbox"/>
+Internal workings of <code>HashMap</code> (<code>hashCode()</code> and <code>equals()</code>, buckets, and collisions).</li>
+<li><input disabled="" type="checkbox"/>
+Relational schema design, Foreign Keys, indexing, and SQL Joins.</li>
+<li><input disabled="" type="checkbox"/>
+Spring Boot Inversion of Control (IoC), Beans, and Constructor Injection.</li>
+<li><input disabled="" type="checkbox"/>
+Controller $\rightarrow$ Service $\rightarrow$ Repository architectural pattern.</li>
+<li><input disabled="" type="checkbox"/>
+The DTO pattern and why JPA Entities must never be leaked through the API layer.</li>
+<li><input disabled="" type="checkbox"/>
+Spring Data JPA derived queries and resolving the N+1 select problem.</li>
+<li><input disabled="" type="checkbox"/>
+Spring Security 6 <code>SecurityFilterChain</code> and stateless JWT lifecycle.</li>
+<li><input disabled="" type="checkbox"/>
+Writing unit tests with Mockito and JUnit 5.</li>
+<li><input disabled="" type="checkbox"/>
+Containerizing dependencies using <code>docker-compose.yml</code>.</li>
+</ul>
+
+
+    
+    
+
+    
+    <div class="mt-8 pt-6 border-t border-gray-500/15">
+        <div class="flex flex-wrap items-center gap-4">
+            <a href="https://github.com/CC-MNNIT/cc-website/edit/main//content/roadmaps/java-spring-boot.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                </svg>
+                <span>Edit this page</span>
+            </a>
+            
+            
+            
+                
+                
+            
+            
+            <button onclick="navigator.clipboard.writeText(window.location.href).then(() => { this.innerHTML = this.innerHTML.replace('Copy URL', 'Copied!'); setTimeout(() => { this.innerHTML = this.innerHTML.replace('Copied!', 'Copy URL'); }, 2000); }).catch(() => { console.error('Failed to copy URL'); })" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+                <span>Copy URL</span>
+            </button>
+            
+            
+            <a href="https://twitter.com/intent/tweet?url=https%3A//cc-club.in/roadmaps/java-spring-boot/&text=Java%20%26%20Spring%20Boot%20Roadmap" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </svg>
+                <span>Share on X</span>
+            </a>
+            
+        </div>
+    </div>
+    
+
+
+                        
+
+
+
+                        <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="prev-nav-item">
+                                    
+    
+        
+        <a class="nav-button nav-button-prev group" href="https://cc-club.in/roadmaps/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="nav-button-label">Back to</span>
+                </div>
+                <div class="nav-button-title">Learning Roadmaps</div>
+            </div>
+        </a>
+    
+
+                                </div>
+                                <div class="next-nav-item">
+                                    
+    
+        <a class="nav-button nav-button-next group" href="https://cc-club.in/roadmaps/machine-learning/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <span class="nav-button-label">Next</span>
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                <div class="nav-button-title">Machine Learning Roadmap</div>
+            </div>
+        </a>
+    
+
+                                </div>
+                            </div>
+                        </nav>
+                    </main>
+            
+
+                    
+                        
+
+<div class="hidden lg:block" >
+    <div class="sticky top-20 px-4 py-2 border-l border-gray-500/15">
+        <h4 class="text-lg font-bold mb-1">ON THIS PAGE</h4>
+            <ul class="menu menu-sm toc-menu">
+            
+                <li>
+                    
+                    <details class="toc-details" >
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/java-spring-boot/#java-spring-boot-roadmap" class="toc-link">Java &amp; Spring Boot Roadmap</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#1-overview" class="toc-link">1. Overview</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#2-learning-path-breakdown" class="toc-link">2. Learning Path Breakdown</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#3-capstone-project-campus-event-management-platform" class="toc-link">3. Capstone Project: Campus Event &amp; Management Platform</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#4-skills-checklist-for-campus-placements-internships" class="toc-link">4. Skills Checklist for Campus Placements &amp; Internships</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+            </ul>
+    </div>
+</div>
+
+
+                    
+                    
+                </div>
+            
+            </div>
+
+            <script>
+              // Determine theme: localStorage > extra.default_colorset > cc-dark
+              // Expose theme config for global use (e.g., js/theme.js)
+              
+              
+              
+                  
+                  
+                  
+                  
+              
+              window.defaultColorset = "dark";
+              window.darkBrightness = "normal";
+              window.lightBrightness = "normal";
+              window.themeMap = { "dark": "cc-dark", "light": "cc-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "cc-dark";
+
+              // Theme mapping - user-facing names are the theme identifiers
+              var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
+              var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
+              var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+
+              // Initialize and run Mermaid only when loaded
+              window.initMermaid = function() {
+                var mermaidTheme = "dark";
+                if(currentUserTheme == "cc-light") {
+                  mermaidTheme = "light";
+                }
+                
+                if (typeof mermaid !== 'undefined') {
+                  mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
+                  
+                  // Function to render mermaid diagrams
+                  var renderMermaid = async function() {
+                    const mermaidElements = document.querySelectorAll('.mermaid');
+                    if (mermaidElements.length > 0) {
+                        await mermaid.run({
+                            nodes: mermaidElements
+                        });
+                    }
+                  };
+                  
+                  // Check if DOMContentLoaded has already fired
+                  if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', renderMermaid);
+                  } else {
+                    // DOMContentLoaded already fired, run immediately
+                    renderMermaid();
+                  }
+                }
+              };
+              
+              // Auto-initialize if Mermaid is already loaded
+              if (typeof mermaid !== 'undefined') {
+                window.initMermaid();
+              }
+            </script>
+
+            
+<footer class="site-footer">
+    <!-- Main footer content -->
+    <div class="w-full py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer grid -->
+            <div class="footer-content">
+                
+                <!-- Column 1: About/Logo -->
+                <div class="footer-col space-y-4">
+                    <div class="footer-logo-container">
+                        
+                        <img src="https://cc-club.in/images/logo/cclogo.webp" alt="Logo" class="footer-logo">
+                        
+                        <h3>
+                            CC Club MNNIT
+                        </h3>
+                    </div>
+                    <p>
+                        Our mission since 2010 at MNNIT is to develop in you a passion for problem-solving, critical thinking, innovation and computer science. We strive to achieve this goal through means of events, classes and industry connects.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        
+                            
+                            <li>
+                                <a href="team">
+                                    Our Team
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="blog">
+                                    Blogs
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="projects">
+                                    Projects
+                                </a>
+                            </li>
+                            
+                        
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col space-y-4">
+                    <h4>Contact</h4>
+                    <div class="space-y-3">
+                        
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            computer.club@mnnit.ac.in
+                        </p>
+                        
+                        
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            MNNIT Allahabad, Prayagraj, UP - 211004
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        
+                            
+                            
+                            <a href="https://www.instagram.com/cc.club.mnnit/" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            
+                            
+                            
+                            <a href="https://www.linkedin.com/company/computer-coding-club-mnnit/" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            
+                            
+                            <a href="https://github.com/CC-MNNIT" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            
+                            
+                            <a href="https://discord.gg/EDv6fM5yUm" aria-label="Discord">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            
+                        
+                    </div>
+                    <p>
+                        Connect to stay updated about our events, projects and blogs!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Computer Coding Club. All rights reserved.</p>
+        <div class="footer-made-with">
+            <p>Made with</p>
+            <i class="fas fa-heart"></i>
+            <p>by Team CC</p>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
+            
+                
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+    
+    
+        
+        
+    
+
+
+
+
+
+<label for="my-drawer-2" class="drawer-overlay"></label>
+<div class="mt-16 w-68 h-[calc(100vh-4rem)] bg-base-100 text-base-content flex flex-col overflow-auto thin-scrollbar">
+    
+    <div class="px-2 pt-4 pb-0 flex flex-col items-center gap-2">
+        <div class="w-full flex items-center gap-2">
+            <label for="search-modal" class="input w-full flex items-center justify-between text-left bg-base-100 cursor-pointer border-gray-500/15 hover:border-gray-500/55 hover:border-1 transition" aria-label="검색">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="text-gray-400"><kbd class="kbd">⌘</kbd><kbd class="kbd">K</kbd></span>
+            </label>
+        </div>
+    </div>
+    
+    
+    
+    <div class="lg:hidden px-4 py-2 border-b border-gray-500/10">
+        <div class="text-xs font-semibold text-gray-400 mb-2">QUICK NAV</div>
+        <ul class="menu menu-compact">
+            
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/about" class="text-sm">
+                            
+                            <i class="fa-solid fa-circle-info mr-2"></i>
+                            About
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/blog" class="text-sm">
+                            
+                            <i class="fa-solid fa-blog mr-2"></i>
+                            Blog
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/events" class="text-sm">
+                            
+                            <i class="fa-solid fa-calendar-days mr-2"></i>
+                            Events
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view" class="text-sm" target="_blank" rel="noopener noreferrer">
+                            
+                            <i class="fa-solid fa-calendar-check mr-2"></i>
+                            Calendar
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/projects" class="text-sm">
+                            
+                            <i class="fa-solid fa-code-branch mr-2"></i>
+                            Projects
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/roadmaps" class="text-sm">
+                            
+                            <i class="fa-solid fa-route mr-2"></i>
+                            Roadmaps
+                        </a></li>
+                    
+                
+                    
+                        
+                            <li>
+                                
+                                    <a href="https://cc-club.in/team" class="text-sm">
+                                
+                                <i class="fa-solid fa-user-group mr-2"></i>
+                                Current Team
+                            </a></li>
+                        
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/contact" class="text-sm">
+                            
+                            <i class="fa-solid fa-envelope mr-2"></i>
+                            Contact
+                        </a></li>
+                    
+                
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+    <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
+        <a href="https://cc-club.in/roadmaps/" class="hover:text-primary transition-colors">Learning Roadmaps</a>
+    </div>
+
+    
+    
+    <ul class="hidden lg:block menu w-full flex-grow">
+        
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/web-development">Web Development Roadmap</a></li>
+        
+            <li class="rounded bg-gray-500/15"><a class="hover:no-underline" href="https://cc-club.in/roadmaps/java-spring-boot">Java &amp; Spring Boot Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/machine-learning">Machine Learning Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/open-source">Open Source Contribution Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/devops">DevOps Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/competitive-programming">Competitive Programming Mastery Roadmap</a></li>
+        
+        
+        
+        
+    </ul>
+    
+</div>
+
+            
+        </div>
+        
+        <script>
+            // Apply sidebar preference immediately to prevent FOUC
+            (function() {
+                try {
+                    var savedState = localStorage.getItem('sidebar-state');
+                    var sidebar = document.getElementById('sidebar');
+                    if (savedState === 'closed' && sidebar) {
+                        sidebar.classList.add('sidebar-closed');
+                    }
+                } catch (e) {}
+            })();
+        </script>
+    </div>
+
+    
+        <script type="text/javascript" src="https://cc-club.in/js/theme.js"></script>
+        
+        <!-- Lazy load search functionality -->
+        <script>
+            var searchLoaded = false;
+            var searchLoadCallbacks = [];
+            
+            function loadSearchLibraries(callback) {
+                // If already loaded, execute callback immediately
+                if (searchLoaded && typeof Fuse !== 'undefined' && window.searchIndex) {
+                    if (callback) callback();
+                    return;
+                }
+                
+                // Add callback to queue
+                if (callback) searchLoadCallbacks.push(callback);
+                
+                // If already loading, don't start again
+                if (searchLoaded) return;
+                searchLoaded = true;
+                
+                // Show loading indicator in search input
+                var searchInput = document.getElementById('search');
+                if (searchInput) {
+                    searchInput.placeholder = 'Loading search...';
+                    searchInput.disabled = true;
+                }
+                
+                // Load Fuse.js
+                var fuseScript = document.createElement('script');
+                fuseScript.src = 'https://cc-club.in/fuse.min.js';
+                
+                // Load search index after Fuse.js
+                fuseScript.onload = function() {
+                    var searchIndexScript = document.createElement('script');
+                    searchIndexScript.src = 'https://cc-club.in/search_index.en.js';
+                    searchIndexScript.onload = function() {
+                        // Re-enable search input
+                        if (searchInput) {
+                            searchInput.placeholder = 'Search documentation...';
+                            searchInput.disabled = false;
+                            searchInput.focus();
+                        }
+                        
+                        // Initialize search functionality
+                        if (typeof initSearch === 'function') {
+                            initSearch();
+                        }
+                        
+                        // Execute all queued callbacks
+                        searchLoadCallbacks.forEach(function(cb) { cb(); });
+                        searchLoadCallbacks = [];
+                    };
+                    document.body.appendChild(searchIndexScript);
+                };
+                
+                document.body.appendChild(fuseScript);
+            }
+            
+            // Load search on first interaction with search modal
+            document.addEventListener('DOMContentLoaded', function() {
+                var searchModal = document.getElementById('search-modal');
+                if (searchModal) {
+                    searchModal.addEventListener('change', function() {
+                        if (this.checked) {
+                            loadSearchLibraries();
+                        }
+                    });
+                }
+                
+                // Also load on Ctrl+K / Cmd+K
+                document.addEventListener('keydown', function(e) {
+                    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                        loadSearchLibraries();
+                    }
+                });
+            });
+        </script>
+        
+        
+        <script>
+            // Desktop Sidebar Toggle Logic
+            document.addEventListener('DOMContentLoaded', function() {
+                var toggleBtn = document.getElementById('desktop-sidebar-toggle');
+                var sidebar = document.getElementById('sidebar');
+                
+                if (toggleBtn && sidebar) {
+                    // Toggle handler
+                    toggleBtn.addEventListener('click', function() {
+                        // Check if closed by checking for class
+                        var isClosed = sidebar.classList.contains('sidebar-closed');
+                        
+                        if (isClosed) {
+                            // Opening
+                            sidebar.classList.remove('sidebar-closed');
+                            localStorage.setItem('sidebar-state', 'open');
+                        } else {
+                            // Closing
+                            sidebar.classList.add('sidebar-closed');
+                            localStorage.setItem('sidebar-state', 'closed');
+                        }
+                    });
+                }
+            });
+        </script>
+    
+</body>
+</html>

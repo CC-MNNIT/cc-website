@@ -33,6 +33,10 @@
         <lastmod>2026-02-05</lastmod>
     </url>
     <url>
+        <loc>https://cc-club.in/blog/2026/java-spring-boot-roadmap/</loc>
+        <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
         <loc>https://cc-club.in/blog/2026/ml-models-fail/</loc>
         <lastmod>2026-02-07</lastmod>
     </url>
@@ -173,6 +177,9 @@
         <loc>https://cc-club.in/roadmaps/devops/</loc>
     </url>
     <url>
+        <loc>https://cc-club.in/roadmaps/java-spring-boot/</loc>
+    </url>
+    <url>
         <loc>https://cc-club.in/roadmaps/machine-learning/</loc>
     </url>
     <url>
@@ -195,6 +202,12 @@
     </url>
     <url>
         <loc>https://cc-club.in/tags/aqr/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/backend/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/backend/page/1/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/tags/big-o/</loc>
@@ -287,6 +300,12 @@
         <loc>https://cc-club.in/tags/interview-experience/page/1/</loc>
     </url>
     <url>
+        <loc>https://cc-club.in/tags/java/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/java/page/1/</loc>
+    </url>
+    <url>
         <loc>https://cc-club.in/tags/linux/</loc>
     </url>
     <url>
@@ -347,6 +366,12 @@
         <loc>https://cc-club.in/tags/reinforcement-learning/page/1/</loc>
     </url>
     <url>
+        <loc>https://cc-club.in/tags/roadmap/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/roadmap/page/1/</loc>
+    </url>
+    <url>
         <loc>https://cc-club.in/tags/salesforce/</loc>
     </url>
     <url>
@@ -357,6 +382,12 @@
     </url>
     <url>
         <loc>https://cc-club.in/tags/solana/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/spring-boot/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/spring-boot/page/1/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/tags/time-complexity/</loc>
@@ -375,6 +406,12 @@
     </url>
     <url>
         <loc>https://cc-club.in/tags/visa/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/web-development/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/tags/web-development/page/1/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/team/</loc>
