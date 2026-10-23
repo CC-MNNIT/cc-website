@@ -13,6 +13,74 @@
             {% endif %}
         </h1>
         <p class="text-gray-500">{{ page.description }}</p>
+        {% if page.extra.authors is defined and page.extra.authors %}
+        <div class="flex flex-wrap items-center gap-3 mt-4 text-sm text-base-content/70">
+            <div class="inline-flex items-center">
+                {% for a in page.extra.authors %}
+                {% if a.name is defined %}{% set a_name = a.name %}{% else %}{% set a_name = a %}{% endif %}
+                <img src="https://ui-avatars.com/api/?name={{ a_name | replace(from=" ", to=" +") }}&background=random&color=fff&size=64"
+                    alt="{{ a_name }}" class="w-7 h-7 rounded-full {% if loop.index > 1 %}-ml-2.5 ring-2 ring-base-100{% endif %}">
+                {% endfor %}
+            </div>
+            <span>By
+                {% for a in page.extra.authors %}
+                {% if a.name is defined %}{% set a_name = a.name %}{% set a_li = a.linkedin | default(value="") %}{% else %}{% set a_name = a %}{% set a_li = "" %}{% endif %}
+                {% if loop.index > 1 %}{% if loop.last %} and {% else %}, {% endif %}{% endif %}
+                {% if a_li != "" %}<a href="https://www.linkedin.com/in/{{ a_li }}/" target="_blank" rel="noopener noreferrer" class="font-semibold text-base-content hover:underline">{{ a_name }}</a>{% else %}<span class="font-semibold text-base-content">{{ a_name }}</span>{% endif %}
+                {% endfor %}
+            </span>
+            {% if page.date %}
+            <span>•</span>
+            <span>{{ page.date | date(format="%b %d, %Y") }}</span>
+            {% endif %}
+            {% if page.extra.reading_time %}
+            <span>•</span>
+            <span>{{ page.extra.reading_time }} min read</span>
+            {% endif %}
+        </div>
+        {% elif page.extra.author is defined and page.extra.author %}
+        <div class="flex flex-wrap items-center gap-3 mt-4 text-sm text-base-content/70">
+            {% if page.extra.author2 is defined and page.extra.author2 %}
+            <div class="inline-flex items-center">
+                <img src="https://ui-avatars.com/api/?name={{ page.extra.author | replace(from=" ", to=" +") }}&background=random&color=fff&size=64"
+                    alt="{{ page.extra.author }}" class="w-7 h-7 rounded-full">
+                <img src="https://ui-avatars.com/api/?name={{ page.extra.author2 | replace(from=" ", to=" +") }}&background=random&color=fff&size=64"
+                    alt="{{ page.extra.author2 }}" class="w-7 h-7 rounded-full -ml-2.5 ring-2 ring-base-100">
+            </div>
+            <span>By
+                {% if page.extra.author_linkedin is defined and page.extra.author_linkedin %}
+                <a href="https://www.linkedin.com/in/{{ page.extra.author_linkedin }}/" target="_blank" rel="noopener noreferrer" class="font-semibold text-base-content hover:underline">{{ page.extra.author }}</a>
+                {% else %}
+                <span class="font-semibold text-base-content">{{ page.extra.author }}</span>
+                {% endif %}
+                and
+                {% if page.extra.author2_linkedin is defined and page.extra.author2_linkedin %}
+                <a href="https://www.linkedin.com/in/{{ page.extra.author2_linkedin }}/" target="_blank" rel="noopener noreferrer" class="font-semibold text-base-content hover:underline">{{ page.extra.author2 }}</a>
+                {% else %}
+                <span class="font-semibold text-base-content">{{ page.extra.author2 }}</span>
+                {% endif %}
+            </span>
+            {% else %}
+            <img src="https://ui-avatars.com/api/?name={{ page.extra.author | replace(from=" ", to=" +") }}&background=random&color=fff&size=64"
+                alt="{{ page.extra.author }}" class="w-7 h-7 rounded-full">
+            <span>By
+                {% if page.extra.author_linkedin is defined and page.extra.author_linkedin %}
+                <a href="https://www.linkedin.com/in/{{ page.extra.author_linkedin }}/" target="_blank" rel="noopener noreferrer" class="font-semibold text-base-content hover:underline">{{ page.extra.author }}</a>
+                {% else %}
+                <span class="font-semibold text-base-content">{{ page.extra.author }}</span>
+                {% endif %}
+            </span>
+            {% endif %}
+            {% if page.date %}
+            <span>•</span>
+            <span>{{ page.date | date(format="%b %d, %Y") }}</span>
+            {% endif %}
+            {% if page.extra.reading_time %}
+            <span>•</span>
+            <span>{{ page.extra.reading_time }} min read</span>
+            {% endif %}
+        </div>
+        {% endif %}
     </div>
     {{ page.content | safe }}
 

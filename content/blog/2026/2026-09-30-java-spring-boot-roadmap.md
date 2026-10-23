@@ -4,12 +4,14 @@ date = 2026-09-30
 description = "A practical, zero-fluff guide to mastering Java 21, Spring Boot 3, REST APIs, JPA, Spring Security 6, and building production-ready backends."
 
 [taxonomies]
-tags = ["java", "spring-boot", "backend", "web-development", "roadmap"]
+tags = ["java", "spring-boot", "backend", "roadmap"]
 categories = ["tech"]
 
 [extra]
-author = "Revan Channa"
-author_linkedin = "revan-channa-889b57286"
+authors = [
+  { name = "Revan Channa", linkedin = "revan-channa-889b57286" },
+  { name = "Shanu Kumawat", linkedin = "shanukumawat" }
+]
 +++
 
 ## Introduction
@@ -371,4 +373,4 @@ If method `A()` in `OrderService` calls method `B()` (which has `@Transactional`
 
 ---
 
-*Questions or feedback? Connect with me on [LinkedIn](https://www.linkedin.com/in/revan-channa-889b57286/)!*
+*Questions or feedback? Connect with [Revan](https://www.linkedin.com/in/revan-channa-889b57286/) or [Shanu](https://www.linkedin.com/in/shanukumawat/) on LinkedIn!*

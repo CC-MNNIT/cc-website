@@ -46,6 +46,11 @@ categories = ["tech"]                        # "tech", "tutorials", "insights", 
 [extra]
 author = "Your Full Name"
 author_linkedin = "your-username"            # just the username, not the full URL
+# Or for multiple authors:
+# authors = [
+#   { name = "Author One", linkedin = "username-one" },
+#   { name = "Author Two", linkedin = "username-two" }
+# ]
 # reading_time = 5                           # optional, minutes
 +++
 ```

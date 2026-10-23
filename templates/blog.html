@@ -60,25 +60,70 @@
             <p class="card-excerpt">{{ page.description | default(value=page.summary) | truncate(length=160) }}</p>
 
             <div class="card-meta">
-                {% if page.extra.author %}
-                {% if page.extra.author_linkedin %}
-                <img src="https://ui-avatars.com/api/?name={{page.extra.author | replace(from=" ", to=" +")}}"
-                    alt="{{ page.extra.author }}" class="meta-avatar">
-                <span>By <a href="https://www.linkedin.com/in/{{ page.extra.author_linkedin }}/" target="_blank"
-                        rel="noopener noreferrer" class="author-link">{{ page.extra.author }}</a></span>
-                {% else %}
-                <img src="https://ui-avatars.com/api/?name={{ page.extra.author | replace(from=" ", to=" +")
-                    }}&background=random&color=fff&size=64" alt="{{ page.extra.author }}" class="meta-avatar">
-                <span>By {{ page.extra.author }}</span>
-                {% endif %}
-                <span class="meta-separator">•</span>
-                {% endif %}
+                <div class="meta-info">
+                    {% if page.extra.authors is defined and page.extra.authors %}
+                    <div class="meta-avatars">
+                        {% for a in page.extra.authors %}
+                        {% if a.name is defined %}{% set a_name = a.name %}{% else %}{% set a_name = a %}{% endif %}
+                        <img src="https://ui-avatars.com/api/?name={{ a_name | replace(from=" ", to=" +") }}&background=random&color=fff&size=64"
+                            alt="{{ a_name }}" class="meta-avatar {% if loop.index > 1 %}meta-avatar-overlap{% endif %}">
+                        {% endfor %}
+                    </div>
+                    <span class="meta-author-text">By
+                        {% for a in page.extra.authors %}
+                        {% if a.name is defined %}{% set a_name = a.name %}{% set a_li = a.linkedin | default(value="") %}{% else %}{% set a_name = a %}{% set a_li = "" %}{% endif %}
+                        {% if loop.index > 1 %}{% if loop.last %} and {% else %}, {% endif %}{% endif %}
+                        {% if a_li != "" %}<a href="https://www.linkedin.com/in/{{ a_li }}/" target="_blank"
+                                rel="noopener noreferrer" class="author-link">{{ a_name }}</a>{% else %}{{ a_name }}{% endif %}
+                        {% endfor %}
+                    </span>
+                    <span class="meta-separator">•</span>
+                    {% elif page.extra.author is defined and page.extra.author %}
+                    {% if page.extra.author2 is defined and page.extra.author2 %}
+                    <div class="meta-avatars">
+                        <img src="https://ui-avatars.com/api/?name={{ page.extra.author | replace(from=" ", to=" +") }}&background=random&color=fff&size=64"
+                            alt="{{ page.extra.author }}" class="meta-avatar">
+                        <img src="https://ui-avatars.com/api/?name={{ page.extra.author2 | replace(from=" ", to=" +") }}&background=random&color=fff&size=64"
+                            alt="{{ page.extra.author2 }}" class="meta-avatar meta-avatar-overlap">
+                    </div>
+                    <span class="meta-author-text">By
+                        {% if page.extra.author_linkedin is defined and page.extra.author_linkedin %}
+                        <a href="https://www.linkedin.com/in/{{ page.extra.author_linkedin }}/" target="_blank"
+                            rel="noopener noreferrer" class="author-link">{{ page.extra.author }}</a>
+                        {% else %}
+                        {{ page.extra.author }}
+                        {% endif %}
+                        and
+                        {% if page.extra.author2_linkedin is defined and page.extra.author2_linkedin %}
+                        <a href="https://www.linkedin.com/in/{{ page.extra.author2_linkedin }}/" target="_blank"
+                            rel="noopener noreferrer" class="author-link">{{ page.extra.author2 }}</a>
+                        {% else %}
+                        {{ page.extra.author2 }}
+                        {% endif %}
+                    </span>
+                    <span class="meta-separator">•</span>
+                    {% else %}
+                    {% if page.extra.author_linkedin is defined and page.extra.author_linkedin %}
+                    <img src="https://ui-avatars.com/api/?name={{page.extra.author | replace(from=" ", to=" +")}}"
+                        alt="{{ page.extra.author }}" class="meta-avatar">
+                    <span class="meta-author-text">By <a href="https://www.linkedin.com/in/{{ page.extra.author_linkedin }}/" target="_blank"
+                            rel="noopener noreferrer" class="author-link">{{ page.extra.author }}</a></span>
+                    {% else %}
+                    <img src="https://ui-avatars.com/api/?name={{ page.extra.author | replace(from=" ", to=" +")
+                        }}&background=random&color=fff&size=64" alt="{{ page.extra.author }}" class="meta-avatar">
+                    <span class="meta-author-text">By {{ page.extra.author }}</span>
+                    {% endif %}
+                    <span class="meta-separator">•</span>
+                    {% endif %}
+                    {% endif %}
 
-                <span class="meta-date">{{ page.date | date(format="%b %d, %Y") }}</span>
+                    <span class="meta-date">{{ page.date | date(format="%b %d, %Y") }}</span>
 
-                {% if page.extra.reading_time %}
-                <span>• {{ page.extra.reading_time }} min read</span>
-                {% endif %}
+                    {% if page.extra.reading_time %}
+                    <span class="meta-separator">•</span>
+                    <span class="meta-reading-time">{{ page.extra.reading_time }} min read</span>
+                    {% endif %}
+                </div>
 
                 <div class="meta-tags">
                     {% if page.taxonomies.tags %}

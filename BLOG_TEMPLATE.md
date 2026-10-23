@@ -10,6 +10,11 @@ categories = ["tech"]  # Usually: "tech", "tutorials", "insights", or "stories"
 [extra]
 author = "Your Full Name"
 author_linkedin = "your-linkedin-username"  # Just the username, not the full URL
+# For multiple authors, use `authors` instead:
+# authors = [
+#   { name = "Author One", linkedin = "username-one" },
+#   { name = "Author Two", linkedin = "username-two" }
+# ]
 # reading_time = 5  # Optional: estimated reading time in minutes
 +++
 
