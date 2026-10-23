@@ -12,7 +12,7 @@ badge = "FLAGSHIP"
 date_label = "Oct 21 - Oct 29, 2026"
 external_link = "https://codesangam.cc-club.in/"
 location = "MNNIT Allahabad"
-participants = "830"
+participants = "737+"
 banner_image = "events/2026/codesangam/banner.webp"
 show_banner = true
 
@@ -37,15 +37,17 @@ This year's edition channels the mystical, reality-bending aesthetic of **Doctor
 
 ### Official 2026 Edition Stats
 
-- **Total Participants**: 830
-- **Total Registered Teams**: 454
+- **Unique Students**: 737 (1,074 total event entries)
+- **Total Teams Registered**: 454
+- **Abstracts Submitted**: 229 (73.4% submit rate among eligible tracks)
 
-| Track | Teams Registered | Focus Domain |
-|:---|:---:|:---|
-| **Webster** | 195 | Web Development |
-| **Logical Rhythm** | 142 | Machine Learning & AI |
-| **Softablitz** | 87 | Software Engineering (Any Stack) |
-| **Droidrush** | 30 | Android App Development |
+| Event / Track | Teams Registered | Students | Abstracts Submitted | Missing | Submit Rate |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| **Webster** | 195 | 488 | 153 | 42 | 78.5% |
+| **Softablitz** | 87 | 199 | 60 | 27 | 69.0% |
+| **DroidRush** | 30 | 73 | 16 | 14 | 53.3% |
+| **Logical Rhythm** | 142 | 314 | — *(no abstract round)* | — | — |
+| **Total** | **454** | **737 unique** *(1,074 entries)* | **229** | **83** | **73.4%** *(eligible)* |
 
 ### The 4 Development Tracks
 
@@ -53,28 +55,32 @@ Participants compete in teams of **1 to 3 members** across four major tracks:
 
 #### 1. Webster (Web Development)
 Webster is dedicated to crafting modern, performant web applications. Participants dive into frontend architecture, responsive design, robust server-side APIs, and real-time data synchronization.
-- **Registered Teams**: 195
+- **Registered Teams**: 195 (488 students)
+- **Abstracts Submitted**: 153 (78.5% submit rate)
 - **Team Size**: 1 – 3 Members
 - [View Webster Problem Statement](https://drive.google.com/file/d/157tZ5X-MfVmQTELCBQ77SzYvEiyATXxc/view?usp=sharing)
 - [Webster Live Leaderboard](https://codesangam.cc-club.in/leaderboard/webster)
 
 #### 2. Droidrush (Android Development)
 Droidrush challenges builders to create dynamic, high-performance mobile applications on the Android platform. From intuitive UI flows and material design to seamless offline capabilities and background processing, teams engineer apps that elevate user experiences.
-- **Registered Teams**: 30
+- **Registered Teams**: 30 (73 students)
+- **Abstracts Submitted**: 16 (53.3% submit rate)
 - **Team Size**: 1 – 3 Members
 - [View Droidrush Problem Statement](https://drive.google.com/file/d/1lQYPfDyKZVteoXBPBeESm1jCIbjjc-wK/view?usp=sharing)
 - [Droidrush Live Leaderboard](https://codesangam.cc-club.in/leaderboard/droidrush)
 
 #### 3. Logical Rhythm (Machine Learning & AI)
 Logical Rhythm empowers participants to train intelligent models and extract actionable intelligence from complex datasets. The track tests expertise in data analysis, algorithm design, feature engineering, and deploying deep learning pipelines.
-- **Registered Teams**: 142
+- **Registered Teams**: 142 (314 students)
+- **Format**: Direct ML challenge *(no abstract round required)*
 - **Team Size**: 1 – 3 Members
 - [View Logical Rhythm Problem Statement](https://drive.google.com/file/d/1lQCNaj1nuxRVK5tpn-yXf7shDlhGY-tS/view?usp=sharing)
 - [Logical Rhythm Live Leaderboard](https://codesangam.cc-club.in/leaderboard/logicalrhythm)
 
 #### 4. Softablitz (Software Development / Any Tech Stack)
 Softablitz is an open software engineering event open to any technology stack. Participants are free to choose the programming languages, desktop frameworks, systems tools, or libraries that best realize their vision, shipping a complete, production-ready piece of software.
-- **Registered Teams**: 87
+- **Registered Teams**: 87 (199 students)
+- **Abstracts Submitted**: 60 (69.0% submit rate)
 - **Team Size**: 1 – 3 Members
 - [View Softablitz Problem Statement](https://drive.google.com/file/d/1XTy5r8hh_XRLu-j64Q5jGa_sjuBCgKTS/view?usp=sharing)
 - [Softablitz Live Leaderboard](https://codesangam.cc-club.in/leaderboard/softablitz)
