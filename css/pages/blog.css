@@ -304,26 +304,52 @@
     margin-bottom: 1.5rem;
 }
 
-/* Metadata Bar */
 .card-meta {
     display: flex;
     align-items: center;
-    gap: 12px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 20px;
     padding-top: 1.5rem;
     border-top: 1px solid var(--color-border);
     font-size: 0.9rem;
     color: var(--color-base-content);
-    opacity: 0.7;
+    opacity: 0.75;
 }
 
 [data-theme="light"] .card-meta {
     border-top-color: rgba(0, 0, 0, 0.08);
 }
 
+.meta-info {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    min-width: 0;
+}
+
+.meta-avatars {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
 .meta-avatar {
     width: 32px;
     height: 32px;
     border-radius: 50%;
+    flex-shrink: 0;
+    display: block;
+}
+
+.meta-avatar-overlap {
+    margin-left: -10px;
+    box-shadow: 0 0 0 2px var(--color-base-100);
+}
+
+.meta-author-text {
+    display: inline;
 }
 
 /* Author Link */
@@ -334,6 +360,21 @@
     transition: color 0.2s ease;
 }
 
+.author-link:hover {
+    color: var(--color-primary);
+}
+
+.meta-separator {
+    opacity: 0.4;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.meta-date,
+.meta-reading-time {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
 
 /* --- Tags (Chips) --- */
 .meta-tags {
@@ -341,7 +382,7 @@
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    align-items: center;
 }
 
 .meta-tag {
