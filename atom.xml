@@ -5,8 +5,44 @@
     <link rel="self" type="application/atom+xml" href="https://cc-club.in/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://cc-club.in/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-10-21T00:00:00+00:00</updated>
+    <updated>2026-12-28T00:00:00+00:00</updated>
     <id>https://cc-club.in/atom.xml</id>
+    <entry xml:lang="en">
+        <title>OPC 2026</title>
+        <published>2026-12-28T00:00:00+00:00</published>
+        <updated>2026-12-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://cc-club.in/events/2026/opc/"/>
+        <id>https://cc-club.in/events/2026/opc/</id>
+        
+        <content type="html" xml:base="https://cc-club.in/events/2026/opc/">&lt;h2 id=&quot;the-ultimate-algorithmic-arena-returns&quot;&gt;The Ultimate Algorithmic Arena Returns&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;OPC (Open Programming Contest) 2026&lt;/strong&gt; is on the horizon.&lt;/p&gt;
+&lt;p&gt;Organized annually by the &lt;strong&gt;Computer Coding Club (CCC), MNNIT Allahabad&lt;/strong&gt;, OPC is the signature individual competitive programming contest designed to test pure problem-solving intuition, mathematical ingenuity, and raw coding speed under intense time constraints.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;what-to-expect&quot;&gt;What to Expect&lt;/h3&gt;
+&lt;p&gt;While the problem-setting team is crafting this year&#39;s contest behind closed doors, here is what coders can prepare for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Original, Curated Problem Set&lt;/strong&gt;: Diverse algorithmic challenges ranging from greedy techniques and dynamic programming to advanced graph theory and data structures.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;High-Intensity Speed Coding&lt;/strong&gt;: An adrenaline-packed contest format where every second and every submission penalty counts.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Campus &amp;amp; Open Leaderboard&lt;/strong&gt;: Battle against peers and seasoned competitive programmers to claim top rank and glory.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Post-Contest Editorials&lt;/strong&gt;: Comprehensive problem discussions and solution walkthroughs by the problem authors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;stay-tuned&quot;&gt;Stay Tuned&lt;/h3&gt;
+&lt;p&gt;Details regarding the official date, host platform, registration links, and contest timeline will be announced soon.&lt;/p&gt;
+&lt;p&gt;Keep grinding your standard algorithms, sharpen your implementation speed on Codeforces and AtCoder, and get ready for the final coding battle of 2026.&lt;/p&gt;
+&lt;p&gt;Follow the club channels for teaser drops and early registration alerts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Instagram&lt;/strong&gt;: &lt;a rel=&quot;external&quot; href=&quot;https://www.instagram.com/cc.club.mnnit/&quot;&gt;@cc.club.mnnit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Queries&lt;/strong&gt;: &lt;a href=&quot;mailto:computer.club@mnnit.ac.in&quot;&gt;computer.club@mnnit.ac.in&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>CodeSangam 2026</title>
         <published>2026-10-21T00:00:00+00:00</published>
