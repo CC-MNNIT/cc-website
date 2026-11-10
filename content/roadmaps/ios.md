@@ -58,7 +58,7 @@ If you do not currently own an Apple Silicon Mac, you can still begin your iOS j
 | **Navigation** | Segues, Storyboard IDs, `UINavigationController` | **`NavigationStack`** with type-safe `navigationDestination(for:)` |
 | **Dependency Manager** | CocoaPods (`Podfile`), Carthage | **Swift Package Manager (SPM)**: Integrated directly into Xcode |
 
-```mermaid
+{% <mermaid> %}
 graph TD
     App["Your Swift Application Code"] --> SwiftRuntime["Swift 6 Runtime (ARC & Concurrency)"]
     SwiftRuntime --> SwiftUI["SwiftUI Declarative Engine"]
@@ -67,13 +67,13 @@ graph TD
     Metal --> CoreAnimation["Core Animation & Display Compositor (120Hz ProMotion)"]
     App --> SwiftData["SwiftData / SQLite Engine"]
     App --> SystemFrameworks["Apple System Frameworks (CoreLocation, MapKit, AVFoundation)"]
-```
+{% </mermaid> %}
 
 ### 1.3 Navigating from Your Prior Background
 
 Locate your prior programming experience to understand how your mental model translates to Swift:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Start["Your Current Background"] --> T1["Track A: Complete Beginner"]
     Start --> T2["Track B: Kotlin / Android Developer"]
@@ -89,11 +89,11 @@ graph TD
     R2 --> Core
     R3 --> Core
     R4 --> Core
-```
+{% </mermaid> %}
 
 * **Track A (Complete Beginners)**: Begin with Stage 1. Focus on variables, optionals, functions, and struct modeling before opening Xcode project templates.
 * **Track B (Kotlin / Android Developers)**: The architectural concepts are virtually identical! Swift corresponds closely to Kotlin; SwiftUI is the direct peer of Jetpack Compose; Swift Concurrency (`async`/`await`/Actors) maps directly to Kotlin Coroutines and Flows.
-* **Track C (React / Web Developers)**: You already have the correct mental model! SwiftUI is a declarative framework where $UI = f(\text{State})$. Views correspond to React components; `@State` corresponds to `useState`; View Modifiers correspond to utility styles.
+* **Track C (React / Web Developers)**: You already have the correct mental model! SwiftUI is a declarative framework where UI = f(State). Views correspond to React components; `@State` corresponds to `useState`; View Modifiers correspond to utility styles.
 * **Track D (C++ / Python / DSA Students)**: You understand data structures, memory layout, and computational complexity. You will appreciate Swift's value semantics (structs with copy-on-write) and Automatic Reference Counting (ARC).
 
 ---
@@ -143,7 +143,7 @@ let displayBio = userBio ?? "No bio available"
 
 In Swift, **structs are value types** (copied on assignment) while **classes are reference types** (shared instances pointing to a heap allocation).
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph ValueTypes["Value Types (Structs & Enums)"]
         S1["Original Struct A"] -->|"Assignment / Passing"| S2["Independent Copy B"]
@@ -155,7 +155,7 @@ graph TD
         C2["Reference Variable 2"] --> Heap
         Note2["Governed by ARC<br/>Subject to race conditions<br/>Can form retain cycles"]
     end
-```
+{% </mermaid> %}
 
 {% <alert_success> %}
 **The Golden Rule of Swift Modeling**: **Prefer Structs by default**. Use structs for all data models, UI views, network DTOs, and state holders. Reserve classes strictly for stateful coordinators, hardware managers, or scenarios requiring shared mutable identity.
@@ -327,17 +327,17 @@ struct PulseApp: App {
 
 SwiftUI is Apple’s modern declarative UI framework. You describe your interface in pure Swift code, and SwiftUI renders the views using hardware-accelerated Metal pipelines.
 
-### 4.1 The Declarative Equation: $UI = f(\text{State})$
+### 4.1 The Declarative Equation: UI = f(State)
 
 When state updates, SwiftUI computes the minimal difference (diffing the view hierarchy) and automatically animates the affected view nodes without manual DOM or View mutation.
 
-```mermaid
+{% <mermaid> %}
 graph LR
     State["Application State (@State, @Observable)"] -->|"Passes into"| ViewDecl["SwiftUI View body (some View)"]
     ViewDecl -->|"Renders to"| Screen["Metal Hardware GPU Surface"]
     Screen -->|"User Tap / Gesture"| Mutation["Mutates State Property"]
     Mutation -->|"Automatically Re-renders"| State
-```
+{% </mermaid> %}
 
 ### 4.2 Modern State Management with the Observation Framework (`@Observable`)
 
@@ -471,7 +471,7 @@ struct AppNavigationView: View {
 
 A great iOS app must feel authentically native to the Apple platform.
 
-* **SF Symbols**: Apple’s library of over 5,000 vector icons designed to integrate with the San Francisco system font. Supports **Hierarchical**, **Palette**, and **Multicolor** rendering modes:
+* **SF Symbols**: Apple’s library of over 6,000 vector icons designed to integrate with the San Francisco system font. Supports **Hierarchical**, **Palette**, and **Multicolor** rendering modes:
   ```swift
   Image(systemName: "folder.badge.plus")
       .symbolRenderingMode(.hierarchical)
@@ -493,13 +493,13 @@ A great iOS app must feel authentically native to the Apple platform.
 
 Starting in iOS 17, **SwiftData** replaces the legacy, XML-based Core Data model with native Swift macros and compile-time schema validation.
 
-```mermaid
+{% <mermaid> %}
 graph TD
     ModelClass["@Model class ProjectItem"] --> Schema["SwiftData Schema Generator"]
     Schema --> ModelContainer["ModelContainer (Database Store / CloudKit Sync)"]
     ModelContainer --> ModelContext["ModelContext (Scratchpad for Insert / Delete)"]
     ModelContext --> Query["@Query (Reactive View Auto-Updating)"]
-```
+{% </mermaid> %}
 
 ### 6.1 Defining a SwiftData Model
 ```swift
@@ -633,7 +633,7 @@ final class ProjectService {
 
 Accessing platform hardware and Apple-specific system services differentiates native applications.
 
-```mermaid
+{% <mermaid> %}
 graph TD
     App["Your Native iOS Application"] --> Frameworks["Native Apple System Frameworks"]
     Frameworks --> Loc["Core Location & MapKit (GPS & Satellite Maps)"]
@@ -641,7 +641,7 @@ graph TD
     Frameworks --> Auth["LocalAuthentication (Biometric Face ID / Touch ID)"]
     Frameworks --> Notif["UserNotifications (Local & Push Alerts)"]
     Frameworks --> Widget["WidgetKit (Home Screen & Lock Screen Widgets)"]
-```
+{% </mermaid> %}
 
 ### 8.1 Biometric Authentication with `LocalAuthentication`
 ```swift
@@ -739,7 +739,7 @@ struct ContributorTests {
 
 Shipping an iOS application requires configuring Apple Developer certificates, provisioning profiles, and store metadata.
 
-```mermaid
+{% <mermaid> %}
 graph LR
     Code["Xcode Archive Build (.xcarchive)"] --> Organizer["Xcode Organizer Window"]
     Organizer --> Validate["Automated App Store Pre-Validation"]
@@ -747,7 +747,7 @@ graph LR
     ASC --> TestFlight["TestFlight (Internal & External Beta Testers)"]
     TestFlight --> Review["Apple App Review Board"]
     Review --> Ready["App Store Release (Live Worldwide)"]
-```
+{% </mermaid> %}
 
 ### 11.1 Key Distribution Milestones
 1. **Free Personal Team Provisioning**: Allows deploying apps directly to your personal physical iPhone via USB or Wi-Fi for testing without paying any membership fee.
@@ -759,14 +759,14 @@ graph LR
 
 ## 12. Six Progressive Hands-On Milestone Projects
 
-```mermaid
+{% <mermaid> %}
 graph TD
     M1["Milestone 1: QuickMetrics Converter<br/>Focus: Swift 6 Basics, SwiftUI Layout, @State"] --> M2["Milestone 2: PulseHabit Tracker<br/>Focus: SwiftData @Model, @Query, Notifications"]
     M2 --> M3["Milestone 3: Chronicle Voice Memos<br/>Focus: AVFoundation, SwiftData, Sheets, Gestures"]
     M3 --> M4["Milestone 4: DevPulse GitHub Explorer<br/>Focus: URLSession, Codable, AsyncImage, Searchable"]
     M4 --> M5["Milestone 5: BiometricVault Media Locker<br/>Focus: Face ID, Keychain, File Encryption, Camera"]
     M5 --> M6["Milestone 6 (Capstone): OmniMarket Multiplatform Suite<br/>Focus: NavigationStack, Stripe, WidgetKit, Swift Testing, TestFlight"]
-```
+{% </mermaid> %}
 
 ### Milestone 1: QuickMetrics Converter
 * **Goal**: Build an interactive currency, metric, and unit conversion utility.
