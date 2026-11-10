@@ -1335,3 +1335,50 @@
     background: #1976D2;
     color: white;
 }
+/* ============================================
+   Mobile Roadmap: Interactive Path Finder
+   (utility classes p-6/rounded-2xl/shadow-xl/
+   bg-base-200/select-bordered are not in the
+   prebuilt vendor bundle, so style it here)
+   ============================================ */
+#path-finder {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: var(--color-base-200);
+    border: 1px solid var(--color-neutral);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+#path-finder label {
+    letter-spacing: 0.08em;
+}
+
+#path-finder select {
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-neutral);
+    background-color: var(--color-base-100);
+    color: var(--color-base-content);
+}
+
+#path-finder select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 30%, transparent);
+    outline: none;
+}
+
+#finder-result {
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    background: var(--color-base-100);
+    border: 1px solid var(--color-neutral);
+}
+
+#finder-result h4 {
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    #path-finder {
+        padding: 1.25rem;
+    }
+}
