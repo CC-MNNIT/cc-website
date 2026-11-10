@@ -1,0 +1,2101 @@
+
+<!DOCTYPE html>
+
+<html lang="en" style="background-color: #0f172a;">
+
+<head>
+    
+        
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Resource Hints for better performance -->
+    
+
+    <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
+    <script>
+        (function() {
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
+            
+            
+            
+            
+                
+                
+                
+                
+            
+            // Get default values from config
+            var defaultColorset = "dark";
+            var darkBrightness = "normal";
+            var lightBrightness = "normal";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
+            
+            // Expose brightness config for global use (e.g., js/theme.js)
+            window.darkBrightness = darkBrightness;
+            window.lightBrightness = lightBrightness;
+            
+            // Get theme from localStorage or use fallback
+            var currentUserTheme = localStorage.getItem('theme') || fallbackTheme;
+            var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+            
+            // Determine brightness based on current theme
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
+            
+            // Set theme and brightness attributes immediately
+            document.documentElement.setAttribute("data-theme", actualTheme);
+            document.documentElement.setAttribute("data-brightness", currentBrightness);
+        })();
+    </script>
+
+    <style>
+        
+        
+        
+            
+            
+            
+        
+        
+            
+            @font-face {
+                font-family: "Pretendard-Regular";
+                src: url('https://cc-club.in/fonts/Pretendard-Regular.woff') format("woff");
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+            body {
+                font-family: "Pretendard-Regular", sans-serif;
+            }
+        
+    </style>
+
+    
+        
+            <meta name="description" content="A comprehensive, practical guide to mastering native Apple application development with modern Swift 6, SwiftUI, the Observation framework, SwiftData, structured concurrency, and App Store distribution." />
+        
+    
+
+    <title>Swift &amp; Native iOS Development Roadmap | Computer Coding Club</title>
+
+    
+    
+
+      <!-- SEO: Open Graph / Twitter Card -->
+      <meta property="og:title" content="Swift &amp; Native iOS Development Roadmap | Computer Coding Club" />
+      <meta property="og:description" content="A comprehensive, practical guide to mastering native Apple application development with modern Swift 6, SwiftUI, the Observation framework, SwiftData, structured concurrency, and App Store distribution." />
+      <meta property="og:url" content="https://cc-club.in/" />
+      <meta property="og:type" content="website" />
+      
+      <meta property="og:image" content="https://cc-club.in/cc-club-thumbnail.webp" />
+      
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Swift &amp; Native iOS Development Roadmap" />
+      <meta name="twitter:description" content="A comprehensive, practical guide to mastering native Apple application development with modern Swift 6, SwiftUI, the Observation framework, SwiftData, structured concurrency, and App Store distribution." />
+      
+      
+      
+          
+          
+      
+      
+      <meta name="twitter:site" content="@ccclub_mnnit" />
+      
+      
+      <meta name="twitter:creator" content="@ccclub_mnnit" />
+      
+      
+      <meta name="twitter:image" content="https://cc-club.in/cc-club-thumbnail.webp" />
+      
+
+      <!-- Browser address bar color -->
+      <meta name="theme-color" content="#0f172a">
+
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="https://cc-club.in/icons/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="https://cc-club.in/icons/favicon.svg" />
+      <link rel="shortcut icon" href="https://cc-club.in/icons/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="https://cc-club.in/icons/apple-touch-icon.png" />
+      <link rel="manifest" href="https://cc-club.in/icons/site.webmanifest" />
+
+      <!-- CSS -->
+    <link rel="stylesheet" href="https://cc-club.in/css/site.css">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://cc-club.in/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
+
+    <!-- Defer non-critical scripts -->
+    <script defer src="https://cc-club.in/js/copy_code.js"></script>
+    <script defer src="https://cc-club.in/js/copy_heading_link.js"></script>
+    
+    <!-- Lazy load Mermaid and KaTeX - only when needed -->
+    <script>
+        // Lazy load KaTeX and Mermaid when needed
+        window.addEventListener('DOMContentLoaded', function() {
+            // Check for both KaTeX inline and block elements in one pass
+            var katexInlineElements = document.querySelectorAll('.katex-inline');
+            var katexBlockElements = document.querySelectorAll('.katex-block');
+            var hasKatex = katexInlineElements.length > 0 || katexBlockElements.length > 0;
+            var hasMermaid = document.querySelector('.mermaid');
+            
+            // Load KaTeX if math elements are present
+            if (hasKatex) {
+                // Load KaTeX CSS first
+                var katexCSS = document.createElement('link');
+                katexCSS.rel = 'stylesheet';
+                katexCSS.href = 'https://cc-club.in/css/katex.min.css';
+                document.head.appendChild(katexCSS);
+                
+                // Load KaTeX JS
+                var katexScript = document.createElement('script');
+                katexScript.src = 'https://cc-club.in/js/katex.min.js';
+                katexScript.onload = function() {
+                    // Render inline elements
+                    katexInlineElements.forEach(function(elem) {
+                        var texContent = elem.textContent || elem.innerText;
+                        try {
+                            katex.render(texContent, elem, { 
+                                throwOnError: false,
+                                displayMode: false
+                            });
+                        } catch(e) {
+                            console.error('KaTeX render error:', e);
+                        }
+                    });
+                    
+                    // Render block elements
+                    katexBlockElements.forEach(function(elem) {
+                        var texContent = elem.textContent || elem.innerText;
+                        try {
+                            katex.render(texContent, elem, { 
+                                throwOnError: false,
+                                displayMode: true
+                            });
+                        } catch(e) {
+                            console.error('KaTeX render error:', e);
+                        }
+                    });
+                };
+                document.head.appendChild(katexScript);
+            }
+            
+            // Load Mermaid if diagram elements are present
+            if (hasMermaid) {
+                var mermaidScript = document.createElement('script');
+                mermaidScript.src = 'https://cc-club.in/js/mermaid.min.js';
+                mermaidScript.onload = function() {
+                    // Initialize Mermaid after loading
+                    if (typeof window.initMermaid === 'function') {
+                        window.initMermaid();
+                    }
+                };
+                document.head.appendChild(mermaidScript);
+            }
+        });
+    </script>
+
+    
+    
+
+    <style>
+        /* Desktop Sidebar Animation */
+        @media (min-width: 1024px) {
+            /* Only apply fixed width when drawer is in open mode (sidebar visible) */
+            .lg\:drawer-open #sidebar {
+                width: 17rem; /* w-72 default */
+                transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1), border-width 300ms ease;
+                white-space: nowrap;
+            }
+            
+            .lg\:drawer-open #sidebar.sidebar-closed {
+                width: 0;
+                border-right-width: 0;
+            }
+            
+            /* For overlay mode on desktop (landing page), ensure full width for overlay */
+            .drawer:not(.lg\:drawer-open) #sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+<!-- Search Modal -->
+<input type="checkbox" id="search-modal" class="modal-toggle" />
+<div class="modal modal-middle">
+    <div class="modal-box relative max-w-2xl p-0 bg-base-100 shadow-2xl">
+        <label for="search-modal" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 z-10">✕</label>
+        <div class="search-container">
+            <!-- Search Input Container -->
+            <div class="search-input-container px-6 pt-6 pb-4 border-b border-base-300/30">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="search-icon absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-base-content/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input id="search" type="search" placeholder="Search documentation..." class="search-input w-full pl-12 pr-4 py-3 text-base bg-transparent border-0 focus:outline-none focus:ring-0 text-base-content placeholder:text-base-content/40">
+                </div>
+            </div>
+            <!-- Search Results Container -->
+            <div class="search-results-container px-2 py-2 h-96 overflow-y-auto">
+                <div class="search-results__header px-4 py-2 text-xs text-base-content/60"></div>
+                <ul class="search-results__items space-y-1"></ul>
+            </div>
+            <!-- Search Footer -->
+            <div class="search-footer px-6 py-3 border-t border-base-300/30 flex items-center justify-end gap-4 text-xs text-base-content/50">
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↑</kbd>
+                    <kbd class="kbd kbd-xs">↓</kbd>
+                    <span>to navigate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↵</kbd>
+                    <span>to select</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">esc</kbd>
+                    <span>to close</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+    
+    
+    <div class="drawer lg:drawer-open">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col pt-16">
+            
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="navbar opacity-95 fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-500/15 backdrop-blur-3xl">
+    <!-- Mobile hamburger (and Desktop on Root Page) -->
+    <div class="flex-none lg:hidden">
+        <label for="my-drawer-2" class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </label>
+    </div>
+    <!-- Desktop sidebar toggle -->
+    
+    <div class="flex-none hidden lg:block">
+        <button id="desktop-sidebar-toggle" class="btn btn-square btn-ghost" aria-label="Toggle sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+    
+    <!-- Logo -->
+    <div class="flex-1">
+        <a href="https://cc-club.in"
+            class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link"
+            style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+            
+            <img src="https://cc-club.in/images/logo/cclogo.webp" alt="CC Club"
+                class="h-18 w-auto" style="padding: 10px;"  />
+            
+        </a>
+    </div>
+    <!-- Desktop AND Mobile Menu - Theme toggle always visible -->
+    <div class="flex-none flex lg:flex">
+        <ul class="menu menu-horizontal px-1 items-center">
+            <!-- Desktop navigation items (hidden on mobile) -->
+            <div class="hidden lg:flex lg:contents">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/about">
+                            
+                            <i class="fa-solid fa-circle-info"></i>
+                            About
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/blog">
+                            
+                            <i class="fa-solid fa-blog"></i>
+                            Blog
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/events">
+                            
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Events
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                    <a class="btn btn-ghost hover:no-underline "
+                        href="https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view" target="_blank" rel="noopener noreferrer">
+                        
+                            <i class="fa-solid fa-calendar-check"></i>
+                            Calendar
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/projects">
+                            
+                            <i class="fa-solid fa-code-branch"></i>
+                            Projects
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/roadmaps">
+                            
+                            <i class="fa-solid fa-route"></i>
+                            Roadmaps
+                        </a>
+                </li>
+                
+                
+                
+                <li class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        <i class="fa-solid fa-users"></i>
+                        Community
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
+                        
+                        
+                        <li>
+                            
+                                <a class="btn btn-ghost hover:no-underline "
+                                    href="https://cc-club.in/team">
+                                    
+                                    <i class="fa-solid fa-user-group"></i>
+                                    Current Team
+                                </a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/contact">
+                            
+                            <i class="fa-solid fa-envelope"></i>
+                            Contact
+                        </a>
+                </li>
+                
+                
+                
+
+                
+            </div>
+
+            
+            
+            
+            
+            <li class="flex items-center">
+                <label class="swap swap-rotate btn btn-ghost btn-circle">
+                    <input type="checkbox" class="theme-controller" value="cc-dark" aria-labelledby="swap color" />
+                    <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+                    <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                </label>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const currentPath = window.location.pathname;
+
+        const navLinks = document.querySelectorAll('.navbar a[href]:not(.logo-link)');
+
+        navLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
+            if (link.classList.contains('active-nav')) {
+                return;
+            }
+
+            let isActive = false;
+
+            if (linkPath === '/') {
+                isActive = (currentPath === '/' || currentPath === '');
+            } else {
+                isActive = currentPath.startsWith(linkPath);
+            }
+
+            if (isActive) {
+                link.classList.add('active-nav');
+            } else {
+                link.classList.remove('active-nav');
+            }
+        });
+    });
+</script>
+
+
+
+            
+            
+            
+            
+                
+            
+
+            
+            <div class="p-8 w-full flex justify-center">
+                <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
+                    <main class="prose w-full">
+            
+                        
+    <div class="mb-12 pb-4 border-b border-gray-500/15">
+        <h1 class="flex flex-wrap items-center gap-3">
+            Swift &amp; Native iOS Development Roadmap
+            
+                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">NATIVE</span>
+            
+        </h1>
+        <p class="text-gray-500">A comprehensive, practical guide to mastering native Apple application development with modern Swift 6, SwiftUI, the Observation framework, SwiftData, structured concurrency, and App Store distribution.</p>
+        
+    </div>
+    <p>Apple’s iOS powers more than two billion active devices globally, anchoring a premium software ecosystem celebrated for hardware integration, design precision, fluid ergonomics, and high developer monetization. For software engineers and college students, mastering native iOS development provides the capability to build high-performance applications for <strong>iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro</strong>.</p>
+<p>However, iOS development has evolved dramatically. If you are learning from tutorials created before 2023, you are likely reading obsolete patterns: imperative UIKit storyboards, manual frame calculations, <code>AutoLayout</code> constraint gymnastics, Combine-based <code>@Published</code> state boilerplate, and legacy Core Data XML mapping models.</p>
+<p>Modern iOS development is centered on <strong>Swift 6</strong> with compile-time data race safety, declarative UI via <strong>SwiftUI</strong>, the modern <strong>Observation framework (<code>@Observable</code>)</strong>, native persistence via <strong>SwiftData</strong>, and high-level <strong>Swift Concurrency (<code>async</code>/<code>await</code>, Actors)</strong>.</p>
+<p>This roadmap is designed by the <strong>Computer Coding Club (CC), MNNIT Allahabad</strong> to guide you from core Swift programming to architecting, profiling, testing, and distributing production-grade native iOS applications.</p>
+<hr />
+<h2 id="1-orientation-the-apple-development-paradigm">1. Orientation: The Apple Development Paradigm</h2>
+<p>Before writing your first Swift file, you must understand Apple's development philosophy, the platform tooling stack, and the physical hardware requirements.</p>
+<h3 id="1-1-the-hardware-reality-macos-xcode">1.1 The Hardware Reality: macOS &amp; Xcode</h3>
+<p>Unlike web or Android development—which can be practiced across Linux, Windows, and macOS—native Apple development is coupled to Apple's proprietary developer toolchain:</p>
+<ul>
+<li><strong>Xcode</strong>: Apple's unified IDE for building, testing, and archiving apps for all Apple platforms. <strong>Xcode runs exclusively on macOS</strong>.</li>
+<li><strong>Apple Silicon (M1/M2/M3/M4)</strong>: Modern iOS Simulators compile native ARM64 binaries directly on Apple Silicon Macs, providing instantaneous launch times and zero virtualization overhead.</li>
+</ul>
+<div role="alert" class="alert alert-warning alert-soft"><div><p><strong>Realistic Pathways for Students Without a Mac</strong>:
+If you do not currently own an Apple Silicon Mac, you can still begin your iOS journey realistically:</p>
+<ol>
+<li><strong>Learn Swift First on Linux or Windows</strong>: The Swift compiler, standard library, and package manager are open source. You can write and execute pure Swift code using the official Swift toolchain in VS Code on Windows (via WSL2 or native toolchain) or Linux.</li>
+<li><strong>Cloud macOS Instances</strong>: Services like MacinCloud or remote virtual machines allow you to connect to a real macOS environment over VNC/RDP for compiling Xcode projects.</li>
+<li><strong>College / Campus Workstations</strong>: Utilize campus lab Mac workstations for compiling native iOS targets and running simulators.</li>
+<li><strong>The Bottom Line</strong>: To build native iOS apps with SwiftUI, test on the iOS Simulator, and upload binaries to the App Store, <strong>macOS is ultimately mandatory</strong>.</li>
+</ol>
+</div></div>
+<h3 id="1-2-the-evolution-modern-swift-swiftui-vs-legacy-ios">1.2 The Evolution: Modern Swift &amp; SwiftUI vs. Legacy iOS</h3>
+<table><thead><tr><th style="text-align: left">Platform Dimension</th><th style="text-align: left">Legacy iOS (Pre-2020)</th><th style="text-align: left">Modern Native iOS (2026 / Swift 6 &amp; iOS 17+)</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>Primary Language</strong></td><td style="text-align: left">Objective-C / Early Swift (Runtime dynamic messaging)</td><td style="text-align: left"><strong>Swift 6</strong>: Type-safe, value-oriented, compile-time concurrency safety</td></tr>
+<tr><td style="text-align: left"><strong>UI Toolkit</strong></td><td style="text-align: left">Imperative UIKit (<code>UIViewController</code>, XIBs, Storyboards)</td><td style="text-align: left"><strong>SwiftUI</strong>: Declarative, reactive UI in pure Swift</td></tr>
+<tr><td style="text-align: left"><strong>State Management</strong></td><td style="text-align: left">MVC / MVVM with Combine (<code>ObservableObject</code>, <code>@Published</code>)</td><td style="text-align: left"><strong>Observation Framework (<code>@Observable</code>)</strong> with direct property tracking</td></tr>
+<tr><td style="text-align: left"><strong>Concurrency</strong></td><td style="text-align: left">Grand Central Dispatch (<code>DispatchQueue.main.async</code>, locks)</td><td style="text-align: left"><strong>Swift Structured Concurrency</strong>: <code>async</code>/<code>await</code>, <code>TaskGroup</code>, <code>Actors</code></td></tr>
+<tr><td style="text-align: left"><strong>Local Persistence</strong></td><td style="text-align: left"><code>CoreData</code> (<code>.xcdatamodeld</code>, <code>NSManagedObject</code>, context threads)</td><td style="text-align: left"><strong>SwiftData</strong>: Swift-native <code>@Model</code> macros, automatic schema migration</td></tr>
+<tr><td style="text-align: left"><strong>Navigation</strong></td><td style="text-align: left">Segues, Storyboard IDs, <code>UINavigationController</code></td><td style="text-align: left"><strong><code>NavigationStack</code></strong> with type-safe <code>navigationDestination(for:)</code></td></tr>
+<tr><td style="text-align: left"><strong>Dependency Manager</strong></td><td style="text-align: left">CocoaPods (<code>Podfile</code>), Carthage</td><td style="text-align: left"><strong>Swift Package Manager (SPM)</strong>: Integrated directly into Xcode</td></tr>
+</tbody></table>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    App["Your Swift Application Code"] --> SwiftRuntime["Swift 6 Runtime (ARC & Concurrency)"]
+    SwiftRuntime --> SwiftUI["SwiftUI Declarative Engine"]
+    SwiftUI --> Observation["Observation Engine (@Observable)"]
+    SwiftUI --> Metal["Metal Graphics Engine (Hardware GPU Acceleration)"]
+    Metal --> CoreAnimation["Core Animation & Display Compositor (120Hz ProMotion)"]
+    App --> SwiftData["SwiftData / SQLite Engine"]
+    App --> SystemFrameworks["Apple System Frameworks (CoreLocation, MapKit, AVFoundation)"]
+</pre>
+<h3 id="1-3-navigating-from-your-prior-background">1.3 Navigating from Your Prior Background</h3>
+<p>Locate your prior programming experience to understand how your mental model translates to Swift:</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    Start["Your Current Background"] --> T1["Track A: Complete Beginner"]
+    Start --> T2["Track B: Kotlin / Android Developer"]
+    Start --> T3["Track C: React / Web Developer"]
+    Start --> T4["Track D: C++ / Python / DSA Student"]
+
+    T1 --> R1["Master Swift syntax, optionals, and value types first"]
+    T2 --> R2["Map Kotlin to Swift (Compose = SwiftUI, Coroutines = async/await)"]
+    T3 --> R3["Map declarative React components to SwiftUI Views; Hooks to State"]
+    T4 --> R4["Leverage strong typed logic; learn ARC memory management"]
+
+    R1 --> Core["Core Milestone: Modern Swift 6 + SwiftUI Foundations"]
+    R2 --> Core
+    R3 --> Core
+    R4 --> Core
+</pre>
+<ul>
+<li><strong>Track A (Complete Beginners)</strong>: Begin with Stage 1. Focus on variables, optionals, functions, and struct modeling before opening Xcode project templates.</li>
+<li><strong>Track B (Kotlin / Android Developers)</strong>: The architectural concepts are virtually identical! Swift corresponds closely to Kotlin; SwiftUI is the direct peer of Jetpack Compose; Swift Concurrency (<code>async</code>/<code>await</code>/Actors) maps directly to Kotlin Coroutines and Flows.</li>
+<li><strong>Track C (React / Web Developers)</strong>: You already have the correct mental model! SwiftUI is a declarative framework where UI = f(State). Views correspond to React components; <code>@State</code> corresponds to <code>useState</code>; View Modifiers correspond to utility styles.</li>
+<li><strong>Track D (C++ / Python / DSA Students)</strong>: You understand data structures, memory layout, and computational complexity. You will appreciate Swift's value semantics (structs with copy-on-write) and Automatic Reference Counting (ARC).</li>
+</ul>
+<hr />
+<h2 id="2-stage-1-modern-swift-6-language-mastery">2. Stage 1: Modern Swift 6 Language Mastery</h2>
+<p>Swift is an expressive, multi-paradigm compiled language designed for safety, speed, and developer ergonomic joy.</p>
+<h3 id="2-1-variables-type-inference-optionals">2.1 Variables, Type Inference &amp; Optionals</h3>
+<p>Swift enforces absolute type safety. Immutability is the default:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Immutability: Prefer &#39;let&#39; over &#39;var&#39;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">let</span><span> organizationName </span><span style="color: #F29668;">=</span><span style="color: #AAD94C;"> &quot;Computer Coding Club&quot;</span><span style="color: #5A6673;font-style: italic;"> // Cannot be reassigned</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">var</span><span> activeMembersCount </span><span style="color: #F29668;">=</span><span style="color: #D2A6FF;"> 450</span><span style="color: #5A6673;font-style: italic;">                  // Mutable variable</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Optionals: Eliminating Null Pointer Dereferencing</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">var</span><span> userBio:</span><span style="color: #39BAE6;"> String</span><span style="color: #F29668;">? =</span><span style="color: #D2A6FF;"> nil</span><span style="color: #5A6673;font-style: italic;">                    // Explicitly allows presence or absence of value</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// 1. Safe Unwrapping with &#39;if let&#39;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">if let</span><span> bio </span><span style="color: #F29668;">=</span><span> userBio {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">    print</span><span>(</span><span style="color: #AAD94C;">&quot;Bio: </span><span style="color: #FF8F40;">\(</span><span>bio</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;">&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>}</span><span style="color: #FF8F40;"> else</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">    print</span><span>(</span><span style="color: #AAD94C;">&quot;User has not set a bio.&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// 2. Early Guard Clauses with &#39;guard let&#39; (Idiomatic Swift!)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">func</span><span style="color: #FFB454;"> printProfile</span><span>(</span><span style="color: #FFB454;">username</span><span>: </span><span style="color: #39BAE6;">String</span><span>, </span><span style="color: #FFB454;">bio</span><span>: </span><span style="color: #39BAE6;">String</span><span style="color: #F29668;">?</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    guard let</span><span> bio </span><span style="color: #FF8F40;">else</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">        print</span><span>(</span><span style="color: #AAD94C;">&quot;Profile for </span><span style="color: #FF8F40;">\(</span><span>username</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;"> has no bio.&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // &#39;bio&#39; is now unwrapped and accessible throughout the rest of the function scope!</span></span>
+<span class="giallo-l"><span style="color: #F07178;">    print</span><span>(</span><span style="color: #AAD94C;">&quot;</span><span style="color: #FF8F40;">\(</span><span>username</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;">: </span><span style="color: #FF8F40;">\(</span><span>bio</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;">&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// 3. Nil-Coalescing Operator (??)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">let</span><span> displayBio </span><span style="color: #F29668;">=</span><span> userBio </span><span style="color: #F29668;">??</span><span style="color: #AAD94C;"> &quot;No bio available&quot;</span></span></code></pre><div role="alert" class="alert alert-warning alert-soft"><div><p><strong>Avoid the Force-Unwrap Operator (<code>!</code>)</strong>: Writing <code>userBio!</code> forces the compiler to assume the optional contains a value. If that variable happens to be <code>nil</code> at runtime, your application will crash immediately with a fatal error. Treat <code>!</code> as a serious code smell; use <code>guard let</code>, <code>if let</code>, or <code>??</code> instead.</p>
+</div></div>
+<h3 id="2-2-the-fundamental-choice-value-types-structs-vs-reference-types-classes">2.2 The Fundamental Choice: Value Types (Structs) vs. Reference Types (Classes)</h3>
+<p>In Swift, <strong>structs are value types</strong> (copied on assignment) while <strong>classes are reference types</strong> (shared instances pointing to a heap allocation).</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    subgraph ValueTypes["Value Types (Structs & Enums)"]
+        S1["Original Struct A"] -->|"Assignment / Passing"| S2["Independent Copy B"]
+        Note1["Allocated on Stack<br/>Thread-safe by default<br/>Predictable lifecycle"]
+    end
+
+    subgraph ReferenceTypes["Reference Types (Classes)"]
+        C1["Reference Variable 1"] --> Heap["Single Shared Instance on Heap"]
+        C2["Reference Variable 2"] --> Heap
+        Note2["Governed by ARC<br/>Subject to race conditions<br/>Can form retain cycles"]
+    end
+</pre>
+<div role="alert" class="alert alert-success alert-soft"><div><p><strong>The Golden Rule of Swift Modeling</strong>: <strong>Prefer Structs by default</strong>. Use structs for all data models, UI views, network DTOs, and state holders. Reserve classes strictly for stateful coordinators, hardware managers, or scenarios requiring shared mutable identity.</p>
+</div></div>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Idiomatic Swift Data Model (Struct with Memberwise Initializer)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">struct</span><span style="color: #59C2FF;"> Contributor</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> Identifiable</span><span>, </span><span style="color: #39BAE6;">Sendable</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    let</span><span> id: UUID</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    let</span><span> username:</span><span style="color: #39BAE6;"> String</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> commitsCount:</span><span style="color: #39BAE6;"> Int</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    let</span><span> isCoreTeam:</span><span style="color: #39BAE6;"> Bool</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // Mutating function required for modifying struct properties internally</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    mutating func</span><span style="color: #FFB454;"> recordCommit</span><span>() {</span></span>
+<span class="giallo-l"><span>        commitsCount </span><span style="color: #F29668;">+=</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h3 id="2-3-protocols-protocol-oriented-programming-pop">2.3 Protocols &amp; Protocol-Oriented Programming (POP)</h3>
+<p>While object-oriented languages rely on class inheritance, Swift embraces <strong>Protocol-Oriented Programming</strong>:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">protocol</span><span style="color: #59C2FF;"> RepositorySyncable</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> repositoryName:</span><span style="color: #39BAE6;"> String</span><span> {</span><span style="color: #FF8F40;"> get</span><span> }</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> sync</span><span>()</span><span style="color: #FF8F40;"> async throws</span><span style="color: #F29668;"> -&gt;</span><span style="color: #39BAE6;"> Int</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Protocol Extensions: Providing default implementations</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">extension</span><span style="color: #59C2FF;"> RepositorySyncable</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> printSummary</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">        print</span><span>(</span><span style="color: #AAD94C;">&quot;Repository: </span><span style="color: #FF8F40;">\(</span><span>repositoryName</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;"> is synchronized.&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Conforming via Struct</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">struct</span><span style="color: #59C2FF;"> ProjectManager</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> RepositorySyncable</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    let</span><span> repositoryName:</span><span style="color: #39BAE6;"> String</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> sync</span><span>()</span><span style="color: #FF8F40;"> async throws</span><span style="color: #F29668;"> -&gt;</span><span style="color: #39BAE6;"> Int</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">        // Perform sync logic</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span style="color: #D2A6FF;"> 42</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h3 id="2-4-memory-management-automatic-reference-counting-arc">2.4 Memory Management &amp; Automatic Reference Counting (ARC)</h3>
+<p>Swift uses <strong>Automatic Reference Counting (ARC)</strong> to track and manage application memory. Unlike garbage-collected runtimes (such as Java or Go) that periodically freeze threads to sweep memory, ARC deallocates heap objects deterministically as soon as their reference count hits zero.</p>
+<h4 id="retain-cycles-and-memory-leaks">Retain Cycles and Memory Leaks</h4>
+<p>A <strong>retain cycle</strong> occurs when two class instances hold strong references to each other, preventing ARC from ever releasing them from memory.</p>
+<ul>
+<li><strong><code>weak</code> reference</strong>: Always optional (<code>weak var delegate: MyDelegate?</code>). Does not increment the reference count; automatically becomes <code>nil</code> when the referenced instance is deallocated.</li>
+<li><strong><code>unowned</code> reference</strong>: Non-optional reference that assumes the referenced object will never be nil while accessed.</li>
+</ul>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #59C2FF;"> SessionManager</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    let</span><span> id </span><span style="color: #F29668;">=</span><span style="color: #F07178;"> UUID</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // Weak reference breaks the retain cycle with the coordinator</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    weak var</span><span> coordinator: AppCoordinator</span><span style="color: #F29668;">?</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    deinit</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">        print</span><span>(</span><span style="color: #AAD94C;">&quot;SessionManager </span><span style="color: #FF8F40;">\(</span><span>id</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;"> was successfully deallocated from RAM.&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h3 id="2-5-swift-6-structured-concurrency-async-await-actors">2.5 Swift 6 Structured Concurrency: Async, Await &amp; Actors</h3>
+<p>Swift 6 introduces <strong>Complete Concurrency Safety</strong>, eliminating data races at compile time:</p>
+<ul>
+<li><strong><code>async</code> / <code>await</code></strong>: Sequential-looking asynchronous execution.</li>
+<li><strong><code>Task</code> &amp; <code>TaskGroup</code></strong>: Structured units of concurrent execution.</li>
+<li><strong><code>Actor</code></strong>: Reference types that isolate mutable state to ensure only one thread can access their properties at a time, preventing race conditions.</li>
+<li><strong><code>@MainActor</code></strong>: A global actor that guarantees code executes on the main UI thread.</li>
+</ul>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Thread-safe state isolation with Actor</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">actor</span><span style="color: #59C2FF;"> AnalyticsManager</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    private var</span><span> eventCounts: [</span><span style="color: #39BAE6;">String</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> Int</span><span>]</span><span style="color: #F29668;"> =</span><span> [</span><span style="color: #F29668;">:</span><span>]</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> logEvent</span><span>(</span><span style="color: #FFB454;">name</span><span>: </span><span style="color: #39BAE6;">String</span><span>) {</span></span>
+<span class="giallo-l"><span>        eventCounts[name, </span><span style="color: #F07178;">default</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 0</span><span>]</span><span style="color: #F29668;"> +=</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> count</span><span>(</span><span style="color: #FFB454;">for</span><span style="color: #D2A6FF;"> name</span><span>: </span><span style="color: #39BAE6;">String</span><span>)</span><span style="color: #F29668;"> -&gt;</span><span style="color: #39BAE6;"> Int</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> eventCounts[name]</span><span style="color: #F29668;"> ??</span><span style="color: #D2A6FF;"> 0</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// ViewModel running on MainActor for UI safety</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">@MainActor</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #59C2FF;"> FeedViewModel</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> items: [</span><span style="color: #39BAE6;">String</span><span>]</span><span style="color: #F29668;"> =</span><span> []</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    private let</span><span> analytics: AnalyticsManager</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    init</span><span>(</span><span style="color: #FFB454;">analytics</span><span>: AnalyticsManager) {</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span>.analytics</span><span style="color: #F29668;"> =</span><span> analytics</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> refreshFeed</span><span>()</span><span style="color: #FF8F40;"> async</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">        // Awaiting actor method across thread boundary</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        await</span><span> analytics.</span><span style="color: #F07178;">logEvent</span><span>(</span><span style="color: #F07178;">name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;feed_refresh_triggered&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">        // UI updates here are guaranteed to run on the Main Thread</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span>.items</span><span style="color: #F29668;"> =</span><span> [</span><span style="color: #AAD94C;">&quot;New Project 1&quot;</span><span>, </span><span style="color: #AAD94C;">&quot;New Project 2&quot;</span><span>]</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="3-stage-2-xcode-simulator-platform-architecture">3. Stage 2: Xcode, Simulator &amp; Platform Architecture</h2>
+<p>Mastering your development environment ensures smooth daily engineering.</p>
+<h3 id="3-1-xcode-project-anatomy">3.1 Xcode Project Anatomy</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="plain"><span class="giallo-l"><span>PulseApp/</span></span>
+<span class="giallo-l"><span>├── App.swift                # Application entry point (@main struct App)</span></span>
+<span class="giallo-l"><span>├── ContentView.swift        # Root SwiftUI View</span></span>
+<span class="giallo-l"><span>├── Models/                  # SwiftData models and domain entities</span></span>
+<span class="giallo-l"><span>├── Services/                # URLSession network clients</span></span>
+<span class="giallo-l"><span>├── Assets.xcassets          # App icons, accent colors, vector assets (PDF/SVG)</span></span>
+<span class="giallo-l"><span>├── Preview Content/         # Mock data fixtures for Xcode Previews</span></span>
+<span class="giallo-l"><span>└── PulseApp.xcodeproj       # Project configuration, build targets, signing</span></span></code></pre><h3 id="3-2-the-modern-swiftui-application-lifecycle">3.2 The Modern SwiftUI Application Lifecycle</h3>
+<p>In legacy iOS, application startup was governed by <code>UIApplicationDelegate</code> with complex delegate callbacks (<code>didFinishLaunchingWithOptions</code>, <code>applicationDidEnterBackground</code>).</p>
+<p>Modern SwiftUI applications use a clean, declarative structure:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> SwiftUI</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">@main</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">struct</span><span style="color: #59C2FF;"> PulseApp</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> App</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // Observing system lifecycle state</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    @Environment</span><span>(\.scenePhase)</span><span style="color: #FF8F40;"> private var</span><span> scenePhase</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> body:</span><span style="color: #FF8F40;"> some</span><span> Scene {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">        WindowGroup</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">            ContentView</span><span>()</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>        .</span><span style="color: #F07178;">onChange</span><span>(</span><span style="color: #F07178;">of</span><span style="color: #BFBDB6B3;">:</span><span> scenePhase) { oldPhase, newPhase </span><span style="color: #FF8F40;">in</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            switch</span><span> newPhase {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            case</span><span> .active</span><span style="color: #F29668;">:</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                print</span><span>(</span><span style="color: #AAD94C;">&quot;App is in foreground and interactive.&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            case</span><span> .inactive</span><span style="color: #F29668;">:</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                print</span><span>(</span><span style="color: #AAD94C;">&quot;App is transitioning (e.g. App Switcher or incoming call).&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            case</span><span> .background</span><span style="color: #F29668;">:</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                print</span><span>(</span><span style="color: #AAD94C;">&quot;App is in background. Save drafts and release heavy resources.&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            @unknown default</span><span style="color: #F29668;">:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">                break</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="4-stage-3-declarative-ui-with-swiftui-the-observation-framework">4. Stage 3: Declarative UI with SwiftUI &amp; The Observation Framework</h2>
+<p>SwiftUI is Apple’s modern declarative UI framework. You describe your interface in pure Swift code, and SwiftUI renders the views using hardware-accelerated Metal pipelines.</p>
+<h3 id="4-1-the-declarative-equation-ui-f-state">4.1 The Declarative Equation: UI = f(State)</h3>
+<p>When state updates, SwiftUI computes the minimal difference (diffing the view hierarchy) and automatically animates the affected view nodes without manual DOM or View mutation.</p>
+<pre class="mermaid border border-gray-500/15">
+graph LR
+    State["Application State (@State, @Observable)"] -->|"Passes into"| ViewDecl["SwiftUI View body (some View)"]
+    ViewDecl -->|"Renders to"| Screen["Metal Hardware GPU Surface"]
+    Screen -->|"User Tap / Gesture"| Mutation["Mutates State Property"]
+    Mutation -->|"Automatically Re-renders"| State
+</pre>
+<h3 id="4-2-modern-state-management-with-the-observation-framework-observable">4.2 Modern State Management with the Observation Framework (<code>@Observable</code>)</h3>
+<div role="alert" class="alert alert-info alert-soft"><div><p><strong>iOS 17+ Modern Standard: Observation Framework</strong>: In older SwiftUI codebases, developers had to import Combine, conform classes to <code>ObservableObject</code>, mark every property with <code>@Published</code>, and use <code>@StateObject</code> or <code>@ObservedObject</code> in views.
+Starting in <strong>iOS 17 / Swift 5.9</strong>, Apple introduced the <strong>Observation framework</strong>. Simply annotate your model class with <strong><code>@Observable</code></strong>. SwiftUI automatically tracks only the exact properties accessed inside a view's <code>body</code>, eliminating unnecessary view rebuilds!</p>
+</div></div>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> SwiftUI</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> Observation</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// 1. Observable Model (No Combine, No @Published boilerplate!)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">@Observable</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #59C2FF;"> RoutineTracker</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> habitTitle:</span><span style="color: #39BAE6;"> String</span><span style="color: #F29668;"> =</span><span style="color: #AAD94C;"> &quot;LeetCode Daily Problem&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> streakCount:</span><span style="color: #39BAE6;"> Int</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 14</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> isCompletedToday:</span><span style="color: #39BAE6;"> Bool</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> false</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> completeHabit</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        guard</span><span style="color: #F29668;"> !</span><span>isCompletedToday </span><span style="color: #FF8F40;">else</span><span> {</span><span style="color: #FF8F40;"> return</span><span> }</span></span>
+<span class="giallo-l"><span>        streakCount </span><span style="color: #F29668;">+=</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span>        isCompletedToday </span><span style="color: #F29668;">=</span><span style="color: #D2A6FF;"> true</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// 2. SwiftUI View consuming the observable model</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">struct</span><span style="color: #59C2FF;"> RoutineCardView</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> View</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // @State owns the lifecycle of this model instance</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    @State private var</span><span> tracker </span><span style="color: #F29668;">=</span><span style="color: #F07178;"> RoutineTracker</span><span>()</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> body:</span><span style="color: #FF8F40;"> some</span><span> View {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">        VStack</span><span>(</span><span style="color: #F07178;">alignment</span><span style="color: #BFBDB6B3;">:</span><span> .leading, </span><span style="color: #F07178;">spacing</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 12</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">            Text</span><span>(tracker.habitTitle)</span></span>
+<span class="giallo-l"><span>                .</span><span style="color: #F07178;">font</span><span>(.headline)</span></span>
+<span class="giallo-l"><span>            </span></span>
+<span class="giallo-l"><span style="color: #F07178;">            HStack</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                Label</span><span>(</span><span style="color: #AAD94C;">&quot;</span><span style="color: #FF8F40;">\(</span><span>tracker.streakCount</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;"> Days&quot;</span><span>, </span><span style="color: #F07178;">systemImage</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;flame.fill&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>                    .</span><span style="color: #F07178;">foregroundStyle</span><span>(.orange)</span></span>
+<span class="giallo-l"><span>                    .</span><span style="color: #F07178;">font</span><span>(.subheadline.</span><span style="color: #F07178;">bold</span><span>())</span></span>
+<span class="giallo-l"><span>                </span></span>
+<span class="giallo-l"><span style="color: #F07178;">                Spacer</span><span>()</span></span>
+<span class="giallo-l"><span>                </span></span>
+<span class="giallo-l"><span style="color: #F07178;">                Button</span><span>(</span><span style="color: #F07178;">action</span><span style="color: #BFBDB6B3;">:</span><span> tracker.completeHabit) {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                    Text</span><span>(tracker.isCompletedToday</span><span style="color: #F29668;"> ?</span><span style="color: #AAD94C;"> &quot;Completed&quot;</span><span style="color: #F29668;"> :</span><span style="color: #AAD94C;"> &quot;Mark Done&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>                }</span></span>
+<span class="giallo-l"><span>                .</span><span style="color: #F07178;">buttonStyle</span><span>(.borderedProminent)</span></span>
+<span class="giallo-l"><span>                .</span><span style="color: #F07178;">tint</span><span>(tracker.isCompletedToday</span><span style="color: #F29668;"> ?</span><span> .gray</span><span style="color: #F29668;"> :</span><span> .orange)</span></span>
+<span class="giallo-l"><span>                .</span><span style="color: #F07178;">disabled</span><span>(tracker.isCompletedToday)</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>        .</span><span style="color: #F07178;">padding</span><span>(</span><span style="color: #D2A6FF;">16</span><span>)</span></span>
+<span class="giallo-l"><span>        .</span><span style="color: #F07178;">background</span><span>(</span><span style="color: #F07178;">Color</span><span>(.secondarySystemBackground))</span></span>
+<span class="giallo-l"><span>        .</span><span style="color: #F07178;">clipShape</span><span>(</span><span style="color: #F07178;">RoundedRectangle</span><span>(</span><span style="color: #F07178;">cornerRadius</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 16</span><span>))</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h3 id="4-3-property-wrappers-demystified">4.3 Property Wrappers Demystified</h3>
+<p>Understanding the role of each property wrapper is vital:</p>
+<table><thead><tr><th style="text-align: left">Property Wrapper</th><th style="text-align: left">Scope &amp; Ownership</th><th style="text-align: left">Best Use Case</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong><code>@State</code></strong></td><td style="text-align: left">View-owned local state</td><td style="text-align: left">Primitive values (booleans, strings, integers) or instantiating an <code>@Observable</code> model inside a View.</td></tr>
+<tr><td style="text-align: left"><strong><code>@Binding</code></strong></td><td style="text-align: left">Two-way data bridge</td><td style="text-align: left">Passing a mutable reference from a parent view to a child component (e.g., custom toggle or sheet dismissal flag).</td></tr>
+<tr><td style="text-align: left"><strong><code>@Environment</code></strong></td><td style="text-align: left">Global injection</td><td style="text-align: left">Accessing system values (color scheme, dynamic type size, dismiss action) or app-wide services.</td></tr>
+</tbody></table>
+<h3 id="4-4-high-performance-lists-type-safe-navigation">4.4 High-Performance Lists &amp; Type-Safe Navigation</h3>
+<h4 id="high-performance-virtualized-list">High-Performance Virtualized <code>List</code></h4>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">struct</span><span style="color: #59C2FF;"> ContributorListView</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> View</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    let</span><span> contributors: [Contributor]</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> body:</span><span style="color: #FF8F40;"> some</span><span> View {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">        List</span><span>(contributors) { contributor </span><span style="color: #FF8F40;">in</span></span>
+<span class="giallo-l"><span style="color: #F07178;">            HStack</span><span>(</span><span style="color: #F07178;">spacing</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 12</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                Image</span><span>(</span><span style="color: #F07178;">systemName</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;person.circle.fill&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>                    .</span><span style="color: #F07178;">resizable</span><span>()</span></span>
+<span class="giallo-l"><span>                    .</span><span style="color: #F07178;">frame</span><span>(</span><span style="color: #F07178;">width</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 40</span><span>, </span><span style="color: #F07178;">height</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 40</span><span>)</span></span>
+<span class="giallo-l"><span>                    .</span><span style="color: #F07178;">foregroundStyle</span><span>(.orange)</span></span>
+<span class="giallo-l"><span>                </span></span>
+<span class="giallo-l"><span style="color: #F07178;">                VStack</span><span>(</span><span style="color: #F07178;">alignment</span><span style="color: #BFBDB6B3;">:</span><span> .leading) {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                    Text</span><span>(contributor.username)</span></span>
+<span class="giallo-l"><span>                        .</span><span style="color: #F07178;">font</span><span>(.headline)</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                    Text</span><span>(</span><span style="color: #AAD94C;">&quot;</span><span style="color: #FF8F40;">\(</span><span>contributor.commitsCount</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;"> contributions&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>                        .</span><span style="color: #F07178;">font</span><span>(.caption)</span></span>
+<span class="giallo-l"><span>                        .</span><span style="color: #F07178;">foregroundStyle</span><span>(.secondary)</span></span>
+<span class="giallo-l"><span>                }</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>        .</span><span style="color: #F07178;">listStyle</span><span>(.insetGrouped)</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h4 id="modern-type-safe-navigationstack">Modern Type-Safe <code>NavigationStack</code></h4>
+<p>Avoid the deprecated string-based or view-inlined <code>NavigationLink(destination:)</code>. Use data-driven navigation destinations:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">struct</span><span style="color: #59C2FF;"> AppNavigationView</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> View</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    @State private var</span><span> navigationPath </span><span style="color: #F29668;">=</span><span style="color: #F07178;"> NavigationPath</span><span>()</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> body:</span><span style="color: #FF8F40;"> some</span><span> View {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">        NavigationStack</span><span>(</span><span style="color: #F07178;">path</span><span style="color: #BFBDB6B3;">:</span><span> $navigationPath) {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">            List</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                NavigationLink</span><span>(</span><span style="color: #AAD94C;">&quot;Explore Projects&quot;</span><span>, </span><span style="color: #F07178;">value</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;projects_screen&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                NavigationLink</span><span>(</span><span style="color: #AAD94C;">&quot;Club Settings&quot;</span><span>, </span><span style="color: #F07178;">value</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;settings_screen&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>            .</span><span style="color: #F07178;">navigationTitle</span><span>(</span><span style="color: #AAD94C;">&quot;CC Portal&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">            // Type-safe route resolution</span></span>
+<span class="giallo-l"><span>            .</span><span style="color: #F07178;">navigationDestination</span><span>(</span><span style="color: #F07178;">for</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> String</span><span>.</span><span style="color: #FF8F40;">self</span><span>) { route </span><span style="color: #FF8F40;">in</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">                switch</span><span> route {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">                case</span><span style="color: #AAD94C;"> &quot;projects_screen&quot;</span><span style="color: #F29668;">:</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                    ProjectsExplorerView</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">                case</span><span style="color: #AAD94C;"> &quot;settings_screen&quot;</span><span style="color: #F29668;">:</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                    SettingsView</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">                default</span><span style="color: #F29668;">:</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                    ContentUnavailableView</span><span>(</span><span style="color: #AAD94C;">&quot;Page Not Found&quot;</span><span>, </span><span style="color: #F07178;">systemImage</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;exclamationmark.triangle&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>                }</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="5-stage-4-apple-human-interface-guidelines-system-ergonomics">5. Stage 4: Apple Human Interface Guidelines &amp; System Ergonomics</h2>
+<p>A great iOS app must feel authentically native to the Apple platform.</p>
+<ul>
+<li><strong>SF Symbols</strong>: Apple’s library of over 6,000 vector icons designed to integrate with the San Francisco system font. Supports <strong>Hierarchical</strong>, <strong>Palette</strong>, and <strong>Multicolor</strong> rendering modes:<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #F07178;">Image</span><span>(</span><span style="color: #F07178;">systemName</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;folder.badge.plus&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>    .</span><span style="color: #F07178;">symbolRenderingMode</span><span>(.hierarchical)</span></span>
+<span class="giallo-l"><span>    .</span><span style="color: #F07178;">foregroundStyle</span><span>(.orange)</span></span></code></pre></li>
+<li><strong>Dynamic Type</strong>: Never hardcode font sizes in fixed points (<code>.font(.system(size: 16))</code>). Always use semantic text styles (<code>.font(.body)</code>, <code>.font(.headline)</code>, <code>.font(.largeTitle)</code>), allowing the UI to adapt automatically when users adjust their system-wide text size.</li>
+<li><strong>Semantic System Colors</strong>: Use <code>Color(.systemBackground)</code>, <code>Color(.secondarySystemBackground)</code>, and <code>Color.primary</code>. These automatically adapt between Light Mode and Dark Mode.</li>
+<li><strong>Haptics</strong>: Enhance tactile feedback using the <code>.sensoryFeedback()</code> modifier:<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #F07178;">Button</span><span>(</span><span style="color: #AAD94C;">&quot;Confirm Contribution&quot;</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">    performAction</span><span>()</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"><span>.</span><span style="color: #F07178;">sensoryFeedback</span><span>(.success, </span><span style="color: #F07178;">trigger</span><span style="color: #BFBDB6B3;">:</span><span> isSuccessState)</span></span></code></pre></li>
+</ul>
+<hr />
+<h2 id="6-stage-5-data-persistence-with-swiftdata">6. Stage 5: Data Persistence with SwiftData</h2>
+<p>Starting in iOS 17, <strong>SwiftData</strong> replaces the legacy, XML-based Core Data model with native Swift macros and compile-time schema validation.</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    ModelClass["@Model class ProjectItem"] --> Schema["SwiftData Schema Generator"]
+    Schema --> ModelContainer["ModelContainer (Database Store / CloudKit Sync)"]
+    ModelContainer --> ModelContext["ModelContext (Scratchpad for Insert / Delete)"]
+    ModelContext --> Query["@Query (Reactive View Auto-Updating)"]
+</pre>
+<h3 id="6-1-defining-a-swiftdata-model">6.1 Defining a SwiftData Model</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> SwiftData</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> Foundation</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">@Model</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">final class</span><span style="color: #59C2FF;"> ProjectEntity</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    @Attribute</span><span>(.unique)</span><span style="color: #FF8F40;"> var</span><span> id: UUID</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> title:</span><span style="color: #39BAE6;"> String</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> starsCount:</span><span style="color: #39BAE6;"> Int</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> lastUpdated: Date</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    init</span><span>(</span><span style="color: #FFB454;">title</span><span>: </span><span style="color: #39BAE6;">String</span><span>, </span><span style="color: #FFB454;">starsCount</span><span>: </span><span style="color: #39BAE6;">Int</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span>.id</span><span style="color: #F29668;"> =</span><span style="color: #F07178;"> UUID</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span>.title</span><span style="color: #F29668;"> =</span><span> title</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span>.starsCount</span><span style="color: #F29668;"> =</span><span> starsCount</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        self</span><span>.lastUpdated</span><span style="color: #F29668;"> =</span><span style="color: #F07178;"> Date</span><span>()</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h3 id="6-2-reading-and-writing-data-in-swiftui">6.2 Reading and Writing Data in SwiftUI</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> SwiftUI</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> SwiftData</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">struct</span><span style="color: #59C2FF;"> LocalProjectsView</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> View</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // ModelContext provides the scratchpad for mutating data</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    @Environment</span><span>(\.modelContext)</span><span style="color: #FF8F40;"> private var</span><span> modelContext</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // @Query automatically re-evaluates and redraws when the database updates!</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    @Query</span><span>(sort</span><span style="color: #F29668;">:</span><span> \ProjectEntity.starsCount, order</span><span style="color: #F29668;">:</span><span> .reverse) </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    private var</span><span> projects: [ProjectEntity]</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> body:</span><span style="color: #FF8F40;"> some</span><span> View {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">        List</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">            ForEach</span><span>(projects) { project </span><span style="color: #FF8F40;">in</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                HStack</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                    Text</span><span>(project.title)</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                    Spacer</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                    Text</span><span>(</span><span style="color: #AAD94C;">&quot;⭐ </span><span style="color: #FF8F40;">\(</span><span>project.starsCount</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;">&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>                }</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>            .</span><span style="color: #F07178;">onDelete</span><span>(</span><span style="color: #F07178;">perform</span><span style="color: #BFBDB6B3;">:</span><span> deleteProjects)</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>        .</span><span style="color: #F07178;">toolbar</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">            Button</span><span>(</span><span style="color: #AAD94C;">&quot;Add Project&quot;</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">                let</span><span> newProject </span><span style="color: #F29668;">=</span><span style="color: #F07178;"> ProjectEntity</span><span>(</span><span style="color: #F07178;">title</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;New CC Initiative&quot;</span><span>, </span><span style="color: #F07178;">starsCount</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 1</span><span>)</span></span>
+<span class="giallo-l"><span>                modelContext.</span><span style="color: #F07178;">insert</span><span>(newProject)</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    private func</span><span style="color: #FFB454;"> deleteProjects</span><span>(</span><span style="color: #FFB454;">offsets</span><span>: IndexSet) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        for</span><span> index </span><span style="color: #FF8F40;">in</span><span> offsets {</span></span>
+<span class="giallo-l"><span>            modelContext.</span><span style="color: #F07178;">delete</span><span>(projects[index])</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="7-stage-6-modern-networking-codable">7. Stage 6: Modern Networking &amp; Codable</h2>
+<p>Connecting iOS applications to cloud backends is built into the Foundation framework using <strong><code>URLSession</code></strong> and <strong><code>Codable</code></strong>.</p>
+<h3 id="7-1-networking-architecture-with-async-await">7.1 Networking Architecture with Async/Await</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> Foundation</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">enum</span><span style="color: #59C2FF;"> NetworkError</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> LocalizedError</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    case</span><span> invalidURL</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    case</span><span> serverError(</span><span style="color: #D2A6FF;">statusCode</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> Int</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    case</span><span> decodingFailed</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> errorDescription:</span><span style="color: #39BAE6;"> String</span><span style="color: #F29668;">?</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        switch</span><span style="color: #39BAE6;font-style: italic;"> self</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        case</span><span> .invalidURL</span><span style="color: #F29668;">:</span><span style="color: #FF8F40;"> return</span><span style="color: #AAD94C;"> &quot;The endpoint URL is invalid.&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        case</span><span> .</span><span style="color: #F07178;">serverError</span><span>(</span><span style="color: #FF8F40;">let</span><span> code)</span><span style="color: #F29668;">:</span><span style="color: #FF8F40;"> return</span><span style="color: #AAD94C;"> &quot;Server returned error code: </span><span style="color: #FF8F40;">\(</span><span>code</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;">.&quot;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        case</span><span> .decodingFailed</span><span style="color: #F29668;">:</span><span style="color: #FF8F40;"> return</span><span style="color: #AAD94C;"> &quot;Failed to parse backend payload.&quot;</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">struct</span><span style="color: #59C2FF;"> ProjectDTO</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> Codable</span><span>, </span><span style="color: #39BAE6;">Identifiable</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    let</span><span> id:</span><span style="color: #39BAE6;"> Int</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    let</span><span> name:</span><span style="color: #39BAE6;"> String</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    let</span><span> stargazersCount:</span><span style="color: #39BAE6;"> Int</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // Custom JSON key mapping</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    enum</span><span style="color: #59C2FF;"> CodingKeys</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> String</span><span>, </span><span style="color: #39BAE6;">CodingKey</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        case</span><span> id</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        case</span><span> name</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        case</span><span> stargazersCount</span><span style="color: #F29668;"> =</span><span style="color: #AAD94C;"> &quot;stargazers_count&quot;</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">final class</span><span style="color: #59C2FF;"> ProjectService</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> fetchRepositories</span><span>(</span><span style="color: #FFB454;">for</span><span style="color: #D2A6FF;"> organization</span><span>: </span><span style="color: #39BAE6;">String</span><span>)</span><span style="color: #FF8F40;"> async throws</span><span style="color: #F29668;"> -&gt;</span><span> [ProjectDTO] {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        guard let</span><span> url </span><span style="color: #F29668;">=</span><span style="color: #F07178;"> URL</span><span>(</span><span style="color: #F07178;">string</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;https://api.github.com/orgs/</span><span style="color: #FF8F40;">\(</span><span>organization</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;">/repos&quot;</span><span>)</span><span style="color: #FF8F40;"> else</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            throw</span><span> NetworkError.invalidURL</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        var</span><span> request </span><span style="color: #F29668;">=</span><span style="color: #F07178;"> URLRequest</span><span>(</span><span style="color: #F07178;">url</span><span style="color: #BFBDB6B3;">:</span><span> url)</span></span>
+<span class="giallo-l"><span>        request.</span><span style="color: #F07178;">setValue</span><span>(</span><span style="color: #AAD94C;">&quot;application/vnd.github.v3+json&quot;</span><span>, </span><span style="color: #F07178;">forHTTPHeaderField</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;Accept&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>        request.timeoutInterval</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 15</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        let</span><span> (data, response)</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> try await</span><span> URLSession.shared.</span><span style="color: #F07178;">data</span><span>(</span><span style="color: #F07178;">for</span><span style="color: #BFBDB6B3;">:</span><span> request)</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        guard let</span><span> httpResponse </span><span style="color: #F29668;">=</span><span> response </span><span style="color: #F29668;">as?</span><span> HTTPURLResponse, </span></span>
+<span class="giallo-l"><span>              (</span><span style="color: #D2A6FF;">200</span><span style="color: #F29668;">...</span><span style="color: #D2A6FF;">299</span><span>).</span><span style="color: #F07178;">contains</span><span>(httpResponse.statusCode)</span><span style="color: #FF8F40;"> else</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            let</span><span> code </span><span style="color: #F29668;">=</span><span> (response </span><span style="color: #F29668;">as?</span><span> HTTPURLResponse)</span><span style="color: #F29668;">?</span><span>.statusCode</span><span style="color: #F29668;"> ??</span><span style="color: #D2A6FF;"> 500</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            throw</span><span> NetworkError.</span><span style="color: #F07178;">serverError</span><span>(</span><span style="color: #F07178;">statusCode</span><span style="color: #BFBDB6B3;">:</span><span> code)</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        do</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            let</span><span> decoder </span><span style="color: #F29668;">=</span><span style="color: #F07178;"> JSONDecoder</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return try</span><span> decoder.</span><span style="color: #F07178;">decode</span><span>([ProjectDTO].</span><span style="color: #FF8F40;">self</span><span>, </span><span style="color: #F07178;">data</span><span style="color: #BFBDB6B3;">:</span><span> data)</span></span>
+<span class="giallo-l"><span>        }</span><span style="color: #FF8F40;"> catch</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            throw</span><span> NetworkError.decodingFailed</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="8-stage-7-apple-platform-frameworks-hardware-integration">8. Stage 7: Apple Platform Frameworks &amp; Hardware Integration</h2>
+<p>Accessing platform hardware and Apple-specific system services differentiates native applications.</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    App["Your Native iOS Application"] --> Frameworks["Native Apple System Frameworks"]
+    Frameworks --> Loc["Core Location & MapKit (GPS & Satellite Maps)"]
+    Frameworks --> AV["AVFoundation (Camera, Photo, Audio Recording)"]
+    Frameworks --> Auth["LocalAuthentication (Biometric Face ID / Touch ID)"]
+    Frameworks --> Notif["UserNotifications (Local & Push Alerts)"]
+    Frameworks --> Widget["WidgetKit (Home Screen & Lock Screen Widgets)"]
+</pre>
+<h3 id="8-1-biometric-authentication-with-localauthentication">8.1 Biometric Authentication with <code>LocalAuthentication</code></h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> LocalAuthentication</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">final class</span><span style="color: #59C2FF;"> BiometricSecurityService</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> authenticateUser</span><span>()</span><span style="color: #FF8F40;"> async</span><span style="color: #F29668;"> -&gt;</span><span style="color: #39BAE6;"> Bool</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        let</span><span> context </span><span style="color: #F29668;">=</span><span style="color: #F07178;"> LAContext</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        var</span><span> error: NSError</span><span style="color: #F29668;">?</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">        // Verify biometric hardware (Face ID or Touch ID) is available</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        guard</span><span> context.</span><span style="color: #F07178;">canEvaluatePolicy</span><span>(.deviceOwnerAuthenticationWithBiometrics, </span><span style="color: #F07178;">error</span><span style="color: #BFBDB6B3;">:</span><span style="color: #F29668;"> &amp;</span><span>error)</span><span style="color: #FF8F40;"> else</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">            print</span><span>(</span><span style="color: #AAD94C;">&quot;Biometrics unavailable: </span><span style="color: #FF8F40;">\(</span><span>error</span><span style="color: #F29668;">?</span><span>.localizedDescription</span><span style="color: #F29668;"> ??</span><span style="color: #AAD94C;"> &quot;Unknown&quot;</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;">&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span style="color: #D2A6FF;"> false</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        do</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return try await</span><span> context.</span><span style="color: #F07178;">evaluatePolicy</span><span>(</span></span>
+<span class="giallo-l"><span>                .deviceOwnerAuthenticationWithBiometrics,</span></span>
+<span class="giallo-l"><span style="color: #F07178;">                localizedReason</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;Unlock the Computer Coding Club Secure Vault&quot;</span></span>
+<span class="giallo-l"><span>            )</span></span>
+<span class="giallo-l"><span>        }</span><span style="color: #FF8F40;"> catch</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F07178;">            print</span><span>(</span><span style="color: #AAD94C;">&quot;Authentication failed: </span><span style="color: #FF8F40;">\(</span><span>error.localizedDescription</span><span style="color: #FF8F40;">)</span><span style="color: #AAD94C;">&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            return</span><span style="color: #D2A6FF;"> false</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="9-stage-8-uikit-interoperability">9. Stage 8: UIKit Interoperability</h2>
+<p>While SwiftUI is the primary UI framework for all new development, UIKit remains foundational across 15+ years of Apple software history.</p>
+<h3 id="9-1-bridging-uikit-into-swiftui-uiviewrepresentable">9.1 Bridging UIKit into SwiftUI: <code>UIViewRepresentable</code></h3>
+<p>When you need an advanced platform view that does not yet have a native SwiftUI equivalent (such as <code>SFSafariViewController</code> for in-app browser sessions), bridge it seamlessly:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> SwiftUI</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> SafariServices</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">struct</span><span style="color: #59C2FF;"> SafariView</span><span style="color: #BFBDB6B3;">:</span><span style="color: #39BAE6;"> UIViewControllerRepresentable</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    let</span><span> url: URL</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> makeUIViewController</span><span>(</span><span style="color: #FFB454;">context</span><span>: Context)</span><span style="color: #F29668;"> -&gt;</span><span> SFSafariViewController {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span style="color: #F07178;"> SFSafariViewController</span><span>(</span><span style="color: #F07178;">url</span><span style="color: #BFBDB6B3;">:</span><span> url)</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> updateUIViewController</span><span>(</span><span style="color: #FFB454;">_</span><span style="color: #D2A6FF;"> uiViewController</span><span>: SFSafariViewController, </span><span style="color: #FFB454;">context</span><span>: Context) {</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">        // No updates needed</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="10-stage-9-testing-with-the-modern-swift-testing-framework">10. Stage 9: Testing with the Modern Swift Testing Framework</h2>
+<p>In Xcode 16 / Swift 6, Apple introduced <strong>Swift Testing</strong>, a modern, expressive testing framework replacing legacy XCTest boilerplate:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> Testing</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">@testable import</span><span style="color: #59C2FF;"> PulseApp</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">struct</span><span style="color: #59C2FF;"> ContributorTests</span><span> {</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    @Test</span><span>(</span><span style="color: #AAD94C;">&quot;Verifying commit counter incrementation&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> commitIncrement</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        var</span><span> member </span><span style="color: #F29668;">=</span><span style="color: #F07178;"> Contributor</span><span>(</span><span style="color: #F07178;">id</span><span style="color: #BFBDB6B3;">:</span><span style="color: #F07178;"> UUID</span><span>(), </span><span style="color: #F07178;">username</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;Aman&quot;</span><span>, </span><span style="color: #F07178;">commitsCount</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 10</span><span>, </span><span style="color: #F07178;">isCoreTeam</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> true</span><span>)</span></span>
+<span class="giallo-l"><span>        member.</span><span style="color: #F07178;">recordCommit</span><span>()</span></span>
+<span class="giallo-l"><span>        </span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">        // Swift Testing&#39;s concise macro-based assertion</span></span>
+<span class="giallo-l"><span style="color: #F07178;">        #expect</span><span>(member.commitsCount</span><span style="color: #F29668;"> ==</span><span style="color: #D2A6FF;"> 11</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #F07178;">        #expect</span><span>(member.isCoreTeam</span><span style="color: #F29668;"> ==</span><span style="color: #D2A6FF;"> true</span><span>)</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    @Test</span><span>(</span><span style="color: #AAD94C;">&quot;Validating repository service error mapping&quot;</span><span>, arguments</span><span style="color: #F29668;">:</span><span> [</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">        &quot;invalid url!!&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">        &quot;unknown_org_404_test&quot;</span></span>
+<span class="giallo-l"><span>    ])</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    func</span><span style="color: #FFB454;"> repositoryErrors</span><span>(</span><span style="color: #FFB454;">orgName</span><span>: </span><span style="color: #39BAE6;">String</span><span>)</span><span style="color: #FF8F40;"> async</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        let</span><span> service </span><span style="color: #F29668;">=</span><span style="color: #F07178;"> ProjectService</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        await</span><span style="color: #F07178;"> #expect</span><span>(</span><span style="color: #F07178;">throws</span><span style="color: #BFBDB6B3;">:</span><span> NetworkError.</span><span style="color: #FF8F40;">self</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            try await</span><span> service.</span><span style="color: #F07178;">fetchRepositories</span><span>(</span><span style="color: #F07178;">for</span><span style="color: #BFBDB6B3;">:</span><span> orgName)</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="11-stage-10-app-store-signing-testflight-distribution">11. Stage 10: App Store Signing, TestFlight &amp; Distribution</h2>
+<p>Shipping an iOS application requires configuring Apple Developer certificates, provisioning profiles, and store metadata.</p>
+<pre class="mermaid border border-gray-500/15">
+graph LR
+    Code["Xcode Archive Build (.xcarchive)"] --> Organizer["Xcode Organizer Window"]
+    Organizer --> Validate["Automated App Store Pre-Validation"]
+    Validate --> ASC["App Store Connect Cloud"]
+    ASC --> TestFlight["TestFlight (Internal & External Beta Testers)"]
+    TestFlight --> Review["Apple App Review Board"]
+    Review --> Ready["App Store Release (Live Worldwide)"]
+</pre>
+<h3 id="11-1-key-distribution-milestones">11.1 Key Distribution Milestones</h3>
+<ol>
+<li><strong>Free Personal Team Provisioning</strong>: Allows deploying apps directly to your personal physical iPhone via USB or Wi-Fi for testing without paying any membership fee.</li>
+<li><strong>Apple Developer Program ($99 / year)</strong>: Mandatory for releasing on the public App Store, accessing TestFlight, configuring Push Notifications, and using CloudKit production databases.</li>
+<li><strong>Privacy Manifests (<code>PrivacyInfo.xcprivacy</code>)</strong>: Mandatory requirement by Apple. Explicitly declares what third-party SDKs access device APIs and what data categories are tracked.</li>
+<li><strong>TestFlight</strong>: Distribute test builds to up to 10,000 external beta testers using simple invite links before submitting to public review.</li>
+</ol>
+<hr />
+<h2 id="12-six-progressive-hands-on-milestone-projects">12. Six Progressive Hands-On Milestone Projects</h2>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    M1["Milestone 1: QuickMetrics Converter<br/>Focus: Swift 6 Basics, SwiftUI Layout, @State"] --> M2["Milestone 2: PulseHabit Tracker<br/>Focus: SwiftData @Model, @Query, Notifications"]
+    M2 --> M3["Milestone 3: Chronicle Voice Memos<br/>Focus: AVFoundation, SwiftData, Sheets, Gestures"]
+    M3 --> M4["Milestone 4: DevPulse GitHub Explorer<br/>Focus: URLSession, Codable, AsyncImage, Searchable"]
+    M4 --> M5["Milestone 5: BiometricVault Media Locker<br/>Focus: Face ID, Keychain, File Encryption, Camera"]
+    M5 --> M6["Milestone 6 (Capstone): OmniMarket Multiplatform Suite<br/>Focus: NavigationStack, Stripe, WidgetKit, Swift Testing, TestFlight"]
+</pre>
+<h3 id="milestone-1-quickmetrics-converter">Milestone 1: QuickMetrics Converter</h3>
+<ul>
+<li><strong>Goal</strong>: Build an interactive currency, metric, and unit conversion utility.</li>
+<li><strong>Core Concepts</strong>: Swift 6 syntax, <code>@State</code>, <code>VStack</code>/<code>HStack</code>, custom keypad layout, Light/Dark mode semantic colors.</li>
+<li><strong>Portfolio Value</strong>: Proves layout discipline and clean declarative state handling without web DOM assumptions.</li>
+</ul>
+<h3 id="milestone-2-pulsehabit-daily-routine-streak-tracker">Milestone 2: PulseHabit (Daily Routine &amp; Streak Tracker)</h3>
+<ul>
+<li><strong>Goal</strong>: An offline-first daily habit tracker featuring interactive completion rings and daily reminders.</li>
+<li><strong>Core Concepts</strong>: <strong>SwiftData</strong> <code>@Model</code> and <code>@Query</code>, SwiftUI dynamic animations, and local notifications via <code>UserNotifications</code>.</li>
+<li><strong>Portfolio Value</strong>: Demonstrates mastery over modern Apple local persistence and reactive query bindings.</li>
+</ul>
+<h3 id="milestone-3-chronicle-notes-voice-memos">Milestone 3: Chronicle Notes &amp; Voice Memos</h3>
+<ul>
+<li><strong>Goal</strong>: A multimedia journaling app supporting rich text and embedded audio recordings.</li>
+<li><strong>Core Concepts</strong>: <strong>AVFoundation</strong> audio recording and playback, SwiftData relational models, <code>.sheet</code> presentation, and custom swipe actions.</li>
+<li><strong>Portfolio Value</strong>: Showcases hardware audio integration and fluid gestural ergonomics.</li>
+</ul>
+<h3 id="milestone-4-devpulse-github-tech-news-explorer">Milestone 4: DevPulse (GitHub &amp; Tech News Explorer)</h3>
+<ul>
+<li><strong>Goal</strong>: A multi-tab developer news client and trending repository explorer with offline caching.</li>
+<li><strong>Core Concepts</strong>: <strong>URLSession</strong> with <code>async</code>/<code>await</code>, <code>Codable</code> serialization, <code>AsyncImage</code> with placeholder caching, and <code>.searchable()</code> modifiers.</li>
+<li><strong>Portfolio Value</strong>: Industrial-grade REST API integration and resilient network error mapping.</li>
+</ul>
+<h3 id="milestone-5-biometricvault-encrypted-media-locker">Milestone 5: BiometricVault (Encrypted Media Locker)</h3>
+<ul>
+<li><strong>Goal</strong>: A privacy-focused locker app that secures confidential notes and photos behind hardware Face ID/Touch ID.</li>
+<li><strong>Core Concepts</strong>: <strong><code>LocalAuthentication</code></strong> biometric prompt, <strong>Keychain</strong> cryptographic secret storage, and camera capture.</li>
+<li><strong>Portfolio Value</strong>: Demonstrates Apple platform security guidelines and hardware enclave protection.</li>
+</ul>
+<h3 id="milestone-6-capstone-omnimarket-multiplatform-ios-ipados-suite">Milestone 6 (Capstone): OmniMarket (Multiplatform iOS &amp; iPadOS Suite)</h3>
+<ul>
+<li><strong>Goal</strong>: A production-grade multiplatform shopping and inventory management platform compiling for iPhone, iPad, and macOS.</li>
+<li><strong>Core Concepts</strong>:
+<ul>
+<li><strong><code>NavigationStack</code></strong> with typed paths and deep link handling.</li>
+<li><strong><code>@Observable</code></strong> Cart and Checkout service layer.</li>
+<li>Real-time payment processing integration.</li>
+<li><strong>WidgetKit</strong> Home Screen and Lock Screen widget extensions showing active order status.</li>
+<li>Comprehensive test suite using the modern <strong>Swift Testing</strong> framework.</li>
+<li>Automated archive and <strong>TestFlight</strong> distribution pipeline.</li>
+</ul>
+</li>
+<li><strong>Portfolio Value</strong>: The definitive portfolio centerpiece proving complete mastery over the native Apple engineering lifecycle.</li>
+</ul>
+<hr />
+<h2 id="13-curated-official-resources">13. Curated Official Resources</h2>
+<p>Deepen your native iOS mastery using these authoritative Apple documentation hubs and engineering portals:</p>
+<div class="pretty-link-card not-prose group my-4"><a href="https://developer.apple.com/documentation/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Apple Developer Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The official documentation portal for Swift, SwiftUI, iOS SDKs, and platform framework API references.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>developer.apple.com/documentation/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://docs.swift.org/swift-book/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">The Swift Programming Language Book</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The authoritative reference manual covering modern Swift 6 syntax, type safety, and structured concurrency.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>docs.swift.org/swift-book/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://developer.apple.com/design/human-interface-guidelines/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Apple Human Interface Guidelines (HIG)</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The foundational design specification for iOS user experience, typography, navigation, and tactile design patterns.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>developer.apple.com/design/human-interface-guidelines/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://developer.apple.com/xcode/swiftdata/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">SwiftData Official Overview & Guides</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Apple's official guide to modern persistence using Swift macros, model schemas, and SwiftUI integration.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>developer.apple.com/xcode/swiftdata/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://developer.apple.com/videos/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Apple Developer Videos & WWDC Sessions</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">High-definition engineering presentations, framework deep dives, and architectural best practices directly from Apple engineers.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>developer.apple.com/videos/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://developer.apple.com/testflight/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">TestFlight Beta Testing Overview</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Official manual for managing internal and external beta testing tracks and gathering tester crash feedback.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>developer.apple.com/testflight/</span></div></div></div></a></div>
+<hr />
+<h2 id="14-where-to-next-in-the-cc-ecosystem">14. Where to Next in the CC Ecosystem</h2>
+<p>This roadmap is one part of a connected learning system. Depending on where you want to go from here:</p>
+<ul>
+<li><strong><a href="https://cc-club.in/roadmaps/mobile-development/">Mobile Development Master Roadmap</a></strong> — revisit the full application-development landscape and the interactive Path Finder that helped you choose native iOS.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/android/">Kotlin &amp; Native Android Roadmap</a></strong> — the native peer platform: with Kotlin Multiplatform, your architecture and business logic can even be shared between your Swift UI and Android.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/flutter/">Flutter &amp; Dart Roadmap</a></strong> — the pragmatic option when a project must reach Android too without maintaining two native codebases.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/desktop-development/">Desktop Application Development Roadmap</a></strong> — extend your Swift and SwiftUI knowledge into macOS desktop software, AppKit, window management, and native macOS distribution.</li>
+</ul>
+
+
+    
+    
+
+    
+    <div class="mt-8 pt-6 border-t border-gray-500/15">
+        <div class="flex flex-wrap items-center gap-4">
+            <a href="https://github.com/CC-MNNIT/cc-website/edit/main//content/roadmaps/ios.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                </svg>
+                <span>Edit this page</span>
+            </a>
+            
+            
+            
+                
+                
+            
+            
+            <button onclick="navigator.clipboard.writeText(window.location.href).then(() => { this.innerHTML = this.innerHTML.replace('Copy URL', 'Copied!'); setTimeout(() => { this.innerHTML = this.innerHTML.replace('Copied!', 'Copy URL'); }, 2000); }).catch(() => { console.error('Failed to copy URL'); })" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+                <span>Copy URL</span>
+            </button>
+            
+            
+            <a href="https://twitter.com/intent/tweet?url=https%3A//cc-club.in/roadmaps/ios/&text=Swift%20%26%20Native%20iOS%20Development%20Roadmap" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </svg>
+                <span>Share on X</span>
+            </a>
+            
+        </div>
+    </div>
+    
+
+
+                        
+
+
+
+                        <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="prev-nav-item">
+                                    
+    
+        
+        <a class="nav-button nav-button-prev group" href="https://cc-club.in/roadmaps/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="nav-button-label">Back to</span>
+                </div>
+                <div class="nav-button-title">Learning Roadmaps</div>
+            </div>
+        </a>
+    
+
+                                </div>
+                                <div class="next-nav-item">
+                                    
+    
+        <a class="nav-button nav-button-next group" href="https://cc-club.in/roadmaps/desktop-development/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <span class="nav-button-label">Next</span>
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                <div class="nav-button-title">Desktop Application Development Roadmap</div>
+            </div>
+        </a>
+    
+
+                                </div>
+                            </div>
+                        </nav>
+                    </main>
+            
+
+                    
+                        
+
+<div class="hidden lg:block" data-toc-expand="true">
+    <div class="sticky top-20 px-4 py-2 border-l border-gray-500/15">
+        <h4 class="text-lg font-bold mb-1">ON THIS PAGE</h4>
+            <ul class="menu menu-sm toc-menu">
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/ios/#1-orientation-the-apple-development-paradigm" class="toc-link">1. Orientation: The Apple Development Paradigm</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#1-1-the-hardware-reality-macos-xcode" class="toc-link">1.1 The Hardware Reality: macOS &amp; Xcode</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#1-2-the-evolution-modern-swift-swiftui-vs-legacy-ios" class="toc-link">1.2 The Evolution: Modern Swift &amp; SwiftUI vs. Legacy iOS</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#1-3-navigating-from-your-prior-background" class="toc-link">1.3 Navigating from Your Prior Background</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/ios/#2-stage-1-modern-swift-6-language-mastery" class="toc-link">2. Stage 1: Modern Swift 6 Language Mastery</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#2-1-variables-type-inference-optionals" class="toc-link">2.1 Variables, Type Inference &amp; Optionals</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#2-2-the-fundamental-choice-value-types-structs-vs-reference-types-classes" class="toc-link">2.2 The Fundamental Choice: Value Types (Structs) vs. Reference Types (Classes)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#2-3-protocols-protocol-oriented-programming-pop" class="toc-link">2.3 Protocols &amp; Protocol-Oriented Programming (POP)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#2-4-memory-management-automatic-reference-counting-arc" class="toc-link">2.4 Memory Management &amp; Automatic Reference Counting (ARC)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#2-5-swift-6-structured-concurrency-async-await-actors" class="toc-link">2.5 Swift 6 Structured Concurrency: Async, Await &amp; Actors</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/ios/#3-stage-2-xcode-simulator-platform-architecture" class="toc-link">3. Stage 2: Xcode, Simulator &amp; Platform Architecture</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#3-1-xcode-project-anatomy" class="toc-link">3.1 Xcode Project Anatomy</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#3-2-the-modern-swiftui-application-lifecycle" class="toc-link">3.2 The Modern SwiftUI Application Lifecycle</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/ios/#4-stage-3-declarative-ui-with-swiftui-the-observation-framework" class="toc-link">4. Stage 3: Declarative UI with SwiftUI &amp; The Observation Framework</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#4-1-the-declarative-equation-ui-f-state" class="toc-link">4.1 The Declarative Equation: UI = f(State)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#4-2-modern-state-management-with-the-observation-framework-observable" class="toc-link">4.2 Modern State Management with the Observation Framework (@Observable)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#4-3-property-wrappers-demystified" class="toc-link">4.3 Property Wrappers Demystified</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#4-4-high-performance-lists-type-safe-navigation" class="toc-link">4.4 High-Performance Lists &amp; Type-Safe Navigation</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/ios/#5-stage-4-apple-human-interface-guidelines-system-ergonomics" class="toc-link">5. Stage 4: Apple Human Interface Guidelines &amp; System Ergonomics</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/ios/#6-stage-5-data-persistence-with-swiftdata" class="toc-link">6. Stage 5: Data Persistence with SwiftData</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#6-1-defining-a-swiftdata-model" class="toc-link">6.1 Defining a SwiftData Model</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#6-2-reading-and-writing-data-in-swiftui" class="toc-link">6.2 Reading and Writing Data in SwiftUI</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/ios/#7-stage-6-modern-networking-codable" class="toc-link">7. Stage 6: Modern Networking &amp; Codable</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#7-1-networking-architecture-with-async-await" class="toc-link">7.1 Networking Architecture with Async/Await</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/ios/#8-stage-7-apple-platform-frameworks-hardware-integration" class="toc-link">8. Stage 7: Apple Platform Frameworks &amp; Hardware Integration</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#8-1-biometric-authentication-with-localauthentication" class="toc-link">8.1 Biometric Authentication with LocalAuthentication</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/ios/#9-stage-8-uikit-interoperability" class="toc-link">9. Stage 8: UIKit Interoperability</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#9-1-bridging-uikit-into-swiftui-uiviewrepresentable" class="toc-link">9.1 Bridging UIKit into SwiftUI: UIViewRepresentable</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/ios/#10-stage-9-testing-with-the-modern-swift-testing-framework" class="toc-link">10. Stage 9: Testing with the Modern Swift Testing Framework</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/ios/#11-stage-10-app-store-signing-testflight-distribution" class="toc-link">11. Stage 10: App Store Signing, TestFlight &amp; Distribution</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#11-1-key-distribution-milestones" class="toc-link">11.1 Key Distribution Milestones</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/ios/#12-six-progressive-hands-on-milestone-projects" class="toc-link">12. Six Progressive Hands-On Milestone Projects</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#milestone-1-quickmetrics-converter" class="toc-link">Milestone 1: QuickMetrics Converter</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#milestone-2-pulsehabit-daily-routine-streak-tracker" class="toc-link">Milestone 2: PulseHabit (Daily Routine &amp; Streak Tracker)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#milestone-3-chronicle-notes-voice-memos" class="toc-link">Milestone 3: Chronicle Notes &amp; Voice Memos</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#milestone-4-devpulse-github-tech-news-explorer" class="toc-link">Milestone 4: DevPulse (GitHub &amp; Tech News Explorer)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#milestone-5-biometricvault-encrypted-media-locker" class="toc-link">Milestone 5: BiometricVault (Encrypted Media Locker)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/ios/#milestone-6-capstone-omnimarket-multiplatform-ios-ipados-suite" class="toc-link">Milestone 6 (Capstone): OmniMarket (Multiplatform iOS &amp; iPadOS Suite)</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/ios/#13-curated-official-resources" class="toc-link">13. Curated Official Resources</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/ios/#14-where-to-next-in-the-cc-ecosystem" class="toc-link">14. Where to Next in the CC Ecosystem</a>
+                    
+                </li>
+            
+            </ul>
+    </div>
+</div>
+
+
+                    
+                    
+                </div>
+            
+            </div>
+
+            <script>
+              // Determine theme: localStorage > extra.default_colorset > cc-dark
+              // Expose theme config for global use (e.g., js/theme.js)
+              
+              
+              
+                  
+                  
+                  
+                  
+              
+              window.defaultColorset = "dark";
+              window.darkBrightness = "normal";
+              window.lightBrightness = "normal";
+              window.themeMap = { "dark": "cc-dark", "light": "cc-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "cc-dark";
+
+              // Theme mapping - user-facing names are the theme identifiers
+              var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
+              var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
+              var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+
+              // Initialize and run Mermaid only when loaded
+              window.initMermaid = function() {
+                var mermaidTheme = "dark";
+                if(currentUserTheme == "cc-light") {
+                  mermaidTheme = "light";
+                }
+                
+                if (typeof mermaid !== 'undefined') {
+                  mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
+                  
+                  // Function to render mermaid diagrams
+                  var renderMermaid = async function() {
+                    const mermaidElements = document.querySelectorAll('.mermaid');
+                    if (mermaidElements.length > 0) {
+                        await mermaid.run({
+                            nodes: mermaidElements
+                        });
+                    }
+                  };
+                  
+                  // Check if DOMContentLoaded has already fired
+                  if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', renderMermaid);
+                  } else {
+                    // DOMContentLoaded already fired, run immediately
+                    renderMermaid();
+                  }
+                }
+              };
+              
+              // Auto-initialize if Mermaid is already loaded
+              if (typeof mermaid !== 'undefined') {
+                window.initMermaid();
+              }
+            </script>
+
+            
+<footer class="site-footer">
+    <!-- Main footer content -->
+    <div class="w-full py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer grid -->
+            <div class="footer-content">
+                
+                <!-- Column 1: About/Logo -->
+                <div class="footer-col space-y-4">
+                    <div class="footer-logo-container">
+                        
+                        <img src="https://cc-club.in/images/logo/cclogo.webp" alt="Logo" class="footer-logo">
+                        
+                        <h3>
+                            CC Club MNNIT
+                        </h3>
+                    </div>
+                    <p>
+                        Our mission since 2010 at MNNIT is to develop in you a passion for problem-solving, critical thinking, innovation and computer science. We strive to achieve this goal through means of events, classes and industry connects.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        
+                            
+                            <li>
+                                <a href="team">
+                                    Our Team
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="blog">
+                                    Blogs
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="projects">
+                                    Projects
+                                </a>
+                            </li>
+                            
+                        
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col space-y-4">
+                    <h4>Contact</h4>
+                    <div class="space-y-3">
+                        
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            computer.club@mnnit.ac.in
+                        </p>
+                        
+                        
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            MNNIT Allahabad, Prayagraj, UP - 211004
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        
+                            
+                            
+                            <a href="https://www.instagram.com/cc.club.mnnit/" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            
+                            
+                            
+                            <a href="https://www.linkedin.com/company/computer-coding-club-mnnit/" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            
+                            
+                            <a href="https://github.com/CC-MNNIT" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            
+                            
+                            <a href="https://discord.gg/EDv6fM5yUm" aria-label="Discord">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            
+                        
+                    </div>
+                    <p>
+                        Connect to stay updated about our events, projects and blogs!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Computer Coding Club. All rights reserved.</p>
+        <div class="footer-made-with">
+            <p>Made with</p>
+            <i class="fas fa-heart"></i>
+            <p>by Team CC</p>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
+            
+                
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+    
+    
+        
+        
+    
+
+
+
+
+
+<label for="my-drawer-2" class="drawer-overlay"></label>
+<div class="mt-16 w-68 h-[calc(100vh-4rem)] bg-base-100 text-base-content flex flex-col overflow-auto thin-scrollbar">
+    
+    <div class="px-2 pt-4 pb-0 flex flex-col items-center gap-2">
+        <div class="w-full flex items-center gap-2">
+            <label for="search-modal" class="input w-full flex items-center justify-between text-left bg-base-100 cursor-pointer border-gray-500/15 hover:border-gray-500/55 hover:border-1 transition" aria-label="검색">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="text-gray-400"><kbd class="kbd">⌘</kbd><kbd class="kbd">K</kbd></span>
+            </label>
+        </div>
+    </div>
+    
+    
+    
+    <div class="lg:hidden px-4 py-2 border-b border-gray-500/10">
+        <div class="text-xs font-semibold text-gray-400 mb-2">QUICK NAV</div>
+        <ul class="menu menu-compact">
+            
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/about" class="text-sm">
+                            
+                            <i class="fa-solid fa-circle-info mr-2"></i>
+                            About
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/blog" class="text-sm">
+                            
+                            <i class="fa-solid fa-blog mr-2"></i>
+                            Blog
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/events" class="text-sm">
+                            
+                            <i class="fa-solid fa-calendar-days mr-2"></i>
+                            Events
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view" class="text-sm" target="_blank" rel="noopener noreferrer">
+                            
+                            <i class="fa-solid fa-calendar-check mr-2"></i>
+                            Calendar
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/projects" class="text-sm">
+                            
+                            <i class="fa-solid fa-code-branch mr-2"></i>
+                            Projects
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/roadmaps" class="text-sm">
+                            
+                            <i class="fa-solid fa-route mr-2"></i>
+                            Roadmaps
+                        </a></li>
+                    
+                
+                    
+                        
+                            <li>
+                                
+                                    <a href="https://cc-club.in/team" class="text-sm">
+                                
+                                <i class="fa-solid fa-user-group mr-2"></i>
+                                Current Team
+                            </a></li>
+                        
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/contact" class="text-sm">
+                            
+                            <i class="fa-solid fa-envelope mr-2"></i>
+                            Contact
+                        </a></li>
+                    
+                
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+    <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
+        <a href="https://cc-club.in/roadmaps/" class="hover:text-primary transition-colors">Learning Roadmaps</a>
+    </div>
+
+    
+    
+    <ul class="hidden lg:block menu w-full flex-grow">
+        
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/web-development">Web Development Master Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/java-spring-boot">Java &amp; Spring Boot Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/machine-learning">Machine Learning Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/open-source">Open Source Contribution Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/mobile-development">Mobile Application Development Master Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/android">Kotlin &amp; Native Android Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/flutter">Flutter &amp; Dart Cross-platform Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/react-native">React Native &amp; Expo Cross-platform Development Roadmap</a></li>
+        
+            <li class="rounded bg-gray-500/15"><a class="hover:no-underline" href="https://cc-club.in/roadmaps/ios">Swift &amp; Native iOS Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/desktop-development">Desktop Application Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/sysadmin">System Administration Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/devops">DevOps Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/competitive-programming">Competitive Programming Mastery Roadmap</a></li>
+        
+        
+        
+        
+    </ul>
+    
+</div>
+
+            
+        </div>
+        
+        <script>
+            // Apply sidebar preference immediately to prevent FOUC
+            (function() {
+                try {
+                    var savedState = localStorage.getItem('sidebar-state');
+                    var sidebar = document.getElementById('sidebar');
+                    if (savedState === 'closed' && sidebar) {
+                        sidebar.classList.add('sidebar-closed');
+                    }
+                } catch (e) {}
+            })();
+        </script>
+    </div>
+
+    
+        <script type="text/javascript" src="https://cc-club.in/js/theme.js"></script>
+        
+        <!-- Lazy load search functionality -->
+        <script>
+            var searchLoaded = false;
+            var searchLoadCallbacks = [];
+            
+            function loadSearchLibraries(callback) {
+                // If already loaded, execute callback immediately
+                if (searchLoaded && typeof Fuse !== 'undefined' && window.searchIndex) {
+                    if (callback) callback();
+                    return;
+                }
+                
+                // Add callback to queue
+                if (callback) searchLoadCallbacks.push(callback);
+                
+                // If already loading, don't start again
+                if (searchLoaded) return;
+                searchLoaded = true;
+                
+                // Show loading indicator in search input
+                var searchInput = document.getElementById('search');
+                if (searchInput) {
+                    searchInput.placeholder = 'Loading search...';
+                    searchInput.disabled = true;
+                }
+                
+                // Load Fuse.js
+                var fuseScript = document.createElement('script');
+                fuseScript.src = 'https://cc-club.in/fuse.min.js';
+                
+                // Load search index after Fuse.js
+                fuseScript.onload = function() {
+                    var searchIndexScript = document.createElement('script');
+                    searchIndexScript.src = 'https://cc-club.in/search_index.en.js';
+                    searchIndexScript.onload = function() {
+                        // Re-enable search input
+                        if (searchInput) {
+                            searchInput.placeholder = 'Search documentation...';
+                            searchInput.disabled = false;
+                            searchInput.focus();
+                        }
+                        
+                        // Initialize search functionality
+                        if (typeof initSearch === 'function') {
+                            initSearch();
+                        }
+                        
+                        // Execute all queued callbacks
+                        searchLoadCallbacks.forEach(function(cb) { cb(); });
+                        searchLoadCallbacks = [];
+                    };
+                    document.body.appendChild(searchIndexScript);
+                };
+                
+                document.body.appendChild(fuseScript);
+            }
+            
+            // Load search on first interaction with search modal
+            document.addEventListener('DOMContentLoaded', function() {
+                var searchModal = document.getElementById('search-modal');
+                if (searchModal) {
+                    searchModal.addEventListener('change', function() {
+                        if (this.checked) {
+                            loadSearchLibraries();
+                        }
+                    });
+                }
+                
+                // Also load on Ctrl+K / Cmd+K
+                document.addEventListener('keydown', function(e) {
+                    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                        loadSearchLibraries();
+                    }
+                });
+            });
+        </script>
+        
+        
+        <script>
+            // Desktop Sidebar Toggle Logic
+            document.addEventListener('DOMContentLoaded', function() {
+                var toggleBtn = document.getElementById('desktop-sidebar-toggle');
+                var sidebar = document.getElementById('sidebar');
+                
+                if (toggleBtn && sidebar) {
+                    // Toggle handler
+                    toggleBtn.addEventListener('click', function() {
+                        // Check if closed by checking for class
+                        var isClosed = sidebar.classList.contains('sidebar-closed');
+                        
+                        if (isClosed) {
+                            // Opening
+                            sidebar.classList.remove('sidebar-closed');
+                            localStorage.setItem('sidebar-state', 'open');
+                        } else {
+                            // Closing
+                            sidebar.classList.add('sidebar-closed');
+                            localStorage.setItem('sidebar-state', 'closed');
+                        }
+                    });
+                }
+            });
+        </script>
+    
+</body>
+</html>

@@ -563,7 +563,7 @@
             
                         
     <div class="mb-12 pb-4 border-b border-gray-500/15">
-        <h1 class="flex items-center gap-3">
+        <h1 class="flex flex-wrap items-center gap-3">
             OpenPrinting: The Open-Source Backbone of Linux Printing
             
         </h1>
@@ -637,13 +637,13 @@ graph LR
 <h2 id="sysadmin-cheat-sheet-practical-commands">Sysadmin Cheat Sheet: Practical Commands</h2>
 <p>These commands assume CUPS is installed. They are essential for headless server management.</p>
 <h3 id="setup-discovery">Setup &amp; Discovery</h3>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">Click to view Device Discovery Commands</div><div class="collapse-content text-sm"><ul>
+<details class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><summary class="collapse-title font-semibold select-none cursor-pointer">Click to view Device Discovery Commands</summary><div class="collapse-content text-sm"><ul>
 <li><code>lpinfo -v</code>: List available devices/backends</li>
 <li><code>ippfind</code>: Scan network for IPP printers</li>
 <li><code>avahi-browse -rt _ipp._tcp</code>: Detailed mDNS discovery</li>
 <li><code>driverless</code>: List driverless-capable devices</li>
 </ul>
-</div></div>
+</div></details>
 <h3 id="managing-printers">Managing Printers</h3>
 <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Add a driverless printer (IPP Everywhere)</span></span>
 <span class="giallo-l"><span style="color: #59C2FF;">sudo</span><span style="color: #AAD94C;"> lpadmin</span><span style="color: #95E6CB;"> -p</span><span style="color: #AAD94C;"> OfficePrinter</span><span style="color: #95E6CB;"> -E -v</span><span style="color: #AAD94C;"> ipp://printer.local/ipp/</span><span style="color: #95E6CB;"> -m</span><span style="color: #AAD94C;"> everywhere</span></span>
@@ -715,7 +715,7 @@ graph LR
 <p>Whether you're a sysadmin debugging a queue or a student looking for your first open-source commit, the ecosystem is welcoming and vital.</p>
 <div role="alert" class="alert alert-success alert-soft"><div><p>Ready to experiment? Try setting up a local print queue on your machine today using the command line examples above!</p>
 </div></div>
-<div class="pretty-link-card group"><a href="https://github.com/OpenPrinting" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">OpenPrinting on GitHub</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description">Source code and issues for the OpenPrinting project</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>github.com/OpenPrinting</div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://github.com/OpenPrinting" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">OpenPrinting on GitHub</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Source code and issues for the OpenPrinting project</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>github.com/OpenPrinting</span></div></div></div></a></div>
 
     
     
@@ -894,6 +894,20 @@ graph LR
         
             
             
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
             
                 
             

@@ -10,17 +10,24 @@
     width: 10px;
 }
 
+/* Track stays transparent so the page background shows through and
+   the scrollbar blends with whichever theme is active */
 ::-webkit-scrollbar-track {
-    background: #1a1a1a;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #333;
+    background: var(--scrollbar-thumb, #333);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: var(--scrollbar-thumb-hover, #555);
+}
+
+/* Firefox: thumb + transparent track, resolved from the active theme's tokens */
+html {
+    scrollbar-color: var(--scrollbar-thumb, #555) transparent;
 }
 
 /* Gradient Background */

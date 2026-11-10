@@ -563,7 +563,7 @@
             
                         
     <div class="mb-12 pb-4 border-b border-gray-500/15">
-        <h1 class="flex items-center gap-3">
+        <h1 class="flex flex-wrap items-center gap-3">
             Client Side Solana 101: From Web2 Dev to Web3 Builder
             
         </h1>
@@ -657,13 +657,13 @@
 <span class="giallo-l"><span style="color: #59C2FF;">solana</span><span style="color: #AAD94C;"> config set</span><span style="color: #95E6CB;"> --url</span><span style="color: #AAD94C;"> https://api.devnet.solana.com</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Check your current configuration</span></span>
-<span class="giallo-l"><span style="color: #59C2FF;">solana</span><span style="color: #AAD94C;"> config get</span></span></code></pre><div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">What are Solana clusters?</div><div class="collapse-content text-sm"><ul>
+<span class="giallo-l"><span style="color: #59C2FF;">solana</span><span style="color: #AAD94C;"> config get</span></span></code></pre><details class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><summary class="collapse-title font-semibold select-none cursor-pointer">What are Solana clusters?</summary><div class="collapse-content text-sm"><ul>
 <li><strong>Mainnet Beta</strong>: The live network where real SOL is used</li>
 <li><strong>Devnet</strong>: Testing network with free 'play' SOL for developers</li>
 <li><strong>Testnet</strong>: Stress testing network for new features</li>
 <li><strong>Localnet</strong>: Your personal Solana network running locally</li>
 </ul>
-</div></div>
+</div></details>
 <h3 id="step-3-create-your-first-wallet">Step 3: Create Your First Wallet</h3>
 <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Generate a new keypair</span></span>
 <span class="giallo-l"><span style="color: #59C2FF;">solana-keygen</span><span style="color: #AAD94C;"> new</span><span style="color: #95E6CB;"> --outfile</span><span style="color: #AAD94C;"> ~/my-solana-wallet.json</span></span>
@@ -912,12 +912,12 @@
 <li><strong>Metaplex</strong>: The NFT standard and tools ecosystem on Solana</li>
 </ul>
 <h3 id="learning-resources">Learning Resources</h3>
-<div class="pretty-link-card group"><a href="https://docs.solana.com/" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">Official Solana Documentation</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description">Comprehensive guides and API references</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>docs.solana.com/</div></div></div></a></div>
-<div class="pretty-link-card group"><a href="https://github.com/solana-labs/example-programs" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">Solana Example Programs</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description">Real-world code examples for various use cases</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>github.com/solana-labs/example-programs</div></div></div></a></div>
-<div class="pretty-link-card group"><a href="https://www.anchor-lang.com/" target="_blank" rel="noopener noreferrer" class="block"><div class="flex items-start gap-4 p-5"><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-2 mb-2"><h3 class="pretty-link-title">Anchor Framework</h3><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description">The de facto standard for Solana program development</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>www.anchor-lang.com/</div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://docs.solana.com/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Official Solana Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Comprehensive guides and API references</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>docs.solana.com/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://github.com/solana-labs/example-programs" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Solana Example Programs</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Real-world code examples for various use cases</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>github.com/solana-labs/example-programs</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://www.anchor-lang.com/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Anchor Framework</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The de facto standard for Solana program development</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>www.anchor-lang.com/</span></div></div></div></a></div>
 <p><img src="/images/blog/2026/solana-101/solana-roadmap.webp" alt="Solana learning roadmap — From basics to building dApps" /></p>
 <h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">My transaction failed - what went wrong?</div><div class="collapse-content text-sm"><p><strong>Common causes:</strong></p>
+<details class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><summary class="collapse-title font-semibold select-none cursor-pointer">My transaction failed - what went wrong?</summary><div class="collapse-content text-sm"><p><strong>Common causes:</strong></p>
 <ul>
 <li>Insufficient SOL balance for transaction fees</li>
 <li>Network congestion (try again in a moment)</li>
@@ -930,8 +930,8 @@
 <li>Check network status: <code>solana cluster-version</code></li>
 <li>Verify your connection: <code>solana config get</code></li>
 </ul>
-</div></div>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">Wallet connection issues in browser</div><div class="collapse-content text-sm"><p><strong>Steps to fix:</strong></p>
+</div></details>
+<details class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><summary class="collapse-title font-semibold select-none cursor-pointer">Wallet connection issues in browser</summary><div class="collapse-content text-sm"><p><strong>Steps to fix:</strong></p>
 <ol>
 <li>Make sure you have a Solana wallet installed (Phantom, Solflare)</li>
 <li>Set your wallet to Devnet in settings</li>
@@ -939,15 +939,15 @@
 <li>Check browser console for error messages</li>
 <li>Ensure you're serving the HTML file over HTTP (not file://)</li>
 </ol>
-</div></div>
-<div tabindex="0" class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><div class="collapse-title font-semibold">Local validator won't start</div><div class="collapse-content text-sm"><p><strong>Common solutions:</strong></p>
+</div></details>
+<details class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><summary class="collapse-title font-semibold select-none cursor-pointer">Local validator won't start</summary><div class="collapse-content text-sm"><p><strong>Common solutions:</strong></p>
 <ul>
 <li>Kill existing validator processes: <code>pkill solana-test-validator</code></li>
 <li>Clear ledger data: <code>rm -rf test-ledger/</code></li>
 <li>Check port availability: <code>lsof -i :8899</code></li>
 <li>Restart with clean state: <code>solana-test-validator --reset</code></li>
 </ul>
-</div></div>
+</div></details>
 <h2 id="conclusion">Conclusion</h2>
 <p>You've successfully completed your first Solana development journey! From understanding the fundamentals of blockchain and Web3 to setting up your development environment and creating your own token, you've gained hands-on experience with one of the fastest-growing blockchain ecosystems.</p>
 <div role="alert" class="alert alert-info alert-soft"><div><p><strong>Remember:</strong> Solana development is rapidly evolving. Stay updated with the latest documentation and community resources!</p>

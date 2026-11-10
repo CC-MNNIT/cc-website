@@ -1,0 +1,2151 @@
+
+<!DOCTYPE html>
+
+<html lang="en" style="background-color: #0f172a;">
+
+<head>
+    
+        
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Resource Hints for better performance -->
+    
+
+    <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
+    <script>
+        (function() {
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
+            
+            
+            
+            
+                
+                
+                
+                
+            
+            // Get default values from config
+            var defaultColorset = "dark";
+            var darkBrightness = "normal";
+            var lightBrightness = "normal";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
+            
+            // Expose brightness config for global use (e.g., js/theme.js)
+            window.darkBrightness = darkBrightness;
+            window.lightBrightness = lightBrightness;
+            
+            // Get theme from localStorage or use fallback
+            var currentUserTheme = localStorage.getItem('theme') || fallbackTheme;
+            var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+            
+            // Determine brightness based on current theme
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
+            
+            // Set theme and brightness attributes immediately
+            document.documentElement.setAttribute("data-theme", actualTheme);
+            document.documentElement.setAttribute("data-brightness", currentBrightness);
+        })();
+    </script>
+
+    <style>
+        
+        
+        
+            
+            
+            
+        
+        
+            
+            @font-face {
+                font-family: "Pretendard-Regular";
+                src: url('https://cc-club.in/fonts/Pretendard-Regular.woff') format("woff");
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+            body {
+                font-family: "Pretendard-Regular", sans-serif;
+            }
+        
+    </style>
+
+    
+        
+            <meta name="description" content="A comprehensive, practical guide to mastering cross-platform mobile development with TypeScript, React Native, Expo, the New Architecture, and production deployment." />
+        
+    
+
+    <title>React Native &amp; Expo Cross-platform Development Roadmap | Computer Coding Club</title>
+
+    
+    
+
+      <!-- SEO: Open Graph / Twitter Card -->
+      <meta property="og:title" content="React Native &amp; Expo Cross-platform Development Roadmap | Computer Coding Club" />
+      <meta property="og:description" content="A comprehensive, practical guide to mastering cross-platform mobile development with TypeScript, React Native, Expo, the New Architecture, and production deployment." />
+      <meta property="og:url" content="https://cc-club.in/" />
+      <meta property="og:type" content="website" />
+      
+      <meta property="og:image" content="https://cc-club.in/cc-club-thumbnail.webp" />
+      
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="React Native &amp; Expo Cross-platform Development Roadmap" />
+      <meta name="twitter:description" content="A comprehensive, practical guide to mastering cross-platform mobile development with TypeScript, React Native, Expo, the New Architecture, and production deployment." />
+      
+      
+      
+          
+          
+      
+      
+      <meta name="twitter:site" content="@ccclub_mnnit" />
+      
+      
+      <meta name="twitter:creator" content="@ccclub_mnnit" />
+      
+      
+      <meta name="twitter:image" content="https://cc-club.in/cc-club-thumbnail.webp" />
+      
+
+      <!-- Browser address bar color -->
+      <meta name="theme-color" content="#0f172a">
+
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="https://cc-club.in/icons/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="https://cc-club.in/icons/favicon.svg" />
+      <link rel="shortcut icon" href="https://cc-club.in/icons/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="https://cc-club.in/icons/apple-touch-icon.png" />
+      <link rel="manifest" href="https://cc-club.in/icons/site.webmanifest" />
+
+      <!-- CSS -->
+    <link rel="stylesheet" href="https://cc-club.in/css/site.css">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://cc-club.in/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
+
+    <!-- Defer non-critical scripts -->
+    <script defer src="https://cc-club.in/js/copy_code.js"></script>
+    <script defer src="https://cc-club.in/js/copy_heading_link.js"></script>
+    
+    <!-- Lazy load Mermaid and KaTeX - only when needed -->
+    <script>
+        // Lazy load KaTeX and Mermaid when needed
+        window.addEventListener('DOMContentLoaded', function() {
+            // Check for both KaTeX inline and block elements in one pass
+            var katexInlineElements = document.querySelectorAll('.katex-inline');
+            var katexBlockElements = document.querySelectorAll('.katex-block');
+            var hasKatex = katexInlineElements.length > 0 || katexBlockElements.length > 0;
+            var hasMermaid = document.querySelector('.mermaid');
+            
+            // Load KaTeX if math elements are present
+            if (hasKatex) {
+                // Load KaTeX CSS first
+                var katexCSS = document.createElement('link');
+                katexCSS.rel = 'stylesheet';
+                katexCSS.href = 'https://cc-club.in/css/katex.min.css';
+                document.head.appendChild(katexCSS);
+                
+                // Load KaTeX JS
+                var katexScript = document.createElement('script');
+                katexScript.src = 'https://cc-club.in/js/katex.min.js';
+                katexScript.onload = function() {
+                    // Render inline elements
+                    katexInlineElements.forEach(function(elem) {
+                        var texContent = elem.textContent || elem.innerText;
+                        try {
+                            katex.render(texContent, elem, { 
+                                throwOnError: false,
+                                displayMode: false
+                            });
+                        } catch(e) {
+                            console.error('KaTeX render error:', e);
+                        }
+                    });
+                    
+                    // Render block elements
+                    katexBlockElements.forEach(function(elem) {
+                        var texContent = elem.textContent || elem.innerText;
+                        try {
+                            katex.render(texContent, elem, { 
+                                throwOnError: false,
+                                displayMode: true
+                            });
+                        } catch(e) {
+                            console.error('KaTeX render error:', e);
+                        }
+                    });
+                };
+                document.head.appendChild(katexScript);
+            }
+            
+            // Load Mermaid if diagram elements are present
+            if (hasMermaid) {
+                var mermaidScript = document.createElement('script');
+                mermaidScript.src = 'https://cc-club.in/js/mermaid.min.js';
+                mermaidScript.onload = function() {
+                    // Initialize Mermaid after loading
+                    if (typeof window.initMermaid === 'function') {
+                        window.initMermaid();
+                    }
+                };
+                document.head.appendChild(mermaidScript);
+            }
+        });
+    </script>
+
+    
+    
+
+    <style>
+        /* Desktop Sidebar Animation */
+        @media (min-width: 1024px) {
+            /* Only apply fixed width when drawer is in open mode (sidebar visible) */
+            .lg\:drawer-open #sidebar {
+                width: 17rem; /* w-72 default */
+                transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1), border-width 300ms ease;
+                white-space: nowrap;
+            }
+            
+            .lg\:drawer-open #sidebar.sidebar-closed {
+                width: 0;
+                border-right-width: 0;
+            }
+            
+            /* For overlay mode on desktop (landing page), ensure full width for overlay */
+            .drawer:not(.lg\:drawer-open) #sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+<!-- Search Modal -->
+<input type="checkbox" id="search-modal" class="modal-toggle" />
+<div class="modal modal-middle">
+    <div class="modal-box relative max-w-2xl p-0 bg-base-100 shadow-2xl">
+        <label for="search-modal" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 z-10">✕</label>
+        <div class="search-container">
+            <!-- Search Input Container -->
+            <div class="search-input-container px-6 pt-6 pb-4 border-b border-base-300/30">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="search-icon absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-base-content/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input id="search" type="search" placeholder="Search documentation..." class="search-input w-full pl-12 pr-4 py-3 text-base bg-transparent border-0 focus:outline-none focus:ring-0 text-base-content placeholder:text-base-content/40">
+                </div>
+            </div>
+            <!-- Search Results Container -->
+            <div class="search-results-container px-2 py-2 h-96 overflow-y-auto">
+                <div class="search-results__header px-4 py-2 text-xs text-base-content/60"></div>
+                <ul class="search-results__items space-y-1"></ul>
+            </div>
+            <!-- Search Footer -->
+            <div class="search-footer px-6 py-3 border-t border-base-300/30 flex items-center justify-end gap-4 text-xs text-base-content/50">
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↑</kbd>
+                    <kbd class="kbd kbd-xs">↓</kbd>
+                    <span>to navigate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↵</kbd>
+                    <span>to select</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">esc</kbd>
+                    <span>to close</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+    
+    
+    <div class="drawer lg:drawer-open">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col pt-16">
+            
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="navbar opacity-95 fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-500/15 backdrop-blur-3xl">
+    <!-- Mobile hamburger (and Desktop on Root Page) -->
+    <div class="flex-none lg:hidden">
+        <label for="my-drawer-2" class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </label>
+    </div>
+    <!-- Desktop sidebar toggle -->
+    
+    <div class="flex-none hidden lg:block">
+        <button id="desktop-sidebar-toggle" class="btn btn-square btn-ghost" aria-label="Toggle sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+    
+    <!-- Logo -->
+    <div class="flex-1">
+        <a href="https://cc-club.in"
+            class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link"
+            style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+            
+            <img src="https://cc-club.in/images/logo/cclogo.webp" alt="CC Club"
+                class="h-18 w-auto" style="padding: 10px;"  />
+            
+        </a>
+    </div>
+    <!-- Desktop AND Mobile Menu - Theme toggle always visible -->
+    <div class="flex-none flex lg:flex">
+        <ul class="menu menu-horizontal px-1 items-center">
+            <!-- Desktop navigation items (hidden on mobile) -->
+            <div class="hidden lg:flex lg:contents">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/about">
+                            
+                            <i class="fa-solid fa-circle-info"></i>
+                            About
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/blog">
+                            
+                            <i class="fa-solid fa-blog"></i>
+                            Blog
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/events">
+                            
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Events
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                    <a class="btn btn-ghost hover:no-underline "
+                        href="https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view" target="_blank" rel="noopener noreferrer">
+                        
+                            <i class="fa-solid fa-calendar-check"></i>
+                            Calendar
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/projects">
+                            
+                            <i class="fa-solid fa-code-branch"></i>
+                            Projects
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/roadmaps">
+                            
+                            <i class="fa-solid fa-route"></i>
+                            Roadmaps
+                        </a>
+                </li>
+                
+                
+                
+                <li class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        <i class="fa-solid fa-users"></i>
+                        Community
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
+                        
+                        
+                        <li>
+                            
+                                <a class="btn btn-ghost hover:no-underline "
+                                    href="https://cc-club.in/team">
+                                    
+                                    <i class="fa-solid fa-user-group"></i>
+                                    Current Team
+                                </a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/contact">
+                            
+                            <i class="fa-solid fa-envelope"></i>
+                            Contact
+                        </a>
+                </li>
+                
+                
+                
+
+                
+            </div>
+
+            
+            
+            
+            
+            <li class="flex items-center">
+                <label class="swap swap-rotate btn btn-ghost btn-circle">
+                    <input type="checkbox" class="theme-controller" value="cc-dark" aria-labelledby="swap color" />
+                    <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+                    <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                </label>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const currentPath = window.location.pathname;
+
+        const navLinks = document.querySelectorAll('.navbar a[href]:not(.logo-link)');
+
+        navLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
+            if (link.classList.contains('active-nav')) {
+                return;
+            }
+
+            let isActive = false;
+
+            if (linkPath === '/') {
+                isActive = (currentPath === '/' || currentPath === '');
+            } else {
+                isActive = currentPath.startsWith(linkPath);
+            }
+
+            if (isActive) {
+                link.classList.add('active-nav');
+            } else {
+                link.classList.remove('active-nav');
+            }
+        });
+    });
+</script>
+
+
+
+            
+            
+            
+            
+                
+            
+
+            
+            <div class="p-8 w-full flex justify-center">
+                <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
+                    <main class="prose w-full">
+            
+                        
+    <div class="mb-12 pb-4 border-b border-gray-500/15">
+        <h1 class="flex flex-wrap items-center gap-3">
+            React Native &amp; Expo Cross-platform Development Roadmap
+            
+                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">CROSS-PLATFORM</span>
+            
+        </h1>
+        <p class="text-gray-500">A comprehensive, practical guide to mastering cross-platform mobile development with TypeScript, React Native, Expo, the New Architecture, and production deployment.</p>
+        
+    </div>
+    <p>React Native powers some of the most widely used mobile applications in the world—from Meta platforms (Instagram, Facebook Ads) and Microsoft apps (Teams, Skype) to Shopify, Discord, Coinbase, and Pinterest. By combining the declarative component model of <strong>React</strong> with native platform primitives, React Native allows developers to build truly native mobile applications for <strong>Android and iOS</strong> from a single <strong>TypeScript</strong> codebase.</p>
+<p>However, the React Native ecosystem of 2026 is vastly different from the legacy tutorials of 2018. Today, modern React Native development is driven by <strong>The New Architecture</strong> (Fabric, TurboModules, and the high-performance Hermes JavaScript engine) and the <strong>Expo application framework</strong>, which provides file-based routing (<strong>Expo Router</strong>), native cloud and local build pipelines (<strong>EAS</strong>), and unified access to mobile hardware.</p>
+<p>This roadmap is designed by the <strong>Computer Coding Club (CC), MNNIT Allahabad</strong> to guide both complete beginners and experienced web developers through the complete mobile engineering spectrum: mastering TypeScript, transitioning from DOM thinking to native primitives, structuring scalable offline-first apps, and shipping production binaries to the Google Play Store and Apple App Store.</p>
+<hr />
+<h2 id="1-orientation-the-modern-react-native-ecosystem">1. Orientation: The Modern React Native Ecosystem</h2>
+<p>Before diving into components, you must establish an accurate mental model of what React Native actually is, how it renders on physical devices, and where Expo fits into the ecosystem.</p>
+<h3 id="1-1-what-react-native-is-and-is-not">1.1 What React Native Is (and Is Not)</h3>
+<ul>
+<li><strong>What It IS</strong>: React Native is a mobile framework that runs your application logic in an embedded, precompiled JavaScript engine (Hermes) and drives <strong>real, platform-native UI widgets</strong> (such as Android's <code>ViewGroup</code> and iOS's <code>UIView</code>). A button rendered in React Native is not a web element inside a WebView; it is a genuine, hardware-accelerated platform widget.</li>
+<li><strong>What It IS NOT</strong>: React Native is not a hybrid wrapper like Cordova or Ionic. It does not render HTML inside an embedded browser window. There is no <code>document</code>, no <code>window</code>, and no DOM.</li>
+</ul>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    App["Your TypeScript / React Code"] --> Engine["Hermes JavaScript Engine (Bytecode AOT)"]
+    Engine --> JSI["JavaScript Interface (JSI - Direct C++ Memory)"]
+    JSI --> Fabric["Fabric Rendering Engine (Native C++)"]
+    JSI --> Turbo["TurboModules (Native Device Hardware)"]
+    Fabric --> AndroidUI["Android Native Views (ViewGroup)"]
+    Fabric --> AppleUI["iOS Native Views (UIView / CoreAnimation)"]
+</pre>
+<h3 id="1-2-the-evolution-legacy-bridge-vs-the-new-architecture">1.2 The Evolution: Legacy Bridge vs. The New Architecture</h3>
+<p>Understanding the transition from the legacy architecture to the New Architecture prevents you from adopting obsolete patterns.</p>
+<table><thead><tr><th style="text-align: left">Architectural Dimension</th><th style="text-align: left">Legacy React Native (Pre-0.70)</th><th style="text-align: left">Modern React Native (0.76+ &amp; New Architecture)</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>Communication Layer</strong></td><td style="text-align: left">Asynchronous JSON <strong>Bridge</strong> (Serialized strings over a queue)</td><td style="text-align: left"><strong>JSI (JavaScript Interface)</strong>: Direct C++ in-memory function calls with zero serialization</td></tr>
+<tr><td style="text-align: left"><strong>UI Rendering Engine</strong></td><td style="text-align: left">Legacy Paper Renderer (Asynchronous layout calculation)</td><td style="text-align: left"><strong>Fabric Renderer</strong>: Synchronous UI measurements, concurrent rendering, 120Hz fluid layouts</td></tr>
+<tr><td style="text-align: left"><strong>Native Modules</strong></td><td style="text-align: left">Eagerly initialized on app launch (Slowing down startup)</td><td style="text-align: left"><strong>TurboModules</strong>: Lazy-loaded native modules instantiated only on first invocation</td></tr>
+<tr><td style="text-align: left"><strong>JavaScript Engine</strong></td><td style="text-align: left">JavaScriptCore (Slow cold starts, uncompressed bundles)</td><td style="text-align: left"><strong>Hermes Engine</strong>: Bytecode precompiled Ahead-of-Time (AOT), microsecond startup, minimal RAM</td></tr>
+<tr><td style="text-align: left"><strong>Layout Math</strong></td><td style="text-align: left">Yoga Engine over the Bridge</td><td style="text-align: left"><strong>Yoga C++ Engine</strong> integrated directly into the host thread via JSI</td></tr>
+</tbody></table>
+<div role="alert" class="alert alert-info alert-soft"><div><p><strong>Why JSI Matters for Mobile Developers</strong>: In the old architecture, every user swipe, scroll event, and animation frame had to be converted into a JSON string, queued across an asynchronous bridge, and deserialized in native Java/Objective-C. This caused noticeable frame drops and lag. With <strong>JSI</strong>, JavaScript code can directly hold C++ host references, making native communication as fast as calling a local function.</p>
+</div></div>
+<h3 id="1-3-demystifying-expo-toolchain-vs-framework">1.3 Demystifying Expo: Toolchain vs. Framework</h3>
+<p>A common question among newcomers is: <em>"Should I learn React Native or Expo?"</em></p>
+<p>This is a false dichotomy. <strong>Expo is the official, Meta-recommended framework for React Native</strong> (analogous to how Next.js is the official production framework for React web).</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    subgraph React_Native_Core["React Native Core"]
+        Primitives["Core Components: View, Text, FlatList"]
+        JSI_Arch["New Architecture: Fabric, TurboModules, Hermes"]
+    end
+
+    subgraph Expo_Framework["Expo Ecosystem"]
+        Router["Expo Router (File-based typed routing)"]
+        SDK["Expo SDK (50+ curated hardware modules: Camera, SecureStore, SQLite)"]
+        CLI["Expo CLI (Metro bundler, dev server, prebuild)"]
+        EAS["EAS (Cloud & Local builds, App Store submissions)"]
+    end
+
+    Expo_Framework -->|"Wraps, enhances, and powers"| React_Native_Core
+</pre>
+<ul>
+<li><strong>Expo Go</strong>: A prebuilt sandbox client installed on your physical phone from the App Store. Excellent for beginners writing basic UI without custom native libraries.</li>
+<li><strong>Development Builds (<code>expo-dev-client</code>)</strong>: A customized native binary compiled specifically for your app, containing all your custom C++, Kotlin, and Swift dependencies while retaining full Hot Reload. This is the <strong>standard workflow for all professional React Native apps</strong>.</li>
+<li><strong>Prebuild (<code>npx expo prebuild</code>)</strong>: Continuously and deterministically generates standard <code>android/</code> and <code>ios/</code> folders from your project configuration. You get full access to native native projects without needing to maintain fragile native build files manually.</li>
+</ul>
+<hr />
+<h2 id="2-the-web-to-mobile-transition-guide">2. The Web-to-Mobile Transition Guide</h2>
+<p>If you already know React for the web, approximately <strong>70% of your conceptual knowledge transfers immediately</strong>. However, the remaining <strong>30% involves mobile-specific paradigms</strong> that will break your application if ignored.</p>
+<h3 id="2-1-the-concept-transfer-matrix">2.1 The Concept Transfer Matrix</h3>
+<table><thead><tr><th style="text-align: left">Web Concept (React DOM)</th><th style="text-align: left">Mobile Equivalent (React Native)</th><th style="text-align: left">Key Differences &amp; Gotchas</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;main&gt;</code></td><td style="text-align: left"><code>&lt;View&gt;</code></td><td style="text-align: left">Containers do not inherit styles; they act as a layout box with Flexbox enabled by default.</td></tr>
+<tr><td style="text-align: left"><code>&lt;p&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code></td><td style="text-align: left"><code>&lt;Text&gt;</code></td><td style="text-align: left"><strong>Raw strings CANNOT exist inside <code>&lt;View&gt;</code>.</strong> Any text not wrapped in <code>&lt;Text&gt;</code> triggers an immediate runtime crash!</td></tr>
+<tr><td style="text-align: left"><code>&lt;button&gt;</code>, <code>&lt;input type="button"&gt;</code></td><td style="text-align: left"><code>&lt;Pressable&gt;</code></td><td style="text-align: left">React Native has no default hover states. <code>&lt;Pressable&gt;</code> gives fine-grained control over press in, press out, and ripple states.</td></tr>
+<tr><td style="text-align: left"><code>&lt;img&gt;</code></td><td style="text-align: left"><code>&lt;Image&gt;</code> or <code>Image</code> from <code>expo-image</code></td><td style="text-align: left">Images require explicit dimensions (<code>width</code> and <code>height</code>) in styles, or they collapse to 0x0 pixels.</td></tr>
+<tr><td style="text-align: left"><code>&lt;input type="text"&gt;</code></td><td style="text-align: left"><code>&lt;TextInput&gt;</code></td><td style="text-align: left">Requires explicit handling for software keyboards (<code>KeyboardAvoidingView</code>), auto-capitalization, and secure text entry.</td></tr>
+<tr><td style="text-align: left"><code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code> with <code>.map()</code></td><td style="text-align: left"><code>&lt;FlatList&gt;</code></td><td style="text-align: left"><strong>Never render long lists using <code>.map()</code> inside a ScrollView.</strong> <code>&lt;FlatList&gt;</code> virtualizes rows to protect memory.</td></tr>
+<tr><td style="text-align: left"><code>&lt;a&gt;</code> (Hyperlinks)</td><td style="text-align: left"><code>&lt;Link&gt;</code> (Expo Router) or Navigation</td><td style="text-align: left">Mobile navigation is a <strong>stack of physical viewports</strong>, not a flat browser URL replacement.</td></tr>
+<tr><td style="text-align: left">CSS Files, Tailwind Web</td><td style="text-align: left"><code>StyleSheet.create({})</code> or NativeWind</td><td style="text-align: left">No CSS cascade. Properties are camelCased (<code>backgroundColor</code>). No <code>px</code> or <code>rem</code> units; numbers represent density-independent pixels (<code>dp</code>).</td></tr>
+</tbody></table>
+<h3 id="2-2-critical-mental-shifts-for-web-developers">2.2 Critical Mental Shifts for Web Developers</h3>
+<h4 id="1-flexbox-defaults-to-columns-not-rows">1. Flexbox Defaults to Columns, Not Rows</h4>
+<p>On the web, <code>display: flex</code> arranges child elements in a horizontal row by default (<code>flexDirection: 'row'</code>). Because mobile screens are portrait-oriented, <strong>React Native defaults <code>flexDirection</code> to <code>'column'</code></strong>.</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="tsx"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// React Native: Children stack vertically by default!</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">const</span><span> styles</span><span style="color: #F29668;"> =</span><span> StyleSheet</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">create</span><span>({</span></span>
+<span class="giallo-l"><span>  container</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span>    flex</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Takes up 100% of available screen space</span></span>
+<span class="giallo-l"><span>    flexDirection</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;column&#39;</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Default in React Native</span></span>
+<span class="giallo-l"><span>    justifyContent</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;center&#39;</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Aligns along the vertical axis</span></span>
+<span class="giallo-l"><span>    alignItems</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;center&#39;</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Aligns along the horizontal axis</span></span>
+<span class="giallo-l"><span>  }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>})</span><span style="color: #BFBDB6B3;">;</span></span></code></pre><h4 id="2-the-absence-of-css-cascading">2. The Absence of CSS Cascading</h4>
+<p>In browser CSS, setting <code>color: red</code> on a parent <code>&lt;div&gt;</code> causes all nested paragraphs and spans to inherit the red text color. <strong>In React Native, styles DO NOT cascade</strong>. The only exception is nesting <code>&lt;Text&gt;</code> inside an outer <code>&lt;Text&gt;</code> component:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="tsx"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// ❌ FAILS: The inner text will NOT inherit the red color!</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">&lt;</span><span style="color: #59C2FF;">View</span><span style="color: #FFB454;"> style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span> {  color</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;red&#39;</span><span>  }</span><span style="color: #FF8F40;"> }</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">  &lt;</span><span style="color: #59C2FF;">Text</span><span style="color: #39BAE680;">&gt;</span><span>This text will be the default system color, NOT red!</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #59C2FF;">Text</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">&lt;/</span><span style="color: #59C2FF;">View</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// ✅ WORKS: Text styles cascade only when nested inside Text</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">&lt;</span><span style="color: #59C2FF;">Text</span><span style="color: #FFB454;"> style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span> {  color</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;red&#39;</span><span style="color: #BFBDB6B3;">,</span><span> fontSize</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 16</span><span>  }</span><span style="color: #FF8F40;"> }</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span>  This is red, and </span><span style="color: #39BAE680;">&lt;</span><span style="color: #59C2FF;">Text</span><span style="color: #FFB454;"> style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span> {  fontWeight</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;bold&#39;</span><span>  }</span><span style="color: #FF8F40;"> }</span><span style="color: #39BAE680;">&gt;</span><span>this is red and bold!</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #59C2FF;">Text</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">&lt;/</span><span style="color: #59C2FF;">Text</span><span style="color: #39BAE680;">&gt;</span></span></code></pre><h4 id="3-mobile-navigation-stacks-vs-flat-browser-urls">3. Mobile Navigation Stacks vs. Flat Browser URLs</h4>
+<p>On the web, clicking a link replaces the current DOM tree or changes a flat URL. On mobile, screens are pushed onto a <strong>Navigation Stack</strong>:</p>
+<ul>
+<li>When a user navigates from the Feed to a Profile, the Feed screen is <strong>not unmounted</strong>. It remains alive in memory beneath the Profile screen.</li>
+<li>State, active network subscriptions, and audio playback in the underlying screen continue running unless explicitly paused via mobile lifecycle hooks.</li>
+</ul>
+<h4 id="4-the-software-keyboard-screen-real-estate">4. The Software Keyboard &amp; Screen Real Estate</h4>
+<p>On desktop browsers, keyboards are physical hardware peripherals that never obstruct viewport content. On mobile, tapping a text input raises a software keyboard that instantly obscures 40–50% of the screen. Mobile apps must wrap input forms in <code>&lt;KeyboardAvoidingView&gt;</code> to prevent inputs from being hidden behind the keyboard.</p>
+<hr />
+<h2 id="3-stage-1-modern-javascript-typescript-foundations">3. Stage 1: Modern JavaScript &amp; TypeScript Foundations</h2>
+<p>Modern React Native applications are built with strict <strong>TypeScript</strong>. Solidifying your TypeScript foundations eliminates runtime type bugs before your code touches a device.</p>
+<h3 id="3-1-essential-es6-concepts-for-react-native">3.1 Essential ES6+ Concepts for React Native</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="typescript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// 1. Destructuring with Default Fallbacks</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">const</span><span> { username</span><span style="color: #BFBDB6B3;">,</span><span> role</span><span style="color: #F29668;"> =</span><span style="color: #AAD94C;"> &#39;Member&#39;</span><span style="color: #BFBDB6B3;">,</span><span> stats: { commits</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> 0</span><span> }</span><span style="color: #F29668;"> =</span><span> {} }</span><span style="color: #F29668;"> =</span><span> member</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// 2. Spread Operator for Immutable State Updates</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">const</span><span> updatedUser</span><span style="color: #F29668;"> =</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #F29668;">  ...</span><span>currentUser</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  achievements</span><span style="color: #BFBDB6B3;">:</span><span> [</span><span style="color: #F29668;">...</span><span>currentUser</span><span style="color: #F29668;">.</span><span>achievements</span><span style="color: #BFBDB6B3;">,</span><span style="color: #AAD94C;"> &#39;Hackathon Finalist&#39;</span><span>]</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>}</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// 3. Optional Chaining and Nullish Coalescing</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">const</span><span> avatarUrl</span><span style="color: #F29668;"> =</span><span> user</span><span style="color: #F29668;">?.</span><span>profile</span><span style="color: #F29668;">?.</span><span>avatar</span><span style="color: #F29668;"> ??</span><span style="color: #AAD94C;"> &#39;https://cc-club.in/default-avatar.png&#39;</span><span style="color: #BFBDB6B3;">;</span></span></code></pre><h3 id="3-2-typescript-for-mobile-applications">3.2 TypeScript for Mobile Applications</h3>
+<p>Avoid typing components with generic <code>any</code>. Statically typed props, navigation routes, and API responses ensure robust applications:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="typescript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Strict Interface Declarations</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">interface</span><span style="color: #59C2FF;"> Contributor</span><span> {</span></span>
+<span class="giallo-l"><span>  id</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  name</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  contributionsCount</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> number</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  isCoreTeam</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> boolean</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  avatarUrl</span><span style="color: #F29668;">?:</span><span style="color: #39BAE6;"> string</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Discriminated Unions for UI State</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">type</span><span style="color: #59C2FF;"> RequestState</span><span>&lt;</span><span style="color: #59C2FF;">T</span><span>&gt;</span><span style="color: #F29668;"> =</span></span>
+<span class="giallo-l"><span style="color: #F29668;">  |</span><span> { status</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &#39;idle&#39;</span><span> }</span></span>
+<span class="giallo-l"><span style="color: #F29668;">  |</span><span> { status</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &#39;loading&#39;</span><span> }</span></span>
+<span class="giallo-l"><span style="color: #F29668;">  |</span><span> { status</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &#39;success&#39;</span><span style="color: #BFBDB6B3;">;</span><span> data</span><span style="color: #F29668;">:</span><span style="color: #59C2FF;"> T</span><span> }</span></span>
+<span class="giallo-l"><span style="color: #F29668;">  |</span><span> { status</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &#39;error&#39;</span><span style="color: #BFBDB6B3;">;</span><span> errorMessage</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span> }</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Exhaustive pattern matching helper</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">function</span><span style="color: #FFB454;"> renderState</span><span>(</span><span style="color: #D2A6FF;">state</span><span style="color: #F29668;">:</span><span style="color: #59C2FF;"> RequestState</span><span>&lt;</span><span style="color: #59C2FF;">Contributor</span><span>[]&gt;) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  switch</span><span> (state</span><span style="color: #F29668;">.</span><span>status) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    case</span><span style="color: #AAD94C;"> &#39;idle&#39;</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">      return</span><span style="color: #D2A6FF;"> null</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    case</span><span style="color: #AAD94C;"> &#39;loading&#39;</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">      return</span><span> &lt;</span><span style="color: #59C2FF;">ActivityIndicator size</span><span>=</span><span style="color: #AAD94C;">&quot;large&quot;</span><span> /&gt;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    case</span><span style="color: #AAD94C;"> &#39;success&#39;</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">      return</span><span> &lt;</span><span style="color: #59C2FF;">ContributorList contributors</span><span>={</span><span style="color: #59C2FF;">state</span><span style="color: #F29668;">.</span><span>data} /&gt;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    case</span><span style="color: #AAD94C;"> &#39;error&#39;</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">      return</span><span> &lt;</span><span style="color: #59C2FF;">ErrorMessage message</span><span>={</span><span style="color: #59C2FF;">state</span><span style="color: #F29668;">.</span><span>errorMessage} /&gt;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="4-stage-2-development-environment-the-expo-workflow">4. Stage 2: Development Environment &amp; The Expo Workflow</h2>
+<p>Setting up a mobile development environment involves configuring Node.js, watchmen, mobile emulators, and build engines.</p>
+<h3 id="4-1-initializing-a-modern-expo-project">4.1 Initializing a Modern Expo Project</h3>
+<p>Create a new project using the official template configured with TypeScript and Expo Router:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Create a fresh production-ready app</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">npx</span><span style="color: #AAD94C;"> create-expo-app@latest cc-pulse</span><span style="color: #95E6CB;"> --template</span><span style="color: #AAD94C;"> default</span></span>
+<span class="giallo-l"><span style="color: #F07178;">cd</span><span style="color: #AAD94C;"> cc-pulse</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Launch the development server</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">npx</span><span style="color: #AAD94C;"> expo start</span></span></code></pre><h3 id="4-2-the-three-expo-workflows-compared">4.2 The Three Expo Workflows Compared</h3>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    Choice["Which Expo Workflow should you use?"] --> W1["1. Expo Go"]
+    Choice --> W2["2. Development Builds (expo-dev-client)"]
+    Choice --> W3["3. Bare / Prebuild Native Project"]
+
+    W1 --> D1["Zero native setup. Scan QR code in Expo Go app.<br/>Limitation: Cannot use custom C++/Kotlin/Swift native libraries."]
+    W2 --> D2["Industry Standard. Generates a custom debug binary for your device.<br/>Supports all native modules, custom SDKs, and full Hot Reload."]
+    W3 --> D3["Continuous Native Generation (CNG).<br/>Generates deterministic android/ and ios/ folders via 'npx expo prebuild'."]
+</pre>
+<div role="alert" class="alert alert-success alert-soft"><div><p><strong>The Modern Consensus</strong>: Start simple with <strong>Expo Go</strong> while learning core UI, Flexbox, and state. When you need custom native hardware libraries (such as specialized Bluetooth SDKs or background services), transition seamlessly to <strong>Development Builds (<code>npx expo run:android</code> or <code>npx expo run:ios</code>)</strong> without rewriting any React code.</p>
+</div></div>
+<h3 id="4-3-metro-bundler-fast-refresh">4.3 Metro Bundler &amp; Fast Refresh</h3>
+<p>React Native uses <strong>Metro</strong>, a dedicated JavaScript bundler optimized for mobile devices:</p>
+<ul>
+<li><strong>Fast Refresh</strong>: React Native combines Hot Reloading with React Component state preservation. If you edit a component's JSX or CSS, Metro updates only that component in under a second without resetting your form fields or navigation stack.</li>
+<li><strong>Hermes Debugger</strong>: Modern Expo includes built-in Hermes debugging. Press <code>j</code> in the Metro terminal to attach Chrome DevTools directly to the Hermes JavaScript runtime on your device.</li>
+</ul>
+<hr />
+<h2 id="5-stage-3-core-react-native-components-styling">5. Stage 3: Core React Native Components &amp; Styling</h2>
+<p>React Native replaces browser DOM tags with native platform UI primitives.</p>
+<h3 id="5-1-the-core-primitive-catalog">5.1 The Core Primitive Catalog</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="tsx"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span> React</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;react&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { View</span><span style="color: #BFBDB6B3;">,</span><span> Text</span><span style="color: #BFBDB6B3;">,</span><span> StyleSheet</span><span style="color: #BFBDB6B3;">,</span><span> Pressable }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;react-native&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { Image }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;expo-image&#39;</span><span style="color: #BFBDB6B3;">;</span><span style="color: #5A6673;font-style: italic;"> // High-performance native image component</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">interface</span><span style="color: #59C2FF;"> ProjectCardProps</span><span> {</span></span>
+<span class="giallo-l"><span>  title</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  stars</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> number</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  bannerUri</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  onPress</span><span style="color: #F29668;">:</span><span> ()</span><span style="color: #FF8F40;"> =&gt;</span><span style="color: #39BAE6;"> void</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">export const</span><span style="color: #FFB454;"> ProjectCard</span><span style="color: #F29668;">:</span><span style="color: #59C2FF;"> React</span><span style="color: #F29668;">.</span><span style="color: #59C2FF;">FC</span><span>&lt;</span><span style="color: #59C2FF;">ProjectCardProps</span><span>&gt;</span><span style="color: #F29668;"> =</span><span> ({</span></span>
+<span class="giallo-l"><span>  title</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  stars</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  bannerUri</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  onPress</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>})</span><span style="color: #FF8F40;"> =&gt;</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  return</span><span> (</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;</span><span style="color: #59C2FF;">Pressable</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      onPress</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>onPress</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>(</span><span style="color: #D2A6FF;">{ pressed }</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span> [</span></span>
+<span class="giallo-l"><span>        styles</span><span style="color: #F29668;">.</span><span>cardContainer</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        pressed</span><span style="color: #F29668;"> &amp;&amp;</span><span> styles</span><span style="color: #F29668;">.</span><span>cardPressed</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Dynamic touch feedback</span></span>
+<span class="giallo-l"><span>      ]</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      accessibilityRole</span><span style="color: #F29668;">=</span><span style="color: #AAD94C;">&quot;button&quot;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      accessibilityLabel</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span style="color: #AAD94C;">`Open project </span><span style="color: #FF8F40;">${</span><span>title</span><span style="color: #FF8F40;">}</span><span style="color: #AAD94C;">`</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">      &lt;</span><span style="color: #59C2FF;">Image</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">        source</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span> {  uri</span><span style="color: #BFBDB6B3;">:</span><span> bannerUri  }</span><span style="color: #FF8F40;"> }</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">        style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>styles</span><span style="color: #F29668;">.</span><span>bannerImage</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">        contentFit</span><span style="color: #F29668;">=</span><span style="color: #AAD94C;">&quot;cover&quot;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">        transition</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span style="color: #D2A6FF;">300</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">      /&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">      &lt;</span><span style="color: #59C2FF;">View</span><span style="color: #FFB454;"> style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>styles</span><span style="color: #F29668;">.</span><span>contentPadding</span><span style="color: #FF8F40;">}</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">        &lt;</span><span style="color: #59C2FF;">Text</span><span style="color: #FFB454;"> style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>styles</span><span style="color: #F29668;">.</span><span>titleText</span><span style="color: #FF8F40;">}</span><span style="color: #FFB454;"> numberOfLines</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span style="color: #D2A6FF;">1</span><span style="color: #FF8F40;">}</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">          {</span><span>title</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">        &lt;/</span><span style="color: #59C2FF;">Text</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">        &lt;</span><span style="color: #59C2FF;">Text</span><span style="color: #FFB454;"> style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>styles</span><span style="color: #F29668;">.</span><span>starsText</span><span style="color: #FF8F40;">}</span><span style="color: #39BAE680;">&gt;</span><span>⭐ </span><span style="color: #FF8F40;">{</span><span>stars</span><span style="color: #FF8F40;">}</span><span> Stars</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #59C2FF;">Text</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">      &lt;/</span><span style="color: #59C2FF;">View</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;/</span><span style="color: #59C2FF;">Pressable</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">const</span><span> styles</span><span style="color: #F29668;"> =</span><span> StyleSheet</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">create</span><span>({</span></span>
+<span class="giallo-l"><span>  cardContainer</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span>    backgroundColor</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;#1E1E24&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    borderRadius</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 16</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    overflow</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;hidden&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    marginVertical</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 8</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    borderWidth</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    borderColor</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;rgba(255, 255, 255, 0.1)&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  cardPressed</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span>    opacity</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 0.85</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    transform</span><span style="color: #BFBDB6B3;">:</span><span> [{ scale</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 0.98</span><span> }]</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Native subtle tactile feedback</span></span>
+<span class="giallo-l"><span>  }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  bannerImage</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span>    width</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;100%&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    height</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 140</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  contentPadding</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span>    padding</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 16</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  titleText</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span>    fontSize</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 18</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    fontWeight</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;700&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    color</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;#FFFFFF&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    marginBottom</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 4</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  starsText</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span>    fontSize</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 14</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    color</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;#E67E22&#39;</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Warm amber</span></span>
+<span class="giallo-l"><span>    fontWeight</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;600&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>})</span><span style="color: #BFBDB6B3;">;</span></span></code></pre><h3 id="5-2-high-performance-list-virtualization-with-flatlist">5.2 High-Performance List Virtualization with <code>FlatList</code></h3>
+<p>In web browsers, you might render a list of 500 items by mapping an array into JSX (<code>items.map(...)</code>). Doing this on mobile creates 500 native views simultaneously, consuming hundreds of megabytes of RAM and causing severe frame rate drops.</p>
+<p><strong><code>FlatList</code></strong> renders only the items currently visible in the device viewport, lazily recycling off-screen views:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="tsx"><span class="giallo-l"><span style="color: #39BAE680;">&lt;</span><span style="color: #59C2FF;">FlatList</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  data</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>projects</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  keyExtractor</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>(</span><span style="color: #D2A6FF;">item</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span> item</span><span style="color: #F29668;">.</span><span>id</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  renderItem</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>(</span><span style="color: #D2A6FF;">{ item }</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span> (</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;</span><span style="color: #59C2FF;">ProjectCard</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      title</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>item</span><span style="color: #F29668;">.</span><span>title</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      stars</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>item</span><span style="color: #F29668;">.</span><span>stars</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      bannerUri</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>item</span><span style="color: #F29668;">.</span><span>bannerUrl</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      onPress</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>()</span><span style="color: #FF8F40;"> =&gt;</span><span style="color: #FFB454;"> navigateToDetail</span><span>(item</span><span style="color: #F29668;">.</span><span>id)</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    /&gt;</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">  // Performance optimizations for 120Hz smooth scrolling:</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  initialNumToRender</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span style="color: #D2A6FF;">10</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  maxToRenderPerBatch</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span style="color: #D2A6FF;">10</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  windowSize</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span style="color: #D2A6FF;">5</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  removeClippedSubviews</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span style="color: #D2A6FF;">true</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  ItemSeparatorComponent</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>()</span><span style="color: #FF8F40;"> =&gt;</span><span style="color: #39BAE680;"> &lt;</span><span style="color: #59C2FF;">View</span><span style="color: #FFB454;"> style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span> {  height</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 8</span><span>  }</span><span style="color: #FF8F40;"> }</span><span style="color: #39BAE680;"> /&gt;</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  ListEmptyComponent</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span style="color: #39BAE680;">&lt;</span><span style="color: #59C2FF;">Text</span><span style="color: #FFB454;"> style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>styles</span><span style="color: #F29668;">.</span><span>emptyText</span><span style="color: #FF8F40;">}</span><span style="color: #39BAE680;">&gt;</span><span>No projects found</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #59C2FF;">Text</span><span style="color: #39BAE680;">&gt;</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">/&gt;</span></span></code></pre>
+<hr />
+<h2 id="6-stage-4-navigation-architecture-with-expo-router">6. Stage 4: Navigation Architecture with Expo Router</h2>
+<p>Navigation on mobile is fundamentally hierarchical. In modern React Native, <strong>Expo Router</strong> brings file-based routing to mobile applications.</p>
+<h3 id="6-1-file-based-mobile-routing">6.1 File-Based Mobile Routing</h3>
+<p>With Expo Router, every file inside the <code>app/</code> directory automatically becomes a navigation route:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="plain"><span class="giallo-l"><span>app/</span></span>
+<span class="giallo-l"><span>├── _layout.tsx           # Root navigation stack &amp; global theme provider</span></span>
+<span class="giallo-l"><span>├── index.tsx             # Root home screen (/)</span></span>
+<span class="giallo-l"><span>├── (auth)/               # Route group (hidden from URL path)</span></span>
+<span class="giallo-l"><span>│   ├── login.tsx         # /login</span></span>
+<span class="giallo-l"><span>│   └── register.tsx      # /register</span></span>
+<span class="giallo-l"><span>├── (tabs)/               # Bottom tab navigation group</span></span>
+<span class="giallo-l"><span>│   ├── _layout.tsx       # Bottom tab bar configuration</span></span>
+<span class="giallo-l"><span>│   ├── feed.tsx          # Feed tab</span></span>
+<span class="giallo-l"><span>│   └── profile.tsx       # Profile tab</span></span>
+<span class="giallo-l"><span>└── project/</span></span>
+<span class="giallo-l"><span>    └── [id].tsx          # Dynamic route: /project/123</span></span></code></pre><h3 id="6-2-nested-navigation-stacks-and-tabs">6.2 Nested Navigation: Stacks and Tabs</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="tsx"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// app/(tabs)/_layout.tsx</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { Tabs }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;expo-router&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { Ionicons }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;@expo/vector-icons&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">export default function</span><span style="color: #FFB454;"> TabLayout</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  return</span><span> (</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;</span><span style="color: #59C2FF;">Tabs</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      screenOptions</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span> { </span></span>
+<span class="giallo-l"><span>        tabBarActiveTintColor</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;#E67E22&#39;</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Warm amber brand accent</span></span>
+<span class="giallo-l"><span>        tabBarStyle</span><span style="color: #BFBDB6B3;">:</span><span> { backgroundColor</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;#121214&#39;</span><span style="color: #BFBDB6B3;">,</span><span> borderTopColor</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;#27272A&#39;</span><span> }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        headerStyle</span><span style="color: #BFBDB6B3;">:</span><span> { backgroundColor</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;#121214&#39;</span><span> }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>        headerTintColor</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;#FFFFFF&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>       }</span><span style="color: #FF8F40;"> }</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">      &lt;</span><span style="color: #59C2FF;">Tabs.Screen</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">        name</span><span style="color: #F29668;">=</span><span style="color: #AAD94C;">&quot;feed&quot;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">        options</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span> { </span></span>
+<span class="giallo-l"><span>          title</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;Explore&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">          tabBarIcon</span><span style="color: #BFBDB6B3;">:</span><span> (</span><span style="color: #D2A6FF;">{ color</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> size }</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span> (</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">            &lt;</span><span style="color: #59C2FF;">Ionicons</span><span style="color: #FFB454;"> name</span><span style="color: #F29668;">=</span><span style="color: #AAD94C;">&quot;compass-outline&quot;</span><span style="color: #FFB454;"> size</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>size</span><span style="color: #FF8F40;">}</span><span style="color: #FFB454;"> color</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>color</span><span style="color: #FF8F40;">}</span><span style="color: #39BAE680;"> /&gt;</span></span>
+<span class="giallo-l"><span>          )</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>         }</span><span style="color: #FF8F40;"> }</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">      /&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">      &lt;</span><span style="color: #59C2FF;">Tabs.Screen</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">        name</span><span style="color: #F29668;">=</span><span style="color: #AAD94C;">&quot;profile&quot;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">        options</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span> { </span></span>
+<span class="giallo-l"><span>          title</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;My Profile&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">          tabBarIcon</span><span style="color: #BFBDB6B3;">:</span><span> (</span><span style="color: #D2A6FF;">{ color</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> size }</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span> (</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">            &lt;</span><span style="color: #59C2FF;">Ionicons</span><span style="color: #FFB454;"> name</span><span style="color: #F29668;">=</span><span style="color: #AAD94C;">&quot;person-outline&quot;</span><span style="color: #FFB454;"> size</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>size</span><span style="color: #FF8F40;">}</span><span style="color: #FFB454;"> color</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>color</span><span style="color: #FF8F40;">}</span><span style="color: #39BAE680;"> /&gt;</span></span>
+<span class="giallo-l"><span>          )</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>         }</span><span style="color: #FF8F40;"> }</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">      /&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;/</span><span style="color: #59C2FF;">Tabs</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h4 id="accessing-route-parameters">Accessing Route Parameters</h4>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="tsx"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// app/project/[id].tsx</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { useLocalSearchParams }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;expo-router&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { View</span><span style="color: #BFBDB6B3;">,</span><span> Text }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;react-native&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">export default function</span><span style="color: #FFB454;"> ProjectDetailScreen</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> { id }</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> useLocalSearchParams</span><span>&lt;{ id</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span> }&gt;()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  return</span><span> (</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;</span><span style="color: #59C2FF;">View</span><span style="color: #FFB454;"> style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span> {  flex</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 1</span><span style="color: #BFBDB6B3;">,</span><span> padding</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 16</span><span>  }</span><span style="color: #FF8F40;"> }</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">      &lt;</span><span style="color: #59C2FF;">Text</span><span style="color: #FFB454;"> style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span> {  fontSize</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 22</span><span style="color: #BFBDB6B3;">,</span><span> fontWeight</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;bold&#39;</span><span>  }</span><span style="color: #FF8F40;"> }</span><span style="color: #39BAE680;">&gt;</span><span>Project ID: </span><span style="color: #FF8F40;">{</span><span>id</span><span style="color: #FF8F40;">}</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #59C2FF;">Text</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;/</span><span style="color: #59C2FF;">View</span><span style="color: #39BAE680;">&gt;</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="7-stage-5-state-management-data-fetching">7. Stage 5: State Management &amp; Data Fetching</h2>
+<p>State in mobile applications falls into two distinct categories: <strong>Server State</strong> (data owned by the backend that requires caching and syncing) and <strong>Client State</strong> (local UI settings and session flags).</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    State["Application State"] --> ServerState["Server State (Cached Network Data)"]
+    State --> ClientState["Client State (Local UI & Sessions)"]
+
+    ServerState --> TQ["TanStack Query (React Query)"]
+    TQ --> TQ_Features["Automatic background refetching<br/>Stale-while-revalidate caching<br/>Optimistic mutation updates"]
+
+    ClientState --> LocalState["Local Component State: useState / useReducer"]
+    ClientState --> GlobalState["Global Shared State: Zustand"]
+</pre>
+<h3 id="7-1-server-state-with-tanstack-query-react-query">7.1 Server State with TanStack Query (React Query)</h3>
+<p>Avoid writing manual <code>useEffect</code> fetches with boilerplate <code>loading</code> and <code>error</code> states. <strong>TanStack Query</strong> manages mobile network caching, background synchronization, and automatic retry policies:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="tsx"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { useQuery }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;@tanstack/react-query&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { ActivityIndicator</span><span style="color: #BFBDB6B3;">,</span><span> Text</span><span style="color: #BFBDB6B3;">,</span><span> View }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;react-native&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">interface</span><span style="color: #59C2FF;"> Project</span><span> {</span></span>
+<span class="giallo-l"><span>  id</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  name</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">async function</span><span style="color: #FFB454;"> fetchClubProjects</span><span>()</span><span style="color: #F29668;">:</span><span style="color: #59C2FF;"> Promise</span><span>&lt;</span><span style="color: #59C2FF;">Project</span><span>[]&gt; {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> response</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span style="color: #FFB454;"> fetch</span><span>(</span><span style="color: #AAD94C;">&#39;https://api.cc-club.in/v1/projects&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  if</span><span> (</span><span style="color: #F29668;">!</span><span>response</span><span style="color: #F29668;">.</span><span>ok)</span><span style="color: #FF8F40;"> throw</span><span style="color: #F29668;"> new</span><span style="color: #FFB454;"> Error</span><span>(</span><span style="color: #AAD94C;">&#39;Network error loading projects&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  return</span><span> response</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">json</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">export function</span><span style="color: #FFB454;"> ProjectFeed</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> { data</span><span style="color: #BFBDB6B3;">,</span><span> isLoading</span><span style="color: #BFBDB6B3;">,</span><span> isError</span><span style="color: #BFBDB6B3;">,</span><span> error</span><span style="color: #BFBDB6B3;">,</span><span> refetch</span><span style="color: #BFBDB6B3;">,</span><span> isRefetching }</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> useQuery</span><span>({</span></span>
+<span class="giallo-l"><span>    queryKey</span><span style="color: #BFBDB6B3;">:</span><span> [</span><span style="color: #AAD94C;">&#39;projects&#39;</span><span>]</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    queryFn</span><span style="color: #BFBDB6B3;">:</span><span> fetchClubProjects</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    staleTime</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 1000</span><span style="color: #F29668;"> *</span><span style="color: #D2A6FF;"> 60</span><span style="color: #F29668;"> *</span><span style="color: #D2A6FF;"> 5</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Cache valid for 5 minutes</span></span>
+<span class="giallo-l"><span>  })</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  if</span><span> (isLoading)</span><span style="color: #FF8F40;"> return</span><span style="color: #39BAE680;"> &lt;</span><span style="color: #59C2FF;">ActivityIndicator</span><span style="color: #FFB454;"> size</span><span style="color: #F29668;">=</span><span style="color: #AAD94C;">&quot;large&quot;</span><span style="color: #FFB454;"> color</span><span style="color: #F29668;">=</span><span style="color: #AAD94C;">&quot;#E67E22&quot;</span><span style="color: #39BAE680;"> /&gt;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  if</span><span> (isError)</span><span style="color: #FF8F40;"> return</span><span style="color: #39BAE680;"> &lt;</span><span style="color: #59C2FF;">Text</span><span style="color: #FFB454;"> style</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span> {  color</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;red&#39;</span><span>  }</span><span style="color: #FF8F40;"> }</span><span style="color: #39BAE680;">&gt;</span><span>Error: </span><span style="color: #FF8F40;">{</span><span>error</span><span style="color: #F29668;">.</span><span>message</span><span style="color: #FF8F40;">}</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #59C2FF;">Text</span><span style="color: #39BAE680;">&gt;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  return</span><span> (</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;</span><span style="color: #59C2FF;">FlatList</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      data</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>data</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      keyExtractor</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>(</span><span style="color: #D2A6FF;">item</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span> item</span><span style="color: #F29668;">.</span><span>id</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      refreshing</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>isRefetching</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      onRefresh</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>refetch</span><span style="color: #FF8F40;">}</span><span style="color: #5A6673;font-style: italic;"> // Native pull-to-refresh integration</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      renderItem</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>(</span><span style="color: #D2A6FF;">{ item }</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span style="color: #39BAE680;"> &lt;</span><span style="color: #59C2FF;">Text</span><span style="color: #39BAE680;">&gt;</span><span style="color: #FF8F40;">{</span><span>item</span><span style="color: #F29668;">.</span><span>name</span><span style="color: #FF8F40;">}</span><span style="color: #39BAE680;">&lt;/</span><span style="color: #59C2FF;">Text</span><span style="color: #39BAE680;">&gt;</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    /&gt;</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h3 id="7-2-global-client-state-with-zustand">7.2 Global Client State with Zustand</h3>
+<p>For client-side global state (such as user session preferences, offline draft queue, or active theme), <strong>Zustand</strong> provides a lightweight, hook-based store without the boilerplate of Redux:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="typescript"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { create }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;zustand&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { persist</span><span style="color: #BFBDB6B3;">,</span><span> createJSONStorage }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;zustand/middleware&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> AsyncStorage</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;@react-native-async-storage/async-storage&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">interface</span><span style="color: #59C2FF;"> UserPreferencesState</span><span> {</span></span>
+<span class="giallo-l"><span>  themeMode</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &#39;dark&#39;</span><span style="color: #F29668;"> |</span><span style="color: #AAD94C;"> &#39;light&#39;</span><span style="color: #F29668;"> |</span><span style="color: #AAD94C;"> &#39;system&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  isBiometricsEnabled</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> boolean</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  setThemeMode</span><span style="color: #F29668;">:</span><span> (</span><span style="color: #D2A6FF;">mode</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &#39;dark&#39;</span><span style="color: #F29668;"> |</span><span style="color: #AAD94C;"> &#39;light&#39;</span><span style="color: #F29668;"> |</span><span style="color: #AAD94C;"> &#39;system&#39;</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span style="color: #39BAE6;"> void</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  toggleBiometrics</span><span style="color: #F29668;">:</span><span> ()</span><span style="color: #FF8F40;"> =&gt;</span><span style="color: #39BAE6;"> void</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">export const</span><span> useUserPreferences</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> create</span><span>&lt;</span><span style="color: #59C2FF;">UserPreferencesState</span><span>&gt;()(</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  persist</span><span>(</span></span>
+<span class="giallo-l"><span>    (</span><span style="color: #D2A6FF;">set</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span> ({</span></span>
+<span class="giallo-l"><span>      themeMode</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;dark&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>      isBiometricsEnabled</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> false</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      setThemeMode</span><span style="color: #BFBDB6B3;">:</span><span> (</span><span style="color: #D2A6FF;">mode</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span style="color: #FFB454;"> set</span><span>({ themeMode</span><span style="color: #BFBDB6B3;">:</span><span> mode })</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      toggleBiometrics</span><span style="color: #BFBDB6B3;">:</span><span> ()</span><span style="color: #FF8F40;"> =&gt;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">        set</span><span>((</span><span style="color: #D2A6FF;">state</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span> ({ isBiometricsEnabled</span><span style="color: #BFBDB6B3;">:</span><span style="color: #F29668;"> !</span><span>state</span><span style="color: #F29668;">.</span><span>isBiometricsEnabled }))</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    })</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    {</span></span>
+<span class="giallo-l"><span>      name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;user-preferences-storage&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>      storage</span><span style="color: #BFBDB6B3;">:</span><span style="color: #FFB454;"> createJSONStorage</span><span>(()</span><span style="color: #FF8F40;"> =&gt;</span><span> AsyncStorage)</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>  )</span></span>
+<span class="giallo-l"><span>)</span><span style="color: #BFBDB6B3;">;</span></span></code></pre>
+<hr />
+<h2 id="8-stage-6-local-persistence-offline-storage">8. Stage 6: Local Persistence &amp; Offline Storage</h2>
+<p>Mobile devices experience frequent network disconnections. Storing data locally ensures instant startup times and reliable offline experiences.</p>
+<h3 id="8-1-the-storage-matrix">8.1 The Storage Matrix</h3>
+<table><thead><tr><th style="text-align: left">Storage Solution</th><th style="text-align: left">Best Fit</th><th style="text-align: left">Security &amp; Performance</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong><code>expo-secure-store</code></strong></td><td style="text-align: left">Sensitive JWTs, refresh tokens, encryption keys</td><td style="text-align: left"><strong>Hardware-backed</strong>: Encrypted using Android Keystore and iOS Keychain.</td></tr>
+<tr><td style="text-align: left"><strong><code>AsyncStorage</code></strong></td><td style="text-align: left">Small key-value strings, user theme, onboarding flags</td><td style="text-align: left">Unencrypted key-value store. Never store passwords or tokens here!</td></tr>
+<tr><td style="text-align: left"><strong><code>expo-sqlite</code></strong></td><td style="text-align: left">Structured relational data, offline databases, full-text search</td><td style="text-align: left">High-performance native SQLite engine with type-safe queries.</td></tr>
+</tbody></table>
+<h3 id="8-2-relational-data-with-modern-expo-sqlite">8.2 Relational Data with Modern <code>expo-sqlite</code></h3>
+<p>Modern <code>expo-sqlite</code> supports asynchronous, promise-based query execution with full transaction integrity:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="typescript"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #D2A6FF;"> *</span><span style="color: #FF8F40;"> as</span><span> SQLite</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;expo-sqlite&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Open or create the local database</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">const</span><span> db</span><span style="color: #F29668;"> =</span><span> SQLite</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">openDatabaseSync</span><span>(</span><span style="color: #AAD94C;">&#39;cc_notes.db&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">export function</span><span style="color: #FFB454;"> initDatabase</span><span>() {</span></span>
+<span class="giallo-l"><span>  db</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">execSync</span><span>(</span><span style="color: #AAD94C;">`</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">    CREATE TABLE IF NOT EXISTS notes (</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">      id TEXT PRIMARY KEY NOT NULL,</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">      title TEXT NOT NULL,</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">      content TEXT NOT NULL,</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">      updated_at INTEGER NOT NULL</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">    );</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">  `</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">export function</span><span style="color: #FFB454;"> saveNote</span><span>(</span><span style="color: #D2A6FF;">id</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> title</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> content</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> statement</span><span style="color: #F29668;"> =</span><span> db</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">prepareSync</span><span>(</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">    &#39;INSERT OR REPLACE INTO notes (id, title, content, updated_at) VALUES ($id, $title, $content, $time)&#39;</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  statement</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">executeSync</span><span>({</span></span>
+<span class="giallo-l"><span>    $id</span><span style="color: #BFBDB6B3;">:</span><span> id</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    $title</span><span style="color: #BFBDB6B3;">:</span><span> title</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    $content</span><span style="color: #BFBDB6B3;">:</span><span> content</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    $time</span><span style="color: #BFBDB6B3;">:</span><span> Date</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">now</span><span>()</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  })</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">export function</span><span style="color: #FFB454;"> getAllNotes</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  return</span><span> db</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">getAllSync</span><span>&lt;{ id</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span style="color: #BFBDB6B3;">;</span><span> title</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span style="color: #BFBDB6B3;">;</span><span> content</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span> }&gt;(</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">    &#39;SELECT * FROM notes ORDER BY updated_at DESC&#39;</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="9-stage-7-native-device-capabilities-hardware">9. Stage 7: Native Device Capabilities &amp; Hardware</h2>
+<p>Mobile applications differentiate themselves from web pages through deep, hardware-level operating system integration.</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    App["Your React Native Application"] --> ExpoSDK["Expo Hardware SDK Layer"]
+    ExpoSDK --> Cam["expo-camera (Photos & QR Scanning)"]
+    ExpoSDK --> Loc["expo-location (GPS & Geofencing)"]
+    ExpoSDK --> Auth["expo-local-authentication (Face ID / Fingerprint)"]
+    ExpoSDK --> Notif["expo-notifications (Push & Local Reminders)"]
+    ExpoSDK --> Haptic["expo-haptics (Tactile Vibration Engines)"]
+</pre>
+<h3 id="9-1-hardware-biometric-authentication">9.1 Hardware Biometric Authentication</h3>
+<p>Using <strong><code>expo-local-authentication</code></strong>, you can prompt users for Face ID, Touch ID, or Android Biometric Prompt with just a few lines of code:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="typescript"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #D2A6FF;"> *</span><span style="color: #FF8F40;"> as</span><span> LocalAuthentication</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;expo-local-authentication&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #D2A6FF;"> *</span><span style="color: #FF8F40;"> as</span><span> SecureStore</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;expo-secure-store&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">export async function</span><span style="color: #FFB454;"> authenticateAndUnlockVault</span><span>()</span><span style="color: #F29668;">:</span><span style="color: #59C2FF;"> Promise</span><span>&lt;</span><span style="color: #39BAE6;">boolean</span><span>&gt; {</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">  // 1. Verify device supports hardware biometrics</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> hasHardware</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span> LocalAuthentication</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">hasHardwareAsync</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> isEnrolled</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span> LocalAuthentication</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">isEnrolledAsync</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  if</span><span> (</span><span style="color: #F29668;">!</span><span>hasHardware</span><span style="color: #F29668;"> || !</span><span>isEnrolled) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    throw</span><span style="color: #F29668;"> new</span><span style="color: #FFB454;"> Error</span><span>(</span><span style="color: #AAD94C;">&#39;Biometric hardware not available or enrolled on this device&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">  // 2. Trigger native OS biometric prompt</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> result</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span> LocalAuthentication</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">authenticateAsync</span><span>({</span></span>
+<span class="giallo-l"><span>    promptMessage</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;Unlock Computer Coding Club Vault&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    fallbackLabel</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;Use Device Passcode&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    cancelLabel</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;Cancel&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  })</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  if</span><span> (result</span><span style="color: #F29668;">.</span><span>success) {</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // 3. Read sensitive secret from hardware-encrypted storage</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    const</span><span> secretKey</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span> SecureStore</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">getItemAsync</span><span>(</span><span style="color: #AAD94C;">&#39;vault_encryption_key&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> secretKey</span><span style="color: #F29668;"> !==</span><span style="color: #D2A6FF;"> null</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  return</span><span style="color: #D2A6FF;"> false</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h3 id="9-2-camera-image-capture">9.2 Camera &amp; Image Capture</h3>
+<p>Use <strong><code>expo-camera</code></strong> and <strong><code>expo-image-picker</code></strong> to capture media and handle system permissions cleanly:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="typescript"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #D2A6FF;"> *</span><span style="color: #FF8F40;"> as</span><span> ImagePicker</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;expo-image-picker&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">export async function</span><span style="color: #FFB454;"> pickProfilePhoto</span><span>()</span><span style="color: #F29668;">:</span><span style="color: #59C2FF;"> Promise</span><span>&lt;</span><span style="color: #39BAE6;">string</span><span style="color: #F29668;"> |</span><span style="color: #39BAE6;"> null</span><span>&gt; {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> { status }</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span> ImagePicker</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">requestMediaLibraryPermissionsAsync</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  if</span><span> (status</span><span style="color: #F29668;"> !==</span><span style="color: #AAD94C;"> &#39;granted&#39;</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">    alert</span><span>(</span><span style="color: #AAD94C;">&#39;Permission to access photos is required to update your avatar.&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #D2A6FF;"> null</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> result</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span> ImagePicker</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">launchImageLibraryAsync</span><span>({</span></span>
+<span class="giallo-l"><span>    mediaTypes</span><span style="color: #BFBDB6B3;">:</span><span> [</span><span style="color: #AAD94C;">&#39;images&#39;</span><span>]</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // MediaTypeOptions is deprecated since SDK 52</span></span>
+<span class="giallo-l"><span>    allowsEditing</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> true</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    aspect</span><span style="color: #BFBDB6B3;">:</span><span> [</span><span style="color: #D2A6FF;">1</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 1</span><span>]</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Square avatar</span></span>
+<span class="giallo-l"><span>    quality</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 0.8</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  })</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  if</span><span> (</span><span style="color: #F29668;">!</span><span>result</span><span style="color: #F29668;">.</span><span>canceled</span><span style="color: #F29668;"> &amp;&amp;</span><span> result</span><span style="color: #F29668;">.</span><span>assets[</span><span style="color: #D2A6FF;">0</span><span>]) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> result</span><span style="color: #F29668;">.</span><span>assets[</span><span style="color: #D2A6FF;">0</span><span>]</span><span style="color: #F29668;">.</span><span>uri</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  return</span><span style="color: #D2A6FF;"> null</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="10-stage-8-testing-debugging-performance-optimization">10. Stage 8: Testing, Debugging &amp; Performance Optimization</h2>
+<p>Delivering a professional application requires structured testing and rigorous profiling.</p>
+<h3 id="10-1-the-react-native-testing-pyramid">10.1 The React Native Testing Pyramid</h3>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    E2E["10% End-to-End Tests (Maestro / Detox)"]
+    Component["30% Component & Hook Tests (React Native Testing Library)"]
+    Unit["60% Pure TypeScript Unit Tests (Jest / Logic / Repositories)"]
+</pre>
+<h4 id="component-testing-with-react-native-testing-library">Component Testing with React Native Testing Library</h4>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="tsx"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span> React</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;react&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { render</span><span style="color: #BFBDB6B3;">,</span><span> fireEvent }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;@testing-library/react-native&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { ProjectCard }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;../components/ProjectCard&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FFB454;">test</span><span>(</span><span style="color: #AAD94C;">&#39;ProjectCard displays title and fires onPress callback&#39;</span><span style="color: #BFBDB6B3;">,</span><span> ()</span><span style="color: #FF8F40;"> =&gt;</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> mockPress</span><span style="color: #F29668;"> =</span><span> jest</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">fn</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> { getByText</span><span style="color: #BFBDB6B3;">,</span><span> getByRole }</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> render</span><span>(</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    &lt;</span><span style="color: #59C2FF;">ProjectCard</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      title</span><span style="color: #F29668;">=</span><span style="color: #AAD94C;">&quot;CC Website&quot;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      stars</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span style="color: #D2A6FF;">142</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      bannerUri</span><span style="color: #F29668;">=</span><span style="color: #AAD94C;">&quot;https://cc-club.in/banner.png&quot;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      onPress</span><span style="color: #F29668;">=</span><span style="color: #FF8F40;">{</span><span>mockPress</span><span style="color: #FF8F40;">}</span></span>
+<span class="giallo-l"><span style="color: #39BAE680;">    /&gt;</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FFB454;">  expect</span><span>(</span><span style="color: #FFB454;">getByText</span><span>(</span><span style="color: #AAD94C;">&#39;CC Website&#39;</span><span>))</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">toBeTruthy</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  expect</span><span>(</span><span style="color: #FFB454;">getByText</span><span>(</span><span style="color: #AAD94C;">&#39;⭐ 142 Stars&#39;</span><span>))</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">toBeTruthy</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>  fireEvent</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">press</span><span>(</span><span style="color: #FFB454;">getByRole</span><span>(</span><span style="color: #AAD94C;">&#39;button&#39;</span><span>))</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  expect</span><span>(mockPress)</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">toHaveBeenCalledTimes</span><span>(</span><span style="color: #D2A6FF;">1</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>})</span><span style="color: #BFBDB6B3;">;</span></span></code></pre><h4 id="automated-end-to-end-testing-with-maestro">Automated End-to-End Testing with Maestro</h4>
+<p>Use <strong>Maestro</strong> for fast, declarative mobile UI automation scripts:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="yaml"><span class="giallo-l"><span style="color: #39BAE6;">appId</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> in.cc_club.pulse</span></span>
+<span class="giallo-l"><span>---</span></span>
+<span class="giallo-l"><span>-</span><span style="color: #AAD94C;"> launchApp</span></span>
+<span class="giallo-l"><span>-</span><span style="color: #39BAE6;"> assertVisible</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;Explore Projects&quot;</span></span>
+<span class="giallo-l"><span>-</span><span style="color: #39BAE6;"> tapOn</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;Explore Projects&quot;</span></span>
+<span class="giallo-l"><span>-</span><span style="color: #39BAE6;"> tapOn</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;React Native Roadmap&quot;</span></span>
+<span class="giallo-l"><span>-</span><span style="color: #39BAE6;"> assertVisible</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;⭐ 142 Stars&quot;</span></span></code></pre><h3 id="10-2-performance-optimization-eliminating-frame-drops">10.2 Performance Optimization: Eliminating Frame Drops</h3>
+<ol>
+<li><strong>Optimize Re-Renders</strong>: Use <code>React.memo</code> for list row components. Wrap callback handlers passed to children in <code>useCallback</code> to prevent breaking referential equality.</li>
+<li><strong>Upgrade to <code>@shopify/flash-list</code></strong>: If your lists contain thousands of items with complex card layouts, replace React Native's default <code>FlatList</code> with Shopify's <strong>FlashList</strong>, which recycles native views across scrolling viewports for smooth 120Hz scrolling.</li>
+<li><strong>Avoid Inline Arrow Functions in Heavy Loops</strong>: Avoid defining inline anonymous style objects or closures directly inside list item render loops.</li>
+<li><strong>Use <code>react-native-reanimated</code> for Gestures</strong>: Keep animations running at 60/120 FPS on the native UI thread without round-tripping to JavaScript.</li>
+</ol>
+<hr />
+<h2 id="11-stage-9-security-production-release-pipelines">11. Stage 9: Security &amp; Production Release Pipelines</h2>
+<p>Shipping a production mobile application involves security hardening and store distribution.</p>
+<h3 id="11-1-mobile-security-owasp-masvs">11.1 Mobile Security (OWASP MASVS)</h3>
+<ul>
+<li><strong>Never Hardcode Secrets</strong>: Storing API keys or OAuth client secrets in <code>.env</code> files bundled inside client code means anyone who unzips your APK can inspect them. Sensitive API requests should route through a backend proxy or be obfuscated using <strong><code>react-native-dotenv</code></strong> with runtime token exchanges.</li>
+<li><strong>Network Security Configuration</strong>: Enforce TLS 1.3/HTTPS across all endpoints. On Android, verify that cleartext HTTP traffic is disabled in <code>app.json</code>:<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="json"><span class="giallo-l"><span>{</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  &quot;expo&quot;</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    &quot;android&quot;</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      &quot;usesCleartextTraffic&quot;</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> false</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre></li>
+</ul>
+<h3 id="11-2-the-eas-build-submit-pipeline">11.2 The EAS Build &amp; Submit Pipeline</h3>
+<p>Expo Application Services (<strong>EAS</strong>) automates building production Android App Bundles (<code>.aab</code>) and iOS binaries (<code>.ipa</code>) in the cloud or locally:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># 1. Install EAS CLI globally</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">npm</span><span style="color: #AAD94C;"> install</span><span style="color: #95E6CB;"> -g</span><span style="color: #AAD94C;"> eas-cli</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># 2. Configure build profiles (eas.json)</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">eas</span><span style="color: #AAD94C;"> build:configure</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># 3. Build a production Android App Bundle</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">eas</span><span style="color: #AAD94C;"> build</span><span style="color: #95E6CB;"> --platform</span><span style="color: #AAD94C;"> android</span><span style="color: #95E6CB;"> --profile</span><span style="color: #AAD94C;"> production</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># 4. Automatically submit to Google Play Console</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">eas</span><span style="color: #AAD94C;"> submit</span><span style="color: #95E6CB;"> --platform</span><span style="color: #AAD94C;"> android</span></span></code></pre><h4 id="understanding-eas-json">Understanding <code>eas.json</code></h4>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="json"><span class="giallo-l"><span>{</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  &quot;cli&quot;</span><span style="color: #BFBDB6B3;">:</span><span> {</span><span style="color: #39BAE6;"> &quot;version&quot;</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;&gt;= 10.0.0&quot;</span><span> }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  &quot;build&quot;</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    &quot;development&quot;</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      &quot;developmentClient&quot;</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> true</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      &quot;distribution&quot;</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;internal&quot;</span></span>
+<span class="giallo-l"><span>    }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    &quot;preview&quot;</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      &quot;distribution&quot;</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;internal&quot;</span></span>
+<span class="giallo-l"><span>    }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    &quot;production&quot;</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      &quot;autoIncrement&quot;</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> true</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<hr />
+<h2 id="12-stage-10-cross-platform-horizons-web-desktop">12. Stage 10: Cross-Platform Horizons: Web &amp; Desktop</h2>
+<p>React Native's "Learn Once, Write Anywhere" philosophy extends beyond mobile phones.</p>
+<ul>
+<li><strong>React Native for Web</strong>: Included natively in Expo. Run <code>npx expo start --web</code> to compile your React Native components into HTML5 primitives (<code>&lt;View&gt;</code> compiles to <code>&lt;div&gt;</code>, <code>&lt;Text&gt;</code> compiles to <code>&lt;span&gt;</code>).</li>
+<li><strong>Desktop Targets (macOS &amp; Windows)</strong>: Maintained by Microsoft, <strong>React Native for Windows + macOS</strong> brings React Native to native Win32/UWP and Cocoa desktop applications with support for native menus, multi-windowing, and mouse-hover states. For an architectural deep dive into desktop engineering, see our <strong><a href="https://cc-club.in/roadmaps/desktop-development/">Desktop Application Development Roadmap</a></strong>.</li>
+</ul>
+<hr />
+<h2 id="13-six-progressive-milestone-projects">13. Six Progressive Milestone Projects</h2>
+<p>Transform theoretical knowledge into engineering proficiency through these six progressive milestone projects:</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    M1["Milestone 1: QuickMetrics Converter<br/>Focus: TypeScript, Core Primitives, StyleSheet"] --> M2["Milestone 2: PulseHabit Tracker<br/>Focus: SQLite, Local Notifications, Zustand"]
+    M2 --> M3["Milestone 3: Chronicle Markdown Notes<br/>Focus: Audio Recording, SQLite Search, Gestures"]
+    M3 --> M4["Milestone 4: DevPulse GitHub Explorer<br/>Focus: TanStack Query, FlatList, Pull-to-Refresh"]
+    M4 --> M5["Milestone 5: BiometricVault Locker<br/>Focus: Face ID/Fingerprint, SecureStore, Camera"]
+    M5 --> M6["Milestone 6 (Capstone): OmniMarket Multiplatform Store<br/>Focus: Expo Router Tabs, Zustand, Stripe, Maestro E2E, EAS"]
+</pre>
+<h3 id="milestone-1-quickmetrics-converter">Milestone 1: QuickMetrics Converter</h3>
+<ul>
+<li><strong>Goal</strong>: Build an interactive currency, metric, and unit conversion calculator.</li>
+<li><strong>Core Concepts</strong>: Core components (<code>View</code>, <code>Text</code>, <code>TextInput</code>, <code>Pressable</code>), custom numeric keypad, dynamic dark/light <code>StyleSheet</code>, and <code>KeyboardAvoidingView</code>.</li>
+<li><strong>Portfolio Value</strong>: Demonstrates foundational mobile layout discipline, keyboard awareness, and clean typing without web DOM assumptions.</li>
+</ul>
+<h3 id="milestone-2-pulsehabit-daily-routine-tracker">Milestone 2: PulseHabit (Daily Routine Tracker)</h3>
+<ul>
+<li><strong>Goal</strong>: An offline-first habit tracker featuring custom streaks, completion calendars, and daily reminders.</li>
+<li><strong>Core Concepts</strong>: <strong><code>expo-sqlite</code></strong> for relational habit storage, <strong><code>expo-notifications</code></strong> for scheduled local push alerts, and <strong>Zustand</strong> for user preference persistence.</li>
+<li><strong>Portfolio Value</strong>: Proves your ability to manage relational offline data, background notifications, and lightweight client state.</li>
+</ul>
+<h3 id="milestone-3-chronicle-notes-voice-memos">Milestone 3: Chronicle Notes &amp; Voice Memos</h3>
+<ul>
+<li><strong>Goal</strong>: A multimedia journaling app supporting rich Markdown formatting and embedded audio recordings.</li>
+<li><strong>Core Concepts</strong>: <strong><code>expo-audio</code></strong> for microphone audio recording and playback, SQLite Full-Text Search (FTS), and swipe-to-delete gestures using <strong><code>react-native-gesture-handler</code></strong>.</li>
+<li><strong>Portfolio Value</strong>: Showcases audio hardware management, gesture physics, and advanced mobile data indexing.</li>
+</ul>
+<h3 id="milestone-4-devpulse-github-tech-news-explorer">Milestone 4: DevPulse (GitHub &amp; Tech News Explorer)</h3>
+<ul>
+<li><strong>Goal</strong>: A multi-tab developer news client and trending repository explorer with offline caching.</li>
+<li><strong>Core Concepts</strong>: <strong>TanStack Query</strong> for server-state caching, <strong>Expo Router</strong> nested stack navigation, pull-to-refresh mechanics, and infinite scrolling <strong><code>FlatList</code></strong> with search filtering.</li>
+<li><strong>Portfolio Value</strong>: Industrial-grade REST API consumption, caching strategies, and resilient network error handling.</li>
+</ul>
+<h3 id="milestone-5-biometricvault-encrypted-media-locker">Milestone 5: BiometricVault (Encrypted Media Locker)</h3>
+<ul>
+<li><strong>Goal</strong>: A privacy-focused locker application that secures confidential files behind device biometric authentication.</li>
+<li><strong>Core Concepts</strong>: <strong><code>expo-local-authentication</code></strong> (Face ID / Fingerprint prompt), <strong><code>expo-secure-store</code></strong> for cryptographic key storage, <strong><code>expo-camera</code></strong> for private photo capture, and file encryption via <code>expo-file-system</code>.</li>
+<li><strong>Portfolio Value</strong>: Demonstrates mobile application security, cryptographic key protection, and native hardware access.</li>
+</ul>
+<h3 id="milestone-6-capstone-omnimarket-multiplatform-e-commerce-suite">Milestone 6 (Capstone): OmniMarket (Multiplatform E-Commerce Suite)</h3>
+<ul>
+<li><strong>Goal</strong>: A production-grade multiplatform shopping application compiling to Android, iOS, and Web.</li>
+<li><strong>Core Concepts</strong>:
+<ul>
+<li><strong>Expo Router</strong> file-based navigation with persistent <code>(tabs)</code> and authentication redirect guards.</li>
+<li><strong>Zustand</strong> shopping cart state synchronized with local persistence.</li>
+<li>Real-time payment processing integration.</li>
+<li>Comprehensive testing suite combining Jest component tests and <strong>Maestro</strong> automated E2E user flows.</li>
+<li>Automated <strong>EAS Build</strong> pipeline generating signed release binaries.</li>
+</ul>
+</li>
+<li><strong>Portfolio Value</strong>: A definitive capstone application proving end-to-end mastery over the complete modern React Native &amp; Expo mobile engineering lifecycle.</li>
+</ul>
+<hr />
+<h2 id="14-curated-official-resources">14. Curated Official Resources</h2>
+<p>Deepen your React Native engineering skills using these vetted, high-yield documentation sources and community hubs:</p>
+<div class="pretty-link-card not-prose group my-4"><a href="https://reactnative.dev/docs/getting-started" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Official React Native Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The definitive reference for React Native core components, APIs, TypeScript integration, and the New Architecture.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>reactnative.dev/docs/getting-started</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://docs.expo.dev/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Expo Official Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Comprehensive guides covering the Expo framework, Expo Router, Development Builds, hardware SDKs, and EAS.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>docs.expo.dev/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://reactnavigation.org/docs/getting-started/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">React Navigation Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Official manual for mobile routing patterns, stack animators, and navigation state lifecycle management.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>reactnavigation.org/docs/getting-started/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://tanstack.com/query/latest/docs/framework/react/overview" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">TanStack Query (React Query)</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The industry-standard asynchronous state management library for managing, caching, and syncing server data.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>tanstack.com/query/latest/docs/framework/react/overview</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://docs.swmansion.com/react-native-reanimated/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">React Native Reanimated</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">High-performance animation library running fluid 60/120 FPS animations directly on the native thread.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>docs.swmansion.com/react-native-reanimated/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://maestro.mobile.dev/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Maestro Mobile UI Testing</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The modern, declarative YAML-based mobile UI testing platform for reliable end-to-end app automation.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>maestro.mobile.dev/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://www.youtube.com/@reactnative" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">React Native YouTube Channel</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Keynotes, deep architectural breakdowns, and release overviews directly from the React Native and Expo engineering teams.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>www.youtube.com/@reactnative</span></div></div></div></a></div>
+<hr />
+<h2 id="15-where-to-next-in-the-cc-ecosystem">15. Where to Next in the CC Ecosystem</h2>
+<p>This roadmap is one part of a connected learning system. Depending on where you want to go from here:</p>
+<ul>
+<li><strong><a href="https://cc-club.in/roadmaps/mobile-development/">Mobile Development Master Roadmap</a></strong> — revisit the full application-development landscape and the interactive Path Finder that helped you choose React Native.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/flutter/">Flutter &amp; Dart Roadmap</a></strong> — the direct cross-platform alternative: compare its custom Impeller canvas rendering against React Native's native views.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/web-development/">Web Development Roadmap</a></strong> — deepen the React and backend-API skills that transfer directly into your React Native work.</li>
+</ul>
+
+
+    
+    
+
+    
+    <div class="mt-8 pt-6 border-t border-gray-500/15">
+        <div class="flex flex-wrap items-center gap-4">
+            <a href="https://github.com/CC-MNNIT/cc-website/edit/main//content/roadmaps/react-native.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                </svg>
+                <span>Edit this page</span>
+            </a>
+            
+            
+            
+                
+                
+            
+            
+            <button onclick="navigator.clipboard.writeText(window.location.href).then(() => { this.innerHTML = this.innerHTML.replace('Copy URL', 'Copied!'); setTimeout(() => { this.innerHTML = this.innerHTML.replace('Copied!', 'Copy URL'); }, 2000); }).catch(() => { console.error('Failed to copy URL'); })" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+                <span>Copy URL</span>
+            </button>
+            
+            
+            <a href="https://twitter.com/intent/tweet?url=https%3A//cc-club.in/roadmaps/react-native/&text=React%20Native%20%26%20Expo%20Cross-platform%20Development%20Roadmap" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </svg>
+                <span>Share on X</span>
+            </a>
+            
+        </div>
+    </div>
+    
+
+
+                        
+
+
+
+                        <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="prev-nav-item">
+                                    
+    
+        
+        <a class="nav-button nav-button-prev group" href="https://cc-club.in/roadmaps/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="nav-button-label">Back to</span>
+                </div>
+                <div class="nav-button-title">Learning Roadmaps</div>
+            </div>
+        </a>
+    
+
+                                </div>
+                                <div class="next-nav-item">
+                                    
+    
+        <a class="nav-button nav-button-next group" href="https://cc-club.in/roadmaps/ios/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <span class="nav-button-label">Next</span>
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                <div class="nav-button-title">Swift &amp; Native iOS Development Roadmap</div>
+            </div>
+        </a>
+    
+
+                                </div>
+                            </div>
+                        </nav>
+                    </main>
+            
+
+                    
+                        
+
+<div class="hidden lg:block" data-toc-expand="true">
+    <div class="sticky top-20 px-4 py-2 border-l border-gray-500/15">
+        <h4 class="text-lg font-bold mb-1">ON THIS PAGE</h4>
+            <ul class="menu menu-sm toc-menu">
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/react-native/#1-orientation-the-modern-react-native-ecosystem" class="toc-link">1. Orientation: The Modern React Native Ecosystem</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#1-1-what-react-native-is-and-is-not" class="toc-link">1.1 What React Native Is (and Is Not)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#1-2-the-evolution-legacy-bridge-vs-the-new-architecture" class="toc-link">1.2 The Evolution: Legacy Bridge vs. The New Architecture</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#1-3-demystifying-expo-toolchain-vs-framework" class="toc-link">1.3 Demystifying Expo: Toolchain vs. Framework</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/react-native/#2-the-web-to-mobile-transition-guide" class="toc-link">2. The Web-to-Mobile Transition Guide</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#2-1-the-concept-transfer-matrix" class="toc-link">2.1 The Concept Transfer Matrix</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#2-2-critical-mental-shifts-for-web-developers" class="toc-link">2.2 Critical Mental Shifts for Web Developers</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/react-native/#3-stage-1-modern-javascript-typescript-foundations" class="toc-link">3. Stage 1: Modern JavaScript &amp; TypeScript Foundations</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#3-1-essential-es6-concepts-for-react-native" class="toc-link">3.1 Essential ES6+ Concepts for React Native</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#3-2-typescript-for-mobile-applications" class="toc-link">3.2 TypeScript for Mobile Applications</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/react-native/#4-stage-2-development-environment-the-expo-workflow" class="toc-link">4. Stage 2: Development Environment &amp; The Expo Workflow</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#4-1-initializing-a-modern-expo-project" class="toc-link">4.1 Initializing a Modern Expo Project</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#4-2-the-three-expo-workflows-compared" class="toc-link">4.2 The Three Expo Workflows Compared</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#4-3-metro-bundler-fast-refresh" class="toc-link">4.3 Metro Bundler &amp; Fast Refresh</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/react-native/#5-stage-3-core-react-native-components-styling" class="toc-link">5. Stage 3: Core React Native Components &amp; Styling</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#5-1-the-core-primitive-catalog" class="toc-link">5.1 The Core Primitive Catalog</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#5-2-high-performance-list-virtualization-with-flatlist" class="toc-link">5.2 High-Performance List Virtualization with FlatList</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/react-native/#6-stage-4-navigation-architecture-with-expo-router" class="toc-link">6. Stage 4: Navigation Architecture with Expo Router</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#6-1-file-based-mobile-routing" class="toc-link">6.1 File-Based Mobile Routing</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#6-2-nested-navigation-stacks-and-tabs" class="toc-link">6.2 Nested Navigation: Stacks and Tabs</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/react-native/#7-stage-5-state-management-data-fetching" class="toc-link">7. Stage 5: State Management &amp; Data Fetching</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#7-1-server-state-with-tanstack-query-react-query" class="toc-link">7.1 Server State with TanStack Query (React Query)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#7-2-global-client-state-with-zustand" class="toc-link">7.2 Global Client State with Zustand</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/react-native/#8-stage-6-local-persistence-offline-storage" class="toc-link">8. Stage 6: Local Persistence &amp; Offline Storage</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#8-1-the-storage-matrix" class="toc-link">8.1 The Storage Matrix</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#8-2-relational-data-with-modern-expo-sqlite" class="toc-link">8.2 Relational Data with Modern expo-sqlite</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/react-native/#9-stage-7-native-device-capabilities-hardware" class="toc-link">9. Stage 7: Native Device Capabilities &amp; Hardware</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#9-1-hardware-biometric-authentication" class="toc-link">9.1 Hardware Biometric Authentication</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#9-2-camera-image-capture" class="toc-link">9.2 Camera &amp; Image Capture</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/react-native/#10-stage-8-testing-debugging-performance-optimization" class="toc-link">10. Stage 8: Testing, Debugging &amp; Performance Optimization</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#10-1-the-react-native-testing-pyramid" class="toc-link">10.1 The React Native Testing Pyramid</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#10-2-performance-optimization-eliminating-frame-drops" class="toc-link">10.2 Performance Optimization: Eliminating Frame Drops</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/react-native/#11-stage-9-security-production-release-pipelines" class="toc-link">11. Stage 9: Security &amp; Production Release Pipelines</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#11-1-mobile-security-owasp-masvs" class="toc-link">11.1 Mobile Security (OWASP MASVS)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#11-2-the-eas-build-submit-pipeline" class="toc-link">11.2 The EAS Build &amp; Submit Pipeline</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/react-native/#12-stage-10-cross-platform-horizons-web-desktop" class="toc-link">12. Stage 10: Cross-Platform Horizons: Web &amp; Desktop</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/react-native/#13-six-progressive-milestone-projects" class="toc-link">13. Six Progressive Milestone Projects</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#milestone-1-quickmetrics-converter" class="toc-link">Milestone 1: QuickMetrics Converter</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#milestone-2-pulsehabit-daily-routine-tracker" class="toc-link">Milestone 2: PulseHabit (Daily Routine Tracker)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#milestone-3-chronicle-notes-voice-memos" class="toc-link">Milestone 3: Chronicle Notes &amp; Voice Memos</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#milestone-4-devpulse-github-tech-news-explorer" class="toc-link">Milestone 4: DevPulse (GitHub &amp; Tech News Explorer)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#milestone-5-biometricvault-encrypted-media-locker" class="toc-link">Milestone 5: BiometricVault (Encrypted Media Locker)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/react-native/#milestone-6-capstone-omnimarket-multiplatform-e-commerce-suite" class="toc-link">Milestone 6 (Capstone): OmniMarket (Multiplatform E-Commerce Suite)</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/react-native/#14-curated-official-resources" class="toc-link">14. Curated Official Resources</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/react-native/#15-where-to-next-in-the-cc-ecosystem" class="toc-link">15. Where to Next in the CC Ecosystem</a>
+                    
+                </li>
+            
+            </ul>
+    </div>
+</div>
+
+
+                    
+                    
+                </div>
+            
+            </div>
+
+            <script>
+              // Determine theme: localStorage > extra.default_colorset > cc-dark
+              // Expose theme config for global use (e.g., js/theme.js)
+              
+              
+              
+                  
+                  
+                  
+                  
+              
+              window.defaultColorset = "dark";
+              window.darkBrightness = "normal";
+              window.lightBrightness = "normal";
+              window.themeMap = { "dark": "cc-dark", "light": "cc-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "cc-dark";
+
+              // Theme mapping - user-facing names are the theme identifiers
+              var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
+              var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
+              var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+
+              // Initialize and run Mermaid only when loaded
+              window.initMermaid = function() {
+                var mermaidTheme = "dark";
+                if(currentUserTheme == "cc-light") {
+                  mermaidTheme = "light";
+                }
+                
+                if (typeof mermaid !== 'undefined') {
+                  mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
+                  
+                  // Function to render mermaid diagrams
+                  var renderMermaid = async function() {
+                    const mermaidElements = document.querySelectorAll('.mermaid');
+                    if (mermaidElements.length > 0) {
+                        await mermaid.run({
+                            nodes: mermaidElements
+                        });
+                    }
+                  };
+                  
+                  // Check if DOMContentLoaded has already fired
+                  if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', renderMermaid);
+                  } else {
+                    // DOMContentLoaded already fired, run immediately
+                    renderMermaid();
+                  }
+                }
+              };
+              
+              // Auto-initialize if Mermaid is already loaded
+              if (typeof mermaid !== 'undefined') {
+                window.initMermaid();
+              }
+            </script>
+
+            
+<footer class="site-footer">
+    <!-- Main footer content -->
+    <div class="w-full py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer grid -->
+            <div class="footer-content">
+                
+                <!-- Column 1: About/Logo -->
+                <div class="footer-col space-y-4">
+                    <div class="footer-logo-container">
+                        
+                        <img src="https://cc-club.in/images/logo/cclogo.webp" alt="Logo" class="footer-logo">
+                        
+                        <h3>
+                            CC Club MNNIT
+                        </h3>
+                    </div>
+                    <p>
+                        Our mission since 2010 at MNNIT is to develop in you a passion for problem-solving, critical thinking, innovation and computer science. We strive to achieve this goal through means of events, classes and industry connects.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        
+                            
+                            <li>
+                                <a href="team">
+                                    Our Team
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="blog">
+                                    Blogs
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="projects">
+                                    Projects
+                                </a>
+                            </li>
+                            
+                        
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col space-y-4">
+                    <h4>Contact</h4>
+                    <div class="space-y-3">
+                        
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            computer.club@mnnit.ac.in
+                        </p>
+                        
+                        
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            MNNIT Allahabad, Prayagraj, UP - 211004
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        
+                            
+                            
+                            <a href="https://www.instagram.com/cc.club.mnnit/" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            
+                            
+                            
+                            <a href="https://www.linkedin.com/company/computer-coding-club-mnnit/" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            
+                            
+                            <a href="https://github.com/CC-MNNIT" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            
+                            
+                            <a href="https://discord.gg/EDv6fM5yUm" aria-label="Discord">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            
+                        
+                    </div>
+                    <p>
+                        Connect to stay updated about our events, projects and blogs!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Computer Coding Club. All rights reserved.</p>
+        <div class="footer-made-with">
+            <p>Made with</p>
+            <i class="fas fa-heart"></i>
+            <p>by Team CC</p>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
+            
+                
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+    
+    
+        
+        
+    
+
+
+
+
+
+<label for="my-drawer-2" class="drawer-overlay"></label>
+<div class="mt-16 w-68 h-[calc(100vh-4rem)] bg-base-100 text-base-content flex flex-col overflow-auto thin-scrollbar">
+    
+    <div class="px-2 pt-4 pb-0 flex flex-col items-center gap-2">
+        <div class="w-full flex items-center gap-2">
+            <label for="search-modal" class="input w-full flex items-center justify-between text-left bg-base-100 cursor-pointer border-gray-500/15 hover:border-gray-500/55 hover:border-1 transition" aria-label="검색">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="text-gray-400"><kbd class="kbd">⌘</kbd><kbd class="kbd">K</kbd></span>
+            </label>
+        </div>
+    </div>
+    
+    
+    
+    <div class="lg:hidden px-4 py-2 border-b border-gray-500/10">
+        <div class="text-xs font-semibold text-gray-400 mb-2">QUICK NAV</div>
+        <ul class="menu menu-compact">
+            
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/about" class="text-sm">
+                            
+                            <i class="fa-solid fa-circle-info mr-2"></i>
+                            About
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/blog" class="text-sm">
+                            
+                            <i class="fa-solid fa-blog mr-2"></i>
+                            Blog
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/events" class="text-sm">
+                            
+                            <i class="fa-solid fa-calendar-days mr-2"></i>
+                            Events
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view" class="text-sm" target="_blank" rel="noopener noreferrer">
+                            
+                            <i class="fa-solid fa-calendar-check mr-2"></i>
+                            Calendar
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/projects" class="text-sm">
+                            
+                            <i class="fa-solid fa-code-branch mr-2"></i>
+                            Projects
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/roadmaps" class="text-sm">
+                            
+                            <i class="fa-solid fa-route mr-2"></i>
+                            Roadmaps
+                        </a></li>
+                    
+                
+                    
+                        
+                            <li>
+                                
+                                    <a href="https://cc-club.in/team" class="text-sm">
+                                
+                                <i class="fa-solid fa-user-group mr-2"></i>
+                                Current Team
+                            </a></li>
+                        
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/contact" class="text-sm">
+                            
+                            <i class="fa-solid fa-envelope mr-2"></i>
+                            Contact
+                        </a></li>
+                    
+                
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+    <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
+        <a href="https://cc-club.in/roadmaps/" class="hover:text-primary transition-colors">Learning Roadmaps</a>
+    </div>
+
+    
+    
+    <ul class="hidden lg:block menu w-full flex-grow">
+        
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/web-development">Web Development Master Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/java-spring-boot">Java &amp; Spring Boot Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/machine-learning">Machine Learning Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/open-source">Open Source Contribution Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/mobile-development">Mobile Application Development Master Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/android">Kotlin &amp; Native Android Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/flutter">Flutter &amp; Dart Cross-platform Development Roadmap</a></li>
+        
+            <li class="rounded bg-gray-500/15"><a class="hover:no-underline" href="https://cc-club.in/roadmaps/react-native">React Native &amp; Expo Cross-platform Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/ios">Swift &amp; Native iOS Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/desktop-development">Desktop Application Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/sysadmin">System Administration Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/devops">DevOps Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/competitive-programming">Competitive Programming Mastery Roadmap</a></li>
+        
+        
+        
+        
+    </ul>
+    
+</div>
+
+            
+        </div>
+        
+        <script>
+            // Apply sidebar preference immediately to prevent FOUC
+            (function() {
+                try {
+                    var savedState = localStorage.getItem('sidebar-state');
+                    var sidebar = document.getElementById('sidebar');
+                    if (savedState === 'closed' && sidebar) {
+                        sidebar.classList.add('sidebar-closed');
+                    }
+                } catch (e) {}
+            })();
+        </script>
+    </div>
+
+    
+        <script type="text/javascript" src="https://cc-club.in/js/theme.js"></script>
+        
+        <!-- Lazy load search functionality -->
+        <script>
+            var searchLoaded = false;
+            var searchLoadCallbacks = [];
+            
+            function loadSearchLibraries(callback) {
+                // If already loaded, execute callback immediately
+                if (searchLoaded && typeof Fuse !== 'undefined' && window.searchIndex) {
+                    if (callback) callback();
+                    return;
+                }
+                
+                // Add callback to queue
+                if (callback) searchLoadCallbacks.push(callback);
+                
+                // If already loading, don't start again
+                if (searchLoaded) return;
+                searchLoaded = true;
+                
+                // Show loading indicator in search input
+                var searchInput = document.getElementById('search');
+                if (searchInput) {
+                    searchInput.placeholder = 'Loading search...';
+                    searchInput.disabled = true;
+                }
+                
+                // Load Fuse.js
+                var fuseScript = document.createElement('script');
+                fuseScript.src = 'https://cc-club.in/fuse.min.js';
+                
+                // Load search index after Fuse.js
+                fuseScript.onload = function() {
+                    var searchIndexScript = document.createElement('script');
+                    searchIndexScript.src = 'https://cc-club.in/search_index.en.js';
+                    searchIndexScript.onload = function() {
+                        // Re-enable search input
+                        if (searchInput) {
+                            searchInput.placeholder = 'Search documentation...';
+                            searchInput.disabled = false;
+                            searchInput.focus();
+                        }
+                        
+                        // Initialize search functionality
+                        if (typeof initSearch === 'function') {
+                            initSearch();
+                        }
+                        
+                        // Execute all queued callbacks
+                        searchLoadCallbacks.forEach(function(cb) { cb(); });
+                        searchLoadCallbacks = [];
+                    };
+                    document.body.appendChild(searchIndexScript);
+                };
+                
+                document.body.appendChild(fuseScript);
+            }
+            
+            // Load search on first interaction with search modal
+            document.addEventListener('DOMContentLoaded', function() {
+                var searchModal = document.getElementById('search-modal');
+                if (searchModal) {
+                    searchModal.addEventListener('change', function() {
+                        if (this.checked) {
+                            loadSearchLibraries();
+                        }
+                    });
+                }
+                
+                // Also load on Ctrl+K / Cmd+K
+                document.addEventListener('keydown', function(e) {
+                    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                        loadSearchLibraries();
+                    }
+                });
+            });
+        </script>
+        
+        
+        <script>
+            // Desktop Sidebar Toggle Logic
+            document.addEventListener('DOMContentLoaded', function() {
+                var toggleBtn = document.getElementById('desktop-sidebar-toggle');
+                var sidebar = document.getElementById('sidebar');
+                
+                if (toggleBtn && sidebar) {
+                    // Toggle handler
+                    toggleBtn.addEventListener('click', function() {
+                        // Check if closed by checking for class
+                        var isClosed = sidebar.classList.contains('sidebar-closed');
+                        
+                        if (isClosed) {
+                            // Opening
+                            sidebar.classList.remove('sidebar-closed');
+                            localStorage.setItem('sidebar-state', 'open');
+                        } else {
+                            // Closing
+                            sidebar.classList.add('sidebar-closed');
+                            localStorage.setItem('sidebar-state', 'closed');
+                        }
+                    });
+                }
+            });
+        </script>
+    
+</body>
+</html>

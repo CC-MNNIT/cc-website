@@ -233,30 +233,30 @@
 &lt;p&gt;Here is the tentative timeline for the &lt;strong&gt;Smart India Hackathon (SIH) Internal Hackathon&lt;/strong&gt; at &lt;strong&gt;MNNIT Allahabad&lt;/strong&gt;, organized by &lt;strong&gt;Team CC&lt;/strong&gt;.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2 id=&quot;phase-1-internal-hackathon&quot;&gt;Phase 1: Internal Hackathon&lt;/h2&gt;
-&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;17 - 20 August: Team Formation &amp; Registration&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;details class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;summary class=&quot;collapse-title font-semibold select-none cursor-pointer&quot;&gt;17 - 20 August: Team Formation &amp; Registration&lt;/summary&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
 &lt;li&gt;Form a team of &lt;strong&gt;6 members&lt;/strong&gt;, including &lt;strong&gt;at least 1 female member&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;Teams are encouraged to have members from &lt;strong&gt;diverse branches/categories&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;Registration Form: &lt;a rel=&quot;external&quot; href=&quot;https://forms.gle/TZjyodyCgM3H29cWA&quot;&gt;SIH Internal Registration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Form submission deadline: &lt;strong&gt;20 August, 11:59 PM&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Select any problem statement (PS) related to the themes mentioned in the registration form.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;
-&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;21 - 31 August: Prototype Development&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;summary class=&quot;collapse-title font-semibold select-none cursor-pointer&quot;&gt;21 - 31 August: Prototype Development&lt;/summary&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
 &lt;li&gt;Build a &lt;strong&gt;working prototype&lt;/strong&gt; for the selected PS.&lt;/li&gt;
 &lt;li&gt;Prepare the &lt;strong&gt;PPT in the prescribed format&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;
-&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;1 - 3 September: Evaluation&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;summary class=&quot;collapse-title font-semibold select-none cursor-pointer&quot;&gt;1 - 3 September: Evaluation&lt;/summary&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
 &lt;li&gt;Top-performing teams will be &lt;strong&gt;nominated for Phase 2&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
 &lt;hr /&gt;
 &lt;h2 id=&quot;phase-2-submission-by-nominated-teams&quot;&gt;Phase 2: Submission by Nominated Teams&lt;/h2&gt;
-&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;4 - 10 September: Final Submission&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;details class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;summary class=&quot;collapse-title font-semibold select-none cursor-pointer&quot;&gt;4 - 10 September: Final Submission&lt;/summary&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
 &lt;li&gt;Nominated teams will select any PS from the &lt;a rel=&quot;external&quot; href=&quot;https://www.sih.gov.in/&quot;&gt;SIH website&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Submit a &lt;strong&gt;prototype + PPT&lt;/strong&gt; for the solution.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
 &lt;hr /&gt;
 &lt;p&gt;Regards,
 &lt;strong&gt;Team CC&lt;/strong&gt;&lt;/p&gt;
@@ -297,13 +297,13 @@
 &lt;/ol&gt;
 &lt;h3 id=&quot;mcqs&quot;&gt;MCQs&lt;/h3&gt;
 &lt;p&gt;15–20 questions covering &lt;strong&gt;CS fundamentals&lt;/strong&gt; including Operating Systems, Computer Networks, and DBMS.&lt;/p&gt;
-&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;How to Prepare for OA&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;details class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;summary class=&quot;collapse-title font-semibold select-none cursor-pointer&quot;&gt;How to Prepare for OA&lt;/summary&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
 &lt;li&gt;Practice &lt;strong&gt;Dynamic Programming&lt;/strong&gt; problems on LeetCode (Medium to Hard)&lt;/li&gt;
 &lt;li&gt;Focus on &lt;strong&gt;Binary Search on Answer&lt;/strong&gt; pattern problems&lt;/li&gt;
 &lt;li&gt;Revise &lt;strong&gt;CS fundamentals&lt;/strong&gt; — OS, CN, DBMS&lt;/li&gt;
 &lt;li&gt;Solve previous AQR OA questions if available&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
 &lt;hr /&gt;
 &lt;h2 id=&quot;interview-process-overview&quot;&gt;Interview Process Overview&lt;/h2&gt;
 &lt;ul&gt;
@@ -361,14 +361,14 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Reference:&lt;/strong&gt; &lt;a rel=&quot;external&quot; href=&quot;https://medium.com/@nishant_salhotra/programming-techniques-the-difference-array-5cb22aeedf84&quot;&gt;Programming Techniques — The Difference Array&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;Tips for DSA Rounds&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;details class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;summary class=&quot;collapse-title font-semibold select-none cursor-pointer&quot;&gt;Tips for DSA Rounds&lt;/summary&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Think out loud&lt;/strong&gt; — interviewers want to hear your thought process&lt;/li&gt;
 &lt;li&gt;Don&#39;t jump to the optimal solution immediately — &lt;strong&gt;build gradually&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Start with a brute force approach, then optimize&lt;/li&gt;
 &lt;li&gt;Don&#39;t hesitate to &lt;strong&gt;take hints&lt;/strong&gt; from the interviewer&lt;/li&gt;
 &lt;li&gt;The thought process matters as much as the answer&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
 &lt;hr /&gt;
 &lt;h2 id=&quot;round-3-ed-md-level-interview&quot;&gt;Round 3 — ED/MD Level Interview&lt;/h2&gt;
 &lt;p&gt;This round is typically conducted by a &lt;strong&gt;senior person (ED/MD level)&lt;/strong&gt; at AQR. It was a mix of project discussion, a math puzzle, coding, and behavioral questions.&lt;/p&gt;
@@ -732,9 +732,9 @@ https://www.linkedin.com/in/shubhranshu-mishra-092311256/&lt;/p&gt;
 &lt;li&gt;Confidence is the key to get the job&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;How to Introduce Yourself&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;p&gt;Prepare a good introduction, usually interviewers ask for your introduction at the start and just saying, &quot;Hi! I am xyz from MNNIT pursuing B.Tech in x branch and I am good in coding&quot; will not be very impactful, so yes that works, but ideally your introduction should be a 1-2 minute quick summary of the highlights of your resume.&lt;/p&gt;
+&lt;details class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;summary class=&quot;collapse-title font-semibold select-none cursor-pointer&quot;&gt;How to Introduce Yourself&lt;/summary&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;p&gt;Prepare a good introduction, usually interviewers ask for your introduction at the start and just saying, &quot;Hi! I am xyz from MNNIT pursuing B.Tech in x branch and I am good in coding&quot; will not be very impactful, so yes that works, but ideally your introduction should be a 1-2 minute quick summary of the highlights of your resume.&lt;/p&gt;
 &lt;p&gt;it should be &lt;strong&gt;90%&lt;/strong&gt; about your skills, projects, CGPA, achievements and interests and &lt;strong&gt;10%&lt;/strong&gt; about your non-academic, non-coding skills and passion which could be any small mention like &quot;In my free time I love to play basketball/I love to sing/I am a travel freak and I love to explore nature etc.&quot;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
 &lt;h3 id=&quot;interview-round-2&quot;&gt;Interview (Round 2)&lt;/h3&gt;
 &lt;p&gt;Be ready to be asked the introduction you gave in Round 1. This is generally an &lt;strong&gt;HR-Manager round&lt;/strong&gt;. managers try to test your culture fit/critical thinking. Expect &lt;a rel=&quot;external&quot; href=&quot;https://www.geeksforgeeks.org/aptitude/top-100-puzzles-asked-in-interviews/&quot;&gt;puzzles&lt;/a&gt; and managerial questions.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Common Non Puzzle Questions:&lt;/strong&gt;&lt;/p&gt;
@@ -751,11 +751,11 @@ You can say anything that initially sounds negative but adds more value to you.&
 &lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;This is the bingo moment!&lt;/strong&gt; You should always ask a question.&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Generally its good to read about the company before HR round, what are their latest products and what they are investing on.&lt;/p&gt;
-&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;Example Questions to Ask&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ol&gt;
+&lt;details class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;summary class=&quot;collapse-title font-semibold select-none cursor-pointer&quot;&gt;Example Questions to Ask&lt;/summary&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ol&gt;
 &lt;li&gt;&quot;So sir, what is Agentforce all about and how is this revolutionizing the CRM Landscape?&quot;&lt;/li&gt;
 &lt;li&gt;&quot;So, I heard trust is the number 1 value at Salesforce, how do developers transform into their daily work?&quot;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Do not ask about work life balance or compensation. It puts you in a favorable position to ask company-oriented questions. WLB and Compensation for Salesforce is already good.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1002,13 +1002,13 @@ graph LR
 &lt;h2 id=&quot;sysadmin-cheat-sheet-practical-commands&quot;&gt;Sysadmin Cheat Sheet: Practical Commands&lt;/h2&gt;
 &lt;p&gt;These commands assume CUPS is installed. They are essential for headless server management.&lt;/p&gt;
 &lt;h3 id=&quot;setup-discovery&quot;&gt;Setup &amp;amp; Discovery&lt;/h3&gt;
-&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;Click to view Device Discovery Commands&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
+&lt;details class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;summary class=&quot;collapse-title font-semibold select-none cursor-pointer&quot;&gt;Click to view Device Discovery Commands&lt;/summary&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;lpinfo -v&lt;/code&gt;: List available devices/backends&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ippfind&lt;/code&gt;: Scan network for IPP printers&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;avahi-browse -rt _ipp._tcp&lt;/code&gt;: Detailed mDNS discovery&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;driverless&lt;/code&gt;: List driverless-capable devices&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
 &lt;h3 id=&quot;managing-printers&quot;&gt;Managing Printers&lt;/h3&gt;
 &lt;pre class=&quot;giallo&quot; style=&quot;color: #BFBDB6; background-color: #0D1017;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #5A6673;font-style: italic;&quot;&gt;# Add a driverless printer (IPP Everywhere)&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #59C2FF;&quot;&gt;sudo&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; lpadmin&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -p&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; OfficePrinter&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -E -v&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; ipp://printer.local/ipp/&lt;/span&gt;&lt;span style=&quot;color: #95E6CB;&quot;&gt; -m&lt;/span&gt;&lt;span style=&quot;color: #AAD94C;&quot;&gt; everywhere&lt;/span&gt;&lt;/span&gt;
@@ -1080,7 +1080,7 @@ graph LR
 &lt;p&gt;Whether you&#39;re a sysadmin debugging a queue or a student looking for your first open-source commit, the ecosystem is welcoming and vital.&lt;/p&gt;
 &lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;Ready to experiment? Try setting up a local print queue on your machine today using the command line examples above!&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;pretty-link-card group&quot;&gt;&lt;a href=&quot;https://github.com/OpenPrinting&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;block&quot;&gt;&lt;div class=&quot;flex items-start gap-4 p-5&quot;&gt;&lt;div class=&quot;flex-1 min-w-0&quot;&gt;&lt;div class=&quot;flex items-start justify-between gap-2 mb-2&quot;&gt;&lt;h3 class=&quot;pretty-link-title&quot;&gt;OpenPrinting on GitHub&lt;/h3&gt;&lt;div class=&quot;pretty-link-icon-wrapper&quot;&gt;&lt;svg class=&quot;pretty-link-icon&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;&lt;/div&gt;&lt;p class=&quot;pretty-link-description&quot;&gt;Source code and issues for the OpenPrinting project&lt;/p&gt;&lt;div class=&quot;pretty-link-url&quot;&gt;&lt;svg class=&quot;w-3.5 h-3.5 mr-1.5 opacity-60&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1&quot;&gt;&lt;/path&gt;&lt;/svg&gt;github.com/OpenPrinting&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;</content>
+&lt;div class=&quot;pretty-link-card not-prose group my-4&quot;&gt;&lt;a href=&quot;https://github.com/OpenPrinting&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;block no-underline&quot;&gt;&lt;div class=&quot;flex items-start gap-4 p-5&quot;&gt;&lt;div class=&quot;flex-shrink-0 pretty-link-icon-box&quot;&gt;&lt;svg class=&quot;w-5 h-5 pretty-link-lead-icon&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;&lt;div class=&quot;flex-1 min-w-0&quot;&gt;&lt;div class=&quot;flex items-start justify-between gap-3 mb-1.5&quot;&gt;&lt;h4 class=&quot;pretty-link-title font-semibold text-base leading-snug&quot;&gt;OpenPrinting on GitHub&lt;/h4&gt;&lt;div class=&quot;pretty-link-icon-wrapper&quot;&gt;&lt;svg class=&quot;pretty-link-icon&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;&lt;/div&gt;&lt;p class=&quot;pretty-link-description text-sm leading-relaxed mb-2&quot;&gt;Source code and issues for the OpenPrinting project&lt;/p&gt;&lt;div class=&quot;pretty-link-url&quot;&gt;&lt;svg class=&quot;w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;span&gt;github.com/OpenPrinting&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;</content>
         
     </entry>
     <entry xml:lang="en">

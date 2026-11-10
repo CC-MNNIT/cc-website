@@ -179,10 +179,22 @@
         <loc>https://cc-club.in/roadmaps/</loc>
     </url>
     <url>
+        <loc>https://cc-club.in/roadmaps/android/</loc>
+    </url>
+    <url>
         <loc>https://cc-club.in/roadmaps/competitive-programming/</loc>
     </url>
     <url>
+        <loc>https://cc-club.in/roadmaps/desktop-development/</loc>
+    </url>
+    <url>
         <loc>https://cc-club.in/roadmaps/devops/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/roadmaps/flutter/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/roadmaps/ios/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/roadmaps/java-spring-boot/</loc>
@@ -191,7 +203,16 @@
         <loc>https://cc-club.in/roadmaps/machine-learning/</loc>
     </url>
     <url>
+        <loc>https://cc-club.in/roadmaps/mobile-development/</loc>
+    </url>
+    <url>
         <loc>https://cc-club.in/roadmaps/open-source/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/roadmaps/react-native/</loc>
+    </url>
+    <url>
+        <loc>https://cc-club.in/roadmaps/sysadmin/</loc>
     </url>
     <url>
         <loc>https://cc-club.in/roadmaps/web-development/</loc>

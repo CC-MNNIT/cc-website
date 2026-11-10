@@ -63,9 +63,9 @@
 &lt;li&gt;Confidence is the key to get the job&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;How to Introduce Yourself&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;p&gt;Prepare a good introduction, usually interviewers ask for your introduction at the start and just saying, &quot;Hi! I am xyz from MNNIT pursuing B.Tech in x branch and I am good in coding&quot; will not be very impactful, so yes that works, but ideally your introduction should be a 1-2 minute quick summary of the highlights of your resume.&lt;/p&gt;
+&lt;details class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;summary class=&quot;collapse-title font-semibold select-none cursor-pointer&quot;&gt;How to Introduce Yourself&lt;/summary&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;p&gt;Prepare a good introduction, usually interviewers ask for your introduction at the start and just saying, &quot;Hi! I am xyz from MNNIT pursuing B.Tech in x branch and I am good in coding&quot; will not be very impactful, so yes that works, but ideally your introduction should be a 1-2 minute quick summary of the highlights of your resume.&lt;/p&gt;
 &lt;p&gt;it should be &lt;strong&gt;90%&lt;/strong&gt; about your skills, projects, CGPA, achievements and interests and &lt;strong&gt;10%&lt;/strong&gt; about your non-academic, non-coding skills and passion which could be any small mention like &quot;In my free time I love to play basketball/I love to sing/I am a travel freak and I love to explore nature etc.&quot;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
 &lt;h3 id=&quot;interview-round-2&quot;&gt;Interview (Round 2)&lt;/h3&gt;
 &lt;p&gt;Be ready to be asked the introduction you gave in Round 1. This is generally an &lt;strong&gt;HR-Manager round&lt;/strong&gt;. managers try to test your culture fit/critical thinking. Expect &lt;a rel=&quot;external&quot; href=&quot;https://www.geeksforgeeks.org/aptitude/top-100-puzzles-asked-in-interviews/&quot;&gt;puzzles&lt;/a&gt; and managerial questions.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Common Non Puzzle Questions:&lt;/strong&gt;&lt;/p&gt;
@@ -82,11 +82,11 @@ You can say anything that initially sounds negative but adds more value to you.&
 &lt;div role=&quot;alert&quot; class=&quot;alert alert-success alert-soft&quot;&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;This is the bingo moment!&lt;/strong&gt; You should always ask a question.&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Generally its good to read about the company before HR round, what are their latest products and what they are investing on.&lt;/p&gt;
-&lt;div tabindex=&quot;0&quot; class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;div class=&quot;collapse-title font-semibold&quot;&gt;Example Questions to Ask&lt;/div&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ol&gt;
+&lt;details class=&quot;collapse collapse-arrow bg-base-100 border-gray-500/15 border&quot;&gt;&lt;summary class=&quot;collapse-title font-semibold select-none cursor-pointer&quot;&gt;Example Questions to Ask&lt;/summary&gt;&lt;div class=&quot;collapse-content text-sm&quot;&gt;&lt;ol&gt;
 &lt;li&gt;&quot;So sir, what is Agentforce all about and how is this revolutionizing the CRM Landscape?&quot;&lt;/li&gt;
 &lt;li&gt;&quot;So, I heard trust is the number 1 value at Salesforce, how do developers transform into their daily work?&quot;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Do not ask about work life balance or compensation. It puts you in a favorable position to ask company-oriented questions. WLB and Compensation for Salesforce is already good.&lt;/p&gt;
 &lt;/blockquote&gt;

@@ -1,0 +1,1936 @@
+
+<!DOCTYPE html>
+
+<html lang="en" style="background-color: #0f172a;">
+
+<head>
+    
+        
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Resource Hints for better performance -->
+    
+
+    <!-- Initialize theme and brightness before CSS loads to prevent FOUC -->
+    <script>
+        (function() {
+            // Migrate legacy saved theme values to the current identifiers
+            try {
+                var legacy = localStorage.getItem('theme');
+                if (legacy === 'goyo-dark' || legacy === 'goyo-light') {
+                    localStorage.setItem('theme', legacy === 'goyo-dark' ? 'cc-dark' : 'cc-light');
+                }
+            } catch (e) {}
+            // Theme mapping - user-facing names are the theme identifiers
+            var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
+            
+            
+            
+            
+                
+                
+                
+                
+            
+            // Get default values from config
+            var defaultColorset = "dark";
+            var darkBrightness = "normal";
+            var lightBrightness = "normal";
+            var themeMap = { "dark": "cc-dark", "light": "cc-light" };
+            var fallbackTheme = themeMap[defaultColorset] || "cc-dark";
+            
+            // Expose brightness config for global use (e.g., js/theme.js)
+            window.darkBrightness = darkBrightness;
+            window.lightBrightness = lightBrightness;
+            
+            // Get theme from localStorage or use fallback
+            var currentUserTheme = localStorage.getItem('theme') || fallbackTheme;
+            var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+            
+            // Determine brightness based on current theme
+            var currentBrightness = (currentUserTheme === "cc-dark") ? darkBrightness : lightBrightness;
+            
+            // Set theme and brightness attributes immediately
+            document.documentElement.setAttribute("data-theme", actualTheme);
+            document.documentElement.setAttribute("data-brightness", currentBrightness);
+        })();
+    </script>
+
+    <style>
+        
+        
+        
+            
+            
+            
+        
+        
+            
+            @font-face {
+                font-family: "Pretendard-Regular";
+                src: url('https://cc-club.in/fonts/Pretendard-Regular.woff') format("woff");
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+            body {
+                font-family: "Pretendard-Regular", sans-serif;
+            }
+        
+    </style>
+
+    
+        
+            <meta name="description" content="A comprehensive, practical guide to mastering desktop software engineering, comparing architectures from Electron, Tauri, and Dioxus to Flutter, Compose Multiplatform, and native Qt/SwiftUI." />
+        
+    
+
+    <title>Desktop Application Development Roadmap | Computer Coding Club</title>
+
+    
+    
+
+      <!-- SEO: Open Graph / Twitter Card -->
+      <meta property="og:title" content="Desktop Application Development Roadmap | Computer Coding Club" />
+      <meta property="og:description" content="A comprehensive, practical guide to mastering desktop software engineering, comparing architectures from Electron, Tauri, and Dioxus to Flutter, Compose Multiplatform, and native Qt/SwiftUI." />
+      <meta property="og:url" content="https://cc-club.in/" />
+      <meta property="og:type" content="website" />
+      
+      <meta property="og:image" content="https://cc-club.in/cc-club-thumbnail.webp" />
+      
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Desktop Application Development Roadmap" />
+      <meta name="twitter:description" content="A comprehensive, practical guide to mastering desktop software engineering, comparing architectures from Electron, Tauri, and Dioxus to Flutter, Compose Multiplatform, and native Qt/SwiftUI." />
+      
+      
+      
+          
+          
+      
+      
+      <meta name="twitter:site" content="@ccclub_mnnit" />
+      
+      
+      <meta name="twitter:creator" content="@ccclub_mnnit" />
+      
+      
+      <meta name="twitter:image" content="https://cc-club.in/cc-club-thumbnail.webp" />
+      
+
+      <!-- Browser address bar color -->
+      <meta name="theme-color" content="#0f172a">
+
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="https://cc-club.in/icons/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="https://cc-club.in/icons/favicon.svg" />
+      <link rel="shortcut icon" href="https://cc-club.in/icons/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="https://cc-club.in/icons/apple-touch-icon.png" />
+      <link rel="manifest" href="https://cc-club.in/icons/site.webmanifest" />
+
+      <!-- CSS -->
+    <link rel="stylesheet" href="https://cc-club.in/css/site.css">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://cc-club.in/fonts/Pretendard-Regular.woff" as="font" type="font/woff" crossorigin>
+
+    <!-- Defer non-critical scripts -->
+    <script defer src="https://cc-club.in/js/copy_code.js"></script>
+    <script defer src="https://cc-club.in/js/copy_heading_link.js"></script>
+    
+    <!-- Lazy load Mermaid and KaTeX - only when needed -->
+    <script>
+        // Lazy load KaTeX and Mermaid when needed
+        window.addEventListener('DOMContentLoaded', function() {
+            // Check for both KaTeX inline and block elements in one pass
+            var katexInlineElements = document.querySelectorAll('.katex-inline');
+            var katexBlockElements = document.querySelectorAll('.katex-block');
+            var hasKatex = katexInlineElements.length > 0 || katexBlockElements.length > 0;
+            var hasMermaid = document.querySelector('.mermaid');
+            
+            // Load KaTeX if math elements are present
+            if (hasKatex) {
+                // Load KaTeX CSS first
+                var katexCSS = document.createElement('link');
+                katexCSS.rel = 'stylesheet';
+                katexCSS.href = 'https://cc-club.in/css/katex.min.css';
+                document.head.appendChild(katexCSS);
+                
+                // Load KaTeX JS
+                var katexScript = document.createElement('script');
+                katexScript.src = 'https://cc-club.in/js/katex.min.js';
+                katexScript.onload = function() {
+                    // Render inline elements
+                    katexInlineElements.forEach(function(elem) {
+                        var texContent = elem.textContent || elem.innerText;
+                        try {
+                            katex.render(texContent, elem, { 
+                                throwOnError: false,
+                                displayMode: false
+                            });
+                        } catch(e) {
+                            console.error('KaTeX render error:', e);
+                        }
+                    });
+                    
+                    // Render block elements
+                    katexBlockElements.forEach(function(elem) {
+                        var texContent = elem.textContent || elem.innerText;
+                        try {
+                            katex.render(texContent, elem, { 
+                                throwOnError: false,
+                                displayMode: true
+                            });
+                        } catch(e) {
+                            console.error('KaTeX render error:', e);
+                        }
+                    });
+                };
+                document.head.appendChild(katexScript);
+            }
+            
+            // Load Mermaid if diagram elements are present
+            if (hasMermaid) {
+                var mermaidScript = document.createElement('script');
+                mermaidScript.src = 'https://cc-club.in/js/mermaid.min.js';
+                mermaidScript.onload = function() {
+                    // Initialize Mermaid after loading
+                    if (typeof window.initMermaid === 'function') {
+                        window.initMermaid();
+                    }
+                };
+                document.head.appendChild(mermaidScript);
+            }
+        });
+    </script>
+
+    
+    
+
+    <style>
+        /* Desktop Sidebar Animation */
+        @media (min-width: 1024px) {
+            /* Only apply fixed width when drawer is in open mode (sidebar visible) */
+            .lg\:drawer-open #sidebar {
+                width: 17rem; /* w-72 default */
+                transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1), border-width 300ms ease;
+                white-space: nowrap;
+            }
+            
+            .lg\:drawer-open #sidebar.sidebar-closed {
+                width: 0;
+                border-right-width: 0;
+            }
+            
+            /* For overlay mode on desktop (landing page), ensure full width for overlay */
+            .drawer:not(.lg\:drawer-open) #sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+<!-- Search Modal -->
+<input type="checkbox" id="search-modal" class="modal-toggle" />
+<div class="modal modal-middle">
+    <div class="modal-box relative max-w-2xl p-0 bg-base-100 shadow-2xl">
+        <label for="search-modal" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 z-10">✕</label>
+        <div class="search-container">
+            <!-- Search Input Container -->
+            <div class="search-input-container px-6 pt-6 pb-4 border-b border-base-300/30">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="search-icon absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-base-content/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input id="search" type="search" placeholder="Search documentation..." class="search-input w-full pl-12 pr-4 py-3 text-base bg-transparent border-0 focus:outline-none focus:ring-0 text-base-content placeholder:text-base-content/40">
+                </div>
+            </div>
+            <!-- Search Results Container -->
+            <div class="search-results-container px-2 py-2 h-96 overflow-y-auto">
+                <div class="search-results__header px-4 py-2 text-xs text-base-content/60"></div>
+                <ul class="search-results__items space-y-1"></ul>
+            </div>
+            <!-- Search Footer -->
+            <div class="search-footer px-6 py-3 border-t border-base-300/30 flex items-center justify-end gap-4 text-xs text-base-content/50">
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↑</kbd>
+                    <kbd class="kbd kbd-xs">↓</kbd>
+                    <span>to navigate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↵</kbd>
+                    <span>to select</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">esc</kbd>
+                    <span>to close</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+    
+    
+    <div class="drawer lg:drawer-open">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col pt-16">
+            
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="navbar opacity-95 fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-500/15 backdrop-blur-3xl">
+    <!-- Mobile hamburger (and Desktop on Root Page) -->
+    <div class="flex-none lg:hidden">
+        <label for="my-drawer-2" class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </label>
+    </div>
+    <!-- Desktop sidebar toggle -->
+    
+    <div class="flex-none hidden lg:block">
+        <button id="desktop-sidebar-toggle" class="btn btn-square btn-ghost" aria-label="Toggle sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block w-5 h-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+    
+    <!-- Logo -->
+    <div class="flex-1">
+        <a href="https://cc-club.in"
+            class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl logo-link"
+            style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+            
+            <img src="https://cc-club.in/images/logo/cclogo.webp" alt="CC Club"
+                class="h-18 w-auto" style="padding: 10px;"  />
+            
+        </a>
+    </div>
+    <!-- Desktop AND Mobile Menu - Theme toggle always visible -->
+    <div class="flex-none flex lg:flex">
+        <ul class="menu menu-horizontal px-1 items-center">
+            <!-- Desktop navigation items (hidden on mobile) -->
+            <div class="hidden lg:flex lg:contents">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/about">
+                            
+                            <i class="fa-solid fa-circle-info"></i>
+                            About
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/blog">
+                            
+                            <i class="fa-solid fa-blog"></i>
+                            Blog
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/events">
+                            
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Events
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                    <a class="btn btn-ghost hover:no-underline "
+                        href="https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view" target="_blank" rel="noopener noreferrer">
+                        
+                            <i class="fa-solid fa-calendar-check"></i>
+                            Calendar
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/projects">
+                            
+                            <i class="fa-solid fa-code-branch"></i>
+                            Projects
+                        </a>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/roadmaps">
+                            
+                            <i class="fa-solid fa-route"></i>
+                            Roadmaps
+                        </a>
+                </li>
+                
+                
+                
+                <li class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        <i class="fa-solid fa-users"></i>
+                        Community
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
+                        
+                        
+                        <li>
+                            
+                                <a class="btn btn-ghost hover:no-underline "
+                                    href="https://cc-club.in/team">
+                                    
+                                    <i class="fa-solid fa-user-group"></i>
+                                    Current Team
+                                </a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                <li>
+                    
+                        <a class="btn btn-ghost hover:no-underline "
+                            href="https://cc-club.in/contact">
+                            
+                            <i class="fa-solid fa-envelope"></i>
+                            Contact
+                        </a>
+                </li>
+                
+                
+                
+
+                
+            </div>
+
+            
+            
+            
+            
+            <li class="flex items-center">
+                <label class="swap swap-rotate btn btn-ghost btn-circle">
+                    <input type="checkbox" class="theme-controller" value="cc-dark" aria-labelledby="swap color" />
+                    <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+                    <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                </label>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const currentPath = window.location.pathname;
+
+        const navLinks = document.querySelectorAll('.navbar a[href]:not(.logo-link)');
+
+        navLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
+            if (link.classList.contains('active-nav')) {
+                return;
+            }
+
+            let isActive = false;
+
+            if (linkPath === '/') {
+                isActive = (currentPath === '/' || currentPath === '');
+            } else {
+                isActive = currentPath.startsWith(linkPath);
+            }
+
+            if (isActive) {
+                link.classList.add('active-nav');
+            } else {
+                link.classList.remove('active-nav');
+            }
+        });
+    });
+</script>
+
+
+
+            
+            
+            
+            
+                
+            
+
+            
+            <div class="p-8 w-full flex justify-center">
+                <div class="w-full max-w-7xl lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
+                    <main class="prose w-full">
+            
+                        
+    <div class="mb-12 pb-4 border-b border-gray-500/15">
+        <h1 class="flex flex-wrap items-center gap-3">
+            Desktop Application Development Roadmap
+            
+                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">DESKTOP</span>
+            
+        </h1>
+        <p class="text-gray-500">A comprehensive, practical guide to mastering desktop software engineering, comparing architectures from Electron, Tauri, and Dioxus to Flutter, Compose Multiplatform, and native Qt/SwiftUI.</p>
+        
+    </div>
+    <p>Desktop applications remain the backbone of professional computing. From developer tools and IDEs (VS Code, Android Studio) to media creation powerhouses (Blender, DaVinci Resolve, Figma, Spotify) and communication clients (Discord, Slack, Telegram), mission-critical software runs directly on desktop operating systems—<strong>Windows, macOS, and Linux</strong>.</p>
+<p>Unlike websites running sandboxed inside a browser tab or mobile apps constrained by severe battery and background execution limits, desktop software enjoys <strong>unrestricted hardware access, multi-window workflows, arbitrary file system manipulation, direct GPU computation, and deep operating system integration</strong>.</p>
+<p>However, desktop development can feel fragmented. There is no single universal desktop toolkit. Modern desktop engineering spans diverse architectural models: from <strong>bundled browser runtimes (Electron)</strong> and <strong>lightweight Rust shells (Tauri, Dioxus)</strong> to <strong>custom-rendered cross-platform engines (Flutter, Compose Multiplatform)</strong> and <strong>native compiled toolkits (Qt, WinUI, SwiftUI/AppKit)</strong>.</p>
+<p>This roadmap is designed by the <strong>Computer Coding Club (CC), MNNIT Allahabad</strong> to teach you desktop application engineering from first principles: understanding OS processes, window managers, and IPC, navigating the major framework ecosystems, and mastering the packaging and distribution pipelines that turn code into production software.</p>
+<hr />
+<h2 id="1-orientation-the-desktop-application-engineering-mental-model">1. Orientation: The Desktop Application Engineering Mental Model</h2>
+<p>Before selecting a framework or writing UI code, you must understand what fundamentally distinguishes desktop software engineering from web and mobile development.</p>
+<h3 id="1-1-what-makes-desktop-applications-unique">1.1 What Makes Desktop Applications Unique?</h3>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    Desktop["Desktop Application Ecosystem"] --> P1["1. Unrestricted Hardware & OS Access"]
+    Desktop --> P2["2. Complex Window & Workspace Management"]
+    Desktop --> P3["3. High-Density Ergonomics (Keyboard & Mouse)"]
+    Desktop --> P4["4. Long-Running Heavy Background Execution"]
+
+    P1 --> D1["Direct POSIX/Win32 file streams, local sockets, sub-processes, GPU shaders"]
+    P2 --> D2["Multi-window instances, dialogs, resizable viewports, multi-monitor displays"]
+    P3 --> D3["System menus, global hotkeys, command palettes (Cmd/Ctrl+K), drag-and-drop"]
+    P4 --> D4["Daemons, tray utilities, batch media processing without OS suspension"]
+</pre>
+<ul>
+<li><strong>True Multitasking &amp; Persistence</strong>: Desktop operating systems do not aggressively kill background applications to save battery like iOS or Android. A desktop audio transcoder, local database daemon, or compile worker can run for days without interruption.</li>
+<li><strong>High-Density Information Architecture</strong>: While mobile screens accommodate 300–400 points of width, desktop applications routinely span 1080p, 1440p, 4K, and ultrawide displays. Layouts rely on multi-column split panes, sidebars, dockable toolbars, and context menus rather than stacked mobile navigation cards.</li>
+<li><strong>The Input Spectrum</strong>: Desktop users interact via precision pointing devices (mice, trackpads, drawing tablets) with hover states, right-click context menus, scroll wheels, and full physical keyboards with complex modifier combinations (<code>Ctrl+Alt+Shift+Key</code>).</li>
+</ul>
+<h3 id="1-2-operating-system-process-architecture-the-event-loop">1.2 Operating System Process Architecture &amp; The Event Loop</h3>
+<p>At the operating system level, every GUI desktop application is driven by an <strong>Event Loop</strong> (also known as the message pump):</p>
+<pre class="mermaid border border-gray-500/15">
+graph LR
+    OS["Host OS (Win32 / Cocoa / Wayland)"] -->|"Events (Mouse, Keys, Resizes)"| Queue["OS Message Queue"]
+    Queue --> Loop["GUI Main Thread Event Loop"]
+    Loop -->|"Dispatch Event"| Handler["UI Window & Component Handlers"]
+    Handler -->|"Heavy Work Offloaded"| Worker["Worker Thread / Background Sub-Process"]
+    Worker -->|"Post Result via IPC"| Loop
+</pre>
+<ol>
+<li><strong>The GUI Main Thread</strong>: Responsible for handling window draw events, processing user keystrokes, and calculating layout geometry. <strong>Never execute blocking I/O (such as heavy disk reads or network downloads) on the main thread</strong>, or the OS will flag your window as <em>"Not Responding"</em>.</li>
+<li><strong>The Message Pump</strong>: On Windows (<code>GetMessage</code>/<code>DispatchMessage</code>), macOS (<code>NSRunLoop</code>), and Linux (<code>GLib</code> / <code>epoll</code>), the event loop continuously dequeues hardware events and dispatches them to window procedures.</li>
+<li><strong>Worker Threads &amp; IPC</strong>: Long computations (compilation, image filtering, database indexing) are offloaded to dedicated background threads or child worker processes communicating via Inter-Process Communication (IPC).</li>
+</ol>
+<hr />
+<h2 id="2-desktop-user-interface-system-integration-fundamentals">2. Desktop User Interface &amp; System Integration Fundamentals</h2>
+<p>A great desktop application must feel native to the host desktop environment, honoring platform-specific interaction standards.</p>
+<h3 id="2-1-desktop-ui-paradigms-vs-mobile-conventions">2.1 Desktop UI Paradigms vs. Mobile Conventions</h3>
+<table><thead><tr><th style="text-align: left">Interface Element</th><th style="text-align: left">Mobile Convention</th><th style="text-align: left">Desktop Engineering Standard</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>Primary Navigation</strong></td><td style="text-align: left">Bottom tab bar (<code>Tabs</code>) or side drawer</td><td style="text-align: left">Top menu bar, collapsible multi-tier sidebar, or Command Palette (<code>Ctrl/Cmd + K</code>)</td></tr>
+<tr><td style="text-align: left"><strong>Window Structure</strong></td><td style="text-align: left">Fullscreen viewport locked to device screen</td><td style="text-align: left">Resizable window with custom/native chrome, minimize, maximize, and multi-window support</td></tr>
+<tr><td style="text-align: left"><strong>Secondary Actions</strong></td><td style="text-align: left">Long-press gesture or bottom action sheet</td><td style="text-align: left"><strong>Right-click context menu</strong> and contextual toolbars</td></tr>
+<tr><td style="text-align: left"><strong>Input Feedback</strong></td><td style="text-align: left">Touch ripples, haptic vibration engines</td><td style="text-align: left"><strong>Mouse hover states</strong>, dynamic cursor shapes (pointer, resize, text beam)</td></tr>
+<tr><td style="text-align: left"><strong>Keyboard Ergonomics</strong></td><td style="text-align: left">On-screen software keyboard popping up</td><td style="text-align: left">Global hotkeys, accessible focus rings, tab navigation, and mnemonic accelerators</td></tr>
+<tr><td style="text-align: left"><strong>Display Scaling</strong></td><td style="text-align: left">Fixed mobile viewport scale factors</td><td style="text-align: left"><strong>Per-Monitor High-DPI scaling</strong> (handling a window dragged between 100% and 200% scaling monitors)</td></tr>
+</tbody></table>
+<h3 id="2-2-deep-operating-system-integration-points">2.2 Deep Operating System Integration Points</h3>
+<p>Real desktop software extends far beyond a rectangular window on the screen:</p>
+<ul>
+<li><strong>File System &amp; Associations</strong>: Reading and writing raw binary streams without sandboxed storage quotas. Registering file associations so double-clicking a <code>.ccfile</code> in Windows Explorer or macOS Finder automatically opens your application.</li>
+<li><strong>System Tray / Menu Bar Extras</strong>: Running minimized in the background with a tray icon, custom menu actions, and badge notifications (essential for utilities like Docker, Slack, and cloud sync tools).</li>
+<li><strong>Global Shortcuts</strong>: Registering system-wide hotkeys (e.g., <code>Cmd+Shift+Space</code>) that trigger your application even when another window has active OS focus.</li>
+<li><strong>The Clipboard</strong>: Reading and writing multiple MIME data types (plaintext, HTML, PNG image bitmaps, and raw file handles).</li>
+<li><strong>Inter-Process Communication (IPC)</strong>: Spawning child CLI processes via standard streams (<code>stdin</code>, <code>stdout</code>, <code>stderr</code>), named pipes, and local Unix domain sockets.</li>
+</ul>
+<hr />
+<h2 id="3-the-five-major-desktop-development-architectures">3. The Five Major Desktop Development Architectures</h2>
+<p>Desktop frameworks differ fundamentally in how they render pixels and interact with the host operating system. Understanding these five architectural models is the key to making informed engineering choices.</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    Arch["Desktop Architecture Models"] --> A1["1. Bundled Chromium (Electron)"]
+    Arch --> A2["2. Native System WebView (Tauri, Wails)"]
+    Arch --> A3["3. Custom GPU Rendering (Flutter Desktop, Dioxus Native – experimental)"]
+    Arch --> A4["4. Declarative Multiplatform (Compose Desktop, Avalonia)"]
+    Arch --> A5["5. Native OS Toolkits (Qt, WinUI 3, SwiftUI/AppKit, GTK)"]
+</pre>
+<h3 id="architecture-1-web-frontend-bundled-chromium-runtime-electron">Architecture 1: Web Frontend + Bundled Chromium Runtime (Electron)</h3>
+<ul>
+<li><strong>The Concept</strong>: Packages a full instance of Google Chromium and Node.js into a standalone desktop executable.</li>
+<li><strong>Separation of Concerns</strong>: The <strong>Main Process</strong> (Node.js) manages window creation and OS APIs; the <strong>Renderer Process</strong> (Chromium) executes HTML, CSS, and React/Vue/Svelte UI.</li>
+<li><strong>Communication</strong>: Secure IPC channels guarded by <strong>Context Isolation</strong> and <strong>Preload Scripts</strong>.</li>
+<li><strong>Key Strengths</strong>: 100% visual consistency across operating systems; reuse of massive web/npm ecosystems.</li>
+<li><strong>Trade-offs</strong>: High memory baseline (~150MB+ idle RAM) and large binary footprints (~80MB+ compressed).</li>
+</ul>
+<h3 id="architecture-2-web-frontend-system-webview-native-core-tauri-wails">Architecture 2: Web Frontend + System WebView + Native Core (Tauri &amp; Wails)</h3>
+<ul>
+<li><strong>The Concept</strong>: Replaces the heavy bundled Chromium binary with the host operating system's native embedded WebView (<strong>WebView2</strong> on Windows, <strong>WebKit</strong> on macOS, <strong>WebKitGTK</strong> on Linux).</li>
+<li><strong>Backend Core</strong>: Written in high-performance <strong>Rust</strong> (Tauri) or <strong>Go</strong> (Wails).</li>
+<li><strong>Communication</strong>: Fast binary and JSON IPC serialization bridging the frontend web code to native backend functions.</li>
+<li><strong>Key Strengths</strong>: Tiny binary sizes (often under 15MB), minimal idle RAM (~30–50MB), memory safety, and direct native performance.</li>
+<li><strong>Trade-offs</strong>: Developers must test against three distinct browser engines (Blink on Windows, WebKit on macOS and Linux); minor CSS/rendering quirks between platforms.</li>
+</ul>
+<h3 id="architecture-3-custom-gpu-rendered-engine-flutter-desktop">Architecture 3: Custom GPU-Rendered Engine (Flutter Desktop)</h3>
+<ul>
+<li><strong>The Concept</strong>: Bypasses browser engines and web views entirely. The framework requests a hardware graphics surface (Metal, DirectX, or OpenGL) and rasterizes every pixel using its own GPU graphics pipeline (Impeller or Skia).</li>
+<li><strong>Key Strengths</strong>: Complete visual parity across platforms, fluid 120Hz rendering, and zero browser engine quirks.</li>
+<li><strong>Trade-offs</strong>: Non-native look unless carefully themed; desktop plugin ecosystems are newer than mobile equivalents.</li>
+</ul>
+<h3 id="architecture-4-declarative-multiplatform-native-runtimes-compose-desktop-avalonia">Architecture 4: Declarative Multiplatform Native Runtimes (Compose Desktop &amp; Avalonia)</h3>
+<ul>
+<li><strong>The Concept</strong>: Uses modern declarative UI programming compiling to native bytecode or native machine code.
+<ul>
+<li><strong>Compose Multiplatform (Kotlin)</strong>: Ports Jetpack Compose to desktop using JetBrains' Skiko (Skia for Kotlin), executing on the JVM or compiled via GraalVM Native Image.</li>
+<li><strong>Avalonia (.NET)</strong>: A cross-platform XAML/C# engine rendering via Skia directly across Windows, macOS, and Linux.</li>
+</ul>
+</li>
+<li><strong>Key Strengths</strong>: Unified programming language for both business logic and UI; direct access to massive backend ecosystems (JVM and .NET).</li>
+</ul>
+<h3 id="architecture-5-native-platform-toolkits-qt-winui-3-swiftui-appkit-gtk">Architecture 5: Native Platform Toolkits (Qt, WinUI 3, SwiftUI/AppKit, GTK)</h3>
+<ul>
+<li><strong>The Concept</strong>: Compiles directly to host platform machine code using the platform's official UI frameworks and native controls.
+<ul>
+<li><strong>Qt (C++ / QML)</strong>: The industrial gold standard for high-performance desktop engineering (CAD, DAWs, 3D suites).</li>
+<li><strong>WinUI 3 / Windows App SDK</strong>: Native Windows platform toolkit implementing Microsoft Fluent Design.</li>
+<li><strong>SwiftUI &amp; AppKit</strong>: Native Apple macOS desktop toolkits optimized for Apple Silicon and macOS system menus.</li>
+<li><strong>GTK 4 (GNOME)</strong>: The native Linux toolkit behind GNOME applications, usable from C, Vala, or Rust via the gtk-rs bindings — the right choice for Linux-first system utilities.</li>
+</ul>
+</li>
+<li><strong>Key Strengths</strong>: Unrivaled raw execution speed, zero abstraction layer overhead, and flawless OS visual harmony.</li>
+<li><strong>Trade-offs</strong>: Requires platform-specific code or complex cross-platform toolkits like Qt with commercial licensing considerations.</li>
+</ul>
+<hr />
+<h2 id="4-primary-desktop-development-ecosystems">4. Primary Desktop Development Ecosystems</h2>
+<p>Let us examine the leading desktop frameworks, their architectures, workflows, and production trade-offs.</p>
+<hr />
+<h3 id="4-1-tauri-2-0-rust-web-frontend">4.1 Tauri 2.0 (Rust + Web Frontend)</h3>
+<p><strong>Tauri</strong> has emerged as one of the most popular modern desktop frameworks. It allows developers to build lightweight, secure desktop applications by combining any modern web frontend (React, Vue, Svelte, Solid) with a robust, memory-safe <strong>Rust</strong> backend.</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    subgraph Frontend["Frontend Layer (System WebView)"]
+        UI["Web UI (React / Svelte / HTML / CSS)"]
+        TauriAPI["@tauri-apps/api (Invoke Commands & Events)"]
+    end
+
+    subgraph IPC_Bridge["IPC & Security Boundary"]
+        Bridge["Type-Safe IPC Bridge (JSON / Binary Serialization)"]
+        Capabilities["Capability & Permission ACLs (capabilities.json)"]
+    end
+
+    subgraph Backend["Backend Layer (Native Rust Core)"]
+        RustApp["src-tauri/src/main.rs (Rust Event Loop)"]
+        Plugins["Tauri Plugins (fs, dialog, notification, shell)"]
+        NativeOS["Host OS APIs (Windows / macOS / Linux)"]
+    end
+
+    UI --> TauriAPI
+    TauriAPI --> Bridge
+    Bridge --> Capabilities
+    Capabilities --> RustApp
+    RustApp --> Plugins
+    Plugins --> NativeOS
+</pre>
+<h4 id="writing-a-type-safe-tauri-command">Writing a Type-Safe Tauri Command</h4>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="rust"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// src-tauri/src/main.rs</span></span>
+<span class="giallo-l"><span>#![cfg_attr(not(debug_assertions), windows_subsystem </span><span style="color: #F29668;">=</span><span style="color: #AAD94C;"> &quot;windows&quot;</span><span>)]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Exposing a Rust function to the frontend WebView</span></span>
+<span class="giallo-l"><span>#[tauri</span><span style="color: #F29668;">::</span><span>command]</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">fn</span><span style="color: #FFB454;"> calculate_hash</span><span>(input_text</span><span style="color: #F29668;">:</span><span style="color: #59C2FF;"> String</span><span>)</span><span style="color: #F29668;"> -&gt;</span><span style="color: #59C2FF;"> Result</span><span>&lt;</span><span style="color: #59C2FF;">String</span><span>,</span><span style="color: #59C2FF;"> String</span><span>&gt; {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span> input_text</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">is_empty</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span style="color: #59C2FF;"> Err</span><span>(</span><span style="color: #AAD94C;">&quot;Input string cannot be empty&quot;</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">into</span><span>());</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // High-performance native Rust computation</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    let</span><span> hash</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> format!</span><span>(</span><span style="color: #AAD94C;">&quot;{:x}&quot;</span><span>,</span><span style="color: #59C2FF;"> md5</span><span style="color: #F29668;">::</span><span style="color: #FFB454;">compute</span><span>(input_text</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">as_bytes</span><span>()));</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">    Ok</span><span>(hash)</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">fn</span><span style="color: #FFB454;"> main</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">    tauri</span><span style="color: #F29668;">::</span><span style="color: #59C2FF;">Builder</span><span style="color: #F29668;">::</span><span style="color: #FFB454;">default</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #F29668;">        .</span><span style="color: #FFB454;">invoke_handler</span><span>(</span><span style="color: #59C2FF;">tauri</span><span style="color: #F29668;">::</span><span style="color: #FFB454;">generate_handler!</span><span>[calculate_hash])</span></span>
+<span class="giallo-l"><span style="color: #F29668;">        .</span><span style="color: #FFB454;">run</span><span>(</span><span style="color: #59C2FF;">tauri</span><span style="color: #F29668;">::</span><span style="color: #FFB454;">generate_context!</span><span>())</span></span>
+<span class="giallo-l"><span style="color: #F29668;">        .</span><span style="color: #FFB454;">expect</span><span>(</span><span style="color: #AAD94C;">&quot;error while running tauri application&quot;</span><span>);</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h4 id="invoking-commands-from-typescript">Invoking Commands from TypeScript</h4>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="typescript"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { invoke }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;@tauri-apps/api/core&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">async function</span><span style="color: #FFB454;"> handleCompute</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  try</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    const</span><span> result</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span style="color: #FFB454;"> invoke</span><span>&lt;</span><span style="color: #39BAE6;">string</span><span>&gt;(</span><span style="color: #AAD94C;">&#39;calculate_hash&#39;</span><span style="color: #BFBDB6B3;">,</span><span> {</span></span>
+<span class="giallo-l"><span>      inputText</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;Computer Coding Club MNNIT&#39;</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    })</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    console</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">log</span><span>(</span><span style="color: #AAD94C;">&#39;Computed Hash from Rust:&#39;</span><span style="color: #BFBDB6B3;">,</span><span> result)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span><span style="color: #FF8F40;"> catch</span><span> (error) {</span></span>
+<span class="giallo-l"><span>    console</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">error</span><span>(</span><span style="color: #AAD94C;">&#39;Computation error:&#39;</span><span style="color: #BFBDB6B3;">,</span><span> error)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<ul>
+<li><strong>Security by Default</strong>: Tauri enforces a strict Access Control List (ACL) system. Web code cannot arbitrarily read files or execute shell binaries unless explicitly granted in <code>src-tauri/capabilities/default.json</code>.</li>
+<li><strong>When to Choose Tauri</strong>: When you want tiny installers (~10MB), low idle RAM usage, web-based UI flexibility, and the memory safety and concurrency power of Rust.</li>
+</ul>
+<hr />
+<h3 id="4-2-electron-typescript-node-js-chromium">4.2 Electron (TypeScript + Node.js + Chromium)</h3>
+<p><strong>Electron</strong> is the battle-tested runtime powering applications like VS Code, Slack, Discord, Postman, and Obsidian.</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    subgraph MainProcess["Main Process (Node.js Environment)"]
+        MainNode["main.ts (Controls Window Lifecycle & Native OS APIs)"]
+        NodeModules["Node.js Native Modules (fs, child_process, os)"]
+    end
+
+    subgraph SecurityBoundary["Security Isolation Layer"]
+        Preload["preload.ts (ContextBridge.exposeInMainWorld)"]
+        ContextIso["Context Isolation: contextIsolation: true"]
+    end
+
+    subgraph RendererProcess["Renderer Process (Chromium Environment)"]
+        BrowserWindow["BrowserWindow (Chromium Web Page)"]
+        ReactUI["React / TypeScript UI"]
+    end
+
+    MainNode --> NodeModules
+    MainNode <-->|"ipcMain <-> ipcRenderer"| Preload
+    Preload --> ContextIso
+    ContextIso --> BrowserWindow
+    BrowserWindow --> ReactUI
+</pre>
+<h4 id="modern-electron-security-preload-context-isolation">Modern Electron Security: Preload &amp; Context Isolation</h4>
+<p>Never enable <code>nodeIntegration: true</code> in production renderers; doing so allows remote XSS exploits to execute arbitrary shell commands on a user's machine! Always use <strong><code>contextBridge</code></strong>:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="typescript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// preload.ts (The Secure Bridge)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { contextBridge</span><span style="color: #BFBDB6B3;">,</span><span> ipcRenderer }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;electron&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>contextBridge</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">exposeInMainWorld</span><span>(</span><span style="color: #AAD94C;">&#39;electronAPI&#39;</span><span style="color: #BFBDB6B3;">,</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  saveFile</span><span style="color: #BFBDB6B3;">:</span><span> (</span><span style="color: #D2A6FF;">content</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span> ipcRenderer</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">invoke</span><span>(</span><span style="color: #AAD94C;">&#39;dialog:saveFile&#39;</span><span style="color: #BFBDB6B3;">,</span><span> content)</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  onFileOpened</span><span style="color: #BFBDB6B3;">:</span><span> (</span><span style="color: #FFB454;">callback</span><span style="color: #F29668;">:</span><span> (</span><span style="color: #D2A6FF;">data</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span style="color: #39BAE6;"> void</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span></span>
+<span class="giallo-l"><span>    ipcRenderer</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">on</span><span>(</span><span style="color: #AAD94C;">&#39;file:opened&#39;</span><span style="color: #BFBDB6B3;">,</span><span> (</span><span style="color: #D2A6FF;">_event</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> value</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span style="color: #FFB454;"> callback</span><span>(value))</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>})</span><span style="color: #BFBDB6B3;">;</span></span></code></pre><pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="typescript"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// main.ts (Node.js Main Process)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span> { app</span><span style="color: #BFBDB6B3;">,</span><span> BrowserWindow</span><span style="color: #BFBDB6B3;">,</span><span> ipcMain</span><span style="color: #BFBDB6B3;">,</span><span> dialog }</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;electron&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #D2A6FF;"> *</span><span style="color: #FF8F40;"> as</span><span> fs</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;fs/promises&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #D2A6FF;"> *</span><span style="color: #FF8F40;"> as</span><span> path</span><span style="color: #FF8F40;"> from</span><span style="color: #AAD94C;"> &#39;path&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">function</span><span style="color: #FFB454;"> createWindow</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> win</span><span style="color: #F29668;"> = new</span><span style="color: #FFB454;"> BrowserWindow</span><span>({</span></span>
+<span class="giallo-l"><span>    width</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 1200</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    height</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 800</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    webPreferences</span><span style="color: #BFBDB6B3;">:</span><span> {</span></span>
+<span class="giallo-l"><span>      preload</span><span style="color: #BFBDB6B3;">:</span><span> path</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">join</span><span>(__dirname</span><span style="color: #BFBDB6B3;">,</span><span style="color: #AAD94C;"> &#39;preload.js&#39;</span><span>)</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>      contextIsolation</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> true</span><span style="color: #BFBDB6B3;">,</span><span style="color: #5A6673;font-style: italic;"> // Mandatory security standard</span></span>
+<span class="giallo-l"><span>      nodeIntegration</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> false</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>    }</span><span style="color: #BFBDB6B3;">,</span></span>
+<span class="giallo-l"><span>  })</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>  win</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">loadFile</span><span>(</span><span style="color: #AAD94C;">&#39;dist/index.html&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>ipcMain</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">handle</span><span>(</span><span style="color: #AAD94C;">&#39;dialog:saveFile&#39;</span><span style="color: #BFBDB6B3;">,</span><span style="color: #FF8F40;"> async</span><span> (</span><span style="color: #D2A6FF;">_event</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> content</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> string</span><span>)</span><span style="color: #FF8F40;"> =&gt;</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span> { filePath }</span><span style="color: #F29668;"> =</span><span style="color: #FF8F40;"> await</span><span> dialog</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">showSaveDialog</span><span>({ title</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &#39;Save Document&#39;</span><span> })</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  if</span><span> (filePath) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    await</span><span> fs</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">writeFile</span><span>(filePath</span><span style="color: #BFBDB6B3;">,</span><span> content</span><span style="color: #BFBDB6B3;">,</span><span style="color: #AAD94C;"> &#39;utf-8&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #D2A6FF;"> true</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  return</span><span style="color: #D2A6FF;"> false</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>})</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>app</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">whenReady</span><span>()</span><span style="color: #F29668;">.</span><span style="color: #FFB454;">then</span><span>(createWindow)</span><span style="color: #BFBDB6B3;">;</span></span></code></pre>
+<ul>
+<li><strong>When to Choose Electron</strong>: When your application requires absolute Chromium rendering parity, deep Node.js native ecosystem dependencies, complex multi-window canvases (like VS Code), or when your team consists entirely of experienced web developers.</li>
+</ul>
+<hr />
+<h3 id="4-3-dioxus-pure-rust-reactive-fullstack-desktop">4.3 Dioxus (Pure Rust Reactive Fullstack Desktop)</h3>
+<p>For systems programmers who love Rust and want to avoid JavaScript entirely, <strong>Dioxus</strong> offers a React-like component model written in 100% pure Rust.</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="rust"><span class="giallo-l"><span style="color: #FF8F40;">use</span><span style="color: #59C2FF;"> dioxus</span><span style="color: #F29668;">::</span><span style="color: #59C2FF;">prelude</span><span style="color: #F29668;">::*</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">fn</span><span style="color: #FFB454;"> main</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">    // Launches a native desktop window</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">    dioxus</span><span style="color: #F29668;">::</span><span style="color: #FFB454;">launch</span><span>(app);</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">fn</span><span style="color: #FFB454;"> app</span><span>()</span><span style="color: #F29668;"> -&gt;</span><span style="color: #59C2FF;"> Element</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    let mut</span><span> count</span><span style="color: #F29668;"> =</span><span style="color: #FFB454;"> use_signal</span><span>(</span><span style="color: #F29668;">||</span><span style="color: #D2A6FF;"> 0</span><span>);</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FFB454;">    rsx!</span><span> {</span></span>
+<span class="giallo-l"><span>        div { class</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &quot;desktop-container&quot;</span><span>,</span></span>
+<span class="giallo-l"><span>            h1 {</span><span style="color: #AAD94C;"> &quot;Computer Coding Club — Dioxus Desktop&quot;</span><span> }</span></span>
+<span class="giallo-l"><span>            p {</span><span style="color: #AAD94C;"> &quot;Contributions recorded: {count}&quot;</span><span> }</span></span>
+<span class="giallo-l"><span>            button {</span></span>
+<span class="giallo-l"><span>                onclick</span><span style="color: #F29668;">:</span><span style="color: #FF8F40;"> move</span><span style="color: #F29668;"> |</span><span>_</span><span style="color: #F29668;">|</span><span> count</span><span style="color: #F29668;"> +=</span><span style="color: #D2A6FF;"> 1</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">                &quot;Increment Contribution&quot;</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<ul>
+<li><strong>Architecture</strong>: Dioxus desktop utilizes the system WebView for rendering HTML/CSS structures, but all business logic, component lifecycles, and state signals run directly in compiled native Rust machine code with zero V8 JavaScript engine overhead.</li>
+<li><strong>When to Choose Dioxus</strong>: When you want full-stack Rust without context-switching between TypeScript and Rust IPC channels.</li>
+</ul>
+<hr />
+<h3 id="4-4-flutter-desktop-dart-custom-gpu-engine">4.4 Flutter Desktop (Dart + Custom GPU Engine)</h3>
+<p>Flutter compiles to native machine code on Windows, macOS, and Linux, rendering UI using its compiled graphics pipeline:</p>
+<pre class="mermaid border border-gray-500/15">
+graph LR
+    DartCode["Flutter UI (Dart)"] --> Engine["Flutter C++ Desktop Engine"]
+    Engine --> Graphics["GPU Hardware Surface (DirectX 11/12 on Windows, Metal on macOS, OpenGL on Linux)"]
+    Engine --> Embedder["Desktop Platform Embedder (Win32 / Cocoa / GTK Shell)"]
+</pre>
+<h4 id="handling-desktop-interactions-in-flutter">Handling Desktop Interactions in Flutter</h4>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #39BAE6;">Widget</span><span style="color: #FFB454;"> build</span><span>(</span><span style="color: #39BAE6;">BuildContext</span><span> context) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  return</span><span style="color: #39BAE6;"> Scaffold</span><span>(</span></span>
+<span class="giallo-l"><span>    body</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> CallbackShortcuts</span><span>(</span></span>
+<span class="giallo-l"><span>      bindings</span><span style="color: #F29668;">:</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        const</span><span style="color: #39BAE6;"> SingleActivator</span><span>(</span><span style="color: #39BAE6;">LogicalKeyboardKey</span><span>.keyS, control</span><span style="color: #F29668;">:</span><span style="color: #D2A6FF;"> true</span><span>)</span><span style="color: #F29668;">:</span><span> () {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">          saveCurrentDocument</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>        },</span></span>
+<span class="giallo-l"><span>      },</span></span>
+<span class="giallo-l"><span>      child</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> Focus</span><span>(</span></span>
+<span class="giallo-l"><span>        autofocus</span><span style="color: #F29668;">:</span><span style="color: #D2A6FF;"> true</span><span>,</span></span>
+<span class="giallo-l"><span>        child</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> MouseRegion</span><span>(</span></span>
+<span class="giallo-l"><span>          cursor</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> SystemMouseCursors</span><span>.click,</span></span>
+<span class="giallo-l"><span>          onEnter</span><span style="color: #F29668;">:</span><span> (_) </span><span style="color: #F29668;">=&gt;</span><span style="color: #FFB454;"> setHoverState</span><span>(</span><span style="color: #D2A6FF;">true</span><span>),</span></span>
+<span class="giallo-l"><span>          onExit</span><span style="color: #F29668;">:</span><span> (_) </span><span style="color: #F29668;">=&gt;</span><span style="color: #FFB454;"> setHoverState</span><span>(</span><span style="color: #D2A6FF;">false</span><span>),</span></span>
+<span class="giallo-l"><span>          child</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> DocumentEditor</span><span>(),</span></span>
+<span class="giallo-l"><span>        ),</span></span>
+<span class="giallo-l"><span>      ),</span></span>
+<span class="giallo-l"><span>    ),</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<ul>
+<li><strong>When to Choose Flutter Desktop</strong>: When you already have an existing Flutter mobile application and want to bring it to desktop with minimal code divergence, or when you require exact pixel-identical custom UI across all operating systems.</li>
+</ul>
+<hr />
+<h3 id="4-5-compose-multiplatform-desktop-kotlin-skiko">4.5 Compose Multiplatform Desktop (Kotlin + Skiko)</h3>
+<p>Developed by JetBrains, <strong>Compose Multiplatform</strong> brings Google's Jetpack Compose declarative UI toolkit to desktop platforms running on the JVM or compiled via GraalVM:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="kotlin"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> androidx.compose.desktop.ui.tooling.preview.Preview</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> androidx.compose.foundation.layout.</span><span style="color: #39BAE6;font-style: italic;">*</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> androidx.compose.material3.</span><span style="color: #39BAE6;font-style: italic;">*</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> androidx.compose.runtime.</span><span style="color: #39BAE6;font-style: italic;">*</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> androidx.compose.ui.Modifier</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> androidx.compose.ui.unit.dp</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> androidx.compose.ui.window.Window</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> androidx.compose.ui.window.application</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">fun</span><span style="color: #FFB454;"> main</span><span>() </span><span style="color: #F29668;">=</span><span style="color: #FFB454;"> application</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">    Window</span><span>(</span></span>
+<span class="giallo-l"><span>        onCloseRequest </span><span style="color: #F29668;">=</span><span> ::</span><span style="color: #FFB454;">exitApplication</span><span>,</span></span>
+<span class="giallo-l"><span>        title </span><span style="color: #F29668;">=</span><span style="color: #AAD94C;"> &quot;CC Desktop Studio&quot;</span></span>
+<span class="giallo-l"><span>    ) {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">        App</span><span>()</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #59C2FF;">@Composable</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">fun</span><span style="color: #FFB454;"> App</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    var</span><span> count </span><span style="color: #FF8F40;">by</span><span style="color: #FFB454;"> remember</span><span> { </span><span style="color: #FFB454;">mutableStateOf</span><span>(</span><span style="color: #D2A6FF;">0</span><span>) }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FFB454;">    MaterialTheme</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">        Column</span><span>(modifier </span><span style="color: #F29668;">=</span><span> Modifier.</span><span style="color: #FFB454;">padding</span><span>(</span><span style="color: #D2A6FF;">24</span><span>.dp)) {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">            Text</span><span>(</span><span style="color: #AAD94C;">&quot;Compose Desktop Active&quot;</span><span>, style </span><span style="color: #F29668;">=</span><span> MaterialTheme.typography.headlineMedium)</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">            Spacer</span><span>(modifier </span><span style="color: #F29668;">=</span><span> Modifier.</span><span style="color: #FFB454;">height</span><span>(</span><span style="color: #D2A6FF;">12</span><span>.dp))</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">            Button</span><span>(onClick </span><span style="color: #F29668;">=</span><span> { count</span><span style="color: #F29668;">++</span><span> }) {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">                Text</span><span>(</span><span style="color: #AAD94C;">&quot;Logged Actions: </span><span>$count</span><span style="color: #AAD94C;">&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>            }</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<ul>
+<li><strong>When to Choose Compose Desktop</strong>: When your team has strong Kotlin and Android skills, or when your desktop application needs to interface directly with enterprise Java/JVM libraries, Spring backends, or desktop Kotlin Multiplatform modules.</li>
+</ul>
+<hr />
+<h3 id="4-6-avalonia-net-c">4.6 Avalonia (.NET / C#)</h3>
+<p>For C# and .NET teams, <strong>Avalonia</strong> is the leading cross-platform desktop UI framework: a XAML-based engine rendering via Skia on Windows, macOS, and Linux, with an API deliberately modeled on WPF.</p>
+<ul>
+<li><strong>The Concept</strong>: Write XAML views and C# view-models (MVVM) that run largely unchanged across all three desktop platforms.</li>
+<li><strong>Ecosystem</strong>: Mature MVVM toolchain (<code>CommunityToolkit.Mvvm</code>, ReactiveUI) and first-class JetBrains Rider tooling.</li>
+<li><strong>When to Choose Avalonia</strong>: When your team's expertise is C#/.NET, or when you are porting an existing WPF or WinForms application to cross-platform desktop.</li>
+</ul>
+<hr />
+<h3 id="4-7-native-toolkits-qt-6-qml-c-python">4.7 Native Toolkits: Qt 6 &amp; QML (C++ / Python)</h3>
+<p><strong>Qt</strong> is the undisputed veteran of native desktop engineering. Used by Adobe Photoshop, Autodesk Maya, DaVinci Resolve, VLC Media Player, and medical workstations:</p>
+<ul>
+<li><strong>Dual UI Approach</strong>:
+<ul>
+<li><strong>Qt Widgets</strong>: Classic C++ widgets matching exact host OS platform styles.</li>
+<li><strong>Qt Quick / QML</strong>: A declarative, GPU-accelerated language optimized for fluid 120Hz custom interfaces.</li>
+</ul>
+</li>
+<li><strong>PySide6 (Qt for Python)</strong>: Official Python bindings for Qt, widely used in data science, engineering tools, and rapid internal desktop scripting.</li>
+</ul>
+<h4 id="a-first-qt-quick-qml-interface">A First Qt Quick (QML) Interface</h4>
+<p>QML is Qt's declarative, JavaScript-flavored UI language; your C++ (or Python) backend exposes application logic to it as context properties:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="qml"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// main.qml — a minimal Qt Quick window</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #D2A6FF;"> QtQuick</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #D2A6FF;"> QtQuick</span><span>.</span><span style="color: #D2A6FF;">Controls</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #59C2FF;">ApplicationWindow</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">    visible</span><span>:</span><span style="color: #D2A6FF;"> true</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">    width</span><span>:</span><span style="color: #D2A6FF;"> 480</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">    height</span><span>:</span><span style="color: #D2A6FF;"> 320</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">    title</span><span>:</span><span style="color: #FFB454;"> qsTr</span><span>(</span><span style="color: #AAD94C;">&quot;CC Contribution Monitor&quot;</span><span>)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #59C2FF;">    Column</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">        anchors</span><span>.</span><span style="color: #D2A6FF;">centerIn</span><span>: parent</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">        spacing</span><span>:</span><span style="color: #D2A6FF;"> 12</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #59C2FF;">        Label</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">            text</span><span>:</span><span style="color: #AAD94C;"> &quot;Commits recorded: &quot;</span><span style="color: #F29668;"> +</span><span> counter</span><span style="color: #F29668;">.</span><span>value</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">            font</span><span>.</span><span style="color: #D2A6FF;">pointSize</span><span>:</span><span style="color: #D2A6FF;"> 14</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #59C2FF;">        Button</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">            text</span><span>:</span><span style="color: #FFB454;"> qsTr</span><span>(</span><span style="color: #AAD94C;">&quot;Record Commit&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">            onClicked</span><span>: counter</span><span style="color: #F29668;">.</span><span>value</span><span style="color: #F29668;"> +=</span><span style="color: #D2A6FF;"> 1</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #59C2FF;">    QtObject</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        id</span><span>: counter</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        property int</span><span style="color: #D2A6FF;"> value</span><span>:</span><span style="color: #D2A6FF;"> 0</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<p>Backend classes are exposed to QML by registering them with the QML engine (<code>QQmlApplicationEngine::rootContext()-&gt;setContextProperty(...)</code> in C++, or <code>setContextProperty</code> via PySide6), keeping UI declarative and logic native.</p>
+<ul>
+<li><strong>Licensing</strong>: Qt is available under open-source LGPLv3 and commercial licenses. Review LGPL obligations (dynamic linking requirements) when building proprietary closed-source applications.</li>
+</ul>
+<hr />
+<h2 id="5-architectural-comparison-decision-guidance">5. Architectural Comparison &amp; Decision Guidance</h2>
+<table><thead><tr><th style="text-align: left">Framework / Ecosystem</th><th style="text-align: left">Primary Language</th><th style="text-align: left">UI Technology</th><th style="text-align: left">Rendering Engine</th><th style="text-align: left">Cold RAM Usage</th><th style="text-align: left">Binary Size</th><th style="text-align: left">Best Use Case</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>Tauri 2.0</strong></td><td style="text-align: left">Rust + TS/JS</td><td style="text-align: left">Web (React/Svelte)</td><td style="text-align: left">System WebView</td><td style="text-align: left">~30–50 MB</td><td style="text-align: left">~10–15 MB</td><td style="text-align: left">Modern lightweight utilities, secure productivity apps, web-to-desktop transitions.</td></tr>
+<tr><td style="text-align: left"><strong>Electron</strong></td><td style="text-align: left">TypeScript</td><td style="text-align: left">Web (HTML/CSS)</td><td style="text-align: left">Bundled Chromium</td><td style="text-align: left">~150–250 MB</td><td style="text-align: left">~80–120 MB</td><td style="text-align: left">Complex enterprise workspaces (VS Code, Slack), rich npm dependencies.</td></tr>
+<tr><td style="text-align: left"><strong>Dioxus</strong></td><td style="text-align: left">Pure Rust</td><td style="text-align: left">Rust RSX components</td><td style="text-align: left">System WebView / WGPU</td><td style="text-align: left">~25–45 MB</td><td style="text-align: left">~12–18 MB</td><td style="text-align: left">Systems programmers seeking a pure Rust full-stack desktop experience.</td></tr>
+<tr><td style="text-align: left"><strong>Flutter Desktop</strong></td><td style="text-align: left">Dart</td><td style="text-align: left">Flutter Widgets</td><td style="text-align: left">Custom Impeller/Skia</td><td style="text-align: left">~60–90 MB</td><td style="text-align: left">~25–35 MB</td><td style="text-align: left">High-fidelity canvas apps, sharing 90%+ code with existing Flutter mobile apps.</td></tr>
+<tr><td style="text-align: left"><strong>Compose Desktop</strong></td><td style="text-align: left">Kotlin</td><td style="text-align: left">Compose Multiplatform</td><td style="text-align: left">Skiko (Skia for Kotlin)</td><td style="text-align: left">~100–180 MB</td><td style="text-align: left">~40–60 MB</td><td style="text-align: left">Kotlin/Android developers, enterprise applications needing JVM integration.</td></tr>
+<tr><td style="text-align: left"><strong>Avalonia 11</strong></td><td style="text-align: left">C#</td><td style="text-align: left">XAML / MVVM</td><td style="text-align: left">Skia</td><td style="text-align: left">~70–110 MB</td><td style="text-align: left">~40–70 MB</td><td style="text-align: left">.NET teams, WPF migrations, cross-platform enterprise internal tools.</td></tr>
+<tr><td style="text-align: left"><strong>Qt 6 / C++</strong></td><td style="text-align: left">C++ or Python</td><td style="text-align: left">QML / Qt Widgets</td><td style="text-align: left">Native C++ / OpenGL</td><td style="text-align: left">~20–40 MB</td><td style="text-align: left">~20–30 MB</td><td style="text-align: left">Performance-critical CAD, audio/video DAWs, 3D software, hardware drivers.</td></tr>
+</tbody></table>
+<hr />
+<h2 id="6-where-are-you-starting-from-the-personalized-guide">6. Where Are You Starting From? (The Personalized Guide)</h2>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    Start["What is your current core background?"] --> P1["React / Web Developer"]
+    Start --> P2["Rust Systems Enthusiast"]
+    Start --> P3["Flutter / Dart Mobile Developer"]
+    Start --> P4["Kotlin / Android Developer"]
+    Start --> P5["C / C++ Programmer"]
+    Start --> P6["Python Developer"]
+    Start --> P7["C# / .NET Developer"]
+
+    P1 --> R1["Explore Tauri (lightweight) or Electron (maximum web compatibility)"]
+    P2 --> R2["Choose Tauri (web UI + Rust core) or Dioxus (pure Rust UI)"]
+    P3 --> R3["Extend existing skills directly via Flutter Desktop"]
+    P4 --> R4["Target desktop using Compose Multiplatform"]
+    P5 --> R5["Master Qt 6 (C++/QML) for industrial-grade native performance"]
+    P6 --> R6["Use PySide6 (Qt for Python) for rapid desktop tooling"]
+    P7 --> R7["Build cross-platform desktop apps with Avalonia (XAML / MVVM)"]
+</pre>
+<ul>
+<li><strong>If you know React &amp; TypeScript</strong>: Start with <strong>Tauri 2.0</strong>. You write your familiar React/Tailwind frontend while learning how to invoke native Rust commands for file system and system tray tasks. If your application relies heavily on Node.js native binary add-ons, look into <strong>Electron</strong>.</li>
+<li><strong>If you are fascinated by Rust</strong>: Choose <strong>Tauri</strong> if you enjoy web styling flexibility, or <strong>Dioxus</strong> if you want to write pure Rust from top to bottom.</li>
+<li><strong>If you followed our <a href="https://cc-club.in/roadmaps/flutter/">Flutter Roadmap</a></strong>: Jump directly into <strong>Flutter Desktop</strong>. Your widget, Riverpod, and BLoC knowledge transfers 100%. Focus on learning window resizing, keyboard accelerators, and system menus.</li>
+<li><strong>If you followed our <a href="https://cc-club.in/roadmaps/android/">Kotlin Roadmap</a></strong>: Explore <strong>Compose Multiplatform Desktop</strong>. Your <code>@Composable</code> knowledge and Coroutines architecture apply directly to macOS, Windows, and Linux.</li>
+<li><strong>If you know C or C++</strong>: Dive into <strong>Qt 6 (QML &amp; C++)</strong>. Qt teaches you the timeless, industrial foundations of real-time desktop engineering.</li>
+<li><strong>If you know C# / .NET</strong>: Build with <strong>Avalonia 11</strong> — WPF-style XAML and MVVM translated to Windows, macOS, and Linux.</li>
+<li><strong>If you are a complete beginner</strong>: Begin by learning JavaScript or Python to understand programming fundamentals, then build your first desktop utility using <strong>Tauri</strong> or <strong>PySide6</strong>.</li>
+</ul>
+<hr />
+<h2 id="7-deep-desktop-engineering-beyond-ui-frameworks">7. Deep Desktop Engineering: Beyond UI Frameworks</h2>
+<p>Writing a UI is only 20% of desktop software engineering. Production desktop applications must handle OS-level lifecycle events, background processing, security, and native packaging.</p>
+<h3 id="7-1-multi-window-architecture-state-synchronization">7.1 Multi-Window Architecture &amp; State Synchronization</h3>
+<p>In desktop applications, users frequently open multiple independent windows (e.g., a document window, a floating inspector tool palette, and a preferences window).</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    MainApp["Application Process Core (Main State Store)"] --> W1["Document Window A"]
+    MainApp --> W2["Document Window B"]
+    MainApp --> W3["Preferences Modal Dialog"]
+    MainApp --> Tray["System Tray Context Menu"]
+
+    W1 -.->|"Mutates Document Data via IPC"| MainApp
+    MainApp -.->|"Broadcasts State Update"| W2
+    Tray -.->|"Triggers Quick Actions"| MainApp
+</pre>
+<ul>
+<li><strong>State Synchronization</strong>: Avoid keeping separate in-memory state inside each window. Centralize application state in the native core (Rust, Node.js, C++, or Kotlin) and broadcast state diffs to open windows via IPC events.</li>
+<li><strong>Window Restoral</strong>: Always persist the user's window bounds (X, Y, Width, Height, and Maximized flag) in local storage so that reopening the app restores the exact physical desktop workspace.</li>
+</ul>
+<h3 id="7-2-native-packaging-multi-platform-distribution">7.2 Native Packaging &amp; Multi-Platform Distribution</h3>
+<p>Turning your compiled binary into an installable software package differs across operating systems:</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    Code["Application Binary & Assets"] --> OS_Choice{"Target Operating System?"}
+
+    OS_Choice -->|"Windows"| Win["Windows Packaging"]
+    OS_Choice -->|"macOS"| Mac["macOS Packaging"]
+    OS_Choice -->|"Linux"| Lin["Linux Packaging"]
+
+    Win --> WinOut["MSIX Installer (Modern Windows Store)<br/>NSIS / Inno Setup (Classic Wizard .exe)<br/>Authenticode Code Signing"]
+    Mac --> MacOut[".app Bundle inside signed .dmg<br/>Apple Developer Certificate<br/>Notarization via notarytool"]
+    Lin --> LinOut["Flatpak (Sandboxed standard)<br/>AppImage (Self-contained executable)<br/>Snap & Native .deb / .rpm"]
+</pre>
+<h4 id="code-signing-notarization-the-golden-standard">Code Signing &amp; Notarization: The Golden Standard</h4>
+<p>Modern operating systems actively block unsigned executables to protect users from malware:</p>
+<ul>
+<li><strong>Windows SmartScreen</strong>: Warns users against running unsigned <code>.exe</code> files. Requires signing with an <strong>Authenticode Code Signing Certificate</strong>.</li>
+<li><strong>macOS Gatekeeper &amp; Notarization</strong>: macOS refuses to open unsigned downloaded applications. You must sign the <code>.app</code> bundle with an Apple Developer ID certificate and submit it to Apple's cloud <strong>Notarization service</strong> (<code>xcrun notarytool submit</code>) to staple an official ticket to the disk image.</li>
+<li><strong>Linux</strong>: Distribute via <strong>Flatpak</strong> (hosted on Flathub) or self-contained <strong>AppImage</strong> files with GPG release signatures.</li>
+</ul>
+<hr />
+<h2 id="8-six-progressive-milestone-projects">8. Six Progressive Milestone Projects</h2>
+<p>Transform theoretical desktop architecture into concrete software through six progressive milestone projects:</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    M1["Milestone 1: DeskMetrics Tray Utility<br/>Focus: System Tray, Global Hotkeys, Mini-Window"] --> M2["Milestone 2: MarkFlow Markdown Studio<br/>Focus: Raw File Streams, Multi-File Tabs, Drag-and-Drop"]
+    M2 --> M3["Milestone 3: SysTelemetry Monitor<br/>Focus: Native OS System Calls, Real-time Charts, Background Threads"]
+    M3 --> M4["Milestone 4: DevSnip Global Clipboard Manager<br/>Focus: Clipboard Polling, SQLite Full-Text Search, Global Hotkeys"]
+    M4 --> M5["Milestone 5: MediaWeaver Batch Transcoder<br/>Focus: Child Process Spawning, FFmpeg Pipes, Concurrency"]
+    M5 --> M6["Milestone 6 (Capstone): OmniDesk Workspace Suite<br/>Focus: Multi-Window, Custom Chrome, Auto-Updates, Signed Installers"]
+</pre>
+<h3 id="milestone-1-deskmetrics-tray-utility">Milestone 1: DeskMetrics Tray Utility</h3>
+<ul>
+<li><strong>Goal</strong>: Build a lightweight system tray utility displaying real-time currency conversions, weather, or server uptime.</li>
+<li><strong>Core Concepts</strong>: Headless application startup, system tray icon with context menu, global keyboard shortcuts, and click-to-show floating popover window.</li>
+<li><strong>Suggested Stack</strong>: Tauri 2.0 (Rust + Svelte/React) or Electron.</li>
+<li><strong>Portfolio Value</strong>: Proves your ability to build non-standard windowless and tray-integrated desktop utilities.</li>
+</ul>
+<h3 id="milestone-2-markflow-native-markdown-studio">Milestone 2: MarkFlow Native Markdown Studio</h3>
+<ul>
+<li><strong>Goal</strong>: A multi-tab document editor supporting live split-pane Markdown rendering, local image assets, and syntax highlighting.</li>
+<li><strong>Core Concepts</strong>: Raw file system access (open, save, save as), drag-and-drop file handling onto the window surface, dirty-state change tracking, and file watchers (<code>notify</code> crate or <code>fs.watch</code>).</li>
+<li><strong>Suggested Stack</strong>: Tauri, Electron, or Flutter Desktop.</li>
+<li><strong>Portfolio Value</strong>: Demonstrates direct file system manipulation, unsaved buffer protection, and desktop editing ergonomics.</li>
+</ul>
+<h3 id="milestone-3-systelemetry-hardware-monitor">Milestone 3: SysTelemetry Hardware Monitor</h3>
+<ul>
+<li><strong>Goal</strong>: A real-time hardware monitoring dashboard tracking per-core CPU utilization, GPU temperature, RAM allocations, and network throughput.</li>
+<li><strong>Core Concepts</strong>: Direct OS hardware system calls (using Rust's <code>sysinfo</code> crate or C++ APIs), non-blocking background polling threads, high-frequency chart rendering, and window minimization to dock/tray.</li>
+<li><strong>Suggested Stack</strong>: Tauri (Rust backend), Dioxus, or Qt 6 / C++.</li>
+<li><strong>Portfolio Value</strong>: Showcases systems programming proficiency, hardware performance measurement, and low-overhead UI rendering.</li>
+</ul>
+<h3 id="milestone-4-devsnip-global-clipboard-manager">Milestone 4: DevSnip Global Clipboard Manager</h3>
+<ul>
+<li><strong>Goal</strong>: A developer clipboard history tool that intercepts system clipboard changes, categorizes snippets (code, JSON, links, images), and pastes them via a global hotkey popup.</li>
+<li><strong>Core Concepts</strong>: Global OS hotkey listening, multi-format clipboard reading, local SQLite indexing with full-text search, and window focus/activation management.</li>
+<li><strong>Suggested Stack</strong>: Tauri or Electron.</li>
+<li><strong>Portfolio Value</strong>: Demonstrates deep OS event listening, database indexing, and keyboard-centric window activation.</li>
+</ul>
+<h3 id="milestone-5-mediaweaver-batch-video-audio-transcoder">Milestone 5: MediaWeaver Batch Video &amp; Audio Transcoder</h3>
+<ul>
+<li><strong>Goal</strong>: A desktop media workbench that batch-compresses, resizes, and converts audio/video files using an embedded native FFmpeg binary.</li>
+<li><strong>Core Concepts</strong>: Spawning native child sub-processes (<code>std::process::Command</code> or <code>child_process.spawn</code>), parsing real-time stdout progress streams, multi-threaded task queues, and native file drop targets.</li>
+<li><strong>Suggested Stack</strong>: Tauri, Compose Multiplatform, or Electron.</li>
+<li><strong>Portfolio Value</strong>: Proves your ability to coordinate external native binaries, manage process pipelines, and stream progress to the UI.</li>
+</ul>
+<h3 id="milestone-6-capstone-omnidesk-workspace-suite">Milestone 6 (Capstone): OmniDesk Workspace Suite</h3>
+<ul>
+<li><strong>Goal</strong>: A production-grade multi-window project management and collaboration workspace compiling for Windows, macOS, and Linux.</li>
+<li><strong>Core Concepts</strong>:
+<ul>
+<li>Multi-window architecture with custom frameless titlebars and native window controls.</li>
+<li>Local relational database persistence with offline sync.</li>
+<li>Command Palette (<code>Ctrl/Cmd + K</code>) for instant navigation and action execution.</li>
+<li>Automated background self-updating mechanism (Tauri Updater or Electron autoUpdater).</li>
+<li>Production packaging: Signed Windows installer (MSIX/NSIS), notarized macOS <code>.dmg</code>, and Linux Flatpak/AppImage packages.</li>
+<li>Automated GitHub Actions CI/CD release pipeline building signed artifacts for all three operating systems.</li>
+</ul>
+</li>
+<li><strong>Portfolio Value</strong>: A definitive capstone proving complete mastery over the desktop application engineering spectrum: native OS integration, IPC, security, multi-window coordination, and commercial distribution.</li>
+</ul>
+<hr />
+<h2 id="9-curated-official-resources">9. Curated Official Resources</h2>
+<p>Deepen your desktop engineering mastery using these authoritative framework documentation hubs:</p>
+<div class="pretty-link-card not-prose group my-4"><a href="https://v2.tauri.app/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Tauri 2.0 Official Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The official guides for building secure, lightweight cross-platform desktop and mobile apps with Rust and web frontends.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>v2.tauri.app/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://www.electronjs.org/docs/latest/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Electron Official Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The definitive manual for building cross-platform desktop applications using JavaScript, Node.js, and Chromium.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>www.electronjs.org/docs/latest/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://dioxuslabs.com/learn/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Dioxus 0.6 Official Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The full-stack, component-based framework for building cross-platform desktop, web, and mobile apps in pure Rust.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>dioxuslabs.com/learn/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://docs.flutter.dev/platform-integration/desktop" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Flutter Desktop Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Official guides covering Windows, macOS, and Linux desktop integration, keyboard shortcuts, and desktop deployment.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>docs.flutter.dev/platform-integration/desktop</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://www.jetbrains.com/lp/compose-multiplatform/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Compose Multiplatform by JetBrains</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The modern declarative UI toolkit for sharing user interfaces across desktop, Android, and iOS using Kotlin.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>www.jetbrains.com/lp/compose-multiplatform/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://doc.qt.io/qt-6/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Qt 6 Official Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Comprehensive API references and architecture guides for the industry-standard C++ and QML desktop application framework.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>doc.qt.io/qt-6/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://wails.io/docs/introduction" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Wails Official Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Documentation for building lightweight desktop applications using Go and native system WebViews.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>wails.io/docs/introduction</span></div></div></div></a></div>
+<hr />
+<h2 id="10-where-to-next-in-the-cc-ecosystem">10. Where to Next in the CC Ecosystem</h2>
+<p>This roadmap connects directly to our broader client and application-development ecosystem. Depending on your primary language and distribution goals:</p>
+<ul>
+<li><strong><a href="https://cc-club.in/roadmaps/mobile-development/">Mobile Development Master Roadmap</a></strong> — revisit the broader application-development landscape, architectural comparisons, and the interactive Path Finder.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/web-development/">Web Development Roadmap</a></strong> — master the foundational JavaScript, TypeScript, React, and CSS concepts that power modern Electron and Tauri desktop frontends.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/flutter/">Flutter &amp; Dart Roadmap</a></strong> — deep-dive into the declarative widget catalog, state management (Riverpod/BLoC), and cross-platform architecture shared between mobile and desktop targets.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/android/">Kotlin &amp; Native Android Roadmap</a></strong> — master modern Kotlin, Coroutines, and declarative UI concepts that transfer directly to Compose Multiplatform Desktop.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/ios/">Swift &amp; Native iOS Roadmap</a></strong> — explore the native Apple engineering ecosystem, SwiftUI, and AppKit for building native macOS desktop applications.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/open-source/">Open Source Contribution Roadmap</a></strong> — learn how to contribute to major open-source desktop projects, tools, and developer utilities.</li>
+</ul>
+
+
+    
+    
+
+    
+    <div class="mt-8 pt-6 border-t border-gray-500/15">
+        <div class="flex flex-wrap items-center gap-4">
+            <a href="https://github.com/CC-MNNIT/cc-website/edit/main//content/roadmaps/desktop-development.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                </svg>
+                <span>Edit this page</span>
+            </a>
+            
+            
+            
+                
+                
+            
+            
+            <button onclick="navigator.clipboard.writeText(window.location.href).then(() => { this.innerHTML = this.innerHTML.replace('Copy URL', 'Copied!'); setTimeout(() => { this.innerHTML = this.innerHTML.replace('Copied!', 'Copy URL'); }, 2000); }).catch(() => { console.error('Failed to copy URL'); })" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+                <span>Copy URL</span>
+            </button>
+            
+            
+            <a href="https://twitter.com/intent/tweet?url=https%3A//cc-club.in/roadmaps/desktop-development/&text=Desktop%20Application%20Development%20Roadmap" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </svg>
+                <span>Share on X</span>
+            </a>
+            
+        </div>
+    </div>
+    
+
+
+                        
+
+
+
+                        <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="prev-nav-item">
+                                    
+    
+        
+        <a class="nav-button nav-button-prev group" href="https://cc-club.in/roadmaps/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="nav-button-label">Back to</span>
+                </div>
+                <div class="nav-button-title">Learning Roadmaps</div>
+            </div>
+        </a>
+    
+
+                                </div>
+                                <div class="next-nav-item">
+                                    
+    
+        <a class="nav-button nav-button-next group" href="https://cc-club.in/roadmaps/sysadmin/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <span class="nav-button-label">Next</span>
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                <div class="nav-button-title">System Administration Roadmap</div>
+            </div>
+        </a>
+    
+
+                                </div>
+                            </div>
+                        </nav>
+                    </main>
+            
+
+                    
+                        
+
+<div class="hidden lg:block" data-toc-expand="true">
+    <div class="sticky top-20 px-4 py-2 border-l border-gray-500/15">
+        <h4 class="text-lg font-bold mb-1">ON THIS PAGE</h4>
+            <ul class="menu menu-sm toc-menu">
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/desktop-development/#1-orientation-the-desktop-application-engineering-mental-model" class="toc-link">1. Orientation: The Desktop Application Engineering Mental Model</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#1-1-what-makes-desktop-applications-unique" class="toc-link">1.1 What Makes Desktop Applications Unique?</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#1-2-operating-system-process-architecture-the-event-loop" class="toc-link">1.2 Operating System Process Architecture &amp; The Event Loop</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/desktop-development/#2-desktop-user-interface-system-integration-fundamentals" class="toc-link">2. Desktop User Interface &amp; System Integration Fundamentals</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#2-1-desktop-ui-paradigms-vs-mobile-conventions" class="toc-link">2.1 Desktop UI Paradigms vs. Mobile Conventions</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#2-2-deep-operating-system-integration-points" class="toc-link">2.2 Deep Operating System Integration Points</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/desktop-development/#3-the-five-major-desktop-development-architectures" class="toc-link">3. The Five Major Desktop Development Architectures</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#architecture-1-web-frontend-bundled-chromium-runtime-electron" class="toc-link">Architecture 1: Web Frontend + Bundled Chromium Runtime (Electron)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#architecture-2-web-frontend-system-webview-native-core-tauri-wails" class="toc-link">Architecture 2: Web Frontend + System WebView + Native Core (Tauri &amp; Wails)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#architecture-3-custom-gpu-rendered-engine-flutter-desktop" class="toc-link">Architecture 3: Custom GPU-Rendered Engine (Flutter Desktop)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#architecture-4-declarative-multiplatform-native-runtimes-compose-desktop-avalonia" class="toc-link">Architecture 4: Declarative Multiplatform Native Runtimes (Compose Desktop &amp; Avalonia)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#architecture-5-native-platform-toolkits-qt-winui-3-swiftui-appkit-gtk" class="toc-link">Architecture 5: Native Platform Toolkits (Qt, WinUI 3, SwiftUI/AppKit, GTK)</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/desktop-development/#4-primary-desktop-development-ecosystems" class="toc-link">4. Primary Desktop Development Ecosystems</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#4-1-tauri-2-0-rust-web-frontend" class="toc-link">4.1 Tauri 2.0 (Rust + Web Frontend)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#4-2-electron-typescript-node-js-chromium" class="toc-link">4.2 Electron (TypeScript + Node.js + Chromium)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#4-3-dioxus-pure-rust-reactive-fullstack-desktop" class="toc-link">4.3 Dioxus (Pure Rust Reactive Fullstack Desktop)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#4-4-flutter-desktop-dart-custom-gpu-engine" class="toc-link">4.4 Flutter Desktop (Dart + Custom GPU Engine)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#4-5-compose-multiplatform-desktop-kotlin-skiko" class="toc-link">4.5 Compose Multiplatform Desktop (Kotlin + Skiko)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#4-6-avalonia-net-c" class="toc-link">4.6 Avalonia (.NET / C#)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#4-7-native-toolkits-qt-6-qml-c-python" class="toc-link">4.7 Native Toolkits: Qt 6 &amp; QML (C++ / Python)</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/desktop-development/#5-architectural-comparison-decision-guidance" class="toc-link">5. Architectural Comparison &amp; Decision Guidance</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/desktop-development/#6-where-are-you-starting-from-the-personalized-guide" class="toc-link">6. Where Are You Starting From? (The Personalized Guide)</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/desktop-development/#7-deep-desktop-engineering-beyond-ui-frameworks" class="toc-link">7. Deep Desktop Engineering: Beyond UI Frameworks</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#7-1-multi-window-architecture-state-synchronization" class="toc-link">7.1 Multi-Window Architecture &amp; State Synchronization</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#7-2-native-packaging-multi-platform-distribution" class="toc-link">7.2 Native Packaging &amp; Multi-Platform Distribution</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/desktop-development/#8-six-progressive-milestone-projects" class="toc-link">8. Six Progressive Milestone Projects</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#milestone-1-deskmetrics-tray-utility" class="toc-link">Milestone 1: DeskMetrics Tray Utility</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#milestone-2-markflow-native-markdown-studio" class="toc-link">Milestone 2: MarkFlow Native Markdown Studio</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#milestone-3-systelemetry-hardware-monitor" class="toc-link">Milestone 3: SysTelemetry Hardware Monitor</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#milestone-4-devsnip-global-clipboard-manager" class="toc-link">Milestone 4: DevSnip Global Clipboard Manager</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#milestone-5-mediaweaver-batch-video-audio-transcoder" class="toc-link">Milestone 5: MediaWeaver Batch Video &amp; Audio Transcoder</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/desktop-development/#milestone-6-capstone-omnidesk-workspace-suite" class="toc-link">Milestone 6 (Capstone): OmniDesk Workspace Suite</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/desktop-development/#9-curated-official-resources" class="toc-link">9. Curated Official Resources</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/desktop-development/#10-where-to-next-in-the-cc-ecosystem" class="toc-link">10. Where to Next in the CC Ecosystem</a>
+                    
+                </li>
+            
+            </ul>
+    </div>
+</div>
+
+
+                    
+                    
+                </div>
+            
+            </div>
+
+            <script>
+              // Determine theme: localStorage > extra.default_colorset > cc-dark
+              // Expose theme config for global use (e.g., js/theme.js)
+              
+              
+              
+                  
+                  
+                  
+                  
+              
+              window.defaultColorset = "dark";
+              window.darkBrightness = "normal";
+              window.lightBrightness = "normal";
+              window.themeMap = { "dark": "cc-dark", "light": "cc-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "cc-dark";
+
+              // Theme mapping - user-facing names are the theme identifiers
+              var themeMapping = { "cc-dark": "cc-dark", "cc-light": "cc-light" };
+              var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
+              var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+
+              // Initialize and run Mermaid only when loaded
+              window.initMermaid = function() {
+                var mermaidTheme = "dark";
+                if(currentUserTheme == "cc-light") {
+                  mermaidTheme = "light";
+                }
+                
+                if (typeof mermaid !== 'undefined') {
+                  mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
+                  
+                  // Function to render mermaid diagrams
+                  var renderMermaid = async function() {
+                    const mermaidElements = document.querySelectorAll('.mermaid');
+                    if (mermaidElements.length > 0) {
+                        await mermaid.run({
+                            nodes: mermaidElements
+                        });
+                    }
+                  };
+                  
+                  // Check if DOMContentLoaded has already fired
+                  if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', renderMermaid);
+                  } else {
+                    // DOMContentLoaded already fired, run immediately
+                    renderMermaid();
+                  }
+                }
+              };
+              
+              // Auto-initialize if Mermaid is already loaded
+              if (typeof mermaid !== 'undefined') {
+                window.initMermaid();
+              }
+            </script>
+
+            
+<footer class="site-footer">
+    <!-- Main footer content -->
+    <div class="w-full py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer grid -->
+            <div class="footer-content">
+                
+                <!-- Column 1: About/Logo -->
+                <div class="footer-col space-y-4">
+                    <div class="footer-logo-container">
+                        
+                        <img src="https://cc-club.in/images/logo/cclogo.webp" alt="Logo" class="footer-logo">
+                        
+                        <h3>
+                            CC Club MNNIT
+                        </h3>
+                    </div>
+                    <p>
+                        Our mission since 2010 at MNNIT is to develop in you a passion for problem-solving, critical thinking, innovation and computer science. We strive to achieve this goal through means of events, classes and industry connects.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        
+                            
+                            <li>
+                                <a href="team">
+                                    Our Team
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="blog">
+                                    Blogs
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="projects">
+                                    Projects
+                                </a>
+                            </li>
+                            
+                        
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col space-y-4">
+                    <h4>Contact</h4>
+                    <div class="space-y-3">
+                        
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            computer.club@mnnit.ac.in
+                        </p>
+                        
+                        
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            MNNIT Allahabad, Prayagraj, UP - 211004
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Links -->
+                <div class="footer-col space-y-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        
+                            
+                            
+                            <a href="https://www.instagram.com/cc.club.mnnit/" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            
+                            
+                            
+                            <a href="https://www.linkedin.com/company/computer-coding-club-mnnit/" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            
+                            
+                            <a href="https://github.com/CC-MNNIT" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            
+                            
+                            <a href="https://discord.gg/EDv6fM5yUm" aria-label="Discord">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            
+                        
+                    </div>
+                    <p>
+                        Connect to stay updated about our events, projects and blogs!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Computer Coding Club. All rights reserved.</p>
+        <div class="footer-made-with">
+            <p>Made with</p>
+            <i class="fas fa-heart"></i>
+            <p>by Team CC</p>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        <div id="sidebar" class="drawer-side pt-16 border-r border-gray-500/15 overflow-hidden">
+            
+                
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+    
+    
+        
+        
+    
+
+
+
+
+
+<label for="my-drawer-2" class="drawer-overlay"></label>
+<div class="mt-16 w-68 h-[calc(100vh-4rem)] bg-base-100 text-base-content flex flex-col overflow-auto thin-scrollbar">
+    
+    <div class="px-2 pt-4 pb-0 flex flex-col items-center gap-2">
+        <div class="w-full flex items-center gap-2">
+            <label for="search-modal" class="input w-full flex items-center justify-between text-left bg-base-100 cursor-pointer border-gray-500/15 hover:border-gray-500/55 hover:border-1 transition" aria-label="검색">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="text-gray-400"><kbd class="kbd">⌘</kbd><kbd class="kbd">K</kbd></span>
+            </label>
+        </div>
+    </div>
+    
+    
+    
+    <div class="lg:hidden px-4 py-2 border-b border-gray-500/10">
+        <div class="text-xs font-semibold text-gray-400 mb-2">QUICK NAV</div>
+        <ul class="menu menu-compact">
+            
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/about" class="text-sm">
+                            
+                            <i class="fa-solid fa-circle-info mr-2"></i>
+                            About
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/blog" class="text-sm">
+                            
+                            <i class="fa-solid fa-blog mr-2"></i>
+                            Blog
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/events" class="text-sm">
+                            
+                            <i class="fa-solid fa-calendar-days mr-2"></i>
+                            Events
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://drive.google.com/file/d/1f7eJdgjX0p9CanHlK5bGkmdARIa4ErHZ/view" class="text-sm" target="_blank" rel="noopener noreferrer">
+                            
+                            <i class="fa-solid fa-calendar-check mr-2"></i>
+                            Calendar
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/projects" class="text-sm">
+                            
+                            <i class="fa-solid fa-code-branch mr-2"></i>
+                            Projects
+                        </a></li>
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/roadmaps" class="text-sm">
+                            
+                            <i class="fa-solid fa-route mr-2"></i>
+                            Roadmaps
+                        </a></li>
+                    
+                
+                    
+                        
+                            <li>
+                                
+                                    <a href="https://cc-club.in/team" class="text-sm">
+                                
+                                <i class="fa-solid fa-user-group mr-2"></i>
+                                Current Team
+                            </a></li>
+                        
+                    
+                
+                    
+                        <li>
+                            
+                                <a href="https://cc-club.in/contact" class="text-sm">
+                            
+                            <i class="fa-solid fa-envelope mr-2"></i>
+                            Contact
+                        </a></li>
+                    
+                
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+    <div class="hidden lg:block px-4 py-2 font-bold text-lg border-b border-gray-500/10 mb-2">
+        <a href="https://cc-club.in/roadmaps/" class="hover:text-primary transition-colors">Learning Roadmaps</a>
+    </div>
+
+    
+    
+    <ul class="hidden lg:block menu w-full flex-grow">
+        
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/web-development">Web Development Master Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/java-spring-boot">Java &amp; Spring Boot Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/machine-learning">Machine Learning Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/open-source">Open Source Contribution Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/mobile-development">Mobile Application Development Master Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/android">Kotlin &amp; Native Android Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/flutter">Flutter &amp; Dart Cross-platform Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/react-native">React Native &amp; Expo Cross-platform Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/ios">Swift &amp; Native iOS Development Roadmap</a></li>
+        
+            <li class="rounded bg-gray-500/15"><a class="hover:no-underline" href="https://cc-club.in/roadmaps/desktop-development">Desktop Application Development Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/sysadmin">System Administration Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/devops">DevOps Roadmap</a></li>
+        
+            <li ><a class="hover:no-underline" href="https://cc-club.in/roadmaps/competitive-programming">Competitive Programming Mastery Roadmap</a></li>
+        
+        
+        
+        
+    </ul>
+    
+</div>
+
+            
+        </div>
+        
+        <script>
+            // Apply sidebar preference immediately to prevent FOUC
+            (function() {
+                try {
+                    var savedState = localStorage.getItem('sidebar-state');
+                    var sidebar = document.getElementById('sidebar');
+                    if (savedState === 'closed' && sidebar) {
+                        sidebar.classList.add('sidebar-closed');
+                    }
+                } catch (e) {}
+            })();
+        </script>
+    </div>
+
+    
+        <script type="text/javascript" src="https://cc-club.in/js/theme.js"></script>
+        
+        <!-- Lazy load search functionality -->
+        <script>
+            var searchLoaded = false;
+            var searchLoadCallbacks = [];
+            
+            function loadSearchLibraries(callback) {
+                // If already loaded, execute callback immediately
+                if (searchLoaded && typeof Fuse !== 'undefined' && window.searchIndex) {
+                    if (callback) callback();
+                    return;
+                }
+                
+                // Add callback to queue
+                if (callback) searchLoadCallbacks.push(callback);
+                
+                // If already loading, don't start again
+                if (searchLoaded) return;
+                searchLoaded = true;
+                
+                // Show loading indicator in search input
+                var searchInput = document.getElementById('search');
+                if (searchInput) {
+                    searchInput.placeholder = 'Loading search...';
+                    searchInput.disabled = true;
+                }
+                
+                // Load Fuse.js
+                var fuseScript = document.createElement('script');
+                fuseScript.src = 'https://cc-club.in/fuse.min.js';
+                
+                // Load search index after Fuse.js
+                fuseScript.onload = function() {
+                    var searchIndexScript = document.createElement('script');
+                    searchIndexScript.src = 'https://cc-club.in/search_index.en.js';
+                    searchIndexScript.onload = function() {
+                        // Re-enable search input
+                        if (searchInput) {
+                            searchInput.placeholder = 'Search documentation...';
+                            searchInput.disabled = false;
+                            searchInput.focus();
+                        }
+                        
+                        // Initialize search functionality
+                        if (typeof initSearch === 'function') {
+                            initSearch();
+                        }
+                        
+                        // Execute all queued callbacks
+                        searchLoadCallbacks.forEach(function(cb) { cb(); });
+                        searchLoadCallbacks = [];
+                    };
+                    document.body.appendChild(searchIndexScript);
+                };
+                
+                document.body.appendChild(fuseScript);
+            }
+            
+            // Load search on first interaction with search modal
+            document.addEventListener('DOMContentLoaded', function() {
+                var searchModal = document.getElementById('search-modal');
+                if (searchModal) {
+                    searchModal.addEventListener('change', function() {
+                        if (this.checked) {
+                            loadSearchLibraries();
+                        }
+                    });
+                }
+                
+                // Also load on Ctrl+K / Cmd+K
+                document.addEventListener('keydown', function(e) {
+                    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                        loadSearchLibraries();
+                    }
+                });
+            });
+        </script>
+        
+        
+        <script>
+            // Desktop Sidebar Toggle Logic
+            document.addEventListener('DOMContentLoaded', function() {
+                var toggleBtn = document.getElementById('desktop-sidebar-toggle');
+                var sidebar = document.getElementById('sidebar');
+                
+                if (toggleBtn && sidebar) {
+                    // Toggle handler
+                    toggleBtn.addEventListener('click', function() {
+                        // Check if closed by checking for class
+                        var isClosed = sidebar.classList.contains('sidebar-closed');
+                        
+                        if (isClosed) {
+                            // Opening
+                            sidebar.classList.remove('sidebar-closed');
+                            localStorage.setItem('sidebar-state', 'open');
+                        } else {
+                            // Closing
+                            sidebar.classList.add('sidebar-closed');
+                            localStorage.setItem('sidebar-state', 'closed');
+                        }
+                    });
+                }
+            });
+        </script>
+    
+</body>
+</html>
