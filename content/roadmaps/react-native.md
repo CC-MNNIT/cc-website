@@ -33,7 +33,7 @@ Before diving into components, you must establish an accurate mental model of wh
 * **What It IS**: React Native is a mobile framework that runs your application logic in an embedded, precompiled JavaScript engine (Hermes) and drives **real, platform-native UI widgets** (such as Android's `ViewGroup` and iOS's `UIView`). A button rendered in React Native is not a web element inside a WebView; it is a genuine, hardware-accelerated platform widget.
 * **What It IS NOT**: React Native is not a hybrid wrapper like Cordova or Ionic. It does not render HTML inside an embedded browser window. There is no `document`, no `window`, and no DOM.
 
-```mermaid
+{% <mermaid> %}
 graph TD
     App["Your TypeScript / React Code"] --> Engine["Hermes JavaScript Engine (Bytecode AOT)"]
     Engine --> JSI["JavaScript Interface (JSI - Direct C++ Memory)"]
@@ -41,7 +41,7 @@ graph TD
     JSI --> Turbo["TurboModules (Native Device Hardware)"]
     Fabric --> AndroidUI["Android Native Views (ViewGroup)"]
     Fabric --> AppleUI["iOS Native Views (UIView / CoreAnimation)"]
-```
+{% </mermaid> %}
 
 ### 1.2 The Evolution: Legacy Bridge vs. The New Architecture
 
@@ -65,7 +65,7 @@ A common question among newcomers is: *"Should I learn React Native or Expo?"*
 
 This is a false dichotomy. **Expo is the official, Meta-recommended framework for React Native** (analogous to how Next.js is the official production framework for React web).
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph React_Native_Core["React Native Core"]
         Primitives["Core Components: View, Text, FlatList"]
@@ -80,7 +80,7 @@ graph TD
     end
 
     Expo_Framework -->|"Wraps, enhances, and powers"| React_Native_Core
-```
+{% </mermaid> %}
 
 * **Expo Go**: A prebuilt sandbox client installed on your physical phone from the App Store. Excellent for beginners writing basic UI without custom native libraries.
 * **Development Builds (`expo-dev-client`)**: A customized native binary compiled specifically for your app, containing all your custom C++, Kotlin, and Swift dependencies while retaining full Hot Reload. This is the **standard workflow for all professional React Native apps**.
@@ -224,7 +224,7 @@ npx expo start
 
 ### 4.2 The Three Expo Workflows Compared
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Choice["Which Expo Workflow should you use?"] --> W1["1. Expo Go"]
     Choice --> W2["2. Development Builds (expo-dev-client)"]
@@ -233,7 +233,7 @@ graph TD
     W1 --> D1["Zero native setup. Scan QR code in Expo Go app.<br/>Limitation: Cannot use custom C++/Kotlin/Swift native libraries."]
     W2 --> D2["Industry Standard. Generates a custom debug binary for your device.<br/>Supports all native modules, custom SDKs, and full Hot Reload."]
     W3 --> D3["Continuous Native Generation (CNG).<br/>Generates deterministic android/ and ios/ folders via 'npx expo prebuild'."]
-```
+{% </mermaid> %}
 
 {% <alert_success> %}
 **The Modern Consensus**: Start simple with **Expo Go** while learning core UI, Flexbox, and state. When you need custom native hardware libraries (such as specialized Bluetooth SDKs or background services), transition seamlessly to **Development Builds (`npx expo run:android` or `npx expo run:ios`)** without rewriting any React code.
@@ -447,7 +447,7 @@ export default function ProjectDetailScreen() {
 
 State in mobile applications falls into two distinct categories: **Server State** (data owned by the backend that requires caching and syncing) and **Client State** (local UI settings and session flags).
 
-```mermaid
+{% <mermaid> %}
 graph TD
     State["Application State"] --> ServerState["Server State (Cached Network Data)"]
     State --> ClientState["Client State (Local UI & Sessions)"]
@@ -457,7 +457,7 @@ graph TD
 
     ClientState --> LocalState["Local Component State: useState / useReducer"]
     ClientState --> GlobalState["Global Shared State: Zustand"]
-```
+{% </mermaid> %}
 
 ### 7.1 Server State with TanStack Query (React Query)
 
@@ -593,7 +593,7 @@ export function getAllNotes() {
 
 Mobile applications differentiate themselves from web pages through deep, hardware-level operating system integration.
 
-```mermaid
+{% <mermaid> %}
 graph TD
     App["Your React Native Application"] --> ExpoSDK["Expo Hardware SDK Layer"]
     ExpoSDK --> Cam["expo-camera (Photos & QR Scanning)"]
@@ -601,7 +601,7 @@ graph TD
     ExpoSDK --> Auth["expo-local-authentication (Face ID / Fingerprint)"]
     ExpoSDK --> Notif["expo-notifications (Push & Local Reminders)"]
     ExpoSDK --> Haptic["expo-haptics (Tactile Vibration Engines)"]
-```
+{% </mermaid> %}
 
 ### 9.1 Hardware Biometric Authentication
 
@@ -652,7 +652,7 @@ export async function pickProfilePhoto(): Promise<string | null> {
   }
 
   const result = await ImagePicker.launchImageLibraryAsync({
-    mediaTypes: ImagePicker.MediaTypeOptions.Images,
+    mediaTypes: ['images'], // MediaTypeOptions is deprecated since SDK 52
     allowsEditing: true,
     aspect: [1, 1], // Square avatar
     quality: 0.8,
@@ -673,12 +673,12 @@ Delivering a professional application requires structured testing and rigorous p
 
 ### 10.1 The React Native Testing Pyramid
 
-```mermaid
+{% <mermaid> %}
 graph TD
     E2E["10% End-to-End Tests (Maestro / Detox)"]
     Component["30% Component & Hook Tests (React Native Testing Library)"]
     Unit["60% Pure TypeScript Unit Tests (Jest / Logic / Repositories)"]
-```
+{% </mermaid> %}
 
 #### Component Testing with React Native Testing Library
 ```tsx
@@ -797,14 +797,14 @@ React Native's "Learn Once, Write Anywhere" philosophy extends beyond mobile pho
 
 Transform theoretical knowledge into engineering proficiency through these six progressive milestone projects:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     M1["Milestone 1: QuickMetrics Converter<br/>Focus: TypeScript, Core Primitives, StyleSheet"] --> M2["Milestone 2: PulseHabit Tracker<br/>Focus: SQLite, Local Notifications, Zustand"]
     M2 --> M3["Milestone 3: Chronicle Markdown Notes<br/>Focus: Audio Recording, SQLite Search, Gestures"]
     M3 --> M4["Milestone 4: DevPulse GitHub Explorer<br/>Focus: TanStack Query, FlatList, Pull-to-Refresh"]
     M4 --> M5["Milestone 5: BiometricVault Locker<br/>Focus: Face ID/Fingerprint, SecureStore, Camera"]
     M5 --> M6["Milestone 6 (Capstone): OmniMarket Multiplatform Store<br/>Focus: Expo Router Tabs, Zustand, Stripe, Maestro E2E, EAS"]
-```
+{% </mermaid> %}
 
 ### Milestone 1: QuickMetrics Converter
 * **Goal**: Build an interactive currency, metric, and unit conversion calculator.
@@ -818,7 +818,7 @@ graph TD
 
 ### Milestone 3: Chronicle Notes & Voice Memos
 * **Goal**: A multimedia journaling app supporting rich Markdown formatting and embedded audio recordings.
-* **Core Concepts**: **`expo-av`** for microphone audio recording and playback, SQLite Full-Text Search (FTS), and swipe-to-delete gestures using **`react-native-gesture-handler`**.
+* **Core Concepts**: **`expo-audio`** for microphone audio recording and playback, SQLite Full-Text Search (FTS), and swipe-to-delete gestures using **`react-native-gesture-handler`**.
 * **Portfolio Value**: Showcases audio hardware management, gesture physics, and advanced mobile data indexing.
 
 ### Milestone 4: DevPulse (GitHub & Tech News Explorer)
