@@ -34,7 +34,7 @@ System Administration is the practice of managing computer systems, servers, net
 
 To navigate modern infrastructure, understand how System Administration connects with adjacent fields:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     SysAdmin["System Administration (The Operational Core)<br/>OS Internals, Linux, Networking, Storage, Services, Security, Troubleshooting"]
     
@@ -44,17 +44,17 @@ graph TD
     SysAdmin --> SRE["Site Reliability Engineering (SRE)<br/>SLOs, error budgets, blameless postmortems, large-scale automation"]
     SysAdmin --> Cloud["Cloud Architecture<br/>Managed cloud primitives (AWS/GCP/Azure), serverless, multi-region failover"]
     SysAdmin --> Sec["Cybersecurity & Hardening<br/>Threat modeling, penetration testing, compliance auditing, forensics"]
-```
+{% </mermaid> %}
 
-* **Linux $\neq$ System Administration**: Linux is an operating system kernel. System administration is the operational discipline of managing that operating system, along with networks, users, storage, automated recovery, and service daemons.
-* **Networking $\neq$ System Administration**: Network engineers configure physical switches, routers, and dynamic routing protocols (BGP/OSPF). SysAdmins configure how operating system nodes communicate over that network (sockets, interfaces, DNS, firewalls, and proxy routing).
+* **Linux ≠ System Administration**: Linux is an operating system kernel. System administration is the operational discipline of managing that operating system, along with networks, users, storage, automated recovery, and service daemons.
+* **Networking ≠ System Administration**: Network engineers configure physical switches, routers, and dynamic routing protocols (BGP/OSPF). SysAdmins configure how operating system nodes communicate over that network (sockets, interfaces, DNS, firewalls, and proxy routing).
 * **DevOps Builds Directly on SysAdmin**: DevOps introduces software delivery automation, continuous integration, and collaborative deployment patterns. However, you cannot automate infrastructure effectively with Docker, Terraform, or Kubernetes if you do not understand what an operating system process, network socket, mount point, or file permission actually is.
 
 ### 1.2 Identifying Your Starting Track
 
 Students approach system administration from diverse starting points:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Start["Where are you starting from?"] --> T1["Track A: Complete Beginner"]
     Start --> T2["Track B: Desktop Linux User"]
@@ -70,7 +70,7 @@ graph TD
     R2 --> Core
     R3 --> Core
     R4 --> Core
-```
+{% </mermaid> %}
 
 * **Track A (Complete Beginners)**: Focus on Stage 1. Understand what happens between the hardware CPU, memory, and the operating system before configuring headless servers.
 * **Track B (Desktop Linux Users)**: You already know terminal basics (`cd`, `ls`, package managers). Shift your focus to server-grade administration: headless SSH remote management, daemon lifecycles with `systemd`, network routing, and firewall rules.
@@ -85,12 +85,12 @@ A great administrator never treats a computer as a magic black box. You must und
 
 ### 2.1 Hardware Subsystems: CPU, Memory, and I/O
 
-```mermaid
+{% <mermaid> %}
 graph LR
     CPU["Central Processing Unit (CPU)<br/>Registers, L1/L2/L3 Cache, Cores"] <-->|"Memory Bus"| RAM["Random Access Memory (RAM)<br/>Volatile Physical Pages"]
     CPU <-->|"PCIe / Direct Bus"| Storage["Block Storage Devices<br/>NVMe SSD, SATA, Hard Drives"]
     CPU <-->|"Network Controller (NIC)"| Network["Network Interfaces<br/>Ethernet, Wi-Fi, SFP+ Fiber"]
-```
+{% </mermaid> %}
 
 * **The CPU & The Scheduler**: The CPU executes instructions in clock cycles. Modern operating systems time-slice CPU cores across hundreds of concurrent processes using preemptive multitasking.
 * **Memory Management & Virtual Memory**: Applications do not interact with raw physical RAM chips. The CPU's Memory Management Unit (MMU) and the OS kernel maintain **Page Tables**, mapping virtual memory addresses to physical RAM pages. When physical RAM is exhausted, the OS pages inactive memory out to disk (**Swap**).
@@ -100,7 +100,7 @@ graph LR
 
 Operating system security and stability depend on hardware-enforced privilege rings:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph UserSpace["User Space (Ring 3 — Restricted Privilege)"]
         Apps["Applications (Nginx, PostgreSQL, Python, Bash)"]
@@ -117,7 +117,7 @@ graph TD
     LibC -->|"System Call (Context Switch)"| SyscallHandler
     SyscallHandler --> Subsystems
     Subsystems --> Hardware
-```
+{% </mermaid> %}
 
 * **User Space (Ring 3)**: Where user applications run with limited privileges. An application cannot directly touch physical disk sectors or network interfaces.
 * **Kernel Space (Ring 0)**: Where the core operating system kernel executes with complete hardware access.
@@ -139,13 +139,13 @@ graph TD
 
 ### 2.4 The Linux Boot Sequence: Power-On to User Space
 
-```mermaid
+{% <mermaid> %}
 graph TD
     P1["1. Firmware (UEFI / BIOS)"] --> P2["2. Bootloader (GRUB2)"]
     P2 --> P3["3. Kernel Initialization & initramfs"]
     P3 --> P4["4. Init System (systemd PID 1)"]
     P4 --> P5["5. System Targets & User Login"]
-```
+{% </mermaid> %}
 
 1. **UEFI / BIOS**: Executes the Power-On Self-Test (POST), initializes base hardware, and reads the EFI System Partition (ESP) on the boot disk.
 2. **Bootloader (GRUB2)**: Presents the boot menu, loads the selected Linux kernel binary (`vmlinuz`) and initial RAM filesystem (`initramfs`) into memory, and passes kernel boot parameters.
@@ -193,7 +193,7 @@ Every file and directory in Linux has an owning **User**, an owning **Group**, a
 * **Permission Triad**: Read (`r` = 4), Write (`w` = 2), Execute (`x` = 1).
   * User (owner): `rwx` (4+2+1 = 7)
   * Group: `r-x` (4+0+1 = 5)
-  * Others: `r--` (4+0+0 = 4) $\rightarrow$ Octal mode **754**.
+  * Others: `r--` (4+0+0 = 4) → Octal mode **754**.
 * **Special Permissions**:
   * **SUID (Set User ID - 4000)**: When an executable with SUID is run, it executes with the privileges of the file owner rather than the user running it (e.g., `/usr/bin/passwd` allows normal users to update `/etc/shadow`).
   * **SGID (Set Group ID - 2000)**: Files created inside a directory inherit the directory's group ownership rather than the user's primary group. Essential for shared team collaboration folders!
@@ -208,7 +208,7 @@ Never memorize commands blindly; understand what question each tool answers:
 | **`ps aux` / `pgrep`** | Process table inspection | Locating rogue processes, finding parent PIDs, inspecting command arguments. |
 | **`top` / `htop`** | Real-time interactive resource monitor | Identifying runaway CPU threads, memory hogs, and system load averages. |
 | **`lsof`** | List open file descriptors | Discovering which process is holding a locked file, or which process is listening on port 8080. |
-| **`strace`** | Intercept and log system calls | Debugging crashes: *"Why is Nginx failing to start?"* $\rightarrow$ reveals exact file permission error on config read. |
+| **`strace`** | Intercept and log system calls | Debugging crashes: *"Why is Nginx failing to start?"* → reveals exact file permission error on config read. |
 | **`journalctl`** | Query the systemd unified log | Inspecting live service logs, boot failures, and kernel errors (`-u nginx -f`). |
 | **`ss -tulnp`** | Socket statistics | Checking listening TCP/UDP ports and identifying which process owns them. |
 | **`findmnt` / `lsblk`** | Storage hierarchy and mounts | Viewing physical disks, LVM logical volumes, and filesystem mount options. |
@@ -259,14 +259,14 @@ Everything managed by `systemd` is defined as a **Unit**:
 * **`.socket`**: IPC sockets and network ports that activate services on incoming connections.
 * **`.target`**: Grouping units into synchronization milestones (e.g., `multi-user.target`, `reboot.target`).
 
-```mermaid
+{% <mermaid> %}
 graph LR
     Kernel["Linux Kernel"] --> PID1["systemd (PID 1)"]
     PID1 --> Sockets["Socket Activation (.socket)"]
     PID1 --> Services["Service Daemons (.service)"]
     PID1 --> Timers["Scheduled Timers (.timer)"]
     PID1 --> Targets["System Targets (.target)"]
-```
+{% </mermaid> %}
 
 ### 4.2 Writing a Production-Grade Custom Service Unit
 
@@ -327,8 +327,8 @@ A server isolated from a network is of little use. System administrators must un
 Every network node has an IP address. Subnets partition physical networks into logical segments:
 
 * **CIDR (Classless Inter-Domain Routing)**: Indicates how many bits represent the network prefix:
-  * `192.168.1.0/24`: 24 network bits, 8 host bits ($2^8 = 256$ total addresses, 254 usable hosts). Netmask: `255.255.255.0`.
-  * `10.0.0.0/16`: 16 network bits, 16 host bits ($2^{16} = 65,536$ total addresses).
+  * `192.168.1.0/24`: 24 network bits, 8 host bits (2⁸ = 256 total addresses, 254 usable hosts). Netmask: `255.255.255.0`.
+  * `10.0.0.0/16`: 16 network bits, 16 host bits (2¹⁶ = 65,536 total addresses).
 * **Network & Broadcast Addresses**:
   * First address in a subnet: Network Identifier (`192.168.1.0`).
   * Last address in a subnet: Broadcast Address (`192.168.1.255`).
@@ -338,7 +338,7 @@ Every network node has an IP address. Subnets partition physical networks into l
 
 DNS translates human-readable domain names into IP addresses. Understanding the resolution pipeline is critical when troubleshooting connectivity failures:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Client["Client System (Resolver)"] --> LocalCache{"1. Local Cache / /etc/hosts"}
     LocalCache -->|"Cache Miss"| Recursor["2. Recursive DNS Resolver (e.g. 1.1.1.1, ISP)"]
@@ -347,7 +347,7 @@ graph TD
     TLD --> Authoritative["5. Authoritative Nameserver (ns1.cc-club.in)"]
     Authoritative -->|"Returns A Record: 192.0.2.1"| Recursor
     Recursor --> Client
-```
+{% </mermaid> %}
 
 #### Diagnostic DNS Tool: `dig`
 ```bash
@@ -373,7 +373,7 @@ sudo ss -tulnp
 * **Common TCP States**:
   * `LISTEN`: Ready to accept incoming connections on a bound port.
   * `ESTABLISHED`: Active bidirectional communication channel.
-  * `TIME_WAIT`: Socket closed locally; waiting $2 \times \text{MSL}$ (Maximum Segment Lifetime) to ensure delayed packets are cleared before the port is reused.
+  * `TIME_WAIT`: Socket closed locally; waiting 2×MSL (Maximum Segment Lifetime) to ensure delayed packets are cleared before the port is reused.
   * `CLOSE_WAIT`: Remote side closed connection; waiting for local application process to close its socket handle. (Accumulation of `CLOSE_WAIT` sockets indicates an application bug!).
 
 ### 5.4 Linux Firewalls: Netfilter, nftables & UFW
@@ -403,7 +403,7 @@ Data loss is often fatal to an organization. A competent system administrator tr
 
 ### 6.1 Storage Abstraction Layers & LVM
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Physical["Physical Storage Hardware (NVMe SSD, SATA Drives)"] --> Partitions["Partition Tables (GPT: /dev/nvme0n1p1, /dev/sdb1)"]
     Partitions --> PV["LVM Physical Volumes (pvcreate)"]
@@ -411,7 +411,7 @@ graph TD
     VG --> LV["LVM Logical Volumes (lvcreate 'lv_storage', 'lv_db')"]
     LV --> FS["Filesystems (ext4, XFS)"]
     FS --> Mount["Mount Points (/var/lib/postgresql, /data)"]
-```
+{% </mermaid> %}
 
 #### Why Logical Volume Management (LVM) is Standard
 Traditional fixed disk partitions cannot be easily resized when space runs out. **LVM** abstracts physical drives into a unified storage pool (**Volume Group**):
@@ -481,12 +481,12 @@ SysAdmins operate the foundational services that route traffic, terminate SSL/TL
 
 Never expose backend application runtimes (Node.js, Python Gunicorn, Go binaries) directly to the public internet. Use **Nginx** as a high-performance front-facing reverse proxy:
 
-```mermaid
+{% <mermaid> %}
 graph LR
     User["Internet HTTPS (Port 443)"] --> Nginx["Nginx Reverse Proxy & Load Balancer<br/>TLS Termination, Rate Limiting, Static Asset Caching"]
     Nginx -->|"HTTP / Unix Socket"| App1["Backend Node.js Service (127.0.0.1:8080)"]
     Nginx -->|"HTTP / Unix Socket"| App2["Backend Python Service (127.0.0.1:8000)"]
-```
+{% </mermaid> %}
 
 ```nginx
 # /etc/nginx/sites-available/cc-pulse.conf
@@ -577,14 +577,14 @@ When production systems fail, panic is the enemy. Competent administrators follo
 
 ### 9.1 The Systematic Troubleshooting Framework
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Symptom["1. Verify the Symptom<br/>What is failing? What changed? What is the user impact?"] --> Evidence["2. Gather Empirical Evidence<br/>Inspect logs, metrics, socket states, and resource utilization"]
     Evidence --> Hypothesis["3. Formulate a Testable Hypothesis<br/>'Disk I/O latency on /var is causing database connection timeouts'"]
     Hypothesis --> Test["4. Test the Hypothesis in Isolation<br/>Validate with iostat, strace, or non-destructive probes"]
     Test --> Fix["5. Apply Controlled Remediation<br/>Implement minimum viable fix and verify metrics recover"]
     Fix --> RCA["6. Root Cause Analysis (RCA)<br/>Write a blameless postmortem to permanently prevent recurrence"]
-```
+{% </mermaid> %}
 
 ### 9.2 The USE Method for Resource Bottlenecks
 
@@ -619,12 +619,12 @@ Managing one server manually via SSH is manageable; managing ten, fifty, or five
 * **Agentless Architecture**: No background daemons or agents to install on target nodes. Ansible operates purely over standard **SSH** using Python.
 * **Idempotency**: The core principle of configuration management. Running an Ansible playbook once applies necessary changes; running it fifty times produces zero changes if the system is already in the desired state.
 
-```mermaid
+{% <mermaid> %}
 graph LR
     ControlNode["Control Machine (Admin Workstation / CI)"] -->|"Playbook over SSH"| Host1["Production Web Node 1"]
     ControlNode -->|"Playbook over SSH"| Host2["Production Web Node 2"]
     ControlNode -->|"Playbook over SSH"| Host3["Database Node"]
-```
+{% </mermaid> %}
 
 ### 10.2 A Production Ansible Playbook
 ```yaml
@@ -667,7 +667,7 @@ graph LR
   handlers:
     - name: Restart SSH Daemon
       service:
-        name: sshd
+        name: ssh  # Debian/Ubuntu unit name (RHEL-family uses 'sshd')
         state: restarted
 ```
 
@@ -677,7 +677,7 @@ graph LR
 
 Theory without practical operational responsibility creates passive knowledge. Work through these ten progressive milestones on virtual machines (KVM/VirtualBox) or cloud instances:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     M1["Milestone 1: Hardened Linux Server Setup"] --> M2["Milestone 2: LVM Storage & Mounts"]
     M2 --> M3["Milestone 3: Production Nginx Reverse Proxy with TLS"]
@@ -688,7 +688,7 @@ graph TD
     M7 --> M8["Milestone 8: Automated Ansible Fleet Provisioning"]
     M8 --> M9["Milestone 9: Prometheus & Grafana Monitoring Stack"]
     M9 --> M10["Milestone 10 (Capstone): Resilient Multi-Tier Infrastructure Operations"]
-```
+{% </mermaid> %}
 
 ### Milestone 1: Hardened Linux Server Setup
 * **Objective**: Install a minimal Linux server (Debian or Rocky Linux) on a local VM.
