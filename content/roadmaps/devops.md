@@ -1,7 +1,7 @@
 +++
 title = "DevOps Roadmap"
 description = "A comprehensive guide to begin your journey for DevOps"
-weight = 11
+weight = 12
 
 [extra]
 difficulty = "Intermediate"
@@ -16,6 +16,10 @@ carousel_description = "Master DevOps practices, CI/CD, and cloud infrastructure
 +++
 
 ## Phase 1: Linux & Git (1 week)
+
+{% <alert_info> %}
+**Foundational Systems Knowledge**: DevOps builds directly upon core system administration, operating system processes, networking, and server operations. For an in-depth, hands-on journey through Linux internals, storage architecture, systemd service management, and network troubleshooting, explore our dedicated **[System Administration Roadmap](@/roadmaps/sysadmin.md)**.
+{% </alert_info> %}
 
 **Objective**: A lot of us grew up using windows or mac, but overall experience of deployments and devops is best experienced by Linux and its distributions as almost all of the servers run on Linux. So first step is to get comfortable with the terminal and Git. This makes the life easy as scripting becomes easy.
 
