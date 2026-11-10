@@ -34,7 +34,7 @@ Before writing a single line of Solidity or Rust, you must understand what probl
 
 A critical mark of a mature software engineer is knowing **when NOT to use a technology**. Blockchains introduce immense trade-offs: high transaction latency, limited throughput, persistent storage costs, and operational irreversibility.
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Start["Do you need to store shared data across multiple parties?"] --> Q1{"Do you require a shared database?"}
     Q1 -->|"No"| NoBC["Use Local Storage, SQLite, or Filesystem"]
@@ -45,7 +45,7 @@ graph TD
     Q3 -->|"No"| Q4{"Are the writers known and partially trusted?"}
     Q4 -->|"Yes (Consortium)"| FedBFT["Use Federated BFT Consensus or Raft Cluster"]
     Q4 -->|"No (Untrusted / Anonymous)"| UseBC["Use a Public Decentralized Blockchain (Ethereum, Solana, Bitcoin)"]
-```
+{% </mermaid> %}
 
 {% <alert_info> %}
 **The Core Trade-off**: If your system has a trusted central coordinator (e.g., a university registrar, a government land office, or a single company managing users), a traditional ACID database with cryptographic audit logs is thousands of times faster, cheaper, and more scalable than a blockchain. Blockchains are engineered specifically for scenarios where **parties cannot, or refuse to, place trust in any single entity**.
@@ -71,13 +71,13 @@ Blockchains are built from decades of academic research in distributed systems a
 
 In a centralized system, a single primary server decides which write succeeds. In a distributed network of thousands of independent nodes spread across the globe, nodes may crash, experience network partitions, or act maliciously.
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Dist["Distributed Failure Models"] --> Crash["Crash Fault Tolerance (CFT)<br/>Nodes fail by stopping/crashing.<br/>Algorithms: Raft, Paxos.<br/>Tolerates up to 50% crash failures."]
     Dist --> Byzantine["Byzantine Fault Tolerance (BFT)<br/>Nodes can crash, lie, forge messages, or collude maliciously.<br/>Algorithms: PBFT, Tendermint, Nakamoto.<br/>Tolerates up to 33% malicious nodes."]
-```
+{% </mermaid> %}
 
-* **The Byzantine Generals Problem**: Formulated by Leslie Lamport, Robert Shostak, and Marshall Pease (1982). A group of generals surrounding an enemy city must agree on a single battle plan (Attack or Retreat). Treacherous generals may send conflicting votes to different generals. Traditional BFT consensus proves mathematically that a synchronous network can tolerate at most $f$ traitors out of $3f + 1$ total nodes ($< 33.3\%$ malicious actors).
+* **The Byzantine Generals Problem**: Formulated by Leslie Lamport, Robert Shostak, and Marshall Pease (1982). A group of generals surrounding an enemy city must agree on a single battle plan (Attack or Retreat). Treacherous generals may send conflicting votes to different generals. Traditional BFT consensus proves mathematically that a synchronous network can tolerate at most f traitors out of 3f + 1 total nodes (fewer than 33.3% malicious actors).
 * **Nakamoto Consensus (Bitcoin's Breakthrough)**: Satoshi Nakamoto combined **Proof-of-Work (PoW)**, cryptographic hash puzzles, and the **Longest Chain Rule** to achieve probabilistic consensus in an open, permissionless, asynchronous network without requiring fixed validator identities.
 * **The CAP Theorem**: A distributed system can guarantee at most two out of three properties simultaneously: **Consistency (C)**, **Availability (A)**, and **Partition Tolerance (P)**. Public blockchains operate over the public internet (where network partitions are inevitable) and prioritize Availability and Partition Tolerance (AP), achieving **Eventual Consistency** as blocks receive additional cryptographic confirmations.
 
@@ -85,16 +85,16 @@ graph TD
 
 You do not need to invent new cryptographic algorithms, but you must understand how these mathematical primitives fit together:
 
-```mermaid
+{% <mermaid> %}
 graph LR
     PrivKey["Private Key (256-bit Random Secret)"] -->|"Elliptic Curve Scalar Multiplication (ECDSA)"| PubKey["Public Key (Curve Point)"]
     PubKey -->|"Cryptographic Hash (Keccak-256 / SHA-256)"| Address["Public Blockchain Address (Account Identifier)"]
-```
+{% </mermaid> %}
 
 1. **Cryptographic Hash Functions (SHA-256 & Keccak-256)**:
    * **Deterministic**: The same input always produces the exact same 256-bit hash.
-   * **Pre-image Resistance (One-Way)**: Given a hash $H$, it is computationally impossible to determine the original message $M$.
-   * **Collision Resistance**: It is computationally infeasible to find two distinct inputs $M_1 \neq M_2$ such that $\text{Hash}(M_1) = \text{Hash}(M_2)$.
+   * **Pre-image Resistance (One-Way)**: Given a hash H, it is computationally impossible to determine the original message M.
+   * **Collision Resistance**: It is computationally infeasible to find two distinct inputs M₁ ≠ M₂ such that Hash(M₁) = Hash(M₂).
    * **Avalanche Effect**: Changing a single bit in the input radically alters the entire output hash.
 2. **Public-Key Cryptography & Digital Signatures (ECDSA & Ed25519)**:
    * Transactions are signed with your **Private Key** and verified publicly by any node using your **Public Key**.
@@ -102,7 +102,7 @@ graph LR
 3. **Merkle Trees & Merkle Proofs**:
    * A cryptographic binary tree where every leaf node is the hash of a transaction, and every non-leaf node is the hash of its children:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Root["Merkle Root (Stored in Block Header: Hash 1234)"]
     H12["Hash 1-2"] --> Root
@@ -115,10 +115,10 @@ graph TD
     T2["Transaction 2"] --> H2
     T3["Transaction 3"] --> H3
     T4["Transaction 4"] --> H4
-```
+{% </mermaid> %}
 
 {% <alert_success> %}
-**Why Merkle Trees Matter**: A light client on a smartphone does not need to download gigabytes of raw transaction history. To verify that a specific transaction exists in a block, the network provides a **Merkle Proof** consisting of only $O(\log N)$ sibling hashes up to the Merkle root. Verifying a transaction among 1,000,000 transactions requires only 20 hash checks!
+**Why Merkle Trees Matter**: A light client on a smartphone does not need to download gigabytes of raw transaction history. To verify that a specific transaction exists in a block, the network provides a **Merkle Proof** consisting of only O(log N) sibling hashes up to the Merkle root. Verifying a transaction among 1,000,000 transactions requires only 20 hash checks!
 {% </alert_success> %}
 
 ---
@@ -129,18 +129,18 @@ A blockchain is fundamentally an **append-only, cryptographically authenticated 
 
 ### 3.1 The State Transition Model
 
-At any point in time, the blockchain exists at state $S_t$. When a new block containing a batch of transactions $[TX_1, TX_2, \dots, TX_n]$ is validated and applied:
+At any point in time, the blockchain exists at state Sₜ. When a new block containing a batch of transactions [TX₁, TX₂, …, TXₙ] is validated and applied:
 
-$$S_{t+1} = \text{APPLY}(S_t, \text{Block})$$
+`S(t+1) = APPLY(S(t), Block)`
 
 If any single transaction in the block violates protocol rules (e.g., spending unowned funds, invalid signature, insufficient gas), the entire state transition fails.
 
-```mermaid
+{% <mermaid> %}
 graph LR
     Genesis["Genesis State S_0"] -->|"Apply Block 1"| S1["State S_1"]
     S1 -->|"Apply Block 2"| S2["State S_2"]
     S2 -->|"Apply Block 3"| S3["Current World State S_3"]
-```
+{% </mermaid> %}
 
 ### 3.2 Account Model (Ethereum) vs. UTXO Model (Bitcoin)
 
@@ -149,21 +149,21 @@ Understanding the fundamental split in ledger accounting:
 | Feature | UTXO Model (Bitcoin) | Account-Based Model (Ethereum, Solana) |
 | :--- | :--- | :--- |
 | **Core Abstraction** | Unspent Transaction Outputs (Like physical cash coins and change). | Accounts with balances and nonces (Like digital bank accounts). |
-| **State Representation** | Global set of all unspent outputs ($UTXO$ set). No global balance sheet. | World State trie mapping addresses to `{nonce, balance, codeHash, storageRoot}`. |
+| **State Representation** | Global set of all unspent outputs (UTXO set). No global balance sheet. | World State trie mapping addresses to `{nonce, balance, codeHash, storageRoot}`. |
 | **Transaction Structure** | Consumes one or more existing UTXOs as inputs; generates new UTXOs as outputs. | Deducts balance from sender, increments balance of recipient, increments sender nonce. |
 | **Smart Contract Capability**| Limited, non-Turing complete scripts (multisig, timelocks). | Full Turing-complete arbitrary logic with mutable persistent storage slots. |
 | **Concurrency & Scaling** | High parallelism: transactions spending independent UTXOs can be verified in parallel. | Sequential state access: transactions accessing the same storage slot must be ordered. |
 
 ### 3.3 Consensus Mechanisms: Proof of Work vs. Proof of Stake
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Consensus["Sybil Resistance & Validator Election"] --> PoW["Proof of Work (PoW)"]
     Consensus --> PoS["Proof of Stake (PoS)"]
 
     PoW --> D_PoW["Miners burn thermodynamic electricity & compute hash collisions.<br/>Cost of attack: Procuring >50% of global ASIC hardware hashrate.<br/>Probabilistic finality (requires 6+ block confirmations)."]
     PoS --> D_PoS["Validators lock up native capital (e.g. 32 ETH) as security deposit.<br/>Cost of attack: Burning vast capital via automated protocol Slashing.<br/>Deterministic finality (Casper FFG epochs / checkpoints)."]
-```
+{% </mermaid> %}
 
 ### 3.4 Gas, Economic Metering & EIP-1559
 
@@ -171,7 +171,7 @@ Because smart contract virtual machines are Turing-complete, an infinite loop (`
 
 * **Gas as the Halting Problem Solution**: Every low-level opcode in the virtual machine (adding numbers, reading storage, writing a byte) has a defined **gas cost** representing its computational and storage burden. When a user submits a transaction, they specify a gas limit; if the execution runs out of gas, all state changes are reverted, but the consumed gas is kept by the network to compensate validators.
 * **EIP-1559 Fee Market**: Modern Ethereum transactions calculate fees using:
-  $$\text{Total Fee} = \text{Gas Used} \times (\text{Base Fee} + \text{Priority Tip})$$
+  `Total Fee = Gas Used × (Base Fee + Priority Tip)`
   * **Base Fee**: Dynamically adjusted by the protocol based on block congestion; **burned permanently**, making the asset deflationary under high activity.
   * **Priority Tip**: Optional incentive paid directly to the block builder to prioritize inclusion.
 
@@ -185,7 +185,7 @@ The **Ethereum Virtual Machine (EVM)** is the runtime environment that executes 
 
 The EVM is a **256-bit word-size, stack-based, register-less virtual machine**:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph EVM_Runtime["EVM Execution Context (Per Transaction)"]
         PC["Program Counter (PC)"]
@@ -202,7 +202,7 @@ graph TD
     Stack <--> Memory
     Calldata --> Stack
     Stack <-->|"SLOAD (2,100 gas) / SSTORE (20,000 gas)"| Storage
-```
+{% </mermaid> %}
 
 {% <alert_warning> %}
 **Storage is the Most Expensive Operation**: In the EVM, reading volatile memory or the stack costs tiny fractions of gas (3–5 gas). Writing to persistent **Storage (`SSTORE`)** costs up to **20,000 gas** because that data must be stored on every full node on Earth indefinitely. Writing gas-efficient contracts requires minimizing storage writes and packing variables!
@@ -340,7 +340,7 @@ Smart contract engineering is not limited to the EVM. High-throughput applicatio
 
 While Ethereum processes transactions sequentially over a single global state trie, **Solana** executes thousands of transactions in parallel using its **Sealevel runtime**:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph EVM_Model["EVM Model (Code & Data Entangled)"]
         Contract["Smart Contract (Contains both executable Bytecode AND persistent Storage)"]
@@ -353,7 +353,7 @@ graph TD
         Program -->|"Executes logic against"| DataAccount1
         Program -->|"Executes logic against"| DataAccount2
     end
-```
+{% </mermaid> %}
 
 * **Stateless Programs**: Programs on Solana contain zero state; they are read-only executable binaries compiled from **Rust** (or C) via LLVM to eBPF bytecode.
 * **Accounts as Data Storage**: Everything on Solana is an **Account**. Accounts pay rent (in SOL) to store byte arrays on-chain.
@@ -375,7 +375,7 @@ A smart contract on a blockchain is useless without an interface. Decentralized 
 
 ### 6.1 The 3-Tier dApp Architecture
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph ClientTier["1. Client Tier (Browser / Mobile)"]
         UI["Web Frontend (Next.js / React / TypeScript)"]
@@ -402,7 +402,7 @@ graph TD
     Contracts -.->|"Emits Event Logs"| TheGraph
     TheGraph -.->|"GraphQL Queries"| UI
     UI -.->|"Fetches Content-Addressed Media"| IPFS
-```
+{% </mermaid> %}
 
 ### 6.2 Connecting Frontends with `viem` and `wagmi`
 
@@ -442,14 +442,14 @@ On Web2 systems, a critical bug triggers an emergency database rollback. On Web3
 
 ### 7.1 The Top Smart Contract Vulnerabilities
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Vulns["Top Smart Contract Vulnerabilities"] --> V1["1. Reentrancy Attacks"]
     Vulns --> V2["2. Price Oracle Manipulation"]
     Vulns --> V3["3. Broken Access Controls"]
     Vulns --> V4["4. Signature Replay & Malleability"]
     Vulns --> V5["5. Front-Running & MEV Exploits"]
-```
+{% </mermaid> %}
 
 #### 1. Reentrancy Attacks
 * **The Mechanism**: A vulnerable contract sends native ether to an external untrusted contract before updating its internal balance. The attacker's fallback function calls back into the withdrawal function recursively, draining the contract before the first balance check completes (the exact flaw in the 2016 DAO Hack).
@@ -482,7 +482,7 @@ Layer 1 blockchains prioritize security and decentralization over raw transactio
 
 Rollups execute transactions off-chain in high-speed sequencers, batch hundreds of transactions together, and compress them into a cryptographic proof submitted to Layer 1 for settlement and data availability:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph Layer2["Layer 2 Execution (High Throughput, Low Gas)"]
         UserTx1["User TX 1"] --> Sequencer["L2 Sequencer (Processes 2,000+ TPS)"]
@@ -496,7 +496,7 @@ graph TD
         ProofEngine -->|"Optimistic Rollup (Arbitrum, Optimism)"| FraudProof["Fraud Proof Window (7-Day Challenge Period)"]
         ProofEngine -->|"Zero-Knowledge Rollup (zkSync, Starknet)"| ZKProof["Validity Proof (ZK-SNARK / ZK-STARK Verified Instantly)"]
     end
-```
+{% </mermaid> %}
 
 * **Optimistic Rollups (Arbitrum, Optimism, Base)**: Assume transactions are valid by default. If a sequencer submits an invalid state root, any verifier can submit a **Fraud Proof** during a 7-day challenge window to slash the sequencer and revert the state.
 * **Zero-Knowledge Rollups (zkSync, Starknet, Scroll)**: Use advanced cryptography (ZK-SNARKs or ZK-STARKs) to generate mathematical **Validity Proofs**. The L1 smart contract verifies the cryptographic proof on-chain in milliseconds; finality is immediate and mathematically guaranteed.
@@ -511,12 +511,12 @@ For engineers drawn to the backend and operations side of blockchain, operating 
 
 Running an Ethereum node requires two cooperating software clients communicating over the Engine API:
 
-```mermaid
+{% <mermaid> %}
 graph LR
     Consensus["Consensus Client (Prysm / Lighthouse / Teku)<br/>Validates Proof-of-Stake blocks, manages attestations & beacon chain"] <-->|"Engine API (JWT Auth on Port 8551)"| Execution["Execution Client (Geth / Nethermind / Besu)<br/>Executes EVM transactions, maintains state trie & mempool"]
     Execution <--> Disk["Local NVMe Storage (2TB+ fast disk)"]
     Execution --> PublicRPC["JSON-RPC Endpoint (Port 8545 for dApps)"]
-```
+{% </mermaid> %}
 
 * **Hardware Demands**: A full node requires dedicated multi-core CPUs, at least 32GB RAM, and high-end NVMe SSD storage with sustained write IOPS to keep pace with state growth.
 * **Staking & Slashing**: Validators stake native ETH to participate in block validation. If a validator double-signs a block or attests to conflicting chain forks, the protocol automatically **slashes** (confiscates and burns) their staked funds.
@@ -525,7 +525,7 @@ graph LR
 
 ## 10. Where Are You Starting From? (The Personalized Guide)
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Start["What is your current background?"] --> P1["Web / JavaScript / TypeScript Developer"]
     Start --> P2["Rust / Systems Programmer"]
@@ -538,7 +538,7 @@ graph TD
     P3 --> R3["Dive into core protocol engineering: Bitcoin Core, EVM execution clients, or cryptography"]
     P4 --> R4["Specialize in node operations, validator infrastructure, RPC clustering, and observability"]
     P5 --> R5["Focus on Zero-Knowledge Cryptography (ZK-SNARKs), consensus algorithms, and mechanism design"]
-```
+{% </mermaid> %}
 
 * **If you know JavaScript / TypeScript / React**: Start with **EVM Smart Contracts and dApps**. Your frontend skills translate directly to `viem` and `wagmi`. Learn Solidity using **Foundry** to write and test your contracts.
 * **If you know Rust**: You have access to the most high-performance frontiers in Web3: **Solana Anchor development**, **Move on Aptos/Sui**, or writing native blockchain infrastructure (like Paradigm's **Reth** Ethereum client).
@@ -551,7 +551,7 @@ graph TD
 
 Theory without practical verification creates passive knowledge. Work through these ten progressive milestone projects:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     M1["Milestone 1: Cryptographic Toy Blockchain in TypeScript/Rust"] --> M2["Milestone 2: Foundry ERC-20 Token Suite with Fuzz Tests"]
     M2 --> M3["Milestone 3: Decentralized Multi-Sig Escrow Contract"]
@@ -562,7 +562,7 @@ graph TD
     M7 --> M8["Milestone 8: Solana Anchor Program & Client SDK"]
     M8 --> M9["Milestone 9: Smart Contract Security Audit & Exploit Gauntlet"]
     M9 --> M10["Milestone 10 (Capstone): Decentralized Collateralized Lending Protocol"]
-```
+{% </mermaid> %}
 
 ### Milestone 1: Cryptographic Toy Blockchain in TypeScript or Rust
 * **Objective**: Build a minimal in-memory blockchain from scratch without external libraries.
@@ -575,7 +575,7 @@ graph TD
 * **Demonstrates**: Modern Solidity syntax, EVM memory layout, and Foundry fuzzing.
 
 ### Milestone 3: Decentralized Multi-Sig Escrow Contract
-* **Objective**: Build an arbitration escrow contract requiring $M$-of-$N$ cryptographic signatures.
+* **Objective**: Build an arbitration escrow contract requiring M-of-N cryptographic signatures.
 * **Core Tasks**: Implement state machine transitions (`AwaitingDeposit`, `Locked`, `Disputed`, `Resolved`), ECDSA signature verification via `ecrecover`, and timelocked withdrawal fallbacks.
 * **Demonstrates**: Multi-party security, cryptographic signature verification, and time-dependent logic.
 
@@ -637,7 +637,7 @@ Deepen your blockchain engineering mastery using these authoritative, vetted doc
 
 {{<pretty_link url="https://github.com/crytic/slither" title="Slither Static Analyzer by Trail of Bits" description="The leading open-source static analysis framework for auditing Solidity smart contracts and detecting vulnerabilities." />}}
 
-{{<pretty_link url="https://bitcoin.org/en/developer-documentation" title="Bitcoin Developer Documentation" description="Authoritative reference covering Bitcoin protocol specifications, UTXO transaction verification, and Bitcoin Script." />}}
+{{<pretty_link url="https://developer.bitcoin.org/" title="Bitcoin Developer Documentation" description="Authoritative reference covering Bitcoin protocol specifications, UTXO transaction verification, and Bitcoin Script." />}}
 
 ---
 
