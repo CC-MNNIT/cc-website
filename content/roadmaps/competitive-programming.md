@@ -1,7 +1,7 @@
 +++
 title = "Competitive Programming Mastery Roadmap"
 description = "Competitive programming (CP) is a challenging and rewarding pursuit for those who enjoy problem-solving and coding. This roadmap is designed to take you from the basics to advanced algorithmic mastery."
-weight = 9
+weight = 10
 
 [extra]
 difficulty = "Intermediate to Advanced"
