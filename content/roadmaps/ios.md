@@ -821,3 +821,13 @@ Deepen your native iOS mastery using these authoritative Apple documentation hub
 {{<pretty_link url="https://developer.apple.com/videos/" title="Apple Developer Videos & WWDC Sessions" description="High-definition engineering presentations, framework deep dives, and architectural best practices directly from Apple engineers." />}}
 
 {{<pretty_link url="https://developer.apple.com/testflight/" title="TestFlight Beta Testing Overview" description="Official manual for managing internal and external beta testing tracks and gathering tester crash feedback." />}}
+
+---
+
+## 14. Where to Next in the CC Ecosystem
+
+This roadmap is one part of a connected learning system. Depending on where you want to go from here:
+
+* **[Mobile Development Master Roadmap](@/roadmaps/mobile-development.md)** — revisit the full application-development landscape and the interactive Path Finder that helped you choose native iOS.
+* **[Kotlin & Native Android Roadmap](@/roadmaps/android.md)** — the native peer platform: with Kotlin Multiplatform, your architecture and business logic can even be shared between your Swift UI and Android.
+* **[Flutter & Dart Roadmap](@/roadmaps/flutter.md)** — the pragmatic option when a project must reach Android too without maintaining two native codebases.

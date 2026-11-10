@@ -1162,3 +1162,13 @@ Explore these authoritative, high-yield references to continue your native Andro
 {{<pretty_link url="https://maestro.mobile.dev/" title="Maestro Mobile UI Testing Framework" description="The modern, declarative YAML-based mobile UI testing platform designed for effortless and reliable end-to-end app automation." />}}
 
 {{<pretty_link url="https://www.youtube.com/c/AndroidDevelopers" title="Android Developers YouTube Channel" description="Official deep dives, MAD Skills series, architectural best practices, and keynote presentations directly from the Google Android engineering team." />}}
+
+---
+
+## 14. Where to Next in the CC Ecosystem
+
+This roadmap is one part of a connected learning system. Depending on where you want to go from here:
+
+* **[Mobile Development Master Roadmap](@/roadmaps/mobile-development.md)** — revisit the full application-development landscape, the interactive Path Finder, and how native Android compares with the cross-platform alternatives.
+* **[Flutter & Dart Roadmap](@/roadmaps/flutter.md)** — reuse the architecture patterns you mastered here (layered data flow, repositories, reactive streams) to ship the same app to iOS, desktop, and web from a single Dart codebase.
+* **[Open Source Contribution Roadmap](@/roadmaps/open-source.md)** — put your Kotlin skills to work contributing to real-world Android libraries and CC's own repositories.

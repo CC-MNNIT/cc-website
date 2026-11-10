@@ -1095,3 +1095,13 @@ Deepen your Flutter mastery using these vetted, high-yield documentation sources
 {{<pretty_link url="https://maestro.mobile.dev/" title="Maestro Mobile UI Testing" description="The modern, declarative YAML-based mobile UI testing platform for reliable end-to-end app automation." />}}
 
 {{<pretty_link url="https://www.youtube.com/c/flutterdev" title="Flutter Official YouTube Channel" description="Official deep dives, Widget of the Week series, decoding Flutter rendering, and keynote engineering presentations." />}}
+
+---
+
+## 16. Where to Next in the CC Ecosystem
+
+This roadmap is one part of a connected learning system. Depending on where you want to go from here:
+
+* **[Mobile Development Master Roadmap](@/roadmaps/mobile-development.md)** — revisit the full application-development landscape and the interactive Path Finder that helped you choose Flutter.
+* **[React Native & Expo Roadmap](@/roadmaps/react-native.md)** — the direct cross-platform alternative: compare its JavaScript/TypeScript ecosystem and native-view rendering against Flutter's canvas model.
+* **[Kotlin & Native Android Roadmap](@/roadmaps/android.md)** — go native when a project demands maximum platform control; your Dart knowledge makes Kotlin syntax feel familiar.

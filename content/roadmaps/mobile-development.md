@@ -206,6 +206,7 @@ Native Android development is the authoritative foundation of the Android operat
 * **Strengths**: Immediate day-1 support for every new Android API (Material You dynamic theming, background workers, home screen widgets, foldables, WearOS); highest runtime performance; complete control over low-level hardware.
 * **Limitations**: Does not target iOS (unless paired with Kotlin Multiplatform); requires mastering the nuanced Android OS lifecycle and diverse device hardware fragmentation.
 * **Ideal For**: Developers who want deep platform mastery, wish to specialize in enterprise Android engineering, or work on hardware-centric products (IoT, automotive, robotics).
+* **Deep Dive**: Continue with the dedicated [Kotlin & Native Android Development Roadmap](@/roadmaps/android.md).
 
 ---
 
@@ -229,6 +230,7 @@ Created by Google, Flutter is an open-source framework for building natively com
 * **Strengths**: Absolute UI consistency across platforms; blistering fast 60/120 FPS animation performance; industry-leading Hot Reload that preserves application state while editing code; outstanding documentation and widget catalogue.
 * **Limitations**: Does not use native OS widgets (replicates their appearance via custom rendering); slightly larger baseline binary size (bundles the graphics runtime); third-party platform plugins can occasionally lag behind bleeding-edge native OS features.
 * **Ideal For**: Teams that need identical visual experiences on both Android and iOS, high-fidelity custom UI animations, rapid MVP product development, or desktop multi-target requirements.
+* **Deep Dive**: Continue with the dedicated [Flutter & Dart Cross-platform Development Roadmap](@/roadmaps/flutter.md).
 
 ---
 
@@ -254,6 +256,7 @@ Today, React Native has been fundamentally re-engineered:
 * **Strengths**: Leverages the vast JavaScript/TypeScript and npm ecosystem; uses genuine native platform UI components; seamless skill transfer for web developers; rapid testing via Expo Go without compiling native code.
 * **Limitations**: Debugging native C++ and JSI crash traces requires multi-layer diagnostic skills; performance for compute-intensive tasks (e.g., real-time audio/video processing) requires writing custom native TurboModules.
 * **Ideal For**: Web and full-stack developers, startups requiring rapid cross-platform velocity, and companies maintaining unified web and mobile feature teams.
+* **Deep Dive**: Continue with the dedicated [React Native & Expo Roadmap](@/roadmaps/react-native.md).
 
 ---
 
@@ -273,6 +276,7 @@ Native iOS development represents the gold standard for applications running on 
 * **Strengths**: Flawless platform aesthetics; deep hardware optimization utilizing Apple Silicon; day-1 access to exclusive iOS platform capabilities (Dynamic Island, Live Activities, Apple Pay, App Clips, WidgetKit); access to the highest-monetizing user demographic on the App Store.
 * **Limitations**: Requires Apple hardware (macOS) to build and run Xcode; strictly limited to Apple platforms.
 * **Ideal For**: Developers targeting high-end consumer apps, audio/video production tools, camera utilities, and Apple ecosystem enthusiasts.
+* **Deep Dive**: Continue with the dedicated [Swift & Native iOS Development Roadmap](@/roadmaps/ios.md).
 
 ---
 
@@ -295,7 +299,7 @@ It is crucial to understand the distinct difference between **KMP** and **CMP**:
 * **Compose Multiplatform (CMP)**: Created by JetBrains, CMP takes the next step: **sharing the UI code itself**. It ports Google's Jetpack Compose rendering pipeline to iOS, Desktop (JVM), and Web (WebAssembly). On iOS, it uses Skiko (Skia for Kotlin) to draw directly onto an iOS canvas, similar to Flutter's model.
 
 {% <alert_info> %}
-**Maturity Status**: Kotlin Multiplatform for shared logic is **100% Stable and production-ready**. Compose Multiplatform for Desktop and Android is stable, while Compose Multiplatform for iOS is rapidly maturing toward full production readiness.
+**Maturity Status**: Kotlin Multiplatform for shared logic is **100% Stable and production-ready**. Compose Multiplatform reached full stability: Compose Multiplatform 1.8 (May 2025) declared iOS support stable and production-ready, joining Desktop and Android.
 {% </alert_info> %}
 
 ### 5.2 Rust-Based Application Development (Tauri v2 & Dioxus 0.6)
@@ -495,7 +499,8 @@ Not sure which path to choose? Use this interactive guide to receive an instant,
             badgeClass: "",
             reason: "",
             alternative: "",
-            jumpId: ""
+            jumpId: "",
+            deepLink: ""
         };
 
         if (target === 'apple' && os === 'mac') {
@@ -505,20 +510,22 @@ Not sure which path to choose? Use this interactive guide to receive an instant,
             recommendation.reason = "Since you have a Mac and are specifically targeting Apple platforms, Swift and SwiftUI provide the ultimate platform fidelity, smooth Xcode previews, and immediate access to day-1 Apple APIs.";
             recommendation.alternative = "Flutter if you later decide to bring your app to Android without rewriting.";
             recommendation.jumpId = "path-4-native-ios-with-swift-swiftui";
+            recommendation.deepLink = "/roadmaps/ios/";
         } else if (target === 'apple' && os === 'win-linux') {
             recommendation.title = "React Native with Expo (or Flutter)";
             recommendation.badge = "CROSS-PLATFORM CLOUD BUILD";
             recommendation.badgeClass = "badge-warning";
             recommendation.reason = "Native iOS requires macOS to compile locally. With Windows/Linux, your best strategy is using React Native with Expo (using cloud EAS Build to compile iOS packages) or Flutter.";
             recommendation.alternative = "Rent a remote macOS cloud instance if you strictly require native Swift.";
-            recommendation.jumpId = "path-3-react-native-expo-cross-platform-native-views";
+recommendation.jumpId = "path-3-react-native-expo-cross-platform-native-views";
+            recommendation.deepLink = "/roadmaps/react-native/";
         } else if (lang === 'rust') {
             recommendation.title = "Tauri v2 or Dioxus 0.6";
             recommendation.badge = "SYSTEMS RUST";
             recommendation.badgeClass = "badge-accent";
             recommendation.reason = "Your Rust background gives you a massive advantage in memory safety and ultra-lightweight binaries. Tauri 2.0 provides stable multiplatform mobile and desktop reach, while Dioxus offers a pure-Rust reactive UI.";
             recommendation.alternative = "Flutter if you need battle-tested standard mobile UI components.";
-            recommendation.jumpId = "5-2-rust-based-application-development-tauri-v2-dioxus-0-6";
+recommendation.jumpId = "5-2-rust-based-application-development-tauri-v2-dioxus-0-6";
         } else if (lang === 'js-react') {
             recommendation.title = "React Native with Expo";
             recommendation.badge = "OPTIMAL SKILL TRANSFER";
@@ -526,34 +533,39 @@ Not sure which path to choose? Use this interactive guide to receive an instant,
             recommendation.reason = "Your React and TypeScript knowledge directly transfers. With Expo and the New Architecture (JSI/Fabric), you can ship production-grade native apps without learning a new language from scratch.";
             recommendation.alternative = "Flutter if you want completely unified canvas rendering across every device.";
             recommendation.jumpId = "path-3-react-native-expo-cross-platform-native-views";
+            recommendation.deepLink = "/roadmaps/react-native/";
         } else if (lang === 'java' && (target === 'android' || priority === 'native')) {
             recommendation.title = "Native Android with Kotlin & Compose";
             recommendation.badge = "DEEP ANDROID MASTERY";
             recommendation.badgeClass = "badge-primary";
             recommendation.reason = "Your Java background makes transitioning to Kotlin effortless. You will master Android Studio, Jetpack Compose, and modern Android Architecture, giving you complete native control.";
             recommendation.alternative = "Kotlin Multiplatform (KMP) if you want to share your business logic with iOS.";
-            recommendation.jumpId = "path-1-native-android-with-kotlin-jetpack-compose";
+recommendation.jumpId = "path-1-native-android-with-kotlin-jetpack-compose";
+            recommendation.deepLink = "/roadmaps/android/";
         } else if (target === 'all' || priority === 'ui') {
             recommendation.title = "Flutter with Dart";
             recommendation.badge = "MULTI-TARGET CANVAS";
             recommendation.badgeClass = "badge-secondary";
             recommendation.reason = "Flutter is the undisputed leader for pixel-perfect, custom UI consistency across Android, iOS, Windows, macOS, and Linux. Dart is approachable, and the Impeller engine ensures fluid animations.";
             recommendation.alternative = "React Native with Expo for maximum npm library availability.";
-            recommendation.jumpId = "path-2-flutter-with-dart-cross-platform-custom-engine";
+recommendation.jumpId = "path-2-flutter-with-dart-cross-platform-custom-engine";
+            recommendation.deepLink = "/roadmaps/flutter/";
         } else if (lang === 'beginner') {
             recommendation.title = "Flutter (or Android Basics with Compose)";
             recommendation.badge = "BEGINNER FRIENDLY";
             recommendation.badgeClass = "badge-success";
             recommendation.reason = "Dart and Flutter provide a welcoming, batteries-included environment with instant Hot Reload and comprehensive widget docs. Alternatively, Google's free 'Android Basics with Compose' course is an outstanding foundational curriculum.";
             recommendation.alternative = "React Native with Expo if you are also interested in web development.";
-            recommendation.jumpId = "path-2-flutter-with-dart-cross-platform-custom-engine";
+recommendation.jumpId = "path-2-flutter-with-dart-cross-platform-custom-engine";
+            recommendation.deepLink = "/roadmaps/flutter/";
         } else {
             recommendation.title = "Flutter with Dart (or React Native)";
             recommendation.badge = "CROSS-PLATFORM STANDARD";
             recommendation.badgeClass = "badge-secondary";
             recommendation.reason = "For general cross-platform development targeting both Android and iOS with high developer velocity, Flutter and React Native represent the two proven industry standards.";
             recommendation.alternative = "Native Android with Kotlin if you want to focus strictly on one platform first.";
-            recommendation.jumpId = "path-2-flutter-with-dart-cross-platform-custom-engine";
+recommendation.jumpId = "path-2-flutter-with-dart-cross-platform-custom-engine";
+            recommendation.deepLink = "/roadmaps/flutter/";
         }
 
         resultDiv.innerHTML = 
@@ -566,6 +578,7 @@ Not sure which path to choose? Use this interactive guide to receive an instant,
             '<div class="text-xs text-base-content/70 border-t border-gray-500/15 pt-2 flex flex-wrap justify-between items-center gap-2">' +
                 '<span><strong>Alternative:</strong> ' + recommendation.alternative + '</span>' +
                 '<a href="#' + recommendation.jumpId + '" class="text-primary hover:underline font-semibold inline-flex items-center gap-1">Jump to section &rarr;</a>' +
+                (recommendation.deepLink ? '<a href="' + recommendation.deepLink + '" class="text-primary hover:underline font-semibold inline-flex items-center gap-1">Open dedicated roadmap &rarr;</a>' : '') +
             '</div>';
     }
 
@@ -616,5 +629,5 @@ Explore these authoritative documentation portals, official interactive courses,
 
 This Master Roadmap is your orientation guide to the wider world of application development. From here, your journey branches into focused, deep-dive specializations:
 
-* **Upcoming Dedicated Roadmaps**: Look forward to the dedicated **Native Android (Kotlin)**, **Flutter Development**, **React Native & Expo**, **iOS (Swift)**, and **Desktop Application Development** master roadmaps, which provide stage-by-stage learning plans with verified projects.
+* **Dedicated Deep-Dive Roadmaps**: Continue your specialization with our dedicated stage-by-stage roadmaps — [Kotlin & Native Android Development](@/roadmaps/android.md), [Flutter & Dart Cross-platform Development](@/roadmaps/flutter.md), [React Native & Expo](@/roadmaps/react-native.md), and [Swift & Native iOS Development](@/roadmaps/ios.md). A dedicated **Desktop Application Development** roadmap is also on the way.
 * **Complementary Engineering Roadmaps**: Pair your application engineering skills with our existing [Web Development Roadmap](@/roadmaps/web-development.md) for backend API knowledge, [DevOps Roadmap](@/roadmaps/devops.md) for CI/CD pipelines, and [Open Source Contribution Roadmap](@/roadmaps/open-source.md) to start contributing to real-world mobile libraries.
