@@ -32,7 +32,7 @@ Before selecting a framework or writing UI code, you must understand what fundam
 
 ### 1.1 What Makes Desktop Applications Unique?
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Desktop["Desktop Application Ecosystem"] --> P1["1. Unrestricted Hardware & OS Access"]
     Desktop --> P2["2. Complex Window & Workspace Management"]
@@ -43,7 +43,7 @@ graph TD
     P2 --> D2["Multi-window instances, dialogs, resizable viewports, multi-monitor displays"]
     P3 --> D3["System menus, global hotkeys, command palettes (Cmd/Ctrl+K), drag-and-drop"]
     P4 --> D4["Daemons, tray utilities, batch media processing without OS suspension"]
-```
+{% </mermaid> %}
 
 * **True Multitasking & Persistence**: Desktop operating systems do not aggressively kill background applications to save battery like iOS or Android. A desktop audio transcoder, local database daemon, or compile worker can run for days without interruption.
 * **High-Density Information Architecture**: While mobile screens accommodate 300–400 points of width, desktop applications routinely span 1080p, 1440p, 4K, and ultrawide displays. Layouts rely on multi-column split panes, sidebars, dockable toolbars, and context menus rather than stacked mobile navigation cards.
@@ -53,14 +53,14 @@ graph TD
 
 At the operating system level, every GUI desktop application is driven by an **Event Loop** (also known as the message pump):
 
-```mermaid
+{% <mermaid> %}
 graph LR
     OS["Host OS (Win32 / Cocoa / Wayland)"] -->|"Events (Mouse, Keys, Resizes)"| Queue["OS Message Queue"]
     Queue --> Loop["GUI Main Thread Event Loop"]
     Loop -->|"Dispatch Event"| Handler["UI Window & Component Handlers"]
     Handler -->|"Heavy Work Offloaded"| Worker["Worker Thread / Background Sub-Process"]
     Worker -->|"Post Result via IPC"| Loop
-```
+{% </mermaid> %}
 
 1. **The GUI Main Thread**: Responsible for handling window draw events, processing user keystrokes, and calculating layout geometry. **Never execute blocking I/O (such as heavy disk reads or network downloads) on the main thread**, or the OS will flag your window as *"Not Responding"*.
 2. **The Message Pump**: On Windows (`GetMessage`/`DispatchMessage`), macOS (`NSRunLoop`), and Linux (`GLib` / `epoll`), the event loop continuously dequeues hardware events and dispatches them to window procedures.
@@ -99,14 +99,14 @@ Real desktop software extends far beyond a rectangular window on the screen:
 
 Desktop frameworks differ fundamentally in how they render pixels and interact with the host operating system. Understanding these five architectural models is the key to making informed engineering choices.
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Arch["Desktop Architecture Models"] --> A1["1. Bundled Chromium (Electron)"]
     Arch --> A2["2. Native System WebView (Tauri, Wails)"]
-    Arch --> A3["3. Custom GPU Rendering (Flutter, Dioxus Native)"]
+    Arch --> A3["3. Custom GPU Rendering (Flutter Desktop, Dioxus Native – experimental)"]
     Arch --> A4["4. Declarative Multiplatform (Compose Desktop, Avalonia)"]
     Arch --> A5["5. Native OS Toolkits (Qt, WinUI 3, SwiftUI/AppKit)"]
-```
+{% </mermaid> %}
 
 ### Architecture 1: Web Frontend + Bundled Chromium Runtime (Electron)
 * **The Concept**: Packages a full instance of Google Chromium and Node.js into a standalone desktop executable.
@@ -153,7 +153,7 @@ Let us examine the leading desktop frameworks, their architectures, workflows, a
 
 **Tauri** has emerged as one of the most popular modern desktop frameworks. It allows developers to build lightweight, secure desktop applications by combining any modern web frontend (React, Vue, Svelte, Solid) with a robust, memory-safe **Rust** backend.
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph Frontend["Frontend Layer (System WebView)"]
         UI["Web UI (React / Svelte / HTML / CSS)"]
@@ -177,7 +177,7 @@ graph TD
     Capabilities --> RustApp
     RustApp --> Plugins
     Plugins --> NativeOS
-```
+{% </mermaid> %}
 
 #### Writing a Type-Safe Tauri Command
 ```rust
@@ -228,7 +228,7 @@ async function handleCompute() {
 
 **Electron** is the battle-tested runtime powering applications like VS Code, Slack, Discord, Postman, and Obsidian.
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph MainProcess["Main Process (Node.js Environment)"]
         MainNode["main.ts (Controls Window Lifecycle & Native OS APIs)"]
@@ -250,7 +250,7 @@ graph TD
     Preload --> ContextIso
     ContextIso --> BrowserWindow
     BrowserWindow --> ReactUI
-```
+{% </mermaid> %}
 
 #### Modern Electron Security: Preload & Context Isolation
 Never enable `nodeIntegration: true` in production renderers; doing so allows remote XSS exploits to execute arbitrary shell commands on a user's machine! Always use **`contextBridge`**:
@@ -339,12 +339,12 @@ fn app() -> Element {
 
 Flutter compiles to native machine code on Windows, macOS, and Linux, rendering UI using its compiled graphics pipeline:
 
-```mermaid
+{% <mermaid> %}
 graph LR
     DartCode["Flutter UI (Dart)"] --> Engine["Flutter C++ Desktop Engine"]
     Engine --> Graphics["GPU Hardware Surface (DirectX 11/12 on Windows, Metal on macOS, OpenGL on Linux)"]
     Engine --> Embedder["Desktop Platform Embedder (Win32 / Cocoa / GTK Shell)"]
-```
+{% </mermaid> %}
 
 #### Handling Desktop Interactions in Flutter
 ```dart
@@ -444,7 +444,7 @@ fun App() {
 
 ## 6. Where Are You Starting From? (The Personalized Guide)
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Start["What is your current core background?"] --> P1["React / Web Developer"]
     Start --> P2["Rust Systems Enthusiast"]
@@ -459,7 +459,7 @@ graph TD
     P4 --> R4["Target desktop using Compose Multiplatform"]
     P5 --> R5["Master Qt 6 (C++/QML) for industrial-grade native performance"]
     P6 --> R6["Use PySide6 (Qt for Python) for rapid desktop tooling"]
-```
+{% </mermaid> %}
 
 * **If you know React & TypeScript**: Start with **Tauri 2.0**. You write your familiar React/Tailwind frontend while learning how to invoke native Rust commands for file system and system tray tasks. If your application relies heavily on Node.js native binary add-ons, look into **Electron**.
 * **If you are fascinated by Rust**: Choose **Tauri** if you enjoy web styling flexibility, or **Dioxus** if you want to write pure Rust from top to bottom.
@@ -478,7 +478,7 @@ Writing a UI is only 20% of desktop software engineering. Production desktop app
 
 In desktop applications, users frequently open multiple independent windows (e.g., a document window, a floating inspector tool palette, and a preferences window).
 
-```mermaid
+{% <mermaid> %}
 graph TD
     MainApp["Application Process Core (Main State Store)"] --> W1["Document Window A"]
     MainApp --> W2["Document Window B"]
@@ -488,7 +488,7 @@ graph TD
     W1 -.->|"Mutates Document Data via IPC"| MainApp
     MainApp -.->|"Broadcasts State Update"| W2
     Tray -.->|"Triggers Quick Actions"| MainApp
-```
+{% </mermaid> %}
 
 * **State Synchronization**: Avoid keeping separate in-memory state inside each window. Centralize application state in the native core (Rust, Node.js, C++, or Kotlin) and broadcast state diffs to open windows via IPC events.
 * **Window Restoral**: Always persist the user's window bounds (X, Y, Width, Height, and Maximized flag) in local storage so that reopening the app restores the exact physical desktop workspace.
@@ -497,7 +497,7 @@ graph TD
 
 Turning your compiled binary into an installable software package differs across operating systems:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Code["Application Binary & Assets"] --> OS_Choice{"Target Operating System?"}
 
@@ -508,7 +508,7 @@ graph TD
     Win --> WinOut["MSIX Installer (Modern Windows Store)<br/>NSIS / Inno Setup (Classic Wizard .exe)<br/>Authenticode Code Signing"]
     Mac --> MacOut[".app Bundle inside signed .dmg<br/>Apple Developer Certificate<br/>Notarization via notarytool"]
     Lin --> LinOut["Flatpak (Sandboxed standard)<br/>AppImage (Self-contained executable)<br/>Snap & Native .deb / .rpm"]
-```
+{% </mermaid> %}
 
 #### Code Signing & Notarization: The Golden Standard
 Modern operating systems actively block unsigned executables to protect users from malware:
@@ -522,14 +522,14 @@ Modern operating systems actively block unsigned executables to protect users fr
 
 Transform theoretical desktop architecture into concrete software through six progressive milestone projects:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     M1["Milestone 1: DeskMetrics Tray Utility<br/>Focus: System Tray, Global Hotkeys, Mini-Window"] --> M2["Milestone 2: MarkFlow Markdown Studio<br/>Focus: Raw File Streams, Multi-File Tabs, Drag-and-Drop"]
     M2 --> M3["Milestone 3: SysTelemetry Monitor<br/>Focus: Native OS System Calls, Real-time Charts, Background Threads"]
     M3 --> M4["Milestone 4: DevSnip Global Clipboard Manager<br/>Focus: Clipboard Polling, SQLite Full-Text Search, Global Hotkeys"]
     M4 --> M5["Milestone 5: MediaWeaver Batch Transcoder<br/>Focus: Child Process Spawning, FFmpeg Pipes, Concurrency"]
     M5 --> M6["Milestone 6 (Capstone): OmniDesk Workspace Suite<br/>Focus: Multi-Window, Custom Chrome, Auto-Updates, Signed Installers"]
-```
+{% </mermaid> %}
 
 ### Milestone 1: DeskMetrics Tray Utility
 * **Goal**: Build a lightweight system tray utility displaying real-time currency conversions, weather, or server uptime.
@@ -582,7 +582,7 @@ Deepen your desktop engineering mastery using these authoritative framework docu
 
 {{<pretty_link url="https://www.electronjs.org/docs/latest/" title="Electron Official Documentation" description="The definitive manual for building cross-platform desktop applications using JavaScript, Node.js, and Chromium." />}}
 
-{{<pretty_link url="https://dioxuslabs.com/learn/0.6/" title="Dioxus 0.6 Official Documentation" description="The full-stack, component-based framework for building cross-platform desktop, web, and mobile apps in pure Rust." />}}
+{{<pretty_link url="https://dioxuslabs.com/learn/" title="Dioxus 0.6 Official Documentation" description="The full-stack, component-based framework for building cross-platform desktop, web, and mobile apps in pure Rust." />}}
 
 {{<pretty_link url="https://docs.flutter.dev/platform-integration/desktop" title="Flutter Desktop Documentation" description="Official guides covering Windows, macOS, and Linux desktop integration, keyboard shortcuts, and desktop deployment." />}}
 
