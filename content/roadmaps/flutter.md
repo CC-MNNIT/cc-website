@@ -32,13 +32,13 @@ Before installing SDKs or writing widget code, you must understand how Flutter w
 
 Modern digital products cannot afford fragmented codebases where separate teams build duplicate features in Kotlin, Swift, and web JavaScript with varying bugs, schedules, and design inconsistencies.
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Code["Single Dart Codebase"] --> Engine["Flutter Engine (Impeller C++ / Shaders)"]
     Engine --> Mobile["Mobile Devices (Android APK/AAB & iOS IPA)"]
     Engine --> Desktop["Desktop Apps (macOS, Windows EXE, Linux)"]
     Engine --> Web["Modern Web (WebAssembly / CanvasKit)"]
-```
+{% </mermaid> %}
 
 * **Complete Canvas Ownership**: Flutter does not wrap native Android Views or iOS UIViews. It operates like a modern game engine: it requests a blank GPU canvas from the host operating system and draws every button, text run, image, and curve using compiled hardware shaders.
 * **The Impeller Rendering Engine**: In earlier versions, Flutter utilized Skia, which occasionally suffered from shader compilation jank on first run. Today, Flutter’s default engine is **Impeller**, which pre-compiles an explicit set of shaders at build time, completely eliminating animation stutter and delivering butter-smooth 120Hz refresh rates on iOS and modern Android devices.
@@ -54,7 +54,7 @@ Beginners frequently confuse these three components:
 | **Flutter Framework** | A high-level declarative UI library written in pure Dart. | Provides the widget catalog (Material 3 & Cupertino), gesture recognizers, animation curves, and layout math. |
 | **Flutter Engine & SDK** | Low-level C++ runtime + developer CLI tools. | Hosts the Impeller rendering engine, text rasterization (HarfBuzz), Dart VM/AOT compiler, platform embedders, and the `flutter` command-line tool. |
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph AppLevel["1. Your Application Layer"]
         App["Your Dart Widgets & Business Logic"]
@@ -83,13 +83,13 @@ graph TD
     Rendering --> TextEngine
     App -.-> DartRuntime
     Impeller --> Platform
-```
+{% </mermaid> %}
 
 ### 1.3 Navigating from Your Prior Background
 
 No matter which programming environment you are coming from, your core skills transfer directly into Flutter:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Start["Your Current Background"] --> T1["Track A: Complete Beginner"]
     Start --> T2["Track B: Web / React Developer"]
@@ -105,10 +105,10 @@ graph TD
     R2 --> Core
     R3 --> Core
     R4 --> Core
-```
+{% </mermaid> %}
 
-* **Track A (Complete Beginners)**: Focus on Stage 1. Learn basic variables, functions, collections, and object-oriented principles in Dart before opening Flutter Studio.
-* **Track B (Web & React Developers)**: The mental model is identical: Flutter is declarative ($UI = f(\text{State})$). Widgets correspond to React components; `StatefulWidget` or Riverpod notifiers correspond to React Hooks; `Row`/`Column`/`Flex` map directly to CSS Flexbox.
+* **Track A (Complete Beginners)**: Focus on Stage 1. Learn basic variables, functions, collections, and object-oriented principles in Dart before opening an IDE or the Flutter SDK tooling.
+* **Track B (Web & React Developers)**: The mental model is identical: Flutter is declarative (UI = f(State)). Widgets correspond to React components; `StatefulWidget` or Riverpod notifiers correspond to React Hooks; `Row`/`Column`/`Flex` map directly to CSS Flexbox.
 * **Track C (Native Android/iOS Developers)**: You already understand mobile lifecycle constraints, app sandboxes, permissions, and store publishing. You will appreciate how Flutter eliminates dual-platform UI maintenance while letting you bridge to native code via **Platform Channels** when needed.
 * **Track D (C++ / Java / DSA Students)**: You understand data structures, memory allocation, and class hierarchies. Dart will feel intuitive and comfortable, allowing you to quickly master Flutter's tree reconciliation and layout algorithms.
 
@@ -235,13 +235,13 @@ List<Widget> buildNavigationItems(bool isAdmin, List<String> customTabs) {
 
 Dart executes application code on a **single-threaded Event Loop**. Long-running tasks (such as network calls or database writes) are executed asynchronously without blocking UI rendering:
 
-```mermaid
+{% <mermaid> %}
 graph LR
     Call["Network Request (async)"] --> EventLoop["Dart Event Loop"]
     EventLoop --> FutureWait["Suspends without blocking UI thread"]
     FutureWait --> Complete["Background OS I/O completes"]
     Complete --> Resume["Resumes Execution on Event Loop"]
-```
+{% </mermaid> %}
 
 * **`Future<T>`**: Represents a computation that will return a value of type `T` (or an error) at some point in the future. Consumed with `async` / `await`.
 * **`Stream<T>`**: An asynchronous sequence of events over time. Perfect for web socket messages, GPS location updates, and reactive database queries.
@@ -332,19 +332,19 @@ flutter:
 
 In Flutter, **everything is a widget**. A widget is not a direct screen element; it is an **immutable blueprint** describing how the UI should appear given a specific configuration.
 
-### 4.1 The Declarative UI Paradigm: $UI = f(\text{State})$
+### 4.1 The Declarative UI Paradigm: UI = f(State)
 
 In traditional imperative UI frameworks (such as legacy Android XML or UIKit), you write procedural code to mutate existing views (`label.setText("New")`, `button.setEnabled(false)`).
 
 In Flutter, the interface is a direct mathematical projection of your application state:
 
-```mermaid
+{% <mermaid> %}
 graph LR
     State["Application State"] -->|"Passes into"| BuildFunc["Widget build(BuildContext)"]
     BuildFunc -->|"Returns"| WidgetTree["Immutable Widget Blueprint"]
     WidgetTree -->|"Reconciled by"| ElementTree["Element Tree (Lifecycle & State)"]
     ElementTree -->|"Renders to"| GPU["Impeller GPU Canvas"]
-```
+{% </mermaid> %}
 
 ### 4.2 `StatelessWidget` vs. `StatefulWidget`
 
@@ -378,7 +378,7 @@ class ClubHeader extends StatelessWidget {
 #### `StatefulWidget` and its Lifecycle
 Used when a widget holds internal mutable state that changes during its lifetime (such as an active tab index, animation controller, or timer):
 
-```mermaid
+{% <mermaid> %}
 graph TD
     CreateState["1. createState()"] --> InitState["2. initState() (One-time setup)"]
     InitState --> DidChange["3. didChangeDependencies()"]
@@ -386,7 +386,7 @@ graph TD
     Build --> SetState{"User Event triggers setState()"}
     SetState -->|"Marks Element Dirty"| Build
     Build --> Dispose["5. dispose() (Cancel streams, controllers)"]
-```
+{% </mermaid> %}
 
 ```dart
 class CounterCard extends StatefulWidget {
@@ -438,7 +438,7 @@ class _CounterCardState extends State<CounterCard> {
 
 Why is Flutter so fast despite recreating immutable widget objects constantly? Flutter separates its internal pipeline into **three distinct trees**:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph Tree1["1. Widget Tree (Immutable Blueprints)"]
         W1["Padding Widget"] --> W2["Container Widget"]
@@ -461,7 +461,7 @@ graph TD
     E2 -.->|"Controls"| R2
     W3 -.->|"Instantiates"| E3
     E3 -.->|"Controls"| R3
-```
+{% </mermaid> %}
 
 1. **Widget Tree**: Lightweight, disposable configuration objects. Instantiated in microseconds on the CPU.
 2. **Element Tree**: The persistent coordinator. Manages lifecycles, retains `State` objects, and links widgets to their underlying RenderObjects. When a widget changes, the Element checks if `Widget.canUpdate()` is true (matching runtime type and key). If true, it updates its configuration without recreating the expensive RenderObject!
@@ -586,7 +586,7 @@ State management is the most actively debated topic in the Flutter community. Be
 
 ### 6.1 The State Spectrum
 
-```mermaid
+{% <mermaid> %}
 graph TD
     State["What kind of state are you managing?"] --> Dec1{"Ephemeral or Application-Wide?"}
     
@@ -594,9 +594,9 @@ graph TD
     Dec1 -->|"Application / Shared State"| Dec2{"Scope & Complexity?"}
     
     Dec2 -->|"Small to Medium Apps"| Provider["Provider (InheritedWidget wrapper)"]
-    Dec2 -->|"Modern Standard (Type-safe, No BuildContext)"| Riverpod["Riverpod 2.x (Recommended Default)"]
+    Dec2 -->|"Modern Standard (Type-safe, No BuildContext)"| Riverpod["Riverpod 3.x (Recommended Default)"]
     Dec2 -->|"Enterprise / Fintech / Event-Driven"| Bloc["BLoC / Cubit (Strict UDF Architecture)"]
-```
+{% </mermaid> %}
 
 * **Ephemeral State**: State that lives cleanly within a single widget (e.g., active page view index, animated toggle button, checkbox selection). **Use `setState()`**. Installing a 3rd-party library to manage a simple checkbox is an anti-pattern.
 * **Shared / Application State**: State that must be accessed, modified, and synchronized across different screens, business logic services, and background workers (e.g., authenticated user session, shopping cart contents, offline database cache).
@@ -606,8 +606,8 @@ graph TD
 | Solution | Mental Model | Pros | Best Fit |
 | :--- | :--- | :--- | :--- |
 | **Provider** | Wraps `InheritedWidget` | Built into many official tutorials; gentle initial learning curve. | Small to medium projects; legacy codebases. |
-| **Riverpod (2.x)** | Compile-safe, global reactive providers without `BuildContext` | Created by Provider's author to fix all of Provider's flaws. Zero `ProviderNotFoundException`, auto-disposal, easy async data caching via `AsyncValue`. | **Recommended default** for modern Flutter development. |
-| **BLoC / Cubit** | Reactive stream pipeline: Events in $\rightarrow$ States out | Strict Unidirectional Data Flow, highly auditable state transitions, complete testability. | Enterprise apps, fintech, banking, and multi-developer teams. |
+| **Riverpod (3.x)** | Compile-safe, global reactive providers without `BuildContext` | Created by Provider's author to fix all of Provider's flaws. Zero `ProviderNotFoundException`, auto-disposal, easy async data caching via `AsyncValue`. | **Recommended default** for modern Flutter development. |
+| **BLoC / Cubit** | Reactive stream pipeline: Events in, States out | Strict Unidirectional Data Flow, highly auditable state transitions, complete testability. | Enterprise apps, fintech, banking, and multi-developer teams. |
 
 ### 6.3 State Management in Practice: Riverpod Example
 
@@ -672,7 +672,7 @@ Building enterprise-grade applications requires strict separation of concerns. A
 
 Modern Flutter engineering adheres to **Feature-First Layered Architecture**:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph PresentationLayer["Presentation Layer (Flutter & UI)"]
         UI["Widgets / Screens (Declarative Views)"]
@@ -696,7 +696,7 @@ graph TD
     UseCase -->|"Requests Data"| Repo
     Repo -->|"Fetches Remote"| RemoteSource
     Repo -->|"Reads/Writes Local"| LocalSource
-```
+{% </mermaid> %}
 
 ### 7.2 Directory Structure: Feature-First Organization
 
@@ -733,13 +733,13 @@ Legacy Flutter used imperative navigation (`Navigator.push(context, MaterialPage
 
 **`go_router`** is Flutter's official, production-recommended declarative routing library.
 
-```mermaid
+{% <mermaid> %}
 graph LR
     URL["Incoming URL: /projects/104"] --> GoRouter["go_router Engine"]
     GoRouter --> Guard{"Auth Guard Check"}
     Guard -->|"Authenticated"| Screen["ProjectDetailScreen(id: 104)"]
     Guard -->|"Unauthenticated"| Redirect["Redirect to /login"]
-```
+{% </mermaid> %}
 
 ```dart
 final appRouter = GoRouter(
@@ -860,13 +860,13 @@ Flutter renders its own UI, but whenever you need native device capabilities—s
 
 Flutter communicates with the host operating system using an asynchronous message-passing bus:
 
-```mermaid
+{% <mermaid> %}
 graph LR
     Dart["Flutter UI (Dart Layer)"] -->|"MethodChannel.invokeMethod('getBattery')"| Engine["Flutter Engine Binary Encoder"]
     Engine -->|"StandardMessageCodec"| Host["Host OS (Android Kotlin / iOS Swift)"]
     Host -->|"Reads Hardware Battery Level"| Return["Return Result Value"]
     Return --> Dart
-```
+{% </mermaid> %}
 
 * **`MethodChannel`**: For request-response asynchronous method invocation (e.g., querying battery level or triggering a native haptic feedback motor).
 * **`EventChannel`**: For continuous event streaming from native platform sensors to Dart (e.g., continuous accelerometer updates).
@@ -912,12 +912,12 @@ A robust application requires high test coverage across all layers of the testin
 
 ### 11.1 The Flutter Testing Pyramid
 
-```mermaid
+{% <mermaid> %}
 graph TD
     E2E["10% Integration & E2E Tests (Maestro / IntegrationTest)"]
     Widget["30% Widget Tests (Headless UI Component Verification)"]
     Unit["60% Unit Tests (Pure Dart Logic, Repositories, Notifiers)"]
-```
+{% </mermaid> %}
 
 #### 1. Unit Testing (Pure Dart)
 ```dart
@@ -987,7 +987,7 @@ Press `Ctrl+Shift+P` (or `Cmd+Shift+P`) and launch **Flutter DevTools**:
   ```
   This strips class and method identifiers, making decompiled APKs/IPAs nearly impossible for reverse engineers to inspect.
 * **Secrets Management**: Never commit API keys or OAuth secrets into version control. Use **`envied`** to generate compile-time constants from a `.env` file that remains ignored in Git.
-* **SSL Certificate Pinning**: Prevent Man-In-The-Middle (MITM) proxy attacks on untrusted public Wi-Fi networks by configuring certificate pinning in Dio using `SecurityContext`.
+* **SSL Certificate Pinning**: Prevent Man-In-The-Middle (MITM) proxy attacks on untrusted public Wi-Fi networks by validating server certificates against pinned keys (via `HttpClient` with a `SecurityContext` or fingerprint checks in a `badCertificateCallback`).
 
 ### 12.2 Release Pipelines
 
@@ -1031,14 +1031,14 @@ Starting in Flutter 3.22+, Flutter Web supports compilation directly to **WebAss
 
 Theory without application creates passive knowledge. Work through these six progressive milestone projects to transform concepts into muscle memory:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     M1["Milestone 1: PulseMetrics Calculator<br/>Focus: Dart 3, StatefulWidget, M3"] --> M2["Milestone 2: FocusFlow Routine Tracker<br/>Focus: AnimationController, Custom Canvas, Preferences"]
     M2 --> M3["Milestone 3: Chronicle Markdown Notebook<br/>Focus: Drift SQLite, Reactive Streams, GoRouter"]
     M3 --> M4["Milestone 4: DevPulse GitHub Explorer<br/>Focus: Dio Interceptors, Riverpod, Freezed, Pagination"]
     M4 --> M5["Milestone 5: CloudVault Media Locker<br/>Focus: Biometric Auth, MethodChannels, Secure Storage"]
     M5 --> M6["Milestone 6 (Capstone): OmniMarket Multiplatform Suite<br/>Focus: Feature Architecture, Responsive Layouts, Stripe, CI/CD"]
-```
+{% </mermaid> %}
 
 ### Milestone 1: PulseMetrics Calculator
 * **Goal**: Build an interactive financial and unit calculation tool with dynamic currency conversions.
