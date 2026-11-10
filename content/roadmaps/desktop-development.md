@@ -105,7 +105,7 @@ graph TD
     Arch --> A2["2. Native System WebView (Tauri, Wails)"]
     Arch --> A3["3. Custom GPU Rendering (Flutter Desktop, Dioxus Native – experimental)"]
     Arch --> A4["4. Declarative Multiplatform (Compose Desktop, Avalonia)"]
-    Arch --> A5["5. Native OS Toolkits (Qt, WinUI 3, SwiftUI/AppKit)"]
+    Arch --> A5["5. Native OS Toolkits (Qt, WinUI 3, SwiftUI/AppKit, GTK)"]
 {% </mermaid> %}
 
 ### Architecture 1: Web Frontend + Bundled Chromium Runtime (Electron)
@@ -133,11 +133,12 @@ graph TD
   * **Avalonia (.NET)**: A cross-platform XAML/C# engine rendering via Skia directly across Windows, macOS, and Linux.
 * **Key Strengths**: Unified programming language for both business logic and UI; direct access to massive backend ecosystems (JVM and .NET).
 
-### Architecture 5: Native Platform Toolkits (Qt, WinUI 3, SwiftUI/AppKit)
+### Architecture 5: Native Platform Toolkits (Qt, WinUI 3, SwiftUI/AppKit, GTK)
 * **The Concept**: Compiles directly to host platform machine code using the platform's official UI frameworks and native controls.
   * **Qt (C++ / QML)**: The industrial gold standard for high-performance desktop engineering (CAD, DAWs, 3D suites).
   * **WinUI 3 / Windows App SDK**: Native Windows platform toolkit implementing Microsoft Fluent Design.
   * **SwiftUI & AppKit**: Native Apple macOS desktop toolkits optimized for Apple Silicon and macOS system menus.
+  * **GTK 4 (GNOME)**: The native Linux toolkit behind GNOME applications, usable from C, Vala, or Rust via the gtk-rs bindings — the right choice for Linux-first system utilities.
 * **Key Strengths**: Unrivaled raw execution speed, zero abstraction layer overhead, and flawless OS visual harmony.
 * **Trade-offs**: Requires platform-specific code or complex cross-platform toolkits like Qt with commercial licensing considerations.
 
@@ -417,7 +418,17 @@ fun App() {
 
 ---
 
-### 4.6 Native Toolkits: Qt 6 & QML (C++ / Python)
+### 4.6 Avalonia (.NET / C#)
+
+For C# and .NET teams, **Avalonia** is the leading cross-platform desktop UI framework: a XAML-based engine rendering via Skia on Windows, macOS, and Linux, with an API deliberately modeled on WPF.
+
+* **The Concept**: Write XAML views and C# view-models (MVVM) that run largely unchanged across all three desktop platforms.
+* **Ecosystem**: Mature MVVM toolchain (`CommunityToolkit.Mvvm`, ReactiveUI) and first-class JetBrains Rider tooling.
+* **When to Choose Avalonia**: When your team's expertise is C#/.NET, or when you are porting an existing WPF or WinForms application to cross-platform desktop.
+
+---
+
+### 4.7 Native Toolkits: Qt 6 & QML (C++ / Python)
 
 **Qt** is the undisputed veteran of native desktop engineering. Used by Adobe Photoshop, Autodesk Maya, DaVinci Resolve, VLC Media Player, and medical workstations:
 
@@ -425,6 +436,43 @@ fun App() {
   * **Qt Widgets**: Classic C++ widgets matching exact host OS platform styles.
   * **Qt Quick / QML**: A declarative, GPU-accelerated language optimized for fluid 120Hz custom interfaces.
 * **PySide6 (Qt for Python)**: Official Python bindings for Qt, widely used in data science, engineering tools, and rapid internal desktop scripting.
+#### A First Qt Quick (QML) Interface
+QML is Qt's declarative, JavaScript-flavored UI language; your C++ (or Python) backend exposes application logic to it as context properties:
+
+```qml
+// main.qml — a minimal Qt Quick window
+import QtQuick
+import QtQuick.Controls
+
+ApplicationWindow {
+    visible: true
+    width: 480
+    height: 320
+    title: qsTr("CC Contribution Monitor")
+
+    Column {
+        anchors.centerIn: parent
+        spacing: 12
+
+        Label {
+            text: "Commits recorded: " + counter.value
+            font.pointSize: 14
+        }
+
+        Button {
+            text: qsTr("Record Commit")
+            onClicked: counter.value += 1
+        }
+    }
+
+    QtObject {
+        id: counter
+        property int value: 0
+    }
+}
+```
+Backend classes are exposed to QML by registering them with the QML engine (`QQmlApplicationEngine::rootContext()->setContextProperty(...)` in C++, or `setContextProperty` via PySide6), keeping UI declarative and logic native.
+
 * **Licensing**: Qt is available under open-source LGPLv3 and commercial licenses. Review LGPL obligations (dynamic linking requirements) when building proprietary closed-source applications.
 
 ---
@@ -438,6 +486,7 @@ fun App() {
 | **Dioxus** | Pure Rust | Rust RSX components | System WebView / WGPU | ~25–45 MB | ~12–18 MB | Systems programmers seeking a pure Rust full-stack desktop experience. |
 | **Flutter Desktop** | Dart | Flutter Widgets | Custom Impeller/Skia | ~60–90 MB | ~25–35 MB | High-fidelity canvas apps, sharing 90%+ code with existing Flutter mobile apps. |
 | **Compose Desktop** | Kotlin | Compose Multiplatform | Skiko (Skia for Kotlin) | ~100–180 MB | ~40–60 MB | Kotlin/Android developers, enterprise applications needing JVM integration. |
+| **Avalonia 11** | C# | XAML / MVVM | Skia | ~70–110 MB | ~40–70 MB | .NET teams, WPF migrations, cross-platform enterprise internal tools. |
 | **Qt 6 / C++** | C++ or Python | QML / Qt Widgets | Native C++ / OpenGL | ~20–40 MB | ~20–30 MB | Performance-critical CAD, audio/video DAWs, 3D software, hardware drivers. |
 
 ---
@@ -452,6 +501,7 @@ graph TD
     Start --> P4["Kotlin / Android Developer"]
     Start --> P5["C / C++ Programmer"]
     Start --> P6["Python Developer"]
+    Start --> P7["C# / .NET Developer"]
 
     P1 --> R1["Explore Tauri (lightweight) or Electron (maximum web compatibility)"]
     P2 --> R2["Choose Tauri (web UI + Rust core) or Dioxus (pure Rust UI)"]
@@ -459,6 +509,7 @@ graph TD
     P4 --> R4["Target desktop using Compose Multiplatform"]
     P5 --> R5["Master Qt 6 (C++/QML) for industrial-grade native performance"]
     P6 --> R6["Use PySide6 (Qt for Python) for rapid desktop tooling"]
+    P7 --> R7["Build cross-platform desktop apps with Avalonia (XAML / MVVM)"]
 {% </mermaid> %}
 
 * **If you know React & TypeScript**: Start with **Tauri 2.0**. You write your familiar React/Tailwind frontend while learning how to invoke native Rust commands for file system and system tray tasks. If your application relies heavily on Node.js native binary add-ons, look into **Electron**.
@@ -466,6 +517,7 @@ graph TD
 * **If you followed our [Flutter Roadmap](@/roadmaps/flutter.md)**: Jump directly into **Flutter Desktop**. Your widget, Riverpod, and BLoC knowledge transfers 100%. Focus on learning window resizing, keyboard accelerators, and system menus.
 * **If you followed our [Kotlin Roadmap](@/roadmaps/android.md)**: Explore **Compose Multiplatform Desktop**. Your `@Composable` knowledge and Coroutines architecture apply directly to macOS, Windows, and Linux.
 * **If you know C or C++**: Dive into **Qt 6 (QML & C++)**. Qt teaches you the timeless, industrial foundations of real-time desktop engineering.
+* **If you know C# / .NET**: Build with **Avalonia 11** — WPF-style XAML and MVVM translated to Windows, macOS, and Linux.
 * **If you are a complete beginner**: Begin by learning JavaScript or Python to understand programming fundamentals, then build your first desktop utility using **Tauri** or **PySide6**.
 
 ---
