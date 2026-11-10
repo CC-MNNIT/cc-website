@@ -123,6 +123,16 @@ h3,
     color: #FFC758 !important;
 }
 
+/* 7. Markdown content tables.
+   Wide tables (license/program matrices in roadmaps) must scroll
+   horizontally instead of overflowing the container on mobile. */
+.prose table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 /* Firefox text selection compatibility fix */
 @-moz-document url-prefix() {
 

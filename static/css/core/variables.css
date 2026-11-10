@@ -45,6 +45,12 @@
     --color-base-content: oklch(0.92 0.01 30);
     /* Light beige text (#FAECEC tint) */
 
+    /* SCROLLBAR - warm brown thumb on transparent track */
+    --scrollbar-thumb: oklch(0.30 0.02 20);
+    /* Sits between base-300 and neutral */
+    --scrollbar-thumb-hover: oklch(0.42 0.04 25);
+    /* Warmer and lighter on hover */
+
     /* STATE COLORS */
     --color-info: oklch(0.65 0.15 240);
     /* Blue for info */
@@ -85,6 +91,10 @@
     /* Light Gray */
     --color-base-content: oklch(0.15 0.02 260);
     /* Dark Text */
+
+    /* SCROLLBAR - gray thumb on transparent track */
+    --scrollbar-thumb: oklch(0.78 0.01 260);
+    --scrollbar-thumb-hover: oklch(0.65 0.01 260);
 
     /* STATE COLORS */
     --color-info: oklch(0.65 0.15 240);
