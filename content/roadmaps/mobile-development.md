@@ -342,6 +342,8 @@ Cross-platform frameworks (Flutter, Compose Multiplatform, Tauri, and React Nati
 
 {% </collapse> %}
 
+For a comprehensive deep dive into operating system processes, IPC, Electron, Tauri, Dioxus, Qt, and multiplatform packaging, explore our dedicated **[Desktop Application Development Roadmap](@/roadmaps/desktop-development.md)**.
+
 ---
 
 ## 7. Shared Application-Engineering Fundamentals

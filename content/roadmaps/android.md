@@ -1171,4 +1171,5 @@ This roadmap is one part of a connected learning system. Depending on where you 
 
 * **[Mobile Development Master Roadmap](@/roadmaps/mobile-development.md)** — revisit the full application-development landscape, the interactive Path Finder, and how native Android compares with the cross-platform alternatives.
 * **[Flutter & Dart Roadmap](@/roadmaps/flutter.md)** — reuse the architecture patterns you mastered here (layered data flow, repositories, reactive streams) to ship the same app to iOS, desktop, and web from a single Dart codebase.
+* **[Desktop Application Development Roadmap](@/roadmaps/desktop-development.md)** — explore Compose Multiplatform Desktop to bring your Kotlin and Jetpack Compose skills to macOS, Windows, and Linux.
 * **[Open Source Contribution Roadmap](@/roadmaps/open-source.md)** — put your Kotlin skills to work contributing to real-world Android libraries and CC's own repositories.

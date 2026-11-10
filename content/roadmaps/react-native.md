@@ -789,7 +789,7 @@ eas submit --platform android
 React Native's "Learn Once, Write Anywhere" philosophy extends beyond mobile phones.
 
 * **React Native for Web**: Included natively in Expo. Run `npx expo start --web` to compile your React Native components into HTML5 primitives (`<View>` compiles to `<div>`, `<Text>` compiles to `<span>`).
-* **Desktop Targets (macOS & Windows)**: Maintained by Microsoft, **React Native for Windows + macOS** brings React Native to native Win32/UWP and Cocoa desktop applications with support for native menus, multi-windowing, and mouse-hover states.
+* **Desktop Targets (macOS & Windows)**: Maintained by Microsoft, **React Native for Windows + macOS** brings React Native to native Win32/UWP and Cocoa desktop applications with support for native menus, multi-windowing, and mouse-hover states. For an architectural deep dive into desktop engineering, see our **[Desktop Application Development Roadmap](@/roadmaps/desktop-development.md)**.
 
 ---
 

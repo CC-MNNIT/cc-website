@@ -831,3 +831,4 @@ This roadmap is one part of a connected learning system. Depending on where you 
 * **[Mobile Development Master Roadmap](@/roadmaps/mobile-development.md)** — revisit the full application-development landscape and the interactive Path Finder that helped you choose native iOS.
 * **[Kotlin & Native Android Roadmap](@/roadmaps/android.md)** — the native peer platform: with Kotlin Multiplatform, your architecture and business logic can even be shared between your Swift UI and Android.
 * **[Flutter & Dart Roadmap](@/roadmaps/flutter.md)** — the pragmatic option when a project must reach Android too without maintaining two native codebases.
+* **[Desktop Application Development Roadmap](@/roadmaps/desktop-development.md)** — extend your Swift and SwiftUI knowledge into macOS desktop software, AppKit, window management, and native macOS distribution.

@@ -1014,6 +1014,8 @@ When compiling for desktop, consider desktop-specific interaction patterns:
 * **Mouse & Keyboard Ergonomics**: Mobile touch interfaces lack hover states and right-click menus. Use `MouseRegion` for hover detection, `ContextMenuRegion` for right-click popups, and `Shortcuts` / `Actions` for keyboard shortcuts (`Cmd/Ctrl + S`).
 * **Multi-Window & Window Management**: Desktop applications can be resized freely. Use packages like `window_manager` to set minimum/maximum window dimensions, toggle full-screen modes, and handle system tray minimizations.
 
+For a comprehensive guide to desktop processes, IPC, window management, and native packaging across all major frameworks, see our dedicated **[Desktop Application Development Roadmap](@/roadmaps/desktop-development.md)**.
+
 ### 13.2 Flutter Web & WebAssembly (Wasm)
 
 Starting in Flutter 3.22+, Flutter Web supports compilation directly to **WebAssembly (Wasm)**:
