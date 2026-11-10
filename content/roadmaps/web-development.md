@@ -810,6 +810,22 @@ Backend engineering does not belong to JavaScript. Every major ecosystem powers 
 **How to Choose**: Continuity argues for Node.js while you are learning frontend JavaScript in the same semester. Ambition argues for a second language once your first backend is deployed — FastAPI if you are doing machine learning coursework, Spring Boot if you are targeting enterprise placements, Axum if systems programming excites you. The discipline (Stage 12.1) is identical; only the syntax changes.
 {% </alert_info> %}
 
+### 12.4 API Styles: When REST Is Not the Answer
+
+REST is the right default — but knowing the alternatives makes you an informed API designer:
+
+| Style | How It Works | When It Shines |
+| :--- | :--- | :--- |
+| **REST** | Resource-oriented URLs, HTTP verbs, JSON | Default choice: public APIs, CRUD apps, cacheable resources |
+| **GraphQL** | Single endpoint; clients query exactly the fields they need | Aggregating many data sources; mobile clients minimizing payloads; rapidly evolving frontend needs |
+| **tRPC** | TypeScript functions called end-to-end — no schema drift, types inferred from server to client | Full-stack TypeScript teams (pairs perfectly with Next.js) |
+| **gRPC** | Binary protocol over HTTP/2 with protobuf contracts | Service-to-service communication inside backends; high-throughput internal RPC |
+| **WebSockets / SSE** | Persistent bidirectional (WS) or one-way (SSE) streams | Chat, live dashboards, notifications, collaborative editing |
+
+* **The trade-off REST makes**: Over-fetching (receiving fields you don't need) and under-fetching (needing multiple requests to compose one view). GraphQL solves both at the cost of caching complexity and server query-cost control.
+* **The trade-off tRPC makes**: It couples client and server into one TypeScript codebase — type safety for free, but non-TS consumers need a separate API layer.
+* **Start with REST.** Add GraphQL or tRPC when a genuine need appears, not for resume keywords.
+
 ---
 
 ## 13. Stage 12: Databases & Data Management
@@ -878,13 +894,118 @@ model User {
 
 ## 14. Stage 13: Full-Stack Integration
 
-This is where frontend and backend concepts compose into complete applications:
+This is where every previous stage composes into one complete application. The individual pieces — components, APIs, databases, auth — are necessary but not sufficient: engineering a *system* means understanding how they connect, where state lives, and how data flows through the whole.
 
-* **The integration contract**: The API *is* the contract. Frontend and backend agree on routes, request/response shapes (Zod schemas shared by both sides), and status-code semantics — enabling the two layers to evolve independently.
-* **Authentication flows end-to-end**: Login form (client) → credential POST (server) → password verification (bcrypt/argon2) → session cookie or token → protected routes (middleware) → role-based authorization (admin vs user).
-* **Real-time features**: Polling (simple), Server-Sent Events (one-way streams), **WebSockets** (bidirectional: chat, live dashboards, collaborative editing).
-* **File handling**: Uploads through multipart requests, size/type validation, storage in object storage (S3/R2) with signed URLs — never the application server's disk alone.
-* **Error handling across layers**: Client-side error boundaries, server-side structured errors, and a consistent error shape the frontend can render — plus graceful degradation when the network fails (offline states, retries).
+### 14.1 The Full-Stack Architecture
+
+A production web application is a pipeline of cooperating layers, each with its own concerns and failure modes:
+
+{% <mermaid> %}
+graph TD
+    Browser["Browser (React SPA / SSR Pages)"] -->|"HTTPS"| CDN["CDN / Edge Cache<br/>(static assets, cached pages)"]
+    CDN --> LB["Load Balancer / Reverse Proxy (Nginx)"]
+    LB --> API1["API Server 1 (Node.js / FastAPI / Axum)"]
+    LB --> API2["API Server 2"]
+    API1 --> Cache["Redis<br/>(sessions, cache, rate limits)"]
+    API1 --> DB["PostgreSQL<br/>(source of truth)"]
+    API1 --> Queue["Job Queue (Redis / pg-boss)<br/>(emails, media processing)"]
+    Queue --> Worker["Background Workers"]
+    Worker --> DB
+    Worker --> Mail["External Services (Email / S3 / Payment APIs)"]
+{% </mermaid> %}
+
+* **Where state lives**: The database is the single source of truth; Redis holds ephemeral state (sessions, counters); the browser holds UI state. Every bug you will ever debug in a full-stack app is a question of "which layer owns this state, and who changed it?"
+* **Horizontal scaling**: Stateless API servers can be replicated behind a load balancer — which is why sessions move *out* of server memory and into Redis.
+* **The queue decouples**: Slow work (sending emails, resizing images, calling external APIs) moves out of the request path. The API responds in 50ms; the worker finishes the job in 30 seconds.
+
+### 14.2 Authentication Flow, End-to-End
+
+The single most-requested integration pattern — and the one most often implemented wrongly. Here is the complete session-based flow:
+
+{% <mermaid> %}
+graph TD
+    Login["1. User submits credentials (HTTPS POST)"] --> Verify["2. Server verifies bcrypt/argon2 hash"]
+    Verify -->|"Valid"| Session["3. Create session row in store (Redis/DB)<br/>+ Set HTTP-only, Secure, SameSite cookie"]
+    Verify -->|"Invalid"| Fail["4. 401 response + rate-limit check"]
+    Session --> Request["5. Browser sends cookie automatically on every request"]
+    Request --> Auth["6. Auth middleware validates session<br/>(cheap Redis lookup)"]
+    Auth --> Authz["7. Authorization: role/permission check per route"]
+    Authz -->|"Admin only"| Admin["Admin data"]
+    Authz -->|"Owner only"| Own["Own resources (userId matches record)"]
+{% </mermaid> %}
+
+* **Authentication ≠ authorization**: Authentication ("who are you?") happens once per session; authorization ("what may you do?") happens on *every* request. Conflating them is how "admin-only" routes end up protecting only the *link* to the admin page instead of the data behind it.
+* **Authorization must be server-side**: Never trust a hidden route or a disabled button — the API checks ownership and roles on every request, because attackers call APIs directly.
+* **Token variant**: For mobile clients or third-party APIs, issue short-lived JWT access tokens + long-lived refresh tokens instead of session cookies — same verification flow, different credential transport.
+* **The code shape** (server side):
+
+```typescript
+// auth middleware — runs before every protected route
+async function requireSession(req, res, next) {
+  const sessionId = req.cookies.sessionId;          // HTTP-only cookie, unreadable to JS
+  const session = await redis.get(`session:${sessionId}`);
+  if (!session) return res.status(401).json({ error: 'Not authenticated' });
+
+  req.user = JSON.parse(session);                   // { id, email, role }
+  if (req.params.projectId) {
+    // Authorization per resource: does this record belong to this user?
+    const owns = await db.project.exists({ id: req.params.projectId, ownerId: req.user.id });
+    if (!owns && req.user.role !== 'admin') {
+      return res.status(403).json({ error: 'Not authorized' });
+    }
+  }
+  next();
+}
+```
+
+### 14.3 Real-Time Communication
+
+| Mechanism | Direction | Complexity | Best For |
+| :--- | :--- | :--- | :--- |
+| **Polling** | Client pulls | Minimal | Dashboards tolerant of 30–60s staleness |
+| **Server-Sent Events (SSE)** | Server → client, one-way | Low | Live feeds, notifications, streaming text |
+| **WebSockets** | Bidirectional, persistent | Medium | Chat, collaborative editing, live games |
+
+* **WebSockets in practice**: The server upgrade path (HTTP → WebSocket) plus a pub/sub layer (Redis pub/sub) when multiple server instances must broadcast to the same users:
+
+```typescript
+// Server (Node.js + ws): broadcast commit events to connected clients
+import { WebSocketServer } from 'ws';
+
+const wss = new WebSocketServer({ server });
+
+wss.on('connection', (socket) => {
+  socket.send(JSON.stringify({ type: 'hello', message: 'Connected to CC Pulse' }));
+});
+
+// Called from anywhere in the backend when data changes
+export function broadcastProjectUpdate(project) {
+  const payload = JSON.stringify({ type: 'project:update', project });
+  for (const client of wss.clients) {
+    if (client.readyState === 1) client.send(payload);
+  }
+}
+```
+
+* **Reconnection is your job**: Networks drop. Clients must retry with backoff and re-sync state on reconnect — or use libraries (Socket.IO, PartyKit) that handle it.
+
+### 14.4 File Uploads & Object Storage
+
+* **The flow**: Client picks file → uploads via multipart request (or direct-to-storage with a presigned URL) → server validates type/size → object stored in **S3/Cloudflare R2** → database stores metadata → served via CDN or signed URLs.
+* **Never store uploads on the application server's disk** — ephemeral containers lose them, and disk I/O competes with request handling.
+* **Validate aggressively**: MIME type, extension, and size limits on the server; resized/re-encoded where relevant (images via sharp, video via FFmpeg workers — see Milestone 5 in the desktop roadmap's family).
+
+### 14.5 Background Jobs & Queues
+
+* **The rule**: Anything slower than ~500ms, anything retriable, and anything time-scheduled belongs in a background job — not the request path.
+* **Typical jobs**: welcome emails, PDF generation, webhook fan-out, database cleanup, nightly report exports.
+* **Idempotency is mandatory**: Queues deliver *at least once* — your job must tolerate running twice (deduplication keys, upserts) or you will double-send emails.
+
+### 14.6 Error Handling Across Layers
+
+* **A consistent error contract**: Every server error returns the same shape (`{ error: { code, message, details? } }`) so the frontend renders failures uniformly.
+* **Client-side error boundaries**: React error boundaries catch render crashes; TanStack Query's `isError` state handles data failures; Playwright E2E tests assert the error UI, not just the happy path.
+* **Graceful degradation**: Offline states, retry with backoff, optimistic updates that roll back — the user experience when the network fails is part of the feature, not an afterthought.
 
 ---
 
