@@ -1,7 +1,7 @@
 +++
 title = "DevOps Roadmap"
 description = "A comprehensive guide to begin your journey for DevOps"
-weight = 9
+weight = 10
 
 [extra]
 difficulty = "Intermediate"
