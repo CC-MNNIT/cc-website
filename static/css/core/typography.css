@@ -133,6 +133,18 @@ h3,
     -webkit-overflow-scrolling: touch;
 }
 
+/* The .prose element is a grid item (content column next to the TOC).
+   Its automatic minimum size defaults to min-width:auto, so any wide
+   bare table's min-content would push the whole grid — and the TOC —
+   past the viewport. Allow the column to shrink so tables scroll
+   inside it instead. overflow-wrap:anywhere lets long words and
+   inline-code identifiers break on narrow screens instead of forcing
+   the document wider; it has no effect while words still fit. */
+.prose {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
 /* Firefox text selection compatibility fix */
 @-moz-document url-prefix() {
 

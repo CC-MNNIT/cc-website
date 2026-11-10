@@ -82,7 +82,7 @@ Android provides seamless **interoperability APIs** between Compose and the lega
 
 Students come to Android from diverse programming backgrounds. Locate your starting profile below:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Start["Your Starting Point"] --> P1["Track A: Complete Beginner"]
     Start --> P2["Track B: Java Developer"]
@@ -98,7 +98,7 @@ graph TD
     S2 --> Core
     S3 --> Core
     S4 --> Core
-```
+{% </mermaid> %}
 
 * **Track A (Complete Beginner)**: Begin with Stage 1. Focus on variables, functions, collections, and control flow before touching Android Studio. Building a small console application in Kotlin first will make Android concepts significantly clearer.
 * **Track B (Java Familiar)**: You already understand object-oriented programming, classes, interfaces, and the JVM. Pay special attention to Kotlin’s null-safety system, data classes, extension functions, and how Coroutines replace Java threads and `CompletableFuture`.
@@ -210,14 +210,14 @@ On mobile devices, running long operations (such as HTTP requests, database quer
 
 Kotlin Coroutines provide lightweight, cooperative multitasking that lets you write sequential-looking asynchronous code.
 
-```mermaid
+{% <mermaid> %}
 graph LR
     Sub["Caller (ViewModel)"] -->|"Step 1: Dispatch to IO"| IO["Dispatchers.IO (Background Thread Pool)"]
     IO -->|"Step 2: Suspend without blocking"| Net["Network / Database Call"]
     Net -->|"Step 3: Return Result"| IO
     IO -->|"Step 4: Resume on Main"| Main["Dispatchers.Main (UI Thread)"]
     Main -->|"Step 5: Update UI State"| Compose["Jetpack Compose Screen"]
-```
+{% </mermaid> %}
 
 #### Coroutine Dispatchers
 * **`Dispatchers.Main`**: Bound to the Android UI thread. Used exclusively for updating UI state and lightweight interactions.
@@ -263,9 +263,9 @@ With your Kotlin foundation solidified, the next milestone is understanding the 
 
 ### 3.1 Development Environment Setup
 
-1. **Install Android Studio**: Download the latest stable release (Ladybug / Meerkat). It includes the JetBrains IntelliJ IDEA platform, Android SDK Manager, Android Emulator, and Jetpack Compose live tooling.
+1. **Install Android Studio**: Download the latest stable release from the official site (release names are month-inspired — Ladybug, Meerkat, Narwhal, ... — so always check the current one rather than memorizing). It includes the JetBrains IntelliJ IDEA platform, Android SDK Manager, Android Emulator, and Jetpack Compose live tooling.
 2. **SDK Platforms & Build Tools**: Open the SDK Manager and ensure you have installed:
-   * The latest stable Android SDK Platform (API 34 / 35).
+   * The latest stable Android SDK Platform (API 36 / Android 16 as of late 2026). Google Play has required new apps and updates to target API 36 or higher since August 31, 2026.
    * Android SDK Build-Tools and Platform-Tools (which provides the `adb` CLI tool).
 3. **Device Configuration**:
    * **Physical Device (Recommended)**: Enable Developer Options on your phone (tap *Build Number* 7 times in settings), enable *USB Debugging*, and connect via USB or pair wirelessly using **Wireless Debugging (QR code)**. Physical devices give you genuine touch response, thermal throttling behavior, and true sensor input.
@@ -325,6 +325,8 @@ Android builds are managed by Gradle. Modern projects use **Kotlin DSL** (`build
 
 #### `gradle/libs.versions.toml` (Version Catalog)
 ```toml
+# Structure shown below is the stable convention; the version numbers themselves
+# are illustrative — always check the latest stable AGP/Kotlin/Compose releases.
 [versions]
 agp = "8.7.2"
 kotlin = "2.0.21"
@@ -351,7 +353,7 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 
 Android devices run on constrained resources. The Android OS reserves the right to pause, stop, or completely terminate an app's process when system memory runs low.
 
-```mermaid
+{% <mermaid> %}
 graph TD
     NonExistent["Non-Existent"] -->|"onCreate()"| Created["Created"]
     Created -->|"onStart()"| Started["Started (Visible)"]
@@ -365,7 +367,7 @@ graph TD
     
     Stopped -.->|"System kills process to reclaim RAM"| ProcessDeath["OS Process Death"]
     ProcessDeath -.->|"User relaunches app"| Created
-```
+{% </mermaid> %}
 
 #### Configuration Changes vs. Process Death
 * **Configuration Changes (e.g., Screen Rotation, Dark Mode toggle)**: The OS destroys and immediately recreates the `Activity`. However, your **`ViewModel` survives in memory**, retaining loaded data without re-fetching from the network.
@@ -378,17 +380,17 @@ graph TD
 
 Jetpack Compose represents the most significant shift in Android history. Instead of imperatively mutating UI elements (`button.setEnabled(false)`), you write declarative Kotlin functions annotated with `@Composable` that describe what the UI should look like for a given state.
 
-### 4.1 The Core Mental Model: UI = $f(\text{State})$
+### 4.1 The Core Mental Model: UI = f(State)
 
 When state changes, Jetpack Compose executes **Recomposition**: it intelligently re-invokes the composable functions whose inputs have changed while skipping unchanged subtrees.
 
-```mermaid
+{% <mermaid> %}
 graph LR
     State["Application State"] -->|"Passes into"| Composable["@Composable Function f(State)"]
     Composable -->|"Emits"| NodeTree["UI Layout Tree"]
     NodeTree -->|"User Action (Tap, Scroll)"| Event["User Event"]
     Event -->|"Updates"| State
-```
+{% </mermaid> %}
 
 ```kotlin
 @Composable
@@ -543,7 +545,7 @@ Building small demo screens is simple; keeping a codebase maintainable as featur
 
 Modern Android applications adhere to a **Layered Architecture** adhering to **Unidirectional Data Flow (UDF)**:
 
-```mermaid
+{% <mermaid> %}
 graph TD
     subgraph UI_Layer["UI Layer (View & Presentation)"]
         Compose["Jetpack Compose UI (Screens & Widgets)"]
@@ -566,7 +568,7 @@ graph TD
     UseCase -->|"Coordinates"| Repo
     Repo -->|"Reads/Writes Local Cache"| Local
     Repo -->|"Fetches Remote Updates"| Remote
-```
+{% </mermaid> %}
 
 * **UI Layer**: Renders UI components on screen and captures user events. Driven by **`ViewModel`**, which formats application state into immutable UI State objects.
 * **Domain Layer (Optional)**: Encapsulates complex business logic into single-responsibility **Use Cases**. Promotes code reuse across multiple ViewModels and simplifies unit testing.
@@ -646,7 +648,7 @@ Mobile devices frequently encounter intermittent or absent network connectivity.
 
 ### 6.1 Storage Options Comparison
 
-```mermaid
+{% <mermaid> %}
 graph TD
     Data["What kind of data are you storing?"] --> Dec1{"Key-Value or Complex Structured Data?"}
     Dec1 -->|"Small Key-Value Pairs"| Dec2{"Primitive preferences or Typed Schemas?"}
@@ -654,7 +656,7 @@ graph TD
     
     Dec2 -->|"App Settings & Flags"| PrefDS["Jetpack Preferences DataStore"]
     Dec2 -->|"Typed Objects with Protocol Buffers"| ProtoDS["Jetpack Proto DataStore"]
-```
+{% </mermaid> %}
 
 {% <alert_warning> %}
 **Deprecation Notice: SharedPreferences**: Never use legacy `SharedPreferences` in modern projects. It executes blocking I/O synchronously on the UI thread, throws runtime parsing exceptions, and lacks transactional support. Always use **Jetpack DataStore**.
@@ -821,7 +823,7 @@ Operating systems continually refine background execution limits to preserve bat
 
 **WorkManager** is the recommended solution for persistent, deferrable background work. If your task must run even if the user exits your app or the phone reboots (e.g., uploading log files, compressing image uploads, or syncing database updates), use WorkManager.
 
-```mermaid
+{% <mermaid> %}
 graph LR
     Task["WorkRequest with Constraints"] --> Enqueue["WorkManager.enqueue()"]
     Enqueue --> Scheduler["OS JobScheduler / AlarmManager"]
@@ -829,7 +831,7 @@ graph LR
     Condition -->|"Yes"| Exec["CoroutineWorker.doWork()"]
     Condition -->|"No (Wait)"| Scheduler
     Exec --> Success["Result.success()"]
-```
+{% </mermaid> %}
 
 ```kotlin
 class SyncUserDataWorker(
@@ -888,12 +890,12 @@ Production-grade applications rely on comprehensive testing pipelines to prevent
 
 ### 9.1 The Android Testing Pyramid
 
-```mermaid
+{% <mermaid> %}
 graph TD
     E2E["10% End-to-End Tests (Maestro / Real Flows)"]
     Integration["20% Integration Tests (Room DB, Repositories)"]
     Unit["70% Unit Tests (ViewModels, UseCases, Logic)"]
-```
+{% </mermaid> %}
 
 1. **Unit Tests (Local JVM)**: Run on your development machine within milliseconds. Test pure business logic, Use Cases, Repository data mapping, and ViewModel state transitions without spinning up an Android emulator.
 2. **Integration Tests**: Verify interactions between Room database DAOs, local files, and repositories using an in-memory database (`Room.inMemoryDatabaseBuilder`).
@@ -1000,7 +1002,7 @@ Before deploying an application to thousands of real users, you must harden its 
 The **OWASP Mobile Application Security Verification Standard (MASVS)** defines the security baselines for mobile apps:
 
 * **Hardware-Backed Keystore**: Never store private encryption keys or access tokens in plaintext files or standard preferences. Use the **Android Keystore System** to generate and store cryptographic keys inside hardware-isolated enclaves (TEE / StrongBox).
-* **Jetpack Security (EncryptedSharedPreferences)**: Encrypts keys and values automatically using AES-256 GCM.
+* **Encrypted Data Storage**: Jetpack Security's `EncryptedSharedPreferences` / `EncryptedFile` were **officially deprecated in mid-2025** — do not adopt them in new projects. The recommended pattern is storing data with **Jetpack DataStore** and encrypting sensitive values yourself with hardware-backed **Android Keystore** keys (AES/GCM), or using Google's **Tink** library, which is what the deprecated library used internally.
 * **Network Security Configuration**: Disable cleartext HTTP traffic across your application by default:
   ```xml
   <!-- res/xml/network_security_config.xml -->
@@ -1086,13 +1088,13 @@ Never upload raw `.apk` files to the Google Play Store. Always generate an **And
 
 The most effective way to solidify your Android engineering skills is by building end-to-end applications that progressively introduce higher architectural complexity.
 
-```mermaid
+{% <mermaid> %}
 graph TD
     M1["Milestone 1: QuickConvert (UnitPulse)<br/>Focus: Compose UI, State, M3"] --> M2["Milestone 2: PulseRoutine<br/>Focus: Room DB, DataStore, Type-Safe Nav"]
     M2 --> M3["Milestone 3: Chronicle Notes & Audio<br/>Focus: Hardware Audio, Full-Text Search, Gestures"]
     M3 --> M4["Milestone 4: DevPulse GitHub Explorer<br/>Focus: Retrofit, Paging 3, Network Cache, Coil"]
     M4 --> M5["Milestone 5 (Capstone): TrackCraft Pro<br/>Focus: Foreground Service, GPS, Google Maps, WorkManager, DI"]
-```
+{% </mermaid> %}
 
 ### Milestone 1: QuickConvert (UnitPulse)
 * **Goal**: Build an intuitive, interactive metric and currency conversion utility with responsive animations.
