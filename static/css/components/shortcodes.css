@@ -37,6 +37,20 @@
     height: auto;
 }
 
+/* Mermaid diagram containers - light theme */
+[data-theme="cc-light"] pre.mermaid {
+    background: rgba(248, 250, 252, 0.9);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    margin: 1.5rem 0;
+}
+
+[data-theme="cc-light"] pre.mermaid svg {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Alerts - dark theme contrast */
 [data-theme="cc-dark"] .alert {
     border-width: 1px;
@@ -187,17 +201,122 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Pretty links - dark theme */
-[data-theme="cc-dark"] .pretty-link {
-    background: rgba(63, 63, 70, 0.2);
-    border: 1px solid rgba(82, 82, 91, 0.3);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    transition: all 0.2s ease;
+/* Pretty links - dark and light themes */
+.pretty-link-card {
+    border-radius: 0.75rem;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
 }
 
-[data-theme="cc-dark"] .pretty-link:hover {
-    background: rgba(63, 63, 70, 0.35);
-    border-color: rgba(82, 82, 91, 0.5);
+.pretty-link-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.pretty-link-card .pretty-link-title {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+
+.pretty-link-card .pretty-link-description {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+[data-theme="cc-dark"] .pretty-link-card {
+    background: rgba(24, 24, 27, 0.55);
+    border: 1px solid rgba(63, 63, 70, 0.4);
+    border-left: 3px solid rgba(148, 163, 184, 0.35);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="cc-dark"] .pretty-link-card:hover {
+    background: rgba(39, 39, 42, 0.65);
+    border-color: rgba(96, 165, 250, 0.5);
+    border-left-color: #60a5fa;
     transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="cc-dark"] .pretty-link-icon-box {
+    background: rgba(148, 163, 184, 0.1);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    color: #60a5fa;
+}
+
+[data-theme="cc-dark"] .pretty-link-card:hover .pretty-link-icon-box {
+    background: rgba(96, 165, 250, 0.18);
+    border-color: rgba(96, 165, 250, 0.45);
+    transform: scale(1.06);
+}
+
+[data-theme="cc-dark"] .pretty-link-title {
+    color: #f3f4f6;
+}
+
+[data-theme="cc-dark"] .pretty-link-card:hover .pretty-link-title {
+    color: #93c5fd;
+}
+
+[data-theme="cc-dark"] .pretty-link-description {
+    color: #9ca3af;
+}
+
+[data-theme="cc-dark"] .pretty-link-url {
+    color: #60a5fa;
+    opacity: 0.85;
+}
+
+[data-theme="cc-dark"] .pretty-link-card:hover .pretty-link-url {
+    opacity: 1;
+}
+
+/* Light theme pretty links */
+[data-theme="cc-light"] .pretty-link-card {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-left: 3px solid rgba(59, 130, 246, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="cc-light"] .pretty-link-card:hover {
+    background: #ffffff;
+    border-color: rgba(59, 130, 246, 0.5);
+    border-left-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="cc-light"] .pretty-link-icon-box {
+    background: rgba(239, 246, 255, 0.9);
+    border: 1px solid rgba(191, 219, 254, 0.8);
+    color: #2563eb;
+}
+
+[data-theme="cc-light"] .pretty-link-card:hover .pretty-link-icon-box {
+    background: rgba(219, 234, 254, 1);
+    border-color: rgba(96, 165, 250, 0.8);
+    transform: scale(1.06);
+}
+
+[data-theme="cc-light"] .pretty-link-title {
+    color: #0f172a;
+}
+
+[data-theme="cc-light"] .pretty-link-card:hover .pretty-link-title {
+    color: #1d4ed8;
+}
+
+[data-theme="cc-light"] .pretty-link-description {
+    color: #475569;
+}
+
+[data-theme="cc-light"] .pretty-link-url {
+    color: #2563eb;
+    opacity: 0.9;
 }
