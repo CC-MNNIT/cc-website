@@ -346,6 +346,11 @@ function initTheme() {
 
     // Update logo when theme changes
     updateLogoForTheme(userTheme);
+
+    // Re-render Mermaid diagrams for the new theme
+    if (typeof window.renderMermaidDiagrams === "function") {
+      window.renderMermaidDiagrams(userTheme);
+    }
   });
 }
 

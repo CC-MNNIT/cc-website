@@ -1633,36 +1633,93 @@ graph TD
               var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
               var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
 
-              // Initialize and run Mermaid only when loaded
-              window.initMermaid = function() {
-                var mermaidTheme = "dark";
-                if(currentUserTheme == "cc-light") {
-                  mermaidTheme = "light";
+              // Initialize and render Mermaid diagrams dynamically with the active theme
+              var isRenderingMermaid = false;
+              var pendingMermaidTheme = null;
+
+              window.renderMermaidDiagrams = async function(theme) {
+                if (typeof mermaid === 'undefined') {
+                  return;
                 }
-                
-                if (typeof mermaid !== 'undefined') {
-                  mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
-                  
-                  // Function to render mermaid diagrams
-                  var renderMermaid = async function() {
-                    const mermaidElements = document.querySelectorAll('.mermaid');
-                    if (mermaidElements.length > 0) {
-                        await mermaid.run({
-                            nodes: mermaidElements
-                        });
+
+                var activeTheme = theme || localStorage.getItem('theme') || window.fallbackTheme || 'cc-dark';
+
+                if (isRenderingMermaid) {
+                  pendingMermaidTheme = activeTheme;
+                  return;
+                }
+
+                isRenderingMermaid = true;
+
+                try {
+                  var isLight = (activeTheme === 'cc-light' || activeTheme === 'light');
+                  var mermaidTheme = isLight ? 'default' : 'dark';
+
+                  var mermaidElements = document.querySelectorAll('.mermaid');
+                  if (mermaidElements.length === 0) {
+                    isRenderingMermaid = false;
+                    return;
+                  }
+
+                  // 1. Cache raw diagram text before initial render
+                  mermaidElements.forEach(function(elem) {
+                    if (!elem.getAttribute('data-mermaid-src')) {
+                      elem.setAttribute('data-mermaid-src', elem.textContent.trim());
                     }
-                  };
-                  
-                  // Check if DOMContentLoaded has already fired
-                  if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', renderMermaid);
-                  } else {
-                    // DOMContentLoaded already fired, run immediately
-                    renderMermaid();
+                  });
+
+                  // 2. Re-initialize Mermaid config with the new theme
+                  mermaid.initialize({
+                    startOnLoad: false,
+                    theme: mermaidTheme,
+                    securityLevel: 'loose',
+                    fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
+                    flowchart: {
+                      htmlLabels: true,
+                      useMaxWidth: true,
+                      curve: 'basis',
+                      wrappingWidth: 260
+                    }
+                  });
+
+                  // 3. Restore original diagram code and reset data-processed flag
+                  mermaidElements.forEach(function(elem) {
+                    var src = elem.getAttribute('data-mermaid-src');
+                    if (src) {
+                      elem.textContent = src;
+                      elem.removeAttribute('data-processed');
+                    }
+                  });
+
+                  // 4. Re-run Mermaid to generate fresh SVGs for the active theme
+                  await mermaid.run({
+                    nodes: mermaidElements
+                  });
+                } catch (e) {
+                  console.error('Error rendering Mermaid diagram:', e);
+                } finally {
+                  isRenderingMermaid = false;
+                  if (pendingMermaidTheme !== null) {
+                    var nextTheme = pendingMermaidTheme;
+                    pendingMermaidTheme = null;
+                    window.renderMermaidDiagrams(nextTheme);
                   }
                 }
               };
-              
+
+              window.initMermaid = function() {
+                var currentTheme = localStorage.getItem('theme') || window.fallbackTheme || 'cc-dark';
+                var runInitial = function() {
+                  window.renderMermaidDiagrams(currentTheme);
+                };
+
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', runInitial);
+                } else {
+                  runInitial();
+                }
+              };
+
               // Auto-initialize if Mermaid is already loaded
               if (typeof mermaid !== 'undefined') {
                 window.initMermaid();
