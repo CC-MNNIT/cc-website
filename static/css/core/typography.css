@@ -100,6 +100,25 @@ h3,
     display: none !important;
 }
 
+/* Inline code, kbd, and samp elements inside gradient headings in dark theme.
+   Headings use -webkit-text-fill-color: transparent for the text-clip gradient,
+   which child <code> inherits; because <code> has its own background-color box,
+   the transparent fill renders the text invisible. Restore explicit text fill
+   and match the warm golden-amber theme accent. */
+:is([data-theme="dark"], [data-theme="cc-dark"]) :is(h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .events-section-title, .roadmaps-title) :is(code, kbd, samp) {
+    background: rgba(255, 199, 88, 0.12);
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: #ECC475;
+    color: #ECC475;
+    border: 1px solid rgba(255, 199, 88, 0.28);
+}
+
+/* Ensure inline code everywhere in dark theme always fills with its computed color */
+:is([data-theme="dark"], [data-theme="cc-dark"]) :not(pre) > code {
+    -webkit-text-fill-color: currentColor;
+}
+
 
 /* 6. Body Text */
 [data-theme="cc-dark"] p,
