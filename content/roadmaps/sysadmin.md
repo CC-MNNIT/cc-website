@@ -141,10 +141,10 @@ graph TD
 
 {% <mermaid> %}
 graph TD
-    P1["1. Firmware (UEFI / BIOS)"] --> P2["2. Bootloader (GRUB2)"]
-    P2 --> P3["3. Kernel Initialization & initramfs"]
-    P3 --> P4["4. Init System (systemd PID 1)"]
-    P4 --> P5["5. System Targets & User Login"]
+    P1["Phase 1: Firmware (UEFI / BIOS)"] --> P2["Phase 2: Bootloader (GRUB2)"]
+    P2 --> P3["Phase 3: Kernel Initialization & initramfs"]
+    P3 --> P4["Phase 4: Init System (systemd PID 1)"]
+    P4 --> P5["Phase 5: System Targets & User Login"]
 {% </mermaid> %}
 
 1. **UEFI / BIOS**: Executes the Power-On Self-Test (POST), initializes base hardware, and reads the EFI System Partition (ESP) on the boot disk.
@@ -340,11 +340,11 @@ DNS translates human-readable domain names into IP addresses. Understanding the 
 
 {% <mermaid> %}
 graph TD
-    Client["Client System (Resolver)"] --> LocalCache{"1. Local Cache / /etc/hosts"}
-    LocalCache -->|"Cache Miss"| Recursor["2. Recursive DNS Resolver (e.g. 1.1.1.1, ISP)"]
-    Recursor --> Root["3. Root DNS Servers (.)"]
-    Root --> TLD["4. TLD DNS Servers (.in / .com)"]
-    TLD --> Authoritative["5. Authoritative Nameserver (ns1.cc-club.in)"]
+    Client["Client System (Resolver)"] --> LocalCache{"Step 1: Local Cache / /etc/hosts"}
+    LocalCache -->|"Cache Miss"| Recursor["Step 2: Recursive DNS Resolver (e.g. 1.1.1.1, ISP)"]
+    Recursor --> Root["Step 3: Root DNS Servers (.)"]
+    Root --> TLD["Step 4: TLD DNS Servers (.in / .com)"]
+    TLD --> Authoritative["Step 5: Authoritative Nameserver (ns1.cc-club.in)"]
     Authoritative -->|"Returns A Record: 192.0.2.1"| Recursor
     Recursor --> Client
 {% </mermaid> %}
@@ -579,11 +579,11 @@ When production systems fail, panic is the enemy. Competent administrators follo
 
 {% <mermaid> %}
 graph TD
-    Symptom["1. Verify the Symptom<br/>What is failing? What changed? What is the user impact?"] --> Evidence["2. Gather Empirical Evidence<br/>Inspect logs, metrics, socket states, and resource utilization"]
-    Evidence --> Hypothesis["3. Formulate a Testable Hypothesis<br/>'Disk I/O latency on /var is causing database connection timeouts'"]
-    Hypothesis --> Test["4. Test the Hypothesis in Isolation<br/>Validate with iostat, strace, or non-destructive probes"]
-    Test --> Fix["5. Apply Controlled Remediation<br/>Implement minimum viable fix and verify metrics recover"]
-    Fix --> RCA["6. Root Cause Analysis (RCA)<br/>Write a blameless postmortem to permanently prevent recurrence"]
+    Symptom["Step 1: Verify the Symptom<br/>What is failing? What changed? What is the user impact?"] --> Evidence["Step 2: Gather Empirical Evidence<br/>Inspect logs, metrics, socket states, and resource utilization"]
+    Evidence --> Hypothesis["Step 3: Formulate a Testable Hypothesis<br/>'Disk I/O latency on /var is causing database connection timeouts'"]
+    Hypothesis --> Test["Step 4: Test the Hypothesis in Isolation<br/>Validate with iostat, strace, or non-destructive probes"]
+    Test --> Fix["Step 5: Apply Controlled Remediation<br/>Implement minimum viable fix and verify metrics recover"]
+    Fix --> RCA["Step 6: Root Cause Analysis (RCA)<br/>Write a blameless postmortem to permanently prevent recurrence"]
 {% </mermaid> %}
 
 ### 9.2 The USE Method for Resource Bottlenecks

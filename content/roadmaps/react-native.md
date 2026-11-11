@@ -226,9 +226,9 @@ npx expo start
 
 {% <mermaid> %}
 graph TD
-    Choice["Which Expo Workflow should you use?"] --> W1["1. Expo Go"]
-    Choice --> W2["2. Development Builds (expo-dev-client)"]
-    Choice --> W3["3. Bare / Prebuild Native Project"]
+    Choice["Which Expo Workflow should you use?"] --> W1["Workflow 1: Expo Go"]
+    Choice --> W2["Workflow 2: Development Builds (expo-dev-client)"]
+    Choice --> W3["Workflow 3: Bare / Prebuild Native Project"]
 
     W1 --> D1["Zero native setup. Scan QR code in Expo Go app.<br/>Limitation: Cannot use custom C++/Kotlin/Swift native libraries."]
     W2 --> D2["Industry Standard. Generates a custom debug binary for your device.<br/>Supports all native modules, custom SDKs, and full Hot Reload."]

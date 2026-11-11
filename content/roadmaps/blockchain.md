@@ -377,19 +377,19 @@ A smart contract on a blockchain is useless without an interface. Decentralized 
 
 {% <mermaid> %}
 graph TD
-    subgraph ClientTier["1. Client Tier (Browser / Mobile)"]
+    subgraph ClientTier["Tier 1: Client Tier (Browser / Mobile)"]
         UI["Web Frontend (Next.js / React / TypeScript)"]
         Wallet["Crypto Wallet (MetaMask / Phantom / Rabby)"]
         Wagmi["Client Library (Viem / Wagmi / Ethers.js)"]
     end
 
-    subgraph MiddlewareTier["2. Data & Indexing Tier"]
+    subgraph MiddlewareTier["Tier 2: Data & Indexing Tier"]
         RPC["JSON-RPC Node Provider (Alchemy / Infura / Local Node)"]
         TheGraph["Decentralized Indexer (The Graph Subgraph / Envio)"]
         IPFS["Decentralized Storage (IPFS / Arweave for metadata)"]
     end
 
-    subgraph ProtocolTier["3. On-Chain Protocol Tier"]
+    subgraph ProtocolTier["Tier 3: On-Chain Protocol Tier"]
         L1["L1 Ethereum / L2 Arbitrum Network"]
         Contracts["Deployed Smart Contracts (Vault, Governance, Token)"]
     end
@@ -444,11 +444,11 @@ On Web2 systems, a critical bug triggers an emergency database rollback. On Web3
 
 {% <mermaid> %}
 graph TD
-    Vulns["Top Smart Contract Vulnerabilities"] --> V1["1. Reentrancy Attacks"]
-    Vulns --> V2["2. Price Oracle Manipulation"]
-    Vulns --> V3["3. Broken Access Controls"]
-    Vulns --> V4["4. Signature Replay & Malleability"]
-    Vulns --> V5["5. Front-Running & MEV Exploits"]
+    Vulns["Top Smart Contract Vulnerabilities"] --> V1["Vulnerability 1: Reentrancy Attacks"]
+    Vulns --> V2["Vulnerability 2: Price Oracle Manipulation"]
+    Vulns --> V3["Vulnerability 3: Broken Access Controls"]
+    Vulns --> V4["Vulnerability 4: Signature Replay & Malleability"]
+    Vulns --> V5["Vulnerability 5: Front-Running & MEV Exploits"]
 {% </mermaid> %}
 
 #### 1. Reentrancy Attacks

@@ -34,10 +34,10 @@ Before selecting a framework or writing UI code, you must understand what fundam
 
 {% <mermaid> %}
 graph TD
-    Desktop["Desktop Application Ecosystem"] --> P1["1. Unrestricted Hardware & OS Access"]
-    Desktop --> P2["2. Complex Window & Workspace Management"]
-    Desktop --> P3["3. High-Density Ergonomics (Keyboard & Mouse)"]
-    Desktop --> P4["4. Long-Running Heavy Background Execution"]
+    Desktop["Desktop Application Ecosystem"] --> P1["Pillar 1: Unrestricted Hardware & OS Access"]
+    Desktop --> P2["Pillar 2: Complex Window & Workspace Management"]
+    Desktop --> P3["Pillar 3: High-Density Ergonomics (Keyboard & Mouse)"]
+    Desktop --> P4["Pillar 4: Long-Running Heavy Background Execution"]
 
     P1 --> D1["Direct POSIX/Win32 file streams, local sockets, sub-processes, GPU shaders"]
     P2 --> D2["Multi-window instances, dialogs, resizable viewports, multi-monitor displays"]
@@ -101,11 +101,11 @@ Desktop frameworks differ fundamentally in how they render pixels and interact w
 
 {% <mermaid> %}
 graph TD
-    Arch["Desktop Architecture Models"] --> A1["1. Bundled Chromium (Electron)"]
-    Arch --> A2["2. Native System WebView (Tauri, Wails)"]
-    Arch --> A3["3. Custom GPU Rendering (Flutter Desktop, Dioxus Native – experimental)"]
-    Arch --> A4["4. Declarative Multiplatform (Compose Desktop, Avalonia)"]
-    Arch --> A5["5. Native OS Toolkits (Qt, WinUI 3, SwiftUI/AppKit, GTK)"]
+    Arch["Desktop Architecture Models"] --> A1["Model 1: Bundled Chromium (Electron)"]
+    Arch --> A2["Model 2: Native System WebView (Tauri, Wails)"]
+    Arch --> A3["Model 3: Custom GPU Rendering (Flutter Desktop, Dioxus Native – experimental)"]
+    Arch --> A4["Model 4: Declarative Multiplatform (Compose Desktop, Avalonia)"]
+    Arch --> A5["Model 5: Native OS Toolkits (Qt, WinUI 3, SwiftUI/AppKit, GTK)"]
 {% </mermaid> %}
 
 ### Architecture 1: Web Frontend + Bundled Chromium Runtime (Electron)

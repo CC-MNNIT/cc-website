@@ -56,23 +56,23 @@ Beginners frequently confuse these three components:
 
 {% <mermaid> %}
 graph TD
-    subgraph AppLevel["1. Your Application Layer"]
+    subgraph AppLevel["Layer 1: Your Application Layer"]
         App["Your Dart Widgets & Business Logic"]
     end
 
-    subgraph FrameworkLevel["2. Flutter Framework (Pure Dart)"]
+    subgraph FrameworkLevel["Layer 2: Flutter Framework (Pure Dart)"]
         M3["Material Design 3 & Cupertino Libraries"]
         Widgets["Widget Composition Layer"]
         Rendering["RenderObject Layout & Painting Layer"]
     end
 
-    subgraph EngineLevel["3. Flutter Engine (C++)"]
+    subgraph EngineLevel["Layer 3: Flutter Engine (C++)"]
         Impeller["Impeller GPU Graphics Pipeline"]
         TextEngine["Text Layout (LibTxt & HarfBuzz)"]
         DartRuntime["Dart VM & Garbage Collector"]
     end
 
-    subgraph EmbedderLevel["4. Platform Embedder"]
+    subgraph EmbedderLevel["Layer 4: Platform Embedder"]
         Platform["Host OS (Android NDK / iOS UIKit / macOS / Win32 / Linux / Web)"]
     end
 
@@ -380,12 +380,12 @@ Used when a widget holds internal mutable state that changes during its lifetime
 
 {% <mermaid> %}
 graph TD
-    CreateState["1. createState()"] --> InitState["2. initState() (One-time setup)"]
-    InitState --> DidChange["3. didChangeDependencies()"]
-    DidChange --> Build["4. build() (Evaluated frequently)"]
+    CreateState["Step 1: createState()"] --> InitState["Step 2: initState() (One-time setup)"]
+    InitState --> DidChange["Step 3: didChangeDependencies()"]
+    DidChange --> Build["Step 4: build() (Evaluated frequently)"]
     Build --> SetState{"User Event triggers setState()"}
     SetState -->|"Marks Element Dirty"| Build
-    Build --> Dispose["5. dispose() (Cancel streams, controllers)"]
+    Build --> Dispose["Step 5: dispose() (Cancel streams, controllers)"]
 {% </mermaid> %}
 
 ```dart
@@ -440,17 +440,17 @@ Why is Flutter so fast despite recreating immutable widget objects constantly? F
 
 {% <mermaid> %}
 graph TD
-    subgraph Tree1["1. Widget Tree (Immutable Blueprints)"]
+    subgraph Tree1["Tree 1: Widget Tree (Immutable Blueprints)"]
         W1["Padding Widget"] --> W2["Container Widget"]
         W2 --> W3["Text Widget"]
     end
 
-    subgraph Tree2["2. Element Tree (Persistent Structural Skeleton)"]
+    subgraph Tree2["Tree 2: Element Tree (Persistent Structural Skeleton)"]
         E1["Padding Element"] --> E2["Container Element"]
         E2 --> E3["Text Element"]
     end
 
-    subgraph Tree3["3. RenderObject Tree (Layout & GPU Painting)"]
+    subgraph Tree3["Tree 3: RenderObject Tree (Layout & GPU Painting)"]
         R1["RenderPadding"] --> R2["RenderDecoratedBox"]
         R2 --> R3["RenderParagraph"]
     end
