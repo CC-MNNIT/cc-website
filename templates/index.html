@@ -155,7 +155,13 @@
                     startOnLoad: false,
                     theme: mermaidTheme,
                     securityLevel: 'loose',
-                    fontFamily: 'Inter, sans-serif'
+                    fontFamily: 'Inter, system-ui, -apple-system, sans-serif',
+                    flowchart: {
+                      htmlLabels: true,
+                      useMaxWidth: true,
+                      curve: 'basis',
+                      wrappingWidth: 260
+                    }
                   });
 
                   // 3. Restore original diagram code and reset data-processed flag

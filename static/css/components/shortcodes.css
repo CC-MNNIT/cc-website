@@ -12,6 +12,37 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+/* Mermaid diagram containers & typography reset:
+   Override vendor pre's `word-break: break-all` and prose's `overflow-wrap: anywhere`
+   so words in diagram nodes and cluster labels never split in half mid-word.
+   Ensure rendered SVG fonts match sans-serif font metrics instead of wide monospace. */
+pre.mermaid {
+    font-family: var(--font-main, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+pre.mermaid svg {
+    max-width: 100%;
+    height: auto;
+    font-family: var(--font-main, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+}
+
+pre.mermaid :is(div, span, p, text, foreignObject, .label, .nodeLabel, .edgeLabel, .cluster-label, .cluster-label *) {
+    word-break: normal;
+    overflow-wrap: normal;
+    letter-spacing: normal;
+    font-family: var(--font-main, 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+}
+
+pre.mermaid .cluster-label,
+pre.mermaid .cluster-label foreignObject,
+pre.mermaid .cluster-label span,
+pre.mermaid .cluster-label text {
+    overflow: visible;
+}
+
 /* Mermaid diagram containers - dark theme */
 :is([data-theme="dark"], [data-theme="cc-dark"]) pre.mermaid {
     background: rgba(24, 24, 27, 0.6);

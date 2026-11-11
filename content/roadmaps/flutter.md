@@ -57,19 +57,19 @@ Beginners frequently confuse these three components:
 {% <mermaid> %}
 graph TD
     subgraph AppLevel["Layer 1: Your Application Layer"]
-        App["Your Dart Widgets & Business Logic"]
+        App["Your Dart Widgets &<br/>Business Logic"]
     end
 
     subgraph FrameworkLevel["Layer 2: Flutter Framework (Pure Dart)"]
-        M3["Material Design 3 & Cupertino Libraries"]
+        M3["Material Design 3 &<br/>Cupertino Libraries"]
         Widgets["Widget Composition Layer"]
-        Rendering["RenderObject Layout & Painting Layer"]
+        Rendering["RenderObject Layout &<br/>Painting Layer"]
     end
 
     subgraph EngineLevel["Layer 3: Flutter Engine (C++)"]
         Impeller["Impeller GPU Graphics Pipeline"]
-        TextEngine["Text Layout (LibTxt & HarfBuzz)"]
-        DartRuntime["Dart VM & Garbage Collector"]
+        TextEngine["Text Layout<br/>(LibTxt & HarfBuzz)"]
+        DartRuntime["Dart VM &<br/>Garbage Collector"]
     end
 
     subgraph EmbedderLevel["Layer 4: Platform Embedder"]
