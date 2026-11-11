@@ -1325,12 +1325,12 @@ graph TD
 <p>The single most-requested integration pattern — and the one most often implemented wrongly. Here is the complete session-based flow:</p>
 <pre class="mermaid border border-gray-500/15">
 graph TD
-    Login["1. User submits credentials (HTTPS POST)"] --> Verify["2. Server verifies bcrypt/argon2 hash"]
-    Verify -->|"Valid"| Session["3. Create session row in store (Redis/DB)<br/>+ Set HTTP-only, Secure, SameSite cookie"]
-    Verify -->|"Invalid"| Fail["4. 401 response + rate-limit check"]
-    Session --> Request["5. Browser sends cookie automatically on every request"]
-    Request --> Auth["6. Auth middleware validates session<br/>(cheap Redis lookup)"]
-    Auth --> Authz["7. Authorization: role/permission check per route"]
+    Login["Step 1: User submits credentials (HTTPS POST)"] --> Verify["Step 2: Server verifies bcrypt/argon2 hash"]
+    Verify -->|"Valid"| Session["Step 3: Create session row in store (Redis/DB)<br/>+ Set HTTP-only, Secure, SameSite cookie"]
+    Verify -->|"Invalid"| Fail["Step 4: 401 response + rate-limit check"]
+    Session --> Request["Step 5: Browser sends cookie automatically on every request"]
+    Request --> Auth["Step 6: Auth middleware validates session<br/>(cheap Redis lookup)"]
+    Auth --> Authz["Step 7: Authorization: role/permission check per route"]
     Authz -->|"Admin only"| Admin["Admin data"]
     Authz -->|"Owner only"| Own["Own resources (userId matches record)"]
 </pre>

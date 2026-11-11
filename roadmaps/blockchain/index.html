@@ -874,19 +874,19 @@ graph TD
 <h3 id="6-1-the-3-tier-dapp-architecture">6.1 The 3-Tier dApp Architecture</h3>
 <pre class="mermaid border border-gray-500/15">
 graph TD
-    subgraph ClientTier["1. Client Tier (Browser / Mobile)"]
+    subgraph ClientTier["Tier 1: Client Tier (Browser / Mobile)"]
         UI["Web Frontend (Next.js / React / TypeScript)"]
         Wallet["Crypto Wallet (MetaMask / Phantom / Rabby)"]
         Wagmi["Client Library (Viem / Wagmi / Ethers.js)"]
     end
 
-    subgraph MiddlewareTier["2. Data & Indexing Tier"]
+    subgraph MiddlewareTier["Tier 2: Data & Indexing Tier"]
         RPC["JSON-RPC Node Provider (Alchemy / Infura / Local Node)"]
         TheGraph["Decentralized Indexer (The Graph Subgraph / Envio)"]
         IPFS["Decentralized Storage (IPFS / Arweave for metadata)"]
     end
 
-    subgraph ProtocolTier["3. On-Chain Protocol Tier"]
+    subgraph ProtocolTier["Tier 3: On-Chain Protocol Tier"]
         L1["L1 Ethereum / L2 Arbitrum Network"]
         Contracts["Deployed Smart Contracts (Vault, Governance, Token)"]
     end
@@ -931,11 +931,11 @@ graph TD
 <h3 id="7-1-the-top-smart-contract-vulnerabilities">7.1 The Top Smart Contract Vulnerabilities</h3>
 <pre class="mermaid border border-gray-500/15">
 graph TD
-    Vulns["Top Smart Contract Vulnerabilities"] --> V1["1. Reentrancy Attacks"]
-    Vulns --> V2["2. Price Oracle Manipulation"]
-    Vulns --> V3["3. Broken Access Controls"]
-    Vulns --> V4["4. Signature Replay & Malleability"]
-    Vulns --> V5["5. Front-Running & MEV Exploits"]
+    Vulns["Top Smart Contract Vulnerabilities"] --> V1["Vulnerability 1: Reentrancy Attacks"]
+    Vulns --> V2["Vulnerability 2: Price Oracle Manipulation"]
+    Vulns --> V3["Vulnerability 3: Broken Access Controls"]
+    Vulns --> V4["Vulnerability 4: Signature Replay & Malleability"]
+    Vulns --> V5["Vulnerability 5: Front-Running & MEV Exploits"]
 </pre>
 <h4 id="1-reentrancy-attacks">1. Reentrancy Attacks</h4>
 <ul>
