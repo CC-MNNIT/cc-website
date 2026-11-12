@@ -266,6 +266,43 @@ volumes:
 
 **The exercise**: containerize your own full-stack application (the Web Development roadmap's milestones are perfect candidates) and push the images to `ghcr.io`.
 
+### 4.4 Reproducible Toolchains: Nix & Flakes (Advanced Elective)
+
+Docker solves "same runtime everywhere" for your *application* — but your *tooling* (Node 22 vs 20, Terraform CLI versions, kubectl, linters) still varies between laptops and CI runners. **Nix** attacks that at the package-manager level: every package is addressed by the cryptographic hash of its exact build inputs, so a declared environment is byte-identical on every machine that builds it.
+
+* **Declarative**: Tools are declared in files, never installed by hand.
+* **Reproducible**: `flake.lock` pins exact versions — the same culture as Terraform's lockfile and GitOps, applied to your toolchain.
+* **Atomic & rollbacks**: Every environment change is a generation you can roll back to instantly.
+* **Conflict-free**: Multiple versions of the same tool coexist per project.
+
+```nix
+# flake.nix — a pinned dev environment for the CC Pulse project
+{
+  description = "CC Pulse development environment";
+
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+
+  outputs = { self, nixpkgs }: {
+    devShells.x86_64-linux.default = nixpkgs.legacyPackages.x86_64-linux.mkShell {
+      packages = [
+        nodejs_22
+        docker-compose
+        kubectl
+        terraform
+      ];
+    };
+  };
+}
+```
+
+```bash
+nix develop    # enter the exact declared environment — every time, on every machine
+```
+
+{% <alert_warning> %}
+**The honest caveat**: Nix has the steepest learning curve in this entire roadmap, and its enterprise adoption — while growing fast — is still niche next to Docker and Terraform. Treat it as an *advanced elective*: master Docker and Terraform first, then reach for Nix when "reproducible tooling" becomes a felt pain. On-ramps like `devenv` and the Determinate Systems installer smooth the rough edges, and **NixOS** extends the same declarative model to entire operating systems — server configuration as code, the deepest expression of Stage 7's IaC philosophy.
+{% </alert_warning> %}
+
 ---
 
 ## 5. Stage 4: Deploying to a VPS — Nginx, TLS & systemd
@@ -274,7 +311,7 @@ Before orchestration platforms, learn the classic path: a Virtual Private Server
 
 * Provision a VPS with your [GitHub Education Pack credits](https://education.github.com/pack), SSH in with your hardened key setup.
 * Run your Docker image on the server; place Nginx in front as a reverse proxy ([full Nginx config pattern in the SysAdmin roadmap](@/roadmaps/sysadmin.md)).
-* Automate certificates with **Certbot** (`certbot --nginx`) — never manual TLS.
+* Automate certificates with **Certbot** (`certbot --nginx`) — never manual TLS. **Caddy** is the modern alternative that provisions and renews certificates automatically by design — worth a look for new projects.
 * Register your application as a systemd service so it restarts on failure and on boot.
 * Point your custom domain from the Education Pack at the server and verify the full chain: domain → DNS → TLS → Nginx → container.
 
@@ -360,7 +397,9 @@ kubectl rollout undo deployment/pulse-api  # instant rollback
 ```
 
 * **Learn locally first**: `minikube` or `kind` give you a full cluster on your laptop — no cloud bill.
-* **Helm**: Once applications grow beyond a few YAML files, Helm packages them as versioned, parameterized charts (the npm of Kubernetes).
+* **Helm** packages applications as versioned, parameterized charts (the npm of Kubernetes); **Kustomize** layers environment-specific patches over base manifests without templating — most production repos use one or the other.
+* **Ingress controllers**: the default `ingress-nginx` is common, but **Traefik** is the modern alternative with automatic certificate discovery — worth knowing both.
+* **`k9s`**: the terminal UI nearly every operator runs — navigating pods, logs, and events at keyboard speed instead of typing `kubectl get` forever.
 * **The deepest concepts**: liveness/readiness probes (how K8s knows your app is healthy), resource requests/limits, ConfigMaps and Secrets, and horizontal pod autoscaling.
 
 ---
@@ -462,6 +501,8 @@ graph LR
 
 * **The SRE connection**: Define **SLOs** (service level objectives — e.g., "99.9% of requests under 300ms") and alert on *burn rate*, not every hiccup. The [SysAdmin roadmap's Milestone 9](@/roadmaps/sysadmin.md) is a complete hands-on Prometheus/Grafana deployment — do it.
 * **In CI/CD**: Observability closes the loop from the pipeline diagram in Stage 1 — alerts trigger rollbacks, postmortems feed back into new tests.
+* **Secrets management at scale**: Spreading secrets across CI variables and `.env` files stops scaling the moment multiple environments and teammates appear. The production patterns are **SOPS + age** (encrypted secrets committed safely to Git) or **HashiCorp Vault** / **Infisical** (centralized secret servers with rotation and audit logs).
+* **Operations hygiene**: `pre-commit` hooks catch secrets and lint issues *before* they reach Git — shift every quality gate as far left as it can go.
 
 ---
 
