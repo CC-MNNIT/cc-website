@@ -265,7 +265,7 @@ Mastering your tools ensures frictionless development.
 
 ### 3.1 Installing the Flutter SDK & `flutter doctor`
 
-1. **Install Flutter SDK**: Download the stable release for your OS (Linux, macOS, or Windows). Extract the archive and add the `bin/` directory to your system `PATH`.
+1. **Install Flutter SDK**: Download the stable release for your OS (Linux, macOS, or Windows) — Flutter 3.50 with Dart 3.14 at the time of writing; Flutter now ships at least four stable releases per year, so check the current version rather than memorizing one. Extract the archive and add the `bin/` directory to your system `PATH`.
 2. **Run Flutter Doctor**:
    ```bash
    flutter doctor -v
@@ -300,19 +300,21 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.4.0 <4.0.0"
+  # Version numbers below are illustrative — always check the current
+  # stable releases of each package on pub.dev before pinning.
+  sdk: ">=3.9.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_riverpod: ^2.5.1
-  dio: ^5.4.3
-  go_router: ^14.1.4
+  flutter_riverpod: ^3.0.0
+  dio: ^5.7.0
+  go_router: ^16.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
@@ -320,7 +322,23 @@ flutter:
     - assets/images/
 ```
 
-### 3.4 The Development Workflow: Hot Reload vs. Hot Restart
+### 3.4 The Day-One Package Kit
+
+Every real Flutter project reaches for the same handful of packages in its first week. Learn them by the *problem they solve*, not by name — and judge any new package on pub.dev by four signals before installing: **likes, pub points, download popularity, and recency of commits** (a package abandoned two years ago is a liability).
+
+| Problem you will hit in week one | Package | Note |
+| :--- | :--- | :--- |
+| Loading remote images with caching | `cached_network_image` | Raw `Image.network` has no disk caching |
+| SVG assets | `flutter_svg` | SVG is not supported natively |
+| Google Fonts without bundling TTFs | `google_fonts` | Runtime fetch with caching |
+| Background sync & periodic tasks | `workmanager` | Deferrable work (Android WorkManager / iOS BGTaskScheduler under the hood) |
+| Long-running foreground work (GPS, audio) | `flutter_background_service` | The foreground-service analog |
+| Crash & error monitoring | `sentry_flutter` or `firebase_crashlytics` | Learn about crashes before users report them |
+| Mocking in Dart tests | `mocktail` | The Dart-standard mock library |
+
+**Rule of thumb**: add a package when you feel the problem, not before. Every dependency is compile time, update churn, and supply-chain surface — see Stage 14's dependency hygiene.
+
+### 3.5 The Development Workflow: Hot Reload vs. Hot Restart
 
 * **Hot Reload (`r` in terminal / ⚡ in IDE)**: Sub-second update. Injects updated code into the running Dart VM and re-runs the current `build()` methods. **App state is preserved** (e.g., text entered into fields or active scroll positions stay intact).
 * **Hot Restart (`R` in terminal)**: Re-runs the entire application from `main()`, clearing in-memory state while maintaining a warm simulator/emulator connection.
@@ -584,7 +602,19 @@ ThemeData(
 
 State management is the most actively debated topic in the Flutter community. Beginners often get overwhelmed by competing libraries before understanding the fundamental problem state management solves.
 
-### 6.1 The State Spectrum
+### 6.1 The State Management Ladder
+
+Before comparing libraries, understand the progression. Each rung exists because the previous one hits a wall — skipping rungs is why beginners install heavy libraries to manage a single checkbox:
+
+1. **`setState()`** — state local to one widget. Zero ceremony. Wall: inaccessible outside that widget.
+2. **`InheritedWidget`** — Flutter's built-in mechanism for scoped data access down the tree. Wall: verbose API, no lifecycle management.
+3. **Provider** — `InheritedWidget` with ergonomic syntax and disposal. Wall: resolved by string/type through the tree; errors are runtime, not compile-time.
+4. **Riverpod** — compile-safe providers, no `BuildContext` needed, testable without widgets. The modern default (Stage 6.5).
+5. **BLoC/Cubit** — event-driven, strict unidirectional flow for teams that need auditable state transitions (Stage 6.3's table).
+
+Interviewers and senior reviewers expect you to articulate *why* each rung exists — not just which package you typed into `pubspec.yaml`.
+
+### 6.2 The State Spectrum
 
 {% <mermaid> %}
 graph TD
@@ -601,15 +631,29 @@ graph TD
 * **Ephemeral State**: State that lives cleanly within a single widget (e.g., active page view index, animated toggle button, checkbox selection). **Use `setState()`**. Installing a 3rd-party library to manage a simple checkbox is an anti-pattern.
 * **Shared / Application State**: State that must be accessed, modified, and synchronized across different screens, business logic services, and background workers (e.g., authenticated user session, shopping cart contents, offline database cache).
 
-### 6.2 The Three Leading Ecosystem Solutions
+### 6.3 The Leading Libraries, Evaluated Honestly
 
 | Solution | Mental Model | Pros | Best Fit |
 | :--- | :--- | :--- | :--- |
 | **Provider** | Wraps `InheritedWidget` | Built into many official tutorials; gentle initial learning curve. | Small to medium projects; legacy codebases. |
 | **Riverpod (3.x)** | Compile-safe, global reactive providers without `BuildContext` | Created by Provider's author to fix all of Provider's flaws. Zero `ProviderNotFoundException`, auto-disposal, easy async data caching via `AsyncValue`. | **Recommended default** for modern Flutter development. |
 | **BLoC / Cubit** | Reactive stream pipeline: Events in, States out | Strict Unidirectional Data Flow, highly auditable state transitions, complete testability. | Enterprise apps, fintech, banking, and multi-developer teams. |
+| **GetX** | All-in-one: state + navigation + HTTP + DI via a global service locator | Minimal boilerplate; popular in tutorials. | **Not recommended** — see 6.4 below. |
 
-### 6.3 State Management in Practice: Riverpod Example
+### 6.4 GetX: Popular, but Not Recommended Here
+
+You will encounter **GetX** in older tutorials and existing legacy apps, so you should know what it is and why this roadmap — and much of the Flutter community in 2025–2026 — advises against it for new projects:
+
+* **What it is**: An all-in-one package bundling state management, route management, dependency injection, and even HTTP clients behind a global service locator (`Get.to()`, `Get.put()`, `Get.snackbar()`).
+* **Why it attracts beginners**: Almost zero boilerplate — you can build a working app in hours without understanding Flutter's own mechanisms.
+* **Why the community advises against it**:
+  * **Maintenance risk**: Long periods of stagnation, a single-maintainer bus factor, and community reports in 2026 of the repository disappearing entirely from GitHub. Building a career skill on it is a bet on that bus factor.
+  * **Service locator, not DI**: Dependencies resolve at *runtime* through globals — the same class of runtime failures TypeScript's compiler and Riverpod's providers are designed to eliminate.
+  * **Global mutable state**: `GetxController` instances are globally reachable, making rebuild scoping and test isolation harder as apps grow.
+  * **Coupling**: Navigation, snackbars, and state live in one API — business logic ends up entangled with UI concerns.
+* **The practical guidance**: Read GetX code if a job hands you a legacy app (migration guides exist: `Get.to()` → `go_router`, `GetxController` → Riverpod `Notifier`). But invest your learning time in **Riverpod** or **BLoC** — the concepts transfer to GetX in an afternoon; the reverse is not true.
+
+### 6.5 State Management in Practice: Riverpod Example
 
 ```dart
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -661,6 +705,8 @@ class ProjectListScreen extends ConsumerWidget {
   }
 }
 ```
+
+> **Riverpod 3.x codegen**: In production codebases, the `riverpod_generator` package declares providers with annotations (`@riverpod`) and generates the boilerplate at build time. The manual API shown above remains fully supported — and is the right thing to learn first, because codegen is a convenience, not a different concept.
 
 ---
 
@@ -723,6 +769,83 @@ lib/
 └── main.dart                    # Dependency setup & entry point
 ```
 
+### 7.3 Naming the Pattern: MVVM with `ChangeNotifier`
+
+The architecture above is usually some flavor of **MVVM** (Model–View–ViewModel): widgets are the *View*, your Notifiers/Blocs are the *ViewModel*, and entities/repositories are the *Model*. Flutter's built-in lightweight MVVM uses `ChangeNotifier` (or `ValueNotifier`) as the ViewModel and `ListenableBuilder`/`AnimatedBuilder` as the view binding — a pattern worth knowing because Flutter's own documentation demonstrates it, and because it needs zero dependencies:
+
+```dart
+class CounterViewModel extends ChangeNotifier {
+  int _count = 0;
+  int get count => _count;
+
+  void increment() {
+    _count++;
+    notifyListeners(); // the "VM" announces state changes to listening views
+  }
+}
+```
+
+The moment your ViewModel needs dependency injection, testability without widget trees, or cross-screen state, graduate to Riverpod (or BLoC) — the same MVVM separation, stronger guarantees.
+
+### 7.4 Dependency Injection: Riverpod + `get_it`
+
+Riverpod doubles as dependency injection for anything your widgets consume. For pure-Dart services that never touch a widget (repositories, API clients, database drivers), the community standard is **`get_it`** — a service locator with optional `injectable` code-generation:
+
+```dart
+import 'package:get_it/get_it.dart';
+
+final getIt = GetIt.instance;
+
+void configureDependencies() {
+  getIt.registerLazySingleton<ApiClient>(() => ApiClient());
+  getIt.registerLazySingleton<UserRepository>(
+    () => UserRepositoryImpl(api: getIt<ApiClient>()),
+  );
+}
+
+// Anywhere in pure Dart code — no BuildContext required:
+final repo = getIt<UserRepository>();
+```
+
+The split that works in real codebases: **`get_it` wires pure-Dart services; Riverpod exposes state to widgets.** Both are runtime-registered, so keep constructor injection (passing dependencies explicitly) wherever possible — it is what makes unit tests trivial.
+
+### 7.5 Error Modeling: Sealed Results
+
+Stage 2's sealed classes have a job: modeling every operation that can fail. Instead of throwing exceptions across layer boundaries, return an explicit result and force callers to handle both cases:
+
+```dart
+sealed class Result<T> {
+  const Result();
+}
+
+class Ok<T> extends Result<T> {
+  final T value;
+  const Ok(this.value);
+}
+
+class Err<T> extends Result<T> {
+  final String message;
+  const Err(this.message);
+}
+
+Future<Result<List<Project>>> fetchProjects() async {
+  try {
+    return Ok(await api.getProjects());
+  } on ApiException catch (e) {
+    return Err(e.userMessage);
+  }
+}
+
+// The caller cannot ignore the failure case — the compiler enforces it:
+final result = await fetchProjects();
+switch (result) {
+  case Ok(:final value):   render(value);
+  case Err(:final message): showError(message);
+}
+```
+
+Hand-rolled `Result` types like this are perfectly fine for beginners. If you want batteries included later, `fpdart` provides `Either`/`Task` abstractions — but the pattern matters more than the package.
+
 ---
 
 ## 8. Stage 7: Modern Navigation & Routing
@@ -773,11 +896,100 @@ For applications with persistent bottom navigation bars (where switching between
 
 ---
 
-## 9. Stage 8: Networking, Serialization & Offline Persistence
+## 9. Stage 8: Forms, Input & User Feedback
+
+Forms are where most real applications earn their keep — and where unhandled edge cases (validation, focus, keyboard overlap) embarrass beginners. Flutter's form system is widget-based and fully testable.
+
+### 9.1 Building and Validating a Form
+
+```dart
+import 'package:flutter/material.dart';
+
+class RegistrationForm extends StatefulWidget {
+  const RegistrationForm({super.key});
+
+  @override
+  State<RegistrationForm> createState() => _RegistrationFormState();
+}
+
+class _RegistrationFormState extends State<RegistrationForm> {
+  final _formKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
+
+  @override
+  void dispose() {
+    _emailController.dispose(); // ALWAYS dispose controllers
+    super.dispose();
+  }
+
+  void _submit() {
+    if (!_formKey.currentState!.validate()) return; // runs all validators
+    final email = _emailController.text;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Registered $email')),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: _formKey,
+      child: Column(
+        children: [
+          TextFormField(
+            controller: _emailController,
+            keyboardType: TextInputType.emailAddress,
+            decoration: const InputDecoration(labelText: 'Email'),
+            validator: (value) {
+              if (value == null || value.isEmpty) return 'Email is required';
+              if (!value.contains('@')) return 'Enter a valid email';
+              return null; // null means valid
+            },
+          ),
+          FilledButton(onPressed: _submit, child: const Text('Register')),
+        ],
+      ),
+    );
+  }
+}
+```
+
+* **`GlobalKey<FormState>` + `validate()`** triggers every descendant `validator` and returns whether all passed — one call validates the whole form.
+* **Focus management**: `FocusNode` and `TextInputAction.next` move users between fields; `unfocus()` dismisses the keyboard before showing dialogs.
+* **User feedback primitives**: `SnackBar` (transient messages), `showDialog` (blocking modals), `showModalBottomSheet` (option pickers) — and `KeyboardAvoidingView`-style overlap handling via `MediaQuery.viewInsets`.
+
+---
+
+## 10. Stage 9: Networking, Serialization & Offline Persistence
 
 Real-world apps connect to cloud backends, stream payloads, and persist data locally for offline resiliency.
 
-### 9.1 Networking with Dio
+### 9.1 Starting Simple: The `http` Package
+
+Before installing an HTTP framework, make an API call with the standard `http` package and feel what it actually does — the pain you experience here is exactly what Dio was built to remove:
+
+```dart
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+Future<List<Project>> fetchProjects() async {
+  final response = await http.get(
+    Uri.parse('https://api.cc-club.in/v1/projects'),
+    headers: {'Accept': 'application/json'},
+  );
+
+  if (response.statusCode != 200) {
+    throw ApiException('Server responded ${response.statusCode}');
+  }
+
+  final List<dynamic> data = jsonDecode(response.body) as List<dynamic>;
+  return data.map((item) => Project.fromJson(item as Map<String, dynamic>)).toList();
+}
+```
+
+Notice everything you had to do by hand: build headers per request, check `statusCode` (like the browser's `fetch`, Dart's `http` does not throw on error statuses), decode JSON, and map maps into objects. Now imagine doing that for fifty endpoints with authentication tokens and refresh logic — **that is the moment Dio earns its install**.
+
+### 9.2 Graduating to Dio: Interceptors, Cancellation & Timeouts
 
 While Flutter includes a basic `http` package, **`dio`** is the industry standard for production apps due to its robust feature set:
 
@@ -814,7 +1026,31 @@ dio.interceptors.add(
 );
 ```
 
-### 9.2 Robust JSON Serialization with `freezed`
+### 9.3 JSON Serialization: From Manual Parsing to `freezed`
+
+Same ladder, same philosophy. Step one — write parsing by hand once, so you understand what codegen automates:
+
+```dart
+class RepoDto {
+  final int id;
+  final String name;
+  final int stars;
+
+  const RepoDto({required this.id, required this.name, required this.stars});
+
+  factory RepoDto.fromJson(Map<String, dynamic> json) {
+    return RepoDto(
+      id: json['id'] as int,
+      name: json['name'] as String,
+      // Hand-rolled null/type handling — verbose, and one missed `as int?`
+      // on an optional field becomes a runtime crash:
+      stars: (json['stargazers_count'] as num?)?.toInt() ?? 0,
+    );
+  }
+}
+```
+
+Step two — generate this boilerplate with **`json_serializable`** (type-safe, zero drift between schema and parser). Step three — upgrade to **`freezed`** when you also want immutable models, `copyWith`, structural equality, and sealed union types generated for you:
 
 Manual `Map<String, dynamic>` parsing is error-prone. Combine **`freezed`** and **`json_serializable`** to generate immutable, type-safe data models:
 
@@ -838,7 +1074,7 @@ class ProjectModel with _$ProjectModel {
 }
 ```
 
-### 9.3 Local Persistence & Offline-First Strategy
+### 9.4 Local Persistence & Offline-First Strategy
 
 | Storage Mechanism | Recommended Package | Best Use Case |
 | :--- | :--- | :--- |
@@ -852,11 +1088,55 @@ class ProjectModel with _$ProjectModel {
 
 ---
 
-## 10. Stage 9: Native Platform Channels & Hardware Integration
+## 11. Stage 10: Animations & Motion
+
+Motion is what separates a functional app from a polished one — and Flutter gives you two tiers of tooling:
+
+* **Implicit animations** — the `Animated*` widget family. Swap `Container` for `AnimatedContainer` and every property change now animates automatically. Also: `AnimatedOpacity`, `AnimatedAlign`, `AnimatedPositioned`, and `Hero` for shared-element transitions between screens (an image that "flies" from a list tile into its detail page).
+* **Explicit animations** — full control via an `AnimationController` driving a `Tween`:
+
+```dart
+class _ProgressRingState extends State<ProgressRing>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    vsync: this, // ties the animation to the widget's frame callbacks
+    duration: const Duration(seconds: 2),
+  )..forward();
+
+  late final Animation<double> _progress = CurvedAnimation(
+    parent: _controller,
+    curve: Curves.easeOutCubic,
+  );
+
+  @override
+  void dispose() {
+    _controller.dispose(); // ALWAYS dispose controllers
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _progress,
+      builder: (context, child) => CustomPaint(
+        painter: ProgressRingPainter(value: _progress.value),
+        child: child,
+      ),
+    );
+  }
+}
+```
+
+* **The decision rule**: property changes between two known states → implicit. Motion that loops, responds to gestures, or needs precise sequencing → explicit `AnimationController`. Complex sprite/interactive animation → the `Rive` or `lottie` packages.
+* **Performance rule**: animate `Transform` and `Opacity`; animating layout properties (`width`, `padding`) forces re-layout every frame.
+
+---
+
+## 12. Stage 11: Native Platform Channels & Hardware Integration
 
 Flutter renders its own UI, but whenever you need native device capabilities—such as Bluetooth Low Energy, pedometer hardware sensors, or native payment SDKs—Flutter provides **Platform Channels**.
 
-### 10.1 The Platform Channel Architecture
+### 11.1 The Platform Channel Architecture
 
 Flutter communicates with the host operating system using an asynchronous message-passing bus:
 
@@ -870,9 +1150,10 @@ graph LR
 
 * **`MethodChannel`**: For request-response asynchronous method invocation (e.g., querying battery level or triggering a native haptic feedback motor).
 * **`EventChannel`**: For continuous event streaming from native platform sensors to Dart (e.g., continuous accelerometer updates).
-* **`Dart FFI (Foreign Function Interface)`**: For binding high-performance C/C++/Rust shared libraries directly in Dart with zero IPC overhead.
+* **`Dart FFI (Foreign Function Interface)`**: For binding high-performance C/C++/Rust shared libraries directly in Dart with zero IPC overhead. As of **Dart 3.14**, direct Dart↔native interop is stable and `ffigen` generates bindings from C headers automatically — most hand-written FFI boilerplate is now avoidable.
+* **Background execution**: Deferrable work (periodic sync, upload retries) belongs in **`workmanager`**; long-running foreground work (GPS tracking, audio) needs **`flutter_background_service`** with a persistent notification — mirroring the native constraints described in the Android roadmap's WorkManager stage.
 
-### 10.2 Implementing a Custom MethodChannel
+### 11.2 Implementing a Custom MethodChannel
 
 #### Flutter (Dart Side)
 ```dart
@@ -906,11 +1187,11 @@ MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "in.cc_club.pulse/batt
 
 ---
 
-## 11. Stage 10: Testing, DevTools & Performance Profiling
+## 13. Stage 12: Testing, DevTools & Performance Profiling
 
 A robust application requires high test coverage across all layers of the testing pyramid.
 
-### 11.1 The Flutter Testing Pyramid
+### 12.1 The Flutter Testing Pyramid
 
 {% <mermaid> %}
 graph TD
@@ -967,7 +1248,28 @@ appId: in.cc_club.pulse
 - assertVisible: "Flutter & Dart Roadmap"
 ```
 
-### 11.2 Flutter DevTools & Profiling
+### 12.2 Golden Tests, Integration Tests & Mocking
+
+Beyond unit and widget tests, three more layers complete a professional suite:
+
+* **Golden tests** — assert that a widget renders *pixel-identically* to a saved reference image. Perfect for catching accidental visual regressions in shared components:
+
+```dart
+testWidgets('ClubMemberCard matches golden image', (tester) async {
+  await tester.pumpWidget(const MaterialApp(home: Scaffold(body: ClubMemberCard(
+    name: 'Aman Sharma', role: 'Commits: 42', isFollowed: false, onToggleFollow: {},
+  ))));
+  await expectLater(
+    find.byType(ClubMemberCard),
+    matchesGoldenFile('goldens/club_member_card.png'),
+  );
+});
+```
+
+* **Integration tests** — the `integration_test` package runs *on a real device or emulator* (unlike widget tests, which run headless), exercising actual platform channels and rendering.
+* **Mocking with `mocktail`** — the Dart-standard mock library for stubbing repositories and API clients in unit tests; pairs with the `Result` pattern from Stage 6 so failure paths are trivially testable (`when(() => repo.fetch()).thenThrow(...)`).
+
+### 12.3 Flutter DevTools & Profiling
 
 Press `Ctrl+Shift+P` (or `Cmd+Shift+P`) and launch **Flutter DevTools**:
 
@@ -977,9 +1279,48 @@ Press `Ctrl+Shift+P` (or `Cmd+Shift+P`) and launch **Flutter DevTools**:
 
 ---
 
-## 12. Stage 11: Security, Hardening & Production Release
+## 14. Stage 13: Accessibility & Internationalization
 
-### 12.1 Mobile Application Security Checklist
+These two are absent from most tutorials and required by most production apps — and Flutter has first-class tooling for both.
+
+### 14.1 Accessibility
+
+* **`Semantics`**: Every widget already exposes an implicit semantic node; annotate custom widgets so screen readers (TalkBack on Android, VoiceOver on iOS) announce them correctly:
+
+```dart
+Semantics(
+  label: 'Contribution count: 42 commits this month',
+  button: true,
+  child: GestureDetector(onTap: openStats, child: StatsCard()),
+)
+```
+
+* **The checklist**: Test with TalkBack/VoiceOver at least once; honor system text scaling (`MediaQuery.textScaler`) instead of hardcoding sizes; keep touch targets ≥ 48×48 logical pixels; maintain contrast in both themes.
+* **Why it matters**: Accessibility bugs are also legal risk in many markets — and the same semantic discipline that helps screen readers helps testability and SEO.
+
+### 14.2 Internationalization (i18n)
+
+* **The tooling**: `flutter_localizations` + the `intl` package, with `.arb` translation files and code generation (`flutter gen-l10n`):
+
+```dart
+// app_en.arb
+{
+  "contributionsTitle": "Contributions this month: {count}",
+  "@contributionsTitle": { "placeholders": { "count": { "type": "int" } } }
+}
+
+// Usage — fully type-checked, no string lookups by hand:
+Text(AppLocalizations.of(context)!.contributionsTitle(42))
+```
+
+* **Plan for it early**: Hardcoded strings scattered across widgets are one of the most expensive refactorings in Flutter. Centralizing them in `.arb` files from the first milestone makes Hindi/other-locale support a translation task, not a rewrite.
+* **RTL awareness**: Use logical properties (`EdgeInsetsDirectional`, `TextDirection.ltr/rtl`) so layouts mirror correctly for Arabic/Urdu locales.
+
+---
+
+## 15. Stage 14: Security, Hardening & Production Release
+
+### 14.1 Mobile Application Security Checklist
 
 * **Code Obfuscation**: In release builds, always pass `--obfuscate --split-debug-info`:
   ```bash
@@ -988,8 +1329,9 @@ Press `Ctrl+Shift+P` (or `Cmd+Shift+P`) and launch **Flutter DevTools**:
   This strips class and method identifiers, making decompiled APKs/IPAs nearly impossible for reverse engineers to inspect.
 * **Secrets Management**: Never commit API keys or OAuth secrets into version control. Use **`envied`** to generate compile-time constants from a `.env` file that remains ignored in Git.
 * **SSL Certificate Pinning**: Prevent Man-In-The-Middle (MITM) proxy attacks on untrusted public Wi-Fi networks by validating server certificates against pinned keys (via `HttpClient` with a `SecurityContext` or fingerprint checks in a `badCertificateCallback`).
+* **Crash & Error Monitoring**: Wire up `sentry_flutter` or `firebase_crashlytics` before your first release — silent crashes are unfixable crashes, and structured error reports turn user complaints into actionable stack traces.
 
-### 12.2 Release Pipelines
+### 14.2 Release Pipelines
 
 #### Android Release (`.aab`)
 1. Create a Java Keystore (`keytool -genkey -v -keystore release.jks ...`).
@@ -1003,11 +1345,11 @@ Press `Ctrl+Shift+P` (or `Cmd+Shift+P`) and launch **Flutter DevTools**:
 
 ---
 
-## 13. Stage 12: Cross-Platform Horizons: Desktop & Web Targets
+## 16. Stage 15: Cross-Platform Horizons: Desktop & Web Targets
 
 Flutter is no longer just a mobile framework; it is an all-screen computing canvas.
 
-### 13.1 Desktop Applications (Windows, macOS, Linux)
+### 15.1 Desktop Applications (Windows, macOS, Linux)
 
 When compiling for desktop, consider desktop-specific interaction patterns:
 
@@ -1016,7 +1358,7 @@ When compiling for desktop, consider desktop-specific interaction patterns:
 
 For a comprehensive guide to desktop processes, IPC, window management, and native packaging across all major frameworks, see our dedicated **[Desktop Application Development Roadmap](@/roadmaps/desktop-development.md)**.
 
-### 13.2 Flutter Web & WebAssembly (Wasm)
+### 15.2 Flutter Web & WebAssembly (Wasm)
 
 Starting in Flutter 3.22+, Flutter Web supports compilation directly to **WebAssembly (Wasm)**:
 
@@ -1029,7 +1371,7 @@ Starting in Flutter 3.22+, Flutter Web supports compilation directly to **WebAss
 
 ---
 
-## 14. Six Progressive Hands-On Milestone Projects
+## 17. Six Progressive Hands-On Milestone Projects
 
 Theory without application creates passive knowledge. Work through these six progressive milestone projects to transform concepts into muscle memory:
 
@@ -1074,13 +1416,14 @@ graph TD
   * Adaptive Responsive UI: Single-pane bottom navigation on mobile; dual-pane split view with sidebar on desktop and web.
   * GoRouter with authentication redirect guards.
   * Offline-first data caching with background cloud sync.
-  * Comprehensive testing suite (Unit, Widget, and Maestro E2E test flows).
+  * Comprehensive testing suite (Unit, Widget, Golden, and Maestro E2E test flows).
+  * Localization-ready user-facing strings via `intl` (`.arb` files).
   * Automated GitHub Actions CI/CD pipeline building signed release artifacts.
 * **Portfolio Value**: The definitive portfolio masterpiece demonstrating complete mastery over the cross-platform engineering lifecycle.
 
 ---
 
-## 15. Curated Official Resources
+## 18. Curated Official Resources
 
 Deepen your Flutter mastery using these vetted, high-yield documentation sources and community portals:
 
@@ -1100,7 +1443,7 @@ Deepen your Flutter mastery using these vetted, high-yield documentation sources
 
 ---
 
-## 16. Where to Next in the CC Ecosystem
+## 19. Where to Next in the CC Ecosystem
 
 This roadmap is one part of a connected learning system. Depending on where you want to go from here:
 
