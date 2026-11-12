@@ -863,12 +863,12 @@ graph TD
 <pre class="mermaid border border-gray-500/15">
 graph TD
     subgraph The Open Source Contribution Spectrum
-        C1["Documentation & DX<br/>Fix tutorials, clarify setup, document APIs"]
-        C2["Issue Triage & MREs<br/>Reproduce bugs, verify fixes, narrow logs"]
-        C3["Testing & QA<br/>Add unit tests, edge cases, regression suites"]
-        C4["UI / UX & Accessibility<br/>WCAG compliance, responsive fixes, theme styling"]
-        C5["Bug Fixes & Refactoring<br/>Solve targeted issues, resolve linter warnings"]
-        C6["Core Features & RFCs<br/>Architectural enhancements, design proposals"]
+        C1["Documentation &amp; DX<br/>Fix tutorials, clarify setup, document APIs"]
+        C2["Issue Triage &amp; MREs<br/>Reproduce bugs, verify fixes, narrow logs"]
+        C3["Testing &amp; QA<br/>Add unit tests, edge cases, regression suites"]
+        C4["UI / UX &amp; Accessibility<br/>WCAG compliance, responsive fixes, theme styling"]
+        C5["Bug Fixes &amp; Refactoring<br/>Solve targeted issues, resolve linter warnings"]
+        C6["Core Features &amp; RFCs<br/>Architectural enhancements, design proposals"]
     end
 </pre>
 <h3 id="6-1-documentation-and-developer-experience-dx">6.1 Documentation and Developer Experience (DX)</h3>
@@ -905,7 +905,7 @@ graph TD
 graph LR
     Branch["Topic Branch<br/>(Local Commit)"] --> Push["Push to Fork<br/>(origin)"]
     Push --> OpenPR["Open Pull Request<br/>(Upstream)"]
-    OpenPR --> CI["Automated CI/CD<br/>(Tests & Linting)"]
+    OpenPR --> CI["Automated CI/CD<br/>(Tests &amp; Linting)"]
     CI --> Review["Maintainer Code Review"]
     Review -->|"Changes Requested"| Revise["Push Fixes to Branch"]
     Revise --> CI
@@ -1041,11 +1041,11 @@ graph LR
 <h3 id="10-1-the-contributor-ladder">10.1 The Contributor Ladder</h3>
 <pre class="mermaid border border-gray-500/15">
 graph TD
-    User["Stage 1: User & Consumer<br/>Uses the software, reports bugs, tests releases"]
-    Triage["Stage 2: Issue Triager & Contributor<br/>Reproduces bugs, submits PRs, updates documentation"]
+    User["Stage 1: User &amp; Consumer<br/>Uses the software, reports bugs, tests releases"]
+    Triage["Stage 2: Issue Triager &amp; Contributor<br/>Reproduces bugs, submits PRs, updates documentation"]
     Reviewer["Stage 3: Peer Reviewer<br/>Reviews incoming PRs, helps newcomers, tests edge cases"]
-    Maintainer["Stage 4: Subsystem Maintainer<br/>Has triage & merge rights, guides module architecture"]
-    Core["Stage 5: Core Team & Steering Committee<br/>Guides overall roadmap, manages releases, community steward"]
+    Maintainer["Stage 4: Subsystem Maintainer<br/>Has triage &amp; merge rights, guides module architecture"]
+    Core["Stage 5: Core Team &amp; Steering Committee<br/>Guides overall roadmap, manages releases, community steward"]
 
     User --> Triage
     Triage --> Reviewer
@@ -1578,7 +1578,10 @@ I have linked the corresponding issue in the description (<code>Closes #123</cod
                       htmlLabels: true,
                       useMaxWidth: true,
                       curve: 'basis',
-                      wrappingWidth: 260
+                      wrappingWidth: 260,
+                      diagramPadding: 28,
+                      // Keep subgraph titles from overlapping node shapes
+                      subGraphTitleMargin: { top: 10, bottom: 6 }
                     }
                   });
 
@@ -1590,6 +1593,20 @@ I have linked the corresponding issue in the description (<code>Closes #123</cod
                       elem.removeAttribute('data-processed');
                     }
                   });
+
+                  // 3.5 Wait for web fonts before measuring: if Mermaid measures
+                  // label text with fallback font metrics and then paints with the
+                  // loaded Inter font, labels overflow their shapes.
+                  try {
+                    await Promise.all([
+                      document.fonts.load('400 16px Inter'),
+                      document.fonts.load('600 16px Inter'),
+                      document.fonts.load('700 16px Inter'),
+                    ]);
+                    await document.fonts.ready;
+                  } catch (fontError) {
+                    // Font loading API unavailable — render with fallback metrics
+                  }
 
                   // 4. Re-run Mermaid to generate fresh SVGs for the active theme
                   await mermaid.run({

@@ -626,7 +626,7 @@ graph TD
     Start --> P4["Track D: C++ / Python / DSA Student"]
 
     P1 --> S1["Master Kotlin syntax, types, and OOP basics"]
-    P2 --> S2["Map Java OOP to Kotlin, learn null-safety & coroutines"]
+    P2 --> S2["Map Java OOP to Kotlin, learn null-safety &amp; coroutines"]
     P3 --> S3["Leverage declarative mental model (React = Compose)"]
     P4 --> S4["Translate algorithmic logic to Kotlin, dive into Android lifecycle"]
 
@@ -842,7 +842,7 @@ graph LR
 graph TD
     NonExistent["Non-Existent"] -->|"onCreate()"| Created["Created"]
     Created -->|"onStart()"| Started["Started (Visible)"]
-    Started -->|"onResume()"| Resumed["Resumed (Foreground & Interactive)"]
+    Started -->|"onResume()"| Resumed["Resumed (Foreground &amp; Interactive)"]
     Resumed -->|"onPause()"| Paused["Paused (Partially Obscured)"]
     Paused -->|"onStop()"| Stopped["Stopped (In Background)"]
     Stopped -->|"onDestroy()"| Destroyed["Destroyed"]
@@ -1000,9 +1000,9 @@ graph LR
 <p>Modern Android applications adhere to a <strong>Layered Architecture</strong> adhering to <strong>Unidirectional Data Flow (UDF)</strong>:</p>
 <pre class="mermaid border border-gray-500/15">
 graph TD
-    subgraph UI_Layer["UI Layer (View & Presentation)"]
-        Compose["Jetpack Compose UI (Screens & Widgets)"]
-        VM["ViewModel (StateFlow & SavedStateHandle)"]
+    subgraph UI_Layer["UI Layer (View &amp; Presentation)"]
+        Compose["Jetpack Compose UI (Screens &amp; Widgets)"]
+        VM["ViewModel (StateFlow &amp; SavedStateHandle)"]
     end
 
     subgraph Domain_Layer["Domain Layer (Optional / Business Logic)"]
@@ -1095,7 +1095,7 @@ graph TD
     Dec1 -->|"Small Key-Value Pairs"| Dec2{"Primitive preferences or Typed Schemas?"}
     Dec1 -->|"Relational / Structured / Tabular"| RoomDB["Room Database (SQLite ORM)"]
     
-    Dec2 -->|"App Settings & Flags"| PrefDS["Jetpack Preferences DataStore"]
+    Dec2 -->|"App Settings &amp; Flags"| PrefDS["Jetpack Preferences DataStore"]
     Dec2 -->|"Typed Objects with Protocol Buffers"| ProtoDS["Jetpack Proto DataStore"]
 </pre>
 <div role="alert" class="alert alert-warning alert-soft"><div><p><strong>Deprecation Notice: SharedPreferences</strong>: Never use legacy <code>SharedPreferences</code> in modern projects. It executes blocking I/O synchronously on the UI thread, throws runtime parsing exceptions, and lacks transactional support. Always use <strong>Jetpack DataStore</strong>.</p>
@@ -1432,7 +1432,7 @@ graph TD
 <pre class="mermaid border border-gray-500/15">
 graph TD
     M1["Milestone 1: QuickConvert (UnitPulse)<br/>Focus: Compose UI, State, M3"] --> M2["Milestone 2: PulseRoutine<br/>Focus: Room DB, DataStore, Type-Safe Nav"]
-    M2 --> M3["Milestone 3: Chronicle Notes & Audio<br/>Focus: Hardware Audio, Full-Text Search, Gestures"]
+    M2 --> M3["Milestone 3: Chronicle Notes &amp; Audio<br/>Focus: Hardware Audio, Full-Text Search, Gestures"]
     M3 --> M4["Milestone 4: DevPulse GitHub Explorer<br/>Focus: Retrofit, Paging 3, Network Cache, Coil"]
     M4 --> M5["Milestone 5 (Capstone): TrackCraft Pro<br/>Focus: Foreground Service, GPS, Google Maps, WorkManager, DI"]
 </pre>
@@ -2044,7 +2044,10 @@ graph TD
                       htmlLabels: true,
                       useMaxWidth: true,
                       curve: 'basis',
-                      wrappingWidth: 260
+                      wrappingWidth: 260,
+                      diagramPadding: 28,
+                      // Keep subgraph titles from overlapping node shapes
+                      subGraphTitleMargin: { top: 10, bottom: 6 }
                     }
                   });
 
@@ -2056,6 +2059,20 @@ graph TD
                       elem.removeAttribute('data-processed');
                     }
                   });
+
+                  // 3.5 Wait for web fonts before measuring: if Mermaid measures
+                  // label text with fallback font metrics and then paints with the
+                  // loaded Inter font, labels overflow their shapes.
+                  try {
+                    await Promise.all([
+                      document.fonts.load('400 16px Inter'),
+                      document.fonts.load('600 16px Inter'),
+                      document.fonts.load('700 16px Inter'),
+                    ]);
+                    await document.fonts.ready;
+                  } catch (fontError) {
+                    // Font loading API unavailable — render with fallback metrics
+                  }
 
                   // 4. Re-run Mermaid to generate fresh SVGs for the active theme
                   await mermaid.run({

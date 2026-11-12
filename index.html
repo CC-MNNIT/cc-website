@@ -932,7 +932,7 @@
                     <div class="lp-roadmap-card-content">
                         <div class="lp-roadmap-text-wrapper">
                             <h3>DevOps</h3>
-                            <p>Master DevOps practices, CI/CD, and cloud infrastructure</p>
+                            <p>Master DevOps engineering: CI/CD pipelines with GitHub Actions, Docker, Kubernetes, Terraform infrastructure as code, and cloud-native operations.</p>
                         </div>
                         <a href="https://cc-club.in/roadmaps/devops/" class="lp-roadmap-btn-action">Start Learning</a>
                     </div>
@@ -1489,7 +1489,10 @@
                       htmlLabels: true,
                       useMaxWidth: true,
                       curve: 'basis',
-                      wrappingWidth: 260
+                      wrappingWidth: 260,
+                      diagramPadding: 28,
+                      // Keep subgraph titles from overlapping node shapes
+                      subGraphTitleMargin: { top: 10, bottom: 6 }
                     }
                   });
 
@@ -1501,6 +1504,20 @@
                       elem.removeAttribute('data-processed');
                     }
                   });
+
+                  // 3.5 Wait for web fonts before measuring: if Mermaid measures
+                  // label text with fallback font metrics and then paints with the
+                  // loaded Inter font, labels overflow their shapes.
+                  try {
+                    await Promise.all([
+                      document.fonts.load('400 16px Inter'),
+                      document.fonts.load('600 16px Inter'),
+                      document.fonts.load('700 16px Inter'),
+                    ]);
+                    await document.fonts.ready;
+                  } catch (fontError) {
+                    // Font loading API unavailable — render with fallback metrics
+                  }
 
                   // 4. Re-run Mermaid to generate fresh SVGs for the active theme
                   await mermaid.run({

@@ -583,7 +583,7 @@
 <pre class="mermaid border border-gray-500/15">
 graph TD
     Code["Single Dart Codebase"] --> Engine["Flutter Engine (Impeller C++ / Shaders)"]
-    Engine --> Mobile["Mobile Devices (Android APK/AAB & iOS IPA)"]
+    Engine --> Mobile["Mobile Devices (Android APK/AAB &amp; iOS IPA)"]
     Engine --> Desktop["Desktop Apps (macOS, Windows EXE, Linux)"]
     Engine --> Web["Modern Web (WebAssembly / CanvasKit)"]
 </pre>
@@ -602,19 +602,19 @@ graph TD
 <pre class="mermaid border border-gray-500/15">
 graph TD
     subgraph AppLevel["Layer 1: Your Application Layer"]
-        App["Your Dart Widgets &<br/>Business Logic"]
+        App["Your Dart Widgets &amp;<br/>Business Logic"]
     end
 
     subgraph FrameworkLevel["Layer 2: Flutter Framework (Pure Dart)"]
-        M3["Material Design 3 &<br/>Cupertino Libraries"]
+        M3["Material Design 3 &amp;<br/>Cupertino Libraries"]
         Widgets["Widget Composition Layer"]
-        Rendering["RenderObject Layout &<br/>Painting Layer"]
+        Rendering["RenderObject Layout &amp;<br/>Painting Layer"]
     end
 
     subgraph EngineLevel["Layer 3: Flutter Engine (C++)"]
         Impeller["Impeller GPU Graphics Pipeline"]
-        TextEngine["Text Layout<br/>(LibTxt & HarfBuzz)"]
-        DartRuntime["Dart VM &<br/>Garbage Collector"]
+        TextEngine["Text Layout<br/>(LibTxt &amp; HarfBuzz)"]
+        DartRuntime["Dart VM &amp;<br/>Garbage Collector"]
     end
 
     subgraph EmbedderLevel["Layer 4: Platform Embedder"]
@@ -766,7 +766,7 @@ graph LR
 <p>Mastering your tools ensures frictionless development.</p>
 <h3 id="3-1-installing-the-flutter-sdk-flutter-doctor">3.1 Installing the Flutter SDK &amp; <code>flutter doctor</code></h3>
 <ol>
-<li><strong>Install Flutter SDK</strong>: Download the stable release for your OS (Linux, macOS, or Windows). Extract the archive and add the <code>bin/</code> directory to your system <code>PATH</code>.</li>
+<li><strong>Install Flutter SDK</strong>: Download the stable release for your OS (Linux, macOS, or Windows) — Flutter 3.50 with Dart 3.14 at the time of writing; Flutter now ships at least four stable releases per year, so check the current version rather than memorizing one. Extract the archive and add the <code>bin/</code> directory to your system <code>PATH</code>.</li>
 <li><strong>Run Flutter Doctor</strong>:<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">flutter</span><span style="color: #AAD94C;"> doctor</span><span style="color: #95E6CB;"> -v</span></span></code></pre><code>flutter doctor</code> scans your development machine, reports missing platform SDKs, checks command-line utilities, and provides copy-paste commands to resolve warnings.</li>
 </ol>
 <h3 id="3-2-ide-configuration-vs-code-vs-android-studio">3.2 IDE Configuration: VS Code vs. Android Studio</h3>
@@ -791,24 +791,38 @@ graph LR
 <span class="giallo-l"><span style="color: #39BAE6;">version</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> 1.0.0+1</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #39BAE6;">environment</span><span style="color: #BFBDB6B3;">:</span></span>
-<span class="giallo-l"><span style="color: #39BAE6;">  sdk</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;&gt;=3.4.0 &lt;4.0.0&quot;</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">  # Version numbers below are illustrative — always check the current</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">  # stable releases of each package on pub.dev before pinning.</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  sdk</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;&gt;=3.9.0 &lt;4.0.0&quot;</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #39BAE6;">dependencies</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #39BAE6;">  flutter</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #39BAE6;">    sdk</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> flutter</span></span>
-<span class="giallo-l"><span style="color: #39BAE6;">  flutter_riverpod</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> ^2.5.1</span></span>
-<span class="giallo-l"><span style="color: #39BAE6;">  dio</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> ^5.4.3</span></span>
-<span class="giallo-l"><span style="color: #39BAE6;">  go_router</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> ^14.1.4</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  flutter_riverpod</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> ^3.0.0</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  dio</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> ^5.7.0</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  go_router</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> ^16.0.0</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #39BAE6;">dev_dependencies</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #39BAE6;">  flutter_test</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #39BAE6;">    sdk</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> flutter</span></span>
-<span class="giallo-l"><span style="color: #39BAE6;">  flutter_lints</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> ^4.0.0</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  flutter_lints</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> ^6.0.0</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #39BAE6;">flutter</span><span style="color: #BFBDB6B3;">:</span></span>
 <span class="giallo-l"><span style="color: #39BAE6;">  uses-material-design</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> true</span></span>
 <span class="giallo-l"><span style="color: #39BAE6;">  assets</span><span style="color: #BFBDB6B3;">:</span></span>
-<span class="giallo-l"><span>    -</span><span style="color: #AAD94C;"> assets/images/</span></span></code></pre><h3 id="3-4-the-development-workflow-hot-reload-vs-hot-restart">3.4 The Development Workflow: Hot Reload vs. Hot Restart</h3>
+<span class="giallo-l"><span>    -</span><span style="color: #AAD94C;"> assets/images/</span></span></code></pre><h3 id="3-4-the-day-one-package-kit">3.4 The Day-One Package Kit</h3>
+<p>Every real Flutter project reaches for the same handful of packages in its first week. Learn them by the <em>problem they solve</em>, not by name — and judge any new package on pub.dev by four signals before installing: <strong>likes, pub points, download popularity, and recency of commits</strong> (a package abandoned two years ago is a liability).</p>
+<table><thead><tr><th style="text-align: left">Problem you will hit in week one</th><th style="text-align: left">Package</th><th style="text-align: left">Note</th></tr></thead><tbody>
+<tr><td style="text-align: left">Loading remote images with caching</td><td style="text-align: left"><code>cached_network_image</code></td><td style="text-align: left">Raw <code>Image.network</code> has no disk caching</td></tr>
+<tr><td style="text-align: left">SVG assets</td><td style="text-align: left"><code>flutter_svg</code></td><td style="text-align: left">SVG is not supported natively</td></tr>
+<tr><td style="text-align: left">Google Fonts without bundling TTFs</td><td style="text-align: left"><code>google_fonts</code></td><td style="text-align: left">Runtime fetch with caching</td></tr>
+<tr><td style="text-align: left">Background sync &amp; periodic tasks</td><td style="text-align: left"><code>workmanager</code></td><td style="text-align: left">Deferrable work (Android WorkManager / iOS BGTaskScheduler under the hood)</td></tr>
+<tr><td style="text-align: left">Long-running foreground work (GPS, audio)</td><td style="text-align: left"><code>flutter_background_service</code></td><td style="text-align: left">The foreground-service analog</td></tr>
+<tr><td style="text-align: left">Crash &amp; error monitoring</td><td style="text-align: left"><code>sentry_flutter</code> or <code>firebase_crashlytics</code></td><td style="text-align: left">Learn about crashes before users report them</td></tr>
+<tr><td style="text-align: left">Mocking in Dart tests</td><td style="text-align: left"><code>mocktail</code></td><td style="text-align: left">The Dart-standard mock library</td></tr>
+</tbody></table>
+<p><strong>Rule of thumb</strong>: add a package when you feel the problem, not before. Every dependency is compile time, update churn, and supply-chain surface — see Stage 14's dependency hygiene.</p>
+<h3 id="3-5-the-development-workflow-hot-reload-vs-hot-restart">3.5 The Development Workflow: Hot Reload vs. Hot Restart</h3>
 <ul>
 <li><strong>Hot Reload (<code>r</code> in terminal / ⚡ in IDE)</strong>: Sub-second update. Injects updated code into the running Dart VM and re-runs the current <code>build()</code> methods. <strong>App state is preserved</strong> (e.g., text entered into fields or active scroll positions stay intact).</li>
 <li><strong>Hot Restart (<code>R</code> in terminal)</strong>: Re-runs the entire application from <code>main()</code>, clearing in-memory state while maintaining a warm simulator/emulator connection.</li>
@@ -824,7 +838,7 @@ graph LR
 graph LR
     State["Application State"] -->|"Passes into"| BuildFunc["Widget build(BuildContext)"]
     BuildFunc -->|"Returns"| WidgetTree["Immutable Widget Blueprint"]
-    WidgetTree -->|"Reconciled by"| ElementTree["Element Tree (Lifecycle & State)"]
+    WidgetTree -->|"Reconciled by"| ElementTree["Element Tree (Lifecycle &amp; State)"]
     ElementTree -->|"Renders to"| GPU["Impeller GPU Canvas"]
 </pre>
 <h3 id="4-2-statelesswidget-vs-statefulwidget">4.2 <code>StatelessWidget</code> vs. <code>StatefulWidget</code></h3>
@@ -917,7 +931,7 @@ graph TD
         E2 --> E3["Text Element"]
     end
 
-    subgraph Tree3["Tree 3: RenderObject Tree (Layout & GPU Painting)"]
+    subgraph Tree3["Tree 3: RenderObject Tree (Layout &amp; GPU Painting)"]
         R1["RenderPadding"] --> R2["RenderDecoratedBox"]
         R2 --> R3["RenderParagraph"]
     end
@@ -1022,13 +1036,23 @@ graph TD
 <hr />
 <h2 id="6-stage-5-state-management-demystified">6. Stage 5: State Management Demystified</h2>
 <p>State management is the most actively debated topic in the Flutter community. Beginners often get overwhelmed by competing libraries before understanding the fundamental problem state management solves.</p>
-<h3 id="6-1-the-state-spectrum">6.1 The State Spectrum</h3>
+<h3 id="6-1-the-state-management-ladder">6.1 The State Management Ladder</h3>
+<p>Before comparing libraries, understand the progression. Each rung exists because the previous one hits a wall — skipping rungs is why beginners install heavy libraries to manage a single checkbox:</p>
+<ol>
+<li><strong><code>setState()</code></strong> — state local to one widget. Zero ceremony. Wall: inaccessible outside that widget.</li>
+<li><strong><code>InheritedWidget</code></strong> — Flutter's built-in mechanism for scoped data access down the tree. Wall: verbose API, no lifecycle management.</li>
+<li><strong>Provider</strong> — <code>InheritedWidget</code> with ergonomic syntax and disposal. Wall: resolved by string/type through the tree; errors are runtime, not compile-time.</li>
+<li><strong>Riverpod</strong> — compile-safe providers, no <code>BuildContext</code> needed, testable without widgets. The modern default (Stage 6.5).</li>
+<li><strong>BLoC/Cubit</strong> — event-driven, strict unidirectional flow for teams that need auditable state transitions (Stage 6.3's table).</li>
+</ol>
+<p>Interviewers and senior reviewers expect you to articulate <em>why</em> each rung exists — not just which package you typed into <code>pubspec.yaml</code>.</p>
+<h3 id="6-2-the-state-spectrum">6.2 The State Spectrum</h3>
 <pre class="mermaid border border-gray-500/15">
 graph TD
     State["What kind of state are you managing?"] --> Dec1{"Ephemeral or Application-Wide?"}
     
     Dec1 -->|"Ephemeral (Local to a Single Widget)"| Local["Built-in setState() or ValueNotifier"]
-    Dec1 -->|"Application / Shared State"| Dec2{"Scope & Complexity?"}
+    Dec1 -->|"Application / Shared State"| Dec2{"Scope &amp; Complexity?"}
     
     Dec2 -->|"Small to Medium Apps"| Provider["Provider (InheritedWidget wrapper)"]
     Dec2 -->|"Modern Standard (Type-safe, No BuildContext)"| Riverpod["Riverpod 3.x (Recommended Default)"]
@@ -1038,13 +1062,29 @@ graph TD
 <li><strong>Ephemeral State</strong>: State that lives cleanly within a single widget (e.g., active page view index, animated toggle button, checkbox selection). <strong>Use <code>setState()</code></strong>. Installing a 3rd-party library to manage a simple checkbox is an anti-pattern.</li>
 <li><strong>Shared / Application State</strong>: State that must be accessed, modified, and synchronized across different screens, business logic services, and background workers (e.g., authenticated user session, shopping cart contents, offline database cache).</li>
 </ul>
-<h3 id="6-2-the-three-leading-ecosystem-solutions">6.2 The Three Leading Ecosystem Solutions</h3>
+<h3 id="6-3-the-leading-libraries-evaluated-honestly">6.3 The Leading Libraries, Evaluated Honestly</h3>
 <table><thead><tr><th style="text-align: left">Solution</th><th style="text-align: left">Mental Model</th><th style="text-align: left">Pros</th><th style="text-align: left">Best Fit</th></tr></thead><tbody>
 <tr><td style="text-align: left"><strong>Provider</strong></td><td style="text-align: left">Wraps <code>InheritedWidget</code></td><td style="text-align: left">Built into many official tutorials; gentle initial learning curve.</td><td style="text-align: left">Small to medium projects; legacy codebases.</td></tr>
 <tr><td style="text-align: left"><strong>Riverpod (3.x)</strong></td><td style="text-align: left">Compile-safe, global reactive providers without <code>BuildContext</code></td><td style="text-align: left">Created by Provider's author to fix all of Provider's flaws. Zero <code>ProviderNotFoundException</code>, auto-disposal, easy async data caching via <code>AsyncValue</code>.</td><td style="text-align: left"><strong>Recommended default</strong> for modern Flutter development.</td></tr>
 <tr><td style="text-align: left"><strong>BLoC / Cubit</strong></td><td style="text-align: left">Reactive stream pipeline: Events in, States out</td><td style="text-align: left">Strict Unidirectional Data Flow, highly auditable state transitions, complete testability.</td><td style="text-align: left">Enterprise apps, fintech, banking, and multi-developer teams.</td></tr>
+<tr><td style="text-align: left"><strong>GetX</strong></td><td style="text-align: left">All-in-one: state + navigation + HTTP + DI via a global service locator</td><td style="text-align: left">Minimal boilerplate; popular in tutorials.</td><td style="text-align: left"><strong>Not recommended</strong> — see 6.4 below.</td></tr>
 </tbody></table>
-<h3 id="6-3-state-management-in-practice-riverpod-example">6.3 State Management in Practice: Riverpod Example</h3>
+<h3 id="6-4-getx-popular-but-not-recommended-here">6.4 GetX: Popular, but Not Recommended Here</h3>
+<p>You will encounter <strong>GetX</strong> in older tutorials and existing legacy apps, so you should know what it is and why this roadmap — and much of the Flutter community in 2025–2026 — advises against it for new projects:</p>
+<ul>
+<li><strong>What it is</strong>: An all-in-one package bundling state management, route management, dependency injection, and even HTTP clients behind a global service locator (<code>Get.to()</code>, <code>Get.put()</code>, <code>Get.snackbar()</code>).</li>
+<li><strong>Why it attracts beginners</strong>: Almost zero boilerplate — you can build a working app in hours without understanding Flutter's own mechanisms.</li>
+<li><strong>Why the community advises against it</strong>:
+<ul>
+<li><strong>Maintenance risk</strong>: Long periods of stagnation, a single-maintainer bus factor, and community reports in 2026 of the repository disappearing entirely from GitHub. Building a career skill on it is a bet on that bus factor.</li>
+<li><strong>Service locator, not DI</strong>: Dependencies resolve at <em>runtime</em> through globals — the same class of runtime failures TypeScript's compiler and Riverpod's providers are designed to eliminate.</li>
+<li><strong>Global mutable state</strong>: <code>GetxController</code> instances are globally reachable, making rebuild scoping and test isolation harder as apps grow.</li>
+<li><strong>Coupling</strong>: Navigation, snackbars, and state live in one API — business logic ends up entangled with UI concerns.</li>
+</ul>
+</li>
+<li><strong>The practical guidance</strong>: Read GetX code if a job hands you a legacy app (migration guides exist: <code>Get.to()</code> → <code>go_router</code>, <code>GetxController</code> → Riverpod <code>Notifier</code>). But invest your learning time in <strong>Riverpod</strong> or <strong>BLoC</strong> — the concepts transfer to GetX in an afternoon; the reverse is not true.</li>
+</ul>
+<h3 id="6-5-state-management-in-practice-riverpod-example">6.5 State Management in Practice: Riverpod Example</h3>
 <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> &#39;package:flutter_riverpod/flutter_riverpod.dart&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// 1. Immutable State Model</span></span>
@@ -1093,6 +1133,9 @@ graph TD
 <span class="giallo-l"><span>    )</span><span style="color: #BFBDB6B3;">;</span></span>
 <span class="giallo-l"><span>  }</span></span>
 <span class="giallo-l"><span>}</span></span></code></pre>
+<blockquote>
+<p><strong>Riverpod 3.x codegen</strong>: In production codebases, the <code>riverpod_generator</code> package declares providers with annotations (<code>@riverpod</code>) and generates the boilerplate at build time. The manual API shown above remains fully supported — and is the right thing to learn first, because codegen is a convenience, not a different concept.</p>
+</blockquote>
 <hr />
 <h2 id="7-stage-6-application-architecture-project-organization">7. Stage 6: Application Architecture &amp; Project Organization</h2>
 <p>Building enterprise-grade applications requires strict separation of concerns. Avoid the beginner pitfall of writing "God Widgets"—where network requests, database reads, JSON parsing, and UI widgets are mashed into a single 1,500-line file.</p>
@@ -1100,17 +1143,17 @@ graph TD
 <p>Modern Flutter engineering adheres to <strong>Feature-First Layered Architecture</strong>:</p>
 <pre class="mermaid border border-gray-500/15">
 graph TD
-    subgraph PresentationLayer["Presentation Layer (Flutter & UI)"]
+    subgraph PresentationLayer["Presentation Layer (Flutter &amp; UI)"]
         UI["Widgets / Screens (Declarative Views)"]
         Controller["Controllers / Notifiers / Blocs (UI State)"]
     end
 
     subgraph DomainLayer["Domain Layer (Pure Dart)"]
-        Entity["Entities & Value Objects"]
+        Entity["Entities &amp; Value Objects"]
         UseCase["Use Cases / Interactors (Single Business Rules)"]
     end
 
-    subgraph DataLayer["Data Layer (Data Sources & Persistence)"]
+    subgraph DataLayer["Data Layer (Data Sources &amp; Persistence)"]
         Repo["Repository Implementation"]
         RemoteSource["Remote Data Source (Dio REST / GraphQL)"]
         LocalSource["Local Data Source (Drift SQLite / Secure Storage)"]
@@ -1142,7 +1185,65 @@ graph TD
 <span class="giallo-l"><span>│       ├── domain/              # ProjectEntity, GetStarredProjectsUseCase</span></span>
 <span class="giallo-l"><span>│       └── presentation/        # FeedScreen, ProjectTile, FeedController</span></span>
 <span class="giallo-l"><span>│</span></span>
-<span class="giallo-l"><span>└── main.dart                    # Dependency setup &amp; entry point</span></span></code></pre>
+<span class="giallo-l"><span>└── main.dart                    # Dependency setup &amp; entry point</span></span></code></pre><h3 id="7-3-naming-the-pattern-mvvm-with-changenotifier">7.3 Naming the Pattern: MVVM with <code>ChangeNotifier</code></h3>
+<p>The architecture above is usually some flavor of <strong>MVVM</strong> (Model–View–ViewModel): widgets are the <em>View</em>, your Notifiers/Blocs are the <em>ViewModel</em>, and entities/repositories are the <em>Model</em>. Flutter's built-in lightweight MVVM uses <code>ChangeNotifier</code> (or <code>ValueNotifier</code>) as the ViewModel and <code>ListenableBuilder</code>/<code>AnimatedBuilder</code> as the view binding — a pattern worth knowing because Flutter's own documentation demonstrates it, and because it needs zero dependencies:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #39BAE6;"> CounterViewModel</span><span style="color: #FF8F40;"> extends</span><span style="color: #39BAE6;"> ChangeNotifier</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  int</span><span> _count </span><span style="color: #F29668;">=</span><span style="color: #D2A6FF;"> 0</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  int</span><span style="color: #FF8F40;"> get</span><span> count </span><span style="color: #F29668;">=&gt;</span><span> _count</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  void</span><span style="color: #FFB454;"> increment</span><span>() {</span></span>
+<span class="giallo-l"><span>    _count</span><span style="color: #F29668;">++</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">    notifyListeners</span><span>()</span><span style="color: #BFBDB6B3;">;</span><span style="color: #5A6673;font-style: italic;"> // the &quot;VM&quot; announces state changes to listening views</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<p>The moment your ViewModel needs dependency injection, testability without widget trees, or cross-screen state, graduate to Riverpod (or BLoC) — the same MVVM separation, stronger guarantees.</p>
+<h3 id="7-4-dependency-injection-riverpod-get-it">7.4 Dependency Injection: Riverpod + <code>get_it</code></h3>
+<p>Riverpod doubles as dependency injection for anything your widgets consume. For pure-Dart services that never touch a widget (repositories, API clients, database drivers), the community standard is <strong><code>get_it</code></strong> — a service locator with optional <code>injectable</code> code-generation:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> &#39;package:get_it/get_it.dart&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">final</span><span> getIt </span><span style="color: #F29668;">=</span><span style="color: #39BAE6;"> GetIt</span><span>.instance</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">void</span><span style="color: #FFB454;"> configureDependencies</span><span>() {</span></span>
+<span class="giallo-l"><span>  getIt.</span><span style="color: #FFB454;">registerLazySingleton</span><span>&lt;</span><span style="color: #39BAE6;">ApiClient</span><span>&gt;(() </span><span style="color: #F29668;">=&gt;</span><span style="color: #39BAE6;"> ApiClient</span><span>())</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  getIt.</span><span style="color: #FFB454;">registerLazySingleton</span><span>&lt;</span><span style="color: #39BAE6;">UserRepository</span><span>&gt;(</span></span>
+<span class="giallo-l"><span>    () </span><span style="color: #F29668;">=&gt;</span><span style="color: #39BAE6;"> UserRepositoryImpl</span><span>(api</span><span style="color: #F29668;">:</span><span style="color: #FFB454;"> getIt</span><span>&lt;</span><span style="color: #39BAE6;">ApiClient</span><span>&gt;()),</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Anywhere in pure Dart code — no BuildContext required:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">final</span><span> repo </span><span style="color: #F29668;">=</span><span style="color: #FFB454;"> getIt</span><span>&lt;</span><span style="color: #39BAE6;">UserRepository</span><span>&gt;()</span><span style="color: #BFBDB6B3;">;</span></span></code></pre>
+<p>The split that works in real codebases: <strong><code>get_it</code> wires pure-Dart services; Riverpod exposes state to widgets.</strong> Both are runtime-registered, so keep constructor injection (passing dependencies explicitly) wherever possible — it is what makes unit tests trivial.</p>
+<h3 id="7-5-error-modeling-sealed-results">7.5 Error Modeling: Sealed Results</h3>
+<p>Stage 2's sealed classes have a job: modeling every operation that can fail. Instead of throwing exceptions across layer boundaries, return an explicit result and force callers to handle both cases:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #FF8F40;">sealed class</span><span style="color: #39BAE6;"> Result</span><span>&lt;</span><span style="color: #39BAE6;">T</span><span>&gt; {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span style="color: #39BAE6;"> Result</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #39BAE6;"> Ok</span><span>&lt;</span><span style="color: #39BAE6;">T</span><span>&gt;</span><span style="color: #FF8F40;"> extends</span><span style="color: #39BAE6;"> Result</span><span>&lt;</span><span style="color: #39BAE6;">T</span><span>&gt; {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  final</span><span style="color: #39BAE6;"> T</span><span> value</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span style="color: #39BAE6;"> Ok</span><span>(</span><span style="color: #39BAE6;font-style: italic;">this</span><span>.value)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #39BAE6;"> Err</span><span>&lt;</span><span style="color: #39BAE6;">T</span><span>&gt;</span><span style="color: #FF8F40;"> extends</span><span style="color: #39BAE6;"> Result</span><span>&lt;</span><span style="color: #39BAE6;">T</span><span>&gt; {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  final</span><span style="color: #39BAE6;"> String</span><span> message</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span style="color: #39BAE6;"> Err</span><span>(</span><span style="color: #39BAE6;font-style: italic;">this</span><span>.message)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #39BAE6;">Future</span><span>&lt;</span><span style="color: #39BAE6;">Result</span><span>&lt;</span><span style="color: #39BAE6;">List</span><span>&lt;</span><span style="color: #39BAE6;">Project</span><span>&gt;&gt;&gt;</span><span style="color: #FFB454;"> fetchProjects</span><span>() </span><span style="color: #FF8F40;">async</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  try</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #39BAE6;"> Ok</span><span>(</span><span style="color: #FF8F40;">await</span><span> api.</span><span style="color: #FFB454;">getProjects</span><span>())</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  } </span><span style="color: #FF8F40;">on</span><span style="color: #39BAE6;"> ApiException</span><span style="color: #FF8F40;"> catch</span><span> (e) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #39BAE6;"> Err</span><span>(e.userMessage)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// The caller cannot ignore the failure case — the compiler enforces it:</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">final</span><span> result </span><span style="color: #F29668;">=</span><span style="color: #FF8F40;"> await</span><span style="color: #FFB454;"> fetchProjects</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">switch</span><span> (result) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  case</span><span style="color: #39BAE6;"> Ok</span><span>(</span><span style="color: #F29668;">:</span><span style="color: #FF8F40;">final</span><span> value)</span><span style="color: #F29668;">:</span><span style="color: #FFB454;">   render</span><span>(value)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  case</span><span style="color: #39BAE6;"> Err</span><span>(</span><span style="color: #F29668;">:</span><span style="color: #FF8F40;">final</span><span> message)</span><span style="color: #F29668;">:</span><span style="color: #FFB454;"> showError</span><span>(message)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<p>Hand-rolled <code>Result</code> types like this are perfectly fine for beginners. If you want batteries included later, <code>fpdart</code> provides <code>Either</code>/<code>Task</code> abstractions — but the pattern matters more than the package.</p>
 <hr />
 <h2 id="8-stage-7-modern-navigation-routing">8. Stage 7: Modern Navigation &amp; Routing</h2>
 <p>Legacy Flutter used imperative navigation (<code>Navigator.push(context, MaterialPageRoute(...))</code>). While functional for simple prototypes, imperative routing fails in production: it struggles with browser URL deep linking, forward/backward navigation history, redirect guards, and nested navigation tabs.</p>
@@ -1181,9 +1282,86 @@ graph LR
 <span class="giallo-l"><span>)</span><span style="color: #BFBDB6B3;">;</span></span></code></pre><h4 id="persistent-bottom-navigation-with-statefulshellroute">Persistent Bottom Navigation with <code>StatefulShellRoute</code></h4>
 <p>For applications with persistent bottom navigation bars (where switching between tabs preserves individual screen scroll positions and sub-navigation backstacks), use <code>StatefulShellRoute.indexedStack</code>.</p>
 <hr />
-<h2 id="9-stage-8-networking-serialization-offline-persistence">9. Stage 8: Networking, Serialization &amp; Offline Persistence</h2>
+<h2 id="9-stage-8-forms-input-user-feedback">9. Stage 8: Forms, Input &amp; User Feedback</h2>
+<p>Forms are where most real applications earn their keep — and where unhandled edge cases (validation, focus, keyboard overlap) embarrass beginners. Flutter's form system is widget-based and fully testable.</p>
+<h3 id="9-1-building-and-validating-a-form">9.1 Building and Validating a Form</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> &#39;package:flutter/material.dart&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #39BAE6;"> RegistrationForm</span><span style="color: #FF8F40;"> extends</span><span style="color: #39BAE6;"> StatefulWidget</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span style="color: #39BAE6;"> RegistrationForm</span><span>({</span><span style="color: #39BAE6;font-style: italic;">super</span><span>.key})</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #E6C08A;">  @override</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  State</span><span>&lt;</span><span style="color: #39BAE6;">RegistrationForm</span><span>&gt;</span><span style="color: #FFB454;"> createState</span><span>() </span><span style="color: #F29668;">=&gt;</span><span style="color: #39BAE6;"> _RegistrationFormState</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #39BAE6;"> _RegistrationFormState</span><span style="color: #FF8F40;"> extends</span><span style="color: #39BAE6;"> State</span><span>&lt;</span><span style="color: #39BAE6;">RegistrationForm</span><span>&gt; {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  final</span><span> _formKey </span><span style="color: #F29668;">=</span><span style="color: #39BAE6;"> GlobalKey</span><span>&lt;</span><span style="color: #39BAE6;">FormState</span><span>&gt;()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  final</span><span> _emailController </span><span style="color: #F29668;">=</span><span style="color: #39BAE6;"> TextEditingController</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #E6C08A;">  @override</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  void</span><span style="color: #FFB454;"> dispose</span><span>() {</span></span>
+<span class="giallo-l"><span>    _emailController.</span><span style="color: #FFB454;">dispose</span><span>()</span><span style="color: #BFBDB6B3;">;</span><span style="color: #5A6673;font-style: italic;"> // ALWAYS dispose controllers</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">    super</span><span>.</span><span style="color: #FFB454;">dispose</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  void</span><span style="color: #FFB454;"> _submit</span><span>() {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    if</span><span> (</span><span style="color: #F29668;">!</span><span>_formKey.currentState</span><span style="color: #F29668;">!</span><span>.</span><span style="color: #FFB454;">validate</span><span>()) </span><span style="color: #FF8F40;">return</span><span style="color: #BFBDB6B3;">;</span><span style="color: #5A6673;font-style: italic;"> // runs all validators</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    final</span><span> email </span><span style="color: #F29668;">=</span><span> _emailController.text</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    ScaffoldMessenger</span><span>.</span><span style="color: #FFB454;">of</span><span>(context).</span><span style="color: #FFB454;">showSnackBar</span><span>(</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      SnackBar</span><span>(content</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> Text</span><span>(</span><span style="color: #AAD94C;">&#39;Registered </span><span>$</span><span style="color: #D2A6FF;">email</span><span style="color: #AAD94C;">&#39;</span><span>)),</span></span>
+<span class="giallo-l"><span>    )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #E6C08A;">  @override</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  Widget</span><span style="color: #FFB454;"> build</span><span>(</span><span style="color: #39BAE6;">BuildContext</span><span> context) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #39BAE6;"> Form</span><span>(</span></span>
+<span class="giallo-l"><span>      key</span><span style="color: #F29668;">:</span><span> _formKey,</span></span>
+<span class="giallo-l"><span>      child</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> Column</span><span>(</span></span>
+<span class="giallo-l"><span>        children</span><span style="color: #F29668;">:</span><span> [</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">          TextFormField</span><span>(</span></span>
+<span class="giallo-l"><span>            controller</span><span style="color: #F29668;">:</span><span> _emailController,</span></span>
+<span class="giallo-l"><span>            keyboardType</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> TextInputType</span><span>.emailAddress,</span></span>
+<span class="giallo-l"><span>            decoration</span><span style="color: #F29668;">:</span><span style="color: #FF8F40;"> const</span><span style="color: #39BAE6;"> InputDecoration</span><span>(labelText</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &#39;Email&#39;</span><span>),</span></span>
+<span class="giallo-l"><span>            validator</span><span style="color: #F29668;">:</span><span> (value) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">              if</span><span> (value </span><span style="color: #F29668;">==</span><span style="color: #D2A6FF;"> null</span><span style="color: #F29668;"> ||</span><span> value.isEmpty) </span><span style="color: #FF8F40;">return</span><span style="color: #AAD94C;"> &#39;Email is required&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">              if</span><span> (</span><span style="color: #F29668;">!</span><span>value.</span><span style="color: #FFB454;">contains</span><span>(</span><span style="color: #AAD94C;">&#39;@&#39;</span><span>)) </span><span style="color: #FF8F40;">return</span><span style="color: #AAD94C;"> &#39;Enter a valid email&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">              return</span><span style="color: #D2A6FF;"> null</span><span style="color: #BFBDB6B3;">;</span><span style="color: #5A6673;font-style: italic;"> // null means valid</span></span>
+<span class="giallo-l"><span>            },</span></span>
+<span class="giallo-l"><span>          ),</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">          FilledButton</span><span>(onPressed</span><span style="color: #F29668;">:</span><span> _submit, child</span><span style="color: #F29668;">:</span><span style="color: #FF8F40;"> const</span><span style="color: #39BAE6;"> Text</span><span>(</span><span style="color: #AAD94C;">&#39;Register&#39;</span><span>)),</span></span>
+<span class="giallo-l"><span>        ],</span></span>
+<span class="giallo-l"><span>      ),</span></span>
+<span class="giallo-l"><span>    )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<ul>
+<li><strong><code>GlobalKey&lt;FormState&gt;</code> + <code>validate()</code></strong> triggers every descendant <code>validator</code> and returns whether all passed — one call validates the whole form.</li>
+<li><strong>Focus management</strong>: <code>FocusNode</code> and <code>TextInputAction.next</code> move users between fields; <code>unfocus()</code> dismisses the keyboard before showing dialogs.</li>
+<li><strong>User feedback primitives</strong>: <code>SnackBar</code> (transient messages), <code>showDialog</code> (blocking modals), <code>showModalBottomSheet</code> (option pickers) — and <code>KeyboardAvoidingView</code>-style overlap handling via <code>MediaQuery.viewInsets</code>.</li>
+</ul>
+<hr />
+<h2 id="10-stage-9-networking-serialization-offline-persistence">10. Stage 9: Networking, Serialization &amp; Offline Persistence</h2>
 <p>Real-world apps connect to cloud backends, stream payloads, and persist data locally for offline resiliency.</p>
-<h3 id="9-1-networking-with-dio">9.1 Networking with Dio</h3>
+<h3 id="9-1-starting-simple-the-http-package">9.1 Starting Simple: The <code>http</code> Package</h3>
+<p>Before installing an HTTP framework, make an API call with the standard <code>http</code> package and feel what it actually does — the pain you experience here is exactly what Dio was built to remove:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> &#39;dart:convert&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> &#39;package:http/http.dart&#39;</span><span style="color: #FF8F40;"> as</span><span> http</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #39BAE6;">Future</span><span>&lt;</span><span style="color: #39BAE6;">List</span><span>&lt;</span><span style="color: #39BAE6;">Project</span><span>&gt;&gt;</span><span style="color: #FFB454;"> fetchProjects</span><span>() </span><span style="color: #FF8F40;">async</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  final</span><span> response </span><span style="color: #F29668;">=</span><span style="color: #FF8F40;"> await</span><span> http.</span><span style="color: #FFB454;">get</span><span>(</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    Uri</span><span>.</span><span style="color: #FFB454;">parse</span><span>(</span><span style="color: #AAD94C;">&#39;https://api.cc-club.in/v1/projects&#39;</span><span>),</span></span>
+<span class="giallo-l"><span>    headers</span><span style="color: #F29668;">:</span><span> {</span><span style="color: #AAD94C;">&#39;Accept&#39;</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &#39;application/json&#39;</span><span>},</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  if</span><span> (response.statusCode </span><span style="color: #F29668;">!=</span><span style="color: #D2A6FF;"> 200</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    throw</span><span style="color: #39BAE6;"> ApiException</span><span>(</span><span style="color: #AAD94C;">&#39;Server responded </span><span>${</span><span style="color: #D2A6FF;">response</span><span>.</span><span style="color: #D2A6FF;">statusCode</span><span>}</span><span style="color: #AAD94C;">&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  final</span><span style="color: #39BAE6;"> List</span><span>&lt;</span><span style="color: #39BAE6;">dynamic</span><span>&gt; data </span><span style="color: #F29668;">=</span><span style="color: #FFB454;"> jsonDecode</span><span>(response.body) </span><span style="color: #FF8F40;">as</span><span style="color: #39BAE6;"> List</span><span>&lt;</span><span style="color: #39BAE6;">dynamic</span><span>&gt;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  return</span><span> data.</span><span style="color: #FFB454;">map</span><span>((item) </span><span style="color: #F29668;">=&gt;</span><span style="color: #39BAE6;"> Project</span><span>.</span><span style="color: #FFB454;">fromJson</span><span>(item </span><span style="color: #FF8F40;">as</span><span style="color: #39BAE6;"> Map</span><span>&lt;</span><span style="color: #39BAE6;">String</span><span>,</span><span style="color: #39BAE6;"> dynamic</span><span>&gt;)).</span><span style="color: #FFB454;">toList</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<p>Notice everything you had to do by hand: build headers per request, check <code>statusCode</code> (like the browser's <code>fetch</code>, Dart's <code>http</code> does not throw on error statuses), decode JSON, and map maps into objects. Now imagine doing that for fifty endpoints with authentication tokens and refresh logic — <strong>that is the moment Dio earns its install</strong>.</p>
+<h3 id="9-2-graduating-to-dio-interceptors-cancellation-timeouts">9.2 Graduating to Dio: Interceptors, Cancellation &amp; Timeouts</h3>
 <p>While Flutter includes a basic <code>http</code> package, <strong><code>dio</code></strong> is the industry standard for production apps due to its robust feature set:</p>
 <ul>
 <li><strong>Interceptors</strong>: Automatically inject authentication tokens into headers, log requests, and intercept 401 Unauthorized responses to perform silent background token refreshes.</li>
@@ -1215,7 +1393,26 @@ graph LR
 <span class="giallo-l"><span style="color: #FF8F40;">      return</span><span> handler.</span><span style="color: #FFB454;">next</span><span>(e)</span><span style="color: #BFBDB6B3;">;</span></span>
 <span class="giallo-l"><span>    },</span></span>
 <span class="giallo-l"><span>  ),</span></span>
-<span class="giallo-l"><span>)</span><span style="color: #BFBDB6B3;">;</span></span></code></pre><h3 id="9-2-robust-json-serialization-with-freezed">9.2 Robust JSON Serialization with <code>freezed</code></h3>
+<span class="giallo-l"><span>)</span><span style="color: #BFBDB6B3;">;</span></span></code></pre><h3 id="9-3-json-serialization-from-manual-parsing-to-freezed">9.3 JSON Serialization: From Manual Parsing to <code>freezed</code></h3>
+<p>Same ladder, same philosophy. Step one — write parsing by hand once, so you understand what codegen automates:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #39BAE6;"> RepoDto</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  final</span><span style="color: #39BAE6;"> int</span><span> id</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  final</span><span style="color: #39BAE6;"> String</span><span> name</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  final</span><span style="color: #39BAE6;"> int</span><span> stars</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  const</span><span style="color: #39BAE6;"> RepoDto</span><span>({</span><span style="color: #FF8F40;">required</span><span style="color: #39BAE6;font-style: italic;"> this</span><span>.id,</span><span style="color: #FF8F40;"> required</span><span style="color: #39BAE6;font-style: italic;"> this</span><span>.name,</span><span style="color: #FF8F40;"> required</span><span style="color: #39BAE6;font-style: italic;"> this</span><span>.stars})</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  factory</span><span style="color: #39BAE6;"> RepoDto</span><span>.</span><span style="color: #FFB454;">fromJson</span><span>(</span><span style="color: #39BAE6;">Map</span><span>&lt;</span><span style="color: #39BAE6;">String</span><span>,</span><span style="color: #39BAE6;"> dynamic</span><span>&gt; json) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #39BAE6;"> RepoDto</span><span>(</span></span>
+<span class="giallo-l"><span>      id</span><span style="color: #F29668;">:</span><span> json[</span><span style="color: #AAD94C;">&#39;id&#39;</span><span>] </span><span style="color: #FF8F40;">as</span><span style="color: #39BAE6;"> int</span><span>,</span></span>
+<span class="giallo-l"><span>      name</span><span style="color: #F29668;">:</span><span> json[</span><span style="color: #AAD94C;">&#39;name&#39;</span><span>] </span><span style="color: #FF8F40;">as</span><span style="color: #39BAE6;"> String</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">      // Hand-rolled null/type handling — verbose, and one missed `as int?`</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">      // on an optional field becomes a runtime crash:</span></span>
+<span class="giallo-l"><span>      stars</span><span style="color: #F29668;">:</span><span> (json[</span><span style="color: #AAD94C;">&#39;stargazers_count&#39;</span><span>] </span><span style="color: #FF8F40;">as</span><span style="color: #39BAE6;"> num</span><span style="color: #F29668;">?</span><span>)</span><span style="color: #F29668;">?</span><span>.</span><span style="color: #FFB454;">toInt</span><span>() </span><span style="color: #F29668;">??</span><span style="color: #D2A6FF;"> 0</span><span>,</span></span>
+<span class="giallo-l"><span>    )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<p>Step two — generate this boilerplate with <strong><code>json_serializable</code></strong> (type-safe, zero drift between schema and parser). Step three — upgrade to <strong><code>freezed</code></strong> when you also want immutable models, <code>copyWith</code>, structural equality, and sealed union types generated for you:</p>
 <p>Manual <code>Map&lt;String, dynamic&gt;</code> parsing is error-prone. Combine <strong><code>freezed</code></strong> and <strong><code>json_serializable</code></strong> to generate immutable, type-safe data models:</p>
 <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #AAD94C;"> &#39;package:freezed_annotation/freezed_annotation.dart&#39;</span><span style="color: #BFBDB6B3;">;</span></span>
 <span class="giallo-l"></span>
@@ -1233,7 +1430,7 @@ graph LR
 <span class="giallo-l"></span>
 <span class="giallo-l"><span style="color: #FF8F40;">  factory</span><span style="color: #39BAE6;"> ProjectModel</span><span>.</span><span style="color: #FFB454;">fromJson</span><span>(</span><span style="color: #39BAE6;">Map</span><span>&lt;</span><span style="color: #39BAE6;">String</span><span>,</span><span style="color: #39BAE6;"> dynamic</span><span>&gt; json) </span><span style="color: #F29668;">=&gt;</span></span>
 <span class="giallo-l"><span style="color: #39BAE6;">      _$ProjectModelFromJson</span><span>(json)</span><span style="color: #BFBDB6B3;">;</span></span>
-<span class="giallo-l"><span>}</span></span></code></pre><h3 id="9-3-local-persistence-offline-first-strategy">9.3 Local Persistence &amp; Offline-First Strategy</h3>
+<span class="giallo-l"><span>}</span></span></code></pre><h3 id="9-4-local-persistence-offline-first-strategy">9.4 Local Persistence &amp; Offline-First Strategy</h3>
 <table><thead><tr><th style="text-align: left">Storage Mechanism</th><th style="text-align: left">Recommended Package</th><th style="text-align: left">Best Use Case</th></tr></thead><tbody>
 <tr><td style="text-align: left"><strong>Key-Value Settings</strong></td><td style="text-align: left"><code>shared_preferences</code></td><td style="text-align: left">App theme (dark/light), first-time onboarded flag, locale preference.</td></tr>
 <tr><td style="text-align: left"><strong>Encrypted Secrets</strong></td><td style="text-align: left"><code>flutter_secure_storage</code></td><td style="text-align: left">Auth tokens, refresh keys, biometric tokens (backed by Android Keystore / iOS Keychain).</td></tr>
@@ -1242,9 +1439,49 @@ graph LR
 <div role="alert" class="alert alert-success alert-soft"><div><p><strong>State of the Ecosystem: Drift Database</strong>: While NoSQL options like Hive and Isar have experienced periods of unmaintained status, <strong>Drift</strong> remains the most active, stable, and production-tested SQLite database abstraction in the Dart ecosystem. It provides compile-time verification of SQL queries, automatic schema migrations, and reactive Stream subscriptions.</p>
 </div></div>
 <hr />
-<h2 id="10-stage-9-native-platform-channels-hardware-integration">10. Stage 9: Native Platform Channels &amp; Hardware Integration</h2>
+<h2 id="11-stage-10-animations-motion">11. Stage 10: Animations &amp; Motion</h2>
+<p>Motion is what separates a functional app from a polished one — and Flutter gives you two tiers of tooling:</p>
+<ul>
+<li><strong>Implicit animations</strong> — the <code>Animated*</code> widget family. Swap <code>Container</code> for <code>AnimatedContainer</code> and every property change now animates automatically. Also: <code>AnimatedOpacity</code>, <code>AnimatedAlign</code>, <code>AnimatedPositioned</code>, and <code>Hero</code> for shared-element transitions between screens (an image that "flies" from a list tile into its detail page).</li>
+<li><strong>Explicit animations</strong> — full control via an <code>AnimationController</code> driving a <code>Tween</code>:</li>
+</ul>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #39BAE6;"> _ProgressRingState</span><span style="color: #FF8F40;"> extends</span><span style="color: #39BAE6;"> State</span><span>&lt;</span><span style="color: #39BAE6;">ProgressRing</span><span>&gt;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    with</span><span style="color: #39BAE6;"> SingleTickerProviderStateMixin</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  late final</span><span style="color: #39BAE6;"> AnimationController</span><span> _controller </span><span style="color: #F29668;">=</span><span style="color: #39BAE6;"> AnimationController</span><span>(</span></span>
+<span class="giallo-l"><span>    vsync</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;font-style: italic;"> this</span><span>,</span><span style="color: #5A6673;font-style: italic;"> // ties the animation to the widget&#39;s frame callbacks</span></span>
+<span class="giallo-l"><span>    duration</span><span style="color: #F29668;">:</span><span style="color: #FF8F40;"> const</span><span style="color: #39BAE6;"> Duration</span><span>(seconds</span><span style="color: #F29668;">:</span><span style="color: #D2A6FF;"> 2</span><span>),</span></span>
+<span class="giallo-l"><span>  )..</span><span style="color: #FFB454;">forward</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  late final</span><span style="color: #39BAE6;"> Animation</span><span>&lt;</span><span style="color: #39BAE6;">double</span><span>&gt; _progress </span><span style="color: #F29668;">=</span><span style="color: #39BAE6;"> CurvedAnimation</span><span>(</span></span>
+<span class="giallo-l"><span>    parent</span><span style="color: #F29668;">:</span><span> _controller,</span></span>
+<span class="giallo-l"><span>    curve</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> Curves</span><span>.easeOutCubic,</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #E6C08A;">  @override</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  void</span><span style="color: #FFB454;"> dispose</span><span>() {</span></span>
+<span class="giallo-l"><span>    _controller.</span><span style="color: #FFB454;">dispose</span><span>()</span><span style="color: #BFBDB6B3;">;</span><span style="color: #5A6673;font-style: italic;"> // ALWAYS dispose controllers</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">    super</span><span>.</span><span style="color: #FFB454;">dispose</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #E6C08A;">  @override</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  Widget</span><span style="color: #FFB454;"> build</span><span>(</span><span style="color: #39BAE6;">BuildContext</span><span> context) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span style="color: #39BAE6;"> AnimatedBuilder</span><span>(</span></span>
+<span class="giallo-l"><span>      animation</span><span style="color: #F29668;">:</span><span> _progress,</span></span>
+<span class="giallo-l"><span>      builder</span><span style="color: #F29668;">:</span><span> (context, child) </span><span style="color: #F29668;">=&gt;</span><span style="color: #39BAE6;"> CustomPaint</span><span>(</span></span>
+<span class="giallo-l"><span>        painter</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> ProgressRingPainter</span><span>(value</span><span style="color: #F29668;">:</span><span> _progress.value),</span></span>
+<span class="giallo-l"><span>        child</span><span style="color: #F29668;">:</span><span> child,</span></span>
+<span class="giallo-l"><span>      ),</span></span>
+<span class="giallo-l"><span>    )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<ul>
+<li><strong>The decision rule</strong>: property changes between two known states → implicit. Motion that loops, responds to gestures, or needs precise sequencing → explicit <code>AnimationController</code>. Complex sprite/interactive animation → the <code>Rive</code> or <code>lottie</code> packages.</li>
+<li><strong>Performance rule</strong>: animate <code>Transform</code> and <code>Opacity</code>; animating layout properties (<code>width</code>, <code>padding</code>) forces re-layout every frame.</li>
+</ul>
+<hr />
+<h2 id="12-stage-11-native-platform-channels-hardware-integration">12. Stage 11: Native Platform Channels &amp; Hardware Integration</h2>
 <p>Flutter renders its own UI, but whenever you need native device capabilities—such as Bluetooth Low Energy, pedometer hardware sensors, or native payment SDKs—Flutter provides <strong>Platform Channels</strong>.</p>
-<h3 id="10-1-the-platform-channel-architecture">10.1 The Platform Channel Architecture</h3>
+<h3 id="11-1-the-platform-channel-architecture">11.1 The Platform Channel Architecture</h3>
 <p>Flutter communicates with the host operating system using an asynchronous message-passing bus:</p>
 <pre class="mermaid border border-gray-500/15">
 graph LR
@@ -1256,9 +1493,10 @@ graph LR
 <ul>
 <li><strong><code>MethodChannel</code></strong>: For request-response asynchronous method invocation (e.g., querying battery level or triggering a native haptic feedback motor).</li>
 <li><strong><code>EventChannel</code></strong>: For continuous event streaming from native platform sensors to Dart (e.g., continuous accelerometer updates).</li>
-<li><strong><code>Dart FFI (Foreign Function Interface)</code></strong>: For binding high-performance C/C++/Rust shared libraries directly in Dart with zero IPC overhead.</li>
+<li><strong><code>Dart FFI (Foreign Function Interface)</code></strong>: For binding high-performance C/C++/Rust shared libraries directly in Dart with zero IPC overhead. As of <strong>Dart 3.14</strong>, direct Dart↔native interop is stable and <code>ffigen</code> generates bindings from C headers automatically — most hand-written FFI boilerplate is now avoidable.</li>
+<li><strong>Background execution</strong>: Deferrable work (periodic sync, upload retries) belongs in <strong><code>workmanager</code></strong>; long-running foreground work (GPS tracking, audio) needs <strong><code>flutter_background_service</code></strong> with a persistent notification — mirroring the native constraints described in the Android roadmap's WorkManager stage.</li>
 </ul>
-<h3 id="10-2-implementing-a-custom-methodchannel">10.2 Implementing a Custom MethodChannel</h3>
+<h3 id="11-2-implementing-a-custom-methodchannel">11.2 Implementing a Custom MethodChannel</h3>
 <h4 id="flutter-dart-side">Flutter (Dart Side)</h4>
 <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #FF8F40;">class</span><span style="color: #39BAE6;"> NativeBridge</span><span> {</span></span>
 <span class="giallo-l"><span style="color: #FF8F40;">  static const</span><span> _channel </span><span style="color: #F29668;">=</span><span style="color: #39BAE6;"> MethodChannel</span><span>(</span><span style="color: #AAD94C;">&#39;in.cc_club.pulse/battery&#39;</span><span>)</span><span style="color: #BFBDB6B3;">;</span></span>
@@ -1283,12 +1521,12 @@ graph LR
 <span class="giallo-l"><span>        }</span></span>
 <span class="giallo-l"><span>    }</span></span></code></pre>
 <hr />
-<h2 id="11-stage-10-testing-devtools-performance-profiling">11. Stage 10: Testing, DevTools &amp; Performance Profiling</h2>
+<h2 id="13-stage-12-testing-devtools-performance-profiling">13. Stage 12: Testing, DevTools &amp; Performance Profiling</h2>
 <p>A robust application requires high test coverage across all layers of the testing pyramid.</p>
-<h3 id="11-1-the-flutter-testing-pyramid">11.1 The Flutter Testing Pyramid</h3>
+<h3 id="12-1-the-flutter-testing-pyramid">12.1 The Flutter Testing Pyramid</h3>
 <pre class="mermaid border border-gray-500/15">
 graph TD
-    E2E["10% Integration & E2E Tests (Maestro / IntegrationTest)"]
+    E2E["10% Integration &amp; E2E Tests (Maestro / IntegrationTest)"]
     Widget["30% Widget Tests (Headless UI Component Verification)"]
     Unit["60% Unit Tests (Pure Dart Logic, Repositories, Notifiers)"]
 </pre>
@@ -1326,7 +1564,25 @@ graph TD
 <span class="giallo-l"><span>-</span><span style="color: #39BAE6;"> assertVisible</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;Computer Coding Club&quot;</span></span>
 <span class="giallo-l"><span>-</span><span style="color: #39BAE6;"> tapOn</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;Explore Projects&quot;</span></span>
 <span class="giallo-l"><span>-</span><span style="color: #39BAE6;"> inputText</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;Flutter&quot;</span></span>
-<span class="giallo-l"><span>-</span><span style="color: #39BAE6;"> assertVisible</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;Flutter &amp; Dart Roadmap&quot;</span></span></code></pre><h3 id="11-2-flutter-devtools-profiling">11.2 Flutter DevTools &amp; Profiling</h3>
+<span class="giallo-l"><span>-</span><span style="color: #39BAE6;"> assertVisible</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> &quot;Flutter &amp; Dart Roadmap&quot;</span></span></code></pre><h3 id="12-2-golden-tests-integration-tests-mocking">12.2 Golden Tests, Integration Tests &amp; Mocking</h3>
+<p>Beyond unit and widget tests, three more layers complete a professional suite:</p>
+<ul>
+<li><strong>Golden tests</strong> — assert that a widget renders <em>pixel-identically</em> to a saved reference image. Perfect for catching accidental visual regressions in shared components:</li>
+</ul>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #FFB454;">testWidgets</span><span>(</span><span style="color: #AAD94C;">&#39;ClubMemberCard matches golden image&#39;</span><span>, (tester) </span><span style="color: #FF8F40;">async</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  await</span><span> tester.</span><span style="color: #FFB454;">pumpWidget</span><span>(</span><span style="color: #FF8F40;">const</span><span style="color: #39BAE6;"> MaterialApp</span><span>(home</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> Scaffold</span><span>(body</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> ClubMemberCard</span><span>(</span></span>
+<span class="giallo-l"><span>    name</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &#39;Aman Sharma&#39;</span><span>, role</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &#39;Commits: 42&#39;</span><span>, isFollowed</span><span style="color: #F29668;">:</span><span style="color: #D2A6FF;"> false</span><span>, onToggleFollow</span><span style="color: #F29668;">:</span><span> {},</span></span>
+<span class="giallo-l"><span>  ))))</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">  await</span><span style="color: #FFB454;"> expectLater</span><span>(</span></span>
+<span class="giallo-l"><span>    find.</span><span style="color: #FFB454;">byType</span><span>(</span><span style="color: #39BAE6;">ClubMemberCard</span><span>),</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">    matchesGoldenFile</span><span>(</span><span style="color: #AAD94C;">&#39;goldens/club_member_card.png&#39;</span><span>),</span></span>
+<span class="giallo-l"><span>  )</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>})</span><span style="color: #BFBDB6B3;">;</span></span></code></pre>
+<ul>
+<li><strong>Integration tests</strong> — the <code>integration_test</code> package runs <em>on a real device or emulator</em> (unlike widget tests, which run headless), exercising actual platform channels and rendering.</li>
+<li><strong>Mocking with <code>mocktail</code></strong> — the Dart-standard mock library for stubbing repositories and API clients in unit tests; pairs with the <code>Result</code> pattern from Stage 6 so failure paths are trivially testable (<code>when(() =&gt; repo.fetch()).thenThrow(...)</code>).</li>
+</ul>
+<h3 id="12-3-flutter-devtools-profiling">12.3 Flutter DevTools &amp; Profiling</h3>
 <p>Press <code>Ctrl+Shift+P</code> (or <code>Cmd+Shift+P</code>) and launch <strong>Flutter DevTools</strong>:</p>
 <ul>
 <li><strong>Widget Inspector</strong>: Visually select any element on screen, inspect its constraints, jump directly to its source code, and toggle the <strong>Performance Overlay</strong> or <strong>Debug Paint</strong>.</li>
@@ -1334,14 +1590,47 @@ graph TD
 <li><strong>Memory Tab</strong>: Track Dart heap allocations, inspect retained memory paths, and identify memory leaks caused by unclosed streams or un-disposed controllers.</li>
 </ul>
 <hr />
-<h2 id="12-stage-11-security-hardening-production-release">12. Stage 11: Security, Hardening &amp; Production Release</h2>
-<h3 id="12-1-mobile-application-security-checklist">12.1 Mobile Application Security Checklist</h3>
+<h2 id="14-stage-13-accessibility-internationalization">14. Stage 13: Accessibility &amp; Internationalization</h2>
+<p>These two are absent from most tutorials and required by most production apps — and Flutter has first-class tooling for both.</p>
+<h3 id="14-1-accessibility">14.1 Accessibility</h3>
+<ul>
+<li><strong><code>Semantics</code></strong>: Every widget already exposes an implicit semantic node; annotate custom widgets so screen readers (TalkBack on Android, VoiceOver on iOS) announce them correctly:</li>
+</ul>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #39BAE6;">Semantics</span><span>(</span></span>
+<span class="giallo-l"><span>  label</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &#39;Contribution count: 42 commits this month&#39;</span><span>,</span></span>
+<span class="giallo-l"><span>  button</span><span style="color: #F29668;">:</span><span style="color: #D2A6FF;"> true</span><span>,</span></span>
+<span class="giallo-l"><span>  child</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> GestureDetector</span><span>(onTap</span><span style="color: #F29668;">:</span><span> openStats, child</span><span style="color: #F29668;">:</span><span style="color: #39BAE6;"> StatsCard</span><span>()),</span></span>
+<span class="giallo-l"><span>)</span></span></code></pre>
+<ul>
+<li><strong>The checklist</strong>: Test with TalkBack/VoiceOver at least once; honor system text scaling (<code>MediaQuery.textScaler</code>) instead of hardcoding sizes; keep touch targets ≥ 48×48 logical pixels; maintain contrast in both themes.</li>
+<li><strong>Why it matters</strong>: Accessibility bugs are also legal risk in many markets — and the same semantic discipline that helps screen readers helps testability and SEO.</li>
+</ul>
+<h3 id="14-2-internationalization-i18n">14.2 Internationalization (i18n)</h3>
+<ul>
+<li><strong>The tooling</strong>: <code>flutter_localizations</code> + the <code>intl</code> package, with <code>.arb</code> translation files and code generation (<code>flutter gen-l10n</code>):</li>
+</ul>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="dart"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// app_en.arb</span></span>
+<span class="giallo-l"><span>{</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">  &quot;contributionsTitle&quot;</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &quot;Contributions this month: {count}&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">  &quot;@contributionsTitle&quot;</span><span style="color: #F29668;">:</span><span> { </span><span style="color: #AAD94C;">&quot;placeholders&quot;</span><span style="color: #F29668;">:</span><span> { </span><span style="color: #AAD94C;">&quot;count&quot;</span><span style="color: #F29668;">:</span><span> { </span><span style="color: #AAD94C;">&quot;type&quot;</span><span style="color: #F29668;">:</span><span style="color: #AAD94C;"> &quot;int&quot;</span><span> } } }</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Usage — fully type-checked, no string lookups by hand:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">Text</span><span>(</span><span style="color: #39BAE6;">AppLocalizations</span><span>.</span><span style="color: #FFB454;">of</span><span>(context)</span><span style="color: #F29668;">!</span><span>.</span><span style="color: #FFB454;">contributionsTitle</span><span>(</span><span style="color: #D2A6FF;">42</span><span>))</span></span></code></pre>
+<ul>
+<li><strong>Plan for it early</strong>: Hardcoded strings scattered across widgets are one of the most expensive refactorings in Flutter. Centralizing them in <code>.arb</code> files from the first milestone makes Hindi/other-locale support a translation task, not a rewrite.</li>
+<li><strong>RTL awareness</strong>: Use logical properties (<code>EdgeInsetsDirectional</code>, <code>TextDirection.ltr/rtl</code>) so layouts mirror correctly for Arabic/Urdu locales.</li>
+</ul>
+<hr />
+<h2 id="15-stage-14-security-hardening-production-release">15. Stage 14: Security, Hardening &amp; Production Release</h2>
+<h3 id="14-1-mobile-application-security-checklist">14.1 Mobile Application Security Checklist</h3>
 <ul>
 <li><strong>Code Obfuscation</strong>: In release builds, always pass <code>--obfuscate --split-debug-info</code>:<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">flutter</span><span style="color: #AAD94C;"> build appbundle</span><span style="color: #95E6CB;"> --obfuscate --split-debug-info=./build/symbols</span></span></code></pre>This strips class and method identifiers, making decompiled APKs/IPAs nearly impossible for reverse engineers to inspect.</li>
 <li><strong>Secrets Management</strong>: Never commit API keys or OAuth secrets into version control. Use <strong><code>envied</code></strong> to generate compile-time constants from a <code>.env</code> file that remains ignored in Git.</li>
 <li><strong>SSL Certificate Pinning</strong>: Prevent Man-In-The-Middle (MITM) proxy attacks on untrusted public Wi-Fi networks by validating server certificates against pinned keys (via <code>HttpClient</code> with a <code>SecurityContext</code> or fingerprint checks in a <code>badCertificateCallback</code>).</li>
+<li><strong>Crash &amp; Error Monitoring</strong>: Wire up <code>sentry_flutter</code> or <code>firebase_crashlytics</code> before your first release — silent crashes are unfixable crashes, and structured error reports turn user complaints into actionable stack traces.</li>
 </ul>
-<h3 id="12-2-release-pipelines">12.2 Release Pipelines</h3>
+<h3 id="14-2-release-pipelines">14.2 Release Pipelines</h3>
 <h4 id="android-release-aab">Android Release (<code>.aab</code>)</h4>
 <ol>
 <li>Create a Java Keystore (<code>keytool -genkey -v -keystore release.jks ...</code>).</li>
@@ -1355,16 +1644,16 @@ graph TD
 <li>Build the archive: <code>flutter build ipa --release</code>.</li>
 </ol>
 <hr />
-<h2 id="13-stage-12-cross-platform-horizons-desktop-web-targets">13. Stage 12: Cross-Platform Horizons: Desktop &amp; Web Targets</h2>
+<h2 id="16-stage-15-cross-platform-horizons-desktop-web-targets">16. Stage 15: Cross-Platform Horizons: Desktop &amp; Web Targets</h2>
 <p>Flutter is no longer just a mobile framework; it is an all-screen computing canvas.</p>
-<h3 id="13-1-desktop-applications-windows-macos-linux">13.1 Desktop Applications (Windows, macOS, Linux)</h3>
+<h3 id="15-1-desktop-applications-windows-macos-linux">15.1 Desktop Applications (Windows, macOS, Linux)</h3>
 <p>When compiling for desktop, consider desktop-specific interaction patterns:</p>
 <ul>
 <li><strong>Mouse &amp; Keyboard Ergonomics</strong>: Mobile touch interfaces lack hover states and right-click menus. Use <code>MouseRegion</code> for hover detection, <code>ContextMenuRegion</code> for right-click popups, and <code>Shortcuts</code> / <code>Actions</code> for keyboard shortcuts (<code>Cmd/Ctrl + S</code>).</li>
 <li><strong>Multi-Window &amp; Window Management</strong>: Desktop applications can be resized freely. Use packages like <code>window_manager</code> to set minimum/maximum window dimensions, toggle full-screen modes, and handle system tray minimizations.</li>
 </ul>
 <p>For a comprehensive guide to desktop processes, IPC, window management, and native packaging across all major frameworks, see our dedicated <strong><a href="https://cc-club.in/roadmaps/desktop-development/">Desktop Application Development Roadmap</a></strong>.</p>
-<h3 id="13-2-flutter-web-webassembly-wasm">13.2 Flutter Web &amp; WebAssembly (Wasm)</h3>
+<h3 id="15-2-flutter-web-webassembly-wasm">15.2 Flutter Web &amp; WebAssembly (Wasm)</h3>
 <p>Starting in Flutter 3.22+, Flutter Web supports compilation directly to <strong>WebAssembly (Wasm)</strong>:</p>
 <ul>
 <li><strong>Wasm Performance Leap</strong>: Bypasses traditional JavaScript execution bottlenecks, achieving up to 2x faster frame rates and smoother scrolling in modern browsers.</li>
@@ -1381,7 +1670,7 @@ graph TD
 </li>
 </ul>
 <hr />
-<h2 id="14-six-progressive-hands-on-milestone-projects">14. Six Progressive Hands-On Milestone Projects</h2>
+<h2 id="17-six-progressive-hands-on-milestone-projects">17. Six Progressive Hands-On Milestone Projects</h2>
 <p>Theory without application creates passive knowledge. Work through these six progressive milestone projects to transform concepts into muscle memory:</p>
 <pre class="mermaid border border-gray-500/15">
 graph TD
@@ -1430,14 +1719,15 @@ graph TD
 <li>Adaptive Responsive UI: Single-pane bottom navigation on mobile; dual-pane split view with sidebar on desktop and web.</li>
 <li>GoRouter with authentication redirect guards.</li>
 <li>Offline-first data caching with background cloud sync.</li>
-<li>Comprehensive testing suite (Unit, Widget, and Maestro E2E test flows).</li>
+<li>Comprehensive testing suite (Unit, Widget, Golden, and Maestro E2E test flows).</li>
+<li>Localization-ready user-facing strings via <code>intl</code> (<code>.arb</code> files).</li>
 <li>Automated GitHub Actions CI/CD pipeline building signed release artifacts.</li>
 </ul>
 </li>
 <li><strong>Portfolio Value</strong>: The definitive portfolio masterpiece demonstrating complete mastery over the cross-platform engineering lifecycle.</li>
 </ul>
 <hr />
-<h2 id="15-curated-official-resources">15. Curated Official Resources</h2>
+<h2 id="18-curated-official-resources">18. Curated Official Resources</h2>
 <p>Deepen your Flutter mastery using these vetted, high-yield documentation sources and community portals:</p>
 <div class="pretty-link-card not-prose group my-4"><a href="https://docs.flutter.dev/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Official Flutter Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The definitive manual covering Flutter architecture, widget catalogs, platform setups, and official API references.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>docs.flutter.dev/</span></div></div></div></a></div>
 <div class="pretty-link-card not-prose group my-4"><a href="https://dart.dev/guides" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Dart Language Tour & Guides</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Comprehensive language documentation detailing modern Dart 3 features, sound null safety, and asynchronous patterns.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>dart.dev/guides</span></div></div></div></a></div>
@@ -1447,7 +1737,7 @@ graph TD
 <div class="pretty-link-card not-prose group my-4"><a href="https://maestro.mobile.dev/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Maestro Mobile UI Testing</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The modern, declarative YAML-based mobile UI testing platform for reliable end-to-end app automation.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>maestro.mobile.dev/</span></div></div></div></a></div>
 <div class="pretty-link-card not-prose group my-4"><a href="https://www.youtube.com/c/flutterdev" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Flutter Official YouTube Channel</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Official deep dives, Widget of the Week series, decoding Flutter rendering, and keynote engineering presentations.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>www.youtube.com/c/flutterdev</span></div></div></div></a></div>
 <hr />
-<h2 id="16-where-to-next-in-the-cc-ecosystem">16. Where to Next in the CC Ecosystem</h2>
+<h2 id="19-where-to-next-in-the-cc-ecosystem">19. Where to Next in the CC Ecosystem</h2>
 <p>This roadmap is one part of a connected learning system. Depending on where you want to go from here:</p>
 <ul>
 <li><strong><a href="https://cc-club.in/roadmaps/mobile-development/">Mobile Development Master Roadmap</a></strong> — revisit the full application-development landscape and the interactive Path Finder that helped you choose Flutter.</li>
@@ -1624,7 +1914,11 @@ graph TD
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#3-4-the-development-workflow-hot-reload-vs-hot-restart" class="toc-link">3.4 The Development Workflow: Hot Reload vs. Hot Restart</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#3-4-the-day-one-package-kit" class="toc-link">3.4 The Day-One Package Kit</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#3-5-the-development-workflow-hot-reload-vs-hot-restart" class="toc-link">3.5 The Development Workflow: Hot Reload vs. Hot Restart</a>
                                 </li>
                             
                         </ul>
@@ -1699,15 +1993,23 @@ graph TD
                         <ul>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#6-1-the-state-spectrum" class="toc-link">6.1 The State Spectrum</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#6-1-the-state-management-ladder" class="toc-link">6.1 The State Management Ladder</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#6-2-the-three-leading-ecosystem-solutions" class="toc-link">6.2 The Three Leading Ecosystem Solutions</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#6-2-the-state-spectrum" class="toc-link">6.2 The State Spectrum</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#6-3-state-management-in-practice-riverpod-example" class="toc-link">6.3 State Management in Practice: Riverpod Example</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#6-3-the-leading-libraries-evaluated-honestly" class="toc-link">6.3 The Leading Libraries, Evaluated Honestly</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#6-4-getx-popular-but-not-recommended-here" class="toc-link">6.4 GetX: Popular, but Not Recommended Here</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#6-5-state-management-in-practice-riverpod-example" class="toc-link">6.5 State Management in Practice: Riverpod Example</a>
                                 </li>
                             
                         </ul>
@@ -1729,6 +2031,18 @@ graph TD
                             
                                 <li>
                                     <a href="https://cc-club.in/roadmaps/flutter/#7-2-directory-structure-feature-first-organization" class="toc-link">7.2 Directory Structure: Feature-First Organization</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#7-3-naming-the-pattern-mvvm-with-changenotifier" class="toc-link">7.3 Naming the Pattern: MVVM with ChangeNotifier</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#7-4-dependency-injection-riverpod-get-it" class="toc-link">7.4 Dependency Injection: Riverpod + get_it</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#7-5-error-modeling-sealed-results" class="toc-link">7.5 Error Modeling: Sealed Results</a>
                                 </li>
                             
                         </ul>
@@ -1757,20 +2071,12 @@ graph TD
                     
                     <details class="toc-details" open>
                         <summary>
-                            <a href="https://cc-club.in/roadmaps/flutter/#9-stage-8-networking-serialization-offline-persistence" class="toc-link">9. Stage 8: Networking, Serialization &amp; Offline Persistence</a>
+                            <a href="https://cc-club.in/roadmaps/flutter/#9-stage-8-forms-input-user-feedback" class="toc-link">9. Stage 8: Forms, Input &amp; User Feedback</a>
                         </summary>
                         <ul>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#9-1-networking-with-dio" class="toc-link">9.1 Networking with Dio</a>
-                                </li>
-                            
-                                <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#9-2-robust-json-serialization-with-freezed" class="toc-link">9.2 Robust JSON Serialization with freezed</a>
-                                </li>
-                            
-                                <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#9-3-local-persistence-offline-first-strategy" class="toc-link">9.3 Local Persistence &amp; Offline-First Strategy</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#9-1-building-and-validating-a-form" class="toc-link">9.1 Building and Validating a Form</a>
                                 </li>
                             
                         </ul>
@@ -1782,16 +2088,51 @@ graph TD
                     
                     <details class="toc-details" open>
                         <summary>
-                            <a href="https://cc-club.in/roadmaps/flutter/#10-stage-9-native-platform-channels-hardware-integration" class="toc-link">10. Stage 9: Native Platform Channels &amp; Hardware Integration</a>
+                            <a href="https://cc-club.in/roadmaps/flutter/#10-stage-9-networking-serialization-offline-persistence" class="toc-link">10. Stage 9: Networking, Serialization &amp; Offline Persistence</a>
                         </summary>
                         <ul>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#10-1-the-platform-channel-architecture" class="toc-link">10.1 The Platform Channel Architecture</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#9-1-starting-simple-the-http-package" class="toc-link">9.1 Starting Simple: The http Package</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#10-2-implementing-a-custom-methodchannel" class="toc-link">10.2 Implementing a Custom MethodChannel</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#9-2-graduating-to-dio-interceptors-cancellation-timeouts" class="toc-link">9.2 Graduating to Dio: Interceptors, Cancellation &amp; Timeouts</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#9-3-json-serialization-from-manual-parsing-to-freezed" class="toc-link">9.3 JSON Serialization: From Manual Parsing to freezed</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#9-4-local-persistence-offline-first-strategy" class="toc-link">9.4 Local Persistence &amp; Offline-First Strategy</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/flutter/#11-stage-10-animations-motion" class="toc-link">11. Stage 10: Animations &amp; Motion</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/flutter/#12-stage-11-native-platform-channels-hardware-integration" class="toc-link">12. Stage 11: Native Platform Channels &amp; Hardware Integration</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#11-1-the-platform-channel-architecture" class="toc-link">11.1 The Platform Channel Architecture</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#11-2-implementing-a-custom-methodchannel" class="toc-link">11.2 Implementing a Custom MethodChannel</a>
                                 </li>
                             
                         </ul>
@@ -1803,16 +2144,20 @@ graph TD
                     
                     <details class="toc-details" open>
                         <summary>
-                            <a href="https://cc-club.in/roadmaps/flutter/#11-stage-10-testing-devtools-performance-profiling" class="toc-link">11. Stage 10: Testing, DevTools &amp; Performance Profiling</a>
+                            <a href="https://cc-club.in/roadmaps/flutter/#13-stage-12-testing-devtools-performance-profiling" class="toc-link">13. Stage 12: Testing, DevTools &amp; Performance Profiling</a>
                         </summary>
                         <ul>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#11-1-the-flutter-testing-pyramid" class="toc-link">11.1 The Flutter Testing Pyramid</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#12-1-the-flutter-testing-pyramid" class="toc-link">12.1 The Flutter Testing Pyramid</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#11-2-flutter-devtools-profiling" class="toc-link">11.2 Flutter DevTools &amp; Profiling</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#12-2-golden-tests-integration-tests-mocking" class="toc-link">12.2 Golden Tests, Integration Tests &amp; Mocking</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#12-3-flutter-devtools-profiling" class="toc-link">12.3 Flutter DevTools &amp; Profiling</a>
                                 </li>
                             
                         </ul>
@@ -1824,16 +2169,16 @@ graph TD
                     
                     <details class="toc-details" open>
                         <summary>
-                            <a href="https://cc-club.in/roadmaps/flutter/#12-stage-11-security-hardening-production-release" class="toc-link">12. Stage 11: Security, Hardening &amp; Production Release</a>
+                            <a href="https://cc-club.in/roadmaps/flutter/#14-stage-13-accessibility-internationalization" class="toc-link">14. Stage 13: Accessibility &amp; Internationalization</a>
                         </summary>
                         <ul>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#12-1-mobile-application-security-checklist" class="toc-link">12.1 Mobile Application Security Checklist</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#14-1-accessibility" class="toc-link">14.1 Accessibility</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#12-2-release-pipelines" class="toc-link">12.2 Release Pipelines</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#14-2-internationalization-i18n" class="toc-link">14.2 Internationalization (i18n)</a>
                                 </li>
                             
                         </ul>
@@ -1845,16 +2190,16 @@ graph TD
                     
                     <details class="toc-details" open>
                         <summary>
-                            <a href="https://cc-club.in/roadmaps/flutter/#13-stage-12-cross-platform-horizons-desktop-web-targets" class="toc-link">13. Stage 12: Cross-Platform Horizons: Desktop &amp; Web Targets</a>
+                            <a href="https://cc-club.in/roadmaps/flutter/#15-stage-14-security-hardening-production-release" class="toc-link">15. Stage 14: Security, Hardening &amp; Production Release</a>
                         </summary>
                         <ul>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#13-1-desktop-applications-windows-macos-linux" class="toc-link">13.1 Desktop Applications (Windows, macOS, Linux)</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#14-1-mobile-application-security-checklist" class="toc-link">14.1 Mobile Application Security Checklist</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/flutter/#13-2-flutter-web-webassembly-wasm" class="toc-link">13.2 Flutter Web &amp; WebAssembly (Wasm)</a>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#14-2-release-pipelines" class="toc-link">14.2 Release Pipelines</a>
                                 </li>
                             
                         </ul>
@@ -1866,7 +2211,28 @@ graph TD
                     
                     <details class="toc-details" open>
                         <summary>
-                            <a href="https://cc-club.in/roadmaps/flutter/#14-six-progressive-hands-on-milestone-projects" class="toc-link">14. Six Progressive Hands-On Milestone Projects</a>
+                            <a href="https://cc-club.in/roadmaps/flutter/#16-stage-15-cross-platform-horizons-desktop-web-targets" class="toc-link">16. Stage 15: Cross-Platform Horizons: Desktop &amp; Web Targets</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#15-1-desktop-applications-windows-macos-linux" class="toc-link">15.1 Desktop Applications (Windows, macOS, Linux)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/flutter/#15-2-flutter-web-webassembly-wasm" class="toc-link">15.2 Flutter Web &amp; WebAssembly (Wasm)</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/flutter/#17-six-progressive-hands-on-milestone-projects" class="toc-link">17. Six Progressive Hands-On Milestone Projects</a>
                         </summary>
                         <ul>
                             
@@ -1901,13 +2267,13 @@ graph TD
             
                 <li>
                     
-                    <a href="https://cc-club.in/roadmaps/flutter/#15-curated-official-resources" class="toc-link">15. Curated Official Resources</a>
+                    <a href="https://cc-club.in/roadmaps/flutter/#18-curated-official-resources" class="toc-link">18. Curated Official Resources</a>
                     
                 </li>
             
                 <li>
                     
-                    <a href="https://cc-club.in/roadmaps/flutter/#16-where-to-next-in-the-cc-ecosystem" class="toc-link">16. Where to Next in the CC Ecosystem</a>
+                    <a href="https://cc-club.in/roadmaps/flutter/#19-where-to-next-in-the-cc-ecosystem" class="toc-link">19. Where to Next in the CC Ecosystem</a>
                     
                 </li>
             
@@ -1989,7 +2355,10 @@ graph TD
                       htmlLabels: true,
                       useMaxWidth: true,
                       curve: 'basis',
-                      wrappingWidth: 260
+                      wrappingWidth: 260,
+                      diagramPadding: 28,
+                      // Keep subgraph titles from overlapping node shapes
+                      subGraphTitleMargin: { top: 10, bottom: 6 }
                     }
                   });
 
@@ -2001,6 +2370,20 @@ graph TD
                       elem.removeAttribute('data-processed');
                     }
                   });
+
+                  // 3.5 Wait for web fonts before measuring: if Mermaid measures
+                  // label text with fallback font metrics and then paints with the
+                  // loaded Inter font, labels overflow their shapes.
+                  try {
+                    await Promise.all([
+                      document.fonts.load('400 16px Inter'),
+                      document.fonts.load('600 16px Inter'),
+                      document.fonts.load('700 16px Inter'),
+                    ]);
+                    await document.fonts.ready;
+                  } catch (fontError) {
+                    // Font loading API unavailable — render with fallback metrics
+                  }
 
                   // 4. Re-run Mermaid to generate fresh SVGs for the active theme
                   await mermaid.run({

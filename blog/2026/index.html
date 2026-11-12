@@ -657,7 +657,7 @@
                                     
     
         
-        <a class="nav-button nav-button-next group" href="https://cc-club.in/blog/2026/visa-internship-experience/">
+        <a class="nav-button nav-button-next group" href="https://cc-club.in/blog/2026/aqr-internship-experience/">
             <div class="nav-button-content">
                 <div class="nav-button-direction">
                     <span class="nav-button-label">Next</span>
@@ -665,7 +665,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </div>
-                <div class="nav-button-title">Visa On-Campus Internship Recruitment Experience</div>
+                <div class="nav-button-title">AQR Capital Management — Software Engineering Interview Experience</div>
             </div>
         </a>
     
@@ -753,7 +753,10 @@
                       htmlLabels: true,
                       useMaxWidth: true,
                       curve: 'basis',
-                      wrappingWidth: 260
+                      wrappingWidth: 260,
+                      diagramPadding: 28,
+                      // Keep subgraph titles from overlapping node shapes
+                      subGraphTitleMargin: { top: 10, bottom: 6 }
                     }
                   });
 
@@ -765,6 +768,20 @@
                       elem.removeAttribute('data-processed');
                     }
                   });
+
+                  // 3.5 Wait for web fonts before measuring: if Mermaid measures
+                  // label text with fallback font metrics and then paints with the
+                  // loaded Inter font, labels overflow their shapes.
+                  try {
+                    await Promise.all([
+                      document.fonts.load('400 16px Inter'),
+                      document.fonts.load('600 16px Inter'),
+                      document.fonts.load('700 16px Inter'),
+                    ]);
+                    await document.fonts.ready;
+                  } catch (fontError) {
+                    // Font loading API unavailable — render with fallback metrics
+                  }
 
                   // 4. Re-run Mermaid to generate fresh SVGs for the active theme
                   await mermaid.run({

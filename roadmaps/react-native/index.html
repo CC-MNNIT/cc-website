@@ -617,7 +617,7 @@ graph TD
         Router["Expo Router (File-based typed routing)"]
         SDK["Expo SDK (50+ curated hardware modules: Camera, SecureStore, SQLite)"]
         CLI["Expo CLI (Metro bundler, dev server, prebuild)"]
-        EAS["EAS (Cloud & Local builds, App Store submissions)"]
+        EAS["EAS (Cloud &amp; Local builds, App Store submissions)"]
     end
 
     Expo_Framework -->|"Wraps, enhances, and powers"| React_Native_Core
@@ -915,7 +915,7 @@ graph TD
 <pre class="mermaid border border-gray-500/15">
 graph TD
     State["Application State"] --> ServerState["Server State (Cached Network Data)"]
-    State --> ClientState["Client State (Local UI & Sessions)"]
+    State --> ClientState["Client State (Local UI &amp; Sessions)"]
 
     ServerState --> TQ["TanStack Query (React Query)"]
     TQ --> TQ_Features["Automatic background refetching<br/>Stale-while-revalidate caching<br/>Optimistic mutation updates"]
@@ -1036,10 +1036,10 @@ graph TD
 <pre class="mermaid border border-gray-500/15">
 graph TD
     App["Your React Native Application"] --> ExpoSDK["Expo Hardware SDK Layer"]
-    ExpoSDK --> Cam["expo-camera (Photos & QR Scanning)"]
-    ExpoSDK --> Loc["expo-location (GPS & Geofencing)"]
+    ExpoSDK --> Cam["expo-camera (Photos &amp; QR Scanning)"]
+    ExpoSDK --> Loc["expo-location (GPS &amp; Geofencing)"]
     ExpoSDK --> Auth["expo-local-authentication (Face ID / Fingerprint)"]
-    ExpoSDK --> Notif["expo-notifications (Push & Local Reminders)"]
+    ExpoSDK --> Notif["expo-notifications (Push &amp; Local Reminders)"]
     ExpoSDK --> Haptic["expo-haptics (Tactile Vibration Engines)"]
 </pre>
 <h3 id="9-1-hardware-biometric-authentication">9.1 Hardware Biometric Authentication</h3>
@@ -1100,7 +1100,7 @@ graph TD
 <pre class="mermaid border border-gray-500/15">
 graph TD
     E2E["10% End-to-End Tests (Maestro / Detox)"]
-    Component["30% Component & Hook Tests (React Native Testing Library)"]
+    Component["30% Component &amp; Hook Tests (React Native Testing Library)"]
     Unit["60% Pure TypeScript Unit Tests (Jest / Logic / Repositories)"]
 </pre>
 <h4 id="component-testing-with-react-native-testing-library">Component Testing with React Native Testing Library</h4>
@@ -1728,7 +1728,10 @@ graph TD
                       htmlLabels: true,
                       useMaxWidth: true,
                       curve: 'basis',
-                      wrappingWidth: 260
+                      wrappingWidth: 260,
+                      diagramPadding: 28,
+                      // Keep subgraph titles from overlapping node shapes
+                      subGraphTitleMargin: { top: 10, bottom: 6 }
                     }
                   });
 
@@ -1740,6 +1743,20 @@ graph TD
                       elem.removeAttribute('data-processed');
                     }
                   });
+
+                  // 3.5 Wait for web fonts before measuring: if Mermaid measures
+                  // label text with fallback font metrics and then paints with the
+                  // loaded Inter font, labels overflow their shapes.
+                  try {
+                    await Promise.all([
+                      document.fonts.load('400 16px Inter'),
+                      document.fonts.load('600 16px Inter'),
+                      document.fonts.load('700 16px Inter'),
+                    ]);
+                    await document.fonts.ready;
+                  } catch (fontError) {
+                    // Font loading API unavailable — render with fallback metrics
+                  }
 
                   // 4. Re-run Mermaid to generate fresh SVGs for the active theme
                   await mermaid.run({

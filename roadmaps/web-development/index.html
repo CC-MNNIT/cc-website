@@ -909,7 +909,7 @@ graph TD
 <pre class="mermaid border border-gray-500/15">
 graph TD
     Runtime["JavaScript Runtime<br/>Node.js / Bun / Deno / Browser"] --> Manager["Package Manager<br/>npm / pnpm / yarn / Bun's built-in"]
-    Manager --> Bundler["Bundler & Dev Server<br/>Vite / esbuild / Turbopack"]
+    Manager --> Bundler["Bundler &amp; Dev Server<br/>Vite / esbuild / Turbopack"]
     Bundler --> Framework["Frontend Framework<br/>React / Vue / Svelte / Astro"]
     Framework --> Meta["Meta-Framework<br/>Next.js / Nuxt / SvelteKit / Astro"]
 </pre>
@@ -1573,7 +1573,7 @@ Tested once with a real screen reader (NVDA on Windows, VoiceOver on macOS).</li
 <p>Theory without building creates tutorial dependence. Work through these milestones in order — each one independently deployable and portfolio-worthy, each deliberately framework-flexible after Milestone 2:</p>
 <pre class="mermaid border border-gray-500/15">
 graph TD
-    M1["Milestone 1: Portfolio & Landing Pages<br/>Focus: Semantic HTML, Modern CSS, Accessibility, Deployment"] --> M2["Milestone 2: PulseMetrics Web Converter<br/>Focus: Vanilla JavaScript, Modules, LocalStorage"]
+    M1["Milestone 1: Portfolio &amp; Landing Pages<br/>Focus: Semantic HTML, Modern CSS, Accessibility, Deployment"] --> M2["Milestone 2: PulseMetrics Web Converter<br/>Focus: Vanilla JavaScript, Modules, LocalStorage"]
     M2 --> M3["Milestone 3: DevPulse GitHub Explorer<br/>Focus: Component Framework, TypeScript, Data Fetching"]
     M3 --> M4["Milestone 4: Chronicle Notes Full-Stack<br/>Focus: REST API, PostgreSQL, Auth, Validation"]
     M4 --> M5["Milestone 5: PulseBoard Analytics Dashboard<br/>Focus: Server Rendering, Charts, Real-Time, Web Vitals"]
@@ -2348,7 +2348,10 @@ graph TD
                       htmlLabels: true,
                       useMaxWidth: true,
                       curve: 'basis',
-                      wrappingWidth: 260
+                      wrappingWidth: 260,
+                      diagramPadding: 28,
+                      // Keep subgraph titles from overlapping node shapes
+                      subGraphTitleMargin: { top: 10, bottom: 6 }
                     }
                   });
 
@@ -2360,6 +2363,20 @@ graph TD
                       elem.removeAttribute('data-processed');
                     }
                   });
+
+                  // 3.5 Wait for web fonts before measuring: if Mermaid measures
+                  // label text with fallback font metrics and then paints with the
+                  // loaded Inter font, labels overflow their shapes.
+                  try {
+                    await Promise.all([
+                      document.fonts.load('400 16px Inter'),
+                      document.fonts.load('600 16px Inter'),
+                      document.fonts.load('700 16px Inter'),
+                    ]);
+                    await document.fonts.ready;
+                  } catch (fontError) {
+                    // Font loading API unavailable — render with fallback metrics
+                  }
 
                   // 4. Re-run Mermaid to generate fresh SVGs for the active theme
                   await mermaid.run({

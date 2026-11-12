@@ -85,7 +85,7 @@
 
     
         
-            <meta name="description" content="A comprehensive guide to begin your journey for DevOps" />
+            <meta name="description" content="A comprehensive, practical guide to mastering DevOps engineering: CI/CD pipelines, Docker containers, Kubernetes orchestration, infrastructure as code, observability, and cloud-native operations." />
         
     
 
@@ -96,7 +96,7 @@
 
       <!-- SEO: Open Graph / Twitter Card -->
       <meta property="og:title" content="DevOps Roadmap | Computer Coding Club" />
-      <meta property="og:description" content="A comprehensive guide to begin your journey for DevOps" />
+      <meta property="og:description" content="A comprehensive, practical guide to mastering DevOps engineering: CI/CD pipelines, Docker containers, Kubernetes orchestration, infrastructure as code, observability, and cloud-native operations." />
       <meta property="og:url" content="https://cc-club.in/" />
       <meta property="og:type" content="website" />
       
@@ -105,7 +105,7 @@
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="DevOps Roadmap" />
-      <meta name="twitter:description" content="A comprehensive guide to begin your journey for DevOps" />
+      <meta name="twitter:description" content="A comprehensive, practical guide to mastering DevOps engineering: CI/CD pipelines, Docker containers, Kubernetes orchestration, infrastructure as code, observability, and cloud-native operations." />
       
       
       
@@ -566,143 +566,502 @@
         <h1 class="flex flex-wrap items-center gap-3">
             DevOps Roadmap
             
-                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">NEW</span>
+                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">DEVOPS</span>
             
         </h1>
-        <p class="text-gray-500">A comprehensive guide to begin your journey for DevOps</p>
+        <p class="text-gray-500">A comprehensive, practical guide to mastering DevOps engineering: CI/CD pipelines, Docker containers, Kubernetes orchestration, infrastructure as code, observability, and cloud-native operations.</p>
         
     </div>
-    <h2 id="phase-1-linux-git-1-week">Phase 1: Linux &amp; Git (1 week)</h2>
-<div role="alert" class="alert alert-info alert-soft"><div><p><strong>Foundational Systems Knowledge</strong>: DevOps builds directly upon core system administration, operating system processes, networking, and server operations. For an in-depth, hands-on journey through Linux internals, storage architecture, systemd service management, and network troubleshooting, explore our dedicated <strong><a href="https://cc-club.in/roadmaps/sysadmin/">System Administration Roadmap</a></strong>.</p>
+    <p>DevOps is the engineering discipline that turns code written on a laptop into reliable, observable software running for millions of users. It is part culture (developers and operations sharing ownership), part practice (CI/CD, infrastructure as code, monitoring), and part tooling (Docker, Kubernetes, Terraform, GitHub Actions).</p>
+<p>This roadmap is designed by the <strong>Computer Coding Club (CC), MNNIT Allahabad</strong> to take you from "I can write code" to "I can ship, run, and operate that code like a production engineer." It deliberately builds on the <a href="https://cc-club.in/roadmaps/sysadmin/">System Administration Roadmap</a> — DevOps automates and scales the operations concepts taught there.</p>
+<hr />
+<h2 id="1-orientation-the-devops-landscape-culture">1. Orientation: The DevOps Landscape &amp; Culture</h2>
+<h3 id="1-1-what-devops-actually-is">1.1 What DevOps Actually Is</h3>
+<p>DevOps is the practice of <strong>treating infrastructure and delivery like software</strong>: everything automated, everything versioned, everything observable. The name comes from merging <em>Dev</em> (who writes the features) and <em>Ops</em> (who runs them) — because hand-offs between those teams are where production outages are born.</p>
+<pre class="mermaid border border-gray-500/15">
+graph LR
+    Plan["Plan<br/>(issues, sprints)"] --> Code["Code<br/>(Git)"]
+    Code --> Build["Build<br/>(compile, lint, test)"]
+    Build --> Test["Automated Tests"]
+    Test --> Release["Release<br/>(version, artifact)"]
+    Release --> Deploy["Deploy<br/>(containers, IaC)"]
+    Deploy --> Operate["Operate<br/>(Kubernetes, cloud)"]
+    Operate --> Monitor["Monitor<br/>(metrics, logs, alerts)"]
+    Monitor -.->|"feedback loop"| Plan
+</pre>
+<ul>
+<li><strong>Continuous Integration (CI)</strong>: Every push builds and tests the code automatically — broken code can never reach a teammate.</li>
+<li><strong>Continuous Delivery/Deployment (CD)</strong>: Every good build produces a deployable artifact, deployed to production without manual ceremony.</li>
+<li><strong>Infrastructure as Code (IaC)</strong>: Servers, networks, and databases described in versioned files instead of clicked into existence.</li>
+<li><strong>Observability</strong>: Metrics, logs, and alerts so you learn about failures before your users do.</li>
+</ul>
+<h3 id="1-2-the-toolchain-map">1.2 The Toolchain Map</h3>
+<p>Every DevOps tool you will encounter sits somewhere on this map. Learn the <em>stage first</em> — the tool is interchangeable:</p>
+<table><thead><tr><th style="text-align: left">Stage</th><th style="text-align: left">The Question</th><th style="text-align: left">Common Tools</th></tr></thead><tbody>
+<tr><td style="text-align: left"><strong>Version Control</strong></td><td style="text-align: left">Where does code live?</td><td style="text-align: left">Git, GitHub, GitLab</td></tr>
+<tr><td style="text-align: left"><strong>CI</strong></td><td style="text-align: left">Does the code work?</td><td style="text-align: left">GitHub Actions, GitLab CI, Jenkins</td></tr>
+<tr><td style="text-align: left"><strong>Containers</strong></td><td style="text-align: left">Does it run the same everywhere?</td><td style="text-align: left">Docker, Podman, containerd</td></tr>
+<tr><td style="text-align: left"><strong>Orchestration</strong></td><td style="text-align: left">How does it run at scale?</td><td style="text-align: left">Kubernetes, Docker Swarm, Nomad</td></tr>
+<tr><td style="text-align: left"><strong>IaC</strong></td><td style="text-align: left">How is infrastructure created?</td><td style="text-align: left">Terraform, Pulumi, CloudFormation</td></tr>
+<tr><td style="text-align: left"><strong>Configuration Mgmt</strong></td><td style="text-align: left">How are servers configured?</td><td style="text-align: left">Ansible (see <a href="https://cc-club.in/roadmaps/sysadmin/">SysAdmin M8</a>)</td></tr>
+<tr><td style="text-align: left"><strong>Observability</strong></td><td style="text-align: left">Is it healthy?</td><td style="text-align: left">Prometheus, Grafana, Loki, Sentry</td></tr>
+<tr><td style="text-align: left"><strong>GitOps</strong></td><td style="text-align: left">Who deploys what, from where?</td><td style="text-align: left">ArgoCD, Flux</td></tr>
+</tbody></table>
+<h3 id="1-3-devops-vs-sre-vs-platform-engineering">1.3 DevOps vs. SRE vs. Platform Engineering</h3>
+<div role="alert" class="alert alert-info alert-soft"><div><p><strong>The Landscape</strong>: <strong>Site Reliability Engineering</strong> (Google's flavor of operations) adds SLOs, error budgets, and blameless postmortems on top of DevOps practices. <strong>Platform Engineering</strong> builds internal developer platforms so product teams can self-serve deployments. All three share the same foundations this roadmap teaches. The <a href="https://cc-club.in/roadmaps/sysadmin/">SysAdmin roadmap's orientation</a> maps how these disciplines relate.</p>
 </div></div>
-<p><strong>Objective</strong>: A lot of us grew up using windows or mac, but overall experience of deployments and devops is best experienced by Linux and its distributions as almost all of the servers run on Linux. So first step is to get comfortable with the terminal and Git. This makes the life easy as scripting becomes easy.</p>
-<h3 id="1-1-linux-fundamentals-day-1-3">1.1 Linux Fundamentals (Day 1-3)</h3>
-<p><strong>Installation</strong>:</p>
+<h3 id="1-4-where-are-you-starting-from">1.4 Where Are You Starting From?</h3>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    Start["Your Starting Point"] --> T1["Track A: Student / Beginner"]
+    Start --> T2["Track B: Web or App Developer with apps to deploy"]
+    Start --> T3["Track C: SysAdmin Roadmap Graduate"]
+    Start --> T4["Track D: Backend / ML Developer"]
+
+    T1 --> R1["Linux + Git basics first, then CI/CD, then containers"]
+    T2 --> R2["Start at GitHub Actions — put your existing project in a pipeline"]
+    T3 --> R3["Skip to Docker and Kubernetes — automation is your next layer"]
+    T4 --> R4["Focus on Docker, CI/CD, and cloud deployment of your services"]
+
+    R1 --> Core["Core Milestone: A live, pipeline-deployed application"]
+    R2 --> Core
+    R3 --> Core
+    R4 --> Core
+</pre>
 <ul>
-<li>We don't recommend you to right away get rid of the Windows or Mac OS. Instead, you can basically set up a dual boot system, for this you would definitely require a USB drive of 8GB or more and you can then choose one of the following Linux distributions: <strong>Ubuntu, Linux Mint, Fedora, Debian, Arch Linux</strong> to start with. <strong>Ubuntu</strong> is the most recommended one for beginners. Follow these articles for installation :</li>
+<li><strong>Track A (Students/Beginners)</strong>: Follow the stages in order. Stage 1 compresses the Linux and networking foundations — the <a href="https://cc-club.in/roadmaps/sysadmin/">SysAdmin roadmap</a> is the deep-dive companion whenever a concept feels shaky.</li>
+<li><strong>Track B (Developers with existing projects)</strong>: You already have the hard part (an application). Start at Stage 2 and pipeline it; everything else builds on that.</li>
+<li><strong>Track C (SysAdmin graduates)</strong>: You know Linux, systemd, Nginx, and monitoring. Stage 3 onward is your content — automation and orchestration are the new layers.</li>
+<li><strong>Track D (Backend/ML developers)</strong>: Your services are the payload. Focus on containers, CI/CD, and Kubernetes — the deployment story for APIs and models.</li>
 </ul>
-<p><a rel="external" href="https://linuxblog.io/dual-boot-linux-windows-install-guide/">Windows</a> | <a rel="external" href="https://medium.com/@vvsvish/how-to-dual-boot-mac-and-linux-45055ae6b942">Mac</a> | <a rel="external" href="https://ledutokens.medium.com/get-started-with-linux-a-beginners-guide-9ba69b8be53c">Guide to Linux Distributions</a></p>
+<hr />
+<h2 id="2-stage-1-foundations-linux-git-networking">2. Stage 1: Foundations — Linux, Git &amp; Networking</h2>
+<p>DevOps runs on Linux and Git. This stage is a <em>compressed</em> foundation: the deep versions live in the <a href="https://cc-club.in/roadmaps/sysadmin/">System Administration Roadmap</a> (Linux internals, systemd, storage, SSH hardening, firewalls) — this stage gives you just enough to operate.</p>
+<h3 id="2-1-linux-fundamentals">2.1 Linux Fundamentals</h3>
+<p>A lot of us grew up on Windows or macOS, but production infrastructure overwhelmingly runs Linux — so getting comfortable in a terminal is step one. You do not need to wipe your current OS: dual-boot (a 8GB+ USB drive and an Ubuntu/Fedora/Debian installer is all it takes), a virtual machine, or <strong>WSL2 on Windows</strong> all work. <strong>Ubuntu</strong> is the most recommended distribution for beginners.</p>
 <ul>
-<li>Understand the Linux Terminal and shell commands and try to get comfortable with it. Make a few folder, touch a few files, play around with file permissions and also try to understand the file system of Linux. Read and understand few network commands and even if you don't understand in depth few terms its okay for now.</li>
+<li>Terminal fluency: files, permissions, processes, packages (<code>apt</code>), and shell scripting — <a rel="external" href="https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/">shell scripting crash course</a>.</li>
+<li>SSH key authentication and remote administration — <a href="https://cc-club.in/roadmaps/sysadmin/">hardened setup in the SysAdmin roadmap</a>.</li>
+<li>Where your code actually runs: processes, ports, services — <a href="https://cc-club.in/roadmaps/sysadmin/">SysAdmin Stages 1–3</a>.</li>
 </ul>
-<p><a rel="external" href="https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/">Linux Terminal</a> | <a rel="external" href="https://www.youtube.com/watch?v=v392lEyM29A&amp;pp=ygUebGludXggY291cnNlIHByaW1lYWdlbiBib290ZGV20gcJCZEKAYcqIYzv">Linux Video Tutorial</a></p>
-<h3 id="1-2-git-github-day-4-5">1.2 Git &amp; Github (Day 4-5)</h3>
-<p><strong>First thing, git != github</strong>:</p>
+<h3 id="2-2-git-github">2.2 Git &amp; GitHub</h3>
+<p>First thing: <strong>git ≠ GitHub</strong>. Git is the version control system; GitHub is a platform hosting Git repositories (GitLab and Bitbucket are alternatives).</p>
 <ul>
-<li>
-<p><strong>Basic Overview</strong>: Git is a version control system, and Github is a platform for hosting Git repositories. Git is a tool that helps you keep track of changes in your code, while Github is a website that allows you to store and share your code with others. Similar websites include Gitlab, Bitbucket, etc.</p>
-</li>
-<li>
-<p><strong>Install git</strong>: <a rel="external" href="https://git-scm.com/downloads">Official Git Website</a></p>
-</li>
-<li>
-<p><strong>Understand what's under the hood and essential git commands</strong>: <a rel="external" href="https://www.youtube.com/watch?v=rH3zE7VlIMs">Git Tutorial (in-depth video)</a> | <a rel="external" href="https://git-scm.com/cheat-sheet">Git Command Cheatsheet for fast learners and impatient nerds</a></p>
-</li>
-<li>
-<p>Do checkout this cool website for <a rel="external" href="https://ohshitgit.com/">Your Mess</a></p>
-</li>
-<li>
-<p>We highly recommend you to check out the <a rel="external" href="https://education.github.com/">Github Education Pack</a> which gives you access to a bunch of cool tools and paid services for free, this includes free domain names, Github Copilot for free, JetBrain IDE, DigitalOcean and Microsoft Azure free credits for learning and much more so explore it and talking about AI wherever in the process you find yourself stuck, be it messed up git repo or finding it hard to setup dual boot or even something like issues in setting up SSH Key for git, AI is your friend, use it wisely be it gemini, claude or openai.</p>
-</li>
+<li><a rel="external" href="https://git-scm.com/downloads">Install Git</a> · <a rel="external" href="https://git-scm.com/cheat-sheet">Official cheat sheet</a> · <a rel="external" href="https://www.youtube.com/watch?v=rH3zE7VlIMs">In-depth video tutorial</a></li>
+<li>When your repository inevitably becomes a mess: <a rel="external" href="https://ohshitgit.com/">ohshitgit.com</a> — the lifesaver.</li>
+<li>Branching, pull requests, and review etiquette: the <a href="https://cc-club.in/roadmaps/open-source/">Open Source Contribution Roadmap</a> teaches the full collaboration workflow.</li>
 </ul>
-<h3 id="1-3-github-actions-day-6-7">1.3 Github Actions (Day 6-7)</h3>
-<p><strong>What is Github Actions?</strong></p>
-<ul>
-<li>
-<p>Github Actions is a tool that helps you automate your workflows. It is a CI/CD tool that helps you automate your workflows. This is like a maggi noodles, its all ready to use and you can use it right away in an instant, no hard configs or setup needed and you can build your project in minutes by writing a few lines of <a rel="external" href="https://www.redhat.com/en/topics/automation/what-is-yaml">YAML</a>. Eventually you will learn to write your own custom pipelines.</p>
-</li>
-<li>
-<p><a rel="external" href="https://docs.github.com/en/actions">Github Actions Documentation</a> | <a rel="external" href="https://www.youtube.com/watch?v=R8_veQiYBjI">Github Actions Tutorial</a></p>
-</li>
-<li>
-<p>We have knowingly kept this Github Actions tutorial short and crisp as a deep dive involve more familiriaty with Devops and would recommend you to basically watch these and then learn by deploying a basic react app of your to github pages using github actions <a rel="external" href="https://www.youtube.com/watch?v=iebVPISad54">Tutorial</a></p>
-</li>
-</ul>
-<h2 id="phase-2-understanding-networking-fundamentals-1-week">Phase 2: Understanding Networking Fundamentals (1 Week)</h2>
-<p><strong>Knowing the networking is like knowing the plumbing of Internet</strong></p>
-<ul>
-<li>
-<p>Infact, if you are a beginner, you can even skip this phase and come back to it later. But we highly recommend you to understand the basics of networking as it will help you in understanding the basics of DevOps. Networking will help you all along your development journey.</p>
-</li>
-<li>
-<p>If you wanna learn here are some articles to get you understanding these things on a high level:</p>
-</li>
-</ul>
+<div role="alert" class="alert alert-info alert-soft"><div><p><strong>The GitHub Education Pack</strong> (<a rel="external" href="https://education.github.com/">education.github.com</a>) gives students free access to tools this roadmap uses: free domains (Namecheap), GitHub Copilot, JetBrains IDEs, and cloud credits from DigitalOcean, Microsoft Azure, and others. Sign up early — you will use these credits in Stages 4 and 8.</p>
+</div></div>
+<h3 id="2-3-networking-essentials">2.3 Networking Essentials</h3>
+<p>Knowing networking is knowing the plumbing of the internet. A high-level pass is enough here — packets, DNS, HTTP, SSH, firewalls:</p>
 <p><a rel="external" href="https://www.cloudflare.com/learning/dns/glossary/what-is-my-ip-address/">IP</a> | <a rel="external" href="https://www.cloudflare.com/learning/dns/what-is-dns/">DNS</a> | <a rel="external" href="https://www.cloudflare.com/learning/ddos/glossary/hypertext-transfer-protocol-http/">HTTP</a> | <a rel="external" href="https://www.cloudflare.com/learning/ssl/what-is-https/">HTTPS</a> | <a rel="external" href="https://www.cloudflare.com/learning/ddos/glossary/tcp-ip/">TCP/IP</a> | <a rel="external" href="https://www.cloudflare.com/learning/access-management/what-is-ssh/">SSH</a> | <a rel="external" href="https://www.cloudflare.com/learning/ddos/glossary/user-datagram-protocol-udp/">UDP</a> | <a rel="external" href="https://www.cloudflare.com/learning/cdn/what-is-a-cdn/">CDN</a> | <a rel="external" href="https://www.cloudflare.com/learning/security/what-is-a-firewall/">Firewall</a></p>
+<p>For a rigorous treatment, these lectures by <strong>Professor Mayank Pandey (HoD, CSED, MNNIT Allahabad)</strong> are outstanding: <a rel="external" href="https://www.youtube.com/playlist?list=PLE-JBws6HCXL25EhottYz9YHgE9_M2Tjg">Computer Networking Lectures</a>. The full packet-level depth lives in <a href="https://cc-club.in/roadmaps/sysadmin/">SysAdmin Stage 5</a>.</p>
+<hr />
+<h2 id="3-stage-2-ci-cd-with-github-actions">3. Stage 2: CI/CD with GitHub Actions</h2>
+<p>CI/CD is the heartbeat of DevOps — and GitHub Actions is the lowest-friction way to learn it. This is like maggi noodles: ready to use in minutes, no infrastructure to set up, and you will build your first pipeline with a few lines of YAML. (Eventually you will outgrow it into the self-hosted world of Stage 6 — but start here.)</p>
+<h3 id="3-1-your-first-pipeline">3.1 Your First Pipeline</h3>
+<p>Every workflow lives in <code>.github/workflows/</code> and defines <em>events</em> that trigger <em>jobs</em> made of <em>steps</em>:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="yaml"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># .github/workflows/ci.yml — runs on every push and pull request</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> CI</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">on</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  push</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    branches</span><span style="color: #BFBDB6B3;">:</span><span> [</span><span style="color: #AAD94C;">main</span><span>]</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  pull_request</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #39BAE6;">jobs</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  build-and-test</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    runs-on</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> ubuntu-latest</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    steps</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>      -</span><span style="color: #39BAE6;"> name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> Check out the repository</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">        uses</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> actions/checkout@v4</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>      -</span><span style="color: #39BAE6;"> name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> Set up Node.js</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">        uses</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> actions/setup-node@v4</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">        with</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">          node-version</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 22</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">          cache</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> npm</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>      -</span><span style="color: #39BAE6;"> name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> Install dependencies</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">        run</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> npm ci</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>      -</span><span style="color: #39BAE6;"> name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> Lint and type-check</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">        run</span><span style="color: #BFBDB6B3;">:</span><span style="color: #FF8F40;"> |</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">          npm run lint</span></span>
+<span class="giallo-l"><span style="color: #AAD94C;">          npx tsc --noEmit</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>      -</span><span style="color: #39BAE6;"> name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> Run tests</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">        run</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> npm test -- --run</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>      -</span><span style="color: #39BAE6;"> name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> Build production bundle</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">        run</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> npm run build</span></span></code></pre>
 <ul>
-<li>If you want an in-depth Computer Networking Course, you can check out these awesome lectures by <strong>Professor Mayank Pandey (HoD,CSED, MNNIT Allahabad)</strong> : <a rel="external" href="https://www.youtube.com/playlist?list=PLE-JBws6HCXL25EhottYz9YHgE9_M2Tjg">Lectures</a></li>
+<li><strong>Triggers (<code>on:</code>)</strong>: <code>push</code>, <code>pull_request</code>, <code>schedule</code> (cron), and <code>workflow_dispatch</code> (manual button).</li>
+<li><strong>Runners</strong>: GitHub-hosted Ubuntu/Windows/macOS machines — or your own self-hosted runners for sensitive workloads.</li>
+<li><strong>Actions</strong>: Reusable steps from the marketplace (<code>actions/checkout</code>, <code>actions/setup-node</code>) — the equivalent of npm packages for pipelines.</li>
+<li><strong>Secrets</strong>: Store tokens and credentials in repository <strong>Settings → Secrets</strong> — they arrive in the pipeline as environment variables and are masked in logs. Never hardcode them in YAML.</li>
 </ul>
-<h2 id="phase-3-understanding-docker-1-week">Phase 3: Understanding Docker (1 Week)</h2>
-<p><strong>What is Docker?</strong></p>
+<h3 id="3-2-from-ci-to-cd">3.2 From CI to CD</h3>
+<p>Extend the pipeline to <em>deploy</em>: on merge to <code>main</code>, build an artifact and ship it — GitHub Pages for a static site, a Docker image push for a containerized app (Stage 3), or an SSH deploy to a VPS (Stage 4). The <a href="https://cc-club.in/roadmaps/web-development/">Web Development roadmap's deployment stage</a> shows a complete React deploy pipeline you can copy today.</p>
+<p><strong>The learning exercise</strong>: Take any project you own — a React app, a Python script, anything — and get a green pipeline running on every push. That green checkmark is your first DevOps artifact.</p>
+<hr />
+<h2 id="4-stage-3-docker-containers">4. Stage 3: Docker &amp; Containers</h2>
+<p>Docker solves the oldest excuse in software: <em>"it works on my machine."</em> A container packages your application with its entire runtime — dependencies, system libraries, configuration — into an image that runs identically on your laptop, a CI runner, and a production server.</p>
+<h3 id="4-1-images-layers-the-dockerfile">4.1 Images, Layers &amp; the Dockerfile</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="docker"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># Dockerfile — a production-grade Node.js image</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># 1. Build stage: compile the application</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">FROM</span><span> node:22-alpine </span><span style="color: #FF8F40;">AS</span><span> build</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">WORKDIR</span><span> /app</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">COPY</span><span> package*.json ./</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">RUN</span><span> npm ci</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">COPY</span><span> . .</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">RUN</span><span> npm run build</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># 2. Runtime stage: minimal image with only what&#39;s needed to run</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">FROM</span><span> node:22-alpine</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">WORKDIR</span><span> /app</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">ENV</span><span> NODE_ENV=production</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">COPY</span><span> --from=build /app/dist ./dist</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">COPY</span><span> --from=build /app/node_modules ./node_modules</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">EXPOSE</span><span> 8080</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">USER</span><span> node</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">CMD</span><span> [</span><span style="color: #AAD94C;">&quot;node&quot;</span><span>, </span><span style="color: #AAD94C;">&quot;server.js&quot;</span><span>]</span></span></code></pre>
 <ul>
-<li>
-<p>Docker is a tool that makes deployment a lot less tiring and easy in industry. It is a containerization platform that allows you to package your application and its dependencies into a container, which can then be run on any machine that has Docker installed.</p>
-</li>
-<li>
-<p>It solves a big problem in development and deployment. What works on my machine may not work on your machine. So Docker solves this problem by providing a consistent environment for your application to run in.</p>
-</li>
-<li>
-<p><a rel="external" href="https://docs.docker.com/get-started/">Docker Documentation</a> | <a rel="external" href="https://www.youtube.com/watch?v=17Bl31rlnRM&amp;pp=ygUdZG9ja2VyIHR1dG9yaWFsIGZvciBiZWdpbm5lcnM%3D">Docker Tutorial</a> | <a rel="external" href="https://www.docker.com/blog/docker-cli-cheatsheet/">Docker CLI Cheatsheet</a></p>
-</li>
-<li>
-<p>Once you have gone through these, try to dockerize the react app you had previously made, and if you are comfortable, try to write a small backend utility in Python FastAPI which can connect with the ReactApp and then try to run a containerzied version of your full stack application.</p>
-</li>
-<li>
-<p>Now you are fully prepared to deploy a dockerized version of your application and you can do so by following <a rel="external" href="https://www.youtube.com/watch?v=JsOoUrII3EY">tutorial guide</a></p>
-</li>
-<li>
-<p>You can next try to use your Github Education Pack to buy yourself a free domain and then try to replace the github.io domain with your own custom one</p>
-</li>
+<li><strong>Images are layered</strong>: each instruction is a cached layer — copying <code>package.json</code> <em>before</em> the source means dependency layers survive code changes (faster builds for free).</li>
+<li><strong>Multi-stage builds</strong> keep runtime images small: the compiler and dev dependencies never enter the final image.</li>
+<li><strong>Run as a non-root user</strong> (<code>USER node</code>) — container escape is a security concern, not paranoia.</li>
 </ul>
-<h2 id="phase-4-understanding-nginx-1-2-days">Phase 4: Understanding Nginx (1-2 Days)</h2>
-<p><strong>What is Nginx?</strong></p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">docker</span><span style="color: #AAD94C;"> build</span><span style="color: #95E6CB;"> -t</span><span style="color: #AAD94C;"> cc-pulse:latest .</span><span style="color: #5A6673;font-style: italic;">            # build the image</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">docker</span><span style="color: #AAD94C;"> run</span><span style="color: #95E6CB;"> -p</span><span style="color: #AAD94C;"> 8080:8080 cc-pulse:latest</span><span style="color: #5A6673;font-style: italic;">      # run it locally</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">docker</span><span style="color: #AAD94C;"> images / docker ps</span><span style="color: #5A6673;font-style: italic;">                    # inspect images and containers</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">docker</span><span style="color: #AAD94C;"> logs</span><span style="color: #95E6CB;"> -f</span><span style="color: #F29668;"> &lt;</span><span style="color: #AAD94C;">containe</span><span>r</span><span style="color: #F29668;">&gt;</span><span style="color: #5A6673;font-style: italic;">                   # stream logs</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">docker</span><span style="color: #AAD94C;"> exec</span><span style="color: #95E6CB;"> -it</span><span style="color: #F29668;"> &lt;</span><span style="color: #AAD94C;">containe</span><span>r</span><span style="color: #F29668;">&gt;</span><span style="color: #AAD94C;"> sh</span><span style="color: #5A6673;font-style: italic;">               # shell into a running container</span></span></code></pre><h3 id="4-2-docker-compose-full-stack-one-file">4.2 Docker Compose: Full-Stack, One File</h3>
+<p>Real applications are multiple services: a frontend, an API, a database, a cache. <strong>Compose</strong> orchestrates them locally from one declarative file:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="yaml"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># compose.yaml — full-stack CC Pulse application</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">services</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  web</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    build</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> .</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    ports</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>      -</span><span style="color: #AAD94C;"> &quot;8080:8080&quot;</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    depends_on</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>      -</span><span style="color: #AAD94C;"> api</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  api</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    build</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> ./api</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    environment</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      DATABASE_URL</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> postgres://pulse:pulse@db:5432/pulse</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    depends_on</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>      -</span><span style="color: #AAD94C;"> db</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  db</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    image</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> postgres:17</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    environment</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      POSTGRES_USER</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> pulse</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      POSTGRES_PASSWORD</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> pulse</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      POSTGRES_DB</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> pulse</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    volumes</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>      -</span><span style="color: #AAD94C;"> pgdata:/var/lib/postgresql/data</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #39BAE6;">volumes</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  pgdata</span><span style="color: #BFBDB6B3;">:</span></span></code></pre>
+<p><code>docker compose up</code> brings the whole stack up with one command — and the same file pattern is what Kubernetes will replace at scale (Stage 5).</p>
+<h3 id="4-3-registries-tags-hygiene">4.3 Registries, Tags &amp; Hygiene</h3>
 <ul>
-<li>Nginx is a web server that is used to serve static content and act as a reverse proxy for dynamic content. It is a high-performance web server that is used to serve static content and act as a reverse proxy for dynamic content.</li>
+<li>Push images to a registry (GitHub Container Registry <code>ghcr.io</code> is free for public repos) and tag them with versions <em>and</em> commit SHAs — <code>:latest</code> alone is how broken deploys happen.</li>
+<li>Scan images for vulnerabilities: <code>docker scout</code> or <code>trivy image</code>.</li>
+<li>A <code>.dockerignore</code> keeps builds small and secrets out of images.</li>
 </ul>
-<p><a rel="external" href="https://kinsta.com/blog/what-is-nginx/">More about Nginx on this link</a></p>
+<p><strong>The exercise</strong>: containerize your own full-stack application (the Web Development roadmap's milestones are perfect candidates) and push the images to <code>ghcr.io</code>.</p>
+<h3 id="4-4-reproducible-toolchains-nix-flakes-advanced-elective">4.4 Reproducible Toolchains: Nix &amp; Flakes (Advanced Elective)</h3>
+<p>Docker solves "same runtime everywhere" for your <em>application</em> — but your <em>tooling</em> (Node 22 vs 20, Terraform CLI versions, kubectl, linters) still varies between laptops and CI runners. <strong>Nix</strong> attacks that at the package-manager level: every package is addressed by the cryptographic hash of its exact build inputs, so a declared environment is byte-identical on every machine that builds it.</p>
 <ul>
-<li>
-<p>You must also checkout what is a <a rel="external" href="https://www.youtube.com/watch?v=4zZiFTQoXRM&amp;pp=ygUDVlBT">VPS (Virtual Private Server)</a></p>
-</li>
-<li>
-<p>You can also look into <a rel="external" href="https://www.youtube.com/watch?v=0yw-z6f7Mb4&amp;pp=ygUDU1NM0gcJCZEKAYcqIYzv">SSL</a></p>
-</li>
-<li>
-<p>Now with all this knowledge in hand and access to Free cloud credits from Github Education Pack, you can try to deploy your full stack application on a VPS with your own custom domain name using Nginx as a reverse proxy and SSL certificate. This will be challenging and you should use LLMs for assistance all along, but this will serve as a great learning experience</p>
-</li>
+<li><strong>Declarative</strong>: Tools are declared in files, never installed by hand.</li>
+<li><strong>Reproducible</strong>: <code>flake.lock</code> pins exact versions — the same culture as Terraform's lockfile and GitOps, applied to your toolchain.</li>
+<li><strong>Atomic &amp; rollbacks</strong>: Every environment change is a generation you can roll back to instantly.</li>
+<li><strong>Conflict-free</strong>: Multiple versions of the same tool coexist per project.</li>
 </ul>
-<h2 id="phase-5-understanding-kubernetes-1-2-weeks">Phase 5: Understanding Kubernetes (1-2 Weeks)</h2>
-<p><strong>What is Kubernetes?</strong></p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="nix"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># flake.nix — a pinned dev environment for the CC Pulse project</span></span>
+<span class="giallo-l"><span>{</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">  description</span><span style="color: #F29668;"> =</span><span style="color: #AAD94C;"> &quot;CC Pulse development environment&quot;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FFB454;">  inputs</span><span>.</span><span style="color: #FFB454;">nixpkgs</span><span>.</span><span style="color: #FFB454;">url</span><span style="color: #F29668;"> =</span><span style="color: #AAD94C;"> &quot;github:NixOS/nixpkgs/nixos-25.05&quot;</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FFB454;">  outputs</span><span style="color: #F29668;"> =</span><span> {</span><span style="color: #D2A6FF;"> self</span><span style="color: #F29668;">,</span><span style="color: #D2A6FF;"> nixpkgs</span><span> }: {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">    devShells</span><span>.</span><span style="color: #FFB454;">x86_64-linux</span><span>.</span><span style="color: #FFB454;">default</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> nixpkgs</span><span style="color: #F29668;">.</span><span style="color: #D2A6FF;">legacyPackages</span><span style="color: #F29668;">.</span><span style="color: #D2A6FF;">x86_64-linux</span><span style="color: #F29668;">.</span><span style="color: #D2A6FF;">mkShell</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #FFB454;">      packages</span><span style="color: #F29668;"> =</span><span> [</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">        nodejs_22</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">        docker-compose</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">        kubectl</span></span>
+<span class="giallo-l"><span style="color: #D2A6FF;">        terraform</span></span>
+<span class="giallo-l"><span>      ]</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    }</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>  }</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">nix</span><span style="color: #AAD94C;"> develop</span><span style="color: #5A6673;font-style: italic;">    # enter the exact declared environment — every time, on every machine</span></span></code></pre><div role="alert" class="alert alert-warning alert-soft"><div><p><strong>The honest caveat</strong>: Nix has the steepest learning curve in this entire roadmap, and its enterprise adoption — while growing fast — is still niche next to Docker and Terraform. Treat it as an <em>advanced elective</em>: master Docker and Terraform first, then reach for Nix when "reproducible tooling" becomes a felt pain. On-ramps like <code>devenv</code> and the Determinate Systems installer smooth the rough edges, and <strong>NixOS</strong> extends the same declarative model to entire operating systems — server configuration as code, the deepest expression of Stage 7's IaC philosophy.</p>
+</div></div>
+<hr />
+<h2 id="5-stage-4-deploying-to-a-vps-nginx-tls-systemd">5. Stage 4: Deploying to a VPS — Nginx, TLS &amp; systemd</h2>
+<p>Before orchestration platforms, learn the classic path: a Virtual Private Server running your app behind <strong>Nginx</strong> as a reverse proxy, with <strong>TLS</strong> certificates and a <strong>systemd</strong> service keeping it alive. This is what the platforms automate — and doing it once by hand teaches you what every button actually does.</p>
 <ul>
-<li>Kubernetes is an open-source container orchestration system that automates the deployment, scaling, and management of containerized applications. It is a platform that allows you to run your applications in a way that is scalable, reliable, and easy to manage. Its like a helping dude who says, you make docker images, deploy, I will take care of scaling it and managing it for you.</li>
+<li>Provision a VPS with your <a rel="external" href="https://education.github.com/pack">GitHub Education Pack credits</a>, SSH in with your hardened key setup.</li>
+<li>Run your Docker image on the server; place Nginx in front as a reverse proxy (<a href="https://cc-club.in/roadmaps/sysadmin/">full Nginx config pattern in the SysAdmin roadmap</a>).</li>
+<li>Automate certificates with <strong>Certbot</strong> (<code>certbot --nginx</code>) — never manual TLS. <strong>Caddy</strong> is the modern alternative that provisions and renews certificates automatically by design — worth a look for new projects.</li>
+<li>Register your application as a systemd service so it restarts on failure and on boot.</li>
+<li>Point your custom domain from the Education Pack at the server and verify the full chain: domain → DNS → TLS → Nginx → container.</li>
 </ul>
-<p><a rel="external" href="https://www.redhat.com/en/topics/containers/what-is-kubernetes">More about Kubernetes on this link</a> | <a rel="external" href="https://www.youtube.com/watch?v=KVBON1lA9N8">Kubernetes Tutorial for Beginners</a></p>
-<h2 id="phase-6-jenkins-is-all-you-need-2-3-weeks">Phase 6: Jenkins Is All You Need (2-3 Weeks)</h2>
+<div role="alert" class="alert alert-warning alert-soft"><div><p><strong>This stage is intentionally challenging.</strong> Use LLMs for assistance all along — but make sure you understand every command you run. Getting a full-stack application live on your own VPS with your own domain and HTTPS is a rite of passage, and it makes Kubernetes intuitive later.</p>
+</div></div>
+<hr />
+<h2 id="6-stage-5-kubernetes-container-orchestration">6. Stage 5: Kubernetes — Container Orchestration</h2>
+<p>Kubernetes (K8s) is the industry-standard container orchestrator: you declare <em>what</em> should be running, and it makes reality match the declaration — scheduling containers across machines, restarting failures, scaling on load, and rolling out updates without downtime. Think of it as a tireless operator: <em>you make Docker images and declare the desired state; Kubernetes handles scheduling, scaling, and healing.</em></p>
+<h3 id="6-1-the-core-objects">6.1 The Core Objects</h3>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    User["You declare desired state (YAML)"] --> API["Kubernetes API Server"]
+    API --> Sched["Scheduler places Pods onto Nodes"]
+    Sched --> D["Deployment<br/>(manages ReplicaSets → Pods)"]
+    D --> P1["Pod 1 (your container)"]
+    D --> P2["Pod 2 (your container)"]
+    Svc["Service<br/>(stable virtual IP + load balancing)"] --> P1
+    Svc --> P2
+    Ing["Ingress<br/>(HTTP routing + TLS from the outside)"] --> Svc
+</pre>
 <ul>
-<li>
-<p>Github Action is cool, its smart and comes right out of the box, write a YAML file and boom there it goes, but it is not always the case. For a lot of corporations, the data, the scale and the environment of build is something which they wish to tighly control, this is where Jenkins comes in, it is a service which needs to be managed by setting up dedicated pods/servers and then using this organizations build entirely secure and custom business workflows and CI/CD Pipelines. This gives a webUI and lot of flexibility to manage your builds and deployments through a vast library of plugins and providing you freedom to write your own Jenkins Pluggins.</p>
-</li>
-<li>
-<p><strong>Webhooks</strong> : First you need to understand what are webhooks and you can do so by watching this <a rel="external" href="https://www.youtube.com/watch?v=oQaJn6RdA3g">video</a></p>
-</li>
-<li>
-<p>Once you understand webhooks, go to your github and try to setup a webhook which gets triggered when you push code to your repository. You can use <a rel="external" href="https://ngrok.com/">ngrok</a> to expose your local server to the internet and then use that to test your webhook.</p>
-</li>
-<li>
-<p>Now you understand docker and using docker to run basic Jenkins config is a good approach, so we recommend following video to understand Jenkins and then configure a very basic pipeline with SCM Polling <a rel="external" href="https://www.youtube.com/watch?v=6YZvp2GwT0A">Resource</a></p>
-</li>
+<li><strong>Pod</strong>: The smallest unit — one or more containers sharing a network namespace. Pods are mortal; that is normal.</li>
+<li><strong>Deployment</strong>: Declares how many Pod replicas should exist and manages rolling updates (new versions replace old ones gradually, automatically rolling back if health checks fail).</li>
+<li><strong>Service</strong>: Pods come and go with changing IPs; a Service provides a stable virtual IP and load-balances across them.</li>
+<li><strong>Ingress</strong>: HTTP routing from the outside world to Services — host- and path-based rules plus TLS termination.</li>
 </ul>
-<h2 id="a-cloud-native-mindset">A Cloud Native Mindset</h2>
+<h3 id="6-2-a-minimal-deployment">6.2 A Minimal Deployment</h3>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="yaml"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># deployment.yaml — the CC Pulse API, three replicas, rolling updates</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">apiVersion</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> apps/v1</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">kind</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> Deployment</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">metadata</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> pulse-api</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">spec</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  replicas</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 3</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  selector</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    matchLabels</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      app</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> pulse-api</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  template</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    metadata</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      labels</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">        app</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> pulse-api</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    spec</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      containers</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>        -</span><span style="color: #39BAE6;"> name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> api</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">          image</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> ghcr.io/cc-mnnit/pulse-api:1.4.0</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">          ports</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>            -</span><span style="color: #39BAE6;"> containerPort</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 8080</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">          resources</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">            requests</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">              cpu</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> 100m</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">              memory</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> 128Mi</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">          livenessProbe</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">            httpGet</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">              path</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> /healthz</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">              port</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 8080</span></span>
+<span class="giallo-l"><span>---</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">apiVersion</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> v1</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">kind</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> Service</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">metadata</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  name</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> pulse-api</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">spec</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  selector</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">    app</span><span style="color: #BFBDB6B3;">:</span><span style="color: #AAD94C;"> pulse-api</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">  ports</span><span style="color: #BFBDB6B3;">:</span></span>
+<span class="giallo-l"><span>    -</span><span style="color: #39BAE6;"> port</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 80</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;">      targetPort</span><span style="color: #BFBDB6B3;">:</span><span style="color: #D2A6FF;"> 8080</span></span></code></pre><pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">minikube</span><span style="color: #AAD94C;"> start</span><span style="color: #5A6673;font-style: italic;">                          # or: kind create cluster (local clusters)</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">kubectl</span><span style="color: #AAD94C;"> apply</span><span style="color: #95E6CB;"> -f</span><span style="color: #AAD94C;"> deployment.yaml</span><span style="color: #5A6673;font-style: italic;">        # declare the desired state</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">kubectl</span><span style="color: #AAD94C;"> get pods</span><span style="color: #5A6673;font-style: italic;">                        # watch Kubernetes make it real</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">kubectl</span><span style="color: #AAD94C;"> rollout status deployment/pulse-api</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">kubectl</span><span style="color: #AAD94C;"> rollout undo deployment/pulse-api</span><span style="color: #5A6673;font-style: italic;">  # instant rollback</span></span></code></pre>
 <ul>
-<li>
-<p>Congratulations!! You made it till the end, we hope you learnt a lot in this process and understood all the fundamentals well, DevOps will help you take your projects to the production scale and prepare you to step into the world of cloud native development. Most organizations today run on cloud, they extend their services on cloud and deploy to cloud. Additionally its very important to understand that in the industry, project development goes hand-in-hand with CI/CD Driven Deployment and Testing. Hence we conclude this roadmap by providing you a peek into the Cloud Native Mindset and leaving some resources for understanding Testing</p>
+<li><strong>Learn locally first</strong>: <code>minikube</code> or <code>kind</code> give you a full cluster on your laptop — no cloud bill.</li>
+<li><strong>Helm</strong> packages applications as versioned, parameterized charts (the npm of Kubernetes); <strong>Kustomize</strong> layers environment-specific patches over base manifests without templating — most production repos use one or the other.</li>
+<li><strong>Ingress controllers</strong>: the default <code>ingress-nginx</code> is common, but <strong>Traefik</strong> is the modern alternative with automatic certificate discovery — worth knowing both.</li>
+<li><strong><code>k9s</code></strong>: the terminal UI nearly every operator runs — navigating pods, logs, and events at keyboard speed instead of typing <code>kubectl get</code> forever.</li>
+<li><strong>The deepest concepts</strong>: liveness/readiness probes (how K8s knows your app is healthy), resource requests/limits, ConfigMaps and Secrets, and horizontal pod autoscaling.</li>
+</ul>
+<hr />
+<h2 id="7-stage-6-jenkins-enterprise-ci">7. Stage 6: Jenkins &amp; Enterprise CI</h2>
+<p>GitHub Actions is smart and comes out of the box — write YAML and it goes. But enterprises often need tighter control: the data, the scale, and the build environment itself live behind their firewall. That is where <strong>Jenkins</strong> — the veteran, plugin-powered, self-hosted automation server — comes in. A huge share of corporations still run their pipelines on it, which makes Jenkins fluently reading and writing a genuinely employable skill.</p>
+<ul>
+<li><strong>The setup pattern</strong>: Run Jenkins itself in Docker (Stage 3 knowledge applies directly), with pipelines defined as versioned <strong>Jenkinsfiles</strong>:</li>
+</ul>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="groovy"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Jenkinsfile — declarative pipeline</span></span>
+<span class="giallo-l"><span>pipeline {</span></span>
+<span class="giallo-l"><span>    agent any</span></span>
+<span class="giallo-l"><span>    stages {</span></span>
+<span class="giallo-l"><span>        stage(</span><span style="color: #AAD94C;">&#39;Build&#39;</span><span>) {</span></span>
+<span class="giallo-l"><span>            steps { sh </span><span style="color: #AAD94C;">&#39;npm ci &amp;&amp; npm run build&#39;</span><span> }</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>        stage(</span><span style="color: #AAD94C;">&#39;Test&#39;</span><span>) {</span></span>
+<span class="giallo-l"><span>            steps { sh </span><span style="color: #AAD94C;">&#39;npm test -- --run&#39;</span><span> }</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>        stage(</span><span style="color: #AAD94C;">&#39;Docker Image&#39;</span><span>) {</span></span>
+<span class="giallo-l"><span>            steps { sh </span><span style="color: #AAD94C;">&#39;docker build -t cc-pulse:${BUILD_NUMBER} .&#39;</span><span> }</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<ul>
+<li><strong>Webhooks first</strong>: Understand what a webhook is — a push event from GitHub triggering your server. Practice locally by exposing your machine with <a rel="external" href="https://ngrok.com/">ngrok</a> and configuring a repository webhook.</li>
+<li><strong>Modern context</strong>: For self-hosted CI, also evaluate <strong>GitLab CI</strong> (integrated with GitLab) and self-hosted <strong>GitHub Actions runners</strong> — Jenkins remains the enterprise incumbent, but the ecosystem has moved toward simpler YAML-native systems.</li>
+<li><strong>Exercise</strong>: Configure a basic Jenkins pipeline with SCM polling, then upgrade it to webhook-triggered builds.</li>
+</ul>
+<hr />
+<h2 id="8-stage-7-infrastructure-as-code-with-terraform">8. Stage 7: Infrastructure as Code with Terraform</h2>
+<p>Clicking through cloud consoles to create servers does not scale, cannot be reviewed, and cannot be reproduced after an outage. <strong>Infrastructure as Code</strong> fixes all three: infrastructure described in versioned files, applied by tooling.</p>
+<p><strong>Terraform</strong> is the industry-standard IaC tool, provider-based and cloud-agnostic:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="hcl"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;"># main.tf — provision a DigitalOcean droplet for the CC Pulse API</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">terraform</span><span> {</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">  required_providers</span><span> {</span></span>
+<span class="giallo-l"><span>    digitalocean</span><span style="color: #F29668;"> =</span><span> { source</span><span style="color: #F29668;"> =</span><span style="color: #AAD94C;"> &quot;digitalocean/digitalocean&quot;</span><span> }</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #59C2FF;">variable</span><span> &quot;do_token&quot; {</span></span>
+<span class="giallo-l"><span>  type</span><span style="color: #F29668;">      =</span><span style="color: #FF8F40;"> string</span></span>
+<span class="giallo-l"><span>  sensitive</span><span style="color: #F29668;"> =</span><span style="color: #D2A6FF;"> true</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #59C2FF;">provider</span><span> &quot;digitalocean&quot; {</span></span>
+<span class="giallo-l"><span>  token</span><span style="color: #F29668;"> =</span><span> var</span><span style="color: #F29668;">.</span><span>do_token</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #59C2FF;">resource</span><span> &quot;digitalocean_droplet&quot; &quot;pulse_api&quot; {</span></span>
+<span class="giallo-l"><span>  name</span><span style="color: #F29668;">   =</span><span style="color: #AAD94C;"> &quot;pulse-api-prod-01&quot;</span></span>
+<span class="giallo-l"><span>  region</span><span style="color: #F29668;"> =</span><span style="color: #AAD94C;"> &quot;blr1&quot;</span></span>
+<span class="giallo-l"><span>  size</span><span style="color: #F29668;">   =</span><span style="color: #AAD94C;"> &quot;s-2vcpu-4gb&quot;</span></span>
+<span class="giallo-l"><span>  image</span><span style="color: #F29668;">  =</span><span style="color: #AAD94C;"> &quot;ubuntu-24-04-x64&quot;</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #59C2FF;">output</span><span> &quot;server_ip&quot; {</span></span>
+<span class="giallo-l"><span>  value</span><span style="color: #F29668;"> =</span><span> digitalocean_droplet</span><span style="color: #F29668;">.</span><span>pulse_api</span><span style="color: #F29668;">.</span><span>ipv4_address</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #59C2FF;">terraform</span><span style="color: #AAD94C;"> init</span><span style="color: #5A6673;font-style: italic;">      # download providers</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">terraform</span><span style="color: #AAD94C;"> plan</span><span style="color: #5A6673;font-style: italic;">      # preview every change before it happens</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">terraform</span><span style="color: #AAD94C;"> apply</span><span style="color: #5A6673;font-style: italic;">     # create/update infrastructure</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">terraform</span><span style="color: #AAD94C;"> destroy</span><span style="color: #5A6673;font-style: italic;">   # tear it all down (carefully)</span></span></code></pre>
+<ul>
+<li><strong><code>terraform plan</code> is the culture</strong>: every infrastructure change is a reviewable diff, exactly like a pull request.</li>
+<li><strong>State</strong>: Terraform tracks what it created in a state file — in production, keep it in remote storage (S3, Terraform Cloud) so teams share one truth.</li>
+<li><strong>Configuration management</strong> (installing software <em>inside</em> machines) is Ansible's domain — see <a href="https://cc-club.in/roadmaps/sysadmin/">SysAdmin Stage 10</a>. IaC provisions the machines; Ansible configures them.</li>
+</ul>
+<hr />
+<h2 id="9-stage-8-observability-metrics-logs-alerts">9. Stage 8: Observability — Metrics, Logs &amp; Alerts</h2>
+<p>You cannot operate what you cannot see. Observability has three pillars:</p>
+<ul>
+<li><strong>Metrics</strong>: Numeric time series (CPU, memory, request latency, error rates) — <strong>Prometheus</strong> scrapes and stores them; <strong>Grafana</strong> visualizes them as dashboards.</li>
+<li><strong>Logs</strong>: Structured event streams — shipped to a central store (Loki, ELK) instead of scattered across machines.</li>
+<li><strong>Alerts</strong>: <strong>Alertmanager</strong> rules that page a human when thresholds break ("disk usage above 85% for 10 minutes").</li>
+</ul>
+<pre class="mermaid border border-gray-500/15">
+graph LR
+    App["Applications & Nodes<br/>(exporters expose /metrics)"] -->|"scrape"| Prom["Prometheus<br/>(time-series database)"]
+    Prom --> Graf["Grafana Dashboards"]
+    Prom --> Alert["Alertmanager"]
+    Alert -->|"pages on-call"| Human["Engineer"]
+    Logs["App Logs"] --> Loki["Loki / ELK"] --> Graf
+</pre>
+<ul>
+<li><strong>The SRE connection</strong>: Define <strong>SLOs</strong> (service level objectives — e.g., "99.9% of requests under 300ms") and alert on <em>burn rate</em>, not every hiccup. The <a href="https://cc-club.in/roadmaps/sysadmin/">SysAdmin roadmap's Milestone 9</a> is a complete hands-on Prometheus/Grafana deployment — do it.</li>
+<li><strong>In CI/CD</strong>: Observability closes the loop from the pipeline diagram in Stage 1 — alerts trigger rollbacks, postmortems feed back into new tests.</li>
+<li><strong>Secrets management at scale</strong>: Spreading secrets across CI variables and <code>.env</code> files stops scaling the moment multiple environments and teammates appear. The production patterns are <strong>SOPS + age</strong> (encrypted secrets committed safely to Git) or <strong>HashiCorp Vault</strong> / <strong>Infisical</strong> (centralized secret servers with rotation and audit logs).</li>
+<li><strong>Operations hygiene</strong>: <code>pre-commit</code> hooks catch secrets and lint issues <em>before</em> they reach Git — shift every quality gate as far left as it can go.</li>
+</ul>
+<hr />
+<h2 id="10-stage-9-cloud-platforms-gitops">10. Stage 9: Cloud Platforms &amp; GitOps</h2>
+<h3 id="10-1-the-cloud-providers">10.1 The Cloud Providers</h3>
+<p>AWS, Microsoft Azure, and Google Cloud all offer free tiers and student credits (the <a rel="external" href="https://education.github.com/pack">GitHub Education Pack</a> includes Azure and DigitalOcean credits). Learn one deeply — the concepts transfer. The typical journey: managed containers (ECS / Cloud Run / AKS), managed databases (RDS / Cloud SQL), and object storage (S3) — all provisioned via Terraform from Stage 7, never clicked.</p>
+<h3 id="10-2-gitops-kubernetes-deployment-done-right">10.2 GitOps: Kubernetes Deployment Done Right</h3>
+<p>GitOps extends IaC to Kubernetes deployments: <strong>Git is the single source of truth</strong>, and an in-cluster controller continuously reconciles reality with the repository. If someone edits the cluster by hand, the controller reverts it; every deploy is a Git commit with an audit trail.</p>
+<pre class="mermaid border border-gray-500/15">
+graph LR
+    Dev["Developer merges PR"] --> Git["Git Repository<br/>(declared desired state)"]
+    Git --> Argo["ArgoCD<br/>(in-cluster GitOps controller)"]
+    Argo -->|"detects drift / new version"| K8s["Kubernetes Cluster<br/>(reconciles to match Git)"]
+    K8s --> Health["Health status reported back to Argo"]
+    Health -->|"sync failed"| Alert["Alert the team"]
+</pre>
+<ul>
+<li><strong>ArgoCD</strong> (or Flux) watches a repository containing your Kubernetes manifests (or Helm charts) and keeps the cluster in sync.</li>
+<li><strong>The complete flow</strong>: CI builds and pushes an image → CI updates the image tag in the GitOps repo → ArgoCD rolls it out to the cluster. Humans review pull requests; machines do the deploying.</li>
+<li>This pipeline — CI + GitOps — is the architecture behind most modern platform engineering teams, and it is your capstone (Milestone 6).</li>
+</ul>
+<hr />
+<h2 id="11-six-progressive-milestone-projects">11. Six Progressive Milestone Projects</h2>
+<p>Theory without pipelines is just blog-post knowledge. Work through these six milestones — each builds on the previous and leaves a deployable artifact:</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    M1["Milestone 1: First CI Pipeline<br/>Focus: GitHub Actions, lint, test, build"] --> M2["Milestone 2: Containerized Full-Stack App<br/>Focus: Dockerfile, Compose, GHCR Registry"]
+    M2 --> M3["Milestone 3: VPS Production Deployment<br/>Focus: Nginx, TLS, systemd, Domain"]
+    M3 --> M4["Milestone 4: Kubernetes Migration<br/>Focus: kubectl, Deployments, Ingress, Helm"]
+    M4 --> M5["Milestone 5: Terraform-Managed Cloud Infra<br/>Focus: IaC, Remote State, Multi-Environment"]
+    M5 --> M6["Milestone 6 (Capstone): End-to-End GitOps Platform<br/>Focus: ArgoCD, Observability, Automated Rollbacks"]
+</pre>
+<h3 id="milestone-1-first-ci-pipeline">Milestone 1: First CI Pipeline</h3>
+<ul>
+<li><strong>Goal</strong>: Any project you own gets a GitHub Actions pipeline that lints, type-checks, tests, and builds on every pull request.</li>
+<li><strong>Core Concepts</strong>: Workflow triggers, runners, marketplace actions, secrets, branch protection rules that require a green pipeline.</li>
+<li><strong>Portfolio Value</strong>: Demonstrates the automation mindset — quality gates enforced by machines, not memory.</li>
+</ul>
+<h3 id="milestone-2-containerized-full-stack-application">Milestone 2: Containerized Full-Stack Application</h3>
+<ul>
+<li><strong>Goal</strong>: Dockerize a full-stack application (frontend + API + PostgreSQL) and run the entire stack with one <code>docker compose up</code>.</li>
+<li><strong>Core Concepts</strong>: Multi-stage Dockerfiles, Compose networking, volumes for database persistence, pushing images to GitHub Container Registry, image scanning.</li>
+<li><strong>Stretch Goals</strong>: Non-root containers; image size reduction (compare before/after multi-stage).</li>
+<li><strong>Portfolio Value</strong>: Proves container fluency — the universal packaging layer of modern infrastructure.</li>
+</ul>
+<h3 id="milestone-3-vps-production-deployment">Milestone 3: VPS Production Deployment</h3>
+<ul>
+<li><strong>Goal</strong>: Deploy the same application to a VPS with a custom domain, HTTPS, and zero-downtime restarts.</li>
+<li><strong>Core Concepts</strong>: Nginx reverse proxy, Certbot TLS automation, systemd services, SSH deploy scripts or a simple GitHub Actions deploy job.</li>
+<li><strong>Stretch Goals</strong>: A staging environment on a subdomain; automated rollback on failed health checks.</li>
+<li><strong>Portfolio Value</strong>: Proves you understand the full request path — the machinery platforms hide.</li>
+</ul>
+<h3 id="milestone-4-kubernetes-migration">Milestone 4: Kubernetes Migration</h3>
+<ul>
+<li><strong>Goal</strong>: Move the containerized application from the VPS into a Kubernetes cluster (local <code>kind</code>/<code>minikube</code> first, then a managed cloud cluster).</li>
+<li><strong>Core Concepts</strong>: Deployments, Services, Ingress with TLS, ConfigMaps/Secrets, liveness probes, resource limits, Helm chart packaging.</li>
+<li><strong>Stretch Goals</strong>: Horizontal pod autoscaling under load; blue-green deploy with zero downtime.</li>
+<li><strong>Portfolio Value</strong>: Demonstrates orchestration fluency at the industry's default scale layer.</li>
+</ul>
+<h3 id="milestone-5-terraform-managed-cloud-infrastructure">Milestone 5: Terraform-Managed Cloud Infrastructure</h3>
+<ul>
+<li><strong>Goal</strong>: Provision your cloud infrastructure (VPS or managed Kubernetes cluster, DNS records, firewall) entirely with Terraform.</li>
+<li><strong>Core Concepts</strong>: Providers, variables, remote state, plan/apply workflows, multi-environment structure (dev/staging/prod).</li>
+<li><strong>Stretch Goals</strong>: Terraform Cloud/remote state locking; a destroyed-and-rebuilt-from-zero exercise.</li>
+<li><strong>Portfolio Value</strong>: Proves infrastructure reproducibility — the "cattle, not pets" discipline.</li>
+</ul>
+<h3 id="milestone-6-capstone-end-to-end-gitops-platform">Milestone 6 (Capstone): End-to-End GitOps Platform</h3>
+<ul>
+<li><strong>Goal</strong>: A complete GitOps delivery platform: pull request → CI → image push → GitOps repo update → ArgoCD rollout → monitored production.</li>
+<li><strong>Core Concepts</strong>:
+<ul>
+<li>CI building, testing, and pushing signed images with commit-SHA tags.</li>
+<li>ArgoCD reconciling a GitOps repository across dev and production environments.</li>
+<li>Prometheus/Grafana monitoring with Alertmanager routing to your notification channel.</li>
+<li>Automated rollbacks on failed health checks; a documented incident-response runbook.</li>
+</ul>
 </li>
-<li>
-<p><a rel="external" href="https://www.youtube.com/watch?v=p-88GN1WVs8">Cloud Native Mindset</a></p>
-</li>
-<li>
-<p><a rel="external" href="https://usersnap.com/blog/web-application-testing/">Testing</a></p>
-</li>
+<li><strong>Portfolio Value</strong>: The definitive capstone proving end-to-end DevOps mastery — the exact platform architecture modern engineering teams run, built and operated by you.</li>
+</ul>
+<hr />
+<h2 id="12-curated-official-resources">12. Curated Official Resources</h2>
+<div class="pretty-link-card not-prose group my-4"><a href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Docker Official Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The authoritative reference for images, Dockerfiles, Compose, and container runtime behavior.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>docs.docker.com/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://kubernetes.io/docs/home/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Kubernetes Official Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The complete K8s reference: concepts, object specifications, kubectl, and production best practices.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>kubernetes.io/docs/home/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://docs.github.com/en/actions" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">GitHub Actions Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Official guides for workflows, runners, environments, and security hardening of pipelines.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>docs.github.com/en/actions</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://developer.hashicorp.com/terraform/docs" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Terraform Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">HashiCorp's official IaC documentation: providers, state management, and modules.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>developer.hashicorp.com/terraform/docs</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://argo-cd.readthedocs.io/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">ArgoCD Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The declarative GitOps controller for Kubernetes — official guides and best practices.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>argo-cd.readthedocs.io/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://prometheus.io/docs/introduction/overview/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Prometheus Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The metrics and alerting standard: exporters, PromQL, and Alertmanager configuration.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>prometheus.io/docs/introduction/overview/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://www.jenkins.io/doc/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Jenkins Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Official guides for declarative pipelines, plugin management, and self-hosted automation.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>www.jenkins.io/doc/</span></div></div></div></a></div>
+<hr />
+<h2 id="13-where-to-next-in-the-cc-ecosystem">13. Where to Next in the CC Ecosystem</h2>
+<p>DevOps is the automation layer over everything else the CC ecosystem teaches. Where you go next depends on your direction:</p>
+<ul>
+<li><strong><a href="https://cc-club.in/roadmaps/sysadmin/">System Administration Roadmap</a></strong> — the foundation beneath this roadmap: Linux internals, networking depth, storage, security hardening, and hands-on monitoring deployments.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/web-development/">Web Development Roadmap</a></strong> — the applications your pipelines deploy: full-stack engineering from both sides.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/blockchain/">Blockchain Development Roadmap</a></strong> — run validator and full-node infrastructure, and automate smart-contract deployment pipelines.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/desktop-development/">Desktop Application Development Roadmap</a></strong> — package and distribute desktop clients for the platforms you operate.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/open-source/">Open Source Contribution Roadmap</a></strong> — contribute to the tools themselves: Kubernetes, Terraform providers, GitHub Actions, and the CNCF ecosystem.</li>
 </ul>
 
 
@@ -794,29 +1153,33 @@
                     
                         
 
-<div class="hidden lg:block" >
+<div class="hidden lg:block" data-toc-expand="true">
     <div class="sticky top-20 px-4 py-2 border-l border-gray-500/15">
         <h4 class="text-lg font-bold mb-1">ON THIS PAGE</h4>
             <ul class="menu menu-sm toc-menu">
             
                 <li>
                     
-                    <details class="toc-details" >
+                    <details class="toc-details" open>
                         <summary>
-                            <a href="https://cc-club.in/roadmaps/devops/#phase-1-linux-git-1-week" class="toc-link">Phase 1: Linux &amp; Git (1 week)</a>
+                            <a href="https://cc-club.in/roadmaps/devops/#1-orientation-the-devops-landscape-culture" class="toc-link">1. Orientation: The DevOps Landscape &amp; Culture</a>
                         </summary>
                         <ul>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/devops/#1-1-linux-fundamentals-day-1-3" class="toc-link">1.1 Linux Fundamentals (Day 1-3)</a>
+                                    <a href="https://cc-club.in/roadmaps/devops/#1-1-what-devops-actually-is" class="toc-link">1.1 What DevOps Actually Is</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/devops/#1-2-git-github-day-4-5" class="toc-link">1.2 Git &amp; Github (Day 4-5)</a>
+                                    <a href="https://cc-club.in/roadmaps/devops/#1-2-the-toolchain-map" class="toc-link">1.2 The Toolchain Map</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/devops/#1-3-github-actions-day-6-7" class="toc-link">1.3 Github Actions (Day 6-7)</a>
+                                    <a href="https://cc-club.in/roadmaps/devops/#1-3-devops-vs-sre-vs-platform-engineering" class="toc-link">1.3 DevOps vs. SRE vs. Platform Engineering</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#1-4-where-are-you-starting-from" class="toc-link">1.4 Where Are You Starting From?</a>
                                 </li>
                             
                         </ul>
@@ -826,37 +1189,191 @@
             
                 <li>
                     
-                    <a href="https://cc-club.in/roadmaps/devops/#phase-2-understanding-networking-fundamentals-1-week" class="toc-link">Phase 2: Understanding Networking Fundamentals (1 Week)</a>
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/devops/#2-stage-1-foundations-linux-git-networking" class="toc-link">2. Stage 1: Foundations — Linux, Git &amp; Networking</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#2-1-linux-fundamentals" class="toc-link">2.1 Linux Fundamentals</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#2-2-git-github" class="toc-link">2.2 Git &amp; GitHub</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#2-3-networking-essentials" class="toc-link">2.3 Networking Essentials</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
                     
                 </li>
             
                 <li>
                     
-                    <a href="https://cc-club.in/roadmaps/devops/#phase-3-understanding-docker-1-week" class="toc-link">Phase 3: Understanding Docker (1 Week)</a>
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/devops/#3-stage-2-ci-cd-with-github-actions" class="toc-link">3. Stage 2: CI/CD with GitHub Actions</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#3-1-your-first-pipeline" class="toc-link">3.1 Your First Pipeline</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#3-2-from-ci-to-cd" class="toc-link">3.2 From CI to CD</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
                     
                 </li>
             
                 <li>
                     
-                    <a href="https://cc-club.in/roadmaps/devops/#phase-4-understanding-nginx-1-2-days" class="toc-link">Phase 4: Understanding Nginx (1-2 Days)</a>
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/devops/#4-stage-3-docker-containers" class="toc-link">4. Stage 3: Docker &amp; Containers</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#4-1-images-layers-the-dockerfile" class="toc-link">4.1 Images, Layers &amp; the Dockerfile</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#4-2-docker-compose-full-stack-one-file" class="toc-link">4.2 Docker Compose: Full-Stack, One File</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#4-3-registries-tags-hygiene" class="toc-link">4.3 Registries, Tags &amp; Hygiene</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#4-4-reproducible-toolchains-nix-flakes-advanced-elective" class="toc-link">4.4 Reproducible Toolchains: Nix &amp; Flakes (Advanced Elective)</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
                     
                 </li>
             
                 <li>
                     
-                    <a href="https://cc-club.in/roadmaps/devops/#phase-5-understanding-kubernetes-1-2-weeks" class="toc-link">Phase 5: Understanding Kubernetes (1-2 Weeks)</a>
+                    <a href="https://cc-club.in/roadmaps/devops/#5-stage-4-deploying-to-a-vps-nginx-tls-systemd" class="toc-link">5. Stage 4: Deploying to a VPS — Nginx, TLS &amp; systemd</a>
                     
                 </li>
             
                 <li>
                     
-                    <a href="https://cc-club.in/roadmaps/devops/#phase-6-jenkins-is-all-you-need-2-3-weeks" class="toc-link">Phase 6: Jenkins Is All You Need (2-3 Weeks)</a>
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/devops/#6-stage-5-kubernetes-container-orchestration" class="toc-link">6. Stage 5: Kubernetes — Container Orchestration</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#6-1-the-core-objects" class="toc-link">6.1 The Core Objects</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#6-2-a-minimal-deployment" class="toc-link">6.2 A Minimal Deployment</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
                     
                 </li>
             
                 <li>
                     
-                    <a href="https://cc-club.in/roadmaps/devops/#a-cloud-native-mindset" class="toc-link">A Cloud Native Mindset</a>
+                    <a href="https://cc-club.in/roadmaps/devops/#7-stage-6-jenkins-enterprise-ci" class="toc-link">7. Stage 6: Jenkins &amp; Enterprise CI</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/devops/#8-stage-7-infrastructure-as-code-with-terraform" class="toc-link">8. Stage 7: Infrastructure as Code with Terraform</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/devops/#9-stage-8-observability-metrics-logs-alerts" class="toc-link">9. Stage 8: Observability — Metrics, Logs &amp; Alerts</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/devops/#10-stage-9-cloud-platforms-gitops" class="toc-link">10. Stage 9: Cloud Platforms &amp; GitOps</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#10-1-the-cloud-providers" class="toc-link">10.1 The Cloud Providers</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#10-2-gitops-kubernetes-deployment-done-right" class="toc-link">10.2 GitOps: Kubernetes Deployment Done Right</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/devops/#11-six-progressive-milestone-projects" class="toc-link">11. Six Progressive Milestone Projects</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#milestone-1-first-ci-pipeline" class="toc-link">Milestone 1: First CI Pipeline</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#milestone-2-containerized-full-stack-application" class="toc-link">Milestone 2: Containerized Full-Stack Application</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#milestone-3-vps-production-deployment" class="toc-link">Milestone 3: VPS Production Deployment</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#milestone-4-kubernetes-migration" class="toc-link">Milestone 4: Kubernetes Migration</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#milestone-5-terraform-managed-cloud-infrastructure" class="toc-link">Milestone 5: Terraform-Managed Cloud Infrastructure</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/devops/#milestone-6-capstone-end-to-end-gitops-platform" class="toc-link">Milestone 6 (Capstone): End-to-End GitOps Platform</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/devops/#12-curated-official-resources" class="toc-link">12. Curated Official Resources</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/devops/#13-where-to-next-in-the-cc-ecosystem" class="toc-link">13. Where to Next in the CC Ecosystem</a>
                     
                 </li>
             
@@ -938,7 +1455,10 @@
                       htmlLabels: true,
                       useMaxWidth: true,
                       curve: 'basis',
-                      wrappingWidth: 260
+                      wrappingWidth: 260,
+                      diagramPadding: 28,
+                      // Keep subgraph titles from overlapping node shapes
+                      subGraphTitleMargin: { top: 10, bottom: 6 }
                     }
                   });
 
@@ -950,6 +1470,20 @@
                       elem.removeAttribute('data-processed');
                     }
                   });
+
+                  // 3.5 Wait for web fonts before measuring: if Mermaid measures
+                  // label text with fallback font metrics and then paints with the
+                  // loaded Inter font, labels overflow their shapes.
+                  try {
+                    await Promise.all([
+                      document.fonts.load('400 16px Inter'),
+                      document.fonts.load('600 16px Inter'),
+                      document.fonts.load('700 16px Inter'),
+                    ]);
+                    await document.fonts.ready;
+                  } catch (fontError) {
+                    // Font loading API unavailable — render with fallback metrics
+                  }
 
                   // 4. Re-run Mermaid to generate fresh SVGs for the active theme
                   await mermaid.run({

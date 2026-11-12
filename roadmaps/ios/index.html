@@ -606,11 +606,11 @@ If you do not currently own an Apple Silicon Mac, you can still begin your iOS j
 </tbody></table>
 <pre class="mermaid border border-gray-500/15">
 graph TD
-    App["Your Swift Application Code"] --> SwiftRuntime["Swift 6 Runtime (ARC & Concurrency)"]
+    App["Your Swift Application Code"] --> SwiftRuntime["Swift 6 Runtime (ARC &amp; Concurrency)"]
     SwiftRuntime --> SwiftUI["SwiftUI Declarative Engine"]
     SwiftUI --> Observation["Observation Engine (@Observable)"]
     SwiftUI --> Metal["Metal Graphics Engine (Hardware GPU Acceleration)"]
-    Metal --> CoreAnimation["Core Animation & Display Compositor (120Hz ProMotion)"]
+    Metal --> CoreAnimation["Core Animation &amp; Display Compositor (120Hz ProMotion)"]
     App --> SwiftData["SwiftData / SQLite Engine"]
     App --> SystemFrameworks["Apple System Frameworks (CoreLocation, MapKit, AVFoundation)"]
 </pre>
@@ -675,7 +675,7 @@ graph TD
 <p>In Swift, <strong>structs are value types</strong> (copied on assignment) while <strong>classes are reference types</strong> (shared instances pointing to a heap allocation).</p>
 <pre class="mermaid border border-gray-500/15">
 graph TD
-    subgraph ValueTypes["Value Types (Structs & Enums)"]
+    subgraph ValueTypes["Value Types (Structs &amp; Enums)"]
         S1["Original Struct A"] -->|"Assignment / Passing"| S2["Independent Copy B"]
         Note1["Allocated on Stack<br/>Thread-safe by default<br/>Predictable lifecycle"]
     end
@@ -1076,11 +1076,11 @@ graph TD
 <pre class="mermaid border border-gray-500/15">
 graph TD
     App["Your Native iOS Application"] --> Frameworks["Native Apple System Frameworks"]
-    Frameworks --> Loc["Core Location & MapKit (GPS & Satellite Maps)"]
+    Frameworks --> Loc["Core Location &amp; MapKit (GPS &amp; Satellite Maps)"]
     Frameworks --> AV["AVFoundation (Camera, Photo, Audio Recording)"]
     Frameworks --> Auth["LocalAuthentication (Biometric Face ID / Touch ID)"]
-    Frameworks --> Notif["UserNotifications (Local & Push Alerts)"]
-    Frameworks --> Widget["WidgetKit (Home Screen & Lock Screen Widgets)"]
+    Frameworks --> Notif["UserNotifications (Local &amp; Push Alerts)"]
+    Frameworks --> Widget["WidgetKit (Home Screen &amp; Lock Screen Widgets)"]
 </pre>
 <h3 id="8-1-biometric-authentication-with-localauthentication">8.1 Biometric Authentication with <code>LocalAuthentication</code></h3>
 <pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="swift"><span class="giallo-l"><span style="color: #FF8F40;">import</span><span style="color: #59C2FF;"> LocalAuthentication</span></span>
@@ -1163,7 +1163,7 @@ graph LR
     Code["Xcode Archive Build (.xcarchive)"] --> Organizer["Xcode Organizer Window"]
     Organizer --> Validate["Automated App Store Pre-Validation"]
     Validate --> ASC["App Store Connect Cloud"]
-    ASC --> TestFlight["TestFlight (Internal & External Beta Testers)"]
+    ASC --> TestFlight["TestFlight (Internal &amp; External Beta Testers)"]
     TestFlight --> Review["Apple App Review Board"]
     Review --> Ready["App Store Release (Live Worldwide)"]
 </pre>
@@ -1678,7 +1678,10 @@ graph TD
                       htmlLabels: true,
                       useMaxWidth: true,
                       curve: 'basis',
-                      wrappingWidth: 260
+                      wrappingWidth: 260,
+                      diagramPadding: 28,
+                      // Keep subgraph titles from overlapping node shapes
+                      subGraphTitleMargin: { top: 10, bottom: 6 }
                     }
                   });
 
@@ -1690,6 +1693,20 @@ graph TD
                       elem.removeAttribute('data-processed');
                     }
                   });
+
+                  // 3.5 Wait for web fonts before measuring: if Mermaid measures
+                  // label text with fallback font metrics and then paints with the
+                  // loaded Inter font, labels overflow their shapes.
+                  try {
+                    await Promise.all([
+                      document.fonts.load('400 16px Inter'),
+                      document.fonts.load('600 16px Inter'),
+                      document.fonts.load('700 16px Inter'),
+                    ]);
+                    await document.fonts.ready;
+                  } catch (fontError) {
+                    // Font loading API unavailable — render with fallback metrics
+                  }
 
                   // 4. Re-run Mermaid to generate fresh SVGs for the active theme
                   await mermaid.run({
