@@ -1,21 +1,20 @@
 +++
 title = "Java & Spring Boot Roadmap"
 weight = 2
-description = "Comprehensive guide to mastering Java backend development with Spring Boot 3, REST APIs, JPA, and Spring Security."
+description = "A comprehensive, practical guide to mastering Java backend development: modern Java, Spring Boot, REST APIs, Spring Data JPA, security, testing, and production engineering."
 
 [extra]
-difficulty = "Beginner to Intermediate"
-estimated_time = "2-3 months"
-prerequisites = "Basic programming fundamentals, logical thinking"
-badge = "NEW"
+difficulty = "Beginner to Advanced"
+estimated_time = "Ongoing Practice (3-4 months for core foundation)"
+prerequisites = "Basic programming fundamentals in any language; logical thinking"
+badge = "BACKEND"
+toc_expand = true
 
 # Landing page carousel
 carousel_image = "roadmaps/java-spring-boot-cyber.webp"
 carousel_title = "Java & Spring Boot"
 carousel_description = "Master enterprise backend development with Java 21, Spring Boot 3, REST APIs, JPA, and Spring Security."
 +++
-
-# Java & Spring Boot Roadmap
 
 ## 1. Overview
 
@@ -26,6 +25,7 @@ Java backend development powers the server-side infrastructure of modern applica
 ### Why Java + Spring Boot?
 
 * **Industry Dominance**: Java remains the backbone of enterprise software, financial institutions, high-volume e-commerce platforms, and mission-critical cloud backends.
+* **Modern Java Is a Different Language**: Java 25 LTS (the current LTS, alongside 21) brings virtual threads for cheap concurrency, records, pattern matching, and sealed types — the verbosity jokes are two decades out of date.
 * **Strong Foundations**: Java enforces object-oriented design, strong static typing, robust memory management, and mature concurrency models.
 * **Spring Boot Ecosystem**: Spring Boot strips away complex XML boilerplate, providing opinionated defaults, embedded servers (Tomcat/Jetty), auto-configuration, and production-grade monitoring right out of the box.
 * **Long-Term Scalability**: The exact same paradigms learned building a student project scale to distributed microservice architectures handling millions of requests per second.
@@ -40,9 +40,10 @@ Java backend development powers the server-side infrastructure of modern applica
 ### Recommended Tooling (Zero-Friction Setup)
 
 * **IDE**: **IntelliJ IDEA Community Edition** (100% free) — the undisputed industry standard for Java with out-of-the-box refactoring and debugging.
-* **JDK**: **Java 21 LTS** from **Adoptium (Eclipse Temurin)** or Amazon Corretto (manage via SDKMAN! on Linux/macOS).
+* **JDK**: **Java 25 LTS** (current) or Java 21 LTS from **Adoptium (Eclipse Temurin)** or Amazon Corretto (manage via SDKMAN! on Linux/macOS).
 * **API Testing**: **Postman** or **Bruno** for testing endpoints and inspecting JSON responses.
 * **Database**: **PostgreSQL** (run via Docker Compose to avoid manual local service issues).
+* **Build Tool Note**: This roadmap uses **Maven** — the enterprise incumbent. **Gradle** is the equally-valid alternative (Kotlin-based build scripts, faster incremental builds); concepts transfer 1:1.
 
 ---
 
@@ -74,12 +75,43 @@ Java backend development powers the server-side infrastructure of modern applica
 1. **Student Record System**: Build a CLI app allowing users to add, update, remove, and search students stored in an in-memory `HashMap` or `ArrayList`.
 2. **Personal Expense Tracker**: Create a console application to log expenses, group them by category using Streams (`Collectors.groupingBy`), and compute weekly/monthly summaries.
 
+#### Modern Java in Practice
+```java
+// Records: immutable data carriers — perfect for DTOs and value objects
+record Contributor(String username, int commits, boolean isCoreTeam) {}
+
+// Streams: declarative data pipelines over collections
+List<String> topContributors = contributors.stream()
+    .filter(c -> c.commits() > 50)
+    .sorted(Comparator.comparingInt(Contributor::commits).reversed())
+    .map(Contributor::username)
+    .limit(5)
+    .toList();
+```
+
+#### Virtual Threads: The Java 21+/25 Superpower for Backends
+
+```java
+// Virtual threads make blocking I/O cheap — 10,000 concurrent tasks, no
+// reactive complexity, no thread-pool tuning. This is why modern Java
+// backends no longer need WebFlux for high-concurrency I/O.
+try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+    IntStream.range(0, 10_000).forEach(i ->
+        executor.submit(() -> fetchFromDownstream(i)));
+}
+```
+
 #### Curated Resources
-* [Dev.java — Official Learn Java Portal](https://dev.java/learn/)
-* [University of Helsinki — MOOC.fi Java Programming I & II](https://java-programming.mooc.fi/) *(Hands-on automated exercise tests)*
-* [Kunal Kushwaha — Java & DSA Fundamentals](https://www.youtube.com/KunalKushwaha)
-* [Telusko — Core Java Course](https://www.youtube.com/@Telusko)
-* [Shrayansh Jain — Java Core to Advanced Playlist](https://www.youtube.com/playlist?list=PL6W8uoQQ2c63f469AyV78np0rbxRFppkx)
+
+{{<pretty_link url="https://dev.java/learn/" title="Dev.java — Official Learn Java Portal" description="The official Java learning portal from Oracle, covering modern Java end to end." />}}
+
+{{<pretty_link url="https://java-programming.mooc.fi/" title="University of Helsinki — MOOC.fi Java Programming I & II" description="University-grade Java course with hands-on automated exercise tests — free and certificate-track." />}}
+
+{% <collapse title="Video Courses (English & Hindi)"> %}
+* **Kunal Kushwaha** — Java & DSA fundamentals.
+* **Telusko** — Core Java course.
+* **Shrayansh Jain** — Java core to advanced playlist.
+{% </collapse> %}
 
 ---
 
@@ -111,10 +143,12 @@ Java backend development powers the server-side infrastructure of modern applica
 3. **Maven Project Setup**: Generate a clean Maven project from scratch and import third-party libraries (e.g., Jackson or Apache Commons) to practice dependency management.
 
 #### Curated Resources
-* [SQLBolt — Interactive SQL Practice](https://sqlbolt.com/)
-* [PostgreSQL Official Documentation](https://www.postgresql.org/docs/)
-* [MySQL Official Documentation](https://dev.mysql.com/doc/)
-* [Apache Maven — Getting Started](https://maven.apache.org/guides/getting-started/index.html)
+
+{{<pretty_link url="https://sqlbolt.com/" title="SQLBolt — Interactive SQL Practice" description="Learn SQL by writing queries in the browser, lesson by lesson." />}}
+
+{{<pretty_link url="https://www.postgresql.org/docs/" title="PostgreSQL Official Documentation" description="The authoritative reference for the default relational database in modern backends." />}}
+
+{{<pretty_link url="https://maven.apache.org/guides/getting-started/index.html" title="Apache Maven — Getting Started" description="Official guide to the build lifecycle, POM structure, and dependency management." />}}
 
 ---
 
@@ -133,8 +167,39 @@ Java backend development powers the server-side infrastructure of modern applica
 * Reading data: `@PathVariable`, `@RequestParam`, `@RequestBody`, `@RequestHeader`.
 * Response handling: `ResponseEntity<T>`, status codes, and HTTP headers.
 * **Strict Layer Separation**:
-  $$\text{Controller (HTTP/DTO)} \longrightarrow \text{Service (Business Logic)} \longrightarrow \text{Repository (Data Access)} \longrightarrow \text{Database}$$
+  {% <mermaid> %}
+  graph LR
+      C["Controller<br/>(HTTP / DTO)"] --> S["Service<br/>(Business Logic)"]
+      S --> R["Repository<br/>(Data Access)"]
+      R --> DB[("Database")]
+  {% </mermaid> %}
 * The **DTO Pattern**: Decoupling database `@Entity` models from API request/response payloads to prevent mass assignment and circular JSON serialization bugs.
+
+The shape of almost every Spring controller you will write:
+
+```java
+@RestController
+@RequestMapping("/api/projects")
+public class ProjectController {
+
+    private final ProjectService service; // constructor injection — never field injection
+
+    public ProjectController(ProjectService service) {
+        this.service = service;
+    }
+
+    @GetMapping
+    public Page<ProjectDto> list(@RequestParam(defaultValue = "0") int page) {
+        return service.findAll(PageRequest.of(page, 20));
+    }
+
+    @PostMapping
+    public ResponseEntity<ProjectDto> create(@Valid @RequestBody CreateProjectRequest request) {
+        ProjectDto created = service.create(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(created);
+    }
+}
+```
 
 #### Part 3: Database Integration with Spring Data JPA
 * What is an ORM? Understanding JPA specifications vs Hibernate implementation.
@@ -156,10 +221,33 @@ Java backend development powers the server-side infrastructure of modern applica
 * Custom `OncePerRequestFilter` to validate Bearer tokens on incoming requests.
 * Role-based access control (RBAC): `@PreAuthorize("hasRole('ADMIN')")`.
 
+The modern Spring Security 6 configuration you will actually write:
+
+```java
+@Bean
+SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    return http
+        .csrf(csrf -> csrf.disable()) // acceptable for stateless JWT APIs
+        .authorizeHttpRequests(auth -> auth
+            .requestMatchers("/api/auth/**").permitAll()
+            .requestMatchers("/api/admin/**").hasRole("ADMIN")
+            .anyRequest().authenticated())
+        .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+        .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
+        .build();
+}
+```
+
 #### Part 6: Automated Testing & API Documentation
 * Unit testing `@Service` classes with **JUnit 5** and **Mockito** (`@Mock`, `@InjectMocks`, `when().thenReturn()`).
 * Interactive API documentation using **SpringDoc OpenAPI** (Swagger UI at `/swagger-ui.html`).
-* Local database containerization with **Docker Compose**.
+* Local database containerization with **Docker Compose** — and **Testcontainers** to run throwaway PostgreSQL instances *inside* your integration tests, so tests hit a real database without polluting shared state.
+
+#### Part 7: Production Essentials
+* **Spring Boot Actuator**: production-ready `/health`, `/metrics`, and `/env` endpoints — the observability hook your monitoring stack scrapes.
+* **Flyway migrations**: database schema changes as versioned, ordered SQL files applied at startup — never hand-edited schemas.
+* **Profiles**: `application-dev.yml` vs `application-prod.yml` — environment-specific configuration without code changes.
+* **Caching**: Spring's `@Cacheable` backed by Redis when read-heavy endpoints outgrow the database.
 
 #### Hands-On Tasks
 1. **Student API**: Build full CRUD endpoints with DTO validation, JPA persistence, and global exception handling.
@@ -168,21 +256,44 @@ Java backend development powers the server-side infrastructure of modern applica
 4. **Interactive Swagger**: Document all endpoints with SpringDoc OpenAPI.
 
 #### Curated Resources
-* [Spring Initializr — Bootstrap Generator](https://start.spring.io/)
-* [Official Spring Boot Documentation](https://docs.spring.io/spring-boot/)
-* [Official Spring Security Reference](https://docs.spring.io/spring-security/reference/)
-* [Official Spring Guides](https://spring.io/guides)
-* [Dan Vega — Modern Spring Boot 3 (YouTube)](https://www.youtube.com/@danvega)
-* [Laurentiu Spilca — Spring Context & Security (YouTube)](https://www.youtube.com/c/laurentiuspilca)
-* [Amigoscode — Spring Boot, Docker & PostgreSQL (YouTube)](https://www.youtube.com/@amigoscode)
-* [Telusko — Spring Boot Full Course](https://www.youtube.com/watch?v=35EQXmHKZYs)
-* [Shrayansh Jain — Spring Boot Playlist](https://www.youtube.com/playlist?list=PL6W8uoQQ2c60g6_fcjDCLHSx1LBeVYqyZ)
-* [EmbarkX — Spring Boot Projects](https://www.youtube.com/@EmbarkX)
-* [Baeldung — Spring & Java Reference](https://www.baeldung.com/)
+
+{{<pretty_link url="https://start.spring.io/" title="Spring Initializr" description="Bootstrap a configured Spring Boot project in seconds — dependencies included." />}}
+
+{{<pretty_link url="https://docs.spring.io/spring-boot/" title="Official Spring Boot Documentation" description="The definitive reference for auto-configuration, starters, and production features." />}}
+
+{{<pretty_link url="https://docs.spring.io/spring-security/reference/" title="Official Spring Security Reference" description="The authoritative guide to filters, authentication, and authorization architecture." />}}
+
+{{<pretty_link url="https://spring.io/guides" title="Official Spring Guides" description="Task-oriented, 15-minute guides for practically every Spring capability." />}}
+
+{{<pretty_link url="https://www.baeldung.com/" title="Baeldung — Spring & Java Reference" description="The community's deep-dive reference for every Spring question you will ever Google." />}}
+
+{% <collapse title="Video Courses (English & Hindi)"> %}
+* **Dan Vega** — Modern Spring Boot 3 from a Spring team advocate.
+* **Laurentiu Spilca** — Spring Context and Security deep dives.
+* **Amigoscode** — Spring Boot, Docker, and PostgreSQL.
+* **Telusko** — Spring Boot full course.
+* **Shrayansh Jain** — Spring Boot playlist (Hindi-friendly).
+* **EmbarkX** — Spring Boot project walkthroughs.
+{% </collapse> %}
 
 ---
 
-## 3. Capstone Project: Campus Event & Management Platform
+## 3. The Milestone Ladder
+
+Each stage's hands-on tasks form a progressive ladder — every rung is a deployable, portfolio-ready artifact:
+
+{% <mermaid> %}
+graph TD
+    M1["Milestone 1: CLI Data Applications<br/>(OOP, Collections, Streams)"] --> M2["Milestone 2: Schema &amp; SQL Mastery<br/>(Normalized Design, Joins)"]
+    M2 --> M3["Milestone 3: Student API<br/>(Spring Boot, JPA, Validation)"]
+    M3 --> M4["Milestone 4: JWT Auth Microservice<br/>(Spring Security 6, RBAC)"]
+    M4 --> M5["Milestone 5: Tested &amp; Documented API<br/>(Mockito, Testcontainers, Swagger)"]
+    M5 --> M6["Milestone 6 (Capstone): Campus Event Platform<br/>(Everything Above, Production-Grade)"]
+{% </mermaid> %}
+
+---
+
+## 4. Capstone Project: Campus Event & Management Platform
 
 Rather than building fragmented tutorial snippets, consolidate your skills into one comprehensive, portfolio-ready application.
 
@@ -197,7 +308,7 @@ Rather than building fragmented tutorial snippets, consolidate your skills into 
 
 ### Key Features to Implement
 * **Authentication & Authorization**: Registration and login endpoints returning signed JWTs, password encryption with BCrypt, and role-based permissions (`ROLE_STUDENT`, `ROLE_ADMIN`).
-* **Entity Relationships**: Normalized database models linking Users $\leftrightarrow$ Events $\leftrightarrow$ Registrations with proper cascading and indexing.
+* **Entity Relationships**: Normalized database models linking Users ↔ Events ↔ Registrations with proper cascading and indexing.
 * **Pagination & Sorting**: Paginated event listings (`Pageable`, `Page<EventDTO>`) with multi-attribute filtering (category, date, venue).
 * **Robust Validation**: Jakarta validation on all incoming request payloads with meaningful field error mappings.
 * **Global Error Handling**: `@RestControllerAdvice` catching custom business exceptions (`ResourceNotFoundException`, `EventFullException`) and returning standard RFC 7807 problem details.
@@ -206,7 +317,7 @@ Rather than building fragmented tutorial snippets, consolidate your skills into 
 
 ---
 
-## 4. Skills Checklist for Campus Placements & Internships
+## 5. Skills Checklist for Campus Placements & Internships
 
 Before applying for backend software engineering roles, ensure you can comfortably discuss and demonstrate:
 
@@ -215,9 +326,20 @@ Before applying for backend software engineering roles, ensure you can comfortab
 * [ ] Internal workings of `HashMap` (`hashCode()` and `equals()`, buckets, and collisions).
 * [ ] Relational schema design, Foreign Keys, indexing, and SQL Joins.
 * [ ] Spring Boot Inversion of Control (IoC), Beans, and Constructor Injection.
-* [ ] Controller $\rightarrow$ Service $\rightarrow$ Repository architectural pattern.
+* [ ] Controller → Service → Repository architectural pattern.
 * [ ] The DTO pattern and why JPA Entities must never be leaked through the API layer.
 * [ ] Spring Data JPA derived queries and resolving the N+1 select problem.
 * [ ] Spring Security 6 `SecurityFilterChain` and stateless JWT lifecycle.
 * [ ] Writing unit tests with Mockito and JUnit 5.
 * [ ] Containerizing dependencies using `docker-compose.yml`.
+
+---
+
+## 6. Where to Next in the CC Ecosystem
+
+Java backend engineering connects to the rest of the CC curriculum depending on your direction:
+
+* **[DevOps Roadmap](@/roadmaps/devops.md)** — containerize, pipeline, and deploy your Spring Boot services with Docker, GitHub Actions, and Kubernetes.
+* **[Web Development Master Roadmap](@/roadmaps/web-development.md)** — pair your backend APIs with modern frontend engineering, or compare Node.js/Python backends against the JVM.
+* **[System Administration Roadmap](@/roadmaps/sysadmin.md)** — the Linux, networking, and security foundations your JVM services run on.
+* **[Open Source Contribution Roadmap](@/roadmaps/open-source.md)** — Spring, Hibernate, and the wider JVM ecosystem are among the largest open-source communities in the world.
