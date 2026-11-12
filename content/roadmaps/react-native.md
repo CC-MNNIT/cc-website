@@ -76,7 +76,7 @@ graph TD
         Router["Expo Router (File-based typed routing)"]
         SDK["Expo SDK (50+ curated hardware modules: Camera, SecureStore, SQLite)"]
         CLI["Expo CLI (Metro bundler, dev server, prebuild)"]
-        EAS["EAS (Cloud & Local builds, App Store submissions)"]
+        EAS["EAS (Cloud &amp; Local builds, App Store submissions)"]
     end
 
     Expo_Framework -->|"Wraps, enhances, and powers"| React_Native_Core
@@ -450,7 +450,7 @@ State in mobile applications falls into two distinct categories: **Server State*
 {% <mermaid> %}
 graph TD
     State["Application State"] --> ServerState["Server State (Cached Network Data)"]
-    State --> ClientState["Client State (Local UI & Sessions)"]
+    State --> ClientState["Client State (Local UI &amp; Sessions)"]
 
     ServerState --> TQ["TanStack Query (React Query)"]
     TQ --> TQ_Features["Automatic background refetching<br/>Stale-while-revalidate caching<br/>Optimistic mutation updates"]
@@ -596,10 +596,10 @@ Mobile applications differentiate themselves from web pages through deep, hardwa
 {% <mermaid> %}
 graph TD
     App["Your React Native Application"] --> ExpoSDK["Expo Hardware SDK Layer"]
-    ExpoSDK --> Cam["expo-camera (Photos & QR Scanning)"]
-    ExpoSDK --> Loc["expo-location (GPS & Geofencing)"]
+    ExpoSDK --> Cam["expo-camera (Photos &amp; QR Scanning)"]
+    ExpoSDK --> Loc["expo-location (GPS &amp; Geofencing)"]
     ExpoSDK --> Auth["expo-local-authentication (Face ID / Fingerprint)"]
-    ExpoSDK --> Notif["expo-notifications (Push & Local Reminders)"]
+    ExpoSDK --> Notif["expo-notifications (Push &amp; Local Reminders)"]
     ExpoSDK --> Haptic["expo-haptics (Tactile Vibration Engines)"]
 {% </mermaid> %}
 
@@ -676,7 +676,7 @@ Delivering a professional application requires structured testing and rigorous p
 {% <mermaid> %}
 graph TD
     E2E["10% End-to-End Tests (Maestro / Detox)"]
-    Component["30% Component & Hook Tests (React Native Testing Library)"]
+    Component["30% Component &amp; Hook Tests (React Native Testing Library)"]
     Unit["60% Pure TypeScript Unit Tests (Jest / Logic / Repositories)"]
 {% </mermaid> %}
 

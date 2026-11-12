@@ -418,7 +418,7 @@ Professional web development is tooling-heavy. Understanding *why* each tool exi
 {% <mermaid> %}
 graph TD
     Runtime["JavaScript Runtime<br/>Node.js / Bun / Deno / Browser"] --> Manager["Package Manager<br/>npm / pnpm / yarn / Bun's built-in"]
-    Manager --> Bundler["Bundler & Dev Server<br/>Vite / esbuild / Turbopack"]
+    Manager --> Bundler["Bundler &amp; Dev Server<br/>Vite / esbuild / Turbopack"]
     Bundler --> Framework["Frontend Framework<br/>React / Vue / Svelte / Astro"]
     Framework --> Meta["Meta-Framework<br/>Next.js / Nuxt / SvelteKit / Astro"]
 {% </mermaid> %}
@@ -1211,7 +1211,7 @@ Theory without building creates tutorial dependence. Work through these mileston
 
 {% <mermaid> %}
 graph TD
-    M1["Milestone 1: Portfolio & Landing Pages<br/>Focus: Semantic HTML, Modern CSS, Accessibility, Deployment"] --> M2["Milestone 2: PulseMetrics Web Converter<br/>Focus: Vanilla JavaScript, Modules, LocalStorage"]
+    M1["Milestone 1: Portfolio &amp; Landing Pages<br/>Focus: Semantic HTML, Modern CSS, Accessibility, Deployment"] --> M2["Milestone 2: PulseMetrics Web Converter<br/>Focus: Vanilla JavaScript, Modules, LocalStorage"]
     M2 --> M3["Milestone 3: DevPulse GitHub Explorer<br/>Focus: Component Framework, TypeScript, Data Fetching"]
     M3 --> M4["Milestone 4: Chronicle Notes Full-Stack<br/>Focus: REST API, PostgreSQL, Auth, Validation"]
     M4 --> M5["Milestone 5: PulseBoard Analytics Dashboard<br/>Focus: Server Rendering, Charts, Real-Time, Web Vitals"]

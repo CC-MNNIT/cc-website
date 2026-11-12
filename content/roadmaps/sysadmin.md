@@ -38,12 +38,12 @@ To navigate modern infrastructure, understand how System Administration connects
 graph TD
     SysAdmin["System Administration (The Operational Core)<br/>OS Internals, Linux, Networking, Storage, Services, Security, Troubleshooting"]
     
-    SysAdmin --> Linux["Linux & Systems Engineering<br/>Kernel tuning, device drivers, low-level POSIX systems"]
+    SysAdmin --> Linux["Linux &amp; Systems Engineering<br/>Kernel tuning, device drivers, low-level POSIX systems"]
     SysAdmin --> Net["Network Engineering<br/>Routing protocols, switches, BGP, hardware topologies"]
-    SysAdmin --> DevOps["DevOps & Platform Engineering<br/>CI/CD pipelines, container orchestration, IaC, developer enablement"]
+    SysAdmin --> DevOps["DevOps &amp; Platform Engineering<br/>CI/CD pipelines, container orchestration, IaC, developer enablement"]
     SysAdmin --> SRE["Site Reliability Engineering (SRE)<br/>SLOs, error budgets, blameless postmortems, large-scale automation"]
     SysAdmin --> Cloud["Cloud Architecture<br/>Managed cloud primitives (AWS/GCP/Azure), serverless, multi-region failover"]
-    SysAdmin --> Sec["Cybersecurity & Hardening<br/>Threat modeling, penetration testing, compliance auditing, forensics"]
+    SysAdmin --> Sec["Cybersecurity &amp; Hardening<br/>Threat modeling, penetration testing, compliance auditing, forensics"]
 {% </mermaid> %}
 
 * **Linux ≠ System Administration**: Linux is an operating system kernel. System administration is the operational discipline of managing that operating system, along with networks, users, storage, automated recovery, and service daemons.
@@ -66,7 +66,7 @@ graph TD
     T3 --> R3["Understand where your code runs (processes, ports, sockets, system calls, reverse proxies)"]
     T4 --> R4["Deep-dive into networking, storage, security, automated Ansible, and diagnostics"]
 
-    R1 --> Core["Core Milestone: Linux Server Administration & Service Management"]
+    R1 --> Core["Core Milestone: Linux Server Administration &amp; Service Management"]
     R2 --> Core
     R3 --> Core
     R4 --> Core
@@ -142,9 +142,9 @@ graph TD
 {% <mermaid> %}
 graph TD
     P1["Phase 1: Firmware (UEFI / BIOS)"] --> P2["Phase 2: Bootloader (GRUB2)"]
-    P2 --> P3["Phase 3: Kernel Initialization & initramfs"]
+    P2 --> P3["Phase 3: Kernel Initialization &amp; initramfs"]
     P3 --> P4["Phase 4: Init System (systemd PID 1)"]
-    P4 --> P5["Phase 5: System Targets & User Login"]
+    P4 --> P5["Phase 5: System Targets &amp; User Login"]
 {% </mermaid> %}
 
 1. **UEFI / BIOS**: Executes the Power-On Self-Test (POST), initializes base hardware, and reads the EFI System Partition (ESP) on the boot disk.
@@ -483,7 +483,7 @@ Never expose backend application runtimes (Node.js, Python Gunicorn, Go binaries
 
 {% <mermaid> %}
 graph LR
-    User["Internet HTTPS (Port 443)"] --> Nginx["Nginx Reverse Proxy & Load Balancer<br/>TLS Termination, Rate Limiting, Static Asset Caching"]
+    User["Internet HTTPS (Port 443)"] --> Nginx["Nginx Reverse Proxy &amp; Load Balancer<br/>TLS Termination, Rate Limiting, Static Asset Caching"]
     Nginx -->|"HTTP / Unix Socket"| App1["Backend Node.js Service (127.0.0.1:8080)"]
     Nginx -->|"HTTP / Unix Socket"| App2["Backend Python Service (127.0.0.1:8000)"]
 {% </mermaid> %}
@@ -679,14 +679,14 @@ Theory without practical operational responsibility creates passive knowledge. W
 
 {% <mermaid> %}
 graph TD
-    M1["Milestone 1: Hardened Linux Server Setup"] --> M2["Milestone 2: LVM Storage & Mounts"]
+    M1["Milestone 1: Hardened Linux Server Setup"] --> M2["Milestone 2: LVM Storage &amp; Mounts"]
     M2 --> M3["Milestone 3: Production Nginx Reverse Proxy with TLS"]
-    M3 --> M4["Milestone 4: Internal DNS & Network Lab"]
+    M3 --> M4["Milestone 4: Internal DNS &amp; Network Lab"]
     M4 --> M5["Milestone 5: Encrypted 3-2-1 Automated Backups"]
-    M5 --> M6["Milestone 6: Centralized Auditing & Fail2ban"]
+    M5 --> M6["Milestone 6: Centralized Auditing &amp; Fail2ban"]
     M6 --> M7["Milestone 7: High-Availability Failover Pair"]
     M7 --> M8["Milestone 8: Automated Ansible Fleet Provisioning"]
-    M8 --> M9["Milestone 9: Prometheus & Grafana Monitoring Stack"]
+    M8 --> M9["Milestone 9: Prometheus &amp; Grafana Monitoring Stack"]
     M9 --> M10["Milestone 10 (Capstone): Resilient Multi-Tier Infrastructure Operations"]
 {% </mermaid> %}
 

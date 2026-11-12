@@ -447,12 +447,12 @@ One of the greatest misconceptions in software development is that only writing 
 {% <mermaid> %}
 graph TD
     subgraph The Open Source Contribution Spectrum
-        C1["Documentation & DX<br/>Fix tutorials, clarify setup, document APIs"]
-        C2["Issue Triage & MREs<br/>Reproduce bugs, verify fixes, narrow logs"]
-        C3["Testing & QA<br/>Add unit tests, edge cases, regression suites"]
-        C4["UI / UX & Accessibility<br/>WCAG compliance, responsive fixes, theme styling"]
-        C5["Bug Fixes & Refactoring<br/>Solve targeted issues, resolve linter warnings"]
-        C6["Core Features & RFCs<br/>Architectural enhancements, design proposals"]
+        C1["Documentation &amp; DX<br/>Fix tutorials, clarify setup, document APIs"]
+        C2["Issue Triage &amp; MREs<br/>Reproduce bugs, verify fixes, narrow logs"]
+        C3["Testing &amp; QA<br/>Add unit tests, edge cases, regression suites"]
+        C4["UI / UX &amp; Accessibility<br/>WCAG compliance, responsive fixes, theme styling"]
+        C5["Bug Fixes &amp; Refactoring<br/>Solve targeted issues, resolve linter warnings"]
+        C6["Core Features &amp; RFCs<br/>Architectural enhancements, design proposals"]
     end
 {% </mermaid> %}
 
@@ -490,7 +490,7 @@ Your Pull Request is your professional presentation to the project team. A well-
 graph LR
     Branch["Topic Branch<br/>(Local Commit)"] --> Push["Push to Fork<br/>(origin)"]
     Push --> OpenPR["Open Pull Request<br/>(Upstream)"]
-    OpenPR --> CI["Automated CI/CD<br/>(Tests & Linting)"]
+    OpenPR --> CI["Automated CI/CD<br/>(Tests &amp; Linting)"]
     CI --> Review["Maintainer Code Review"]
     Review -->|"Changes Requested"| Revise["Push Fixes to Branch"]
     Revise --> CI
@@ -650,11 +650,11 @@ Open source is not a single transaction; it is a long-term engineering reputatio
 
 {% <mermaid> %}
 graph TD
-    User["Stage 1: User & Consumer<br/>Uses the software, reports bugs, tests releases"]
-    Triage["Stage 2: Issue Triager & Contributor<br/>Reproduces bugs, submits PRs, updates documentation"]
+    User["Stage 1: User &amp; Consumer<br/>Uses the software, reports bugs, tests releases"]
+    Triage["Stage 2: Issue Triager &amp; Contributor<br/>Reproduces bugs, submits PRs, updates documentation"]
     Reviewer["Stage 3: Peer Reviewer<br/>Reviews incoming PRs, helps newcomers, tests edge cases"]
-    Maintainer["Stage 4: Subsystem Maintainer<br/>Has triage & merge rights, guides module architecture"]
-    Core["Stage 5: Core Team & Steering Committee<br/>Guides overall roadmap, manages releases, community steward"]
+    Maintainer["Stage 4: Subsystem Maintainer<br/>Has triage &amp; merge rights, guides module architecture"]
+    Core["Stage 5: Core Team &amp; Steering Committee<br/>Guides overall roadmap, manages releases, community steward"]
 
     User --> Triage
     Triage --> Reviewer

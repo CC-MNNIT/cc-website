@@ -59,8 +59,8 @@ When someone says they "built an app," what actually happened between their sour
 {% <mermaid> %}
 graph TD
     subgraph Architecture Approaches
-        A["Model 1: Pure Native<br/>(Kotlin/Compose, Swift/SwiftUI)<br/>Direct OS compilation & native platform UI"]
-        B["Model 2: Cross-Platform Native Views<br/>(React Native & Expo)<br/>Single codebase mapped to native platform widgets"]
+        A["Model 1: Pure Native<br/>(Kotlin/Compose, Swift/SwiftUI)<br/>Direct OS compilation &amp; native platform UI"]
+        B["Model 2: Cross-Platform Native Views<br/>(React Native &amp; Expo)<br/>Single codebase mapped to native platform widgets"]
         C["Model 3: Cross-Platform Custom Engine<br/>(Flutter / Impeller)<br/>Dedicated GPU canvas painting every pixel"]
         D["Model 4: Multiplatform Shared Logic<br/>(Kotlin Multiplatform)<br/>Shared business logic with 100% native UIs"]
         E["Model 5: Hybrid Web-Wrapped<br/>(Capacitor / Ionic / PWA)<br/>Web technologies running in an embedded WebView"]
@@ -287,8 +287,8 @@ Beyond the four primary ecosystems, the application development industry continu
 {% <mermaid> %}
 graph LR
     Sub1["Ecosystem Evolution"] --> KMP["Kotlin Multiplatform<br/>(Share Logic, Native UI)"]
-    Sub1 --> RustApp["Rust Applications<br/>(Tauri 2.0 & Dioxus 0.6)"]
-    Sub1 --> WebWrappers["Web-Native Bridges<br/>(Capacitor & PWAs)"]
+    Sub1 --> RustApp["Rust Applications<br/>(Tauri 2.0 &amp; Dioxus 0.6)"]
+    Sub1 --> WebWrappers["Web-Native Bridges<br/>(Capacitor &amp; PWAs)"]
 {% </mermaid> %}
 
 ### 5.1 Kotlin Multiplatform (KMP) & Compose Multiplatform (CMP)
@@ -353,12 +353,12 @@ Learning a framework or syntax is only the first step. True engineering competen
 {% <mermaid> %}
 graph TD
     subgraph Core Engineering Pillars
-        P1["Pillar 1: Application Lifecycle & Process Death"]
-        P2["Pillar 2: Reactive State Management & UDF"]
-        P3["Pillar 3: Offline-First Data & Persistence"]
-        P4["Pillar 4: Networking, Caching & Resilience"]
-        P5["Pillar 5: Mobile Security & Cryptography"]
-        P6["Pillar 6: Testing, Profiling & App Distribution"]
+        P1["Pillar 1: Application Lifecycle &amp; Process Death"]
+        P2["Pillar 2: Reactive State Management &amp; UDF"]
+        P3["Pillar 3: Offline-First Data &amp; Persistence"]
+        P4["Pillar 4: Networking, Caching &amp; Resilience"]
+        P5["Pillar 5: Mobile Security &amp; Cryptography"]
+        P6["Pillar 6: Testing, Profiling &amp; App Distribution"]
     end
 {% </mermaid> %}
 

@@ -34,9 +34,9 @@ Before selecting a framework or writing UI code, you must understand what fundam
 
 {% <mermaid> %}
 graph TD
-    Desktop["Desktop Application Ecosystem"] --> P1["Pillar 1: Unrestricted Hardware & OS Access"]
-    Desktop --> P2["Pillar 2: Complex Window & Workspace Management"]
-    Desktop --> P3["Pillar 3: High-Density Ergonomics (Keyboard & Mouse)"]
+    Desktop["Desktop Application Ecosystem"] --> P1["Pillar 1: Unrestricted Hardware &amp; OS Access"]
+    Desktop --> P2["Pillar 2: Complex Window &amp; Workspace Management"]
+    Desktop --> P3["Pillar 3: High-Density Ergonomics (Keyboard &amp; Mouse)"]
     Desktop --> P4["Pillar 4: Long-Running Heavy Background Execution"]
 
     P1 --> D1["Direct POSIX/Win32 file streams, local sockets, sub-processes, GPU shaders"]
@@ -57,7 +57,7 @@ At the operating system level, every GUI desktop application is driven by an **E
 graph LR
     OS["Host OS (Win32 / Cocoa / Wayland)"] -->|"Events (Mouse, Keys, Resizes)"| Queue["OS Message Queue"]
     Queue --> Loop["GUI Main Thread Event Loop"]
-    Loop -->|"Dispatch Event"| Handler["UI Window & Component Handlers"]
+    Loop -->|"Dispatch Event"| Handler["UI Window &amp; Component Handlers"]
     Handler -->|"Heavy Work Offloaded"| Worker["Worker Thread / Background Sub-Process"]
     Worker -->|"Post Result via IPC"| Loop
 {% </mermaid> %}
@@ -158,12 +158,12 @@ Let us examine the leading desktop frameworks, their architectures, workflows, a
 graph TD
     subgraph Frontend["Frontend Layer (System WebView)"]
         UI["Web UI (React / Svelte / HTML / CSS)"]
-        TauriAPI["@tauri-apps/api (Invoke Commands & Events)"]
+        TauriAPI["@tauri-apps/api (Invoke Commands &amp; Events)"]
     end
 
-    subgraph IPC_Bridge["IPC & Security Boundary"]
+    subgraph IPC_Bridge["IPC &amp; Security Boundary"]
         Bridge["Type-Safe IPC Bridge (JSON / Binary Serialization)"]
-        Capabilities["Capability & Permission ACLs (capabilities.json)"]
+        Capabilities["Capability &amp; Permission ACLs (capabilities.json)"]
     end
 
     subgraph Backend["Backend Layer (Native Rust Core)"]
@@ -232,7 +232,7 @@ async function handleCompute() {
 {% <mermaid> %}
 graph TD
     subgraph MainProcess["Main Process (Node.js Environment)"]
-        MainNode["main.ts (Controls Window Lifecycle & Native OS APIs)"]
+        MainNode["main.ts (Controls Window Lifecycle &amp; Native OS APIs)"]
         NodeModules["Node.js Native Modules (fs, child_process, os)"]
     end
 
@@ -551,7 +551,7 @@ Turning your compiled binary into an installable software package differs across
 
 {% <mermaid> %}
 graph TD
-    Code["Application Binary & Assets"] --> OS_Choice{"Target Operating System?"}
+    Code["Application Binary &amp; Assets"] --> OS_Choice{"Target Operating System?"}
 
     OS_Choice -->|"Windows"| Win["Windows Packaging"]
     OS_Choice -->|"macOS"| Mac["macOS Packaging"]
@@ -559,7 +559,7 @@ graph TD
 
     Win --> WinOut["MSIX Installer (Modern Windows Store)<br/>NSIS / Inno Setup (Classic Wizard .exe)<br/>Authenticode Code Signing"]
     Mac --> MacOut[".app Bundle inside signed .dmg<br/>Apple Developer Certificate<br/>Notarization via notarytool"]
-    Lin --> LinOut["Flatpak (Sandboxed standard)<br/>AppImage (Self-contained executable)<br/>Snap & Native .deb / .rpm"]
+    Lin --> LinOut["Flatpak (Sandboxed standard)<br/>AppImage (Self-contained executable)<br/>Snap &amp; Native .deb / .rpm"]
 {% </mermaid> %}
 
 #### Code Signing & Notarization: The Golden Standard

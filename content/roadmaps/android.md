@@ -90,7 +90,7 @@ graph TD
     Start --> P4["Track D: C++ / Python / DSA Student"]
 
     P1 --> S1["Master Kotlin syntax, types, and OOP basics"]
-    P2 --> S2["Map Java OOP to Kotlin, learn null-safety & coroutines"]
+    P2 --> S2["Map Java OOP to Kotlin, learn null-safety &amp; coroutines"]
     P3 --> S3["Leverage declarative mental model (React = Compose)"]
     P4 --> S4["Translate algorithmic logic to Kotlin, dive into Android lifecycle"]
 
@@ -357,7 +357,7 @@ Android devices run on constrained resources. The Android OS reserves the right 
 graph TD
     NonExistent["Non-Existent"] -->|"onCreate()"| Created["Created"]
     Created -->|"onStart()"| Started["Started (Visible)"]
-    Started -->|"onResume()"| Resumed["Resumed (Foreground & Interactive)"]
+    Started -->|"onResume()"| Resumed["Resumed (Foreground &amp; Interactive)"]
     Resumed -->|"onPause()"| Paused["Paused (Partially Obscured)"]
     Paused -->|"onStop()"| Stopped["Stopped (In Background)"]
     Stopped -->|"onDestroy()"| Destroyed["Destroyed"]
@@ -547,9 +547,9 @@ Modern Android applications adhere to a **Layered Architecture** adhering to **U
 
 {% <mermaid> %}
 graph TD
-    subgraph UI_Layer["UI Layer (View & Presentation)"]
-        Compose["Jetpack Compose UI (Screens & Widgets)"]
-        VM["ViewModel (StateFlow & SavedStateHandle)"]
+    subgraph UI_Layer["UI Layer (View &amp; Presentation)"]
+        Compose["Jetpack Compose UI (Screens &amp; Widgets)"]
+        VM["ViewModel (StateFlow &amp; SavedStateHandle)"]
     end
 
     subgraph Domain_Layer["Domain Layer (Optional / Business Logic)"]
@@ -654,7 +654,7 @@ graph TD
     Dec1 -->|"Small Key-Value Pairs"| Dec2{"Primitive preferences or Typed Schemas?"}
     Dec1 -->|"Relational / Structured / Tabular"| RoomDB["Room Database (SQLite ORM)"]
     
-    Dec2 -->|"App Settings & Flags"| PrefDS["Jetpack Preferences DataStore"]
+    Dec2 -->|"App Settings &amp; Flags"| PrefDS["Jetpack Preferences DataStore"]
     Dec2 -->|"Typed Objects with Protocol Buffers"| ProtoDS["Jetpack Proto DataStore"]
 {% </mermaid> %}
 
@@ -1091,7 +1091,7 @@ The most effective way to solidify your Android engineering skills is by buildin
 {% <mermaid> %}
 graph TD
     M1["Milestone 1: QuickConvert (UnitPulse)<br/>Focus: Compose UI, State, M3"] --> M2["Milestone 2: PulseRoutine<br/>Focus: Room DB, DataStore, Type-Safe Nav"]
-    M2 --> M3["Milestone 3: Chronicle Notes & Audio<br/>Focus: Hardware Audio, Full-Text Search, Gestures"]
+    M2 --> M3["Milestone 3: Chronicle Notes &amp; Audio<br/>Focus: Hardware Audio, Full-Text Search, Gestures"]
     M3 --> M4["Milestone 4: DevPulse GitHub Explorer<br/>Focus: Retrofit, Paging 3, Network Cache, Coil"]
     M4 --> M5["Milestone 5 (Capstone): TrackCraft Pro<br/>Focus: Foreground Service, GPS, Google Maps, WorkManager, DI"]
 {% </mermaid> %}

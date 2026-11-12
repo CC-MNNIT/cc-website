@@ -60,11 +60,11 @@ If you do not currently own an Apple Silicon Mac, you can still begin your iOS j
 
 {% <mermaid> %}
 graph TD
-    App["Your Swift Application Code"] --> SwiftRuntime["Swift 6 Runtime (ARC & Concurrency)"]
+    App["Your Swift Application Code"] --> SwiftRuntime["Swift 6 Runtime (ARC &amp; Concurrency)"]
     SwiftRuntime --> SwiftUI["SwiftUI Declarative Engine"]
     SwiftUI --> Observation["Observation Engine (@Observable)"]
     SwiftUI --> Metal["Metal Graphics Engine (Hardware GPU Acceleration)"]
-    Metal --> CoreAnimation["Core Animation & Display Compositor (120Hz ProMotion)"]
+    Metal --> CoreAnimation["Core Animation &amp; Display Compositor (120Hz ProMotion)"]
     App --> SwiftData["SwiftData / SQLite Engine"]
     App --> SystemFrameworks["Apple System Frameworks (CoreLocation, MapKit, AVFoundation)"]
 {% </mermaid> %}
@@ -145,7 +145,7 @@ In Swift, **structs are value types** (copied on assignment) while **classes are
 
 {% <mermaid> %}
 graph TD
-    subgraph ValueTypes["Value Types (Structs & Enums)"]
+    subgraph ValueTypes["Value Types (Structs &amp; Enums)"]
         S1["Original Struct A"] -->|"Assignment / Passing"| S2["Independent Copy B"]
         Note1["Allocated on Stack<br/>Thread-safe by default<br/>Predictable lifecycle"]
     end
@@ -636,11 +636,11 @@ Accessing platform hardware and Apple-specific system services differentiates na
 {% <mermaid> %}
 graph TD
     App["Your Native iOS Application"] --> Frameworks["Native Apple System Frameworks"]
-    Frameworks --> Loc["Core Location & MapKit (GPS & Satellite Maps)"]
+    Frameworks --> Loc["Core Location &amp; MapKit (GPS &amp; Satellite Maps)"]
     Frameworks --> AV["AVFoundation (Camera, Photo, Audio Recording)"]
     Frameworks --> Auth["LocalAuthentication (Biometric Face ID / Touch ID)"]
-    Frameworks --> Notif["UserNotifications (Local & Push Alerts)"]
-    Frameworks --> Widget["WidgetKit (Home Screen & Lock Screen Widgets)"]
+    Frameworks --> Notif["UserNotifications (Local &amp; Push Alerts)"]
+    Frameworks --> Widget["WidgetKit (Home Screen &amp; Lock Screen Widgets)"]
 {% </mermaid> %}
 
 ### 8.1 Biometric Authentication with `LocalAuthentication`
@@ -744,7 +744,7 @@ graph LR
     Code["Xcode Archive Build (.xcarchive)"] --> Organizer["Xcode Organizer Window"]
     Organizer --> Validate["Automated App Store Pre-Validation"]
     Validate --> ASC["App Store Connect Cloud"]
-    ASC --> TestFlight["TestFlight (Internal & External Beta Testers)"]
+    ASC --> TestFlight["TestFlight (Internal &amp; External Beta Testers)"]
     TestFlight --> Review["Apple App Review Board"]
     Review --> Ready["App Store Release (Live Worldwide)"]
 {% </mermaid> %}

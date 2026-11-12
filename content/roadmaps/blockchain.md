@@ -158,10 +158,10 @@ Understanding the fundamental split in ledger accounting:
 
 {% <mermaid> %}
 graph TD
-    Consensus["Sybil Resistance & Validator Election"] --> PoW["Proof of Work (PoW)"]
+    Consensus["Sybil Resistance &amp; Validator Election"] --> PoW["Proof of Work (PoW)"]
     Consensus --> PoS["Proof of Stake (PoS)"]
 
-    PoW --> D_PoW["Miners burn thermodynamic electricity & compute hash collisions.<br/>Cost of attack: Procuring >50% of global ASIC hardware hashrate.<br/>Probabilistic finality (requires 6+ block confirmations)."]
+    PoW --> D_PoW["Miners burn thermodynamic electricity &amp; compute hash collisions.<br/>Cost of attack: Procuring >50% of global ASIC hardware hashrate.<br/>Probabilistic finality (requires 6+ block confirmations)."]
     PoS --> D_PoS["Validators lock up native capital (e.g. 32 ETH) as security deposit.<br/>Cost of attack: Burning vast capital via automated protocol Slashing.<br/>Deterministic finality (Casper FFG epochs / checkpoints)."]
 {% </mermaid> %}
 
@@ -342,7 +342,7 @@ While Ethereum processes transactions sequentially over a single global state tr
 
 {% <mermaid> %}
 graph TD
-    subgraph EVM_Model["EVM Model (Code & Data Entangled)"]
+    subgraph EVM_Model["EVM Model (Code &amp; Data Entangled)"]
         Contract["Smart Contract (Contains both executable Bytecode AND persistent Storage)"]
     end
 
@@ -383,7 +383,7 @@ graph TD
         Wagmi["Client Library (Viem / Wagmi / Ethers.js)"]
     end
 
-    subgraph MiddlewareTier["Tier 2: Data & Indexing Tier"]
+    subgraph MiddlewareTier["Tier 2: Data &amp; Indexing Tier"]
         RPC["JSON-RPC Node Provider (Alchemy / Infura / Local Node)"]
         TheGraph["Decentralized Indexer (The Graph Subgraph / Envio)"]
         IPFS["Decentralized Storage (IPFS / Arweave for metadata)"]
@@ -447,8 +447,8 @@ graph TD
     Vulns["Top Smart Contract Vulnerabilities"] --> V1["Vulnerability 1: Reentrancy Attacks"]
     Vulns --> V2["Vulnerability 2: Price Oracle Manipulation"]
     Vulns --> V3["Vulnerability 3: Broken Access Controls"]
-    Vulns --> V4["Vulnerability 4: Signature Replay & Malleability"]
-    Vulns --> V5["Vulnerability 5: Front-Running & MEV Exploits"]
+    Vulns --> V4["Vulnerability 4: Signature Replay &amp; Malleability"]
+    Vulns --> V5["Vulnerability 5: Front-Running &amp; MEV Exploits"]
 {% </mermaid> %}
 
 #### 1. Reentrancy Attacks
@@ -488,7 +488,7 @@ graph TD
         UserTx1["User TX 1"] --> Sequencer["L2 Sequencer (Processes 2,000+ TPS)"]
         UserTx2["User TX 2"] --> Sequencer
         UserTx3["User TX 3"] --> Sequencer
-        Sequencer --> Batch["Compressed Transaction Batch & State Root"]
+        Sequencer --> Batch["Compressed Transaction Batch &amp; State Root"]
     end
 
     subgraph Layer1["Layer 1 Settlement (Ethereum Mainnet Security)"]
@@ -513,7 +513,7 @@ Running an Ethereum node requires two cooperating software clients communicating
 
 {% <mermaid> %}
 graph LR
-    Consensus["Consensus Client (Prysm / Lighthouse / Teku)<br/>Validates Proof-of-Stake blocks, manages attestations & beacon chain"] <-->|"Engine API (JWT Auth on Port 8551)"| Execution["Execution Client (Geth / Nethermind / Besu)<br/>Executes EVM transactions, maintains state trie & mempool"]
+    Consensus["Consensus Client (Prysm / Lighthouse / Teku)<br/>Validates Proof-of-Stake blocks, manages attestations &amp; beacon chain"] <-->|"Engine API (JWT Auth on Port 8551)"| Execution["Execution Client (Geth / Nethermind / Besu)<br/>Executes EVM transactions, maintains state trie &amp; mempool"]
     Execution <--> Disk["Local NVMe Storage (2TB+ fast disk)"]
     Execution --> PublicRPC["JSON-RPC Endpoint (Port 8545 for dApps)"]
 {% </mermaid> %}
@@ -557,10 +557,10 @@ graph TD
     M2 --> M3["Milestone 3: Decentralized Multi-Sig Escrow Contract"]
     M3 --> M4["Milestone 4: Decentralized On-Chain Governance DAO"]
     M4 --> M5["Milestone 5: Chainlink Oracle-Integrated Price Feed Contract"]
-    M5 --> M6["Milestone 6: Full-Stack Web3 dApp with WalletConnect & Viem"]
+    M5 --> M6["Milestone 6: Full-Stack Web3 dApp with WalletConnect &amp; Viem"]
     M6 --> M7["Milestone 7: Custom WebSocket Blockchain Event Indexer"]
-    M7 --> M8["Milestone 8: Solana Anchor Program & Client SDK"]
-    M8 --> M9["Milestone 9: Smart Contract Security Audit & Exploit Gauntlet"]
+    M7 --> M8["Milestone 8: Solana Anchor Program &amp; Client SDK"]
+    M8 --> M9["Milestone 9: Smart Contract Security Audit &amp; Exploit Gauntlet"]
     M9 --> M10["Milestone 10 (Capstone): Decentralized Collateralized Lending Protocol"]
 {% </mermaid> %}
 

@@ -35,7 +35,7 @@ Modern digital products cannot afford fragmented codebases where separate teams 
 {% <mermaid> %}
 graph TD
     Code["Single Dart Codebase"] --> Engine["Flutter Engine (Impeller C++ / Shaders)"]
-    Engine --> Mobile["Mobile Devices (Android APK/AAB & iOS IPA)"]
+    Engine --> Mobile["Mobile Devices (Android APK/AAB &amp; iOS IPA)"]
     Engine --> Desktop["Desktop Apps (macOS, Windows EXE, Linux)"]
     Engine --> Web["Modern Web (WebAssembly / CanvasKit)"]
 {% </mermaid> %}
@@ -57,19 +57,19 @@ Beginners frequently confuse these three components:
 {% <mermaid> %}
 graph TD
     subgraph AppLevel["Layer 1: Your Application Layer"]
-        App["Your Dart Widgets &<br/>Business Logic"]
+        App["Your Dart Widgets &amp;<br/>Business Logic"]
     end
 
     subgraph FrameworkLevel["Layer 2: Flutter Framework (Pure Dart)"]
-        M3["Material Design 3 &<br/>Cupertino Libraries"]
+        M3["Material Design 3 &amp;<br/>Cupertino Libraries"]
         Widgets["Widget Composition Layer"]
-        Rendering["RenderObject Layout &<br/>Painting Layer"]
+        Rendering["RenderObject Layout &amp;<br/>Painting Layer"]
     end
 
     subgraph EngineLevel["Layer 3: Flutter Engine (C++)"]
         Impeller["Impeller GPU Graphics Pipeline"]
-        TextEngine["Text Layout<br/>(LibTxt & HarfBuzz)"]
-        DartRuntime["Dart VM &<br/>Garbage Collector"]
+        TextEngine["Text Layout<br/>(LibTxt &amp; HarfBuzz)"]
+        DartRuntime["Dart VM &amp;<br/>Garbage Collector"]
     end
 
     subgraph EmbedderLevel["Layer 4: Platform Embedder"]
@@ -342,7 +342,7 @@ In Flutter, the interface is a direct mathematical projection of your applicatio
 graph LR
     State["Application State"] -->|"Passes into"| BuildFunc["Widget build(BuildContext)"]
     BuildFunc -->|"Returns"| WidgetTree["Immutable Widget Blueprint"]
-    WidgetTree -->|"Reconciled by"| ElementTree["Element Tree (Lifecycle & State)"]
+    WidgetTree -->|"Reconciled by"| ElementTree["Element Tree (Lifecycle &amp; State)"]
     ElementTree -->|"Renders to"| GPU["Impeller GPU Canvas"]
 {% </mermaid> %}
 
@@ -450,7 +450,7 @@ graph TD
         E2 --> E3["Text Element"]
     end
 
-    subgraph Tree3["Tree 3: RenderObject Tree (Layout & GPU Painting)"]
+    subgraph Tree3["Tree 3: RenderObject Tree (Layout &amp; GPU Painting)"]
         R1["RenderPadding"] --> R2["RenderDecoratedBox"]
         R2 --> R3["RenderParagraph"]
     end
@@ -591,7 +591,7 @@ graph TD
     State["What kind of state are you managing?"] --> Dec1{"Ephemeral or Application-Wide?"}
     
     Dec1 -->|"Ephemeral (Local to a Single Widget)"| Local["Built-in setState() or ValueNotifier"]
-    Dec1 -->|"Application / Shared State"| Dec2{"Scope & Complexity?"}
+    Dec1 -->|"Application / Shared State"| Dec2{"Scope &amp; Complexity?"}
     
     Dec2 -->|"Small to Medium Apps"| Provider["Provider (InheritedWidget wrapper)"]
     Dec2 -->|"Modern Standard (Type-safe, No BuildContext)"| Riverpod["Riverpod 3.x (Recommended Default)"]
@@ -674,17 +674,17 @@ Modern Flutter engineering adheres to **Feature-First Layered Architecture**:
 
 {% <mermaid> %}
 graph TD
-    subgraph PresentationLayer["Presentation Layer (Flutter & UI)"]
+    subgraph PresentationLayer["Presentation Layer (Flutter &amp; UI)"]
         UI["Widgets / Screens (Declarative Views)"]
         Controller["Controllers / Notifiers / Blocs (UI State)"]
     end
 
     subgraph DomainLayer["Domain Layer (Pure Dart)"]
-        Entity["Entities & Value Objects"]
+        Entity["Entities &amp; Value Objects"]
         UseCase["Use Cases / Interactors (Single Business Rules)"]
     end
 
-    subgraph DataLayer["Data Layer (Data Sources & Persistence)"]
+    subgraph DataLayer["Data Layer (Data Sources &amp; Persistence)"]
         Repo["Repository Implementation"]
         RemoteSource["Remote Data Source (Dio REST / GraphQL)"]
         LocalSource["Local Data Source (Drift SQLite / Secure Storage)"]
@@ -914,7 +914,7 @@ A robust application requires high test coverage across all layers of the testin
 
 {% <mermaid> %}
 graph TD
-    E2E["10% Integration & E2E Tests (Maestro / IntegrationTest)"]
+    E2E["10% Integration &amp; E2E Tests (Maestro / IntegrationTest)"]
     Widget["30% Widget Tests (Headless UI Component Verification)"]
     Unit["60% Unit Tests (Pure Dart Logic, Repositories, Notifiers)"]
 {% </mermaid> %}
