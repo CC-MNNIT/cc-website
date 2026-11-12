@@ -154,7 +154,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ### Stage 3 — Spring Boot 3 Development
 **Duration**: 3–4 weeks  
-**Objective**: Build production-grade, secure, and well-structured REST APIs using modern Spring Boot 3.x and Java 17+.
+**Objective**: Build production-grade, secure, and well-structured REST APIs using modern Spring Boot and Java 25 LTS. This content targets Spring Boot 3.x — the most widely deployed generation with the deepest tutorial coverage — and **Spring Boot 4.0 (November 2025, built on Spring Framework 7)** continues the exact same programming model, so everything here transfers directly.
 
 #### Part 1: Core Spring & Inversion of Control (IoC)
 * Spring ApplicationContext and Inversion of Control (IoC).
@@ -207,6 +207,31 @@ public class ProjectController {
 * Relationships: `@OneToMany`, `@ManyToOne`, `@ManyToMany`, and cascade types.
 * `JpaRepository<T, ID>`: Out-of-the-box CRUD methods, custom query methods (`findByEmail`), and `@Query` (JPQL / native SQL).
 * Connection pools (HikariCP) and configuring `application.properties` / `application.yml`.
+* **Pagination & sorting out of the box**: `Page<ProjectDto> findAll(PageRequest.of(page, 20, Sort.by("stars").descending()))` — never load unbounded lists into memory.
+
+#### Understanding `@Transactional` and the N+1 Select Problem
+
+* **`@Transactional`**: Marks a service method as one atomic database operation — every write inside either commits together or rolls back together when something fails. Put it on service methods (the transaction boundary), never on controllers:
+
+```java
+@Service
+public class RegistrationService {
+
+    @Transactional
+    public Registration register(Long eventId, Long userId) {
+        var event = eventRepository.findById(eventId)
+            .orElseThrow(() -> new ResourceNotFoundException("Event not found"));
+        // Multiple writes below commit or roll back as ONE unit
+        return registrationRepository.save(event.register(userId));
+    }
+}
+```
+
+* **The N+1 Select Problem**: Loading 50 events and then touching `event.getOrganizer()` fires one query for the events **plus 50 more** for each organizer — because JPA fetches relationships lazily by default. This is the classic production performance bug, and interviewers love it. Fixes, in order of preference:
+  1. **`JOIN FETCH` queries** in the repository: `@Query("SELECT e FROM Event e JOIN FETCH e.organizer")`.
+  2. **`@EntityGraph(attributePaths = "organizer")`** on the repository method.
+  3. **DTO projections** — fetch exactly the columns the API needs (the DTO pattern again).
+  * Detect it with `spring.jpa.properties.hibernate.generate_statistics=true` or integration tests that assert query counts.
 
 #### Part 4: Validation & Global Exception Handling
 * Jakarta Bean Validation: `@Valid`, `@NotNull`, `@NotBlank`, `@Size`, `@Min`, `@Email`.
@@ -248,6 +273,8 @@ SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 * **Flyway migrations**: database schema changes as versioned, ordered SQL files applied at startup — never hand-edited schemas.
 * **Profiles**: `application-dev.yml` vs `application-prod.yml` — environment-specific configuration without code changes.
 * **Caching**: Spring's `@Cacheable` backed by Redis when read-heavy endpoints outgrow the database.
+* **Virtual threads in Spring Boot**: One property — `spring.threads.virtual.enabled=true` — runs every request on a virtual thread (Stage 1's superpower applied to your whole server), letting Tomcat handle thousands of concurrent blocking requests without reactive programming.
+* **Monolith first**: Start with a well-modularized layered monolith — the structure above is microservice-ready. Extract microservices only when *team scale* demands it; premature splitting is the most expensive mistake in backend architecture.
 
 #### Hands-On Tasks
 1. **Student API**: Build full CRUD endpoints with DTO validation, JPA persistence, and global exception handling.
