@@ -85,7 +85,7 @@
 
     
         
-            <meta name="description" content="Comprehensive guide to mastering Java backend development with Spring Boot 3, REST APIs, JPA, and Spring Security." />
+            <meta name="description" content="A comprehensive, practical guide to mastering Java backend development: modern Java, Spring Boot, REST APIs, Spring Data JPA, security, testing, and production engineering." />
         
     
 
@@ -96,7 +96,7 @@
 
       <!-- SEO: Open Graph / Twitter Card -->
       <meta property="og:title" content="Java &amp; Spring Boot Roadmap | Computer Coding Club" />
-      <meta property="og:description" content="Comprehensive guide to mastering Java backend development with Spring Boot 3, REST APIs, JPA, and Spring Security." />
+      <meta property="og:description" content="A comprehensive, practical guide to mastering Java backend development: modern Java, Spring Boot, REST APIs, Spring Data JPA, security, testing, and production engineering." />
       <meta property="og:url" content="https://cc-club.in/" />
       <meta property="og:type" content="website" />
       
@@ -105,7 +105,7 @@
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Java &amp; Spring Boot Roadmap" />
-      <meta name="twitter:description" content="Comprehensive guide to mastering Java backend development with Spring Boot 3, REST APIs, JPA, and Spring Security." />
+      <meta name="twitter:description" content="A comprehensive, practical guide to mastering Java backend development: modern Java, Spring Boot, REST APIs, Spring Data JPA, security, testing, and production engineering." />
       
       
       
@@ -566,19 +566,19 @@
         <h1 class="flex flex-wrap items-center gap-3">
             Java &amp; Spring Boot Roadmap
             
-                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">NEW</span>
+                <span class="text-sm font-normal px-2 py-0.5 border border-gray-500/30 rounded">BACKEND</span>
             
         </h1>
-        <p class="text-gray-500">Comprehensive guide to mastering Java backend development with Spring Boot 3, REST APIs, JPA, and Spring Security.</p>
+        <p class="text-gray-500">A comprehensive, practical guide to mastering Java backend development: modern Java, Spring Boot, REST APIs, Spring Data JPA, security, testing, and production engineering.</p>
         
     </div>
-    <h1 id="java-spring-boot-roadmap">Java &amp; Spring Boot Roadmap</h1>
-<h2 id="1-overview">1. Overview</h2>
+    <h2 id="1-overview">1. Overview</h2>
 <h3 id="what-is-java-backend-development">What is Java Backend Development?</h3>
 <p>Java backend development powers the server-side infrastructure of modern applications. It orchestrates business logic, handles data persistence with relational and NoSQL databases, exposes robust RESTful APIs, enforces authentication and role-based authorization, and integrates external services.</p>
 <h3 id="why-java-spring-boot">Why Java + Spring Boot?</h3>
 <ul>
 <li><strong>Industry Dominance</strong>: Java remains the backbone of enterprise software, financial institutions, high-volume e-commerce platforms, and mission-critical cloud backends.</li>
+<li><strong>Modern Java Is a Different Language</strong>: Java 25 LTS (the current LTS, alongside 21) brings virtual threads for cheap concurrency, records, pattern matching, and sealed types — the verbosity jokes are two decades out of date.</li>
 <li><strong>Strong Foundations</strong>: Java enforces object-oriented design, strong static typing, robust memory management, and mature concurrency models.</li>
 <li><strong>Spring Boot Ecosystem</strong>: Spring Boot strips away complex XML boilerplate, providing opinionated defaults, embedded servers (Tomcat/Jetty), auto-configuration, and production-grade monitoring right out of the box.</li>
 <li><strong>Long-Term Scalability</strong>: The exact same paradigms learned building a student project scale to distributed microservice architectures handling millions of requests per second.</li>
@@ -593,9 +593,10 @@
 <h3 id="recommended-tooling-zero-friction-setup">Recommended Tooling (Zero-Friction Setup)</h3>
 <ul>
 <li><strong>IDE</strong>: <strong>IntelliJ IDEA Community Edition</strong> (100% free) — the undisputed industry standard for Java with out-of-the-box refactoring and debugging.</li>
-<li><strong>JDK</strong>: <strong>Java 21 LTS</strong> from <strong>Adoptium (Eclipse Temurin)</strong> or Amazon Corretto (manage via SDKMAN! on Linux/macOS).</li>
+<li><strong>JDK</strong>: <strong>Java 25 LTS</strong> (current) or Java 21 LTS from <strong>Adoptium (Eclipse Temurin)</strong> or Amazon Corretto (manage via SDKMAN! on Linux/macOS).</li>
 <li><strong>API Testing</strong>: <strong>Postman</strong> or <strong>Bruno</strong> for testing endpoints and inspecting JSON responses.</li>
 <li><strong>Database</strong>: <strong>PostgreSQL</strong> (run via Docker Compose to avoid manual local service issues).</li>
+<li><strong>Build Tool Note</strong>: This roadmap uses <strong>Maven</strong> — the enterprise incumbent. <strong>Gradle</strong> is the equally-valid alternative (Kotlin-based build scripts, faster incremental builds); concepts transfer 1:1.</li>
 </ul>
 <hr />
 <h2 id="2-learning-path-breakdown">2. Learning Path Breakdown</h2>
@@ -635,14 +636,32 @@
 <li><strong>Student Record System</strong>: Build a CLI app allowing users to add, update, remove, and search students stored in an in-memory <code>HashMap</code> or <code>ArrayList</code>.</li>
 <li><strong>Personal Expense Tracker</strong>: Create a console application to log expenses, group them by category using Streams (<code>Collectors.groupingBy</code>), and compute weekly/monthly summaries.</li>
 </ol>
-<h4 id="curated-resources">Curated Resources</h4>
-<ul>
-<li><a rel="external" href="https://dev.java/learn/">Dev.java — Official Learn Java Portal</a></li>
-<li><a rel="external" href="https://java-programming.mooc.fi/">University of Helsinki — MOOC.fi Java Programming I &amp; II</a> <em>(Hands-on automated exercise tests)</em></li>
-<li><a rel="external" href="https://www.youtube.com/KunalKushwaha">Kunal Kushwaha — Java &amp; DSA Fundamentals</a></li>
-<li><a rel="external" href="https://www.youtube.com/@Telusko">Telusko — Core Java Course</a></li>
-<li><a rel="external" href="https://www.youtube.com/playlist?list=PL6W8uoQQ2c63f469AyV78np0rbxRFppkx">Shrayansh Jain — Java Core to Advanced Playlist</a></li>
+<h4 id="modern-java-in-practice">Modern Java in Practice</h4>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="java"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Records: immutable data carriers — perfect for DTOs and value objects</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">record</span><span style="color: #59C2FF;"> Contributor</span><span>(</span><span style="color: #59C2FF;">String</span><span> username</span><span style="color: #BFBDB6B3;">,</span><span style="color: #39BAE6;"> int</span><span> commits</span><span style="color: #BFBDB6B3;">,</span><span style="color: #39BAE6;"> boolean</span><span> isCoreTeam) {}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Streams: declarative data pipelines over collections</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">List</span><span>&lt;</span><span style="color: #59C2FF;">String</span><span>&gt; topContributors</span><span style="color: #F29668;"> =</span><span> contributors</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">stream</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">    .</span><span style="color: #FFB454;">filter</span><span>(c </span><span style="color: #FF8F40;">-&gt;</span><span> c</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">commits</span><span>()</span><span style="color: #F29668;"> &gt;</span><span style="color: #D2A6FF;"> 50</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">    .</span><span style="color: #FFB454;">sorted</span><span>(Comparator</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">comparingInt</span><span>(Contributor</span><span style="color: #FF8F40;">::</span><span>commits)</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">reversed</span><span>())</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">    .</span><span style="color: #FFB454;">map</span><span>(Contributor</span><span style="color: #FF8F40;">::</span><span>username)</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">    .</span><span style="color: #FFB454;">limit</span><span>(</span><span style="color: #D2A6FF;">5</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">    .</span><span style="color: #FFB454;">toList</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span></code></pre><h4 id="virtual-threads-the-java-21-25-superpower-for-backends">Virtual Threads: The Java 21+/25 Superpower for Backends</h4>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="java"><span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// Virtual threads make blocking I/O cheap — 10,000 concurrent tasks, no</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// reactive complexity, no thread-pool tuning. This is why modern Java</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">// backends no longer need WebFlux for high-concurrency I/O.</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">try</span><span> (</span><span style="color: #59C2FF;">var</span><span> executor</span><span style="color: #F29668;"> =</span><span> Executors</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">newVirtualThreadPerTaskExecutor</span><span>()) {</span></span>
+<span class="giallo-l"><span>    IntStream</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">range</span><span>(</span><span style="color: #D2A6FF;">0</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 10_000</span><span>)</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">forEach</span><span>(i </span><span style="color: #FF8F40;">-&gt;</span></span>
+<span class="giallo-l"><span>        executor</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">submit</span><span>(()</span><span style="color: #FF8F40;"> -&gt;</span><span style="color: #FFB454;"> fetchFromDownstream</span><span>(i)))</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h4 id="curated-resources">Curated Resources</h4>
+<div class="pretty-link-card not-prose group my-4"><a href="https://dev.java/learn/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Dev.java — Official Learn Java Portal</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The official Java learning portal from Oracle, covering modern Java end to end.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>dev.java/learn/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://java-programming.mooc.fi/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">University of Helsinki — MOOC.fi Java Programming I & II</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">University-grade Java course with hands-on automated exercise tests — free and certificate-track.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>java-programming.mooc.fi/</span></div></div></div></a></div>
+<details class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><summary class="collapse-title font-semibold select-none cursor-pointer">Video Courses (English & Hindi)</summary><div class="collapse-content text-sm"><ul>
+<li><strong>Kunal Kushwaha</strong> — Java &amp; DSA fundamentals.</li>
+<li><strong>Telusko</strong> — Core Java course.</li>
+<li><strong>Shrayansh Jain</strong> — Java core to advanced playlist.</li>
 </ul>
+</div></details>
 <hr />
 <h3 id="stage-2-backend-fundamentals-sql-http-maven">Stage 2 — Backend Fundamentals (SQL, HTTP &amp; Maven)</h3>
 <p><strong>Duration</strong>: 1–2 weeks<br />
@@ -682,16 +701,13 @@
 <li><strong>Maven Project Setup</strong>: Generate a clean Maven project from scratch and import third-party libraries (e.g., Jackson or Apache Commons) to practice dependency management.</li>
 </ol>
 <h4 id="curated-resources-1">Curated Resources</h4>
-<ul>
-<li><a rel="external" href="https://sqlbolt.com/">SQLBolt — Interactive SQL Practice</a></li>
-<li><a rel="external" href="https://www.postgresql.org/docs/">PostgreSQL Official Documentation</a></li>
-<li><a rel="external" href="https://dev.mysql.com/doc/">MySQL Official Documentation</a></li>
-<li><a rel="external" href="https://maven.apache.org/guides/getting-started/index.html">Apache Maven — Getting Started</a></li>
-</ul>
+<div class="pretty-link-card not-prose group my-4"><a href="https://sqlbolt.com/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">SQLBolt — Interactive SQL Practice</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Learn SQL by writing queries in the browser, lesson by lesson.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>sqlbolt.com/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://www.postgresql.org/docs/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">PostgreSQL Official Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The authoritative reference for the default relational database in modern backends.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>www.postgresql.org/docs/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://maven.apache.org/guides/getting-started/index.html" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Apache Maven — Getting Started</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Official guide to the build lifecycle, POM structure, and dependency management.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>maven.apache.org/guides/getting-started/index.html</span></div></div></div></a></div>
 <hr />
 <h3 id="stage-3-spring-boot-3-development">Stage 3 — Spring Boot 3 Development</h3>
 <p><strong>Duration</strong>: 3–4 weeks<br />
-<strong>Objective</strong>: Build production-grade, secure, and well-structured REST APIs using modern Spring Boot 3.x and Java 17+.</p>
+<strong>Objective</strong>: Build production-grade, secure, and well-structured REST APIs using modern Spring Boot and Java 25 LTS. This content targets Spring Boot 3.x — the most widely deployed generation with the deepest tutorial coverage — and <strong>Spring Boot 4.0 (November 2025, built on Spring Framework 7)</strong> continues the exact same programming model, so everything here transfers directly.</p>
 <h4 id="part-1-core-spring-inversion-of-control-ioc">Part 1: Core Spring &amp; Inversion of Control (IoC)</h4>
 <ul>
 <li>Spring ApplicationContext and Inversion of Control (IoC).</li>
@@ -704,17 +720,73 @@
 <li>Building endpoints: <code>@RestController</code>, <code>@RequestMapping</code>, <code>@GetMapping</code>, <code>@PostMapping</code>, <code>@PutMapping</code>, <code>@DeleteMapping</code>.</li>
 <li>Reading data: <code>@PathVariable</code>, <code>@RequestParam</code>, <code>@RequestBody</code>, <code>@RequestHeader</code>.</li>
 <li>Response handling: <code>ResponseEntity&lt;T&gt;</code>, status codes, and HTTP headers.</li>
-<li><strong>Strict Layer Separation</strong>:
-$$\text{Controller (HTTP/DTO)} \longrightarrow \text{Service (Business Logic)} \longrightarrow \text{Repository (Data Access)} \longrightarrow \text{Database}$$</li>
+<li><strong>Strict Layer Separation</strong>:</li>
+</ul>
+<pre class="mermaid border border-gray-500/15">
+  graph LR
+      C["Controller<br/>(HTTP / DTO)"] --> S["Service<br/>(Business Logic)"]
+      S --> R["Repository<br/>(Data Access)"]
+      R --> DB[("Database")]
+  </pre>
+<ul>
 <li>The <strong>DTO Pattern</strong>: Decoupling database <code>@Entity</code> models from API request/response payloads to prevent mass assignment and circular JSON serialization bugs.</li>
 </ul>
-<h4 id="part-3-database-integration-with-spring-data-jpa">Part 3: Database Integration with Spring Data JPA</h4>
+<p>The shape of almost every Spring controller you will write:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="java"><span class="giallo-l"><span>@</span><span style="color: #E6C08A;">RestController</span></span>
+<span class="giallo-l"><span>@</span><span style="color: #E6C08A;">RequestMapping</span><span>(</span><span style="color: #AAD94C;">&quot;/api/projects&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">public class</span><span style="color: #59C2FF;"> ProjectController</span><span> {</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    private final</span><span style="color: #59C2FF;"> ProjectService</span><span> service</span><span style="color: #BFBDB6B3;">;</span><span style="color: #5A6673;font-style: italic;"> // constructor injection — never field injection</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    public</span><span style="color: #FFB454;"> ProjectController</span><span>(</span><span style="color: #59C2FF;">ProjectService</span><span style="color: #D2A6FF;"> service</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #39BAE6;font-style: italic;">        this</span><span style="color: #BFBDB6B3;">.</span><span>service</span><span style="color: #F29668;"> =</span><span> service</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>    @</span><span style="color: #E6C08A;">GetMapping</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    public</span><span style="color: #59C2FF;"> Page</span><span>&lt;</span><span style="color: #59C2FF;">ProjectDto</span><span>&gt;</span><span style="color: #FFB454;"> list</span><span>(@</span><span style="color: #E6C08A;">RequestParam</span><span>(</span><span style="color: #95E6CB;">defaultValue</span><span style="color: #F29668;"> =</span><span style="color: #AAD94C;"> &quot;0&quot;</span><span>)</span><span style="color: #39BAE6;"> int</span><span style="color: #D2A6FF;"> page</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> service</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">findAll</span><span>(PageRequest</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">of</span><span>(page</span><span style="color: #BFBDB6B3;">,</span><span style="color: #D2A6FF;"> 20</span><span>))</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>    @</span><span style="color: #E6C08A;">PostMapping</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    public</span><span style="color: #59C2FF;"> ResponseEntity</span><span>&lt;</span><span style="color: #59C2FF;">ProjectDto</span><span>&gt;</span><span style="color: #FFB454;"> create</span><span>(@</span><span style="color: #E6C08A;">Valid</span><span> @</span><span style="color: #E6C08A;">RequestBody</span><span style="color: #59C2FF;"> CreateProjectRequest</span><span style="color: #D2A6FF;"> request</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">        ProjectDto</span><span> created</span><span style="color: #F29668;"> =</span><span> service</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">create</span><span>(request)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> ResponseEntity</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">status</span><span>(HttpStatus</span><span style="color: #BFBDB6B3;">.</span><span>CREATED)</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">body</span><span>(created)</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h4 id="part-3-database-integration-with-spring-data-jpa">Part 3: Database Integration with Spring Data JPA</h4>
 <ul>
 <li>What is an ORM? Understanding JPA specifications vs Hibernate implementation.</li>
 <li>Entities and annotations: <code>@Entity</code>, <code>@Id</code>, <code>@GeneratedValue</code>, <code>@Column</code>, <code>@Table</code>.</li>
 <li>Relationships: <code>@OneToMany</code>, <code>@ManyToOne</code>, <code>@ManyToMany</code>, and cascade types.</li>
 <li><code>JpaRepository&lt;T, ID&gt;</code>: Out-of-the-box CRUD methods, custom query methods (<code>findByEmail</code>), and <code>@Query</code> (JPQL / native SQL).</li>
 <li>Connection pools (HikariCP) and configuring <code>application.properties</code> / <code>application.yml</code>.</li>
+<li><strong>Pagination &amp; sorting out of the box</strong>: <code>Page&lt;ProjectDto&gt; findAll(PageRequest.of(page, 20, Sort.by("stars").descending()))</code> — never load unbounded lists into memory.</li>
+</ul>
+<h4 id="understanding-transactional-and-the-n-1-select-problem">Understanding <code>@Transactional</code> and the N+1 Select Problem</h4>
+<ul>
+<li><strong><code>@Transactional</code></strong>: Marks a service method as one atomic database operation — every write inside either commits together or rolls back together when something fails. Put it on service methods (the transaction boundary), never on controllers:</li>
+</ul>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="java"><span class="giallo-l"><span>@</span><span style="color: #E6C08A;">Service</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">public class</span><span style="color: #59C2FF;"> RegistrationService</span><span> {</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>    @</span><span style="color: #E6C08A;">Transactional</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    public</span><span style="color: #59C2FF;"> Registration</span><span style="color: #FFB454;"> register</span><span>(</span><span style="color: #59C2FF;">Long</span><span style="color: #D2A6FF;"> eventId</span><span style="color: #BFBDB6B3;">,</span><span style="color: #59C2FF;"> Long</span><span style="color: #D2A6FF;"> userId</span><span>) {</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">        var</span><span> event</span><span style="color: #F29668;"> =</span><span> eventRepository</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">findById</span><span>(eventId)</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">            .</span><span style="color: #FFB454;">orElseThrow</span><span>(()</span><span style="color: #FF8F40;"> -&gt; new</span><span style="color: #FFB454;"> ResourceNotFoundException</span><span>(</span><span style="color: #AAD94C;">&quot;Event not found&quot;</span><span>))</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span style="color: #5A6673;font-style: italic;">        // Multiple writes below commit or roll back as ONE unit</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">        return</span><span> registrationRepository</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">save</span><span>(event</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">register</span><span>(userId))</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<ul>
+<li><strong>The N+1 Select Problem</strong>: Loading 50 events and then touching <code>event.getOrganizer()</code> fires one query for the events <strong>plus 50 more</strong> for each organizer — because JPA fetches relationships lazily by default. This is the classic production performance bug, and interviewers love it. Fixes, in order of preference:
+<ol>
+<li><strong><code>JOIN FETCH</code> queries</strong> in the repository: <code>@Query("SELECT e FROM Event e JOIN FETCH e.organizer")</code>.</li>
+<li><strong><code>@EntityGraph(attributePaths = "organizer")</code></strong> on the repository method.</li>
+<li><strong>DTO projections</strong> — fetch exactly the columns the API needs (the DTO pattern again).</li>
+</ol>
+<ul>
+<li>Detect it with <code>spring.jpa.properties.hibernate.generate_statistics=true</code> or integration tests that assert query counts.</li>
+</ul>
+</li>
 </ul>
 <h4 id="part-4-validation-global-exception-handling">Part 4: Validation &amp; Global Exception Handling</h4>
 <ul>
@@ -731,11 +803,32 @@ $$\text{Controller (HTTP/DTO)} \longrightarrow \text{Service (Business Logic)} \
 <li>Custom <code>OncePerRequestFilter</code> to validate Bearer tokens on incoming requests.</li>
 <li>Role-based access control (RBAC): <code>@PreAuthorize("hasRole('ADMIN')")</code>.</li>
 </ul>
-<h4 id="part-6-automated-testing-api-documentation">Part 6: Automated Testing &amp; API Documentation</h4>
+<p>The modern Spring Security 6 configuration you will actually write:</p>
+<pre class="giallo" style="color: #BFBDB6; background-color: #0D1017;" ><code data-lang="java"><span class="giallo-l"><span>@</span><span style="color: #E6C08A;">Bean</span></span>
+<span class="giallo-l"><span style="color: #59C2FF;">SecurityFilterChain</span><span style="color: #FFB454;"> securityFilterChain</span><span>(</span><span style="color: #59C2FF;">HttpSecurity</span><span> http) throws Exception {</span></span>
+<span class="giallo-l"><span style="color: #FF8F40;">    return</span><span> http</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">        .</span><span style="color: #FFB454;">csrf</span><span>(csrf </span><span style="color: #FF8F40;">-&gt;</span><span> csrf</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">disable</span><span>())</span><span style="color: #5A6673;font-style: italic;"> // acceptable for stateless JWT APIs</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">        .</span><span style="color: #FFB454;">authorizeHttpRequests</span><span>(auth </span><span style="color: #FF8F40;">-&gt;</span><span> auth</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">            .</span><span style="color: #FFB454;">requestMatchers</span><span>(</span><span style="color: #AAD94C;">&quot;/api/auth/**&quot;</span><span>)</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">permitAll</span><span>()</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">            .</span><span style="color: #FFB454;">requestMatchers</span><span>(</span><span style="color: #AAD94C;">&quot;/api/admin/**&quot;</span><span>)</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">hasRole</span><span>(</span><span style="color: #AAD94C;">&quot;ADMIN&quot;</span><span>)</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">            .</span><span style="color: #FFB454;">anyRequest</span><span>()</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">authenticated</span><span>())</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">        .</span><span style="color: #FFB454;">sessionManagement</span><span>(s </span><span style="color: #FF8F40;">-&gt;</span><span> s</span><span style="color: #BFBDB6B3;">.</span><span style="color: #FFB454;">sessionCreationPolicy</span><span>(SessionCreationPolicy</span><span style="color: #BFBDB6B3;">.</span><span>STATELESS))</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">        .</span><span style="color: #FFB454;">addFilterBefore</span><span>(jwtAuthFilter</span><span style="color: #BFBDB6B3;">,</span><span> UsernamePasswordAuthenticationFilter</span><span style="color: #BFBDB6B3;">.</span><span>class)</span></span>
+<span class="giallo-l"><span style="color: #BFBDB6B3;">        .</span><span style="color: #FFB454;">build</span><span>()</span><span style="color: #BFBDB6B3;">;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre><h4 id="part-6-automated-testing-api-documentation">Part 6: Automated Testing &amp; API Documentation</h4>
 <ul>
 <li>Unit testing <code>@Service</code> classes with <strong>JUnit 5</strong> and <strong>Mockito</strong> (<code>@Mock</code>, <code>@InjectMocks</code>, <code>when().thenReturn()</code>).</li>
 <li>Interactive API documentation using <strong>SpringDoc OpenAPI</strong> (Swagger UI at <code>/swagger-ui.html</code>).</li>
-<li>Local database containerization with <strong>Docker Compose</strong>.</li>
+<li>Local database containerization with <strong>Docker Compose</strong> — and <strong>Testcontainers</strong> to run throwaway PostgreSQL instances <em>inside</em> your integration tests, so tests hit a real database without polluting shared state.</li>
+</ul>
+<h4 id="part-7-production-essentials">Part 7: Production Essentials</h4>
+<ul>
+<li><strong>Spring Boot Actuator</strong>: production-ready <code>/health</code>, <code>/metrics</code>, and <code>/env</code> endpoints — the observability hook your monitoring stack scrapes.</li>
+<li><strong>Flyway migrations</strong>: database schema changes as versioned, ordered SQL files applied at startup — never hand-edited schemas.</li>
+<li><strong>Profiles</strong>: <code>application-dev.yml</code> vs <code>application-prod.yml</code> — environment-specific configuration without code changes.</li>
+<li><strong>Caching</strong>: Spring's <code>@Cacheable</code> backed by Redis when read-heavy endpoints outgrow the database.</li>
+<li><strong>Virtual threads in Spring Boot</strong>: One property — <code>spring.threads.virtual.enabled=true</code> — runs every request on a virtual thread (Stage 1's superpower applied to your whole server), letting Tomcat handle thousands of concurrent blocking requests without reactive programming.</li>
+<li><strong>Monolith first</strong>: Start with a well-modularized layered monolith — the structure above is microservice-ready. Extract microservices only when <em>team scale</em> demands it; premature splitting is the most expensive mistake in backend architecture.</li>
 </ul>
 <h4 id="hands-on-tasks-2">Hands-On Tasks</h4>
 <ol>
@@ -745,21 +838,33 @@ $$\text{Controller (HTTP/DTO)} \longrightarrow \text{Service (Business Logic)} \
 <li><strong>Interactive Swagger</strong>: Document all endpoints with SpringDoc OpenAPI.</li>
 </ol>
 <h4 id="curated-resources-2">Curated Resources</h4>
-<ul>
-<li><a rel="external" href="https://start.spring.io/">Spring Initializr — Bootstrap Generator</a></li>
-<li><a rel="external" href="https://docs.spring.io/spring-boot/">Official Spring Boot Documentation</a></li>
-<li><a rel="external" href="https://docs.spring.io/spring-security/reference/">Official Spring Security Reference</a></li>
-<li><a rel="external" href="https://spring.io/guides">Official Spring Guides</a></li>
-<li><a rel="external" href="https://www.youtube.com/@danvega">Dan Vega — Modern Spring Boot 3 (YouTube)</a></li>
-<li><a rel="external" href="https://www.youtube.com/c/laurentiuspilca">Laurentiu Spilca — Spring Context &amp; Security (YouTube)</a></li>
-<li><a rel="external" href="https://www.youtube.com/@amigoscode">Amigoscode — Spring Boot, Docker &amp; PostgreSQL (YouTube)</a></li>
-<li><a rel="external" href="https://www.youtube.com/watch?v=35EQXmHKZYs">Telusko — Spring Boot Full Course</a></li>
-<li><a rel="external" href="https://www.youtube.com/playlist?list=PL6W8uoQQ2c60g6_fcjDCLHSx1LBeVYqyZ">Shrayansh Jain — Spring Boot Playlist</a></li>
-<li><a rel="external" href="https://www.youtube.com/@EmbarkX">EmbarkX — Spring Boot Projects</a></li>
-<li><a rel="external" href="https://www.baeldung.com/">Baeldung — Spring &amp; Java Reference</a></li>
+<div class="pretty-link-card not-prose group my-4"><a href="https://start.spring.io/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Spring Initializr</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Bootstrap a configured Spring Boot project in seconds — dependencies included.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>start.spring.io/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://docs.spring.io/spring-boot/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Official Spring Boot Documentation</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The definitive reference for auto-configuration, starters, and production features.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>docs.spring.io/spring-boot/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://docs.spring.io/spring-security/reference/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Official Spring Security Reference</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The authoritative guide to filters, authentication, and authorization architecture.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>docs.spring.io/spring-security/reference/</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://spring.io/guides" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Official Spring Guides</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">Task-oriented, 15-minute guides for practically every Spring capability.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>spring.io/guides</span></div></div></div></a></div>
+<div class="pretty-link-card not-prose group my-4"><a href="https://www.baeldung.com/" target="_blank" rel="noopener noreferrer" class="block no-underline"><div class="flex items-start gap-4 p-5"><div class="flex-shrink-0 pretty-link-icon-box"><svg class="w-5 h-5 pretty-link-lead-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-start justify-between gap-3 mb-1.5"><h4 class="pretty-link-title font-semibold text-base leading-snug">Baeldung — Spring & Java Reference</h4><div class="pretty-link-icon-wrapper"><svg class="pretty-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div></div><p class="pretty-link-description text-sm leading-relaxed mb-2">The community's deep-dive reference for every Spring question you will ever Google.</p><div class="pretty-link-url"><svg class="w-3.5 h-3.5 mr-1.5 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg><span>www.baeldung.com/</span></div></div></div></a></div>
+<details class="collapse collapse-arrow bg-base-100 border-gray-500/15 border"><summary class="collapse-title font-semibold select-none cursor-pointer">Video Courses (English & Hindi)</summary><div class="collapse-content text-sm"><ul>
+<li><strong>Dan Vega</strong> — Modern Spring Boot 3 from a Spring team advocate.</li>
+<li><strong>Laurentiu Spilca</strong> — Spring Context and Security deep dives.</li>
+<li><strong>Amigoscode</strong> — Spring Boot, Docker, and PostgreSQL.</li>
+<li><strong>Telusko</strong> — Spring Boot full course.</li>
+<li><strong>Shrayansh Jain</strong> — Spring Boot playlist (Hindi-friendly).</li>
+<li><strong>EmbarkX</strong> — Spring Boot project walkthroughs.</li>
 </ul>
+</div></details>
 <hr />
-<h2 id="3-capstone-project-campus-event-management-platform">3. Capstone Project: Campus Event &amp; Management Platform</h2>
+<h2 id="3-the-milestone-ladder">3. The Milestone Ladder</h2>
+<p>Each stage's hands-on tasks form a progressive ladder — every rung is a deployable, portfolio-ready artifact:</p>
+<pre class="mermaid border border-gray-500/15">
+graph TD
+    M1["Milestone 1: CLI Data Applications<br/>(OOP, Collections, Streams)"] --> M2["Milestone 2: Schema &amp; SQL Mastery<br/>(Normalized Design, Joins)"]
+    M2 --> M3["Milestone 3: Student API<br/>(Spring Boot, JPA, Validation)"]
+    M3 --> M4["Milestone 4: JWT Auth Microservice<br/>(Spring Security 6, RBAC)"]
+    M4 --> M5["Milestone 5: Tested &amp; Documented API<br/>(Mockito, Testcontainers, Swagger)"]
+    M5 --> M6["Milestone 6 (Capstone): Campus Event Platform<br/>(Everything Above, Production-Grade)"]
+</pre>
+<hr />
+<h2 id="4-capstone-project-campus-event-management-platform">4. Capstone Project: Campus Event &amp; Management Platform</h2>
 <p>Rather than building fragmented tutorial snippets, consolidate your skills into one comprehensive, portfolio-ready application.</p>
 <h3 id="recommended-tech-stack">Recommended Tech Stack</h3>
 <ul>
@@ -774,7 +879,7 @@ $$\text{Controller (HTTP/DTO)} \longrightarrow \text{Service (Business Logic)} \
 <h3 id="key-features-to-implement">Key Features to Implement</h3>
 <ul>
 <li><strong>Authentication &amp; Authorization</strong>: Registration and login endpoints returning signed JWTs, password encryption with BCrypt, and role-based permissions (<code>ROLE_STUDENT</code>, <code>ROLE_ADMIN</code>).</li>
-<li><strong>Entity Relationships</strong>: Normalized database models linking Users $\leftrightarrow$ Events $\leftrightarrow$ Registrations with proper cascading and indexing.</li>
+<li><strong>Entity Relationships</strong>: Normalized database models linking Users ↔ Events ↔ Registrations with proper cascading and indexing.</li>
 <li><strong>Pagination &amp; Sorting</strong>: Paginated event listings (<code>Pageable</code>, <code>Page&lt;EventDTO&gt;</code>) with multi-attribute filtering (category, date, venue).</li>
 <li><strong>Robust Validation</strong>: Jakarta validation on all incoming request payloads with meaningful field error mappings.</li>
 <li><strong>Global Error Handling</strong>: <code>@RestControllerAdvice</code> catching custom business exceptions (<code>ResourceNotFoundException</code>, <code>EventFullException</code>) and returning standard RFC 7807 problem details.</li>
@@ -782,7 +887,7 @@ $$\text{Controller (HTTP/DTO)} \longrightarrow \text{Service (Business Logic)} \
 <li><strong>Swagger API UI</strong>: Interactive documentation accessible at <code>/swagger-ui.html</code>.</li>
 </ul>
 <hr />
-<h2 id="4-skills-checklist-for-campus-placements-internships">4. Skills Checklist for Campus Placements &amp; Internships</h2>
+<h2 id="5-skills-checklist-for-campus-placements-internships">5. Skills Checklist for Campus Placements &amp; Internships</h2>
 <p>Before applying for backend software engineering roles, ensure you can comfortably discuss and demonstrate:</p>
 <ul>
 <li><input disabled="" type="checkbox"/>
@@ -796,7 +901,7 @@ Relational schema design, Foreign Keys, indexing, and SQL Joins.</li>
 <li><input disabled="" type="checkbox"/>
 Spring Boot Inversion of Control (IoC), Beans, and Constructor Injection.</li>
 <li><input disabled="" type="checkbox"/>
-Controller $\rightarrow$ Service $\rightarrow$ Repository architectural pattern.</li>
+Controller → Service → Repository architectural pattern.</li>
 <li><input disabled="" type="checkbox"/>
 The DTO pattern and why JPA Entities must never be leaked through the API layer.</li>
 <li><input disabled="" type="checkbox"/>
@@ -807,6 +912,15 @@ Spring Security 6 <code>SecurityFilterChain</code> and stateless JWT lifecycle.<
 Writing unit tests with Mockito and JUnit 5.</li>
 <li><input disabled="" type="checkbox"/>
 Containerizing dependencies using <code>docker-compose.yml</code>.</li>
+</ul>
+<hr />
+<h2 id="6-where-to-next-in-the-cc-ecosystem">6. Where to Next in the CC Ecosystem</h2>
+<p>Java backend engineering connects to the rest of the CC curriculum depending on your direction:</p>
+<ul>
+<li><strong><a href="https://cc-club.in/roadmaps/devops/">DevOps Roadmap</a></strong> — containerize, pipeline, and deploy your Spring Boot services with Docker, GitHub Actions, and Kubernetes.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/web-development/">Web Development Master Roadmap</a></strong> — pair your backend APIs with modern frontend engineering, or compare Node.js/Python backends against the JVM.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/sysadmin/">System Administration Roadmap</a></strong> — the Linux, networking, and security foundations your JVM services run on.</li>
+<li><strong><a href="https://cc-club.in/roadmaps/open-source/">Open Source Contribution Roadmap</a></strong> — Spring, Hibernate, and the wider JVM ecosystem are among the largest open-source communities in the world.</li>
 </ul>
 
 
@@ -898,37 +1012,101 @@ Containerizing dependencies using <code>docker-compose.yml</code>.</li>
                     
                         
 
-<div class="hidden lg:block" >
+<div class="hidden lg:block" data-toc-expand="true">
     <div class="sticky top-20 px-4 py-2 border-l border-gray-500/15">
         <h4 class="text-lg font-bold mb-1">ON THIS PAGE</h4>
             <ul class="menu menu-sm toc-menu">
             
                 <li>
                     
-                    <details class="toc-details" >
+                    <details class="toc-details" open>
                         <summary>
-                            <a href="https://cc-club.in/roadmaps/java-spring-boot/#java-spring-boot-roadmap" class="toc-link">Java &amp; Spring Boot Roadmap</a>
+                            <a href="https://cc-club.in/roadmaps/java-spring-boot/#1-overview" class="toc-link">1. Overview</a>
                         </summary>
                         <ul>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#1-overview" class="toc-link">1. Overview</a>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#what-is-java-backend-development" class="toc-link">What is Java Backend Development?</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#2-learning-path-breakdown" class="toc-link">2. Learning Path Breakdown</a>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#why-java-spring-boot" class="toc-link">Why Java + Spring Boot?</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#3-capstone-project-campus-event-management-platform" class="toc-link">3. Capstone Project: Campus Event &amp; Management Platform</a>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#real-life-applications" class="toc-link">Real-Life Applications</a>
                                 </li>
                             
                                 <li>
-                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#4-skills-checklist-for-campus-placements-internships" class="toc-link">4. Skills Checklist for Campus Placements &amp; Internships</a>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#recommended-tooling-zero-friction-setup" class="toc-link">Recommended Tooling (Zero-Friction Setup)</a>
                                 </li>
                             
                         </ul>
                     </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/java-spring-boot/#2-learning-path-breakdown" class="toc-link">2. Learning Path Breakdown</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#stage-1-modern-core-java" class="toc-link">Stage 1 — Modern Core Java</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#stage-2-backend-fundamentals-sql-http-maven" class="toc-link">Stage 2 — Backend Fundamentals (SQL, HTTP &amp; Maven)</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#stage-3-spring-boot-3-development" class="toc-link">Stage 3 — Spring Boot 3 Development</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#3-the-milestone-ladder" class="toc-link">3. The Milestone Ladder</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <details class="toc-details" open>
+                        <summary>
+                            <a href="https://cc-club.in/roadmaps/java-spring-boot/#4-capstone-project-campus-event-management-platform" class="toc-link">4. Capstone Project: Campus Event &amp; Management Platform</a>
+                        </summary>
+                        <ul>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#recommended-tech-stack" class="toc-link">Recommended Tech Stack</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#key-features-to-implement" class="toc-link">Key Features to Implement</a>
+                                </li>
+                            
+                        </ul>
+                    </details>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#5-skills-checklist-for-campus-placements-internships" class="toc-link">5. Skills Checklist for Campus Placements &amp; Internships</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://cc-club.in/roadmaps/java-spring-boot/#6-where-to-next-in-the-cc-ecosystem" class="toc-link">6. Where to Next in the CC Ecosystem</a>
                     
                 </li>
             
