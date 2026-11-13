@@ -300,7 +300,13 @@ GET /api/invoices/1042   → someone else's invoice (IDOR — Insecure Direct Ob
 * **The mechanism**: Applications that deserialize untrusted data into executable objects — a crafted payload becomes code execution on deserialize (the classic Java/PHP gadget-chain attacks).
 * **The defense**: Never deserialize untrusted data; prefer data formats without executable semantics (JSON), validate before use, and monitor deserialization libraries for CVEs.
 
-### 4.10 The Lab: PortSwigger Web Security Academy
+### 4.10 Cross-Site Request Forgery (CSRF)
+
+* **The mechanism**: An attacker's page makes the victim's browser silently submit a request to your site — the browser attaches cookies automatically, so the request arrives *authenticated*. Classic impact: changing the victim's email, transferring funds, adding admin users.
+* **The defense**: `SameSite` cookies (the modern default), per-session CSRF tokens on state-changing forms, and rejecting cross-origin mutations. Note the division of labor: **CORS** controls what other origins can *read*; CSRF defenses control what they can *do*.
+* **The lab**: PortSwigger's CSRF path — from token bypasses to SameSite downgrades.
+
+### 4.11 The Lab: PortSwigger Web Security Academy
 
 The [PortSwigger Web Security Academy](https://portswigger.net/web-security) is free, browser-based, and the single best web security curriculum in existence — written by the makers of Burp Suite:
 
@@ -355,6 +361,12 @@ You will not design cryptographic algorithms — and you must never invent your 
 * **Asymmetric encryption** (RSA, ECC): Public/private keypairs — used for key exchange and signatures, not bulk data.
 * **TLS**: How the handshake actually works — certificate verification, cipher negotiation, forward secrecy. Inspect real handshakes in Wireshark; configure TLS correctly on your own servers (see [SysAdmin's Certbot stage](@/roadmaps/sysadmin.md)).
 * **Certificates & PKI**: The chain of trust, certificate authorities, and what certificate pinning protects against.
+* **How a TLS handshake actually works** (read this once, and certificate errors become legible forever):
+  1. Client sends a `ClientHello` — supported TLS versions and cipher suites.
+  2. Server replies with its **certificate chain** and chosen parameters.
+  3. Client **verifies the chain** against trusted root CAs (this is where "certificate not trusted" errors come from) and checks the hostname matches.
+  4. Both sides perform the key exchange (ECDHE) — producing the symmetric session keys without ever transmitting them.
+  5. All further traffic is encrypted and MAC-authenticated.
 * **Key management**: Where keys live (hardware-backed keystores — see the Android roadmap's Keystore section), rotation, and why hardcoded keys in source code are an automatic finding.
 
 ### 6.1 How Cryptography Fails in Practice
@@ -503,6 +515,21 @@ cat /proc/net/tcp                                # hidden listening sockets?
 
 ---
 
+### 7.8 Binary Exploitation: The Pwn Path
+
+Binary exploitation — corrupting a program's memory to hijack its control flow — is the deepest technical CTF category and the foundation of memory-safety research:
+
+* **The core bug**: A buffer overflow writing past an array onto adjacent stack data — including the saved return address. Redirecting that address redirects execution.
+* **The modern protections you must understand first** (and why naive overflows fail):
+  * **ASLR** — randomizes memory addresses per run.
+  * **NX/DEP** — stack memory is non-executable.
+  * **Stack canaries** — a poisoned value checked before return.
+  * Bypassing all three together is the skill (ROP — reusing existing code fragments).
+* **Start here**: [pwn.college](https://pwn.college/) — the free, structured Arizona State University course that takes you from zero to real exploitation.
+* **Why memory safety matters**: This is exactly why modern languages (Rust, Go) emphasize memory-safe design — the entire class of vulnerabilities disappears at the language level.
+
+---
+
 ## 8. Stage 7: Social Engineering & OSINT
 
 {% <alert_warning> %}
@@ -595,7 +622,13 @@ Lab detection exercise:
   6. *Lessons learned*: What allowed it? New detection rule, user-awareness update.
 * **Blameless postmortems**: The SRE-influenced culture of documenting incidents without blaming individuals — because fear produces hidden incidents.
 
-### 11.2 Detection Engineering: YARA & Detection-as-Code
+### 11.2 Threat Intelligence
+
+* **What threat intel is**: Curated knowledge about adversaries — their infrastructure, malware, tactics (mapped to [MITRE ATT&CK](https://attack.mitre.org/)), and indicators (IPs, domains, hashes).
+* **How teams consume it**: Feeds and reports feed detection rules (a new campaign's C2 domain becomes a firewall/SIEM indicator), enrich investigations (is this IP known-malicious?), and shape defenses against the techniques actually used in your sector.
+* **Strategic vs tactical**: Strategic intel informs executives and architecture; tactical intel (indicators) powers detection. Both require the same core skill: reading adversary behavior and translating it into defensive action.
+
+### 11.3 Detection Engineering: YARA & Detection-as-Code
 
 Detection itself is becoming an engineering discipline — rules are versioned, tested, and shipped like code:
 
@@ -735,6 +768,16 @@ graph TD
 ### Milestone 1: Build Your Home Lab
 * **Objective**: Create a safe, snapshotted lab environment for everything that follows.
 * **Core Tasks**: Set up VirtualBox/VMware with a Kali attacker VM and at least two deliberately vulnerable targets (Metasploitable 2, DVWA via Docker); configure host-only networking; practice snapshot and restore workflows.
+
+{% <mermaid> %}
+graph LR
+    subgraph HostOnly["Host-Only Lab Network (isolated)"]
+        Kali["Kali Linux<br/>(attacker machine)"] -->|"scans &amp; exploits"| Target1["Metasploitable 2<br/>(Linux target)"]
+        Kali --> Target2["DVWA Container<br/>(web target)"]
+        Kali --> Target3["Windows Eval VM<br/>(AD target)"]
+    end
+    HostOnly -.->|"no route to internet"| Internet["Public Internet<br/>(isolated by design)"]
+{% </mermaid> %}
 * **Stretch Goals**: Add a Windows evaluation VM; script the lab build with Vagrant or Docker Compose.
 * **Demonstrates**: Lab discipline, isolation, and operational hygiene.
 
@@ -828,7 +871,34 @@ graph TD
 
 ---
 
-## 17. Where to Next in the CC Ecosystem
+## 17. Glossary: The Vocabulary of the Field
+
+Security communication runs on shared vocabulary — this is the minimum working set:
+
+{% <collapse title="Key Terms, A to Z"> %}
+
+* **APT (Advanced Persistent Threat)** — a well-resourced, patient adversary group, typically state-backed.
+* **Backdoor** — an undocumented access path bypassing normal authentication.
+* **Brute force** — trying every possible credential combination; defeated by rate limiting and MFA.
+* **C2 (Command & Control)** — the infrastructure malware uses to receive instructions from its operator.
+* **CVE / CVSS / CWE** — the vulnerability's ID / severity score / weakness class (Stage 2.5).
+* **Exploit** — code or a technique that triggers a vulnerability.
+* **Hardening** — reducing attack surface by disabling or restricting everything not needed.
+* **IOC (Indicator of Compromise)** — observable evidence of an attack (a malicious IP, hash, domain).
+* **Lateral movement** — attackers pivoting from an initial foothold deeper into a network.
+* **Least privilege** — the principle that access must be minimal (Stage 3.1).
+* **MFA (Multi-Factor Authentication)** — requiring a second proof of identity; phishing-resistant when FIDO2.
+* **Payload** — the part of an exploit that performs the actual action.
+* **Red Team / Blue Team / Purple Team** — attackers / defenders / the combined exercise of both.
+* **RCE (Remote Code Execution)** — running arbitrary code on a remote system; the most severe impact class.
+* **SAST / DAST** — static (code-scanning) and dynamic (running-app-scanning) application security testing.
+* **Threat model** — a structured analysis of what can go wrong and what controls mitigate it (Stage 3.4).
+* **Zero-day** — a vulnerability unknown to the vendor; no patch exists yet.
+{% </collapse> %}
+
+---
+
+## 18. Where to Next in the CC Ecosystem
 
 Security is a second-layer discipline — it compounds with everything else the CC ecosystem teaches:
 
