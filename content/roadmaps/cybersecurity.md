@@ -9,6 +9,11 @@ estimated_time = "Ongoing Practice (6-9 months for core foundation)"
 prerequisites = "Basic computer literacy; the System Administration roadmap's early stages are strongly recommended"
 badge = "SECURITY"
 toc_expand = true
+
+# Landing page carousel
+carousel_image = "roadmaps/cybersecurity-cyber.webp"
+carousel_title = "Cybersecurity"
+carousel_description = "Master threat modeling, web app security, network defense, cryptography, offensive labs, and security operations."
 +++
 
 Cybersecurity is the discipline of defending systems, networks, and applications against adversaries — and, to defend them well, understanding exactly how attackers break them. It is one of the few engineering fields where thinking like the attacker is a formal job requirement, where lab practice on deliberately vulnerable machines is the standard curriculum, and where a single unpatched misconfiguration can cost an organization everything.
