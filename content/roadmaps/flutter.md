@@ -1441,6 +1441,22 @@ Deepen your Flutter mastery using these vetted, high-yield documentation sources
 
 {{<pretty_link url="https://www.youtube.com/c/flutterdev" title="Flutter Official YouTube Channel" description="Official deep dives, Widget of the Week series, decoding Flutter rendering, and keynote engineering presentations." />}}
 
+The following picks come straight from community consensus on r/FlutterDev and r/flutterhelp — the resources experienced Flutter developers most often point beginners to:
+
+{{<pretty_link url="https://www.youtube.com/playlist?list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ" title="Net Ninja — Flutter Tutorial for Beginners (Playlist)" description="The community's favorite free video introduction: short, focused lessons from Dart basics through your first complete app." />}}
+
+{{<pretty_link url="https://www.youtube.com/watch?v=VPtVDlFmxG0" title="freeCodeCamp — Flutter Course for Beginners (~37 Hours)" description="The most-recommended free long-form course: one complete video journey from zero to published apps, ideal if you prefer one structured path." />}}
+
+{{<pretty_link url="https://codewithandrea.com/" title="Code With Andrea (Andrea Bizzotto)" description="Free articles, tutorials, and a newsletter widely praised for production-grade architecture and Riverpod patterns; his paid courses are the community's gold standard for going intermediate-to-advanced." />}}
+
+{{<pretty_link url="https://docs.flutter.dev/reference/learning-resources" title="Official Codelabs, Tutorials & Learning Resources" description="Google's hands-on codelabs — the fastest way to learn a specific feature by building it step by step in a guided session." />}}
+
+{{<pretty_link url="https://resocoder.com/" title="Reso Coder" description="Tutorials and courses focused on clean architecture, testing, and scalable app structure — a frequent recommendation once you outplay beginner tutorials." />}}
+
+{{<pretty_link url="https://www.youtube.com/c/MitchKoko" title="Mitch Koko" description="Short, design-focused Flutter tutorials with a highly praised beginner masterclass — the community's go-to channel for making apps look beautiful, not just work." />}}
+
+{{<pretty_link url="https://fluttergems.dev/" title="Flutter Gems" description="A curated, category-organized guide to 1,000+ pub.dev packages — the fastest way to answer 'which package should I use for X?'" />}}
+
 ---
 
 ## 19. Where to Next in the CC Ecosystem
