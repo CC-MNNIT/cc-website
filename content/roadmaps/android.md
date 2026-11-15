@@ -319,6 +319,8 @@ Every Android project contains an `AndroidManifest.xml` file at its root. It dec
 **Security Mandate: `android:exported`**: Starting in Android 12, every Activity, Service, or BroadcastReceiver that defines an `<intent-filter>` must explicitly declare `android:exported="true"` (if accessible to other apps or system launchers) or `android:exported="false"` (if internal to your app). Leaving internal components exported allows malicious third-party apps to directly invoke private screens!
 {% </alert_info> %}
 
+> **Legacy-codebase literacy (don't skip this).** Compose-first learning is correct, but a large share of real-world Android jobs and internship codebases still run on the XML View system — so build *reading* fluency, not authoring fluency, in the legacy stack: **every Activity must be registered in the manifest** (in multi-activity apps, each one gets an `<activity>` entry — one reason legacy apps have huge manifests, while a Compose app can host every screen in a single `MainActivity`); XML layouts inflate through `RecyclerView` **adapters**, the pre-Compose cousin of `LazyColumn`; **View Binding** (manual `findViewById` vs. generated binding classes) is how legacy screens reference views; and **navigation graphs** (`nav_graph.xml` with string route arguments) are the predecessor of type-safe Navigation Compose routes covered in Stage 5. The same idea applies to OOP patterns: learn classic **singleton** semantics in Java, because Kotlin's `object` declaration — and the DI frameworks used in Stage 4 — exist precisely to replace hand-rolled singletons.
+
 ### 3.4 Modern Gradle with Kotlin DSL & Version Catalogs
 
 Android builds are managed by Gradle. Modern projects use **Kotlin DSL** (`build.gradle.kts`) and **Gradle Version Catalogs** (`gradle/libs.versions.toml`) to maintain type-safe, centralized dependency declarations.
@@ -989,6 +991,7 @@ appId: in.cc_club.app
 * **Layout Inspector**: Inspect the live 3D Compose hierarchy, verify padding and bounds, and inspect **recomposition counts** to detect components that re-render too often.
 * **Network Inspector**: Inspect every outgoing HTTP request, status code, response body, and timing waterfall in real time.
 * **Database Inspector**: View, query, and modify live Room database tables on a running emulator without exporting SQLite files.
+* **Logcat**: The live event stream from the device — log messages, stack traces, and `adb` shell output. Master tag-based filtering and log levels early; it is the single most-used debugging surface for coroutines, lifecycle events, and background-work issues.
 * **Memory Profiler & LeakCanary**: Detect memory leaks caused by retained Activity contexts or dangling coroutine listeners.
 
 ---
@@ -1162,6 +1165,30 @@ Explore these authoritative, high-yield references to continue your native Andro
 {{<pretty_link url="https://maestro.mobile.dev/" title="Maestro Mobile UI Testing Framework" description="The modern, declarative YAML-based mobile UI testing platform designed for effortless and reliable end-to-end app automation." />}}
 
 {{<pretty_link url="https://www.youtube.com/c/AndroidDevelopers" title="Android Developers YouTube Channel" description="Official deep dives, MAD Skills series, architectural best practices, and keynote presentations directly from the Google Android engineering team." />}}
+
+The following channels and guides are the r/androiddev community's most frequent recommendations, plus one Hindi-language favorite:
+
+{{<pretty_link url="https://www.youtube.com/@philipplackner" title="Philipp Lackner" description="The community's most-recommended Android educator: modern Kotlin, Compose, MVVM, and full production-app builds, with a deep free archive plus structured paid courses." />}}
+
+{{<pretty_link url="https://www.youtube.com/@StevdzaSan" title="Stevdza-San (Stefan Jovanovic)" description="The standard companion to Philipp Lackner — 400+ videos on Kotlin, Jetpack Compose, modularization, and mobile architecture, praised for depth beyond beginner tutorials." />}}
+
+{{<pretty_link url="https://www.youtube.com/c/Codinginflow" title="Coding in Flow" description="Clear, well-structured tutorials and the popular Coding in Flow podcast featuring interviews with Android educators — a regular community pick for supplementary learning." />}}
+
+{{<pretty_link url="https://www.youtube.com/@neatroots" title="Neat Roots (Hindi)" description="A well-regarded Hindi-language channel with a substantial free Kotlin/Android series for beginners — a comfortable starting point if you prefer learning in Hindi before graduating to English-first resources." />}}
+
+Beyond video, these cover practice, reading, listening, and staying current:
+
+{{<pretty_link url="https://github.com/android/compose-samples" title="Official Compose Samples (Jetsnack, Jetchat, Jetcaster…)" description="Google's collection of beautifully designed sample apps, each demonstrating a different Compose domain — the best free source of real production-quality Compose code to study and imitate." />}}
+
+{{<pretty_link url="https://play.kotlinlang.org/koans/overview" title="Kotlin Koans" description="A set of interactive programming exercises in the browser that teach Kotlin idioms hands-on — the community's classic first exercise set after reading the language tour." />}}
+
+{{<pretty_link url="https://developer.android.com/podcasts" title="Android Developer Podcasts (official listing)" description="Google's index of developer podcasts, including Fragmented and Now in Android — ideal for absorbing architecture debates and platform news during commutes." />}}
+
+{{<pretty_link url="https://androidweekly.net/" title="Android Weekly Newsletter" description="The long-running weekly newsletter curating the best new Android articles, libraries, and videos — the lowest-effort way to stay current with the ecosystem." />}}
+
+{{<pretty_link url="https://github.com/androiddevnotes/awesome-android-learning-resources" title="Awesome Android Learning Resources" description="A community-maintained GitHub mega-list of courses, books, blogs, newsletters, and tools — the most-repeated 'hidden gem' pick for discovering niche Android content." />}}
+
+{{<pretty_link url="https://commonsware.com/" title="CommonsWare (Mark Murphy)" description="One of the most respected independent Android educators, with deeply technical books, blog posts, and a famously thorough Q&A history — the go-to when official docs are too shallow." />}}
 
 ---
 
