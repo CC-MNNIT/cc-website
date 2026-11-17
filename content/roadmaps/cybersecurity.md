@@ -874,6 +874,22 @@ graph LR
 
 {{<pretty_link url="https://github.com/sbilly/awesome-security" title="Awesome Security" description="A curated collection of security tools, resources, and reading — the field's index." />}}
 
+And two community-staple walkthrough sources every CTF learner ends up relying on:
+
+{{<pretty_link url="https://www.youtube.com/@ippsec" title="IppSec" description="Legendary machine walkthroughs on HackTheBox and beyond — the community universally recommends watching his videos to learn methodology, not just commands." />}}
+
+{{<pretty_link url="https://www.youtube.com/@LiveOverflow" title="LiveOverflow" description="The best conceptual security videos on YouTube — binary exploitation, browser exploitation, and CTF thinking explained visually and honestly." />}}
+
+And for staying current — the blogs, podcasts, and communities practitioners actually read:
+
+{{<pretty_link url="https://darknetdiaries.com/" title="Darknet Diaries" description="Jack Rhysider's storytelling podcast on real hacks and the people behind them — the most-recommended way to fall in love with the field while absorbing how attacks actually unfold." />}}
+
+{{<pretty_link url="https://krebsonsecurity.com/" title="Krebs on Security" description="Brian Krebs' investigative journalism — the single most-cited security blog on r/cybersecurity, covering breaches, cybercrime, and the industry's darker corners." />}}
+
+{{<pretty_link url="https://haveibeenpwned.com/" title="Have I Been Pwned (Troy Hunt)" description="Check your email against known data breaches, and read Troy Hunt's blog — the practical side of password security every developer should internalize." />}}
+
+{{<pretty_link url="https://www.reddit.com/r/netsec/" title="r/netsec" description="The technically serious counterpart to r/cybersecurity — research papers, exploit writeups, and tool releases with minimal beginner noise." />}}
+
 ---
 
 ## 17. Glossary: The Vocabulary of the Field

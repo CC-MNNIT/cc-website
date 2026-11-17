@@ -1296,6 +1296,28 @@ Deepen your web mastery using these vetted, authoritative sources — a small nu
 
 {{<pretty_link url="https://www.frontendmentor.io/" title="Frontend Mentor" description="Real-world design challenges with professional Figma files to sharpen your layout skills." />}}
 
+The structured curricula r/webdev most often recommends over scattered tutorials:
+
+{{<pretty_link url="https://www.theodinproject.com/" title="The Odin Project" description="The community's #1 recommendation: a completely free full-stack curriculum from HTML/CSS to JavaScript, React/Node, with projects at every step and an active Discord." />}}
+
+{{<pretty_link url="https://www.freecodecamp.org/" title="freeCodeCamp" description="The other top pick: interactive certifications covering responsive web design, JavaScript, backend, and data — do the frontend courses first, then backend, for a full-stack path." />}}
+
+{{<pretty_link url="https://fullstackopen.com/" title="Full Stack Open (University of Helsinki)" description="Widely praised for modern, rigorous React/Node/GraphQL full-stack content — university-level depth, completely free." />}}
+
+{{<pretty_link url="https://javascript.info/" title="The Modern JavaScript Tutorial (javascript.info)" description="From basics to advanced browser internals in clean, progressive chapters — the reference the community points to when tutorials feel shallow." />}}
+
+{{<pretty_link url="https://roadmap.sh/" title="roadmap.sh" description="Community-maintained visual roadmaps for frontend, backend, DevOps, and more — a map to pair with the structured curricula above." />}}
+
+And for staying current and going deeper:
+
+{{<pretty_link url="https://javascriptweekly.com/" title="JavaScript Weekly" description="Cooper Press's flagship newsletter — the most-cited way to keep up with the JavaScript ecosystem, with sibling digests for React, frontend, and Node." />}}
+
+{{<pretty_link url="https://www.patterns.dev/" title="Patterns.dev" description="A free online book on design and rendering patterns for web apps — the community's favorite bridge from 'I can build apps' to 'I understand architecture'." />}}
+
+{{<pretty_link url="https://www.smashingmagazine.com/" title="Smashing Magazine" description="Deep, practical articles on CSS, UI patterns, performance, and accessibility — the longest-running high-quality web design/development publication." />}}
+
+{{<pretty_link url="https://syntax.fm/" title="Syntax (West & Parr)" description="The web development podcast — Scott and Wes cover frameworks, careers, and the whole ecosystem in approachable, episode-sized chunks." />}}
+
 {% <collapse title="Books & Video Courses (English & Hindi)"> %}
 
 **Books** (for depth after the fundamentals):
