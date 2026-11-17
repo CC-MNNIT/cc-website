@@ -600,6 +600,26 @@ graph TD
 
 {{<pretty_link url="https://www.jenkins.io/doc/" title="Jenkins Documentation" description="Official guides for declarative pipelines, plugin management, and self-hosted automation." />}}
 
+Community-vetted picks from r/devops — the consistent advice is hands-on labs over theory:
+
+{{<pretty_link url="https://www.youtube.com/@TechWorldwithNana" title="TechWorld with Nana" description="The community's favorite free video educator: clear, project-based introductions to Docker, Kubernetes, Terraform, CI/CD, and the whole DevOps landscape." />}}
+
+{{<pretty_link url="https://kodekloud.com/free-labs" title="KodeKloud Free Labs" description="Browser-based hands-on labs for Docker, Kubernetes, Ansible, and Linux — practice in a real terminal without setting up your own cluster." />}}
+
+{{<pretty_link url="https://killercoda.com/" title="Killercoda" description="Free interactive Kubernetes and Linux scenarios running in live sandboxes — the community's go-to for practicing kubectl and cluster troubleshooting." />}}
+
+{{<pretty_link url="https://www.terraformupandrunning.com/" title="Terraform: Up & Running (Yevgeniy Brikman)" description="The book r/devops most consistently recommends for Terraform — this site offers free code samples and full sample chapters." />}}
+
+And for staying current and thinking beyond tools:
+
+{{<pretty_link url="https://sre.google/books/" title="Google SRE Books (free online)" description="The Site Reliability Engineering library from Google, free to read in full — the community's canonical texts on observability, toil, incident management, and running production systems." />}}
+
+{{<pretty_link url="https://devopsish.com/" title="DevOps'ish Newsletter" description="A long-running weekly digest of DevOps, cloud, and SRE news — a regular pick in r/devops newsletter threads." />}}
+
+{{<pretty_link url="https://www.cncf.io/kubeweekly/" title="Kube Weekly (CNCF)" description="CNCF's official newsletter on Kubernetes and cloud-native ecosystem developments." />}}
+
+{{<pretty_link url="https://www.youtube.com/@DevOpsToolkit" title="DevOps Toolkit (Viktor Farcic)" description="Practical demos and opinions on Kubernetes, GitOps, and platform engineering from a veteran of the ecosystem." />}}
+
 ---
 
 ## 13. Where to Next in the CC Ecosystem

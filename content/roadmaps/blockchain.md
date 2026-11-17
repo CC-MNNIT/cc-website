@@ -639,6 +639,24 @@ Deepen your blockchain engineering mastery using these authoritative, vetted doc
 
 {{<pretty_link url="https://developer.bitcoin.org/" title="Bitcoin Developer Documentation" description="Authoritative reference covering Bitcoin protocol specifications, UTXO transaction verification, and Bitcoin Script." />}}
 
+Community-vetted learning picks from r/ethdev and r/solidity:
+
+{{<pretty_link url="https://updraft.cyfrin.io/" title="Cyfrin Updraft" description="The community's most-recommended free structured course for 2024–2025: full smart-contract and Foundry curricula from Patrick Collins, the educator behind the classic YouTube courses." />}}
+
+{{<pretty_link url="https://cryptozombies.io/" title="CryptoZombies" description="The classic gamified Solidity course — learn by coding a zombie army game contract in the browser, lesson by lesson." />}}
+
+{{<pretty_link url="https://www.web3.university/" title="Web3 University" description="Structured lesson tracks from NFT building to full smart-contract development — a frequently cited curated starting point." />}}
+
+{{<pretty_link url="https://solidity-by-example.org/" title="Solidity by Example" description="Concise, runnable examples of every Solidity concept from basic types to assembly and DeFi patterns — the fastest reference while writing contracts." />}}
+
+{{<pretty_link url="https://www.reddit.com/r/ethdev/" title="r/ethdev" description="The largest Ethereum development community — audit discussions, tooling news, and the threads where real contract developers answer questions." />}}
+
+And for the security and research depth that separates professionals from hobbyists:
+
+{{<pretty_link url="https://ethernaut.openzeppelin.com/" title="The Ethernaut (OpenZeppelin)" description="Web3's equivalent of OverTheWire: a series of security wargames where you exploit vulnerable smart contracts — the community's classic next step after basic Solidity." />}}
+
+{{<pretty_link url="https://ethresear.ch/" title="ethresear.ch" description="The research forum where protocol-level Ethereum design is discussed — reading it builds the deep understanding of EVM and consensus mechanics that interviews and audits demand." />}}
+
 ---
 
 ## 13. Where to Next in the CC Ecosystem
