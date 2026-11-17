@@ -822,6 +822,30 @@ Deepen your native iOS mastery using these authoritative Apple documentation hub
 
 {{<pretty_link url="https://developer.apple.com/testflight/" title="TestFlight Beta Testing Overview" description="Official manual for managing internal and external beta testing tracks and gathering tester crash feedback." />}}
 
+The following are the r/iOSProgramming community's most consistently recommended learning resources:
+
+{{<pretty_link url="https://www.hackingwithswift.com/100/swiftui" title="100 Days of SwiftUI (Hacking with Swift — Paul Hudson)" description="The community's universal first recommendation: a completely free, structured 100-day curriculum with projects and checkpoints — Paul Hudson is iOS education's most trusted name." />}}
+
+{{<pretty_link url="https://developer.apple.com/tutorials/swiftui" title="Apple's Official SwiftUI Tutorials" description="Apple's own step-by-step tutorial series building a Landmarks app — the canonical guided introduction straight from the framework's creators." />}}
+
+{{<pretty_link url="https://www.youtube.com/@SwiftfulThinking" title="Swiftful Thinking (Nick Sarno)" description="Project-based SwiftUI tutorials and full-app series that teach realistic architecture — a frequent community pick after finishing 100 Days." />}}
+
+{{<pretty_link url="https://www.youtube.com/@seanallen" title="Sean Allen" description="Clear SwiftUI tutorials plus iOS career guidance, take-home project walkthroughs, and industry insight — highly recommended for students targeting iOS jobs." />}}
+
+{{<pretty_link url="https://www.pointfree.co/" title="Point-Free (Brandon Williams & Stephen Celis)" description="Advanced functional programming in Swift: architecture patterns, composability, and the ideas behind TCA — the standard next step for intermediate-to-advanced iOS developers." />}}
+
+And for staying current beyond the courses — blogs and digests the community reads weekly:
+
+{{<pretty_link url="https://iosdevweekly.com/" title="iOS Dev Weekly (Dave Verwer)" description="The gold-standard Friday digest of iOS articles, tools, and projects — the one newsletter the community nearly universally agrees is worth your inbox." />}}
+
+{{<pretty_link url="https://www.swiftbysundell.com/" title="Swift by Sundell (John Sundell)" description="Deep, meticulously written Swift articles and interviews — widely described as the Swift-language counterpart to iOS Dev Weekly." />}}
+
+{{<pretty_link url="https://www.avanderlee.com/" title="SwiftLee (Antoine van der Lee)" description="Practical, frequently updated Swift/SwiftUI guides covering real production pitfalls, performance, and new iOS APIs — a top community blog pick." />}}
+
+{{<pretty_link url="https://nshipster.com/" title="NSHipster" description="Mattt's long-running journal of overlooked Swift and Objective-C concepts — short essays that deepen how you think about the platform itself." />}}
+
+{{<pretty_link url="https://iosdevdirectory.com/" title="iOS Dev Directory" description="A comprehensive, categorized catalog of iOS blogs, newsletters, podcasts, and communities — the meta-resource for finding even more reading." />}}
+
 ---
 
 ## 14. Where to Next in the CC Ecosystem

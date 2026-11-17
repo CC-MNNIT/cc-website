@@ -861,6 +861,28 @@ Deepen your React Native engineering skills using these vetted, high-yield docum
 
 {{<pretty_link url="https://www.youtube.com/@reactnative" title="React Native YouTube Channel" description="Keynotes, deep architectural breakdowns, and release overviews directly from the React Native and Expo engineering teams." />}}
 
+The following are the r/reactnative community's most frequently recommended learning resources:
+
+{{<pretty_link url="https://www.reactnative.express/" title="React Native Express" description="A free, well-structured interactive site covering the fundamentals — the community's classic recommendation for learning core concepts before diving into Expo workflows." />}}
+
+{{<pretty_link url="https://www.youtube.com/@javascriptmastery" title="JavaScript Mastery" description="Praised for full-app, project-based tutorials that ship real Expo apps end-to-end — the standard pick for learning by building something deployable." />}}
+
+{{<pretty_link url="https://www.youtube.com/@traversymedia" title="Traversy Media" description="Crash-course style introductions widely recommended as the first video to watch, including a dedicated React Native crash course from a veteran educator." />}}
+
+{{<pretty_link url="https://www.youtube.com/@canitbedone" title="William Candillon — 'Can it be done in React Native?'" description="Legendary advanced series recreating complex animations and designs in RN — the go-to for pushing Reanimated and gesture handling to their limits." />}}
+
+And for staying current beyond the courses — lists, digests, and engineering blogs the community reads weekly:
+
+{{<pretty_link url="https://github.com/jondot/awesome-react-native" title="Awesome React Native" description="The definitive community-maintained list of RN libraries, tools, tutorials, and articles — the meta-resource for discovering anything else in the ecosystem." />}}
+
+{{<pretty_link url="https://reactnativenewsletter.com/" title="React Native Newsletter (Infinite Red)" description="The long-running community staple delivered weekly — curated RN news, releases, and articles worth your inbox." />}}
+
+{{<pretty_link url="https://www.callstack.com/blog" title="Callstack Blog" description="Deep engineering posts from one of the leading RN agencies — architecture, performance, New Architecture internals, and practical patterns." />}}
+
+{{<pretty_link url="https://swmansion.com/blog/" title="Software Mansion Blog" description="Posts straight from the maintainers of Reanimated, Gesture Handler, and Flashlight — the authoritative source for animation and internals deep dives." />}}
+
+{{<pretty_link url="https://reactnativeradio.com/" title="React Native Radio" description="The classic RN podcast — long-running discussions on architecture, careers, and ecosystem direction." />}}
+
 ---
 
 ## 15. Where to Next in the CC Ecosystem
