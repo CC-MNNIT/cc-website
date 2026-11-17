@@ -695,6 +695,7 @@ And for the Qt path — the r/QtFramework community's three learning pillars:
 {{<pretty_link url="https://qmlbook.github.io/" title="The QML Book" description="A free, community-written book taking you from QML basics to complete Qt 6 applications — the standard companion to official docs." />}}
 
 {{<pretty_link url="https://www.pythonguis.com/" title="Python GUIs (Martin Fitzpatrick)" description="The best beginner-friendly resource for PySide6 and PyQt6 alike — tutorials, packaging guides, and example apps for putting a polished Qt UI on Python logic." />}}
+
 If your logic is pure Python and you want something lighter than Qt, the Tkinter ecosystem has a modern face too:
 
 {{<pretty_link url="https://realpython.com/python-gui-tkinter/" title="Real Python — Python GUI Programming With Tkinter" description="A thorough, well-written Tkinter walkthrough from the most trusted Python tutorial site — the right companion to the TkDocs reference above." />}}

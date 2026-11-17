@@ -610,6 +610,16 @@ Community-vetted picks from r/devops — the consistent advice is hands-on labs 
 
 {{<pretty_link url="https://www.terraformupandrunning.com/" title="Terraform: Up & Running (Yevgeniy Brikman)" description="The book r/devops most consistently recommends for Terraform — this site offers free code samples and full sample chapters." />}}
 
+Plus four channels the community (and Indian dev community especially) follows for cloud and deployment:
+
+{{<pretty_link url="https://www.youtube.com/@Fireship" title="Fireship" description="Lightning-fast overviews of Git, Docker, and every tool in this roadmap — perfect for building an accurate mental map before the deep dives." />}}
+
+{{<pretty_link url="https://www.youtube.com/@NetworkChuck" title="NetworkChuck" description="Beginner-friendly Git, Linux, networking, and cloud tutorials — highly accessible if the fundamentals of this roadmap still feel foreign." />}}
+
+{{<pretty_link url="https://www.youtube.com/@piyushgargdev" title="Piyush Garg" description="Full-stack deployment, Docker, Vercel, and AWS walkthroughs from one of India's most-watched web/cloud educators." />}}
+
+{{<pretty_link url="https://www.youtube.com/@HiteshChoudhary" title="Hitesh Choudhary" description="Cloud hosting and backend deployment tutorials with a practical, no-jargon teaching style." />}}
+
 And for staying current and thinking beyond tools:
 
 {{<pretty_link url="https://sre.google/books/" title="Google SRE Books (free online)" description="The Site Reliability Engineering library from Google, free to read in full — the community's canonical texts on observability, toil, incident management, and running production systems." />}}
