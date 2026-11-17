@@ -28,14 +28,14 @@ Before diving into code, understand the philosophy and strategy behind top-tier 
 The first step is to master a programming language. **C++** is highly recommended due to its speed and extensive Standard Template Library (STL).
 
 ### 1.1 Language Basics
-- **C++**: [Learn here](https://rb.gy/qozyb9)
+- **C++**: [Learn here](https://www.programiz.com/cpp-programming)
 - **Java**: [Learn here](https://rb.gy/kndsgg)
 - **Python**: [Learn here](https://rb.gy/zqzyse)
 
 ### 1.2 Standard Libraries
 Mastering these is essential for efficient coding. Instead of writing common data structures from scratch, you use these built-in libraries:
 - **C++**: Learn the **STL Library** (Vectors, Sets, Maps, Stacks). [STL Guide](https://rb.gy/2m5ye4)
-- **Java**: Learn the **Collections Library**. [Collections Guide]
+- **Java**: Learn the **Collections Library**. [Collections Guide](https://docs.oracle.com/javase/tutorial/collections/index.html)
 
 ## Phase 2: Basic Problem Solving
 
@@ -88,10 +88,10 @@ Once comfortable, move to advanced algorithms:
 - **Trees & Graphs**:[Overview](https://rb.gy/ubri0q)|[Tutorial](https://repovive.com/roadmaps/graph-theory)
 
     [DFS](https://rb.gy/lsayzt) | [BFS](https://rb.gy/ogmak5) | [Diameter of a Tree](https://rb.gy/cikkgt) | [LCA](https://rb.gy/spaedm)
-- **Disjoint Set Union (DSU)**: [Resource 1](https://rb.gy/l7lpsl) | [Resource 2](https://rb.gy/60bkpi)
+- **Disjoint Set Union (DSU)**: [Resource 1](https://rb.gy/l7lpsl) | [Resource 2](https://cp-algorithms.com/data_structures/disjoint_set_union.html)
 - **Dynamic Programming (DP)**: [Resource 1](https://rb.gy/jvf76i) | [Resource 2](https://repovive.com/roadmaps/dynamic-programming?unit=0) | [Resource 3](https://atcoder.jp/contests/dp)
 - **Segment Tree**: [Resource 1](https://rb.gy/obdeho) | [Resource 2](https://codeforces.com/blog/entry/22616)
-- **String Matching**: [Resource 1](https://rb.gy/fxxitm) | [Resource 2](https://rb.gy/914rvi)
+- **String Matching**: [Resource 1](https://www.geeksforgeeks.org/pattern-searching/) | [Resource 2](https://rb.gy/914rvi)
 - **Sparse Table (RMQ)**: [Resource 1](https://rb.gy/xngker) | [Resource 2](https://rb.gy/31rsa9)
 
 ---

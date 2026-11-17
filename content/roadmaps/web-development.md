@@ -38,7 +38,7 @@ Before writing code, you must understand how the web platform works, how modern 
 
 ### 1.2 How the Web Works
 
-```mermaid
+{% <mermaid> %}
 graph LR
     Browser["Browser (Chrome / Firefox / Safari)"] -->|"1. DNS Lookup"| DNS["DNS Resolver"]
     DNS -->|"2. IP Address"| Browser
@@ -46,7 +46,7 @@ graph LR
     Server -->|"4. HTML / CSS / JS Response"| Browser
     Browser -->|"5. Render & Execute"| UI["Rendered Web Application"]
     UI -->|"6. API Calls (JSON)"| Server
-```
+{% </mermaid> %}
 
 * **The Client**: The browser—your rendering engine (Blink, Gecko, WebKit), JavaScript runtime, and UI. Modern browsers expose standardized APIs (DOM, Fetch, WebGL, WebAssembly) that work identically across platforms.
 * **The Server**: Where application logic, databases, and business rules live. It responds to HTTP requests with documents (traditional sites) or JSON data (modern applications).
