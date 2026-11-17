@@ -764,6 +764,18 @@ Deepen your system administration mastery using these vetted, high-yield officia
 
 {{<pretty_link url="https://restic.readthedocs.io/" title="Restic Secure Backup Documentation" description="Official guides for secure, fast, deduplicated, and encrypted backup repository operations." />}}
 
+Community-vetted picks from r/sysadmin and r/homelab — books, labs, and forums:
+
+{{<pretty_link url="https://everythingsysadmin.com/" title="Everything Sysadmin (Thomas Limoncelli)" description="Home of the authors of *The Practice of System and Network Administration* — the book r/sysadmin most often calls the field's bible; the blog continues its principles-based advice." />}}
+
+{{<pretty_link url="https://pve.proxmox.com/wiki/Main_Page" title="Proxmox VE Wiki & Documentation" description="The community's standard homelab hypervisor: the hands-on way to practice virtualization, clustering, ZFS storage, and VM networking on spare hardware." />}}
+
+{{<pretty_link url="https://www.reddit.com/r/homelab/" title="r/homelab" description="The largest community building practice environments — build guides, hardware advice, and the self-hosting setups that turn theory into muscle memory." />}}
+
+{{<pretty_link url="https://rtech.support/docs" title="r/techsupport Docs" description="Community-written troubleshooting guides for Windows, networking, and hardware — practical reference material for the desktop-support side of the job." />}}
+
+{{<pretty_link url="https://linuxupskillchallenge.org/" title="Linux Upskill Challenge" description="A free month-long challenge — one lesson a day teaching real server administration on your own cloud VM, beloved by r/linuxadmin and r/sysadmin for turning documentation readers into practitioners." />}}
+
 ---
 
 ## 13. Where to Next in the CC Ecosystem

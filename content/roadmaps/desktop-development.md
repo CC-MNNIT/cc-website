@@ -634,7 +634,7 @@ Deepen your desktop engineering mastery using these authoritative framework docu
 
 {{<pretty_link url="https://www.electronjs.org/docs/latest/" title="Electron Official Documentation" description="The definitive manual for building cross-platform desktop applications using JavaScript, Node.js, and Chromium." />}}
 
-{{<pretty_link url="https://dioxuslabs.com/learn/" title="Dioxus 0.6 Official Documentation" description="The full-stack, component-based framework for building cross-platform desktop, web, and mobile apps in pure Rust." />}}
+{{<pretty_link url="https://dioxuslabs.com/learn/0.7/" title="Dioxus 0.7 Official Documentation" description="The full-stack, component-based framework for building cross-platform desktop, web, and mobile apps in pure Rust." />}}
 
 {{<pretty_link url="https://docs.flutter.dev/platform-integration/desktop" title="Flutter Desktop Documentation" description="Official guides covering Windows, macOS, and Linux desktop integration, keyboard shortcuts, and desktop deployment." />}}
 
@@ -642,7 +642,23 @@ Deepen your desktop engineering mastery using these authoritative framework docu
 
 {{<pretty_link url="https://doc.qt.io/qt-6/" title="Qt 6 Official Documentation" description="Comprehensive API references and architecture guides for the industry-standard C++ and QML desktop application framework." />}}
 
-{{<pretty_link url="https://wails.io/docs/introduction" title="Wails Official Documentation" description="Documentation for building lightweight desktop applications using Go and native system WebViews." />}}
+{{<pretty_link url="https://v3.wails.io/" title="Wails v3 Official Documentation" description="Documentation for building lightweight desktop applications using Go and native system WebViews — v3 is the current, actively developed generation." />}}
+
+Community-vetted picks beyond the official docs:
+
+{{<pretty_link url="https://github.com/sindresorhus/awesome-electron" title="Awesome Electron" description="The definitive curated list of Electron libraries, tools, boilerplates, and articles, maintained by one of GitHub's most prolific curators." />}}
+
+{{<pretty_link url="https://github.com/tauri-apps/awesome-tauri" title="Awesome Tauri" description="Officially linked curated list of Tauri plugins, templates, apps, and learning resources." />}}
+
+{{<pretty_link url="https://egui.rs/" title="egui (Rust Immediate-Mode GUI)" description="The easiest pure-Rust GUI library to get running — an immediate-mode alternative worth knowing when the Rust ecosystem sections of this roadmap feel heavyweight." />}}
+
+And for the Qt path — the r/QtFramework community's three learning pillars:
+
+{{<pretty_link url="https://www.youtube.com/@KDABtv" title="KDAB TV" description="Videos from KDAB, the market leader in Qt/C++ training — repeatedly called the best YouTube channel for learning real Qt programming." />}}
+
+{{<pretty_link url="https://www.qt.io/academy/course-catalog" title="Qt Academy" description="Official free courses covering QML, C++ integration, UI design, and testing — the structured path straight from the framework's vendor." />}}
+
+{{<pretty_link url="https://qmlbook.github.io/" title="The QML Book" description="A free, community-written book taking you from QML basics to complete Qt 6 applications — the standard companion to official docs." />}}
 
 ---
 

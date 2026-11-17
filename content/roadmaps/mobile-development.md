@@ -625,6 +625,24 @@ Explore these authoritative documentation portals, official interactive courses,
 
 {{<pretty_link url="https://mas.owasp.org/" title="OWASP Mobile Application Security (MASVS)" description="The industry standard security verification checklist covering mobile cryptography, local storage, network transport, and authentication." />}}
 
+Once you've picked your path, these are the four communities where each framework's practitioners actually hang out — the fastest places to get unstuck and to see what production developers are discussing right now:
+
+{{<pretty_link url="https://www.reddit.com/r/androiddev/" title="r/androiddev" description="The hub of the native Android community — weekly threads, library releases, and hiring discussion." />}}
+
+{{<pretty_link url="https://www.reddit.com/r/FlutterDev/" title="r/FlutterDev" description="Flutter's main community — package recommendations, architecture debates, and the weekly 'hidden gems' threads." />}}
+
+{{<pretty_link url="https://www.reddit.com/r/reactnative/" title="r/reactnative" description="React Native and Expo community — Expo-first workflows, upgrade guides, and New Architecture migration experiences." />}}
+
+{{<pretty_link url="https://www.reddit.com/r/iOSProgramming/" title="r/iOSProgramming" description="Native iOS developers discussing SwiftUI patterns, App Store policy, and career advice." />}}
+
+And to stay current across all four ecosystems:
+
+{{<pretty_link url="https://www.mobiledevweekly.com/" title="Mobile Dev Weekly" description="A long-running weekly digest spanning iOS, Android, and cross-platform news — the single newsletter that covers the whole landscape this roadmap surveys." />}}
+
+{{<pretty_link url="https://github.com/terrakok/kmp-awesome" title="Awesome Kotlin Multiplatform" description="The go-to curated list of KMP libraries, tools, and sample apps — essential for evaluating the shared-logic path this roadmap introduces." />}}
+
+{{<pretty_link url="https://kotlinweekly.net/" title="Kotlin Weekly" description="The Sunday digest of Kotlin language evolution, KMP developments, and ecosystem articles." />}}
+
 ---
 
 ## 11. Next Steps: Continuing Your Learning Journey

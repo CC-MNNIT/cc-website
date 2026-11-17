@@ -859,7 +859,7 @@ Deepen your React Native engineering skills using these vetted, high-yield docum
 
 {{<pretty_link url="https://maestro.mobile.dev/" title="Maestro Mobile UI Testing" description="The modern, declarative YAML-based mobile UI testing platform for reliable end-to-end app automation." />}}
 
-{{<pretty_link url="https://www.youtube.com/@reactnative" title="React Native YouTube Channel" description="Keynotes, deep architectural breakdowns, and release overviews directly from the React Native and Expo engineering teams." />}}
+{{<pretty_link url="https://reactnative.dev/blog" title="React Native Official Blog" description="Release announcements, New Architecture deep dives, and engineering posts directly from the React Native team — the authoritative channel for ecosystem news." />}}
 
 The following are the r/reactnative community's most frequently recommended learning resources:
 
