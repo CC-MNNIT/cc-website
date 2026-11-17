@@ -435,7 +435,7 @@ For C# and .NET teams, **Avalonia** is the leading cross-platform desktop UI fra
 * **Dual UI Approach**:
   * **Qt Widgets**: Classic C++ widgets matching exact host OS platform styles.
   * **Qt Quick / QML**: A declarative, GPU-accelerated language optimized for fluid 120Hz custom interfaces.
-* **PySide6 (Qt for Python)**: Official Python bindings for Qt, widely used in data science, engineering tools, and rapid internal desktop scripting.
+* **PySide6 (Qt for Python)**: Official Python bindings for Qt, widely used in data science, engineering tools, and rapid internal desktop scripting. Qt Designer (run `pyside6-designer`) provides drag-and-drop UI building that pairs naturally with Python logic.
 #### A First Qt Quick (QML) Interface
 QML is Qt's declarative, JavaScript-flavored UI language; your C++ (or Python) backend exposes application logic to it as context properties:
 
@@ -475,6 +475,37 @@ Backend classes are exposed to QML by registering them with the QML engine (`QQm
 
 * **Licensing**: Qt is available under open-source LGPLv3 and commercial licenses. Review LGPL obligations (dynamic linking requirements) when building proprietary closed-source applications.
 
+### 4.8 JavaFX (Java)
+
+**JavaFX** is the modern UI toolkit for the JVM — the natural desktop path for students who already study Java in college, and a live skill in enterprise shops whose backends are Java.
+
+* **The model**: Stage → Scene → layout panes (`VBox`, `HBox`, `BorderPane`, `GridPane`) hold controls (`Button`, `TextField`, `TableView`). UI structure lives in **FXML** markup, styled with **CSS**, wired to controller classes — plus **Scene Builder**, a drag-and-drop FXML designer from Gluon.
+* **The reactive idea**: properties and bindings (`bind()`) keep the UI synchronized with data without manual listener plumbing.
+* **Threading matters**: any work longer than a frame must run on `Task`/`Service` background threads, never the FX application thread — the Java analogue of "don't block the main thread".
+* **Persistence**: SQLite via JDBC is the standard student setup; the DAO and repository patterns you learn here transfer directly to Spring Boot.
+* **Watch-outs**: setup (JDK + JavaFX modules + Maven/Gradle) is the hardest part for beginners — get a working hello-world before anything else. The community is smaller than Flutter's or Electron's, and fewer ready-made UI kits exist.
+* **Start here**: the official [OpenJFX getting-started guide](https://openjfx.io/openjfx-docs/) with IntelliJ's JavaFX project wizard, and JabRef (in the resources below) as production code to study.
+
+### 4.9 Windows-Native .NET: WinForms & WPF (C#)
+
+Cross-platform purists skip these; pragmatists don't. A large share of enterprise desktop work — especially in Indian IT services — is still **Windows-only C#**, and the tooling is the best in the industry.
+
+* **WinForms**: the classic drag-and-drop designer. Fastest possible path from idea to a working forms/data app (`DataGridView`, dialogs, tray icons). Default look is basic; layout is anchored/docked rather than flexed.
+* **WPF**: XAML-based, data-binding-first, far more flexible and better-looking — and steeper. It is the direct ancestor of Avalonia (§4.6): **learn WPF's XAML/MVVM model and you already know Avalonia's**, minus the cross-platform runtime.
+* **The universal rule**: long operations freeze the UI unless you use `async/await` — same discipline as every other framework in this roadmap.
+* **Tooling**: Visual Studio 2022 Community (free) with the ".NET desktop development" workload gives you designers, debuggers, and Hot Reload that nothing else on this page matches.
+* **Watch-outs**: both are Windows-only; WinForms' designer-era patterns (event-heavy code-behind) can teach habits you will later unlearn in MVVM.
+* **Start here**: Microsoft Learn's [Tour of C#](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/), then the WinForms/WPF learning paths, with Gavin Lon and Tim Corey (resources below) as the video guides the .NET community most often recommends.
+
+### 4.10 Unity (C#): Game Engines as Desktop Applications
+
+When the "app" is really an **experience** — a simulation, a data visualizer, an interactive walkthrough, anything 2D/3D and game-like — a game engine beats every UI framework above.
+
+* **What you write**: C# scripts attached to GameObjects (`MonoBehaviour` with `Start`/`Update`), scenes composed in the editor, UI via UI Toolkit or the classic Canvas/uGUI system.
+* **Strengths**: physics, animation, 3D rendering, and asset pipelines out of the box; builds to Windows, macOS, and Linux standalone executables; the largest learning ecosystem of any tool on this page ([Unity Learn](https://learn.unity.com/), with Brackeys and Code Monkey as the community's favorite video series).
+* **Watch-outs**: form-heavy "business" UI (tables, text editing, dialogs) takes far more effort than in WinForms, Flutter, or Electron — Unity is the wrong tool for data-entry apps. Only a subset of .NET libraries is available; OS integration (screen capture, tray icons) needs plugins or native code; and Git requires a proper [Unity .gitignore](https://github.com/github/gitignore) with the **same Unity version pinned across the whole team**.
+* **Decision rule**: if your problem statement says *visualize*, *simulate*, *3D*, or *game-like*, reach for Unity; if it says *forms*, *records*, or *database*, every section above beats it.
+
 ---
 
 ## 5. Architectural Comparison & Decision Guidance
@@ -488,6 +519,9 @@ Backend classes are exposed to QML by registering them with the QML engine (`QQm
 | **Compose Desktop** | Kotlin | Compose Multiplatform | Skiko (Skia for Kotlin) | ~100–180 MB | ~40–60 MB | Kotlin/Android developers, enterprise applications needing JVM integration. |
 | **Avalonia 11** | C# | XAML / MVVM | Skia | ~70–110 MB | ~40–70 MB | .NET teams, WPF migrations, cross-platform enterprise internal tools. |
 | **Qt 6 / C++** | C++ or Python | QML / Qt Widgets | Native C++ / OpenGL | ~20–40 MB | ~20–30 MB | Performance-critical CAD, audio/video DAWs, 3D software, hardware drivers. |
+| **JavaFX** | Java | FXML / Scene Builder | Prism (native pipeline) | ~80–150 MB | ~30–60 MB | Java-familiar student teams and enterprise JVM desktop tools. |
+| **WinForms / WPF** | C# | Designer / XAML | Native Win32 / DirectX | ~60–120 MB | ~30–80 MB | Windows-only business apps — the largest C# desktop job surface. |
+| **Unity** | C# | UI Toolkit / uGUI | Unity engine (DirectX/Metal/Vulkan) | ~200+ MB | ~50+ MB | Simulations, visualizers, interactive 2D/3D experiences, game-like apps. |
 
 ---
 
@@ -659,6 +693,47 @@ And for the Qt path — the r/QtFramework community's three learning pillars:
 {{<pretty_link url="https://www.qt.io/academy/course-catalog" title="Qt Academy" description="Official free courses covering QML, C++ integration, UI design, and testing — the structured path straight from the framework's vendor." />}}
 
 {{<pretty_link url="https://qmlbook.github.io/" title="The QML Book" description="A free, community-written book taking you from QML basics to complete Qt 6 applications — the standard companion to official docs." />}}
+
+{{<pretty_link url="https://www.pythonguis.com/" title="Python GUIs (Martin Fitzpatrick)" description="The best beginner-friendly resource for PySide6 and PyQt6 alike — tutorials, packaging guides, and example apps for putting a polished Qt UI on Python logic." />}}
+If your logic is pure Python and you want something lighter than Qt, the Tkinter ecosystem has a modern face too:
+
+{{<pretty_link url="https://realpython.com/python-gui-tkinter/" title="Real Python — Python GUI Programming With Tkinter" description="A thorough, well-written Tkinter walkthrough from the most trusted Python tutorial site — the right companion to the TkDocs reference above." />}}
+
+{{<pretty_link url="https://www.py4e.com/" title="Python for Everybody (py4e)" description="Dr. Chuck's free course — the gentlest way to shore up Python basics (functions, classes, file I/O) before touching any GUI toolkit." />}}
+
+{{<pretty_link url="https://tkdocs.com/" title="TkDocs" description="The best modern Tkinter tutorial — professional, widget-by-widget guidance that fixes Tkinter's dated reputation." />}}
+
+{{<pretty_link url="https://github.com/TomSchimansky/CustomTkinter" title="CustomTkinter" description="Modern-looking, dark-mode-aware Tkinter widgets — the quickest path from Python script to a presentable desktop tool." />}}
+
+{{<pretty_link url="https://ttkbootstrap.readthedocs.io/" title="ttkbootstrap" description="Bootstrap-style themes for Tkinter's ttk widgets — make a built-in-toolkit app look designed." />}}
+
+And for the Rust side of the Tauri and Dioxus paths:
+
+{{<pretty_link url="https://doc.rust-lang.org/book/" title="The Rust Book" description="The official, free language book — chapters 1–10 give you everything needed for Tauri/Dioxus native code." />}}
+
+{{<pretty_link url="https://github.com/rust-lang/rustlings" title="Rustlings" description="Small, guided exercises that make Rust's ownership and borrowing rules stick — the standard companion to the book." />}}
+
+And for the C#/.NET path (Avalonia and beyond) — the two educators the .NET community most often recommends:
+
+{{<pretty_link url="https://www.youtube.com/@GavinLon" title="Gavin Lon" description="Detailed C#, WPF, and .NET desktop architecture tutorials — the standard video pick for developers coming to the Microsoft stack." />}}
+
+{{<pretty_link url="https://www.youtube.com/@TimCorey" title="Tim Corey" description="Beginner-friendly, methodical C# and .NET courses — widely praised for explaining the 'why' behind patterns, not just the code." />}}
+
+Real production desktop apps are also the best study material — read their architecture, not just their code:
+
+{{<pretty_link url="https://www.electronjs.org/fiddle" title="Electron Fiddle" description="Electron's official playground — spin up, edit, and run tiny main/renderer-process experiments in seconds before wiring them into your real app." />}}
+
+{{<pretty_link url="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/" title="Tour of C# (Microsoft Learn)" description="The official, free guided tour of the C# language — the prerequisite reading for the Avalonia and .NET desktop path." />}}
+
+{{<pretty_link url="https://github.com/laurent22/joplin" title="Joplin (Electron/TypeScript)" description="A full-featured, hugely popular open-source notes app — an excellent real-world study of Electron process architecture, sync, and plugin systems." />}}
+
+{{<pretty_link url="https://github.com/AppFlowy-IO/AppFlowy" title="AppFlowy (Flutter)" description="The open-source Notion alternative — large but instructive: see how a serious cross-platform product structures state, plugins, and platform integration in Flutter." />}}
+
+{{<pretty_link url="https://github.com/JabRef/jabref" title="JabRef (JavaFX)" description="A mature open-source reference manager — a strong example of a structured, database-backed desktop application with a long-lived codebase." />}}
+
+{{<pretty_link url="https://github.com/ShareX/ShareX" title="ShareX (Windows/.NET)" description="The legendary open-source screen-capture and workflow tool — the reference for deep Windows integration (hotkeys, tray, region capture, uploads)." />}}
+
+{{<pretty_link url="https://github.com/mu-editor/mu" title="Mu Editor (Python/Qt)" description="A beginner-focused Python editor built with Qt — a small, readable codebase that shows how a real shipped desktop tool is organized." />}}
 
 ---
 

@@ -736,6 +736,10 @@ Explore these curated, authoritative references to deepen your open-source maste
 
 {{<pretty_link url="https://git-scm.com/book/en/v2" title="Pro Git Book (Free Online)" description="The comprehensive, official reference manual for mastering Git architecture, branching workflows, remotes, and internal mechanics." />}}
 
+{{<pretty_link url="https://desktop.github.com/" title="GitHub Desktop" description="An official GUI for Git — if the command line intimidates you at first, this keeps you committing, branching, and resolving conflicts visually until the CLI feels natural." />}}
+
+{{<pretty_link url="https://learngitbranching.js.org/" title="Learn Git Branching (Interactive)" description="A visual, gamified Git sandbox that teaches branching, rebasing, and merging by doing — the community's favorite way to make Git's mental model click." />}}
+
 {{<pretty_link url="https://goodfirstissue.dev/" title="Good First Issue Directory" description="Curated portal aggregating beginner-friendly, accessible issues from active open-source projects across dozens of languages." />}}
 
 {{<pretty_link url="https://summerofcode.withgoogle.com/" title="Google Summer of Code Portal" description="Official documentation, program rules, participating organization lists, and timeline for GSoC contributors." />}}

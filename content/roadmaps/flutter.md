@@ -1354,7 +1354,7 @@ Flutter is no longer just a mobile framework; it is an all-screen computing canv
 When compiling for desktop, consider desktop-specific interaction patterns:
 
 * **Mouse & Keyboard Ergonomics**: Mobile touch interfaces lack hover states and right-click menus. Use `MouseRegion` for hover detection, `ContextMenuRegion` for right-click popups, and `Shortcuts` / `Actions` for keyboard shortcuts (`Cmd/Ctrl + S`).
-* **Multi-Window & Window Management**: Desktop applications can be resized freely. Use packages like `window_manager` to set minimum/maximum window dimensions, toggle full-screen modes, and handle system tray minimizations.
+* **Multi-Window & Window Management**: Desktop applications can be resized freely. Use packages like `window_manager` to set minimum/maximum window dimensions, toggle full-screen modes, and handle system tray minimizations (`tray_manager`), while `file_picker` provides the native open/save dialogs that mobile never needs.
 
 For a comprehensive guide to desktop processes, IPC, window management, and native packaging across all major frameworks, see our dedicated **[Desktop Application Development Roadmap](@/roadmaps/desktop-development.md)**.
 
@@ -1456,6 +1456,12 @@ The following picks come straight from community consensus on r/FlutterDev and r
 {{<pretty_link url="https://www.youtube.com/c/MitchKoko" title="Mitch Koko" description="Short, design-focused Flutter tutorials with a highly praised beginner masterclass — the community's go-to channel for making apps look beautiful, not just work." />}}
 
 {{<pretty_link url="https://fluttergems.dev/" title="Flutter Gems" description="A curated, category-organized guide to 1,000+ pub.dev packages — the fastest way to answer 'which package should I use for X?'" />}}
+
+And two sources of real production Flutter code to study, not just tutorials:
+
+{{<pretty_link url="https://github.com/flutter/samples" title="Official Flutter Samples" description="Google's collection of sample apps demonstrating specific Flutter features — small enough to read fully, official enough to trust the patterns." />}}
+
+{{<pretty_link url="https://github.com/AppFlowy-IO/AppFlowy" title="AppFlowy (Open-Source Notion Alternative)" description="A serious production Flutter application — large but instructive: see how state management, plugins, and desktop/mobile platform integration are structured at scale." />}}
 
 ---
 

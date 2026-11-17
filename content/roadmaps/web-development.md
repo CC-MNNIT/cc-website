@@ -1168,6 +1168,8 @@ Google's user-experience metrics — and a direct ranking factor in search:
 | **Vercel** | Next.js applications (native ISR/SSR support) | Edge rendering, preview deploys per PR |
 | **VPS + Nginx** | Full-stack apps, databases, background workers | Linux, TLS, systemd, reverse proxies — the real machinery |
 
+For the backend plus database without touching a server, the PaaS route is equally legitimate: **Render** or **Railway** host containerized APIs from your Git repo, and **Supabase** or **Neon** provide managed PostgreSQL with generous free tiers — pair these with the Vercel/Cloudflare frontend row above for a complete, zero-cost student stack.
+
 * **CI/CD**: GitHub Actions running lint, types, and tests on every push, deploying on merge to `main`:
 
 ```yaml
